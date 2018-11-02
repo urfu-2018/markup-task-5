@@ -7,3 +7,6 @@
 *.swp
 
 node_modules
+
+/cats/Thumbs.db
+/icons/Thumbs.db

@@ -1,0 +1,131 @@
+main
+{
+    max-width: 1500px;
+}
+
+.card:hover
+{
+    box-shadow: 0 0 10px;
+    color: #1b1a1a;
+}
+
+.card 
+{
+    vertical-align: top;
+    border: 1px solid rgba(150, 145, 145, .29);
+    margin: 5px;
+}
+
+.cat-img
+{
+    margin: 15px auto 0;
+    display: block;
+}
+
+.cat-img:hover
+{
+    box-shadow: 0 0 5px;
+    color: #472c2c;
+}
+
+.cat-info-item
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cat-info-item:hover:not(.cat-name)
+{
+    font-size: 102%;
+}
+
+.full-info-switch-pic
+{
+    width: 35px;
+    height: 35px;
+    display: block;
+    cursor: pointer;
+}
+
+.full-info-switch
+{
+    display: none;
+}
+
+.full-info-switch:not(:checked) ~ .full-info-switch-pic
+{
+    background: url(icons/hamburger.png) center / contain;
+}
+
+.full-info-switch:checked ~ .full-info-switch-pic
+{
+    background: url(icons/hamburger-swapped.png) center / contain;
+}
+
+.full-info-switch:not(:checked) ~ .card > .cat-info-short,
+.full-info-switch:checked ~ .card > .cat-info-full
+{
+    display: block;
+}
+
+.full-info-switch:not(:checked) ~ .card > .cat-info-full,
+.full-info-switch:checked ~ .card > .cat-info-short
+{
+    display: none;
+}
+
+.cat-info-short
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.full-info-switch:not(:checked) ~ .card
+{
+    display: inline-block;
+    width: 300px;
+}
+
+.full-info-switch:checked ~ .card
+{
+    display: block;
+    width: 350px;
+    font-size: 110%;
+}
+
+.full-info-switch:not(:checked) ~ .card .cat-img
+{
+    width: 250px;
+}
+
+.full-info-switch:checked ~ .card .cat-img
+{
+    width: 300px;
+}
+
+.card .cat-info
+{
+    width: 250px;
+    text-align: justify;
+    margin: 15px auto;
+}
+
+.cat-name
+{
+    font-size: 110%;
+    font-weight: bold;
+    margin: 15px auto;
+    text-align: left;
+    max-width: 40%;
+    white-space: nowrap;
+}
+
+.cat-name-link:hover,
+.cat-name-link:visited,
+.cat-name-link:link,
+.cat-name-link:active
+{
+    text-decoration: none;
+    color: black;
+}
