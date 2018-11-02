@@ -11,48 +11,64 @@
         <header class="header">
             <h3>Мурмаркет</h3>
         </header>
-        <div class="cat-container">
-            <a href="#" class="cat-card">
-                <img class="cat-image" src="cats/richard.jpg">
-                <div class="short-description">
-                    <h3 class="cat-name">Ричард</h3>
-                </div>
-            </a>
-            <a href="#" class="cat-card">
-                <img class="cat-image" src="cats/richard.jpg">
-                <div class="short-description">
-                    <h3 class="cat-name">Бодибилдер</h3>
-                </div>
-            </a>
-            <a class="cat-card">
-                <img class="cat-image" src="cats/richard.jpg">
-                <div class="short-description">
-                    <h3 class="cat-name">Грация</h3>
-                </div>
-            </a>
-            <a href="#" class="cat-card">
-                <img class="cat-image" src="cats/richard.jpg">
-                <div class="short-description">
-                    <h3 class="cat-name">Голубика</h3>
-                </div>
-            </a>
-            <a href="#" class="cat-card">
-                <img class="cat-image" src="cats/richard.jpg">
-                <div class="short-description">
-                    <h3 class="cat-name">Баварская сосиска</h3>
-                </div>
-            </a>
+        <div class="carousel-wrapper">
+            <input type="radio" class="carousel-input cat-input1" id="item1" name="carousel-input">
+            <input type="radio" class="carousel-input cat-input2" id="item2" name="carousel-input">
+            <input type="radio" class="carousel-input cat-input3" id="item3" name="carousel-input" checked>
+            <input type="radio" class="carousel-input cat-input4" id="item4" name="carousel-input">
+            <input type="radio" class="carousel-input cat-input5" id="item5" name="carousel-input">
+
+            <div class="cat-container carousel">
+                <a href="#" class="cat-card carousel-item item1">
+                    <label class="carousel-card-label" for="item1"></label>
+                    <div class="short-description">
+                        <h3 class="cat-name">Голубика</h3>
+                    </div>
+                </a>
+                <a href="#" class="cat-card carousel-item item2">
+                    <label class="carousel-card-label" for="item2"></label>
+                    <div class="short-description">
+                        <h3 class="cat-name">Грация</h3>
+                    </div>
+                </a>
+                <a href="#" class="cat-card carousel-item item3">
+                    <label class="carousel-card-label" for="item3"></label>
+                    <div class="short-description">
+                        <h3 class="cat-name">Мистер Флэт Фэйс</h3>
+                    </div>
+                </a>
+                <a href="#" class="cat-card carousel-item item4">
+                    <label class="carousel-card-label" for="item4"></label>
+                    <div class="short-description">
+                        <h3 class="cat-name">Джентельмен</h3>
+                    </div>
+                </a>
+                <a href="#" class="cat-card carousel-item item5">
+                    <label class="carousel-card-label" for="item5"></label>
+                    <div class="short-description">
+                        <h3 class="cat-name">Шкода</h3>
+                    </div>
+                </a>
+            </div>
+
+            <ul class="carousel-labels">
+                <li class="carousel-label">
+                    <label for="item1"></label>
+                </li>
+                <li class="carousel-label">
+                    <label for="item2"></label>
+                </li>
+                <li class="carousel-label">
+                    <label for="item3"></label>
+                </li>
+                <li class="carousel-label">
+                    <label for="item4"></label>
+                </li>
+                <li class="carousel-label">
+                    <label for="item5"></label>
+                </li>
+            </ul>
         </div>
-        <footer class="footer">
-            <div class="contact-us">
-                <p>Напишите нам:</p>
-                <a class="contact-item" href="#">grand-ma@yandex.ru</a>
-                <a class="contact-item" href="#">grand-ma@gmail.com</a>
-            </div>
-            <div class="signature">
-                <span>&copy; 2018 ООО <a href="#" class="signature-a">Котятки-Студио</a></span>
-            </div>
-        </footer>
     </div>
 </body>
 </html>

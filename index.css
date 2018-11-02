@@ -87,14 +87,6 @@ body
     padding-top: 5px;
 }
 
-.cat-container
-{
-    box-sizing: border-box;
-    min-height: 100%;
-    padding-bottom: 110px;
-    padding-top: 65px;
-}
-
 .cat-image
 {
     position: absolute;
@@ -112,6 +104,7 @@ body
     margin: 8px;
     font-size: 15px;
     text-decoration: none;
+    line-height: 300px;
 }
 
 .cat-card:after
@@ -137,7 +130,7 @@ body
     position: relative;
     text-align: center;
     vertical-align: middle;
-    line-height: 300px;
+    line-height: inherit;
     z-index: 1;
 }
 
@@ -160,4 +153,202 @@ body
 .full-description
 {
     display: none;
+}
+
+.carousel-input
+{
+    display: none;
+}
+
+.carousel-wrapper
+{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    top: 170px;
+    height: 500px;
+}
+
+.carousel-labels
+{
+    display: block;
+    list-style: none;
+    position: absolute;
+    z-index: 2;
+    top: 400px;
+    height: 20px;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.carousel-label
+{
+    display: inline-block;
+}
+
+.carousel-card-label
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.carousel-label label
+{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: lightgray;
+    display: block;
+    cursor: pointer;
+}
+
+.carousel-item
+{
+    margin: 0 1%;
+    height: 300px;
+    float: left;
+    opacity: .7;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center center;
+}
+
+.item1
+{
+    background-image: url('cats/blueberry.jpg');
+    width: 18%;
+}
+
+.item2
+{
+    background-image: url('cats/grace.jpg');
+    width: 14%;
+}
+
+.item3
+{
+    background-image: url('cats/flat-face.jpg');
+    width: 18%;
+
+}
+
+.item4
+{
+    background-image: url('cats/gentleman.jpg');
+    width: 20%;
+
+}
+
+.item5
+{
+    background-image: url('cats/skoda.jpg');
+    width: 20%;
+}
+
+.carousel
+{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    width: 130%;
+    height: 300px;
+    transition: left .6s ease-out;
+}
+
+.cat-input1:checked ~ .carousel
+{
+    left: 37.3%;
+}
+
+.cat-input2:checked ~ .carousel
+{
+    left: 13.3%;
+}
+
+.cat-input3:checked ~ .carousel
+{
+    left: -9.6%;
+}
+
+.cat-input4:checked ~ .carousel
+{
+    left: -37%;
+}
+
+.cat-input5:checked ~ .carousel
+{
+    left: -65%;
+}
+
+.cat-input1:checked ~ .carousel .carousel-item:nth-child(1)
+{
+    height: 120%;
+    opacity: 1;
+    top: -30px;
+    line-height: 360px;
+}
+
+.cat-input2:checked ~ .carousel .carousel-item:nth-child(2)
+{
+    height: 120%;
+    opacity: 1;
+    top: -30px;
+    line-height: 360px;
+}
+
+.cat-input3:checked ~ .carousel .carousel-item:nth-child(3)
+{
+    height: 120%;
+    opacity: 1;
+    top: -30px;
+    line-height: 360px;
+}
+
+.cat-input4:checked ~ .carousel .carousel-item:nth-child(4)
+{
+    height: 120%;
+    opacity: 1;
+    top: -30px;
+    line-height: 360px;
+}
+
+.cat-input5:checked ~ .carousel .carousel-item:nth-child(5)
+{
+    height: 120%;
+    opacity: 1;
+    top: -30px;
+    line-height: 360px;
+}
+
+.cat-input1:checked ~ .carousel-labels .carousel-label:nth-child(1) label
+{
+    background-color: #727272;
+}
+
+.cat-input2:checked ~ .carousel-labels .carousel-label:nth-child(2) label
+{
+    background-color: #727272;
+}
+
+.cat-input3:checked ~ .carousel-labels .carousel-label:nth-child(3) label
+{
+    background-color: #727272;
+}
+
+.cat-input4:checked ~ .carousel-labels .carousel-label:nth-child(4) label
+{
+    background-color: #727272;
+}
+
+.cat-input5:checked ~ .carousel-labels .carousel-label:nth-child(5) label
+{
+    background-color: #727272;
 }
