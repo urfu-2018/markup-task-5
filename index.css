@@ -1,0 +1,196 @@
+.cat-image
+{
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.cat-card
+{
+    position: relative;
+    border: 1px solid #e8e8e8;
+    display: inline-block;
+    max-width: 200px;
+    min-width: 200px;
+    margin: 8px;
+    color: #707070;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.cat-card::after
+{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px 1px rgba(150, 150, 150, .65);
+    opacity: 0;
+}
+
+.cat-card:hover::after
+{
+    opacity: 1;
+}
+
+.cat-card div
+{
+    padding: 0 10px;
+}
+
+.cat-card div p
+{
+    margin: 0;
+}
+
+.cat-card div h3
+{
+    font-weight: normal;
+    color: #333;
+    margin: 7px 0;
+    font-size: 20px;
+    display: inline-block;
+    width: 180px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cat-card div h3:hover
+{
+    color: lightpink;
+}
+
+.short-description .cat-status
+{
+    margin: 15px 0;
+}
+
+.full-description
+{
+    margin: 8px 0 20px;
+    display: none;
+}
+
+@media (max-width: 476px)
+{
+    .cat-card
+    {
+        display: block;
+        margin: 8px auto;
+    }
+}
+
+.dropdown
+{
+    position: relative;
+    top: -10px;
+    display: inline-block;
+    margin: 0 20px;
+    font-family: Comic Sans MS, serif;
+}
+
+.contacts
+{
+    font-size: 20px;
+}
+
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+    min-width: 100px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dropdown-content::after
+{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .65);
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-content::after,
+.dropdown-content:hover::after
+{
+    opacity: 1;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.radio-switcher
+{
+    display: none;
+}
+
+.icon
+{
+    font-size: 24em;
+}
+
+input + label
+{
+    cursor: pointer;
+    margin: 0 16px;
+    font-size: 45px;
+    color: #908db2;
+}
+
+input + label:hover
+{
+    color: #bb97db;
+}
+
+input:checked + label
+{
+    display: none;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card
+{
+    display: block;
+    max-width: 500px;
+    min-width: 500px;
+    margin: 35px auto;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card div h3
+{
+    width: 480px;
+    overflow: visible;
+    white-space: unset;
+    text-overflow: clip;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card .cat-image
+{
+    width: 500px;
+    height: 350px;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card .short-description
+{
+    display: none;
+}
+
+input[value='list']:checked ~ .cat-container .cat-card .full-description
+{
+    display: block;
+}
