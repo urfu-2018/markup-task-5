@@ -13,10 +13,21 @@ header
 
 header,
 main,
-.cat-box,
 footer
 {
+    width: 100%;
+}
+
+body,
+.cat-box
+{
     border: 2px solid #aaa;
+}
+
+footer,
+main
+{
+    border-top: 2px solid #aaa;
 }
 
 header > p::first-letter
@@ -33,10 +44,14 @@ header > p::first-letter
     display: none;
 }
 
+.as-grid
+
 .display-mode:checked ~ .as-grid
 {
     display: revert;
 }
+
+/* cards section */
 
 .cat-box
 {
@@ -146,13 +161,50 @@ header > p::first-letter
     white-space: initial;
 }
 
+/* footer section */
+
 footer
 {
-    display: block;
+    display: table;
+    table-layout: fixed;
     font: 14px Arial;
 }
 
-.link
+a
 {
     color: #4c4cd8;
+    text-decoration: none;
+}
+
+.footer-left,
+.footer-right
+{
+    padding: 5px;
+}
+
+.footer-left
+{
+    display: table-cell;
+    text-align: left;
+}
+
+.write-us-list
+{
+    list-style: none;
+    margin: 2px;
+    padding: 0;
+}
+
+.write-us-list-item
+{
+    background: url(src/icons/mail.png) left center no-repeat;
+    margin: 2px;
+    padding: 0 24px;
+}
+
+.footer-right
+{
+    display: table-cell;
+    text-align: right;
+    vertical-align: bottom;
 }
