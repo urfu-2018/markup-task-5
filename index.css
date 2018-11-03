@@ -4,6 +4,26 @@ body
     color: #444;
 }
 
+header
+{
+    font: 32px 'PT SansNarrow';
+    text-align: center;
+    line-height: .75rem;
+}
+
+header,
+main,
+.cat-box,
+footer
+{
+    border: 2px solid #aaa;
+}
+
+header > p::first-letter
+{
+    color: #f00;
+}
+
 /* display-mode button */
 
 .display-mode, /* hides checkbox */
@@ -20,7 +40,6 @@ body
 
 .cat-box
 {
-    border: 2px solid #888;
     margin: 10px;
     text-align: left;
     width: 300px;
@@ -70,19 +89,19 @@ body
 
 /* enlarge photo on hover, hide info to allow it */
 
-.display-mode:not(:checked) ~ main .cat-photo:hover
+.display-mode:not(:checked) ~ article .cat-photo:hover
 {
     width: 100%;
     max-width: 400px;
     object-fit: contain;
 }
 
-.display-mode:not(:checked) ~ main .cat-photo-section:hover
+.display-mode:not(:checked) ~ article .cat-photo-section:hover
 {
     height: 300px;
 }
 
-.display-mode:not(:checked) ~ main .cat-photo-section:hover ~ section
+.display-mode:not(:checked) ~ article .cat-photo-section:hover ~ section
 {
     display: none;
 }
@@ -94,35 +113,46 @@ body
 
 /* Select info based on display mode */
 
-.display-mode:not(:checked) ~ main .cat-long-info,
-.display-mode:checked ~ main .cat-short-info
+.display-mode:not(:checked) ~ article .cat-long-info,
+.display-mode:checked ~ article .cat-short-info
 
 {
     display: none;
 }
 
-.display-mode:checked ~ main .cat-long-info
+.display-mode:checked ~ article .cat-long-info
 {
     display: revert;
 }
 
 /* Resize based on display mode */
 
-.display-mode:checked ~ main .cat-box
+.display-mode:checked ~ article .cat-box
 {
     width: 50%;
     height: initial;
     margin: 2px 10px;
 }
 
-.display-mode:checked ~ main .cat-photo-section .cat-photo
+.display-mode:checked ~ article .cat-photo-section .cat-photo
 {
     max-height: 300px;
     width: 100%;
     object-fit: scale-down;
 }
 
-.display-mode:checked ~ main .cat-name
+.display-mode:checked ~ article .cat-name
 {
     white-space: initial;
+}
+
+footer
+{
+    display: block;
+    font: 14px Arial;
+}
+
+.link
+{
+    color: #4c4cd8;
 }
