@@ -311,7 +311,7 @@ body
     left: -65%;
 }
 
-.cat-input1:checked ~ .carousel .carousel-item:nth-child(1)
+.cat-input1:checked ~ .carousel .item1
 {
     height: 120%;
     opacity: 1;
@@ -319,7 +319,7 @@ body
     line-height: 360px;
 }
 
-.cat-input2:checked ~ .carousel .carousel-item:nth-child(2)
+.cat-input2:checked ~ .carousel .item2
 {
     height: 120%;
     opacity: 1;
@@ -327,7 +327,7 @@ body
     line-height: 360px;
 }
 
-.cat-input3:checked ~ .carousel .carousel-item:nth-child(3)
+.cat-input3:checked ~ .carousel .item3
 {
     height: 120%;
     opacity: 1;
@@ -335,7 +335,7 @@ body
     line-height: 360px;
 }
 
-.cat-input4:checked ~ .carousel .carousel-item:nth-child(4)
+.cat-input4:checked ~ .carousel .item4
 {
     height: 120%;
     opacity: 1;
@@ -343,7 +343,7 @@ body
     line-height: 360px;
 }
 
-.cat-input5:checked ~ .carousel .carousel-item:nth-child(5)
+.cat-input5:checked ~ .carousel .item5
 {
     height: 120%;
     opacity: 1;
