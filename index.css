@@ -14,18 +14,72 @@
     src: local('Exo Regular'), local('Exo-Regular'), url(https://fonts.gstatic.com/s/exo/v7/4UaOrEtFpBISc36j.woff2) format('woff2');
 }
 
-*
+html
 {
-    border: solid 1px lightgreen;
+    background: green;
+}
+
+body
+{
+    background: blue;
 }
 
 main
 {
+    background: purple;
+}
+
+main > section.cats
+{
+    background: brown;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+header
+{
+    background: white;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
     width: 100%;
+}
+
+div.wrap
+{
+    position: relative;
+    background: bisque;
+    min-height: 100px;
+}
+
+main
+{
+    background: pink;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100%;
+    width: 100%;
+}
+
+footer
+{
+    position: absolute;
+    background: cadetblue;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
 }
 
 .cats
 {
+    position: relative;
+    box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -34,11 +88,11 @@ main
 {
     display: inline-block;
     position: relative;
-    border: solid 1px #000;
-    border-radius: 7px;
-    padding: 10px;
+    /*border: solid 1px #000;*/
+    /*border-radius: 7px;*/
+    /*padding: 10px;*/
+    /*margin: 10px auto;*/
     width: 250px;
-    margin: 10px auto;
 }
 
 .cats article .description
@@ -46,8 +100,11 @@ main
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     display: none;
-    background: green;
+    background: rgba(0, 0, 0, .6);
+    z-index: 1;
 }
 
 .cats > input.article-1:checked ~ article.article-1:hover .description,
@@ -56,39 +113,37 @@ main
 .cats > input.article-4:checked ~ article.article-4:hover .description,
 .cats > input.article-5:checked ~ article.article-5:hover .description
 {
-    width: 250px;
     display: block;
-    z-index: 1;
 }
 
 .cats > input.article-1:checked ~ article
 {
     top: 0;
-    left: 40%;
+    left: 50%;
 }
 
 .cats > input.article-2:checked ~ article
 {
     top: 0;
-    left: 20%;
+    left: 30%;
 }
 
 .cats > input.article-3:checked ~ article
 {
     top: 0;
-    left: 0;
+    left: 10%;
 }
 
 .cats > input.article-4:checked ~ article
 {
     top: 0;
-    left: -20%;
+    left: -10%;
 }
 
 .cats > input.article-5:checked ~ article
 {
     top: 0;
-    left: -40%;
+    left: -30%;
 }
 
 .cats > input.article-1:not(:checked) ~ article.article-1,
@@ -100,19 +155,33 @@ main
     opacity: .7;
 }
 
+.photo label,
+.photo img
+{
+    display: block;
+    width: 250px;
+    height: 250px;
+}
+
+/*.cats > input.article-1:not(:checked) ~ article.article-1 label,*/
+/*.cats > input.article-2:not(:checked) ~ article.article-2 label,*/
+/*.cats > input.article-3:not(:checked) ~ article.article-3 label,*/
+/*.cats > input.article-4:not(:checked) ~ article.article-4 label,*/
+/*.cats > input.article-5:not(:checked) ~ article.article-5 label,*/
+/*.cats > input.article-1:not(:checked) ~ article.article-1 img,*/
+/*.cats > input.article-2:not(:checked) ~ article.article-2 img,*/
+/*.cats > input.article-3:not(:checked) ~ article.article-3 img,*/
+/*.cats > input.article-4:not(:checked) ~ article.article-4 img,*/
+/*.cats > input.article-5:not(:checked) ~ article.article-5 img*/
+/*{*/
+    /*height: 200px;*/
+    /*width: 200px;*/
+/*}*/
+
 .nickname a,
 .nickname a:visited
 {
     color: #000;
-}
-
-.photo img
-{
-    margin: auto;
-    display: block;
-    width: 250px;
-    height: 250px;
-    border: solid 1px #000;
 }
 
 .nickname
@@ -128,13 +197,6 @@ main
     text-decoration: none;
 }
 
-p,
-h1,
-h2
-{
-    text-align: center;
-}
-
 h1,
 h2
 {
@@ -144,4 +206,33 @@ h2
 p
 {
     font-family: Exo, sans-serif;
+}
+
+div.popup
+{
+    position: absolute;
+    background: rgba(0, 0, 0, .8);
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 2;
+}
+
+input.popup-1:checked ~ div.popup-1,
+input.popup-2:checked ~ div.popup-2,
+input.popup-3:checked ~ div.popup-3,
+input.popup-4:checked ~ div.popup-4,
+input.popup-5:checked ~ div.popup-5
+{
+    display: block;
+}
+
+header > h1,
+body,
+footer > p
+{
+    margin: 0;
 }
