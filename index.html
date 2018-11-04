@@ -2,8 +2,561 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+    <div class="body-wrapper">
+        <!-- Шапка сайта -->
+        <div class="body-wrapper__top">
+            <header class="header">
+                <div class="container">МурМаркет</div>
+            </header>
+        </div>
+
+        <!-- Контент сайта -->
+        <div class="body-wrapper__middle">
+            <main class="main">
+                <!-- Переключатели слайдов карусели -->
+                <input type="radio" name="carousel" id="slide-1">
+                <input type="radio" name="carousel" id="slide-2">
+                <input type="radio" name="carousel" id="slide-3">
+                <input type="radio" name="carousel" id="slide-4">
+                <input type="radio" name="carousel" id="slide-5">
+                <input type="radio" name="carousel" id="slide-6" checked="checked">
+                <input type="radio" name="carousel" id="slide-7">
+                <input type="radio" name="carousel" id="slide-8">
+                <input type="radio" name="carousel" id="slide-9">
+                <input type="radio" name="carousel" id="slide-10">
+                <input type="radio" name="carousel" id="slide-11">
+                <input type="radio" name="carousel" id="slide-12">
+
+                <!-- Переключатели popup'ов -->
+                <input type="radio" name="popup" id="no-popup" checked="checked">
+                <input type="radio" name="popup" id="popup-1">
+                <input type="radio" name="popup" id="popup-2">
+                <input type="radio" name="popup" id="popup-3">
+                <input type="radio" name="popup" id="popup-4">
+                <input type="radio" name="popup" id="popup-5">
+                <input type="radio" name="popup" id="popup-6">
+                <input type="radio" name="popup" id="popup-7">
+                <input type="radio" name="popup" id="popup-8">
+                <input type="radio" name="popup" id="popup-9">
+                <input type="radio" name="popup" id="popup-10">
+                <input type="radio" name="popup" id="popup-11">
+                <input type="radio" name="popup" id="popup-12">
+
+                <!-- Карусель -->
+                <div class="carousel"><div class="carousel__container">
+                    <div class="slides">
+                        <div class="slide slide_1">
+                            <label for="slide-1">
+                                <img src="./img/image-1.jpg" alt="Британская шиншилла">
+                            </label>
+                            <label class="slide__overlay" for="popup-1">
+                                <span class="slide__name">Снежок</span>
+                            </label>
+                        </div><div class="slide slide_2">
+                            <label for="slide-2">
+                                <img src="./img/image-2.jpg" alt="Австралийская дымчатая">
+                            </label>
+                            <label class="slide__overlay" for="popup-2">
+                                <span class="slide__name">Леопольд</span>
+                            </label>
+                        </div><div class="slide slide_3">
+                            <label for="slide-3">
+                                <img src="./img/image-3.jpg" alt="Шотландская вислоухая">
+                            </label>
+                            <label class="slide__overlay" for="popup-3">
+                                <span class="slide__name">Тычёпадлатамползаешьбрысьоттуда</span>
+                            </label>
+                        </div><div class="slide slide_4">
+                            <label for="slide-4">
+                                <img src="./img/image-4.jpg" alt="Британская короткошёрстная">
+                            </label>
+                            <label class="slide__overlay" for="popup-4">
+                                <span class="slide__name">Анжело</span>
+                            </label>
+                        </div><div class="slide slide_5">
+                            <label for="slide-5">
+                                <img src="./img/image-5.jpg" alt="Бенгальская">
+                            </label>
+                            <label class="slide__overlay" for="popup-5">
+                                <span class="slide__name">Варвара</span>
+                            </label>
+                        </div><div class="slide slide_6">
+                            <label for="slide-6">
+                                <img src="./img/image-6.jpg" alt="Невская маскарадная">
+                            </label>
+                            <label class="slide__overlay" for="popup-6">
+                                <span class="slide__name">Веня</span>
+                            </label>
+                        </div><div class="slide slide_7">
+                            <label for="slide-7">
+                                <img src="./img/image-7.jpg" alt="Азиатская дымчатая">
+                            </label>
+                            <label class="slide__overlay" for="popup-7">
+                                <span class="slide__name">Еврасик</span>
+                            </label>
+                        </div><div class="slide slide_8">
+                            <label for="slide-8">
+                                <img src="./img/image-8.jpg" alt="Мейн-кун">
+                            </label>
+                            <label class="slide__overlay" for="popup-8">
+                                <span class="slide__name">Дебби</span>
+                            </label>
+                        </div><div class="slide slide_9">
+                            <label for="slide-9">
+                                <img src="./img/image-9.jpg" alt="Смешанная">
+                            </label>
+                            <label class="slide__overlay" for="popup-9">
+                                <span class="slide__name">Изабель</span>
+                            </label>
+                        </div><div class="slide slide_10">
+                            <label for="slide-10">
+                                <img src="./img/image-10.jpg" alt="Британская">
+                            </label>
+                            <label class="slide__overlay" for="popup-10">
+                                <span class="slide__name">Карамелька</span>
+                            </label>
+                        </div><div class="slide slide_11">
+                            <label for="slide-11">
+                                <img src="./img/image-11.jpg" alt="Шотландская вислоухая">
+                            </label>
+                            <label class="slide__overlay" for="popup-11">
+                                <span class="slide__name">Лакки</span>
+                            </label>
+                        </div><div class="slide slide_12">
+                            <label for="slide-12">
+                                <img src="./img/image-12.jpg" alt="Сиамская">
+                            </label>
+                            <label class="slide__overlay" for="popup-12">
+                                <span class="slide__name">Лайма</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="carousel__dots clearfix">
+                        <label for="slide-1"></label>
+                        <label for="slide-2"></label>
+                        <label for="slide-3"></label>
+                        <label for="slide-4"></label>
+                        <label for="slide-5"></label>
+                        <label for="slide-6"></label>
+                        <label for="slide-7"></label>
+                        <label for="slide-8"></label>
+                        <label for="slide-9"></label>
+                        <label for="slide-10"></label>
+                        <label for="slide-11"></label>
+                        <label for="slide-12"></label>
+                    </div>
+                </div></div>
+
+                <!-- Popup'ы -->
+                <div class="popup popup_1"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Снежок
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-1">
+                                <img src="./img/image-1.jpg" alt="Британская шиншилла">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>британская шиншилла</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>~ год</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Об&shy;ла&shy;да&shy;ет по&shy;кор&shy;ным, мяг&shy;ким,
+                                спо&shy;кой&shy;ным ха&shy;рак&shy;те&shy;ром. Это
+                                оча&shy;ро&shy;ва&shy;тель&shy;ное со&shy;зда&shy;ние
+                                на&shy;пол&shy;нит дом уютом и лю&shy;бо&shy;вью, станет
+                                вер&shy;ным дру&shy;гом и ком&shy;па&shy;ньо&shy;ном.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_2"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Леопольд
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-2">
+                                <img src="./img/image-2.jpg" alt="Австралийская дымчатая">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>австралийская дымчатая</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>1 год</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Сам&shy;цы обыч&shy;но круп&shy;нее са&shy;мок, бо&shy;лее
+                                му&shy;ску&shy;ли&shy;стые. Окон&shy;ча&shy;тель&shy;ное
+                                физи&shy;че&shy;ское со&shy;зре&shy;ва&shy;ние,
+                                фор&shy;ми&shy;ро&shy;ва&shy;ние цве&shy;та глаз, окра&shy;са и
+                                тек&shy;сту&shy;ры шер&shy;сти
+                                за&shy;кан&shy;чи&shy;ва&shy;ет&shy;ся к
+                                двух&shy;лет&shy;не&shy;му воз&shy;рас&shy;ту.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_3"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Тычёпадлатамползаешьбрысьоттуда
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-3">
+                                <img src="./img/image-3.jpg" alt="Шотландская вислоухая">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>шотландская вислоухая</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>полгода</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Шот&shy;ланд&shy;ская вис&shy;ло&shy;ухая кош&shy;ка - это очень
+                                осо&shy;бая по&shy;ро&shy;да. Эти кош&shy;ки
+                                яв&shy;ля&shy;ют&shy;ся "на&shy;род&shy;ны&shy;ми", они
+                                об&shy;ла&shy;да&shy;ют хо&shy;ро&shy;шим
+                                тем&shy;пе&shy;ра&shy;мен&shy;том, и, в це&shy;лом, ми&shy;лые,
+                                ти&shy;хие и про&shy;стые в об&shy;ра&shy;ще&shy;нии.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_4"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Анжело
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-4">
+                                <img src="./img/image-4.jpg" alt="Британская короткошёрстная">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>британская короткошёрстная</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>2 года</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Взрос&shy;лое жи&shy;вот&shy;ное име&shy;ет хо&shy;ро&shy;шо
+                                сба&shy;лан&shy;си&shy;ро&shy;ван&shy;ное, ком&shy;пакт&shy;ное,
+                                мощ&shy;ное и силь&shy;ное те&shy;ло, не рас&shy;тя&shy;ну&shy;тое.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_5"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Варвара
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-5">
+                                <img src="./img/image-5.jpg" alt="Бенгальская">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>бенгальская</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>11 месяцев</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Она со&shy;вер&shy;шен&shy;но не агрес&shy;сив&shy;на и не
+                                кон&shy;фликт&shy;на и мо&shy;жет до&shy;воль&shy;но лег&shy;ко
+                                ужить&shy;ся с дру&shy;ги&shy;ми ва&shy;ши&shy;ми
+                                пи&shy;том&shy;ца&shy;ми.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_6"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Веня
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-6">
+                                <img src="./img/image-6.jpg" alt="Невская маскарадная">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>невская маскарадная</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>год и 2 месяца</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Нев&shy;ская мас&shy;ка&shy;рад&shy;ная кош&shy;ка – это
+                                пред&shy;ста&shy;ви&shy;тель&shy;ни&shy;ца од&shy;ной из
+                                са&shy;мых кра&shy;си&shy;вых и за&shy;га&shy;доч&shy;ных
+                                по&shy;род.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_7"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Еврасик
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-7">
+                                <img src="./img/image-7.jpg" alt="Азиатская дымчатая">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>азиатская дымчатая</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>1.5 года</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Ази&shy;ат&shy;ская дым&shy;ча&shy;тая не станет
+                                пре&shy;тен&shy;до&shy;вать на ли&shy;дер&shy;ство, и
+                                го&shy;то&shy;ва пол&shy;но&shy;стью Вам
+                                под&shy;чи&shy;нять&shy;ся, по&shy;это&shy;му и не
+                                о&shy;став&shy;ля&shy;ет мно&shy;го хло&shy;пот
+                                хо&shy;зя&shy;и&shy;ну.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_8"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Дебби
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-8">
+                                <img src="./img/image-8.jpg" alt="Мейн-кун">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>мейн-кун</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>4 месяца</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Ази&shy;ат&shy;ская дым&shy;ча&shy;тая не станет
+                                пре&shy;тен&shy;до&shy;вать на ли&shy;дер&shy;ство, и
+                                го&shy;то&shy;ва пол&shy;но&shy;стью Вам
+                                под&shy;чи&shy;нять&shy;ся, по&shy;это&shy;му и не
+                                о&shy;став&shy;ля&shy;ет мно&shy;го хло&shy;пот
+                                хо&shy;зя&shy;и&shy;ну.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_9"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Изабель
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-9">
+                                <img src="./img/image-9.jpg" alt="Смешанная">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>смешанная</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>2 года</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Но ко&shy;ша&shy;чьи ари&shy;сто&shy;кра&shy;ты ни&shy;ко&shy;гда
+                                не бу&shy;дут об&shy;ла&shy;дать те&shy;ми
+                                ис&shy;клю&shy;чи&shy;тель&shy;ны&shy;ми ка&shy;че&shy;ства&shy;ми,
+                                ко&shy;то&shy;ры&shy;ми при&shy;ро&shy;да щед&shy;ро
+                                на&shy;де&shy;ли&shy;ла сме&shy;шан&shy;ную по&shy;ро&shy;ду.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_10"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Карамелька
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-10">
+                                <img src="./img/image-10.jpg" alt="Британская">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>британская золотая</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>год и 1 месяц</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Бри&shy;тан&shy;ская зо&shy;ло&shy;тая шин&shy;шил&shy;ла
+                                по&shy;яви&shy;лась в Ве&shy;ли&shy;ко&shy;бри&shy;та&shy;нии в
+                                ре&shy;зуль&shy;та&shy;те скре&shy;щи&shy;ва&shy;ний дру&shy;гих
+                                по&shy;род ко&shy;шек, име&shy;ю&shy;щих же&shy;ла&shy;е&shy;мые
+                                для ре&shy;зуль&shy;та&shy;та ка&shy;че&shy;ства.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_11"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Лакки
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-11">
+                                <img src="./img/image-11.jpg" alt="Шотландская вислоухая">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>шотландская вислоухая</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>11 месяцев</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Внешне шот&shy;ланд&shy;ские вис&shy;ло&shy;ухие очень
+                                на&shy;по&shy;ми&shy;на&shy;ют бри&shy;тан&shy;ских ко&shy;шек,
+                                что неуди&shy;ви&shy;тель&shy;но, учи&shy;ты&shy;вая близ&shy;кое
+                                род&shy;ство по&shy;род.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+
+                <div class="popup popup_12"><div class="popup__wrapper">
+                    <div class="popup__header">
+                        Лайма
+                        <label for="no-popup" class="popup__close ic ic_close"></label>
+                    </div>
+                    <div class="popup__content clearfix">
+                        <div class="popup__left">
+                            <div class="popup__image popup__image-12">
+                                <img src="./img/image-12.jpg" alt="Сиамская">
+                            </div>
+                        </div>
+                        <div class="popup__right">
+                            <div class="popup__info">
+                                Порода: <span>сиамская</span>
+                            </div>
+                            <div class="popup__info">
+                                Возраст: <span>год и 4 месяца</span>
+                            </div>
+                            <div class="popup__info">
+                                Болезни: <span>нет</span>
+                            </div>
+                            <p>
+                                Дол&shy;гое вре&shy;мя си&shy;ам&shy;ских ко&shy;шек
+                                счи&shy;та&shy;ли мсти&shy;тель&shy;ны&shy;ми, злоб&shy;ны&shy;ми
+                                и эго&shy;и&shy;стич&shy;ны&shy;ми. По&shy;это&shy;му
+                                за&shy;во&shy;дить та&shy;ких пи&shy;том&shy;цев осо&shy;бо не
+                                стре&shy;ми&shy;лись.
+                            </p>
+                        </div>
+                    </div>
+                </div></div>
+            </main>
+        </div>
+
+        <!-- Подвал сайта -->
+        <div class="body-wrapper__bottom">
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__left">
+                        <p>Напишите нам:</p>
+                        <p class="ic ic_email">
+                            <a href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+                        </p>
+                        <p class="ic ic_email">
+                            <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+                        </p>
+                    </div><div class="footer__right">
+                        <p>&copy; 2018 ООО &laquo;<a href="#">Бабушкины котятки</a>&raquo;</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
