@@ -207,7 +207,7 @@ body
 .carousel-wrapper
 {
     width: 100%;
-    position: absolute;  /*TODO: may cause problems (rel and no buf default)*/
+    position: absolute;
     overflow: hidden;
     min-height: 700px;
     height: 100%;
