@@ -118,6 +118,13 @@ body
     vertical-align: middle;
 }
 
+.close-label
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .cat-image
 {
     height: 400px;
@@ -275,6 +282,7 @@ body
     background-image: url('cats/skoda.jpg');
     width: 20%;
 }
+/* Начало селекоторов для сдвига карусели */
 
 .cat-input1:checked ~ .carousel
 {
@@ -300,6 +308,9 @@ body
 {
     left: -65%;
 }
+/* Конец селекоторов для сдвига карусели */
+
+/* Начало селекторов для увеличения карточки, подсветка имени на hover */
 
 .cat-input1:checked ~ .carousel .item1
 {
@@ -317,6 +328,16 @@ body
 .cat-input1:checked ~ .carousel .item1:hover .cat-name
 {
     visibility: visible;
+}
+
+.cat-input1:checked ~ .carousel .item1 .short-description
+{
+    z-index: 50;
+}
+
+.cat-input1:checked ~ .carousel .item1 .short-description .full-desc-label
+{
+    cursor: pointer;
 }
 
 .cat-input2:checked ~ .carousel .item2
@@ -337,6 +358,16 @@ body
     visibility: visible;
 }
 
+.cat-input2:checked ~ .carousel .item2 .short-description
+{
+    z-index: 50;
+}
+
+.cat-input2:checked ~ .carousel .item2 .short-description .full-desc-label
+{
+    cursor: pointer;
+}
+
 .cat-input3:checked ~ .carousel .item3
 {
     height: 120%;
@@ -353,6 +384,16 @@ body
 .cat-input3:checked ~ .carousel .item3:hover .cat-name
 {
     visibility: visible;
+}
+
+.cat-input3:checked ~ .carousel .item3 .short-description
+{
+    z-index: 50;
+}
+
+.cat-input3:checked ~ .carousel .item3 .short-description .full-desc-label
+{
+    cursor: pointer;
 }
 
 .cat-input4:checked ~ .carousel .item4
@@ -373,6 +414,16 @@ body
     visibility: visible;
 }
 
+.cat-input4:checked ~ .carousel .item4 .short-description
+{
+    z-index: 50;
+}
+
+.cat-input4:checked ~ .carousel .item4 .short-description .full-desc-label
+{
+    cursor: pointer;
+}
+
 .cat-input5:checked ~ .carousel .item5
 {
     height: 120%;
@@ -390,6 +441,19 @@ body
 {
     visibility: visible;
 }
+
+.cat-input5:checked ~ .carousel .item5 .short-description
+{
+    z-index: 50;
+}
+
+.cat-input5:checked ~ .carousel .item5 .short-description .full-desc-label
+{
+    cursor: pointer;
+}
+/* Конец селекторов для увеличения карточки, подсветка имени на hover */
+
+/* Начало селекторов для изменения кружков под каруселью */
 
 .cat-input1:checked ~ .carousel-labels .carousel-label:nth-child(1) label
 {
@@ -415,3 +479,4 @@ body
 {
     background-color: #727272;
 }
+/* Конец селекторов для изменения кружков под каруселью */
