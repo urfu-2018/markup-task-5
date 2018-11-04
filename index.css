@@ -353,14 +353,14 @@ footer .copyright
 
 .carousel-item .background
 {
-    width: calc(100% - 20px);
-    height: 100%;
     z-index: 1;
     background-color: black;
     opacity: .5;
     position: absolute;
     top: 0;
     left: 10px;
+    bottom: 0;
+    right: 10px;
     display: none;
     cursor: pointer;
 }
@@ -368,7 +368,7 @@ footer .copyright
 .carousel-item .background h1
 {
     position: absolute;
-    margin-top: calc(50% - 1.25em);
+    margin-top: 100px;
     width: 100%;
     font-size: 30px;
     font-weight: normal;
