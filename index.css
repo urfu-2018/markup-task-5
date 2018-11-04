@@ -1,0 +1,147 @@
+@font-face
+{
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cinzel Regular'), local('Cinzel-Regular'), url(https://fonts.gstatic.com/s/cinzel/v7/8vIJ7ww63mVu7gt79mT7.woff2) format('woff2');
+}
+
+@font-face
+{
+    font-family: 'Exo';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Exo Regular'), local('Exo-Regular'), url(https://fonts.gstatic.com/s/exo/v7/4UaOrEtFpBISc36j.woff2) format('woff2');
+}
+
+*
+{
+    border: solid 1px lightgreen;
+}
+
+main
+{
+    width: 100%;
+}
+
+.cats
+{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cats article
+{
+    display: inline-block;
+    position: relative;
+    border: solid 1px #000;
+    border-radius: 7px;
+    padding: 10px;
+    width: 250px;
+    margin: 10px auto;
+}
+
+.cats article .description
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: green;
+}
+
+.cats > input.article-1:checked ~ article.article-1:hover .description,
+.cats > input.article-2:checked ~ article.article-2:hover .description,
+.cats > input.article-3:checked ~ article.article-3:hover .description,
+.cats > input.article-4:checked ~ article.article-4:hover .description,
+.cats > input.article-5:checked ~ article.article-5:hover .description
+{
+    width: 250px;
+    display: block;
+    z-index: 1;
+}
+
+.cats > input.article-1:checked ~ article
+{
+    top: 0;
+    left: 40%;
+}
+
+.cats > input.article-2:checked ~ article
+{
+    top: 0;
+    left: 20%;
+}
+
+.cats > input.article-3:checked ~ article
+{
+    top: 0;
+    left: 0;
+}
+
+.cats > input.article-4:checked ~ article
+{
+    top: 0;
+    left: -20%;
+}
+
+.cats > input.article-5:checked ~ article
+{
+    top: 0;
+    left: -40%;
+}
+
+.cats > input.article-1:not(:checked) ~ article.article-1,
+.cats > input.article-2:not(:checked) ~ article.article-2,
+.cats > input.article-3:not(:checked) ~ article.article-3,
+.cats > input.article-4:not(:checked) ~ article.article-4,
+.cats > input.article-5:not(:checked) ~ article.article-5
+{
+    opacity: .7;
+}
+
+.nickname a,
+.nickname a:visited
+{
+    color: #000;
+}
+
+.photo img
+{
+    margin: auto;
+    display: block;
+    width: 250px;
+    height: 250px;
+    border: solid 1px #000;
+}
+
+.nickname
+{
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nickname > a
+{
+    text-decoration: none;
+}
+
+p,
+h1,
+h2
+{
+    text-align: center;
+}
+
+h1,
+h2
+{
+    font-family: Cinzel, serif;
+}
+
+p
+{
+    font-family: Exo, sans-serif;
+}
