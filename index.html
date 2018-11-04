@@ -3,7 +3,258 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
 <body>
+<header>
+    <h1>Мурмаркет</h1>
+</header>
+
+<div class="header-padding"></div>
+
+<section class="carousel-wrapper">
+
+    <input type="radio" checked="checked" id="cat1" class="carousel-selector cat1" name="carousel-selector">
+    <input type="radio" id="cat2" class="carousel-selector cat2" name="carousel-selector">
+    <input type="radio" id="cat3" class="carousel-selector cat3" name="carousel-selector">
+    <input type="radio" id="cat4" class="carousel-selector cat4" name="carousel-selector">
+    <input type="radio" id="cat5" class="carousel-selector cat5" name="carousel-selector">
+    <input type="radio" id="cat6" class="carousel-selector cat6" name="carousel-selector">
+    <input type="radio" id="cat7" class="carousel-selector cat7" name="carousel-selector">
+    <input type="radio" id="cat8" class="carousel-selector cat8" name="carousel-selector">
+    <input type="radio" id="cat9" class="carousel-selector cat9" name="carousel-selector">
+    <input type="radio" id="cat10" class="carousel-selector cat10" name="carousel-selector">
+
+    <section class="carousel">
+        <article class="carousel-item">
+
+            <article class="background"><h1>Борис</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat1"><img src="images/grumpy-cat.jpg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Анабелла</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat2"><img src="images/odd-eyed-cat.jpg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Пабло Диего Хозе Франциско де Паула Хуан Непомукено Криспин
+                Криспиано де ла Сантисима Тринидад Руиз и Пикассо</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat3"><img src="images/pablo-picasso.jpeg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Обжорка</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat4"><img src="images/fat-cat.jpg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Мурзик</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat5"><img src="images/purring-cat.jpg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Сэм</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat6"><img src="images/surprised-cat.jpeg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Рыжик</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat7"><img src="images/red-cat.jpg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Барсик</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat8"><img src="images/barsik.jpg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Пушистик</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat9"><img src="images/white-cat.jpg" alt="Cat"></label>
+
+        </article>
+
+        <article class="carousel-item">
+
+            <article class="background"><h1>Сильвестр</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat10"><img src="images/licked-cat.jpg" alt="Cat"></label>
+
+        </article>
+    </section>
+
+
+    <nav class="carousel-labels">
+        <aside class="label">
+            <label for="cat1"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat2"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat3"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat4"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat5"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat6"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat7"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat8"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat9"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat10"></label>
+        </aside>
+    </nav>
+
+    <section class="modal-dialog" id="modal-dialog">
+        <article class="cat-item">
+            <img src="images/grumpy-cat.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Борис</h1></article>
+            <article class="description">
+                Милый, ласковый, общительный<br>
+                Возраст - 4 года<br>
+                Любит смотреть чужой код<br>
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/odd-eyed-cat.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Анабелла</h1></article>
+            <article class="description">
+                Возраст ~ 2 года<br>
+                Любит ловить мышей<br>
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/pablo-picasso.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Пабло Диего Хозе Франциско де Паула Хуан Непомукено Криспин
+                Криспиано де ла Сантисима Тринидад Руиз и Пикассо</h1></article>
+            <article class="description">
+                Общительный, умный кот<br>
+                Любит играть с веревочкой<br>
+                Возраст 5 лет<br>
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/fat-cat.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Обжорка</h1></article>
+            <article class="description">
+                Возраст - 7 лет<br>
+                Не против немного перекусить<br>
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/purring-cat.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Мурзик</h1></article>
+            <article class="description">
+                Очень ласковый, общительный кот<br>
+                Любит, когда его гладят<br>
+                Возраст ~ 3 года<br>
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/surprised-cat.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Сэм</h1></article>
+            <article class="description">
+                (=^ ◡ ^=)
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/red-cat.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Рыжик</h1></article>
+            <article class="description">
+                Просто рыжий кот<br>
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/barsik.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Барсик</h1></article>
+            <article class="description">
+
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/white-cat.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Пушистик</h1></article>
+            <article class="description">
+
+            </article>
+        </article>
+
+        <article class="cat-item">
+            <img src="images/licked-cat.jpg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Сильвестр</h1></article>
+            <article class="description">
+
+            </article>
+        </article>
+    </section>
+
+</section>
+
+<div class="footer-padding"></div>
+
+<footer>
+    <article class="write-us">Напишите нам:</article>
+    <article class="copyright">&copy; 2018 OOO &laquo;<a href="#">Бабушкины котятки</a>&raquo;</article>
+
+    <a href="#">cats@babuli.ru</a>
+    <a href="#">vnuchek@babuli.ru</a>
+</footer>
+
 </body>
 </html>
