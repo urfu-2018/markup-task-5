@@ -148,11 +148,6 @@ body
     z-index: 0;
 }
 
-.cat-card:hover::after
-{
-    opacity: 1;
-}
-
 .short-description
 {
     position: relative;
@@ -160,11 +155,6 @@ body
     vertical-align: middle;
     line-height: inherit;
     z-index: 1;
-}
-
-.cat-card:hover .cat-name
-{
-    visibility: visible;
 }
 
 .short-description .cat-name
@@ -319,12 +309,32 @@ body
     line-height: 360px;
 }
 
+.cat-input1:checked ~ .carousel .item1:hover::after
+{
+    opacity: 1;
+}
+
+.cat-input1:checked ~ .carousel .item1:hover .cat-name
+{
+    visibility: visible;
+}
+
 .cat-input2:checked ~ .carousel .item2
 {
     height: 120%;
     opacity: 1;
     top: -30px;
     line-height: 360px;
+}
+
+.cat-input2:checked ~ .carousel .item2:hover::after
+{
+    opacity: 1;
+}
+
+.cat-input2:checked ~ .carousel .item2:hover .cat-name
+{
+    visibility: visible;
 }
 
 .cat-input3:checked ~ .carousel .item3
@@ -335,6 +345,16 @@ body
     line-height: 360px;
 }
 
+.cat-input3:checked ~ .carousel .item3:hover::after
+{
+    opacity: 1;
+}
+
+.cat-input3:checked ~ .carousel .item3:hover .cat-name
+{
+    visibility: visible;
+}
+
 .cat-input4:checked ~ .carousel .item4
 {
     height: 120%;
@@ -343,12 +363,32 @@ body
     line-height: 360px;
 }
 
+.cat-input4:checked ~ .carousel .item4:hover::after
+{
+    opacity: 1;
+}
+
+.cat-input4:checked ~ .carousel .item4:hover .cat-name
+{
+    visibility: visible;
+}
+
 .cat-input5:checked ~ .carousel .item5
 {
     height: 120%;
     opacity: 1;
     top: -30px;
     line-height: 360px;
+}
+
+.cat-input5:checked ~ .carousel .item5:hover::after
+{
+    opacity: 1;
+}
+
+.cat-input5:checked ~ .carousel .item5:hover .cat-name
+{
+    visibility: visible;
 }
 
 .cat-input1:checked ~ .carousel-labels .carousel-label:nth-child(1) label
