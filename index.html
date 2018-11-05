@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
@@ -11,11 +11,6 @@
 </header>
 <div class="wrap">
     <main>
-        <!--<input id="toggle-view-mode" class="toggle-view-mode" type="checkbox" hidden>-->
-        <!--<label for="toggle-view-mode" class="toggle-view-mode">-->
-        <!--<img src="baseline-apps-24px.svg" class="tiles" alt="">-->
-        <!--<img src="baseline-menu-24px.svg" class="list" alt="">-->
-        <!--</label>-->
         <section class="cats">
             <input id="article-1" class="article-1" type="radio" name="carousel" value="1" hidden>
             <input id="article-2" class="article-2" type="radio" name="carousel" value="1" hidden>
@@ -29,19 +24,19 @@
             <input id="popup-5" class="popup-5" type="checkbox" hidden>
             <article class="article-1">
                 <section class="photo">
-                    <label for="article-1">
+                    <label for="article-1" class="carousel-action">
                         <img src="joker.jpg" alt="joker" title="joker">
                     </label>
                 </section>
                 <label for="popup-1" class="description">
                     <span>
-                            Private J. T. "Joker" Davis
+                        Private J. T. "Joker" Davis
                     </span>
                 </label>
             </article>
             <article class="article-2">
                 <section class="photo">
-                    <label for="article-2">
+                    <label for="article-2" class="carousel-action">
                         <img src="leo.jpg" alt="lil leo" title="leo">
                     </label>
                 </section>
@@ -53,7 +48,7 @@
             </article>
             <article class="article-3">
                 <section class="photo">
-                    <label for="article-3">
+                    <label for="article-3" class="carousel-action">
                         <img src="sack.jpg" alt="gordon sackhelm" title="gordon">
                     </label>
                 </section>
@@ -65,7 +60,7 @@
             </article>
             <article class="article-4">
                 <section class="photo">
-                    <label for="article-4">
+                    <label for="article-4" class="carousel-action">
                         <img src="jordan.jpg" alt="jordan meowford" title="jordan meowford">
                     </label>
                 </section>
@@ -77,7 +72,7 @@
             </article>
             <article class="article-5">
                 <section class="photo">
-                    <label for="article-5">
+                    <label for="article-5" class="carousel-action">
                         <img src="dolan.jpg" alt="dolan duck" title="dolan">
                     </label>
                 </section>
@@ -88,24 +83,34 @@
                 </label>
             </article>
             <div class="popup popup-1">
-                <p>asdddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-                <label for="popup-1"><span>close</span></label>
+                <article class="popup-content">
+                    <img src="joker.jpg">
+                    <label for="popup-1"><span>close</span></label>
+                </article>
             </div>
             <div class="popup popup-2">
-                <p>asdddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-                <label for="popup-2"><span>close</span></label>
+                <article class="popup-content">
+                    <img src="leo.jpg">
+                    <label for="popup-2"><span>close</span></label>
+                </article>
             </div>
             <div class="popup popup-3">
-                <p>asdddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-                <label for="popup-3"><span>close</span></label>
+                <article class="popup-content">
+                    <img src="sack.jpg">
+                    <label for="popup-3"><span>close</span></label>
+                </article>
             </div>
             <div class="popup popup-4">
-                <p>asdddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-                <label for="popup-4"><span>close</span></label>
+                <article class="popup-content">
+                    <img src="jordan.jpg">
+                    <label for="popup-4"><span>close</span></label>
+                </article>
             </div>
             <div class="popup popup-5">
-                <p>asdddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-                <label for="popup-5"><span>close</span></label>
+                <article class="popup-content">
+                    <img src="dolan.jpg">
+                    <label for="popup-5"><span>close</span></label>
+                </article>
             </div>
         </section>
     </main>

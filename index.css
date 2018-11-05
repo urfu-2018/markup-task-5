@@ -1,102 +1,80 @@
 @font-face
 {
-    font-family: 'Cinzel';
+    font-family: 'PT Sans Narrow';
     font-style: normal;
     font-weight: 400;
-    src: local('Cinzel Regular'), local('Cinzel-Regular'), url(https://fonts.gstatic.com/s/cinzel/v7/8vIJ7ww63mVu7gt79mT7.woff2) format('woff2');
+    src: local('PT Sans Narrow'), url(https://fonts.gstatic.com/s/ptsansnarrow/v9/BngRUXNadjH0qYEzV7ab-oWlsbCGwR0.woff2) format('woff2');
 }
 
-@font-face
-{
-    font-family: 'Exo';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Exo Regular'), local('Exo-Regular'), url(https://fonts.gstatic.com/s/exo/v7/4UaOrEtFpBISc36j.woff2) format('woff2');
-}
-
-html
-{
-    background: green;
-}
-
+html,
 body
 {
-    background: blue;
-}
-
-main
-{
-    background: purple;
-}
-
-main > section.cats
-{
-    background: brown;
-}
-
-html, body
-{
+    min-width: 1250px;
     height: 100%;
 }
 
 header
 {
-    background: white;
+    background: #fff;
     z-index: 4;
     position: fixed;
     top: 0;
     left: 0;
     height: 50px;
+    box-sizing: border-box;
     width: 100%;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, .5);
 }
 
 div.wrap
 {
     position: relative;
-    background: bisque;
     min-height: 100px;
+    width: 100%;
 }
 
 main
 {
-    background: pink;
     box-sizing: border-box;
     padding-top: 50px;
     padding-bottom: 50px;
     height: 100%;
-    width: 100%;
 }
 
 footer
 {
     position: absolute;
-    background: cadetblue;
     height: 50px;
+    box-sizing: border-box;
     width: 100%;
     bottom: 0;
+    border-top: solid 1px #000;
 }
 
 .cats
 {
+    text-align: center;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.cats article
+.cats > article
 {
+    text-align: center;
     display: inline-block;
     position: relative;
-    /*border: solid 1px #000;*/
-    /*border-radius: 7px;*/
-    /*padding: 10px;*/
-    /*margin: 10px auto;*/
-    width: 250px;
 }
 
 .cats article .description
 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 250px;
+    font-size: 20px;
     position: absolute;
     top: 0;
     left: 0;
@@ -107,43 +85,48 @@ footer
     z-index: 1;
 }
 
-.cats > input.article-1:checked ~ article.article-1:hover .description,
-.cats > input.article-2:checked ~ article.article-2:hover .description,
-.cats > input.article-3:checked ~ article.article-3:hover .description,
-.cats > input.article-4:checked ~ article.article-4:hover .description,
-.cats > input.article-5:checked ~ article.article-5:hover .description
+.cats > input.article-1:checked ~ article.article-1,
+.cats > input.article-2:checked ~ article.article-2,
+.cats > input.article-3:checked ~ article.article-3,
+.cats > input.article-4:checked ~ article.article-4,
+.cats > input.article-5:checked ~ article.article-5
+{
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, .6);
+}
+
+.cats > input.article-1:checked ~ article.article-1:hover label.description,
+.cats > input.article-2:checked ~ article.article-2:hover label.description,
+.cats > input.article-3:checked ~ article.article-3:hover label.description,
+.cats > input.article-4:checked ~ article.article-4:hover label.description,
+.cats > input.article-5:checked ~ article.article-5:hover label.description
 {
     display: block;
+    color: white;
 }
 
 .cats > input.article-1:checked ~ article
 {
-    top: 0;
-    left: 50%;
+    left: 500px;
 }
 
 .cats > input.article-2:checked ~ article
 {
-    top: 0;
-    left: 30%;
+    left: 250px;
 }
 
 .cats > input.article-3:checked ~ article
 {
-    top: 0;
-    left: 10%;
+    left: 0;
 }
 
 .cats > input.article-4:checked ~ article
 {
-    top: 0;
-    left: -10%;
+    left: -250px;
 }
 
 .cats > input.article-5:checked ~ article
 {
-    top: 0;
-    left: -30%;
+    left: -500px;
 }
 
 .cats > input.article-1:not(:checked) ~ article.article-1,
@@ -155,28 +138,29 @@ footer
     opacity: .7;
 }
 
-.photo label,
 .photo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.photo label
 {
     display: block;
     width: 250px;
     height: 250px;
+    padding: 0;
+    margin: 0;
 }
 
-/*.cats > input.article-1:not(:checked) ~ article.article-1 label,*/
-/*.cats > input.article-2:not(:checked) ~ article.article-2 label,*/
-/*.cats > input.article-3:not(:checked) ~ article.article-3 label,*/
-/*.cats > input.article-4:not(:checked) ~ article.article-4 label,*/
-/*.cats > input.article-5:not(:checked) ~ article.article-5 label,*/
-/*.cats > input.article-1:not(:checked) ~ article.article-1 img,*/
-/*.cats > input.article-2:not(:checked) ~ article.article-2 img,*/
-/*.cats > input.article-3:not(:checked) ~ article.article-3 img,*/
-/*.cats > input.article-4:not(:checked) ~ article.article-4 img,*/
-/*.cats > input.article-5:not(:checked) ~ article.article-5 img*/
-/*{*/
-    /*height: 200px;*/
-    /*width: 200px;*/
-/*}*/
+.cats > input.article-1:not(:checked) ~ article.article-1 label.carousel-action,
+.cats > input.article-2:not(:checked) ~ article.article-2 label.carousel-action,
+.cats > input.article-3:not(:checked) ~ article.article-3 label.carousel-action,
+.cats > input.article-4:not(:checked) ~ article.article-4 label.carousel-action,
+.cats > input.article-5:not(:checked) ~ article.article-5 label.carousel-action
+{
+    transform: matrix(.8, 0, 0, .8, 0, 0);
+}
 
 .nickname a,
 .nickname a:visited
@@ -197,21 +181,10 @@ footer
     text-decoration: none;
 }
 
-h1,
-h2
-{
-    font-family: Cinzel, serif;
-}
-
-p
-{
-    font-family: Exo, sans-serif;
-}
-
 div.popup
 {
     position: absolute;
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .9);
     color: white;
     top: 0;
     left: 0;
@@ -235,4 +208,38 @@ body,
 footer > p
 {
     margin: 0;
+}
+
+div.popup img
+{
+    width: 300px;
+    height: 300px;
+}
+
+h1
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+    font-size: 32px;
+}
+
+h1:first-letter
+{
+    color: red;
+}
+
+.popup-content
+{
+    position: absolute;
+    left: calc(50% - 350px);
+    top: calc(50% - 150px);
+    border: solid 1px white;
+    height: 300px;
+    width: 700px;
+}
+
+.popup-content > img
+{
+    display: block;
+    float: left;
 }
