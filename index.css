@@ -1,6 +1,7 @@
-main
+body
 {
-    max-width: 1500px;
+    width: auto;
+    min-width: 350px;
 }
 
 .card:hover
@@ -128,4 +129,61 @@ main
 {
     text-decoration: none;
     color: black;
+}
+
+.cat-header::first-letter
+{
+    color: red;
+}
+
+.cat-header
+{
+    font: 32px PT SansNarrow;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 2px -2px;
+    color: #1b1a1ac7;
+    margin-bottom: 10px;
+}
+
+.sticky
+{
+    position: sticky;
+    top: 0;
+}
+
+.cat-footer
+{
+    font: 14px Arial;
+}
+
+.cat-footer-link
+{
+    color: #4c4cd8;
+}
+
+.contacts-mail
+{
+    text-align: left;
+    display: inline-block;
+    margin: 0;
+}
+
+.copyright
+{
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    right: 150px;
+}
+
+.mail-bullet
+{
+    list-style: none;
+}
+
+.mail-bullet::before
+{
+    content: '\02709';
+    padding-right: 5px;
 }
