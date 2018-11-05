@@ -2,8 +2,170 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
 </head>
 <body>
+<header>
+    <div class="header-content">Мурмаркет</div>
+</header>
+
+<input id="cat-1-selector" class="cat-flag cat-1-selector" type="radio" name="cat-flag" value="1">
+<input id="cat-2-selector" class="cat-flag cat-2-selector" type="radio" name="cat-flag" value="1" checked>
+<input id="cat-3-selector" class="cat-flag cat-3-selector" type="radio" name="cat-flag" value="1">
+<input id="cat-4-selector" class="cat-flag cat-4-selector" type="radio" name="cat-flag" value="1">
+<input id="cat-5-selector" class="cat-flag cat-5-selector" type="radio" name="cat-flag" value="1">
+
+<div class="modals">
+    <article id="cat-1" class="modal">
+        <div class="modal-image">
+            <a class="modal-close" href="#">
+            </a>
+            <img class="carousel-item-image" alt="cat" width="200" src="images/01.jpg">
+        </div>
+        <div class="modal-description">
+            <h1>Nicolas</h1>
+            <p>
+                Grumpy, grumpy, grumpy
+            </p>
+            <p>
+                6 years old
+            </p>
+        </div>
+    </article>
+    <article id="cat-2" class="modal">
+        <div class="modal-image">
+            <a class="modal-close" href="#">
+            </a>
+            <img class="carousel-item-image" alt="cat" width="200" src="images/02.jpg">
+        </div>
+        <div class="modal-description">
+            <h1>Nicolas</h1>
+            <p>
+                Grumpy, grumpy, grumpy
+            </p>
+            <p>
+                6 years old
+            </p>
+        </div>
+    </article>
+    <article id="cat-3" class="modal">
+        <div class="modal-image">
+            <a class="modal-close" href="#">
+            </a>
+            <img class="carousel-item-image" alt="cat" width="200" src="images/03.jpg">
+        </div>
+        <div class="modal-description">
+            <h1>Russel</h1>
+            <p>
+                Grumpy, grumpy, grumpy
+            </p>
+            <p>
+                6 years old
+            </p>
+        </div>
+    </article>
+    <article id="cat-4" class="modal">
+        <div class="modal-image">
+            <a class="modal-close" href="#">
+            </a>
+            <img class="carousel-item-image" alt="cat" width="200" src="images/04.jpg">
+        </div>
+        <div class="modal-description">
+            <h1>John</h1>
+            <p>
+                Grumpy, grumpy, grumpy
+            </p>
+            <p>
+                6 years old
+            </p>
+        </div>
+    </article>
+    <article id="cat-5" class="modal">
+        <div class="modal-image">
+            <a class="modal-close" href="#">
+            </a>
+            <img class="carousel-item-image" alt="cat" width="200" src="images/05.jpg">
+        </div>
+        <div class="modal-description">
+            <h1>Matthew</h1>
+            <p>
+                Grumpy, grumpy, grumpy
+            </p>
+            <p>
+                6 years old
+            </p>
+        </div>
+    </article>
+</div>
+
+<main>
+    <div class="carousel">
+        <div class="carousel-container">
+            <article class="carousel-item cat-1-item">
+                <label class="cat-container" for="cat-1-selector">
+                    <img class="carousel-item-image" alt="cat" height="240" width="240" src="images/01.jpg">
+                </label>
+                <a class="name" href="#cat-1">
+                    <h1>Nicolas</h1>
+                </a>
+            </article>
+            <article class="carousel-item cat-2-item">
+                <label class="cat-container" for="cat-2-selector">
+                    <img class="carousel-item-image" alt="cat" height="240" width="240" src="images/02.jpg">
+                </label>
+                <a class="name" href="#cat-2">
+                    <h1>John</h1>
+                </a>
+            </article>
+            <article class="carousel-item cat-3-item">
+                <label class="cat-container" for="cat-3-selector">
+                    <img class="carousel-item-image" alt="cat" height="240" width="240" src="images/03.jpg">
+                </label>
+                <a class="name" href="#cat-3">
+                    <h1>Russel</h1>
+                </a>
+            </article>
+            <article class="carousel-item cat-4-item">
+                <label class="cat-container" for="cat-4-selector">
+                    <img class="carousel-item-image" alt="cat" height="240" width="240" src="images/04.jpg">
+                </label>
+                <a class="name" href="#cat-4">
+                    <h1>John</h1>
+                </a>
+            </article>
+            <article class="carousel-item cat-5-item">
+                <label class="cat-container" for="cat-5-selector">
+                    <img class="carousel-item-image" alt="cat" height="240" width="240" src="images/05.jpg">
+                </label>
+                <a class="name" href="#cat-5">
+                    <h1>Matthew</h1>
+                </a>
+            </article>
+        </div>
+    </div>
+
+    <div class="bullets">
+        <label class="bullet bullet-1" for="cat-1-selector"></label>
+        <label class="bullet bullet-2" for="cat-2-selector"></label>
+        <label class="bullet bullet-3" for="cat-3-selector"></label>
+        <label class="bullet bullet-4" for="cat-4-selector"></label>
+        <label class="bullet bullet-5" for="cat-5-selector"></label>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-left">
+        <span>Напишите нам:</span>
+        <ul>
+            <li><a href="#">cats@babuli.ru</a></li>
+            <li><a href="#">vnuchek@babuli.ru</a></li>
+        </ul>
+    </div>
+    <div class="footer-right">
+        &copy; 2018 ООО &laquo;<a href="">Бабушкины котятки</a>&raquo;
+    </div>
+</footer>
+
 </body>
 </html>
