@@ -2,8 +2,384 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
 <body>
+    <main>
+        <header class="page-sticky-header">
+            <div class="first-letter-red">Мурмаркет</div>
+            <hr>
+        </header>
+        <section>
+            <div class="carousel-wrapper">
+
+                <input type="radio" id="slide1" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide2" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide3" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide4" class="carousel-selector" name="radio-input-form" checked>
+                <input type="radio" id="slide5" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide6" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide7" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide8" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide9" class="carousel-selector" name="radio-input-form">
+                <input type="radio" id="slide10" class="carousel-selector" name="radio-input-form">
+
+
+
+                <div class="corousel-labels">
+                    <div class="corousel-label">
+                        <label for="slide1">
+                            <div class="image-header-container">
+                                <img src="img/1.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#krevetka-info">Креветушка</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide2">
+                            <div class="image-header-container">
+                                <img src="img/2.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#daira-info">Дайра</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide3">
+                            <div class="image-header-container">
+                                <img src="img/3.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#trump-info">Трумп</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide4">
+                            <div class="image-header-container">
+                                <img src="img/4.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#hariton-info">Харитон</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide5">
+                            <div class="image-header-container">
+                                <img src="img/5.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#richi-info">Ричи</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide6">
+                            <div class="image-header-container">
+                                <img src="img/6.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#arisha-info">Ариша</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide7">
+                            <div class="image-header-container">
+                                <img src="img/7.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#murena-info">Мурена</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide8">
+                            <div class="image-header-container">
+                                <img src="img/8.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#anjelo-info">Анжело</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide9">
+                            <div class="image-header-container">
+                                <img src="img/9.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#barsik-info">Барсик</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="corousel-label">
+                        <label for="slide10">
+                            <div class="image-header-container">
+                                <img src="img/10.jpg" alt="Фото кота">
+                                <div class="title-on-black-ground"><div class="middle-block-text"><a href="#cesar-info">Цезарь</a></div></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <aside class="modal" id="krevetka-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/1.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Креветушка</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: около 6 месяцев<br>
+                                Пол: мужской<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Котенок неприхотлив, кушает даже овсяную кашу.
+                                Молчаливый, почти не мяукает, очень ручной. К котенку прилагается
+                                игрушка-мячик, туалет, и корм на первое время.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="daira-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/2.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Дайра</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: 5 месяцев<br>
+                                Пол: женский<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Дайра очень-очень ласковая и человеко-ориентированная
+                                кошечка, ей необходимы внимание и забота. Серыми осенними вечерами будет
+                                греть вас обнимашками и намурлыкивать песенки на ушко.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="trump-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/3.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Трумп</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: 12 месяцев<br>
+                                Пол: мужской<br>
+                                Порода: хайленд-фолд<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Его царственную особу нужно любить и ценить, 
+                                кормить строго определенным кормом, предоставить минимум два больших 
+                                лотка. Обязательно наличие дивана, где можно возлежать в красивых позах.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="hariton-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/4.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Харитон</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: около 7 месяцев<br>
+                                Пол: мужской<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Невероятно контактный, ласковый. 
+                                Воспитан в лучших кошачьих традициях: лоток на 5+, когтеточка так же. 
+                                Составит в любом деле компанию, может с вами: спать, играть, есть или
+                                сидеть на плече.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="richi-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/5.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Ричи</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: 8 месяцев<br>
+                                Пол: мужской<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Он молод, здоров и красив как кошачий Бог.
+                                Активный и неутомимый игрун. Любит играть со струей воды и не
+                                боится никого. Дружит с собаками и кошками.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="arisha-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/6.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Ариша</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: 14 месяцев<br>
+                                Пол: женский<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Любознательная, ласковая, любит играть с кошачьими 
+                                игрушками. Не капризная. Воспитанная и ухоженная. Ходит в лоточек с 
+                                наполнителем. Привита, оформлен ветпаспорт.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="murena-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/7.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Мурена</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: 5 месяцев<br>
+                                Пол: женский<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Милая мурчалка по имени Мурена. 
+                                Этой полосатой красавице нужны ласковые руки и доброе отношение.
+                                Она всегда сможет поднять вам настроение.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="anjelo-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/8.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Анжело</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: около 17 месяцев<br>
+                                Пол: мужской<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Симпатяга Анжело. Полностью здоров, привит.
+                                Лоток освоен отлично. Очень ласковый к людям. Готов часами нежиться 
+                                на ручках, обниматься и мурлыкать. К другим кошкам относится строго,
+                                всех «строит».
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="barsik-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/9.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Барсик</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: 3 месяца<br>
+                                Пол: мужской<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Не у каждого есть котик Барсик! Только у тех, кому 
+                                повезет. Барсик умеет замечательно громко мурлыкать, обожает ласку и
+                                подвижные игры: никто с такой ловкостью не сумеет поймать бантик на
+                                веревочке!
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <aside class="modal" id="cesar-info">
+                    <div class="inline-div-pic-container">
+                        <img src="img/10.jpg" alt="Фото кота">
+                    </div>
+                    <div class="inline-div-content-container">
+                        <header>
+                            <span class="name-middle-align first-letter-red">Цезарь</span>
+                            <a href="#" class="btn">&#9746;</a>
+                        </header>
+                        <section>
+                            <div class="info-section">
+                                Возраст: 34 месяца<br>
+                                Пол: мужской<br>
+                                Порода: нет<br>
+                                Болезни: нет<br>
+                                Статус: ищет хозяина<br>
+                                <br>
+                                Подробная информация: Красавчик Цезарь совсем еще ребёнок.
+                                У Цезаря необыкновенно выразительный, трогательный взгляд, посмотрит и, 
+                                кажется, сейчас заговорит.
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+
+                <div class="black-absolute-background"></div>
+            </div>
+        </section>
+        <footer>
+            <hr>
+            <p class="left-align-block">
+                Напишите нам:<br>
+                <img src="img/letter.png" alt="Иконка письма">
+                <a href="#">cats@babuli.ru</a><br>
+                <img src="img/letter.png" alt="Иконка письма">
+                <a href="#">vnuchek@babuli.ru</a>
+            </p>
+            <p class="right-align-block">
+                &copy; 2018 ООО &laquo;<a href="#">Бабушкины котята</a>&raquo;
+            </p>
+        </footer>
+    </main>
 </body>
 </html>
