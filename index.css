@@ -78,7 +78,6 @@ footer img
     width: 100%;
     display: inline-block;
     text-align: center;
-    vertical-align: middle;
 }
 
 .corousel-label
@@ -125,7 +124,7 @@ footer img
 {
     width: 100%;
     height: 100%;
-    display: block;
+    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -158,7 +157,9 @@ input[id='slide1']:checked ~ .corousel-labels .corousel-label
     text-decoration-line: underline;
 }
 
-input[id='slide1']:checked ~ .corousel-labels .corousel-label label[for='slide1'] .image-header-container
+input[id='slide1']:checked ~ .corousel-labels
+.corousel-label label[for='slide1']
+.image-header-container
 {
     opacity: 1;
     width: 100%;
