@@ -1,0 +1,79 @@
+body
+{
+    font-family: Arial, serif;
+}
+
+header,
+footer
+{
+    position: sticky;
+    -moz-position: sticky;
+    -ms-position: sticky;
+    -o-position: sticky;
+    -webkit-position: sticky;
+}
+
+header
+{
+    top: 0;
+}
+
+main
+{
+    min-height: calc(100vh - 43.6px - 82.8px);
+}
+
+footer
+{
+    bottom: 0;
+}
+
+header
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    border: 1px solid lightgrey;
+}
+
+header::first-letter
+{
+    position: sticky;
+    color: red;
+}
+
+main
+{
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+}
+
+footer
+{
+    border: 1px solid lightgrey;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(87, 86, 86);
+}
+
+footer table
+{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+footer img
+{
+    margin-bottom: -3px;
+}
+
+footer table td:nth-child(2)
+{
+    text-align: right;
+}
+
+footer a
+{
+    color: #4c4cd8;
+}

@@ -1,0 +1,217 @@
+input
+{
+    display: none;
+}
+
+main
+{
+    position: relative;
+}
+
+.carousel
+{
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    transition: left 1s ease-out;
+    position: absolute;
+    top: 10%;
+}
+
+.carousel-list
+{
+    height: 300px;
+    white-space: nowrap; /* все содержимое отображается одной строкой */
+    position: relative;
+    transition: left .7s ease-out;
+    -o-transition: left .7s ease-out;
+    -ms-transition: left .7s ease-out;
+    -moz-transition: left .7s ease-out;
+    -webkit-transition: left .7s ease-out;
+}
+
+.carousel-list li
+{
+    display: inline-block;
+    width: 450px;
+    height: 300px;
+    margin: 0;
+    position: relative;
+}
+
+.carousel-list img
+{
+    width: 80%;
+    vertical-align: middle;
+    opacity: .7;
+    border: 1px solid lightgrey;
+}
+
+/* Перемещение изображений 450x300 */
+
+.carousel input:nth-child(1):checked ~ ul
+{
+    left: calc(50% - 225px);
+}
+
+.carousel input:nth-child(2):checked ~ ul
+{
+    left: calc(50% - 225px - 450px);
+}
+
+.carousel input:nth-child(3):checked ~ ul
+{
+    left: calc(50% - 225px - 900px);
+}
+
+.carousel input:nth-child(4):checked ~ ul
+{
+    left: calc(50% - 225px - 1350px);
+}
+
+.carousel input:nth-child(5):checked ~ ul
+{
+    left: calc(50% - 225px - 1800px);
+}
+
+/* Изменение центрального изображения */
+
+input[id='cat-1']:checked ~ ul li label[for='cat-1'] img,
+input[id='cat-2']:checked ~ ul li label[for='cat-2'] img,
+input[id='cat-3']:checked ~ ul li label[for='cat-3'] img,
+input[id='cat-4']:checked ~ ul li label[for='cat-4'] img,
+input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
+{
+    width: 100%;
+    margin-left: -10%;
+    opacity: 1;
+}
+
+/* Навигация */
+
+.carousel-navigation
+{
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.carousel-navigation .selector
+{
+    display: inline-block;
+    background-color: lightgrey;
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 6px;
+}
+
+input[id='cat-1']:checked ~ .carousel-navigation .selector[for='cat-1'],
+input[id='cat-2']:checked ~ .carousel-navigation .selector[for='cat-2'],
+input[id='cat-3']:checked ~ .carousel-navigation .selector[for='cat-3'],
+input[id='cat-4']:checked ~ .carousel-navigation .selector[for='cat-4'],
+input[id='cat-5']:checked ~ .carousel-navigation .selector[for='cat-5']
+{
+    background-color: rgb(87, 86, 86, .8);
+}
+
+/* При ховере на активную фотографию она затемняется, видно имя */
+
+.name-container
+{
+    width: 450px;
+    height: 300px;
+    border: 1px solid gray;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -10%;
+    text-align: center;
+    display: none;
+}
+
+.name-container .name
+{
+    color: white;
+    font-size: 32px;
+    margin-top: 135px;
+}
+
+input[id='cat-1']:checked ~ ul li:nth-child(1):hover .name-container,
+input[id='cat-2']:checked ~ ul li:nth-child(2):hover .name-container,
+input[id='cat-3']:checked ~ ul li:nth-child(3):hover .name-container,
+input[id='cat-4']:checked ~ ul li:nth-child(4):hover .name-container,
+input[id='cat-5']:checked ~ ul li:nth-child(5):hover .name-container
+{
+    display: block;
+}
+
+/* Модальное окно */
+
+.modalDialog
+{
+    z-index: 1;
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    display: none;
+    pointer-events: none;
+}
+
+.modalDialog:target
+{
+    display: block;
+    pointer-events: auto;
+}
+
+.modalDialog > div
+{
+    width: 100vh;
+    position: relative;
+    color: white;
+    margin: 10% auto;
+}
+
+.modalDialog img[src*='cat']
+{
+    opacity: 1;
+    border: none;
+    width: 70%;
+    max-width: 450px;
+    margin-right: 5%;
+    float: left;
+}
+
+.modalDialog .description
+{
+    width: 30%;
+    position: absolute;
+    right: 0;
+}
+
+.modalDialog h2
+{
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modalDialog p
+{
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: .5em;
+}
+
+.close
+{
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

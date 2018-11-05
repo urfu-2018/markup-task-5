@@ -2,8 +2,157 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <link type="text/css" rel="stylesheet" href="carousel.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
 <body>
+    <header>
+        Мурмаркет
+    </header>
+    <main>
+        <div class="carousel">
+            <input type="radio" id="cat-1" name="carousel">
+            <input type="radio" id="cat-2" name="carousel">
+            <input type="radio" id="cat-3" name="carousel" checked>
+            <input type="radio" id="cat-4" name="carousel">
+            <input type="radio" id="cat-5" name="carousel">
+            <ul class="carousel-list">
+                <li class="carousel-item">
+                    <label for="cat-1"><img src="images/cat_1.jpg" alt="cat_1"></label>
+                    <a href="#openModal-1">
+                        <div class="name-container"><p class="name">Имя</p></div>
+                    </a>
+                    <div id="openModal-1" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Закрыть" class="close">
+                                <img src="images/close.png" alt="Закрыть">
+                            </a>
+                            <img src="images/cat_1.jpg" alt="cat_1">
+                            <div class="description">
+                                <h2>Имя</h2>
+                                <p>Порода: неизвестна</p>
+                                <p>Болезни: нет</p>
+                                <br>
+                                <p>Статус: ищет хозяина</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item">
+                    <label for="cat-2"><img src="images/cat_2.jpg" alt="cat_2"></label>
+                    <a href="#openModal-2">
+                        <div class="name-container"><p class="name">Имя</p></div>
+                    </a>
+                    <div id="openModal-2" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Закрыть" class="close">
+                                <img src="images/close.png" alt="Закрыть">
+                            </a>
+                            <img src="images/cat_2.jpg" alt="cat_2">
+                            <div class="description">
+                                <h2>Имя</h2>
+                                <p>Порода: неизвестна</p>
+                                <p>Болезни: нет</p>
+                                <br>
+                                <p>Статус: ищет хозяина</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item">
+                    <label for="cat-3"><img src="images/cat_3.jpg" alt="cat_3"></label>
+                    <a href="#openModal-3">
+                        <div class="name-container"><p class="name">Имя</p></div>
+                    </a>
+                    <div id="openModal-3" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Закрыть" class="close">
+                                <img src="images/close.png" alt="Закрыть">
+                            </a>
+                            <img src="images/cat_3.jpg" alt="cat_3">
+                            <div class="description">
+                                <h2>Имя</h2>
+                                <p>Порода: неизвестна</p>
+                                <p>Болезни: нет</p>
+                                <br>
+                                <p>Статус: ищет хозяина</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item">
+                    <label for="cat-4"><img src="images/cat_4.jpg" alt="cat_4"></label>
+                    <a href="#openModal-4">
+                        <div class="name-container"><p class="name">Имя</p></div>
+                    </a>
+                    <div id="openModal-4" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Закрыть" class="close">
+                                <img src="images/close.png" alt="Закрыть">
+                            </a>
+                            <img src="images/cat_4.jpg" alt="cat_4">
+                            <div class="description">
+                                <h2>Имя</h2>
+                                <p>Порода: неизвестна</p>
+                                <p>Болезни: нет</p>
+                                <br>
+                                <p>Статус: ищет хозяина</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel-item">
+                    <label for="cat-5"><img src="images/cat_5.jpg" alt="cat_5"></label>
+                    <a href="#openModal-5">
+                        <div class="name-container"><p class="name">Имя</p></div>
+                    </a>
+                    <div id="openModal-5" class="modalDialog">
+                        <div>
+                            <a href="#close" title="Закрыть" class="close">
+                                <img src="images/close.png" alt="Закрыть">
+                            </a>
+                            <img src="images/cat_5.jpg" alt="cat_5">
+                            <div class="description">
+                                <h2>Имя</h2>
+                                <p>Порода: неизвестна</p>
+                                <p>Болезни: нет</p>
+                                <br>
+                                <p>Статус: ищет хозяина</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="carousel-navigation">
+                <label class="selector" for="cat-1"></label>
+                <label class="selector" for="cat-2"></label>
+                <label class="selector" for="cat-3"></label>
+                <label class="selector" for="cat-4"></label>
+                <label class="selector" for="cat-5"></label>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <table>
+            <tr>
+                <td colspan="2">Напишите нам:</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <img src="images/envelope.png" alt="Конверт">
+                    <a>cats@babuli.ru</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/envelope.png" alt="Конверт">
+                    vnuchek@babuli.ru
+                </td>
+                <td>&copy; 2018 OOO &laquo;<a>Бабушкины котятки</a>&raquo;</td>
+            </tr>
+        </table>
+    </footer>
 </body>
 </html>
