@@ -12,13 +12,14 @@
             <h3>Мурмаркет</h3>
         </header>
         <div class="carousel-wrapper">
+            <!-- Радиокнопки для движения карусели -->
             <input type="radio" class="carousel-input cat-input1" id="item1" name="carousel-input">
             <input type="radio" class="carousel-input cat-input2" id="item2" name="carousel-input">
             <input type="radio" class="carousel-input cat-input3" id="item3" name="carousel-input" checked>
             <input type="radio" class="carousel-input cat-input4" id="item4" name="carousel-input">
             <input type="radio" class="carousel-input cat-input5" id="item5" name="carousel-input">
 
-            <div class="cat-container carousel">
+            <div class="carousel">
                 <div class="cat-card carousel-item item1">
                     <label class="carousel-card-label" for="item1"></label>
                     <div class="short-description">
@@ -56,6 +57,7 @@
                 </div>
             </div>
 
+            <!-- Кружки-индикаторы выбранного котика -->
             <ul class="carousel-labels">
                 <li class="carousel-label">
                     <label for="item1"></label>
@@ -75,13 +77,15 @@
             </ul>
         </div>
 
+        <!-- Чекбоксы для открытия/закрытия модального окна -->
         <input type="checkbox" class="cat-cb1 carousel-input" id="full-desc1">
         <input type="checkbox" class="cat-cb2 carousel-input" id="full-desc2">
         <input type="checkbox" class="cat-cb3 carousel-input" id="full-desc3">
         <input type="checkbox" class="cat-cb4 carousel-input" id="full-desc4">
         <input type="checkbox" class="cat-cb5 carousel-input" id="full-desc5">
 
-        <div class="full-container">
+        <!-- Тут лежат модальные окна -->
+        <div class="full-container footer-helper">
             <section class="full-description">
                 <img class="cat-image" src="cats/blueberry.jpg" alt="blueberry">
                 <label class="close-label" for="full-desc1">&#x2715;</label>
@@ -137,7 +141,9 @@
                 </div>
             </section>
         </div>
-        <div class="buffer"></div>
+
+        <div class="buffer footer-helper"></div>
+
         <footer class="footer">
             <div class="contact-us">
                 <p>Напишите нам:</p>
