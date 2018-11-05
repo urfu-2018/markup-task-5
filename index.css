@@ -101,7 +101,7 @@ footer
 .cats > input.article-5:checked ~ article.article-5:hover label.description
 {
     display: block;
-    color: white;
+    color: #fff;
 }
 
 .cats > input.article-1:checked ~ article
@@ -185,7 +185,7 @@ div.popup
 {
     position: absolute;
     background: rgba(0, 0, 0, .9);
-    color: white;
+    color: #fff;
     top: 0;
     left: 0;
     width: 100%;
@@ -233,13 +233,46 @@ h1:first-letter
     position: absolute;
     left: calc(50% - 350px);
     top: calc(50% - 150px);
-    border: solid 1px white;
     height: 300px;
     width: 700px;
+    text-align: left;
+}
+
+.popup-content > section
+{
+    position: absolute;
+    left: 320px;
+    top: 0;
+    width: 380px;
+    height: 300px;
+    white-space: normal;
+}
+
+.popup-content > section > p
+{
+    hyphens: auto;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.popup-content > label
+{
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    right: 0;
+    z-index: 1;
+}
+
+.popup-content > label > img
+{
+    width: 100%;
+    height: 100%;
 }
 
 .popup-content > img
 {
-    display: block;
     float: left;
+    display: block;
 }
