@@ -10,13 +10,22 @@
 <body>
     <header class="cat-header sticky">Мурмаркет</header>
     <main class="carousel" id="main-page">
-        <div class="card">
-            <a href="#1">
-                <div class="darkened-img"><img class="cat-img" title="Боня" alt="Боня" src="cats/1.jpg">
+        <input name="cats" class="indicator" type="radio" id="Id1" checked>
+        <input name="cats" class="indicator" type="radio" id="Id2">
+        <input name="cats" class="indicator" type="radio" id="Id3">
+        <input name="cats" class="indicator" type="radio" id="Id4">
+        <input name="cats" class="indicator" type="radio" id="Id4">
+        <br>
+        <div class="card" id="Card1">
+            <label for="Id1"> <img class="cat-img" title="Боня" alt="Боня" src="cats/1.jpg"> </label>
+            <a href="#Cat1">
+                <div class="darkened-img">
+
                     <div class="white-text cat-name cat-name-overlayed">Бонифаций</div>
                 </div>
             </a>
-            <div class="modal" id="1">
+
+            <div class="modal" id="Cat1">
                 <div class="modal-inner">
                     <img class="cat-img cat-img-modal" title="Боня" alt="Боня" src="cats/1.jpg">
                     <section class="modal-side">
@@ -26,6 +35,53 @@
                             Милый, маленький котёнок. Любопытный и игривый.<br>
                             Через месяц исполнится год.<br>
                             Все прививки поставлены
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="Card2">
+            <label for="Id2"> <img class="cat-img" title="Мурка" alt="Мурка" src="cats/3.jpg"> </label>
+            <a href="#Cat2">
+                <div class="darkened-img">
+
+                    <div class="white-text cat-name cat-name-overlayed">Мурка</div>
+                </div>
+            </a>
+            <div class="modal" id="Cat2">
+                <div class="modal-inner">
+                    <img class="cat-img cat-img-modal" title="Мурка" alt="Мурка" src="cats/3.jpg">
+                    <section class="modal-side">
+                        <div class="close"><a href="#main-page" class="white-text close-link">✖</a></div>
+                        <h6 class="white-text cat-name">Мурка</h6>
+                        <p class="cat-info white-text">
+                            Милая пусечка<br>
+                            Берегите ручки, острые коготки!<br>
+                            Ждёт хозяина :)
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="card" id="Card3">
+            <label for="Id3"><img class="cat-img" title="Дуся" alt="Дуся" src="cats/4.jpg"> </label>
+            <a href="#Cat3">
+                <div class="darkened-img">
+
+                    <div class="white-text cat-name cat-name-overlayed">Дуся</div>
+                </div>
+            </a>
+
+            <div class="modal" id="Cat3">
+                <div class="modal-inner">
+                    <img class="cat-img cat-img-modal" title="Дуся" alt="Дуся" src="cats/4.jpg">
+                    <section class="modal-side">
+                        <div class="close"><a href="#main-page" class="white-text close-link">✖</a></div>
+                        <h6 class="white-text cat-name">Мурка</h6>
+                        <p class="cat-info white-text">
+                            Милая пусечка<br>
+                            Берегите ручки, острые коготки!<br>
+                            Ждёт хозяина :)
                         </p>
                     </section>
                 </div>
@@ -45,7 +101,7 @@
             &copy;&nbsp;2018&nbsp;&laquo;<a href="vk.cc/5171St">Бабуля Company</a>&raquo;<br>
         </div>
     </footer>
-        
+
 </body>
 
 </html>

@@ -6,7 +6,8 @@ body
 
 .carousel
 {
-    margin: 5px;
+    overflow: hidden;
+    text-align: center;  
 }
 
 .white-text
@@ -20,7 +21,7 @@ body
     vertical-align: top;
     margin: 5px;
     display: inline-block;
-    width: 300px;
+    position: relative;
 }
 
 .modal
@@ -81,11 +82,12 @@ body
 .darkened-img
 {
     background-color: #000;
-    margin: 15px auto 0;
-    position: relative;
-    display: inline-block;
+    display: none;
     width: 250px;
     height: 156px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .cat-name
@@ -104,13 +106,7 @@ body
     left: 30%;
     bottom: 30%;
     position: absolute;
-    display: none;
-}
-
-.darkened-img:hover .cat-img
-{
-    opacity: .7;
-    transition-duration: 300ms;
+    display: inline-block;
 }
 
 .close
@@ -126,11 +122,6 @@ body
 .close-link:active
 {
     text-decoration: none;
-}
-
-.darkened-img:hover .cat-name-overlayed
-{
-    display: inline-block;
 }
 
 .cat-header::first-letter
@@ -189,4 +180,29 @@ body
 {
     content: '\02709';
     padding-right: 5px;
+}
+
+.indicator
+{
+    margin: 0;
+    bottom: 10px;
+    text-align: center;
+    display: inline;
+}
+
+.indicator#Id1:not(:checked) ~ .card#Card1,
+.indicator#Id2:not(:checked) ~ .card#Card2,
+.indicator#Id3:not(:checked) ~ .card#Card3
+{
+    opacity: .7;
+    transform: scale(.8);
+}
+
+.indicator#Id1:checked ~ .card#Card1:hover .darkened-img,
+.indicator#Id2:checked ~ .card#Card2:hover .darkened-img,
+.indicator#Id3:checked ~ .card#Card3:hover .darkened-img
+{
+    opacity: .7;
+    transition-duration: 300ms;
+    display: block;
 }
