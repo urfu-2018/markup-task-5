@@ -1,0 +1,168 @@
+html, body
+{
+    margin: 0;
+    height: 91%;
+    background-color: #f5f5f5;
+}
+
+footer
+{
+    background-color: red;
+    height: 80px;
+    margin-top: -80px;
+}
+
+.wrapper
+{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    min-height: 100%;
+}
+
+.main
+{
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+header
+{
+    position: fixed;
+    height: 80px;
+    background-color: blue;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+} 
+
+header h1, footer h1
+{
+    text-align: center;
+}
+
+main input
+{
+    opacity: 0;
+}
+
+.photoContainer
+{
+    width: 6136px;
+    height: 315px;
+}
+
+.photo {
+    width: 420px;
+    height: 315px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.photo img
+{
+    width: 336px;
+    height: 252px;
+    display: block;
+    margin: auto;
+}
+
+.firstPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+}
+
+.firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+.firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+}
+
+.firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
+	                  #6e6e6ea6 0 0 72px 36px;
+}
+
+.secondPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+}
+
+.secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+.secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+}
+
+.secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
+	                  #6e6e6ea6 0 0 72px 36px;
+}
+
+.thirdPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+}
+
+.thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+.thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+}
+
+.thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
+	                  #6e6e6ea6 0 0 72px 36px;
+}
+
+.fourthPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+}
+
+.fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+.fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+}
+
+.fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
+	                  #6e6e6ea6 0 0 72px 36px;
+}
