@@ -1,4 +1,15 @@
-html, body
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans Narrow'), url(
+        https://fonts.gstatic.com/s/ptsansnarrow/v9/BngRUXNadjH0qYEzV7ab-oWlsbCGwR0.woff2
+        ) format('woff2');
+}
+
+html,
+body
 {
     margin: 0;
     height: 91%;
@@ -7,14 +18,21 @@ html, body
 
 footer
 {
-    background-color: red;
     height: 80px;
     margin-top: -80px;
+    font-size: 14px;
+    font-family: Arial;
+    margin-left: 10px;
+}
+
+footer a
+{
+    color: #4c4cd8;
 }
 
 .wrapper
 {
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 80px;
     min-height: 100%;
 }
@@ -29,34 +47,42 @@ header
 {
     position: fixed;
     height: 80px;
-    background-color: blue;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1;
-} 
-
-header h1, footer h1
-{
     text-align: center;
+    font-family: 'PT Sans Narrow';
+    font-size: 32px;
 }
 
-main input
+header h1::first-letter
 {
-    opacity: 0;
+    color: red;
 }
 
 .photoContainer
 {
-    width: 6136px;
-    height: 315px;
+    position: relative;
+    left: -110px;
+    width: 100%;/*4336px;*/
+    height: 490px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.photo {
+.photo
+{
+    position: relative;
     width: 420px;
     height: 315px;
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 100px;
+    margin-top: 80px;
+    transition: right .5s linear;
+    right: 0;
 }
 
 .photo img
@@ -67,11 +93,17 @@ main input
     margin: auto;
 }
 
-.firstPhoto:checked ~ .photoContainer .photo img
+.firstPhoto:checked ~ .photoContainer .photo
 {
-    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
-    opacity: 0.7;
+    right: -860px;
 }
+
+/* .firstPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
 
 .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) img
 {
@@ -81,22 +113,28 @@ main input
     opacity: 1;
 }
 
-.firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) ~ .photo img
+/* .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) ~ .photo img
 {
-    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-}
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
 
 .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1)
 {
-    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
-	                  #6e6e6ea6 0 0 72px 36px;
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
-.secondPhoto:checked ~ .photoContainer .photo img
+.secondPhoto:checked ~ .photoContainer .photo
 {
-    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
-    opacity: 0.7;
+    right: -430px;
 }
+
+/* .secondPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
 
 .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) img
 {
@@ -106,22 +144,28 @@ main input
     opacity: 1;
 }
 
-.secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) ~ .photo img
+/* .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) ~ .photo img
 {
-    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-}
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
 
 .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2)
 {
-    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
-	                  #6e6e6ea6 0 0 72px 36px;
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
-.thirdPhoto:checked ~ .photoContainer .photo img
+.thirdPhoto:checked ~ .photoContainer .photo
 {
-    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
-    opacity: 0.7;
+    right: 0;
 }
+
+/* .thirdPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
 
 .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) img
 {
@@ -131,22 +175,28 @@ main input
     opacity: 1;
 }
 
-.thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) ~ .photo img
+/* .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) ~ .photo img
 {
-    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-}
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
 
 .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3)
 {
-    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
-	                  #6e6e6ea6 0 0 72px 36px;
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
-.fourthPhoto:checked ~ .photoContainer .photo img
+.fourthPhoto:checked ~ .photoContainer .photo
 {
-    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
-    opacity: 0.7;
+    right: 430px;
 }
+
+/* .fourthPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
 
 .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) img
 {
@@ -156,13 +206,199 @@ main input
     opacity: 1;
 }
 
-.fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) ~ .photo img
+/* .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) ~ .photo img
 {
-    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-}
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
 
 .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4)
 {
-    box-shadow: inset #6e6e6ea6 0 0 120px 30px,
-	                  #6e6e6ea6 0 0 72px 36px;
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
+}
+
+.fifthPhoto:checked ~ .photoContainer .photo
+{
+    right: 860px;
+}
+
+/* .fifthPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
+
+.fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+/* .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
+
+.fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
+}
+
+.sixthPhoto:checked ~ .photoContainer .photo
+{
+    right: 1290px;
+}
+/* 
+.sixthPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
+     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
+
+.sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(6) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+/* 
+.sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(6) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0,
+     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
+
+.sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(6)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
+}
+
+.seventhPhoto:checked ~ .photoContainer .photo
+{
+    right: 1720px;
+}
+
+/* .seventhPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
+     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
+
+.seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+/* .seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
+
+.seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
+}
+
+.eighthPhoto:checked ~ .photoContainer .photo
+{
+    right: 2150px;
+}
+
+/* .eighthPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
+     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
+
+.eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+/* .eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0,
+     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
+
+.eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
+}
+
+.ninthPhoto:checked ~ .photoContainer .photo
+{
+    right: 2580px;
+}
+
+/* .ninthPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
+
+.ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+/* .ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
+
+.ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
+}
+
+.tenthPhoto:checked ~ .photoContainer .photo
+{
+    right: 3010px;
+}
+
+/* .tenthPhoto:checked ~ .photoContainer .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
+     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
+    opacity: 0.7;
+} */
+
+.tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10) img
+{
+    width: 420px;
+    height: 315px;
+    transform: none;
+    opacity: 1;
+}
+
+/* .tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10) ~ .photo img
+{
+    transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
+    -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
+} */
+
+.tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10)
+{
+    box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
