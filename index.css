@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=cyrillic');
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.shop-title
+{
+    position: sticky;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.shop-title h1
+{
+    font: 32px 'PT Sans Narrow', sans-serif;
+    margin: 5px;
+}
+
+.shop-title h1:first-letter
+{
+    color: #f00;
+}
+
+.carousel-container
+{
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.carousel-container img
+{
+    width: 300px;
+    height: 250px;
+}
+
+.shop-contact
+{
+    font: 14px 'Arial', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+}
+
+.shop-contact a
+{
+    text-decoration: none;
+    color: #4c4cd8;
+}
+
+.shop-contact a:hover
+{
+    color: #3e3ea8;
+}
+
+.contact-left
+{
+    margin: 10px 0 12px 20px;
+}
+
+.contact-left span
+{
+    display: block;
+    margin: 0 0 4px;
+}
+
+.contact-left span:first-child
+{
+    color: #808080;
+}
+
+.contact-left i
+{
+    margin: 0 5px 0 0;
+}
+
+.contact-right
+{
+    position: absolute;
+    right: 15px;
+    bottom: 12px;
+}
