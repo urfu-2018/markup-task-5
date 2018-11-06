@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 
+header
+{
+}
+
 header h1
 {
     font-size: 32px;
@@ -12,3 +16,46 @@ header h1:first-letter
     color: #ff3c17;
 }
 
+main
+{
+    position: relative;
+    margin-top: 100px;
+    z-index: 99;
+}
+
+footer
+{
+    font-size: 14px;
+    font-family: Arial;
+}
+
+footer img
+{
+    width: 18px;
+    height: 18px;
+    margin: -2px;
+}
+
+footer li
+{
+    display: flex;
+    line-height: 1.8;
+}
+
+footer li
+{
+    display: block;
+    line-height: 1.8;
+}
+
+.right
+{
+    float: right;
+    margin-right: 150px;
+}
+
+footer [href]
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
