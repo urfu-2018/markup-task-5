@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+header h1
+{
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+}
+
+header h1:first-letter
+{
+    color: #ff3c17;
+}
+
