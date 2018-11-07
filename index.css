@@ -1,113 +1,150 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow'), url('PT_Sans_Narrow/PT_Sans-Narrow-Web-Regular.ttf') format('truetype');
+}
+
 :root
 {
-    font: 18px Arial, Helvetica, sans-serif;
+    font: 14px Arial, Helvetica, sans-serif;
 }
 
 body
 {
+    overflow: hidden;
     margin-top: 0;
-}
-
-.view-button-image
-{
-    cursor: pointer;
-}
-
-.view-button
-{
-    display: none;
-}
-
-.view-button:not(:checked) ~ .cat-list .full-discription
-{
-    display: none;
-}
-
-.view-button:not(:checked) ~ .cat-list .cat-article:hover
-{
-    box-shadow: 0 0 8px;
-    transform: scale(1.03);
-}
-
-.view-button:not(:checked) ~ .cat-list .cat-article:hover .cat-image
-{
-    transform: scale(1.1);
-}
-
-.view-button:checked ~ .cat-list .cat-article
-{
-    display: block;
-    text-align: left;
-    width: 50%;
-    height: auto;
-
-    margin: 8px auto;
-}
-
-.view-button:checked ~ .cat-list .cat-image
-{
-    width: 50%;
-    height: 50%;
-
-    margin: 8px;
-    border-radius: 6px;
 }
 
 .main-header
 {
-    margin: 0 -8px 8px;
-    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
     text-align: center;
+    border-bottom: 1px solid darkgray;
+    background: white;
 
-    background-color: #601753;
-    color: white;
-
-    transition: all .5s;
-}
-
-.main-header:hover
-{
-    background-color: #852475;
-}
-
-.main-header:hover .main-title
-{
-    transform: scale(2);
+    z-index: 1;
 }
 
 .main-title
 {
-    transition: .2s;
+    font: 32px 'PT Sans Narrow', sans-serif;
     cursor: default;
 }
 
-.cat-list
+.main-title::first-letter
 {
-    text-align: center;
+    color: red;
 }
 
-.cat-article
+/*----------Carousel----------*/
+
+
+.carousel-slide-switch
+{
+    display: none;
+}
+
+.switch-1:checked ~ .cat-carousel
+{
+    transform: translateX(35%);
+}
+
+.switch-2:checked ~ .cat-carousel
+{
+    transform: translateX(0);
+}
+
+.switch-3:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-1)));
+}
+
+.switch-4:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-2)));
+}
+
+.switch-5:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-3)));
+}
+
+.switch-6:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-4)));
+}
+
+.switch-7:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-5)));
+}
+
+.switch-8:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-6)));
+}
+
+.switch-9:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-7)));
+}
+
+.switch-10:checked ~ .cat-carousel
+{
+    transform: translateX(calc(35% * (-8)));
+}
+
+.switch-1:checked ~ .cat-carousel .slide-1,
+.switch-2:checked ~ .cat-carousel .slide-2,
+.switch-3:checked ~ .cat-carousel .slide-3,
+.switch-4:checked ~ .cat-carousel .slide-4,
+.switch-5:checked ~ .cat-carousel .slide-5,
+.switch-6:checked ~ .cat-carousel .slide-6,
+.switch-7:checked ~ .cat-carousel .slide-7,
+.switch-8:checked ~ .cat-carousel .slide-8,
+.switch-9:checked ~ .cat-carousel .slide-9,
+.switch-10:checked ~ .cat-carousel .slide-10
+{
+    transform: scale(1.04);
+}
+
+.cat-carousel
+{
+    margin-top: 100px;
+    text-align: center;
+    white-space: nowrap;
+
+    transition: .4s linear;
+}
+
+.slide
 {
     display: inline-block;
-    width: 300px;
-    height: 450px;
-    vertical-align: top;
-
     margin: 8px;
-    border: 2px solid darkslategrey;
-    border-radius: 8px;
 
-    transition: transform .2s ease-in-out;
     overflow: hidden;
     cursor: pointer;
+
+    transition: .2s ease-in-out;
+}
+
+.cat-image ~ *
+{
+    display: none;
 }
 
 .cat-image
 {
     object-fit: cover;
-    border-radius: 6px 6px 0 0;
-
     transition: all .2s ease-in-out;
+}
+
+.cat-image:hover
+{
+    transform: scale(1.1);
 }
 
 .cat-name
@@ -116,6 +153,8 @@ body
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    font: normal 28px 'PT Sans Narrow', sans-serif;
 
     transition: .2s;
 }
@@ -143,4 +182,41 @@ body
 .small-discription:hover
 {
     text-shadow: 0 0 20px #c57cb9, 0 0 5px white;
+}
+
+.full-discription
+{
+    display: none;
+}
+
+.main-footer
+{
+    position: relative;
+    margin: 14px -8px 0;
+    border-top: 1px solid darkgray;
+}
+
+.contact-info
+{
+    margin: 8px;
+}
+
+.contact-info-left
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contact-info-right
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 3em;
+}
+
+.contact-info-link
+{
+    color: #4c4cd8;
 }
