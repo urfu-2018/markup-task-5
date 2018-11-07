@@ -2,8 +2,258 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header class="header_window">
+    <p>Мурмаркет</p>
+</header>
+<main class="main_window">
+    <section class="wrapper_slider">
+        <input type="radio" checked="checked" name="cat" id="cat1"/>
+        <input type="radio" class="cat" name="cat" id="cat2"/>
+        <input type="radio" class="cat" name="cat" id="cat3"/>
+        <input type="radio" class="cat" name="cat" id="cat4"/>
+        <input type="radio" class="cat" name="cat" id="cat5"/>
+        <input type="radio" class="cat" name="cat" id="cat6"/>
+        <input type="radio" class="cat" name="cat" id="cat7"/>
+        <input type="radio" class="cat" name="cat" id="cat8"/>
+        <input type="radio" class="cat" name="cat" id="cat9"/>
+        <input type="radio" class="cat" name="cat" id="cat10"/>
+        <div class="slider">
+            <label for="cat1" class="cat_1">
+                <label for="cat_name1" class="slider-cat_name">Усталик</label>
+            </label>
+            <label for="cat2" class="cat_2">
+                <label for="cat_name2" class="slider-cat_name">Рыжик</label>
+            </label>
+            <label for="cat3" class="cat_3">
+                <label for="cat_name3" class="slider-cat_name">Черемуха</label>
+            </label>
+            <label for="cat4" class="cat_4">
+                <label for="cat_name4" class="slider-cat_name">Васялиск</label>
+            </label>
+            <label for="cat5" class="cat_5">
+                <label for="cat_name5" class="slider-cat_name">Бусинка</label>
+            </label>
+            <label for="cat6" class="cat_6">
+                <label for="cat_name6" class="slider-cat_name">Стасян</label>
+            </label>
+            <label for="cat7" class="cat_7">
+                <label for="cat_name7" class="slider-cat_name">Куся</label>
+            </label>
+            <label for="cat8" class="cat_8">
+                <label for="cat_name8" class="slider-cat_name">Сомич</label>
+            </label>
+            <label for="cat9" class="cat_9">
+                <label for="cat_name9" class="slider-cat_name">Ловкарь</label>
+            </label>
+            <label for="cat10" class="cat_10">
+                <label for="cat_name10"
+                       class="slider-cat_name">Сан-сан-сан-сан-сан-сан-саныч</label>
+            </label>
+        </div>
+        <nav class="navigator">
+            <label for="cat1"></label>
+            <label for="cat2"></label>
+            <label for="cat3"></label>
+            <label for="cat4"></label>
+            <label for="cat5"></label>
+            <label for="cat6"></label>
+            <label for="cat7"></label>
+            <label for="cat8"></label>
+            <label for="cat9"></label>
+            <label for="cat10"></label>
+        </nav>
+    </section>
+    <input type="checkbox" name="cat_name" id="cat_name1">
+    <div class="popup_cat1">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name1" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat1.jpg"
+                     alt="Ustalic_cat" title="Усталик">
+                <div class="cat_card-text">
+                    <h2>Усталик</h2>
+                    <p>Возраст: 5 лет</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: вечная усталость</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Очень пушистый, мяукает громче всех на свете</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name2">
+    <div class="popup_cat2">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name2" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat2.jpg"
+                     alt="Ryjik_cat" title="Рыжык">
+                <div class="cat_card-text">
+                    <h2>Рыжик</h2>
+                    <p>Возраст: 1 год</p>
+                    <p>Порода: рыжый</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Высоко прыгает, умеет говорить "Мяу"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name3">
+    <div class="popup_cat3">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name3" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat3.jpg"
+                     alt="Cheremyha_cat" title="Черемуха">
+                <div class="cat_card-text">
+                    <h2>Черемуха</h2>
+                    <p>Возраст: 3 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Очень умный, закончил матмех</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name4">
+    <div class="popup_cat4">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name4" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat4.jpg"
+                     alt="Vasyalisk_cat" title="Васялиск">
+                <div class="cat_card-text">
+                    <h2>Васялиск</h2>
+                    <p>Возраст: 1 год</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Любит играть с детьми и котами</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name5">
+    <div class="popup_cat5">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name5" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat5.jpg"
+                     alt="Businka_cat" title="Бусинка">
+                <div class="cat_card-text">
+                    <h2>Бусинка</h2>
+                    <p>Возраст: 5 месяцев</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Ласковый кот, любит много покушать и поспать</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name6">
+    <div class="popup_cat6">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name6" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat6.jpg"
+                     alt="Stasyan_cat" title="Стасян">
+                <div class="cat_card-text">
+                    <h2>Стасян</h2>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Наглый и обоятельный, крещенный кот</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name7">
+    <div class="popup_cat7">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name7" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat7.jpg"
+                     alt="Kysa_cat" title="Куся">
+                <div class="cat_card-text">
+                    <h2>Куся</h2>
+                    <p>Возраст: 1.5 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Виртуозно играет с клубком, самая красивая кошка на сайте</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name8">
+    <div class="popup_cat8">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name8" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat8.jpg"
+                     alt="Somich_cat" title="Сомич">
+                <div class="cat_card-text">
+                    <h2>Сомич</h2>
+                    <p>Возраст: 4 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Бывалый и ленивый котяра, мяукает когда бегает</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name9">
+    <div class="popup_cat9">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name9" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat9.jpg"
+                     alt="Lovecar_cat" title="Ловкарь">
+                <div class="cat_card-text">
+                    <h2>Ловкарь</h2>
+                    <p>Возраст: 2 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Умеет ползоваться смесителем,обожает водные процедуры</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" name="cat_name" id="cat_name10">
+    <div class="popup_cat10">
+        <div class="wrapper_popup">
+            <div class="popup-content">
+                <label for="cat_name10" class="popup-closer">&#215;</label>
+                <img class="cat_card-photo" src="picture/cats/cat10.jpg"
+                     alt="San-sanich_cat" title="Сан-сан-сан-сан-сан-сан-саныч">
+                <div class="cat_card-text">
+                    <h2>Сан-сан-сан-сан-сан-сан-саныч</h2>
+                    <p>Возраст: 7 лет</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                    <p>Старейший кот на сайте, мяукает крайне важно и уверено</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer_window">
+    <p>Напишите нам:</p>
+    <a href="#"> cats@babuli.ru</a><br/>
+    <a href="#"> vnuchek@babuli.ru</a>
+    <span class="footer_window-right_links">&copy; 2018 ООО
+        <a class="ref" href="#">«Бабушкины котятки»</a></span>
+</footer>
 </body>
 </html>
