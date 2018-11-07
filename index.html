@@ -2,8 +2,138 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
     <title>Задача «Мурмаркет»</title>
 </head>
 <body>
+    <header class="head">
+        Мурмаркет
+    </header>
+    <main class="content">
+        <div class="carousel">
+                <input type="radio" name="carousel" id="slide-1">
+                <input type="radio" name="carousel" id="slide-2">
+                <input type="radio" name="carousel" id="slide-3" checked="checked">
+                <input type="radio" name="carousel" id="slide-4">
+                <input type="radio" name="carousel" id="slide-5">
+            <div class="carousel-slides">
+                <article class="cat-wrapper">
+                        <label for="slide-1"><img src="https://clck.ru/EbfKk" alt="slide-1"></label>
+                        <div class="cat-photo">
+                            <img src="https://clck.ru/EbfKk" alt="slide-1">
+                        </div>
+                        <div class="cat-info">
+                            <h3>Пушистик - самый пушистый из пушистых!</h3>
+                            <span>Возраст: 3 месяца</span>
+                            <span>Порода: Манчкин</span>
+                            <span>Состояние здоровья: здоров</span>
+                            <span class="description">
+                                Описание:
+                                Милый котик породы Манчкин ищет дом с заботливым хозяином. Пушистик очень
+                                умный и добрый мальчик. Будет очень рад семье с маленькими детьми.
+                            </span>
+                            <span>Статус: ищет хозяина</span>
+                        </div>
+                </article>
+                <article class="cat-wrapper">
+                        <label for="slide-2"><img src="https://clck.ru/EbfL8" alt="slide-2"></label>
+                        <div class="cat-photo">
+                            <img src="https://clck.ru/EbfL8" alt="slide-2">
+                        </div>
+                        <div class="cat-info">
+                            <h3>Лео</h3>
+                            <span>Возраст: 1 год</span>
+                            <span>Порода: Бенгальская</span>
+                            <span>Состояние здоровья: здоров</span>
+                            <span class="description">
+                                Описание:
+                                Милый котик породы Бенгальская кошка ищет дом с заботливым хозяином. Лео
+                                очень умный и добрый мальчик. Будет очень рад семье с маленькими детьми.
+                            </span>
+                            <span>Cтатус: ищет хозяина</span>
+                        </div>
+                </article>
+                <article class="cat-wrapper">
+                        <label for="slide-3"><img src="https://clck.ru/EbfLR" alt="slide-3"></label>
+                        <div class="cat-photo">
+                            <img src="https://clck.ru/EbfLR" alt="slide-3">
+                        </div>
+                        <div class="cat-info">
+                            <h3>Аркадий</h3>
+                            <span>Возраст: 1,5 года</span>
+                            <span>Порода: Шотландская</span>
+                            <span>Состояние здоровья: здоров</span>
+                            <span class="description">
+                                Описание:
+                                Милый котик породы Шотладская кошка ищет дом с заботливым хозяином. Аркадий
+                                очень умный и добрый мальчик. Будет очень рад семье с маленькими детьми.
+                            </span>
+                            <span>Cтатус: взять на передержку</span>
+                        </div>
+                </article>
+                <article class="cat-wrapper">
+                        <label for="slide-4"><img src="https://clck.ru/EbzRM" alt="slide-4"></label>
+                        <div class="cat-photo">
+                            <img src="https://clck.ru/EbzRM" alt="slide-4">
+                        </div>
+                        <div class="cat-info">
+                            <h3>Тима</h3>
+                            <span>Возраст: 8 месяцев</span>
+                            <span>Порода: Русская голубая</span>
+                            <span>Состояние здоровья: здоров</span>
+                            <span class="description">
+                                Описание:
+                                Милый котик породы Русская голубая кошка ищет дом с заботливым хозяином.
+                                Тима очень умный и добрый мальчик. Будет очень рад семье с маленькими детьми.
+                            </span>
+                            <span>Cтатус: ищет хозяина</span>
+                        </div>
+                </article>
+                <article class="cat-wrapper">
+                        <label for="slide-5"><img src="https://clck.ru/EbfQ8" alt="slide-5"></label>
+                        <div class="cat-photo">
+                            <img src="https://clck.ru/EbfQ8" alt="slide-5">
+                        </div>
+                        <div class="cat-info">
+                            <h3>Балу</h3>
+                            <span>Возраст: 5 месяцев</span>
+                            <span>Порода: Пантера</span>
+                            <span>Состояние здоровья: здоров</span>
+                            <span class="description">
+                                Описание:
+                                Милый детёныш Пантеры ищет дом с заботливым хозяином (НЕ ЗООПАРК).
+                                Балу очень умный и добрый мальчик. Будет очень рад семье проживающей в джунглях.
+                            </span>
+                            <span>Cтатус: ищет опытного хозяина с возможностью проживания около джунглей</span>
+                        </div>
+                </article>
+            </div>
+            <div class="carousel-dots">
+                <label for="slide-1" class="dot"></label>
+                <label for="slide-2" class="dot"></label>
+                <label for="slide-3" class="dot"></label>
+                <label for="slide-4" class="dot"></label>
+                <label for="slide-5" class="dot"></label>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="left-align">
+            Напишите нам:
+            <div class="mail">
+                <img class="mail-img" src="mail.svg" alt="">
+                <a href="">cats@babuli.ru</a>
+            </div>
+            <div class="mail">
+                <img class="mail-img" src="mail.svg" alt="">
+                <a href="">vnuchek@babuli.ru</a>
+            </div>
+        </div>
+        <div class="right-align">
+            &copy;2018 OOO "
+            <a href="">Бабушкины котятки</a>
+            "
+        </div>
+    </div>
 </body>
 </html>
