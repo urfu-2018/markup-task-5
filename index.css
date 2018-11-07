@@ -108,7 +108,48 @@ body
 .switch-9:checked ~ .cat-carousel .slide-9,
 .switch-10:checked ~ .cat-carousel .slide-10
 {
-    transform: scale(1.04);
+    opacity: 1;
+    transform: initial;
+}
+
+.switch-1:checked ~ .cat-carousel .slide-1:hover .slide-overlay,
+.switch-2:checked ~ .cat-carousel .slide-2:hover .slide-overlay,
+.switch-3:checked ~ .cat-carousel .slide-3:hover .slide-overlay,
+.switch-4:checked ~ .cat-carousel .slide-4:hover .slide-overlay,
+.switch-5:checked ~ .cat-carousel .slide-5:hover .slide-overlay,
+.switch-6:checked ~ .cat-carousel .slide-6:hover .slide-overlay,
+.switch-7:checked ~ .cat-carousel .slide-7:hover .slide-overlay,
+.switch-8:checked ~ .cat-carousel .slide-8:hover .slide-overlay,
+.switch-9:checked ~ .cat-carousel .slide-9:hover .slide-overlay,
+.switch-10:checked ~ .cat-carousel .slide-10:hover .slide-overlay
+{
+    display: initial;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    transition: .2s;
+}
+
+.switch-1:checked ~ .cat-carousel .slide-1:hover .cat-name,
+.switch-2:checked ~ .cat-carousel .slide-2:hover .cat-name,
+.switch-3:checked ~ .cat-carousel .slide-3:hover .cat-name,
+.switch-4:checked ~ .cat-carousel .slide-4:hover .cat-name,
+.switch-5:checked ~ .cat-carousel .slide-5:hover .cat-name,
+.switch-6:checked ~ .cat-carousel .slide-6:hover .cat-name,
+.switch-7:checked ~ .cat-carousel .slide-7:hover .cat-name,
+.switch-8:checked ~ .cat-carousel .slide-8:hover .cat-name,
+.switch-9:checked ~ .cat-carousel .slide-9:hover .cat-name,
+.switch-10:checked ~ .cat-carousel .slide-10:hover .cat-name
+{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -100%);
+    text-align: center;
+    color: white;
 }
 
 .cat-carousel
@@ -122,13 +163,22 @@ body
 
 .slide
 {
+    position: relative;
     display: inline-block;
     margin: 8px;
 
     overflow: hidden;
     cursor: pointer;
 
+    opacity: .7;
+    transform: scale(0.8);
+
     transition: .2s ease-in-out;
+}
+
+.slide:hover .cat-image
+{
+    transform: scale(1.1);
 }
 
 .cat-image ~ *
@@ -142,19 +192,13 @@ body
     transition: all .2s ease-in-out;
 }
 
-.cat-image:hover
-{
-    transform: scale(1.1);
-}
-
 .cat-name
 {
-    margin-left: 8px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    font: normal 28px 'PT Sans Narrow', sans-serif;
+    font: normal 3em 'PT Sans Narrow', sans-serif;
 
     transition: .2s;
 }
@@ -191,8 +235,11 @@ body
 
 .main-footer
 {
-    position: relative;
-    margin: 14px -8px 0;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    margin: 0 -8px 8px;
     border-top: 1px solid darkgray;
 }
 
