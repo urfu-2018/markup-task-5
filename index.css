@@ -39,11 +39,7 @@ footer
     border-top: 1px solid #dadada;
     padding: 10px 20px;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     background: #fff;
-    z-index: 2;
     width: 100%;
 }
 
@@ -96,6 +92,7 @@ main > input[type='radio']
 
 .viewport
 {
+    height: 300px;
     width: 100%;
     overflow: hidden;
 }
@@ -103,23 +100,40 @@ main > input[type='radio']
 .slides
 {
     white-space: nowrap;
-    height: 300px;
+    height: 100%;
     position: relative;
 }
 
-.slides .slide
+.slide
 {
     display: inline-block;
     height: 100%;
     margin: 0 10px;
     box-sizing: border-box;
-    padding: 5px;
+    position: relative;
 }
 
-.slides .slide img
+.slide img
 {
     opacity: .7;
     height: 80%;
+}
+
+.slide .name
+{
+    display: block;
+    color: #fff;
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 120px;
+    visibility: hidden;
 }
 
 .gallery nav
@@ -139,47 +153,73 @@ main > input[type='radio']
     border-radius: 100%;
 }
 
-.first-slide:checked ~ .gallery nav label[for='first-slide'],
-.second-slide:checked ~ .gallery nav label[for='second-slide'],
-.third-slide:checked ~ .gallery nav label[for='third-slide'],
-.fourth-slide:checked ~ .gallery nav label[for='fourth-slide'],
-.fifth-slide:checked ~ .gallery nav label[for='fifth-slide']
+.first-input:checked ~ .gallery nav label[for='first-input'],
+.second-input:checked ~ .gallery nav label[for='second-input'],
+.third-input:checked ~ .gallery nav label[for='third-input'],
+.fourth-input:checked ~ .gallery nav label[for='fourth-input'],
+.fifth-input:checked ~ .gallery nav label[for='fifth-input']
 {
     background: #979797;
 }
 
-.first-slide:checked ~ .gallery .slides label[for='first-slide'] img,
-.second-slide:checked ~ .gallery .slides label[for='second-slide'] img,
-.third-slide:checked ~ .gallery .slides label[for='third-slide'] img,
-.fourth-slide:checked ~ .gallery .slides label[for='fourth-slide'] img,
-.fifth-slide:checked ~ .gallery .slides label[for='fifth-slide'] img
+.first-input:checked ~ .gallery .slides .slide-first label img,
+.second-input:checked ~ .gallery .slides .slide-second label img,
+.third-input:checked ~ .gallery .slides .slide-third label img,
+.fourth-input:checked ~ .gallery .slides .slide-fourth label img,
+.fifth-input:checked ~ .gallery .slides .slide-fifth label img
 {
     opacity: 1;
     height: 100%;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .6);
 }
 
-.first-slide:checked ~ .gallery .viewport .slides
+.first-input:checked ~ .gallery .slides .slide-first:hover > label img,
+.second-input:checked ~ .gallery .slides .slide-second:hover > label img,
+.third-input:checked ~ .gallery .slides .slide-third:hover > label img,
+.fourth-input:checked ~ .gallery .slides .slide-fourth:hover > label img,
+.fifth-input:checked ~ .gallery .slides .slide-fifth:hover > label img
+{
+    opacity: .6;
+}
+
+.first-input:checked ~ .gallery .slides .slide-first,
+.second-input:checked ~ .gallery .slides .slide-second,
+.third-input:checked ~ .gallery .slides .slide-third,
+.fourth-input:checked ~ .gallery .slides .slide-fourth,
+.fifth-input:checked ~ .gallery .slides .slide-fifth
+{
+    background: #000;
+}
+
+.first-input:checked ~ .gallery .slides .slide-first:hover > .name,
+.second-input:checked ~ .gallery .slides .slide-second:hover > .name,
+.third-input:checked ~ .gallery .slides .slide-third:hover > .name,
+.fourth-input:checked ~ .gallery .slides .slide-fourth:hover > .name,
+.fifth-input:checked ~ .gallery .slides .slide-fifth:hover > .name
+{
+    visibility: visible;
+}
+
+.first-input:checked ~ .gallery .viewport .slides
 {
     left: calc(-330px + 390px * 2);
 }
 
-.second-slide:checked ~ .gallery .viewport .slides
+.second-input:checked ~ .gallery .viewport .slides
 {
     left: calc(-330px + 390px);
 }
 
-.third-slide:checked ~ .gallery .viewport .slides
+.third-input:checked ~ .gallery .viewport .slides
 {
     left: -330px;
 }
 
-.fourth-slide:checked ~ .gallery .viewport .slides
+.fourth-input:checked ~ .gallery .viewport .slides
 {
     left: calc(-330px - 390px);
 }
 
-.fifth-slide:checked ~ .gallery .viewport .slides
+.fifth-input:checked ~ .gallery .viewport .slides
 {
     left: calc(-330px - 390px * 2);
 }
