@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.carousel_wrapper
+{
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.carousel_wrapper input
+{
+    display: none;
+}
+
+.carousel_labels
+{
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    width: 1900px;
+    transition: left .9s ease-out;
+}
+
+.carousel_label
+{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+}
+
+.img_carousel
+{
+    width: 350px;
+    height: 230px;
+    opacity: .7;
+}
+
+.carousel_wrapper input:nth-child(1):checked ~ .carousel_labels
+{
+    left: calc(50% - 238px);
+}
+
+.carousel_wrapper input:nth-child(2):checked ~ .carousel_labels
+{
+    left: calc(50% - 629px);
+}
+
+.carousel_wrapper input:nth-child(3):checked ~ .carousel_labels
+{
+    left: calc(50% - 1019px);
+}
+
+.carousel_wrapper input:nth-child(4):checked ~ .carousel_labels
+{
+    left: calc(50% - 1408px);
+}
+
+.carousel_wrapper input:nth-child(5):checked ~ .carousel_labels
+{
+    left: calc(50% - 1799px);
+}
+
+input[id='slide1']:checked ~ ul li label[for='slide1'] .img_carousel,
+input[id='slide2']:checked ~ ul li label[for='slide2'] .img_carousel,
+input[id='slide3']:checked ~ ul li label[for='slide3'] .img_carousel,
+input[id='slide4']:checked ~ ul li label[for='slide4'] .img_carousel,
+input[id='slide5']:checked ~ ul li label[for='slide5'] .img_carousel
+{
+    opacity: 1;
+    width: 437px;
+    height: 288px;
+}
+
+/*Текст на слайде*/
+
+.name_cat
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel_name
+{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 24px;
+    display: none;
+}
+
+/*Наведение*/
+
+input[id='slide1']:checked ~ ul li:nth-child(1):hover .img_carousel,
+input[id='slide2']:checked ~ ul li:nth-child(2):hover .img_carousel,
+input[id='slide3']:checked ~ ul li:nth-child(3):hover .img_carousel,
+input[id='slide4']:checked ~ ul li:nth-child(4):hover .img_carousel,
+input[id='slide5']:checked ~ ul li:nth-child(5):hover .img_carousel
+{
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+input[id='slide1']:checked ~ ul li:nth-child(1):hover .carousel_name,
+input[id='slide2']:checked ~ ul li:nth-child(2):hover .carousel_name,
+input[id='slide3']:checked ~ ul li:nth-child(3):hover .carousel_name,
+input[id='slide4']:checked ~ ul li:nth-child(4):hover .carousel_name,
+input[id='slide5']:checked ~ ul li:nth-child(5):hover .carousel_name
+{
+    z-index: 2;
+    color: white;
+    display: block;
+}
+
+input[id='slide1']:checked ~ ul li:nth-child(1):hover .name_cat,
+input[id='slide2']:checked ~ ul li:nth-child(2):hover .name_cat,
+input[id='slide3']:checked ~ ul li:nth-child(3):hover .name_cat,
+input[id='slide4']:checked ~ ul li:nth-child(4):hover .name_cat,
+input[id='slide5']:checked ~ ul li:nth-child(5):hover .name_cat
+{
+    display: block;
+    z-index: 3;
+}
+
+.img_carousel:hover
+{
+    cursor: pointer;
+}
+
+/*Переключатели*/
+
+.carousel_switch label
+{
+    display: inline-block;
+    background-color: gainsboro;
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+}
+
+input[id='slide1']:checked ~ .carousel_switch label[for='slide1'],
+input[id='slide2']:checked ~ .carousel_switch label[for='slide2'],
+input[id='slide3']:checked ~ .carousel_switch label[for='slide3'],
+input[id='slide4']:checked ~ .carousel_switch label[for='slide4'],
+input[id='slide5']:checked ~ .carousel_switch label[for='slide5']
+{
+    background-color: black;
+}
+
+/*Модальное окно*/
+
+.modalDialog
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    z-index: 4;
+    display: none;
+    pointer-events: none;
+}
+
+.modalDialog:target
+{
+    display: block;
+    pointer-events: auto;
+}
+
+.modalDialog > div
+{
+    position: relative;
+    margin: 10% auto;
+    display: inline-block;
+    white-space: normal;
+    background-color: transparent;
+    color: white;
+}
+
+.close
+{
+    color: #fff;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.close:hover
+{
+    color: black;
+}
+
+.img_modal
+{
+    width: 100%;
+}
+
+.block1_modal,
+.block2_modal
+{
+
+    display: inline-block;
+    max-width: 400px;
+    vertical-align: top;
+    text-align: left;
+}
+/*Офрмление текста*/
+
+.modalDialog p
+{
+    white-space: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 0;
+    margin: 10px;
+    text-align: justify;
+    /*word-break: break-all;*/
+}
+
+.modalDialog h2
+{
+    white-space: normal;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto 10px;
+}
+
+.modalDialog span
+{
+    font-weight: bold;
+}

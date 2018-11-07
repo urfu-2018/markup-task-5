@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+.content
+{
+    min-height: calc(100vh - 100px);
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header_block
+{
+    height: 42px;
+}
+/*Хедер*/
+
+header
+{
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid #8a8f99;
+    margin-bottom: 10px;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+}
+
+h1
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h1:first-letter
+{
+    color: red;
+}
+
+/*Основной контейнер*/
+/*Футер*/
+
+.footer
+{
+    border-top: 1px solid #8a8f99;
+    height: 100px;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.left_footer
+{
+    float: left;
+    height: 100px;
+    width: 50%;
+    position: relative;
+}
+
+.right_block
+{
+    text-align: right;
+    float: right;
+    height: 100px;
+    position: relative;
+    width: 50%;
+}
+
+.footer_align_right
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_align_left
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 0 10px 10px;
+}
+
+.footer_link
+{
+    text-decoration: none;
+    color: #4c4cd8;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer p
+{
+    padding: 0;
+    margin-bottom: 10px;
+}
