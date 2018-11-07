@@ -5,128 +5,53 @@ body
     margin: 0;
 }
 
-.cat-item
-{
-    width: 300px;
-    height: 400px;
-    display: inline-block;
-    margin: 10px;
-    border: 2px solid rgba(189, 189, 189, 1);
-}
-
-.cat-picture
-{
-    width: 300px;
-}
-
-.list-information
-{
-    display: none;
-}
-
-.card-information
-{
-    display: block;
-}
-
-input[id='list']:checked ~ .cat-shop
+.cat-shop
 {
     white-space: nowrap;
     width: 100%;
-    height: 70%;
+    height: 85%;
     position: relative;
+    top: 80px;
     right: 0;
     overflow: hidden;
 }
 
-input[id='list']:checked ~ .cat-shop > .cat-item
+.cat-item
 {
     display: inline-block;
     width: 20%;
     margin: 0;
-    height: 100%;
+    height: 20%;
     border: 0;
     position: absolute;
     opacity: .7;
     transition: all .5s ease-in;
 }
 
-input[id='list']:checked ~ .cat-shop > .cat-item > .cat-picture
-{
-    width: 95%;
-}
-
-input[id='list']:checked ~ .cat-shop > .cat-item > .list-information,
-input[id='list']:checked ~ .cat-shop > .cat-item > .card-information,
-input[id='list']:checked ~ .cat-shop > .cat-item > .cat-name
-{
-    display: none;
-}
-
-.switch-item
-{
-    display: none;
-}
-
-.switch:after
-{
-    display: inline-block;
-    margin-top: 60px;
-    margin-left: 10px;
-    content: '\2261';
-    font-size: 30px;
-}
-
-input[id='list']:checked ~ .cat-shop > .cat-item > .cat-label
+.cat-label
 {
     position: absolute;
-    height: 95%;
+    /*height: 95%;*/
     width: 95%;
     cursor: pointer;
 }
 
-input[id='list']:checked ~ .switch:after
+.cat-label img
 {
-    transform: rotate(90deg);
+    width: 100%;
 }
 
-.cat-name,
-.card-information,
-.list-information
+.modal
 {
+    display: none;
+}
+
+.cat-name
+{
+    display: none;
     margin: 10px;
     color: #361b01;
     font-family: serif;
-}
-
-.list-information
-{
-    font-size: 20px;
-}
-
-input[id='list']:not(:checked) ~ .cat-shop > .cat-item > .cat-name
-{
-    height: 60px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-input[id='list']:not(:checked) ~ .cat-shop > .cat-item:hover
-{
-    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-}
-
-input[id='list']:not(:checked) ~ .cat-shop > .cat-item > .cat-name:hover
-{
-    white-space: normal;
-    color: #6b3702;
-}
-
-input[id='list']:not(:checked) ~ .cat-shop > .cat-item > .cat-picture:hover
-{
-    transform: scale(.95, .95);
-    transition: .4s;
 }
 
 .cat-radio
@@ -204,56 +129,67 @@ footer
     color: rgba(0, 0, 0, 1);
 }
 
-input[id='list']:checked ~ .cat-shop > .cat1,
-input[id='list']:checked ~ .cat-shop > .cat2,
-input[id='list']:checked ~ .cat-shop > .cat3,
-input[id='list']:checked ~ .cat-shop > .cat4,
-input[id='list']:checked ~ .cat-shop > .cat5,
-input[id='list']:checked ~ .cat-shop > .cat6,
-input[id='list']:checked ~ .cat-shop > .cat7,
-input[id='list']:checked ~ .cat-shop > .cat8,
-input[id='list']:checked ~ .cat-shop > .cat9,
-input[id='list']:checked ~ .cat-shop > .cat10
+.cat1,
+.cat2,
+.cat3,
+.cat4,
+.cat5,
+.cat6,
+.cat7,
+.cat8,
+.cat9,
+.cat10
 {
     opacity: .7;
-    height: 80% !important;
+    /*height: 80% !important;*/
 }
 
-input[id='cat1']:checked ~ .cat1 > .cat-label:hover,
-input[id='cat2']:checked ~ .cat2 > .cat-label:hover,
-input[id='cat3']:checked ~ .cat3 > .cat-label:hover,
-input[id='cat4']:checked ~ .cat4 > .cat-label:hover,
-input[id='cat5']:checked ~ .cat5 > .cat-label:hover,
-input[id='cat6']:checked ~ .cat6 > .cat-label:hover,
-input[id='cat7']:checked ~ .cat7 > .cat-label:hover,
-input[id='cat8']:checked ~ .cat8 > .cat-label:hover,
-input[id='cat9']:checked ~ .cat9 > .cat-label:hover,
-input[id='cat10']:checked ~ .cat10 > .cat-label:hover
-{
-    background: rgba(0, 0, 0, .5);
-}
+/*input[id='cat1']:checked ~ .cat1 > .cat-label:hover,*/
+/*input[id='cat2']:checked ~ .cat2 > .cat-label:hover,*/
+/*input[id='cat3']:checked ~ .cat3 > .cat-label:hover,*/
+/*input[id='cat4']:checked ~ .cat4 > .cat-label:hover,*/
+/*input[id='cat5']:checked ~ .cat5 > .cat-label:hover,*/
+/*input[id='cat6']:checked ~ .cat6 > .cat-label:hover,*/
+/*input[id='cat7']:checked ~ .cat7 > .cat-label:hover,*/
+/*input[id='cat8']:checked ~ .cat8 > .cat-label:hover,*/
+/*input[id='cat9']:checked ~ .cat9 > .cat-label:hover,*/
+/*input[id='cat10']:checked ~ .cat10 > .cat-label:hover*/
+/*{*/
+    /*background: rgba(0, 0, 0, .5);*/
+/*}*/
 
-input[id='cat1']:checked ~ .cat1 > .cat-label:hover ~ .cat-name,
-input[id='cat2']:checked ~ .cat2 > .cat-label:hover ~ .cat-name,
-input[id='cat3']:checked ~ .cat3 > .cat-label:hover ~ .cat-name,
-input[id='cat4']:checked ~ .cat4 > .cat-label:hover ~ .cat-name,
-input[id='cat5']:checked ~ .cat5 > .cat-label:hover ~ .cat-name,
-input[id='cat6']:checked ~ .cat6 > .cat-label:hover ~ .cat-name,
-input[id='cat7']:checked ~ .cat7 > .cat-label:hover ~ .cat-name,
-input[id='cat8']:checked ~ .cat8 > .cat-label:hover ~ .cat-name,
-input[id='cat9']:checked ~ .cat9 > .cat-label:hover ~ .cat-name,
-input[id='cat10']:checked ~ .cat10 > .cat-label:hover ~ .cat-name
+/*input[id='cat1']:checked ~ .cat1 > img:hover,*/
+/*input[id='cat2']:checked ~ .cat2 > img:hover,*/
+/*input[id='cat3']:checked ~ .cat3 > img:hover,*/
+/*input[id='cat4']:checked ~ .cat4 > img:hover,*/
+/*input[id='cat5']:checked ~ .cat5 > img:hover,*/
+/*input[id='cat6']:checked ~ .cat6 > img:hover,*/
+/*input[id='cat7']:checked ~ .cat7 > img:hover,*/
+/*input[id='cat8']:checked ~ .cat8 > img:hover,*/
+/*input[id='cat9']:checked ~ .cat9 > img:hover,*/
+/*input[id='cat10']:checked ~ .cat10 > img:hover*/
+/*{*/
+    /*-webkit-filter: brightness(-70%);*/
+/*}*/
+
+input[id='cat1']:checked ~ .cat1 > .cat-label:hover ~ .black-block,
+input[id='cat2']:checked ~ .cat2 > .cat-label:hover ~ .black-block,
+input[id='cat3']:checked ~ .cat3 > .cat-label:hover ~ .black-block,
+input[id='cat4']:checked ~ .cat4 > .cat-label:hover ~ .black-block,
+input[id='cat5']:checked ~ .cat5 > .cat-label:hover ~ .black-block,
+input[id='cat6']:checked ~ .cat6 > .cat-label:hover ~ .black-block,
+input[id='cat7']:checked ~ .cat7 > .cat-label:hover ~ .black-block,
+input[id='cat8']:checked ~ .cat8 > .cat-label:hover ~ .black-block,
+input[id='cat9']:checked ~ .cat9 > .cat-label:hover ~ .black-block,
+input[id='cat10']:checked ~ .cat10 > .cat-label:hover ~ .black-block
 {
     display: block;
+    width: 100%;
+    height: 100%;
     color: rgba(255, 255, 255, 1);
-    position: absolute;
-    /*left: 0;*/
-    /*right: 0;*/
-    top: 20%;
-    /*bottom: 0;*/
+    background: rgba(0, 0, 0, .5);
+    /*position: absolute;*/
     text-align: center;
-    z-index: 1;
-    white-space: normal;
     margin: auto;
 }
 
@@ -293,8 +229,8 @@ input[id='cat8']:checked ~ .cat8,
 input[id='cat9']:checked ~ .cat9,
 input[id='cat10']:checked ~ .cat10
 {
-    height: 100% !important;
-    opacity: 1 !important;
+    /*height: 100% !important;*/
+    opacity: 1;
     left: 40%;
 }
 
