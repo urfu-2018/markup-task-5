@@ -1,0 +1,317 @@
+p
+{
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    color: #4c4cd8;
+}
+
+body
+{
+    background: #ebebeb;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background: #ebebeb;
+    font-family: 'PT Sans Narrow', sans-serif;
+    border-bottom: 1px solid #787878;
+
+}
+
+header h1
+{
+    margin: auto;
+    font-size: 32px;
+}
+
+h1::first-letter
+{
+    color: #ff1e1e;
+}
+
+main
+{
+    position: fixed;
+    top: 50px;
+    bottom: 70px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+article
+{
+    white-space: nowrap;
+    /*background: red;*/
+}
+
+.slide-selectors
+{
+    text-align: center;
+    width: 100%;
+    margin-top: 90px;
+}
+
+.slide-selectors label
+{
+    content: url('./images/radio.png');
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+[id='slide-1']:checked ~ .slide-selectors [for='slide-1'],
+[id='slide-2']:checked ~ .slide-selectors [for='slide-2'],
+[id='slide-3']:checked ~ .slide-selectors [for='slide-3'],
+[id='slide-4']:checked ~ .slide-selectors [for='slide-4'],
+[id='slide-5']:checked ~ .slide-selectors [for='slide-5']
+{
+    content: url('./images/check-radio.png');
+}
+
+.slider-radio
+{
+    display: none;
+}
+
+footer
+{
+    position: fixed;
+    background: #ebebeb;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    font-family: 'Arial', Arial, serif;
+    border-top: 1px solid #787878;
+}
+
+.contacts
+{
+    float: left;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+.site-info
+{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    float: right;
+}
+
+.slide
+{
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+    position: relative;
+    top: 60px;
+}
+
+.card-content
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.pointer
+{
+    cursor: pointer;
+}
+
+.card-content:before
+{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.cat-img
+{
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    transform: scale3d(.8, .8, 1);
+}
+
+.name-block
+{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.name-block:before
+{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.popup
+{
+    background: #dcdcdc;
+    width: 200%;
+    height: 140%;
+    position: absolute;
+    z-index: 100;
+    top: -15%;
+    left: -50%;
+    visibility: hidden;
+}
+
+.popup-text
+{
+    display: inline-block;
+    opacity: 2;
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    top: 15%;
+    white-space: normal;
+    margin-left: 20px;
+}
+
+.cancel-img
+{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px ;
+    cursor: pointer;
+}
+
+.center
+{
+    text-align: center;
+}
+
+[id*='popup']
+{
+    display: none;
+}
+
+[id='popup-1']:checked ~ .carousel .slide-1 .popup,
+[id='popup-2']:checked ~ .carousel .slide-2 .popup,
+[id='popup-3']:checked ~ .carousel .slide-3 .popup,
+[id='popup-4']:checked ~ .carousel .slide-4 .popup,
+[id='popup-5']:checked ~ .carousel .slide-5 .popup
+{
+    visibility: visible;
+}
+
+.popup-img
+{
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 70%;
+    top: 15%;
+    margin-left: 10px;
+}
+
+.popup-checkbox:checked ~ .carousel .cat-img
+{
+    display: none;
+}
+
+[id='slide-1']:checked ~ .carousel .slide-1 .cat-img,
+[id='slide-2']:checked ~ .carousel .slide-2 .cat-img,
+[id='slide-3']:checked ~ .carousel .slide-3 .cat-img,
+[id='slide-4']:checked ~ .carousel .slide-4 .cat-img,
+[id='slide-5']:checked ~ .carousel .slide-5 .cat-img
+{
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+[id='slide-1']:checked ~ .carousel .slide-1 .popup,
+[id='slide-2']:checked ~ .carousel .slide-2 .popup,
+[id='slide-3']:checked ~ .carousel .slide-3 .popup,
+[id='slide-4']:checked ~ .carousel .slide-4 .popup,
+[id='slide-5']:checked ~ .carousel .slide-5 .popup
+{
+    /*opacity: 1;*/
+    display: block;
+}
+
+[id='slide-1']:checked ~ .carousel .slide-1:hover .hover,
+[id='slide-2']:checked ~ .carousel .slide-2:hover .hover,
+[id='slide-3']:checked ~ .carousel .slide-3:hover .hover,
+[id='slide-4']:checked ~ .carousel .slide-4:hover .hover,
+[id='slide-5']:checked ~ .carousel .slide-5:hover .hover
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    background: black;
+}
+
+[id='slide-1']:checked ~ .carousel .slide-1:hover .name-block,
+[id='slide-2']:checked ~ .carousel .slide-2:hover .name-block,
+[id='slide-3']:checked ~ .carousel .slide-3:hover .name-block,
+[id='slide-4']:checked ~ .carousel .slide-4:hover .name-block,
+[id='slide-5']:checked ~ .carousel .slide-5:hover .name-block
+{
+    display: block;
+}
+
+.name-block
+{
+    color: white;
+    display: none;
+}
+
+[id='slide-1']:checked ~ .carousel
+{
+    transform: translate3d(35%, 0, 0);
+}
+
+[id='slide-2']:checked ~ .carousel
+{
+    transform: translate3d(5%, 0, 0);
+}
+
+[id='slide-3']:checked ~ .carousel
+{
+    transform: translate3d(-25%, 0, 0);
+}
+
+[id='slide-4']:checked ~ .carousel
+{
+    transform: translate3d(-55%, 0, 0);
+}
+
+[id='slide-5']:checked ~ .carousel
+{
+    transform: translate3d(-85%, 0, 0);
+}

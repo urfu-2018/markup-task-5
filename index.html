@@ -2,8 +2,151 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <title>Задача «Про котиков»</title>
 </head>
 <body>
+<header>
+    <h1>Мурмаркет</h1>
+</header>
+<main>
+
+    <input type="radio" name="slider" class="slider-radio" id="slide-1" checked>
+    <input type="radio" name="slider" class="slider-radio" id="slide-2">
+    <input type="radio" name="slider" class="slider-radio" id="slide-3">
+    <input type="radio" name="slider" class="slider-radio" id="slide-4">
+    <input type="radio" name="slider" class="slider-radio" id="slide-5">
+
+    <input type="checkbox" name="popup" class="popup-checkbox" id="popup-1">
+    <input type="checkbox" name="popup" class="popup-checkbox" id="popup-2">
+    <input type="checkbox" name="popup" class="popup-checkbox" id="popup-3">
+    <input type="checkbox" name="popup" class="popup-checkbox" id="popup-4">
+    <input type="checkbox" name="popup" class="popup-checkbox" id="popup-5">
+
+    <article class="carousel">
+        <section class="slide slide-1">
+            <label for="slide-1" class="pointer">
+                <img class="cat-img" src="./images/1.jpg" alt="котик1">
+            </label>
+            <div class="hover"></div>
+            <label class="name-block" for="popup-1">
+                <span class="cat-name pointer">Кот1</span>
+            </label>
+            <div class="popup">
+                <img class="popup-img" src="./images/1.jpg" alt="котик1">
+                <label for="popup-1">
+                    <img class="cancel-img" src="./images/cancel.png" alt="cancel">
+                </label>
+                <div class="popup-text">
+                    <h2 class="center">Кот1</h2>
+                    <p>описание</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide slide-2">
+            <label for="slide-2" class="pointer">
+                <img class="cat-img" src="./images/6.jpg" alt="котик2">
+            </label>
+            <div class="hover"></div>
+            <label class="name-block" for="popup-2">
+                <span class="cat-name pointer">Кот2</span>
+            </label>
+            <div class="popup">
+                <img class="popup-img" src="./images/6.jpg" alt="котик1">
+                <label for="popup-2">
+                    <img class="cancel-img" src="./images/cancel.png" alt="cancel">
+                </label>
+                <div class="popup-text">
+                    <h2 class="center">Кот2</h2>
+                    <p>описание</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide slide-3">
+            <label for="slide-3" class="pointer">
+                <img class="cat-img" src="./images/7.jpg" alt="котик3">
+            </label>
+            <div class="hover"></div>
+            <label class="name-block" for="popup-3">
+                <span class="cat-name pointer">Кот3</span>
+            </label>
+            <div class="popup">
+                <img class="popup-img" src="./images/7.jpg" alt="котик3">
+                <label for="popup-3">
+                    <img class="cancel-img" src="./images/cancel.png" alt="cancel">
+                </label>
+                <div class="popup-text">
+                    <h2 class="center">Кот3</h2>
+                    <p>описание</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide slide-4">
+            <label for="slide-4" class="pointer">
+                <img class="cat-img" src="./images/8.jpg" alt="котик4">
+            </label>
+            <div class="hover"></div>
+            <label class="name-block" for="popup-4">
+                <span class="cat-name pointer">Кот4</span>
+            </label>
+            <div class="popup">
+                <img class="popup-img" src="./images/8.jpg" alt="котик4">
+                <label for="popup-4">
+                    <img class="cancel-img" src="./images/cancel.png" alt="cancel">
+                </label>
+                <div class="popup-text">
+                    <h2 class="center">Кот4</h2>
+                    <p>описание</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="slide slide-5">
+            <label for="slide-5" class="pointer">
+                <img class="cat-img" src="./images/10.jpg" alt="котик5">
+            </label>
+            <div class="hover"></div>
+            <label class="name-block" for="popup-5">
+                <span class="cat-name pointer">Кот5</span>
+            </label>
+            <div class="popup">
+                <img class="popup-img" src="./images/10.jpg" alt="котик5">
+                <label for="popup-5">
+                    <img class="cancel-img" src="./images/cancel.png" alt="cancel">
+                </label>
+                <div class="popup-text">
+                    <h2 class="center">Кот5</h2>
+                    <p>описание</p>
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+    <div class="slide-selectors">
+        <label for="slide-1"></label>
+        <label for="slide-2"></label>
+        <label for="slide-3"></label>
+        <label for="slide-4"></label>
+        <label for="slide-5"></label>
+    </div>
+
+</main>
+
+<footer>
+    <div class="contacts">
+        <p class="gray">Напишите нам:</p>
+        <p><a href="#">cats@babuli.ru</a></p>
+        <p><a href="#">vnuchek@babuli.ru</a></p>
+    </div>
+    <div class="site-info">
+        <p>&copy; 2018 ООО «<a href="#">Бабушкины котятки</a>»</p>
+    </div>
+</footer>
+
 </body>
 </html>
