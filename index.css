@@ -13,7 +13,7 @@ body
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #e7e7e7;
-    z-index: 1;
+    z-index: 1000;
     background: #fff;
 }
 
@@ -62,7 +62,6 @@ body
     vertical-align: middle;
     opacity: .7;
     box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
-    border-radius: 10px;
 }
 
 .carousel-navigation
@@ -120,37 +119,85 @@ body
 .sixth:checked ~ .carousel .carousel-item
 {
     position: relative;
-    left: -133%;
+    left: -132%;
 }
 
 .seventh:checked ~ .carousel .carousel-item
 {
     position: relative;
-    left: -166%;
+    left: -165%;
 }
 
-.first:checked ~ .carousel .carousel-item label[for='first'] > img,
-.second:checked ~ .carousel .carousel-item label[for='second'] > img,
-.third:checked ~ .carousel .carousel-item label[for='third'] > img,
-.fourth:checked ~ .carousel .carousel-item label[for='fourth'] > img,
-.fifth:checked ~ .carousel .carousel-item label[for='fifth'] > img,
-.sixth:checked ~ .carousel .carousel-item label[for='sixth'] > img,
-.seventh:checked ~ .carousel .carousel-item label[for='seventh'] > img
+.first:checked ~ .carousel label[for='first'] > img,
+.second:checked ~ .carousel label[for='second'] > img,
+.third:checked ~ .carousel label[for='third'] > img,
+.fourth:checked ~ .carousel label[for='fourth'] > img,
+.fifth:checked ~ .carousel label[for='fifth'] > img,
+.sixth:checked ~ .carousel label[for='sixth'] > img,
+.seventh:checked ~ .carousel label[for='seventh'] > img
 {
     width: 100%;
     height: 100%;
     opacity: 1;
 }
 
-.first:checked ~ .carousel .carousel-navigation label[for='first'],
-.second:checked ~ .carousel .carousel-navigation label[for='second'],
-.third:checked ~ .carousel .carousel-navigation label[for='third'],
-.fourth:checked ~ .carousel .carousel-navigation label[for='fourth'],
-.fifth:checked ~ .carousel .carousel-navigation label[for='fifth'],
-.sixth:checked ~ .carousel .carousel-navigation label[for='sixth'],
-.seventh:checked ~ .carousel .carousel-navigation label[for='seventh']
+.first:checked ~ .carousel label[for='first'],
+.second:checked ~ .carousel label[for='second'],
+.third:checked ~ .carousel label[for='third'],
+.fourth:checked ~ .carousel label[for='fourth'],
+.fifth:checked ~ .carousel label[for='fifth'],
+.sixth:checked ~ .carousel label[for='sixth'],
+.seventh:checked ~ .carousel label[for='seventh']
 {
     background: #6d6d6d;
+}
+
+.full-info
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.first:checked ~ .carousel label[for='first'] + .full-info,
+.second:checked ~ .carousel label[for='second'] + .full-info,
+.third:checked ~ .carousel label[for='third'] + .full-info,
+.fourth:checked ~ .carousel label[for='fourth'] + .full-info,
+.fifth:checked ~ .carousel label[for='fifth'] + .full-info,
+.sixth:checked ~ .carousel label[for='sixth'] + .full-info,
+.seventh:checked ~ .carousel label[for='seventh'] + .full-info
+{
+    display: block;
+}
+
+.first:checked ~ .carousel label[for='first'] + .full-info:hover,
+.second:checked ~ .carousel label[for='second'] + .full-info:hover,
+.third:checked ~ .carousel label[for='third'] + .full-info:hover,
+.fourth:checked ~ .carousel label[for='fourth'] + .full-info:hover,
+.fifth:checked ~ .carousel label[for='fifth'] + .full-info:hover,
+.sixth:checked ~ .carousel label[for='sixth'] + .full-info:hover,
+.seventh:checked ~ .carousel label[for='seventh'] + .full-info:hover
+{
+    opacity: 1;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.cat-name
+{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    font-size: 32px;
+    font-family: Arial, sans-serif;
 }
 
 .contact-us
