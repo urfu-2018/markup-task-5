@@ -227,7 +227,7 @@ main > input[type='radio']
 .model
 {
     position: absolute;
-    background: rgba(99, 91, 91, 0.9);
+    background: rgba(99, 91, 91, .9);
     top: 0;
     left: 0;
     width: 100%;
