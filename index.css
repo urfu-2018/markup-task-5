@@ -7,7 +7,7 @@ body
 .carousel
 {
     overflow: hidden;
-    text-align: center;  
+    text-align: center;
 }
 
 .white-text
@@ -103,10 +103,9 @@ body
 .cat-name-overlayed
 {
     font-size: 110%;
-    left: 30%;
-    bottom: 30%;
-    position: absolute;
-    display: inline-block;
+    position: relative;
+    line-height: 140px;
+    margin: auto;
 }
 
 .close
@@ -137,6 +136,7 @@ body
     box-shadow: 0 2px 2px -2px;
     color: #1b1a1ac7;
     margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 .sticky
@@ -184,25 +184,104 @@ body
 
 .indicator
 {
-    margin: 0;
-    bottom: 10px;
-    text-align: center;
-    display: inline;
+    display: none;
 }
 
-.indicator#Id1:not(:checked) ~ .card#Card1,
-.indicator#Id2:not(:checked) ~ .card#Card2,
-.indicator#Id3:not(:checked) ~ .card#Card3
+.pseudo-indicator
+{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pseudo-indicator::before
+{
+    content: '';
+    display: inline-block;
+
+    width: 14px;
+    height: 14px;
+
+    margin-right: 2px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.indicator-1:checked + .pseudo-ind-1::before,
+.indicator-2:checked + .pseudo-ind-2::before,
+.indicator-3:checked + .pseudo-ind-3::before,
+.indicator-4:checked + .pseudo-ind-4::before,
+.indicator-5:checked + .pseudo-ind-5::before
+{
+    background-color: red;
+}
+
+.indicator-1:not(:checked) ~ .carousel-list li:nth-child(1),
+.indicator-2:not(:checked) ~ .carousel-list li:nth-child(2),
+.indicator-3:not(:checked) ~ .carousel-list li:nth-child(3),
+.indicator-4:not(:checked) ~ .carousel-list li:nth-child(4),
+.indicator-5:not(:checked) ~ .carousel-list li:nth-child(5)
 {
     opacity: .7;
     transform: scale(.8);
 }
 
-.indicator#Id1:checked ~ .card#Card1:hover .darkened-img,
-.indicator#Id2:checked ~ .card#Card2:hover .darkened-img,
-.indicator#Id3:checked ~ .card#Card3:hover .darkened-img
+.indicator-1:checked ~ .carousel-list li:nth-child(1):hover .darkened-img,
+.indicator-2:checked ~ .carousel-list li:nth-child(2):hover .darkened-img,
+.indicator-3:checked ~ .carousel-list li:nth-child(3):hover .darkened-img,
+.indicator-4:checked ~ .carousel-list li:nth-child(4):hover .darkened-img,
+.indicator-5:checked ~ .carousel-list li:nth-child(5):hover .darkened-img
 {
     opacity: .7;
     transition-duration: 300ms;
     display: block;
+}
+
+.carousel-list
+{
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 35%;
+}
+
+li.card
+{
+    white-space: normal;
+    display: inline-block;
+}
+
+.indicator-1:checked ~ .carousel-list 
+{
+    transform: translateX(0);
+    transition-duration: 300ms;
+}
+
+.indicator-2:checked ~ .carousel-list 
+{
+    transform: translateX(-250px);
+    transition-duration: 300ms;
+}
+
+.indicator-3:checked ~ .carousel-list 
+{
+    transform: translateX(-500px);
+    transition-duration: 300ms;
+}
+
+.indicator-4:checked ~ .carousel-list
+{
+    transform: translateX(-750px);
+    transition-duration: 300ms;
+}
+
+.indicator-5:checked ~ .carousel-list 
+{
+    transform: translateX(-1000px);
+    transition-duration: 300ms;
 }

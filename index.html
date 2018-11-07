@@ -10,22 +10,66 @@
 <body>
     <header class="cat-header sticky">Мурмаркет</header>
     <main class="carousel" id="main-page">
-        <input name="cats" class="indicator" type="radio" id="Id1" checked>
-        <input name="cats" class="indicator" type="radio" id="Id2">
-        <input name="cats" class="indicator" type="radio" id="Id3">
-        <input name="cats" class="indicator" type="radio" id="Id4">
-        <input name="cats" class="indicator" type="radio" id="Id4">
+        <input name="cats" class="indicator indicator-1" type="radio" id="Id1">
+            <label class="pseudo-indicator pseudo-ind-1" for="Id1"></label>
+        <input name="cats" class="indicator indicator-2" type="radio" id="Id2">
+            <label class="pseudo-indicator pseudo-ind-2" for="Id2"></label>
+        <input name="cats" class="indicator indicator-3" type="radio" id="Id3" checked>
+            <label class="pseudo-indicator pseudo-ind-3" for="Id3"></label>
+        <input name="cats" class="indicator indicator-4" type="radio" id="Id4">
+            <label class="pseudo-indicator pseudo-ind-4" for="Id4"></label>
+        <input name="cats" class="indicator indicator-5" type="radio" id="Id5">
+            <label class="pseudo-indicator pseudo-ind-5" for="Id5"></label>
         <br>
-        <div class="card" id="Card1">
-            <label for="Id1"> <img class="cat-img" title="Боня" alt="Боня" src="cats/1.jpg"> </label>
-            <a href="#Cat1">
-                <div class="darkened-img">
-
-                    <div class="white-text cat-name cat-name-overlayed">Бонифаций</div>
-                </div>
-            </a>
-
-            <div class="modal" id="Cat1">
+        <ul class="carousel-list">
+            <li class="card">
+                <label for="Id1"><img class="cat-img" title="Боня" alt="Боня" src="cats/1.jpg">
+                </label>
+                <a href="#Bonya">
+                    <section class="darkened-img">
+                        <h6 class="white-text cat-name cat-name-overlayed">Бонифаций</h6>
+                    </section>
+                </a>
+            </li>
+            <li class="card">
+                <label for="Id2"><img class="cat-img" title="Мурка" alt="Мурка" src="cats/3.jpg">
+                </label>
+                <a href="#Murka">
+                    <section class="darkened-img">
+                        <h6 class="white-text cat-name cat-name-overlayed">Мурка</h6>
+                    </section>
+                </a>
+            </li>
+            <li class="card">
+                <label for="Id3"><img class="cat-img" title="Дуся" alt="Дуся" src="cats/4.jpg">
+                </label>
+                <a href="#Dusya">
+                    <section class="darkened-img">
+                        <h6 class="white-text cat-name cat-name-overlayed">Дуся</h6>
+                    </section>
+                </a>
+            </li>
+            <li class="card">
+                <label for="Id4"><img class="cat-img" title="Тиша" alt="Тиша" src="cats/5.jpg">
+                </label>
+                <a href="#Tisha">
+                    <section class="darkened-img">
+                        <h6 class="white-text cat-name cat-name-overlayed">Тиша</h6>
+                    </section>
+                </a>
+            </li>
+            <li class="card">
+                <label for="Id5"><img class="cat-img" title="Рекс" alt="Рекс" src="cats/6.jpg">
+                </label>
+                <a href="#Rex">
+                    <section class="darkened-img">
+                        <h6 class="white-text cat-name cat-name-overlayed">Рекс</h6>
+                    </section>
+                </a>
+            </li>
+        </ul>
+        <section class="modal-windows">
+            <div class="modal" id="Bonya">
                 <div class="modal-inner">
                     <img class="cat-img cat-img-modal" title="Боня" alt="Боня" src="cats/1.jpg">
                     <section class="modal-side">
@@ -39,16 +83,7 @@
                     </section>
                 </div>
             </div>
-        </div>
-        <div class="card" id="Card2">
-            <label for="Id2"> <img class="cat-img" title="Мурка" alt="Мурка" src="cats/3.jpg"> </label>
-            <a href="#Cat2">
-                <div class="darkened-img">
-
-                    <div class="white-text cat-name cat-name-overlayed">Мурка</div>
-                </div>
-            </a>
-            <div class="modal" id="Cat2">
+            <div class="modal" id="Murka">
                 <div class="modal-inner">
                     <img class="cat-img cat-img-modal" title="Мурка" alt="Мурка" src="cats/3.jpg">
                     <section class="modal-side">
@@ -62,22 +97,12 @@
                     </section>
                 </div>
             </div>
-        </div>
-        <div class="card" id="Card3">
-            <label for="Id3"><img class="cat-img" title="Дуся" alt="Дуся" src="cats/4.jpg"> </label>
-            <a href="#Cat3">
-                <div class="darkened-img">
-
-                    <div class="white-text cat-name cat-name-overlayed">Дуся</div>
-                </div>
-            </a>
-
-            <div class="modal" id="Cat3">
+            <div class="modal" id="Dusya">
                 <div class="modal-inner">
                     <img class="cat-img cat-img-modal" title="Дуся" alt="Дуся" src="cats/4.jpg">
                     <section class="modal-side">
                         <div class="close"><a href="#main-page" class="white-text close-link">✖</a></div>
-                        <h6 class="white-text cat-name">Мурка</h6>
+                        <h6 class="white-text cat-name">Дуся</h6>
                         <p class="cat-info white-text">
                             Милая пусечка<br>
                             Берегите ручки, острые коготки!<br>
@@ -86,7 +111,35 @@
                     </section>
                 </div>
             </div>
-        </div>
+            <div class="modal" id="Tisha">
+                <div class="modal-inner">
+                    <img class="cat-img cat-img-modal" title="Тиша" alt="Тиша" src="cats/5.jpg">
+                    <section class="modal-side">
+                        <div class="close"><a href="#main-page" class="white-text close-link">✖</a></div>
+                        <h6 class="white-text cat-name">Тиша</h6>
+                        <p class="cat-info white-text">
+                            Милая пусечка<br>
+                            Берегите ручки, острые коготки!<br>
+                            Ждёт хозяина :)
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="modal" id="Rex">
+                <div class="modal-inner">
+                    <img class="cat-img cat-img-modal" title="Рекс" alt="Рекс" src="cats/6.jpg">
+                    <section class="modal-side">
+                        <div class="close"><a href="#main-page" class="white-text close-link">✖</a></div>
+                        <h6 class="white-text cat-name">Рекс</h6>
+                        <p class="cat-info white-text">
+                            Милая пусечка<br>
+                            Берегите ручки, острые коготки!<br>
+                            Ждёт хозяина :)
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="cat-footer">Напишите нам:<br>
         <ul class="contacts-mail">
