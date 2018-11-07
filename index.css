@@ -2,6 +2,7 @@ header
 {
     width: 100%;
     border: black 1px solid;
+    background: lightgray;
     font-size: 32px;
     text-align: center;
     margin: auto;
@@ -9,14 +10,47 @@ header
     position: fixed;
     top: 0;
     padding: 20px;
+    height: 38px;
+    z-index: 5;
+}
+
+body
+{
+    background: #555;
+    overflow-x: hidden;
+}
+
+.push
+{
+    height: 50px;
+}
+
+footer
+{
+    height: 50px;
+    background: lightgray;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.catProfile p
+{
+    display: none;
+}
+
+article
+{
+    min-height: calc(100vh - 70px);
 }
 
 .gallery
 {
     position: relative;
     width: 7000px;
-    /*left: 300px;*/
-    /*margin: 30px;*/
+    top: 80px;
+    overflow: hidden;
+    margin: 0;
     text-align: center;
 }
 
@@ -25,35 +59,68 @@ header
     left: 300px;
 }
 
-.first:checked ~ .gallery .firstProfile img
+.eleventh:checked ~ .gallery .profile_11 img,
+.tenth:checked ~ .gallery .profile_10 img,
+.ninth:checked ~ .gallery .profile_9 img,
+.eighth:checked ~ .gallery .profile_8 img,
+.seventh:checked ~ .gallery .profile_7 img,
+.sixth:checked ~ .gallery .profile_6 img,
+.fifth:checked ~ .gallery .profile_5 img,
+.fourth:checked ~ .gallery .profile_4 img,
+.third:checked ~ .gallery .profile_3 img,
+.second:checked ~ .gallery .profile_2 img,
+.first:checked ~ .gallery .profile_1 img
 {
     opacity: 1;
     height: 500px;
 }
 
-.first:checked ~ .gallery .firstProfile:hover img
+.eleventh:checked ~ .gallery .profile_11:hover img,
+.tenth:checked ~ .gallery .profile_10:hover img,
+.ninth:checked ~ .gallery .profile_9:hover img,
+.eighth:checked ~ .gallery .profile_8:hover img,
+.seventh:checked ~ .gallery .profile_7:hover img,
+.sixth:checked ~ .gallery .profile_6:hover img,
+.fifth:checked ~ .gallery .profile_5:hover img,
+.fourth:checked ~ .gallery .profile_4:hover img,
+.third:checked ~ .gallery .profile_3:hover img,
+.second:checked ~ .gallery .profile_2:hover img,
+.first:checked ~ .gallery .profile_1:hover img
 {
     filter: brightness(.5);
 
 }
 
-.first:checked ~ .gallery .firstProfile:hover h3
+.eleventh:checked ~ .gallery .profile_11:hover h3,
+.tenth:checked ~ .gallery .profile_10:hover h3,
+.ninth:checked ~ .gallery .profile_9:hover h3,
+.eighth:checked ~ .gallery .profile_8:hover h3,
+.seventh:checked ~ .gallery .profile_7:hover h3,
+.sixth:checked ~ .gallery .profile_6:hover h3,
+.fifth:checked ~ .gallery .profile_5:hover h3,
+.fourth:checked ~ .gallery .profile_4:hover h3,
+.third:checked ~ .gallery .profile_3:hover h3,
+.second:checked ~ .gallery .profile_2:hover h3,
+.first:checked ~ .gallery .profile_1:hover h3
 {
     display: block;
 }
 
-.first:checked ~ .gallery .firstProfile
+.eleventh:checked ~ .gallery .profile_11,
+.tenth:checked ~ .gallery .profile_10,
+.ninth:checked ~ .gallery .profile_9,
+.eighth:checked ~ .gallery .profile_8,
+.seventh:checked ~ .gallery .profile_7,
+.sixth:checked ~ .gallery .profile_6,
+.fifth:checked ~ .gallery .profile_5,
+.fourth:checked ~ .gallery .profile_4,
+.third:checked ~ .gallery .profile_3,
+.second:checked ~ .gallery .profile_2,
+.first:checked ~ .gallery .profile_1
 {
     opacity: 1;
     height: 500px;
 }
-
-/*.second:checked ~.gallery .secondProfile:target{*/
-/*width: 1000px;*/
-/*}*/
-/*.first:checked ~.gallery .firstProfile:target {*/
-/*width: 1000px;*/
-/*}*/
 
 h3
 {
@@ -64,7 +131,7 @@ h3
     /*left: 10%;*/
     text-align: center;
     transform: translate(0, -300px);
-    z-index: 100;
+    z-index: 4;
     font-size: 32px;
     color: white;
     text-shadow: 4px 4px 10px;
@@ -122,7 +189,7 @@ h3
 
 .catProfile img
 {
-    width: 100%;
+    width: 600px;
     height: 400px;
     opacity: .7;
 }
@@ -138,6 +205,7 @@ h3
     width: 600px;
     display: inline-block;
     margin: auto;
+    vertical-align: top;
 }
 
 .catProfile:hover
@@ -148,14 +216,6 @@ h3
     box-shadow: 4px 4px 50px;
 }
 
-/*.catProfile > h3*/
-/*{*/
-/*text-align: center;*/
-/*white-space: nowrap;*/
-/*overflow: hidden;*/
-/*text-overflow: ellipsis;*/
-/*}*/
-
 .catProfile > h3:hover
 {
     color: white;
@@ -165,23 +225,6 @@ h3
 .desc
 {
     display: none;
-}
-
-article
-{
-    margin: auto;
-    padding: 15px;
-    background: grey;
-}
-
-.modeChanger
-{
-    -webkit-appearance: none;
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 5px;
-    border: 2px solid #555;
 }
 
 .song
