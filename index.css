@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+body
+{
+    height: 700px;
+}
+
+.header
+{
+    border-bottom: gray solid   1px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    position: fixed;
+    z-index: 5;
+}
+
+.header::first-letter
+{
+    color: red;
+}
+
+.carousel
+{
+    top: 15em;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.carousel-item
+{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    opacity: .7;
+    margin: 5px;
+}
+
+.cat-image
+{
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.img-label
+{
+    position: relative;
+}
+
+.name
+{
+    position: absolute;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    color: white;
+    visibility: hidden;
+    display: inline-block;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+}
+
+input[class='cat-1']:checked ~ .carousel > .carousel-item
+{
+    left: calc(50% - 150px);
+}
+
+input[class='cat-1']:checked ~ .carousel > .item-1 > .img-label > .cat-image,
+input[class='cat-1']:checked ~ .carousel > .item-1
+{
+    opacity: 1;
+    width: 400px;
+    height: 300px;
+}
+
+input[class='cat-1']:checked ~ .carousel > .item-1:hover > .name
+{
+    visibility: visible;
+    z-index: 5;
+}
+
+input[class='cat-2']:checked ~ .carousel > .carousel-item
+{
+    left: calc(50% - 150px - 300px);
+}
+
+input[class='cat-2']:checked ~ .carousel > .item-2:hover > .name
+{
+    visibility: visible;
+    z-index: 5;
+}
+
+input[class='cat-2']:checked ~ .carousel > .item-2 > .img-label > .cat-image,
+input[class='cat-2']:checked ~ .carousel > .item-2
+{
+    opacity: 1;
+    width: 400px;
+    height: 300px;
+}
+
+input[class='cat-3']:checked ~ .carousel > .carousel-item
+{
+    left: calc(50% - 150px - 600px);
+}
+
+input[class='cat-3']:checked ~ .carousel > .item-3:hover > .name
+{
+    visibility: visible;
+    z-index: 5;
+}
+
+input[class='cat-3']:checked ~ .carousel > .item-3 > .img-label > .cat-image,
+input[class='cat-3']:checked ~ .carousel > .item-3
+{
+    opacity: 1;
+    width: 400px;
+    height: 300px;
+}
+
+input[class='cat-4']:checked ~ .carousel > .carousel-item
+{
+    left: calc(50% - 150px - 900px);
+}
+
+input[class='cat-4']:checked ~ .carousel > .item-4:hover > .name
+{
+    visibility: visible;
+    z-index: 5;
+}
+
+input[class='cat-5']:checked ~ .carousel > .carousel-item
+{
+    left: calc(50% - 150px - 1200px);
+}
+
+input[class='cat-5']:checked ~ .carousel > .item-5:hover > .name
+{
+    visibility: visible;
+    z-index: 5;
+}
+
+input[class='cat-6']:checked ~ .carousel > .carousel-item
+{
+    left: calc(50% - 150px - 1500px);
+}
+
+input[class='cat-6']:checked ~ .carousel > .item-6:hover > .name
+{
+    visibility: visible;
+    z-index: 5;
+}
+
+input[class='cat-4']:checked ~ .carousel > .item-4 > .img-label > .cat-image,
+input[class='cat-4']:checked ~ .carousel > .item-4
+{
+    opacity: 1;
+    width: 400px;
+    height: 300px;
+}
+
+input[class='cat-5']:checked ~ .carousel > .item-5 > .img-label > .cat-image,
+input[class='cat-5']:checked ~ .carousel > .item-5
+{
+    opacity: 1;
+    width: 400px;
+    height: 300px;
+}
+
+input[class='cat-6']:checked ~ .carousel > .item-6 > .img-label > .cat-image,
+input[class='cat-6']:checked ~ .carousel > .item-6
+{
+    opacity: 1;
+    width: 400px;
+    height: 300px;
+}
+
+input[class='cat-1']:checked ~ .carousel > .item-1:hover,
+input[class='cat-2']:checked ~ .carousel > .item-2:hover,
+input[class='cat-3']:checked ~ .carousel > .item-3:hover,
+input[class='cat-4']:checked ~ .carousel > .item-4:hover,
+input[class='cat-5']:checked ~ .carousel > .item-5:hover,
+input[class='cat-6']:checked ~ .carousel > .item-6:hover
+{
+    filter: brightness(50%);
+}
+
+.modal
+{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: rgba(0, 0, 0, .9);
+    padding-left: 20%;
+    padding-top: 10%;
+}
+
+.close
+{
+    top: 0;
+    display: inline-block;
+    font-size: 3em;
+    position: relative;
+    vertical-align: top;
+    text-decoration: none;
+    color: gray;
+}
+
+.popup-img
+{
+    width: 400px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: inherit;
+}
+
+.cat-description
+{
+    display: inline-block;
+    color: white;
+    vertical-align: middle;
+    z-index: inherit;
+}
+
+.modal:target
+{
+    display: block;
+}
+
+footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    padding-right: 100px;
+    border-top: gray solid 1px;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.logo
+{
+    position: absolute;
+    color: black;
+    bottom: 5px;
+    right: 0;
+    display: inline-block;
+    margin-right: 10em;
+}
+
+.emails
+{
+    position: absolute;
+    color: black;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.contacts
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
