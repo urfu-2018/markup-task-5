@@ -30,7 +30,8 @@ body
 
 .cat-label
 {
-    position: absolute;
+    /*position: absolute;*/
+    position: relative;
     /*height: 95%;*/
     width: 95%;
     cursor: pointer;
@@ -49,8 +50,10 @@ body
 .black-block
 {
     display: none;
-    width: 95%;
+    position: relative;
+    width: 100%;
     height: 100%;
+    z-index: 1;
     text-align: center;
     background: rgba(0, 0, 0, .5);
 }
@@ -165,21 +168,8 @@ input[id='cat9']:checked ~ .cat9:hover > .black-block,
 input[id='cat10']:checked ~ .cat10:hover > .black-block
 {
     display: block;
+    /*z-index: 1;*/
 }
-
-/*input[id='cat1']:checked ~ .cat1 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat2']:checked ~ .cat2 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat3']:checked ~ .cat3 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat4']:checked ~ .cat4 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat5']:checked ~ .cat5 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat6']:checked ~ .cat6 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat7']:checked ~ .cat7 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat8']:checked ~ .cat8 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat9']:checked ~ .cat9 > .cat-label:hover ~ .black-block,*/
-/*input[id='cat10']:checked ~ .cat10 > .cat-label:hover ~ .black-block*/
-/*{*/
-    /*display: block;*/
-/*}*/
 
 input[id='cat3']:checked ~ .cat1,
 input[id='cat4']:checked ~ .cat2,
