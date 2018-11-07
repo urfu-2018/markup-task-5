@@ -5,6 +5,9 @@
     font-family: 'PT Sans Narrow', sans-serif;
     text-align: center;
     padding-bottom: 5px;
+
+    height: 40px;
+    width: 100%;
 }
 
 .title:first-letter
@@ -12,14 +15,23 @@
     color: red;
 }
 
-body
+body,
+html
 {
     margin: 0;
+    height: 100%;
+}
+
+.main
+{
+    position: absolute;
+    top: 46px;
+    width: 100%;
+    bottom: 80px;
 }
 
 .footer
 {
-
     font-family: Arial, serif;
     font-size: 14px;
 
@@ -70,7 +82,7 @@ body
     left: 0;
 }
 
-input[type='radio']
+input
 {
     display: none;
 }
@@ -83,20 +95,21 @@ input[type='radio']
     border-radius: 50%;
     background: #d6d6d6;
     margin: 0 3px;
+    cursor: pointer;
 }
 
-.carousel-preview
+.carousel-navigation
 {
     width: fit-content;
     margin: 10px auto;
 }
 
-input:checked[id='0'] ~ section .radio-little[for='0'],
-input:checked[id='1'] ~ section .radio-little[for='1'],
-input:checked[id='2'] ~ section .radio-little[for='2'],
-input:checked[id='3'] ~ section .radio-little[for='3'],
-input:checked[id='4'] ~ section .radio-little[for='4'],
-input:checked[id='5'] ~ section .radio-little[for='5']
+input:checked[id='radio-0'] ~ nav .radio-little[for='radio-0'],
+input:checked[id='radio-1'] ~ nav .radio-little[for='radio-1'],
+input:checked[id='radio-2'] ~ nav .radio-little[for='radio-2'],
+input:checked[id='radio-3'] ~ nav .radio-little[for='radio-3'],
+input:checked[id='radio-4'] ~ nav .radio-little[for='radio-4'],
+input:checked[id='radio-5'] ~ nav .radio-little[for='radio-5']
 {
     background: #969696;
 }
@@ -115,32 +128,32 @@ input:checked[id='5'] ~ section .radio-little[for='5']
     -webkit-transition: left .3s ease-out;
 }
 
-input:checked[id='0'] ~ .carousel-main .carousel-block
+input:checked[id='radio-0'] ~ .carousel-main .carousel-block
 {
     left: -295px;
 }
 
-input:checked[id='1'] ~ .carousel-main .carousel-block
+input:checked[id='radio-1'] ~ .carousel-main .carousel-block
 {
     left: -787px;
 }
 
-input:checked[id='2'] ~ .carousel-main .carousel-block
+input:checked[id='radio-2'] ~ .carousel-main .carousel-block
 {
     left: -1240px;
 }
 
-input:checked[id='3'] ~ .carousel-main .carousel-block
+input:checked[id='radio-3'] ~ .carousel-main .carousel-block
 {
     left: -1715px;
 }
 
-input:checked[id='4'] ~ .carousel-main .carousel-block
+input:checked[id='radio-4'] ~ .carousel-main .carousel-block
 {
     left: -2075px;
 }
 
-input:checked[id='5'] ~ .carousel-main .carousel-block
+input:checked[id='radio-5'] ~ .carousel-main .carousel-block
 {
     left: -2483px;
 }
@@ -151,13 +164,14 @@ input:checked[id='5'] ~ .carousel-main .carousel-block
     margin: 0 20px;
     line-height: normal;
     vertical-align: middle;
-    text-align: center;
+    position: relative;
 }
 
 .carousel-block img
 {
     height: 300px;
     opacity: .7;
+    cursor: pointer;
 
     transition: height .3s ease-in;
     -o-transition: height .3s ease-in;
@@ -165,12 +179,12 @@ input:checked[id='5'] ~ .carousel-main .carousel-block
     -webkit-transition: height .3s ease-in;
 }
 
-input:checked[id='0'] ~ section .img-container-0 img,
-input:checked[id='1'] ~ section .img-container-1 img,
-input:checked[id='2'] ~ section .img-container-2 img,
-input:checked[id='3'] ~ section .img-container-3 img,
-input:checked[id='4'] ~ section .img-container-4 img,
-input:checked[id='5'] ~ section .img-container-5 img
+input:checked[id='radio-0'] ~ .carousel-main .img-container-0 img,
+input:checked[id='radio-1'] ~ .carousel-main .img-container-1 img,
+input:checked[id='radio-2'] ~ .carousel-main .img-container-2 img,
+input:checked[id='radio-3'] ~ .carousel-main .img-container-3 img,
+input:checked[id='radio-4'] ~ .carousel-main .img-container-4 img,
+input:checked[id='radio-5'] ~ .carousel-main .img-container-5 img
 {
     height: 375px;
     opacity: 1;
@@ -179,78 +193,39 @@ input:checked[id='5'] ~ section .img-container-5 img
 .overlay
 {
     position: absolute;
-    color: white;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 60px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.overlay-container
-{
-    position: absolute;
-    height: 375px;
+    width: 100%;
+    top: 0;
+    bottom: 4px;
     display: none;
-    visibility: hidden;
+    opacity: 0;
+
+    color: white;
+    text-align: center;
+    cursor: pointer;
 }
 
-.img-container-0 .overlay-container
+.overlay span
 {
-
-    width: 551px;
+    position: relative;
+    top: 45%;
+    font-size: 35px;
+    font-family: Arial, serif;
 }
 
-.img-container-1 .overlay-container
-{
-
-    width: 562px;
-}
-
-.img-container-2 .overlay-container
-{
-
-    width: 500px;
-}
-
-.img-container-3 .overlay-container
-{
-
-    width: 562px;
-}
-
-.img-container-4 .overlay-container
-{
-
-    width: 281px;
-}
-
-.img-container-5 .overlay-container
-{
-
-    width: 560px;
-}
-
-input:checked[id='0'] ~ section .img-container-0 .overlay-container ,
-input:checked[id='1'] ~ section .img-container-1 .overlay-container ,
-input:checked[id='2'] ~ section .img-container-2 .overlay-container ,
-input:checked[id='3'] ~ section .img-container-3 .overlay-container ,
-input:checked[id='4'] ~ section .img-container-4 .overlay-container ,
-input:checked[id='5'] ~ section .img-container-5 .overlay-container
+input:checked[id='radio-0'] ~ .carousel-main .img-container-0 .overlay,
+input:checked[id='radio-1'] ~ .carousel-main .img-container-1 .overlay,
+input:checked[id='radio-2'] ~ .carousel-main .img-container-2 .overlay,
+input:checked[id='radio-3'] ~ .carousel-main .img-container-3 .overlay,
+input:checked[id='radio-4'] ~ .carousel-main .img-container-4 .overlay,
+input:checked[id='radio-5'] ~ .carousel-main .img-container-5 .overlay
 {
     display: block;
 }
 
-input:checked[id='0'] ~ section .img-container-0:hover .overlay-container,
-input:checked[id='1'] ~ section .img-container-1:hover .overlay-container,
-input:checked[id='2'] ~ section .img-container-2:hover .overlay-container,
-input:checked[id='3'] ~ section .img-container-3:hover .overlay-container,
-input:checked[id='4'] ~ section .img-container-4:hover .overlay-container,
-input:checked[id='5'] ~ section .img-container-5:hover .overlay-container
+.overlay:hover
 {
     opacity: .7;
     background: black;
-    visibility: visible;
 }
 
 .carousel-main
@@ -258,4 +233,81 @@ input:checked[id='5'] ~ section .img-container-5:hover .overlay-container
     height: 400px;
     width: 100%;
     overflow: hidden;
+}
+
+.more
+{
+    display: none;
+}
+
+.more-bg
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background: black;
+    opacity: .7;
+
+}
+
+input[type='checkbox']:checked ~ .more
+{
+    display: block;
+}
+
+.close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.close img
+{
+    cursor: pointer;
+}
+
+input[id='more-0']:checked ~ .close-0,
+input[id='more-1']:checked ~ .close-1,
+input[id='more-2']:checked ~ .close-2,
+input[id='more-3']:checked ~ .close-3,
+input[id='more-4']:checked ~ .close-4,
+input[id='more-5']:checked ~ .close-5
+{
+    display: block;
+}
+
+.more-info
+{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    right: 100px;
+
+    font-family: Arial, serif;
+    font-size: 20px;
+    color: white;
+
+    display: none;
+}
+
+.more-info img
+{
+    float: left;
+    height: 300px;
+    padding-right: 15px;
+}
+
+input[id='more-0']:checked ~ .info-0,
+input[id='more-1']:checked ~ .info-1,
+input[id='more-2']:checked ~ .info-2,
+input[id='more-3']:checked ~ .info-3,
+input[id='more-4']:checked ~ .info-4,
+input[id='more-5']:checked ~ .info-5
+{
+    display: block;
 }

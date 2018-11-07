@@ -8,55 +8,152 @@
     <link rel="icon" type="image/png" href="icon.png">
 </head>
 <body>
-<article class="title">Мурмаркет</article>
+<header class="title">Мурмаркет</header>
 <article class="main">
-    <input type="radio" id="0" name="carousel-selector" checked>
-    <input type="radio" id="1" name="carousel-selector">
-    <input type="radio" id="2" name="carousel-selector">
-    <input type="radio" id="3" name="carousel-selector">
-    <input type="radio" id="4" name="carousel-selector">
-    <input type="radio" id="5" name="carousel-selector">
+    <input type="checkbox" id="more-0">
+    <input type="checkbox" id="more-1">
+    <input type="checkbox" id="more-2">
+    <input type="checkbox" id="more-3">
+    <input type="checkbox" id="more-4">
+    <input type="checkbox" id="more-5">
+
+    <input type="radio" id="radio-0" name="carousel-selector" checked>
+    <input type="radio" id="radio-1" name="carousel-selector">
+    <input type="radio" id="radio-2" name="carousel-selector">
+    <input type="radio" id="radio-3" name="carousel-selector">
+    <input type="radio" id="radio-4" name="carousel-selector">
+    <input type="radio" id="radio-5" name="carousel-selector">
     <section class="carousel-main">
         <div class="carousel-block">
             <div class="img-container img-container-0">
-                <div class="overlay-container">
-                    <div class="overlay">Боря</div>
-                </div>
-                <label class="radio-img" for="0"><img src="cats/0.jpg"></label>
+                <label for="radio-0"><img src="cats/0.jpg"></label>
+                <label for="more-0" class="overlay"><span>Боря</span></label>
             </div>
             <div class="img-container img-container-1">
-                <div class="overlay-container"><div class="overlay">Василевс</div></div>
-                <label class="radio-img" for="1"><img src="cats/1.jpg"></label>
+                <label for="radio-1"><img src="cats/1.jpg"></label>
+                <label for="more-1" class="overlay"><span>Василевс</span></label>
             </div>
             <div class="img-container img-container-2">
-                <div class="overlay-container"><div class="overlay">Василевс</div></div>
-                <label class="radio-img" for="2"><img src="cats/2.jpg"></label>
+                <label for="radio-2"><img src="cats/2.jpg"></label>
+                <label for="more-2" class="overlay"><span>Маргарита</span></label>
             </div>
             <div class="img-container img-container-3">
-                <div class="overlay-container"><div class="overlay">Василевс</div></div>
-                <label class="radio-img" for="3"><img src="cats/3.jpg">
-                </label>
+                <label for="radio-3"><img src="cats/3.jpg"></label>
+                <label for="more-3" class="overlay"><span>Афанасий</span></label>
             </div>
             <div class="img-container img-container-4">
-                <div class="overlay-container"><div class="overlay">Василевс</div></div>
-                <label class="radio-img" for="4"><img src="cats/4.jpg"></label>
+                <label for="radio-4"><img src="cats/4.jpg"></label>
+                <label for="more-4" class="overlay"><span>Полина</span></label>
             </div>
             <div class="img-container img-container-5">
-                <div class="overlay-container"><div class="overlay">Василевс</div></div>
-                <label class="radio-img" for="5"><img src="cats/5.jpg"></label>
+                <label for="radio-5"><img src="cats/5.jpg"></label>
+                <label for="more-5" class="overlay"><span>Матвей</span></label>
             </div>
         </div>
     </section>
-    <section class="carousel-preview">
-        <label class="radio-little" for="0"></label>
-        <label class="radio-little" for="1"></label>
-        <label class="radio-little" for="2"></label>
-        <label class="radio-little" for="3"></label>
-        <label class="radio-little" for="4"></label>
-        <label class="radio-little" for="5"></label>
-    </section>
+    <nav class="carousel-navigation">
+        <label class="radio-little" for="radio-0"></label>
+        <label class="radio-little" for="radio-1"></label>
+        <label class="radio-little" for="radio-2"></label>
+        <label class="radio-little" for="radio-3"></label>
+        <label class="radio-little" for="radio-4"></label>
+        <label class="radio-little" for="radio-5"></label>
+    </nav>
+    <div class="more more-bg"></div>
+    <div class="close close-0"><label for="more-0">
+        <img src="outline_close_white_36dp.png" title="Закрыть" alt="Закрыть">
+    </label></div>
+    <div class="close close-1"><label for="more-1">
+        <img src="outline_close_white_36dp.png" title="Закрыть" alt="Закрыть">
+    </label></div>
+    <div class="close close-2"><label for="more-2">
+        <img src="outline_close_white_36dp.png" title="Закрыть" alt="Закрыть">
+    </label></div>
+    <div class="close close-3"><label for="more-3">
+        <img src="outline_close_white_36dp.png" title="Закрыть" alt="Закрыть">
+    </label></div>
+    <div class="close close-4"><label for="more-4">
+        <img src="outline_close_white_36dp.png" title="Закрыть" alt="Закрыть">
+    </label></div>
+    <div class="close close-5"><label for="more-5">
+        <img src="outline_close_white_36dp.png" title="Закрыть" alt="Закрыть">
+    </label></div>
+
+    <div class="more-info info-0">
+        <img src="cats/0.jpg">
+        <h1>Боря</h1>
+        <p>Возраст: примерно 3 года</p>
+        <p>Порода: неизвестна</p>
+        <p>Ничем не болеет</p>
+        <p>
+            Борю подобрали на улице, когда он был еще совсем маленьким.
+            Пуглив и недоверчив к незнакомцам, но, узнав вас поближе, станет ласковым и игривым.
+        </p>
+    </div>
+    <div class="more-info info-1">
+        <img src="cats/1.jpg">
+        <h1>Василевс</h1>
+        <p>Возраст: 8 лет</p>
+        <p>Порода: неизвестна</p>
+        <p>Василевс не болеет</p>
+        <p>
+            Величественный Валилевс озарит ваш дом своим видом в обмен на уважение,
+            четырехразовое питание и тишину. Прекрасно ладит с любым существом, держащимся от
+            него на почтительном расстоянии. И, разумеется, кормящим его.
+        </p>
+    </div>
+    <div class="more-info info-2">
+        <img src="cats/2.jpg">
+        <h1>Маргарита</h1>
+        <p>Возраст: 5 лет</p>
+        <p>Порода: неизвестна</p>
+        <p>Ничем не болеет</p>
+        <p>
+            Марграрита ищет хозяйна, способного понять и принять ей чуткую натуру
+            и необычные запросы наподобии реугольной миски и шерстянных носков. Ладит с собаками,
+            крысами, мышами, удавами, летучими мышами и людьми с второй группой крови.
+        </p>
+    </div>
+    <div class="more-info info-3">
+        <img src="cats/3.jpg">
+        <h1>Афанасий</h1>
+        <p>Возраст: 1 год</p>
+        <p>Порода: неизвестна</p>
+        <p>Ничем не болеет</p>
+        <p>
+            Скромный и тихий кот с удовольствием скрасит ваш вечер в маленьком, но уютном жилище.
+            Неприхотлив, боится любых других домашних животных.
+        </p>
+    </div>
+
+    <div class="more-info info-4">
+        <img src="cats/4.jpg">
+        <h1>Афанасий</h1>
+        <p>Возраст: 2 года</p>
+        <p>Порода: неизвестна</p>
+        <p>Ничем не болеет</p>
+        <p>
+            Скромный и тихий кот с удовольствием скрасит ваш вечер в маленьком, но уютном жилище.
+            Неприхотлив, боится любых других домашних животных.
+        </p>
+    </div>
+
+    <div class="more-info info-5">
+        <img src="cats/5.jpg">
+        <h1>Афанасий</h1>
+        <p>Возраст: 1 год</p>
+        <p>Порода: неизвестна</p>
+        <p>Ничем не болеет</p>
+        <p>
+            Любопытный и любящий клубочек шерсти ищет новый дом. Поля готова присмотреть за
+            вашими детьми и домом. В случае беспорядков она бует внимательно наблюдать за
+            происходящим, чтобы промяучить вам все, что произошло. Очень общительна, боится
+            оставаться в одиночестве.
+        </p>
+    </div>
+
 </article>
-<aside class="footer">
+<footer class="footer">
     <div class="contacts">
         <p>Напишите нам:</p>
         <a href="mailto:cats@babuli.ru" class="mail">cats@babuli.ru</a>
@@ -64,6 +161,6 @@
         <a href="mailto:vnuchek@babuli.ru" class="mail">vnuchek@babuli.ru</a>
     </div>
     <div class="copyright">&copy; 2018 OOO «<a href="#">Бабушкины котятки</a>»</div>
-</aside>
+</footer>
 </body>
 </html>
