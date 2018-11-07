@@ -1,9 +1,350 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
+    <header class="header">
+        <div class="red-first">Мурмаркет</div>
+        <hr>
+    </header>
+    <main>
+        <div class="container">
+            <input type="radio" id="slide1" class="slide1" name="slide-radio">
+            <label for="slide1" class="label"></label>
+
+            <input type="radio" id="slide2" class="slide2" name="slide-radio">
+            <label for="slide2" class="label"></label>
+
+            <input type="radio" id="slide3" class="slide3" name="slide-radio">
+            <label for="slide3" class="label"></label>
+
+            <input type="radio" id="slide4" class="slide4" name="slide-radio" checked>
+            <label for="slide4" class="label"></label>
+
+            <input type="radio" id="slide5" class="slide5" name="slide-radio">
+            <label for="slide5" class="label"></label>
+
+            <input type="radio" id="slide6" class="slide6" name="slide-radio">
+            <label for="slide6" class="label"></label>
+
+            <input type="radio" id="slide7" class="slide7" name="slide-radio">
+            <label for="slide7" class="label"></label>
+
+            <input type="radio" id="slide8" class="slide8" name="slide-radio">
+            <label for="slide8" class="label"></label>
+
+            <input type="radio" id="slide9" class="slide9" name="slide-radio">
+            <label for="slide9" class="label"></label>
+
+            <input type="radio" id="slide10" class="slide10" name="slide-radio">
+            <label for="slide10" class="label"></label>
+
+            <div class="cards">
+                <div class="card">
+                    <label for="slide1"><img src="images/cat2.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#markus"></a>
+                        <h2>Маркус</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide2"><img src="images/cat3.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#leo"></a>
+                        <h2>Леонардо ди Котио</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide3"><img src="images/cat4.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#albert"></a>
+                        <h2>Альберт</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide4"><img src="images/cat5.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#max"></a>
+                        <h2>Макс</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide5"><img src="images/cat9.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#cat"></a>
+                        <h2>Кот</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide6"><img src="images/cat1.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#svetik"></a>
+                        <h2>Светлана</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide7"><img src="images/cat10.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#catness"></a>
+                        <h2>Кошка</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide8"><img src="images/cat8.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#name"></a>
+                        <h2>Имя</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide9"><img src="images/cat6.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#katifnah"></a>
+                        <h2>Катифнах</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <label for="slide10"><img src="images/cat7.jpg" alt="cat"></label>
+                    <div class="title-for-cat">
+                        <a href="#rofl"></a>
+                        <h2>Рофл</h2>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="modal" id="markus">
+                <div class="cat-photo">
+                    <img src="images/cat2.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Маркус</h2>
+                        <div class="about">
+                            <p>Возраст: 0.5 года</p>
+                            <p>Порода: нет</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                            <p>Замечательный, красивый, умный, обаятельный кот.</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="leo">
+                <div class="cat-photo">
+                    <img src="images/cat3.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Леонардо ди Котио</h2>
+                        <div class="about">
+                            <p>Возраст: 2 года</p>
+                            <p>Порода: нет</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                            <p>Очень талантливый кот, многократный финалист соревнований, однократный
+                                победитель.</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="albert">
+                <div class="cat-photo">
+                    <img src="images/cat4.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Альберт</h2>
+                        <div class="about">
+                            <p>Возраст: 5 лет</p>
+                            <p>Порода: рыжик</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                            <p>Альберт - и этим все сказано.</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="max">
+                <div class="cat-photo">
+                    <img src="images/cat5.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Макс</h2>
+                        <div class="about">
+                            <p>Возраст: 22 года</p>
+                            <p>Порода: рыжик</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяйку</p>
+                            <p>Замеччательный кот ищет заботливую хозяйку, которая будет его
+                                любить, кормить, гладить по вечерам.</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="cat">
+                <div class="cat-photo">
+                    <img src="images/cat9.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Кот</h2>
+                        <div class="about">
+                            <p>Возраст: 0.5 года</p>
+                            <p>Порода: нет</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                            <p>Просто кот.</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="svetik">
+                <div class="cat-photo">
+                    <img src="images/cat1.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Светлана</h2>
+                        <div class="about">
+                            <p>Возраст: 20 лет</p>
+                            <p>Порода: манчкин</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: занята</p>
+                            <p>Приятная на вид, с непростым характером.</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="catness">
+                <div class="cat-photo">
+                    <img src="images/cat10.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Кошка</h2>
+                        <div class="about">
+                            <p>Возраст: 12 лет</p>
+                            <p>Порода: двуликий</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                            <p>Не просто кошка.</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="name">
+                <div class="cat-photo">
+                    <img src="images/cat8.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Имя</h2>
+                        <div class="about">
+                            <p>Возраст: возраст</p>
+                            <p>Порода: порода</p>
+                            <p>Болезни: болезни</p>
+                            <p>Статус: статус</p>
+                            <p>Детали</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="katifnah">
+                <div class="cat-photo">
+                    <img src="images/cat6.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Катифнах</h2>
+                        <div class="about">
+                            <p>Возраст: 1.5 года</p>
+                            <p>Порода: шотландский вислоухий</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                            <p>Шотландский вислоухий секс символ</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <aside class="modal" id="rofl">
+                <div class="cat-photo">
+                    <img src="images/cat7.jpg" alt="cat">
+                </div>
+                <div class="cat-info">
+                    <a href="#" class="btn">
+                        <img src="images/baseline_close_white_18dp.png" alt="close button">
+                    </a>
+                    <article>
+                        <h2>Рофл</h2>
+                        <div class="about">
+                            <p>Возраст: 6 лет</p>
+                            <p>Порода: кот</p>
+                            <p>Болезни: нет</p>
+                            <p>Статус: ищет хозяина</p>
+                            <p>Подробности</p>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+            <div class="background-for-modal"></div>
+        </div>
+    </main>
+    <footer>
+        <hr>
+        <p class="left-align">
+            Напишите нам:<br>
+            <img src="images/baseline_mail_outline_black_18dp.png" alt="mail icon">
+            <a href="#">cats@babuli.ru</a><br>
+            <img src="images/baseline_mail_outline_black_18dp.png" alt="mail icon">
+            <a href="#">vnuchek@babuli.ru</a>
+        </p>
+        <p class="right-align">
+            &copy; 2018 &laquo;<a href="#">maxticats</a>&raquo;
+        </p>
+    </footer>
 </body>
+
 </html>
