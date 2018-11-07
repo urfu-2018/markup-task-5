@@ -1,0 +1,345 @@
+@font-face
+{
+    font-family: 'garamondnormal';
+    src: url('./garamond.woff2') format('woff2'), url('./garamond.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Comic Sans MS', arial;
+    src: url('./comic.ttf') format('truetype');
+}
+
+body
+{
+    margin: 0;
+}
+
+/* header */
+
+header
+{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+
+.logo-img
+{
+    width: 50px;
+    height: 50px;
+}
+
+.main-title
+{
+    position: relative;
+    font-family: 'PT SansNarrow', arial;
+    font-size: 32px;
+    padding-left: 30px;
+    top: -15px;
+}
+
+.main-title::first-letter
+{
+    color: red;
+}
+
+header div,
+header article
+{
+    display: inline-block;
+}
+
+/* radio-bottom */
+
+.labeles-wrapper
+{
+    position: fixed;
+    left: 41%;
+    bottom: 150px;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+input[type='radio'] ~ div label
+ {
+    content: url('./final.png');
+    width: 15px;
+    height: 15px;
+}
+
+input:hover ~ div label
+{
+    cursor: pointer;
+}
+
+input[id='slide1']:checked ~ div label[for='slide1'],
+input[id='slide2']:checked ~ div label[for='slide2'],
+input[id='slide3']:checked ~ div label[for='slide3'],
+input[id='slide4']:checked ~ div label[for='slide4'],
+input[id='slide5']:checked ~ div label[for='slide5'],
+input[id='slide6']:checked ~ div label[for='slide6'],
+input[id='slide7']:checked ~ div label[for='slide7'],
+input[id='slide8']:checked ~ div label[for='slide8'],
+input[id='slide9']:checked ~ div label[for='slide9'],
+input[id='slide10']:checked ~ div label[for='slide10']
+{
+    opacity: .5;
+}
+
+/* photo gallery основное расположение элементов, размеры */
+
+.gallery
+{
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 90px;
+}
+
+.carousel
+{
+    position: absolute;
+    transition: left .8s ease-out;
+    width: 4500px;
+    height: 450px;
+}
+
+.cat
+{
+    margin-top: 50px;
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 400px;
+    padding: 20px;
+}
+
+.cat-img
+{
+    width: 80%;
+    height: 80%;
+    opacity: .8;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-top: 20px;
+    border: 3px solid lightgray;
+}
+
+.name
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 40px;
+    color: #fff;
+    display: none;
+    z-index: 1;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.name-wrapper
+{
+    margin-top: 30%;
+}
+
+/*photo-view сдвиг фотокарточек*/
+
+input[id='slide1']:checked ~ .carousel
+{
+    left: 410px;
+}
+
+input[id='slide2']:checked ~ .carousel
+{
+    left: 0;
+}
+
+input[id='slide3']:checked ~ .carousel
+{
+    left: -440px;
+}
+
+input[id='slide4']:checked ~ .carousel
+{
+    left: calc(-445*2px);
+}
+
+input[id='slide5']:checked ~ .carousel
+{
+    left: calc(-445*3px);
+}
+
+input[id='slide6']:checked ~ .carousel
+{
+    left: calc(-445*4px);
+}
+
+input[id='slide7']:checked ~ .carousel
+{
+    left: calc(-445*5px);
+}
+
+input[id='slide8']:checked ~ .carousel
+{
+    left: calc(-445*6px);
+}
+
+input[id='slide9']:checked ~ .carousel
+{
+    left: calc(-445*7px);
+}
+
+input[id='slide10']:checked ~ .carousel
+{
+    left: calc(-445*8px);
+}
+
+/*active-photo-hover эффект,
+ который срабатывает при наведении на центральную фотокарточку:
+ всплывание имени*/
+
+
+input[id='slide1']:checked ~ .carousel .slide[id='s1']:hover .name[id='1'],
+input[id='slide2']:checked ~ .carousel .slide[id='s2']:hover .name[id='2'],
+input[id='slide3']:checked ~ .carousel .slide[id='s3']:hover .name[id='3'],
+input[id='slide4']:checked ~ .carousel .slide[id='s4']:hover .name[id='4'],
+input[id='slide5']:checked ~ .carousel .slide[id='s5']:hover .name[id='5'],
+input[id='slide6']:checked ~ .carousel .slide[id='s6']:hover .name[id='6'],
+input[id='slide7']:checked ~ .carousel .slide[id='s7']:hover .name[id='7'],
+input[id='slide8']:checked ~ .carousel .slide[id='s8']:hover .name[id='8'],
+input[id='slide9']:checked ~ .carousel .slide[id='s9']:hover .name[id='9'],
+input[id='slide10']:checked ~ .carousel .slide[id='s10']:hover .name[id='10']
+{
+    display: block;
+}
+
+/*active-photo эффект,
+ для центральной фотокарточки - opacity 1 + размер 100%*/
+
+input[id='slide1']:checked ~ .carousel .slide[id='s1'] .cat-img,
+input[id='slide2']:checked ~ .carousel .slide[id='s2'] .cat-img,
+input[id='slide3']:checked ~ .carousel .slide[id='s3'] .cat-img,
+input[id='slide4']:checked ~ .carousel .slide[id='s4'] .cat-img,
+input[id='slide5']:checked ~ .carousel .slide[id='s5'] .cat-img,
+input[id='slide6']:checked ~ .carousel .slide[id='s6'] .cat-img,
+input[id='slide7']:checked ~ .carousel .slide[id='s7'] .cat-img,
+input[id='slide8']:checked ~ .carousel .slide[id='s8'] .cat-img,
+input[id='slide9']:checked ~ .carousel .slide[id='s9'] .cat-img,
+input[id='slide10']:checked ~ .carousel .slide[id='s10'] .cat-img
+{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.slide
+{
+    position: absolute;
+    overflow: hidden;
+}
+
+/* active-photo-clecked эффект,
+который срабатывает при клике на центральную фотокарточку:
+открытие модального окна с фотографией */
+
+input[id='slide1']:checked ~ .slide[id='s1']:hover .cat-information:target,
+input[id='slide2']:checked ~ .slide[id='s2']:hover .cat-information:target,
+input[id='slide3']:checked ~ .slide[id='s3']:hover .cat-information:target,
+input[id='slide4']:checked ~ .slide[id='s4']:hover .cat-information:target,
+input[id='slide5']:checked ~ .slide[id='s5']:hover .cat-information:target,
+input[id='slide6']:checked ~ .slide[id='s6']:hover .cat-information:target,
+input[id='slide7']:checked ~ .slide[id='s7']:hover .cat-information:target,
+input[id='slide8']:checked ~ .slide[id='s8']:hover .cat-information:target,
+input[id='slide9']:checked ~ .slide[id='s9']:hover .cat-information:target,
+input[id='slide10']:checked ~ .slide[id='s10']:hover .cat-information:target
+{
+    display: block;
+}
+
+/* модальное окно */
+
+.cat-information:target
+{
+    display: block;
+}
+
+.cat-information
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-top: 60px;
+    margin-bottom: 90px;
+    padding-top: 30px;
+    height: 71%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    color: #fff;
+    z-index: 1;
+    font-family: 'Comic Sans MS', arial;
+    display: none;
+}
+
+.cat-information img[alt='close']
+{
+    position: absolute;
+    bottom: 400px;
+    left: 1100px;
+    width: 50px;
+    height: 50px;
+    filter: invert(100%);
+}
+
+.cat-information .cat-img
+{
+    width: auto;
+    height: 350px;
+    float: left;
+    border: none;
+    opacity: 1;
+}
+
+.cat-information .information
+{
+    width: 400px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.information h1
+{
+    font-size: 30px;
+    margin: 10px;
+}
+
+.information p
+{
+    margin: 7px;
+}
+
+/* footer */
+
+footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid lightgray;
+}
