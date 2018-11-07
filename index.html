@@ -3,7 +3,301 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
 <body>
+    <header>
+        Мурмаркет
+    </header>    
+
+    <main class="carousel-wrapper">
+
+        <input type="radio" class="carousel-selector img1" id="img1" name="carousel-selector">
+        <input type="radio" class="carousel-selector img2" id="img2" name="carousel-selector">
+        <input type="radio" class="carousel-selector img3" id="img3" name="carousel-selector">
+        <input type="radio" class="carousel-selector img4" id="img4" name="carousel-selector">
+        <input type="radio" class="carousel-selector img5" id="img5" name="carousel-selector">
+        <input type="radio" class="carousel-selector img6" id="img6" checked name="carousel-selector">
+        <input type="radio" class="carousel-selector img7" id="img7" name="carousel-selector">
+        <input type="radio" class="carousel-selector img8" id="img8" name="carousel-selector">
+        <input type="radio" class="carousel-selector img9" id="img9" name="carousel-selector">
+        <input type="radio" class="carousel-selector img10" id="img10" name="carousel-selector">
+
+        <section class="carousel">
+            <article class="carousel-item">
+
+                <article class="background"><h1>Маурицио</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img1"><img src="cats_images/pardino.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Мудрец</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img2"><img src="cats_images/scottish_fold.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Билли, который 
+                    подружился с мальчиком-аутистом</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img3"><img src="cats_images/Billy.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Мистер Айс</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img4"><img src="cats_images/Mr.Eyes.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Тард</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img5"><img src="cats_images/Tard.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Курил</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img6"><img src="cats_images/Kuril.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Котя</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img7"><img src="cats_images/Kotya.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Хикки</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img8"><img src="cats_images/Hikky.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Миутрикс</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img9"><img src="cats_images/Meowtrix.jpg" alt="Cat"></label>
+    
+            </article>    
+            <article class="carousel-item">
+    
+                <article class="background"><h1>Крут</h1></article>
+                <a class="modal-dialog-link" href="#modal-dialog"></a>
+                <label for="img10"><img src="cats_images/Krut.jpg" alt="Cat"></label>
+    
+            </article>
+        </section>
+
+        <section class="modal-dialog" id="modal-dialog">
+            <article class="cat_article">
+                <img src="cats_images/pardino.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Маурицио</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> точно не известно<br>
+                        <span>Порода:</span> бродячая<br>
+                        <span>Пол:</span> прекрасный<br>
+                        <span>Болезни:</span> нет<br>
+                        <span class="special_span">Статус:</span> грустит без хозяина<br>
+                    </p>
+                    <p class="price">10000000000000$</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/scottish_fold.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Мудрец</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 3 года и 3 месяца<br>
+                        <span>Порода:</span> скоттиш-фолд<br>
+                        <span>Пол:</span> сильный<br>
+                        <span>Болезни:</span> не замечено<br>
+                        <span>Статус:</span> думает о хозяине<br>
+                    </p>
+                    <p class="price">Отдадим в добрые руки</p>
+                </div>
+            </article>  
+            <article class="cat_article">
+                <img src="cats_images/Billy.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name" title="Билли, который 
+                    подружился с мальчиком-аутистом">Билли, который 
+                        подружился с мальчиком-аутистом</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 1 год<br>
+                        <span>Порода:</span> бродячая<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> отсутствуют<br>
+                        <span>Статус:</span> в полном порядке<br>
+                    </p>
+                    <p class="price">Не продаётся</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/Mr.Eyes.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Мистер Айс</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 10 месяцев<br>
+                        <span>Порода:</span> экзотическая<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                    <p class="price">499 руб.</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/Tard.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Тард</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 6 лет<br>
+                        <span>Порода:</span> сноу-шу<br>
+                        <span>Пол:</span> женский<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                    <p class="price">Не продаётся</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/Kuril.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Курил</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 5 лет<br>
+                        <span>Порода:</span> курильский-бобтейл<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет хозяина<br>
+                    </p>
+                    <p class="price">999 руб.</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/Kotya.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Котя</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 3 курс<br>
+                        <span>Порода:</span> чистая<br>
+                        <span>Пол:</span> горячий<br>
+                        <span>Болезни:</span> недосып<br>
+                        <span>Статус:</span> ищет человека
+                        для сдачи задач по Яндекс<br>
+                    </p>
+                    <p class="price">Бесценный</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/Hikky.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Хикки</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 4 года<br>
+                        <span>Порода:</span> турецкая<br>
+                        <span>Пол:</span> кошка<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет уединение<br>
+                    </p>
+                    <p class="price">3999 руб.</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/Meowtrix.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Миутрикс</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> 3 года, 3 месяца, 3 недели, 3 дня<br>
+                        <span>Порода:</span> русская голубая<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> ищет реальный мир<br>
+                    </p>
+                    <p class="price">4999 руб.</p>
+                </div>
+            </article>
+            <article class="cat_article">
+                <img src="cats_images/Krut.jpg" alt="cat" class="cat_img">
+                <aside class="close"><a href="#">X</a></aside>
+                <div class="info">
+                    <a href="#" class="cat_name">Крут</a>
+                    <p class="main_info">
+                        <span>Возраст:</span> вечно молодой<br>
+                        <span>Порода:</span> королевская<br>
+                        <span>Пол:</span> кот<br>
+                        <span>Болезни:</span> нет<br>
+                        <span>Статус:</span> гедонист<br>
+                    </p>
+                    <p class="price">Пожизненный запас пачки Whiskas</p>
+                </div>
+            </article>
+        </section>
+
+        <nav class="carousel-dots">
+                <aside class="dot">
+                    <label for="img1"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img2"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img3"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img4"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img5"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img6"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img7"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img8"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img9"></label>
+                </aside>
+                <aside class="dot">
+                    <label for="img10"></label>
+                </aside>
+            </nav>
+       
+    </main>
+
+    <footer>
+        Напишите нам:<br>
+        <p>
+            &#9993;<a href="mailto:cats@babuli.ru">cats@babuli.ru</a><br>
+            &#9993;<a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+        </p>
+        <p><br>&copy; 2018 ООО <a href="https://www.youtube.com/watch?v=96gkg5gHad8">
+            "Бабушкины котятки"</a></p>
+    </footer>
+
 </body>
 </html>
