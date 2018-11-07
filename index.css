@@ -54,17 +54,20 @@ footer a
 body
 {
     overflow: hidden;
+    margin: 0;
 }
 
 .main-block
 {
-    position: absolute;
-    left: -40%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
     scroll-behavior: smooth;
     overflow-x: auto;
-    height: 1300px;
-    width: 500px;
-    transform: rotate(-90deg);
+    height: 100vw;
+    width: 100vh;
+    transform: rotate(-90deg) translateY(-100vh);
     transform-origin: right top;
 }
 
@@ -72,26 +75,53 @@ body
 {
     display: inline-block;
     transform: rotate(90deg);
-    width: 400px;
+    width: 20vw;
     height: 300px;
-    margin: 20% 5%;
+    margin: 25% 30%;
 }
 
-.cat-card:target + .cat-card .hidden-image
+.popup-block
+{
+    display: table;
+    top: 40vw;
+    left: 10vh;
+    position: fixed;
+    height: 400px;
+    width: auto;
+    transform: rotate(90deg);
+    text-align: center;
+    padding: 0;
+}
+
+.popup-image
+{
+    display: table-cell;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.text
+{
+    width: 40%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.cat-card:target + div + .cat-card .hidden-image
 {
     max-width: 500px;
-    display: initial;
+    visibility: visible;
     opacity: 1;
 }
 
-.cat-card:target + .cat-card .name-container
+.cat-card:target + div + .cat-card .name-container
 {
     display: initial;
-}
-
-.fake-card
-{
-    margin: 10% 0 15%;
 }
 
 .cat-card .simple-image
@@ -102,16 +132,46 @@ body
     opacity: .7;
 }
 
+.overlay
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+    line-height: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.overlay:target
+{
+    visibility: visible;
+}
+
 .cat-card .hidden-image
 {
     position: absolute;
     top: -15%;
     left: -15%;
     width: 125%;
-    display: none;
+    visibility: hidden;
     object-fit: cover;
     height: 125%;
-    z-index: 1;
+    z-index: 0;
 }
 
 .hidden-image:hover
@@ -121,12 +181,17 @@ body
     -webkit-filter: brightness(50%);
 }
 
-.name-container:hover ~ .hidden-image
+.name-container:hover ~ a .hidden-image
 {
     z-index: 0;
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
 }
+
+/*input:checked + .popup*/
+/*{*/
+/*display: initial;*/
+/*}*/
 
 /*.inner-block img:hover*/
 /*{*/
@@ -155,6 +220,7 @@ body
 .cat-name
 {
     font-size: 32px;
+    font-weight: normal;
     color: white;
     text-overflow: ellipsis;
     white-space: nowrap;
