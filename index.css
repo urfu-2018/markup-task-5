@@ -1,0 +1,419 @@
+body
+{
+    text-align: center;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+header
+{
+    font-size: 32px;
+    font-family: PT Sans Narrow;
+    text-align: center;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 7px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: white;
+}
+
+header::first-letter
+{
+    color: #f00;
+}
+
+input
+{
+    display: none;
+}
+
+.slides
+{
+    position: absolute;
+    top: 25%;
+    right: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    /*margin-top: 10%;*/
+}
+
+.card
+{
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #d8d8d8;
+    height: 230px;
+    width: 400px;
+    margin: 7px;
+    display: inline-block;
+    background: #000;
+    position: relative;
+    opacity: .7;
+}
+
+.name
+{
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    font-size: 40px;
+    width: 100%;
+    color: #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 1;
+    z-index: 2;
+}
+
+.cat-image
+{
+    width: 100%;
+    height: 100%;
+}
+
+.long-info
+{
+
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 18px;
+    float: right;
+    margin-top: 6%;
+    height: 71%;
+    width: 40%;
+    padding: 20px;
+
+}
+
+.close-label
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.modal-slides
+{
+
+    margin-top: 10px;
+    height: 75%;
+    width: 70%;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    /*display: inline-block;*/
+    z-index: 3;
+    display: none;
+}
+
+.cat-image-modal
+{
+    width: 50%;
+    margin-top: 6%;
+    display: inline-block;
+}
+
+.name-modal
+{
+    font-size: 40px;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+
+}
+
+.curtain
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    background: rgba(0, 0, 0, .9);
+    z-index: 1;
+    display: none;
+}
+
+.card-modal
+{
+    margin: 0 auto;
+    height: 100%;
+    display: none;
+    color: white;
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+footer
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 1px solid #d8d8d8;
+}
+
+a[href^='mailto']
+{
+    color: #4c4cd8;
+}
+
+.mailIcon
+{
+    width: 15px;
+    height: 15px;
+}
+
+.mailColumn
+{
+    margin: 7px;
+    display: inline-block;
+}
+
+.mailColumn > span
+{
+    display: block;
+}
+
+.copyrightColumn
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    margin: 7px;
+}
+
+.carousel[value='item0']:checked ~ .slides .item0,
+.carousel[value='item1']:checked ~ .slides .item1,
+.carousel[value='item2']:checked ~ .slides .item2,
+.carousel[value='item3']:checked ~ .slides .item3,
+.carousel[value='item4']:checked ~ .slides .item4,
+.carousel[value='item5']:checked ~ .slides .item5,
+.carousel[value='item6']:checked ~ .slides .item6,
+.carousel[value='item7']:checked ~ .slides .item7,
+.carousel[value='item8']:checked ~ .slides .item8,
+.carousel[value='item9']:checked ~ .slides .item9
+{
+    height: 290px;
+    width: 450px;
+    opacity: 1;
+}
+
+.carousel[value='item0']:checked ~ .slides .item0:hover .cat-image,
+.carousel[value='item1']:checked ~ .slides .item1:hover .cat-image,
+.carousel[value='item2']:checked ~ .slides .item2:hover .cat-image,
+.carousel[value='item3']:checked ~ .slides .item3:hover .cat-image,
+.carousel[value='item4']:checked ~ .slides .item4:hover .cat-image,
+.carousel[value='item5']:checked ~ .slides .item5:hover .cat-image,
+.carousel[value='item6']:checked ~ .slides .item6:hover .cat-image,
+.carousel[value='item7']:checked ~ .slides .item7:hover .cat-image,
+.carousel[value='item8']:checked ~ .slides .item8:hover .cat-image,
+.carousel[value='item9']:checked ~ .slides .item9:hover .cat-image
+{
+    opacity: .5;
+}
+
+.card::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #000;
+    z-index: 0;
+}
+
+.carousel[value='item0']:checked ~ .slides .item0:hover .name,
+.carousel[value='item1']:checked ~ .slides .item1:hover .name,
+.carousel[value='item2']:checked ~ .slides .item2:hover .name,
+.carousel[value='item3']:checked ~ .slides .item3:hover .name,
+.carousel[value='item4']:checked ~ .slides .item4:hover .name,
+.carousel[value='item5']:checked ~ .slides .item5:hover .name,
+.carousel[value='item6']:checked ~ .slides .item6:hover .name,
+.carousel[value='item7']:checked ~ .slides .item7:hover .name,
+.carousel[value='item8']:checked ~ .slides .item8:hover .name,
+.carousel[value='item9']:checked ~ .slides .item9:hover .name
+{
+    display: block;
+}
+
+.carousel[value='item0']:checked ~ .slides .item0:hover label:hover .cat-image,
+.carousel[value='item1']:checked ~ .slides .item1:hover label:hover .cat-image,
+.carousel[value='item2']:checked ~ .slides .item2:hover label:hover .cat-image,
+.carousel[value='item3']:checked ~ .slides .item3:hover label:hover .cat-image,
+.carousel[value='item4']:checked ~ .slides .item4:hover label:hover .cat-image,
+.carousel[value='item5']:checked ~ .slides .item5:hover label:hover .cat-image,
+.carousel[value='item6']:checked ~ .slides .item6:hover label:hover .cat-image,
+.carousel[value='item7']:checked ~ .slides .item7:hover label:hover .cat-image,
+.carousel[value='item8']:checked ~ .slides .item8:hover label:hover .cat-image,
+.carousel[value='item9']:checked ~ .slides .item9:hover label:hover .cat-image
+{
+    opacity: .5;
+}
+
+.carousel[value='item0']:checked ~ .slides .item0
+{
+    margin-left: 35%;
+}
+
+.carousel[value='item1']:checked ~ .slides .item0
+{
+    margin-left: 5%;
+}
+
+.carousel[value='item2']:checked ~ .slides .item0
+{
+    margin-left: -24%;
+}
+
+.carousel[value='item3']:checked ~ .slides .item0
+{
+    margin-left: -53%;
+}
+
+.carousel[value='item4']:checked ~ .slides .item0
+{
+    margin-left: -83%;
+}
+
+.carousel[value='item5']:checked ~ .slides .item0
+{
+    margin-left: -111%;
+}
+
+.carousel[value='item6']:checked ~ .slides .item0
+{
+    margin-left: -140%;
+}
+
+.carousel[value='item7']:checked ~ .slides .item0
+{
+    margin-left: -169%;
+}
+
+.carousel[value='item8']:checked ~ .slides .item0
+{
+    margin-left: -205%;
+}
+
+.carousel[value='item9']:checked ~ .slides .item0
+{
+    margin-left: -265%;
+}
+
+.modal[value='item0modal']:checked ~ .curtain,
+.modal[value='item0modal']:checked ~ .modal-slides,
+.modal[value='item0modal']:checked ~ .modal-slides .item0-modal,
+.modal[value='item1modal']:checked ~ .curtain,
+.modal[value='item1modal']:checked ~ .modal-slides,
+.modal[value='item1modal']:checked ~ .modal-slides .item1-modal,
+.modal[value='item2modal']:checked ~ .curtain,
+.modal[value='item2modal']:checked ~ .modal-slides,
+.modal[value='item2modal']:checked ~ .modal-slides .item2-modal,
+.modal[value='item3modal']:checked ~ .curtain,
+.modal[value='item3modal']:checked ~ .modal-slides,
+.modal[value='item3modal']:checked ~ .modal-slides .item3-modal,
+.modal[value='item4modal']:checked ~ .curtain,
+.modal[value='item4modal']:checked ~ .modal-slides,
+.modal[value='item4modal']:checked ~ .modal-slides .item4-modal,
+.modal[value='item5modal']:checked ~ .curtain,
+.modal[value='item5modal']:checked ~ .modal-slides,
+.modal[value='item5modal']:checked ~ .modal-slides .item5-modal,
+.modal[value='item6modal']:checked ~ .curtain,
+.modal[value='item6modal']:checked ~ .modal-slides,
+.modal[value='item6modal']:checked ~ .modal-slides .item6-modal,
+.modal[value='item7modal']:checked ~ .curtain,
+.modal[value='item7modal']:checked ~ .modal-slides,
+.modal[value='item7modal']:checked ~ .modal-slides .item7-modal,
+.modal[value='item8modal']:checked ~ .curtain,
+.modal[value='item8modal']:checked ~ .modal-slides,
+.modal[value='item8modal']:checked ~ .modal-slides .item8-modal,
+.modal[value='item9modal']:checked ~ .curtain,
+.modal[value='item9modal']:checked ~ .modal-slides,
+.modal[value='item9modal']:checked ~ .modal-slides .item9-modal
+{
+    display: block;
+}
+
+.carousel[value='item0']:checked ~ .slides .item0-label,
+.carousel[value='item1']:checked ~ .slides .item1-label,
+.carousel[value='item2']:checked ~ .slides .item2-label,
+.carousel[value='item3']:checked ~ .slides .item3-label,
+.carousel[value='item4']:checked ~ .slides .item4-label,
+.carousel[value='item5']:checked ~ .slides .item5-label,
+.carousel[value='item6']:checked ~ .slides .item6-label,
+.carousel[value='item7']:checked ~ .slides .item7-label,
+.carousel[value='item8']:checked ~ .slides .item8-label,
+.carousel[value='item9']:checked ~ .slides .item9-label
+{
+    background-color: #727272;
+}
+
+.carousel-labels
+{
+    padding: 0;
+}
+
+.carousel-label
+{
+    display: inline-block;
+}
+
+.carousel-label label
+{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: lightgray;
+    display: block;
+    cursor: pointer;
+}
+
+.carousel-card-label,
+.carousel-card-label-modal
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.description
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel[value='item0']:checked ~ .slides .item0 .description
+{
+    display: block;
+}
