@@ -211,7 +211,6 @@ input[id='slide10']:checked ~ .carousel
  который срабатывает при наведении на центральную фотокарточку:
  всплывание имени*/
 
-
 input[id='slide1']:checked ~ .carousel .slide[id='s1']:hover .name[id='1'],
 input[id='slide2']:checked ~ .carousel .slide[id='s2']:hover .name[id='2'],
 input[id='slide3']:checked ~ .carousel .slide[id='s3']:hover .name[id='3'],
