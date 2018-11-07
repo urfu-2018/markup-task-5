@@ -3,7 +3,144 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>Мурмаркет</h1>
+    </header>
+    <main>
+        <input type="radio" id="first-slide" class="first-slide" name="current-slide" value="1" >
+        <input type="radio" id="second-slide" class="second-slide" name="current-slide" value="2">
+        <input type="radio" id="third-slide" class="third-slide" name="current-slide" value="3" checked>
+        <input type="radio" id="fourth-slide" class="fourth-slide" name="current-slide" value="4">
+        <input type="radio" id="fifth-slide" class="fifth-slide" name="current-slide" value="5">
+        <article class="gallery">
+            <section class="viewport">
+                <section class="slides">
+                    <section class="slide">
+                        <label for="first-slide">
+                            <img src="img/cat1.jpg" alt="1">
+                        </label>
+                    </section>
+                    <section class="slide">
+                        <label for="second-slide">
+                            <img src="img/cat2.jpg" alt="2">
+                        </label>
+                    </section>
+                    <section class="slide">
+                        <label for="third-slide">
+                            <img src="img/cat3.jpg" alt="3">
+                        </label>
+                    </section>
+                    <section class="slide">
+                        <label for="fourth-slide">
+                            <img src="img/cat4.jpg" alt="4">
+                        </label>
+                    </section>
+                    <section class="slide">
+                        <label for="fifth-slide">
+                            <img src="img/cat5.jpg" alt="5">
+                        </label>
+                    </section>
+                </section>
+            </section>
+            <nav>
+                <label for="first-slide"></label>
+                <label for="second-slide"></label>
+                <label for="third-slide"></label>
+                <label for="fourth-slide"></label>
+                <label for="fifth-slide"></label>
+            </nav>
+        </article>
+        <article>
+            <section class="cat-card">
+                <img src="img/cat1.jpg" alt="котик1">
+                <section class="cat-description">
+                    <h2>Тима</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum eget faucibus enim, a convallis justo.
+                        Curabitur interdum diam quis bibendum consectetur.
+                        Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                        mattis semper, tellus sem facilisis ligula, eget tristique
+                        nisi erat non nulla.
+                    </p>
+                </section>
+            </section>
+            <section class="cat-card">
+                <img src="img/cat2.jpg" alt="котик2">
+                <section class="cat-description">
+                    <h2>Борька</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum eget faucibus enim, a convallis justo.
+                        Curabitur interdum diam quis bibendum consectetur.
+                        Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                        mattis semper, tellus sem facilisis ligula, eget tristique
+                        nisi erat non nulla.
+                    </p>
+                </section>
+            </section>
+            <section class="cat-card">
+                <img src="img/cat3.jpg" alt="котик3">
+                <section class="cat-description">
+                    <h2>Ведьмак</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum eget faucibus enim, a convallis justo.
+                        Curabitur interdum diam quis bibendum consectetur.
+                        Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                        mattis semper, tellus sem facilisis ligula, eget tristique
+                        nisi erat non nulla.
+                    </p>
+                </section>
+            </section>
+            <section class="cat-card">
+                <img src="img/cat4.jpg" alt="котик4">
+                <section class="cat-description">
+                    <h2>Артемка</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum eget faucibus enim, a convallis justo.
+                        Curabitur interdum diam quis bibendum consectetur.
+                        Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                        mattis semper, tellus sem facilisis ligula, eget tristique
+                        nisi erat non nulla.
+                    </p>
+                </section>
+            </section>
+            <section class="cat-card">
+                <img src="img/cat5.jpg" alt="котик5">
+                <section class="cat-description">
+                    <h2>Братья соньки</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum eget faucibus enim, a convallis justo.
+                        Curabitur interdum diam quis bibendum consectetur.
+                        Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                        mattis semper, tellus sem facilisis ligula, eget tristique
+                        nisi erat non nulla.
+                    </p>
+                </section>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <section class="contacts">
+            <p>Напишите нам:</p>
+            <p>
+                <span class="letter-icon"></span>
+                <a href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+            </p>
+            <p>
+                <span class="letter-icon"></span>
+                <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+            </p>
+        </section>
+        <section class="copyright">
+            <p>&copy; 2018 ООО &laquo;<a href="index.html">Бабушкины котятки</a>&raquo;</p>
+        </section>
+    </footer>
 </body>
 </html>

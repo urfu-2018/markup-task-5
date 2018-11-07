@@ -1,0 +1,185 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: url('pt-sans-narrow.ttf');
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #dadada;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 3;
+}
+
+header h1
+{
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 10px 0;
+}
+
+header h1:first-letter
+{
+    color: #f00;
+}
+
+footer
+{
+    border-top: 1px solid #dadada;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    z-index: 2;
+    width: 100%;
+}
+
+footer p
+{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+footer p a
+{
+    color: #4c4cd8;
+}
+
+footer p
+{
+    margin: 2px 0;
+}
+
+footer section
+{
+    display: inline-block;
+    width: 49.8%;
+}
+
+.copyright
+{
+    text-align: right;
+}
+
+.letter-icon
+{
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background: url('img/email.png') no-repeat;
+}
+
+main
+{
+    width: 100%;
+    margin-top: 80px;
+}
+
+main > input[type='checkbox'],
+main > input[type='radio']
+{
+    display: none;
+}
+
+.viewport
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides
+{
+    white-space: nowrap;
+    height: 300px;
+    position: relative;
+}
+
+.slides .slide
+{
+    display: inline-block;
+    height: 100%;
+    margin: 0 10px;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.slides .slide img
+{
+    opacity: .7;
+    height: 80%;
+}
+
+.gallery nav
+{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gallery nav label
+{
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin-right: 5px;
+    background: #d8d8d8;
+    border-radius: 100%;
+}
+
+.first-slide:checked ~ .gallery nav label[for='first-slide'],
+.second-slide:checked ~ .gallery nav label[for='second-slide'],
+.third-slide:checked ~ .gallery nav label[for='third-slide'],
+.fourth-slide:checked ~ .gallery nav label[for='fourth-slide'],
+.fifth-slide:checked ~ .gallery nav label[for='fifth-slide']
+{
+    background: #979797;
+}
+
+.first-slide:checked ~ .gallery .slides label[for='first-slide'] img,
+.second-slide:checked ~ .gallery .slides label[for='second-slide'] img,
+.third-slide:checked ~ .gallery .slides label[for='third-slide'] img,
+.fourth-slide:checked ~ .gallery .slides label[for='fourth-slide'] img,
+.fifth-slide:checked ~ .gallery .slides label[for='fifth-slide'] img
+{
+    opacity: 1;
+    height: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .6);
+}
+
+.first-slide:checked ~ .gallery .viewport .slides
+{
+    left: calc(-330px + 390px * 2);
+}
+
+.second-slide:checked ~ .gallery .viewport .slides
+{
+    left: calc(-330px + 390px);
+}
+
+.third-slide:checked ~ .gallery .viewport .slides
+{
+    left: -330px;
+}
+
+.fourth-slide:checked ~ .gallery .viewport .slides
+{
+    left: calc(-330px - 390px);
+}
+
+.fifth-slide:checked ~ .gallery .viewport .slides
+{
+    left: calc(-330px - 390px * 2);
+}
