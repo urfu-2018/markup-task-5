@@ -13,6 +13,11 @@ header
     line-height: .75rem;
 }
 
+header > p::first-letter
+{
+    color: #f00;
+}
+
 header,
 main,
 footer
@@ -31,11 +36,6 @@ main
     border-top: 2px solid #aaa;
 }
 
-header > p::first-letter
-{
-    color: #f00;
-}
-
 /* main */
 
 .carousel
@@ -46,11 +46,18 @@ header > p::first-letter
     margin: 0 auto;
 }
 
+input
+{
+    display: none;
+}
+
 .cat-box
 {
-    display: table-cell;
     width: 300px;
     vertical-align: middle;
+    padding: 40px;
+    display: none; /* нужные потом будут отображены в input:checked */
+    position: relative;
 }
 
 .cat-photo
@@ -60,16 +67,36 @@ header > p::first-letter
     object-fit: cover;
 }
 
-input
+.overlay-container
 {
-    display: none;
+    display: table;
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    margin: 45px 0;
 }
 
-.cat-box
+.overlay
 {
-    padding: 40px;
-    display: none;
+    /* выставляет правильную позицию */
+
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .5s ease;
+    color: #f1f1f1;
+    font-size: 36px;
+
+    display: table-cell;
+    vertical-align: middle;
 }
+
+input:checked + div + input + .cat-box:hover .overlay
+{
+    opacity: 1;
+}
+
+/* я попробовал, но с nth-чтонибудь у меня так и не получилось */
 
 input:checked + div,
 input:checked + div + input + div,
@@ -84,6 +111,14 @@ input:checked + div + input + div + input + div > label > .cat-photo
     opacity: .7;
     height: 240px;
     width: 240px;
+}
+
+/* оверлей перекрывал инпуты */
+
+input:checked + div > .overlay-container,
+input:checked + div + input + div + input + div > .overlay-container
+{
+    display: none;
 }
 
 /* footer */

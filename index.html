@@ -11,48 +11,105 @@
     </header>
     <main>
         <form class="carousel">
-            <input type="radio" name="carousel" id="Barrymore"/>
+            <!-- У формы-карусели инпуты котов сдвинуты на один вверх (что бы выборка следующих трех
+            давала этого кота и одного до и одного после), а так же добавлены фейковые котаны, у которых
+            нет картинки, что бы крайний выбранный кот был в центре экрана-->
+            <input type="radio" name="carousel" id="Barrymore">
             <div class="cat-box">
             </div>
-            <input type="radio" name="carousel" checked="checked" id="Domino"/>
+            <input type="radio" name="carousel"  id="Domino">
             <div class="cat-box">
-                <label for="Barrymore"><img class="cat-photo" src="src/cats/Barrymore.jpg"></label>
+                <label for="Barrymore">
+                    <img class="cat-photo" alt="Barrymore" title="Barrymore" src="src/cats/Barrymore.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Бэримор</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="Karl"/>
+            <input type="radio" name="carousel" checked="checked" id="Karl">
             <div class="cat-box">
-                <label for="Domino"><img class="cat-photo" src="src/cats/Domino.jpg"></label>
+                <label for="Domino">
+                    <img class="cat-photo" alt="Domino" title="Domino" src="src/cats/Domino.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Домино</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="Nancy"/>
+            <input type="radio" name="carousel" id="Nancy">
             <div class="cat-box">
-                <label for="Karl"><img class="cat-photo" src="src/cats/Karl.jpg"></label>
+                <label for="Karl">
+                    <img class="cat-photo" alt="Karl" title="Karl" src="src/cats/Karl.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Карл</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="Persik"/>
+            <input type="radio" name="carousel" id="Persik">
             <div class="cat-box">
-                <label for="Nancy"><img class="cat-photo" src="src/cats/Nancy.jpg"></label>
+                <label for="Nancy">
+                    <img class="cat-photo" alt="Nancy" title="Nancy" src="src/cats/Nancy.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Нэнси</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="Podymoi"/>
+            <input type="radio" name="carousel" id="Podymoi">
             <div class="cat-box">
-                <label for="Persik"><img class="cat-photo" src="src/cats/Persik.png"></label>
+                <label for="Persik">
+                    <img class="cat-photo" alt="Persik" title="Persik" src="src/cats/Persik.png">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Персик</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="Spike"/>
+            <input type="radio" name="carousel" id="Spike">
             <div class="cat-box">
-                <label for="Podymoi"><img class="cat-photo" src="src/cats/Podymoi.jpg"></label>
+                <label for="Podymoi">
+                    <img class="cat-photo" alt="Podumoi" title="Podumoi" src="src/cats/Podymoi.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Нееш Подумой</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="Tiger"/>
+            <input type="radio" name="carousel" id="Stasya">
             <div class="cat-box">
-                <label for="Spike"><img class="cat-photo" src="src/cats/Spike.jpg"></label>
+                <label for="Spike">
+                    <img class="cat-photo" alt="Spike" title="Spike" src="src/cats/Spike.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Спайк</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="Zarine"/>
+            <input type="radio" name="carousel" id="Tiger">
             <div class="cat-box">
-                <label for="Tiger"><img class="cat-photo" src="src/cats/Tiger.jpg"></label>
+                <label for="Stasya">
+                    <img class="cat-photo" alt="Stasya" title="Stasya" src="src/cats/Stasya.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Стася</p>
+                </div>
             </div>
-                <input type="radio" name="carousel" id="fakecat"/>
+            <input type="radio" name="carousel" id="Zarine">
             <div class="cat-box">
-                <label for="Zarine"><img class="cat-photo" src="src/cats/Zarine.jpg"></label>
+                <label for="Tiger">
+                    <img class="cat-photo" alt="Tiger" title="Tiger" src="src/cats/Tiger.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Тигрик</p>
+                </div>
             </div>
-            <input type="radio" name="carousel" id="fakecat2"/>
+                <input type="radio" name="carousel" id="fakecat">
             <div class="cat-box">
-                <label type="radio" name="carousel"></label>
+                <label for="Zarine">
+                    <img class="cat-photo" alt="Zarine" title="Zarine" src="src/cats/Zarine.jpg">
+                </label>
+                <div class="overlay-container">
+                    <p class="overlay">Зарина</p>
+                </div>
+            </div>
+            <input type="radio" name="carousel" id="fakecat2">
+            <div class="cat-box">
+                <label for="fakecat2"></label>
             </div>
         </form>
     </main>
