@@ -34,6 +34,11 @@ body
     display: none;
 }
 
+.carousel-container
+{
+    width: 100%;
+}
+
 .carousel
 {
     position: relative;
@@ -48,7 +53,8 @@ body
     left: -66%;
     display: inline-block;
     width: 30%;
-    height: 250px;
+    height: 300px;
+    position: relative;
     margin: 0 10px;
     transition-property: left, right;
     transition-duration: .5s;
@@ -56,7 +62,6 @@ body
 
 .carousel-item img
 {
-
     width: 100%;
     height: 80%;
     vertical-align: middle;
@@ -165,6 +170,14 @@ body
     background-color: rgba(0, 0, 0, .5);
 }
 
+.full-info a
+{
+    position: relative;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+
 .first:checked ~ .carousel label[for='first'] + .full-info,
 .second:checked ~ .carousel label[for='second'] + .full-info,
 .third:checked ~ .carousel label[for='third'] + .full-info,
@@ -200,6 +213,77 @@ body
     font-family: Arial, sans-serif;
 }
 
+.modal
+{
+    display: none;
+    opacity: 0;
+    background: rgba(0, 0, 0, .9);
+    left: calc(50% - 500px);
+    top: calc(50% - 200px);
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    color: white;
+}
+
+.modal:target
+{
+    display: block;
+    opacity: 1;
+}
+
+.cat-photo
+{
+    width: 600px;
+    height: 100%;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.cat-photo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.about-cat
+{
+    width: 395px;
+    height: 100%;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    white-space: normal;
+}
+
+.about-cat > section > span
+{
+    display: block;
+    margin: 0 0 15px 10px;
+    font-size: 20px;
+}
+
+.about-cat header h1
+{
+    margin: 50px 0 10px 10px;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.btn-close
+{
+    font-size: 30px;
+    margin: -10px 10px;
+    color: white;
+    float: right;
+}
+
+.btn-close:hover
+{
+    color: #f00;
+}
+
 .contact-us
 {
     font: 14px 'Arial', sans-serif;
@@ -207,7 +291,7 @@ body
     border-top: 1px solid #e7e7e7;
     position: fixed;
     bottom: 0;
-    z-index: 1;
+    z-index: 1000;
     background: #fff;
 }
 
@@ -252,4 +336,9 @@ body
 .contact i
 {
     margin: 0 5px 0 0;
+}
+
+.modal:target ~ body
+{
+    background: black;
 }
