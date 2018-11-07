@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic,cyrillic-ext');
+
+body
+{
+    margin: 0;
+}
+
+header
+{
+    position: fixed;
+    text-align: center;
+    border-bottom: 1px solid #949494;
+
+    z-index: 4;
+}
+
+header h1
+{
+    font: 32px 'PT Sans Narrow', sans-serif;
+    margin: .2em;
+}
+
+header h1::first-letter
+{
+    color: #f32920;
+}
+
+header,
+footer
+{
+    background-color: #fff;
+    width: 100%;
+}
+
+footer
+{
+    font-size: 14px;
+    border-top: 1px solid #949494;
+    position: relative;
+    height: 105px;
+}
+
+footer .emails,
+footer .license
+{
+    position: absolute;
+}
+
+footer .emails
+{
+    left: 8px;
+}
+
+footer .license
+{
+    right: 8px;
+    bottom: 0px;
+}
+
+a
+{
+    font-family: 'Arial', sans-serif;
+}
+
+.mail::before
+{
+    content: '';
+    display: block;
+    background: url('resources/email.png') no-repeat;
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin: -3px 6px 0 0;
+}
+
+main
+{
+    position: relative;
+}
