@@ -1,0 +1,245 @@
+html,
+body
+ {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+header
+ {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+h1
+ {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font: 32px PT SansNarrow;
+}
+
+h1::first-letter
+ {
+    color: red;
+}
+
+h4
+ {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+main
+ {
+    height: 700px;
+    min-height: 100%;
+    margin-bottom: -80px;
+    position: relative;
+    top: 7%;
+}
+
+footer
+ {
+    border-top: 1px solid gray;
+    height: 80px;
+    min-height: 5%;
+    padding: 10px;
+    font: 14px Arial;
+}
+
+input
+ {
+    display: none;
+}
+
+.imgholder
+ {
+    display: inline-block;
+    height: 280px;
+    opacity: .7;
+    margin: 30px;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition-duration: 300ms;
+}
+
+img
+ {
+    height: 100%;
+    margin: 0;
+    transition-duration: 300ms;
+}
+
+.Barsik:checked ~ section label[for='Barsik'] .imgholder,
+.Bony:checked ~ section label[for='Bony'] .imgholder,
+.Cleo:checked ~ section label[for='Cleo'] .imgholder,
+.Dimok:checked ~ section label[for='Dimok'] .imgholder,
+.Longname:checked ~ section label[for='Longname'] .imgholder,
+.Luci:checked ~ section label[for='Luci'] .imgholder,
+.Pushok:checked ~ section label[for='Pushok'] .imgholder
+ {
+    height: 350px;
+    opacity: 1;
+    top: 35px;
+}
+
+.Barsik:checked ~ section label[for='Barsik'] .imgholder:hover img,
+.Bony:checked ~ section label[for='Bony'] .imgholder:hover img,
+.Cleo:checked ~ section label[for='Cleo'] .imgholder:hover img,
+.Dimok:checked ~ section label[for='Dimok'] .imgholder:hover img,
+.Longname:checked ~ section label[for='Longname'] .imgholder:hover img,
+.Luci:checked ~ section label[for='Luci'] .imgholder:hover img,
+.Pushok:checked ~ section label[for='Pushok'] .imgholder:hover img
+ {
+    filter: brightness(15%);
+}
+
+.name
+ {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    font-size: 300%;
+    visibility: hidden;
+}
+
+.Barsik:checked ~ section label[for='Barsik'] .imgholder:hover .name,
+.Bony:checked ~ section label[for='Bony'] .imgholder:hover .name,
+.Cleo:checked ~ section label[for='Cleo'] .imgholder:hover .name,
+.Dimok:checked ~ section label[for='Dimok'] .imgholder:hover .name,
+.Longname:checked ~ section label[for='Longname'] .imgholder:hover .name,
+.Luci:checked ~ section label[for='Luci'] .imgholder:hover .name,
+.Pushok:checked ~ section label[for='Pushok'] .imgholder:hover .name
+ {
+    visibility: visible;
+}
+
+.carousel
+ {
+    position: relative;
+    height: 400px;
+    top: 10%;
+    overflow: hidden;
+    transition-duration: 1000ms;
+    width: 10000px;
+}
+
+.Barsik:checked ~ section
+ {
+    left: 25%;
+}
+
+.Bony:checked ~ section
+ {
+    left: 0;
+}
+
+.Cleo:checked ~ section
+ {
+    left: -27%;
+}
+
+.Dimok:checked ~ section
+ {
+    left: -55%;
+}
+
+.Longname:checked ~ section
+ {
+    left: -90%;
+}
+
+.Luci:checked ~ section
+ {
+    left: -120%;
+}
+
+.Pushok:checked ~ section
+ {
+    left: -150%;
+}
+
+.modal > img
+ {
+    float: left;
+    width: 55%;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+label.close
+ {
+    float: right;
+    width: 20px;
+    font-size: 20px;
+}
+
+.modal
+ {
+    border: 1px solid black;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 1000px;
+    height: 350px;
+    background-color: black;
+    color: white;
+    visibility: hidden;
+}
+
+.open_modal:checked + .modal
+ {
+    visibility: visible;
+}
+
+.close_modal:checked ~ .modal
+ {
+    visibility: hidden;
+}
+
+h2
+ {
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.write
+ {
+    color: #404040;
+}
+
+.mail
+ {
+    height: 15px;
+    margin-right: 3px;
+    position: relative;
+    top: 3px;
+}
+
+.email
+ {
+    margin: 3px;
+}
+
+aside
+ {
+    float: right;
+}
+
+a
+ {
+    color: #4c4cd8;
+}
