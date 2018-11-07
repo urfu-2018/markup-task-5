@@ -1,18 +1,156 @@
-.title_text::first-letter
+.title-text::first-letter
 {
     color: #ff0000; 
 }
 
-.title_text
+.title-text
 {
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 32px;
     margin: 0;
     text-align: center;
 }
-.top_bar
+.top-bar
 {
     border-top: 1px solid #969595; 
     border-bottom: 1px solid #969595;
     padding: 0;
+}
+
+/*слайдер*/
+body
+{
+    overflow-x: hidden;
+}
+.slider-container
+{
+    position: relative;
+    transition: transform 1s;
+    height: 500px;
+}
+
+img
+{   
+    height: 250px;
+}
+.slide
+{
+    width: 350px;
+    position: absolute;
+    top: 10px;
+    left: calc(50% + 175px);
+    display: inline-block;
+    box-shadow: 0 0 2px rgba(32, 32, 32, .5);
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.slide-1
+{
+    transform: translateX(0)
+}
+
+.slide-2
+{
+    transform: translateX(350px)
+}
+
+.slide-3
+{
+    transform: translateX(700px)
+}
+
+.slide-4
+{
+    transform: translateX(1050px)
+}
+
+.slide-5
+{
+    transform: translateX(1400px)
+}
+
+.slide-6
+{
+    transform: translateX(1750px)
+}
+
+.slide-7
+{
+    transform: translateX(2100px)
+}
+
+.slide-8
+{
+    transform: translateX(2450px)
+}
+
+.slide-9
+{
+    transform: translateX(2800px)
+}
+
+.slide-10
+{
+    transform: translateX(3150px)
+}
+
+#cat-1:checked  ~ .slider-container  
+{
+    transform: translateX(-350px);
+}
+
+#cat-2:checked ~ .slider-container 
+{
+    transform: translateX(-700px);
+}
+
+#cat-3:checked ~  .slider-container
+{
+    transform: translateX(-1050px);
+}
+
+#cat-4:checked ~ .slider-container
+{
+    transform: translateX(-1400px);
+}
+
+#cat-5:checked ~ .slider-container
+{
+    transform: translateX(-1750px);
+}
+
+#cat-6:checked ~ .slider-container
+{
+    transform: translateX(-2100px);
+}
+
+#cat-7:checked ~ .slider-container
+{
+    transform: translateX(-2450px);
+}
+
+#cat-8:checked ~ .slider-container
+{
+    transform: translateX(-2800px);
+}
+
+#cat-9:checked ~ .slider-container
+{
+    transform: translateX(-3150px);
+}
+
+#cat-10:checked ~ .slider-container
+{
+    transform: translateX(-3300px);
+}
+
+/*Кнопки*/
+
+input
+{
+    display: none;
 }
