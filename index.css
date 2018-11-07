@@ -49,7 +49,7 @@ body
 
 .switch-1:checked ~ .cat-carousel
 {
-    transform: translateX(35%);
+    transform: translateX(calc(50% - 296px));
 }
 
 .switch-2:checked ~ .cat-carousel
@@ -59,42 +59,42 @@ body
 
 .switch-3:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-1)));
+    transform: translateX(calc(50% - 296px - 2*616px));
 }
 
 .switch-4:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-2)));
+    transform: translateX(calc(50% - 296px - 3*616px));
 }
 
 .switch-5:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-3)));
+    transform: translateX(calc(50% - 296px - 4*616px));
 }
 
 .switch-6:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-4)));
+    transform: translateX(calc(50% - 296px - 5*616px));
 }
 
 .switch-7:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-5)));
+    transform: translateX(calc(50% - 296px - 6*616px));
 }
 
 .switch-8:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-6)));
+    transform: translateX(calc(50% - 296px - 7*616px));
 }
 
 .switch-9:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-7)));
+    transform: translateX(calc(50% - 296px - 8*616px));
 }
 
 .switch-10:checked ~ .cat-carousel
 {
-    transform: translateX(calc(35% * (-8)));
+    transform: translateX(calc(50% - 296px - 9*616px));
 }
 
 .switch-1:checked ~ .cat-carousel .slide-1,
