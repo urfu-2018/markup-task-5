@@ -1,0 +1,284 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: url('pt-sans-narrow.ttf');
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+header
+{
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #dadada;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 3;
+}
+
+header h1
+{
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 10px 0;
+}
+
+header h1:first-letter
+{
+    color: #f00;
+}
+
+footer
+{
+    border-top: 1px solid #dadada;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #fff;
+    width: 100%;
+    height: 93px;
+}
+
+footer p
+{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+footer p a
+{
+    color: #4c4cd8;
+}
+
+footer p
+{
+    margin: 2px 0;
+}
+
+footer section
+{
+    display: inline-block;
+    width: 49.8%;
+}
+
+.copyright
+{
+    text-align: right;
+}
+
+main
+{
+    width: 100%;
+    padding-top: 80px;
+    min-height: calc(100vh - 93px);
+    box-sizing: border-box;
+}
+
+main > input[type='checkbox'],
+main > input[type='radio']
+{
+    display: none;
+}
+
+.viewport
+{
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides
+{
+    white-space: nowrap;
+    height: 100%;
+    position: relative;
+}
+
+.slide
+{
+    display: inline-block;
+    height: 100%;
+    margin: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img
+{
+    opacity: .7;
+    height: 80%;
+}
+
+.slide .name
+{
+    display: block;
+    color: #fff;
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: 120px;
+    visibility: hidden;
+}
+
+.carusel nav
+{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.carusel nav label
+{
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin-right: 5px;
+    background: #d8d8d8;
+    border-radius: 100%;
+}
+
+.first-input:checked ~ .carusel nav label[for='first-input'],
+.second-input:checked ~ .carusel nav label[for='second-input'],
+.third-input:checked ~ .carusel nav label[for='third-input'],
+.fourth-input:checked ~ .carusel nav label[for='fourth-input'],
+.fifth-input:checked ~ .carusel nav label[for='fifth-input']
+{
+    background: #979797;
+}
+
+.first-input:checked ~ .carusel .slides .slide-first label img,
+.second-input:checked ~ .carusel .slides .slide-second label img,
+.third-input:checked ~ .carusel .slides .slide-third label img,
+.fourth-input:checked ~ .carusel .slides .slide-fourth label img,
+.fifth-input:checked ~ .carusel .slides .slide-fifth label img
+{
+    opacity: 1;
+    height: 100%;
+}
+
+.first-input:checked ~ .carusel .slides .slide-first:hover > label img,
+.second-input:checked ~ .carusel .slides .slide-second:hover > label img,
+.third-input:checked ~ .carusel .slides .slide-third:hover > label img,
+.fourth-input:checked ~ .carusel .slides .slide-fourth:hover > label img,
+.fifth-input:checked ~ .carusel .slides .slide-fifth:hover > label img
+{
+    opacity: .6;
+}
+
+.first-input:checked ~ .carusel .slides .slide-first,
+.second-input:checked ~ .carusel .slides .slide-second,
+.third-input:checked ~ .carusel .slides .slide-third,
+.fourth-input:checked ~ .carusel .slides .slide-fourth,
+.fifth-input:checked ~ .carusel .slides .slide-fifth
+{
+    background: #000;
+}
+
+.first-input:checked ~ .carusel .slides .slide-first:hover > .name,
+.second-input:checked ~ .carusel .slides .slide-second:hover > .name,
+.third-input:checked ~ .carusel .slides .slide-third:hover > .name,
+.fourth-input:checked ~ .carusel .slides .slide-fourth:hover > .name,
+.fifth-input:checked ~ .carusel .slides .slide-fifth:hover > .name
+{
+    visibility: visible;
+}
+
+.first-input:checked ~ .carusel .viewport .slides
+{
+    left: calc(-330px + 390px * 2);
+}
+
+.second-input:checked ~ .carusel .viewport .slides
+{
+    left: calc(-330px + 390px);
+}
+
+.third-input:checked ~ .carusel .viewport .slides
+{
+    left: -330px;
+}
+
+.fourth-input:checked ~ .carusel .viewport .slides
+{
+    left: calc(-330px - 390px);
+}
+
+.fifth-input:checked ~ .carusel .viewport .slides
+{
+    left: calc(-330px - 390px * 2);
+}
+
+.models > .model
+{
+    display: none;
+}
+
+.model
+{
+    position: absolute;
+    background: rgba(99, 91, 91, 0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.model .cat-card
+{
+    position: absolute;
+    left: calc(50% - 1000px / 2);
+    top: calc(50% - 400px / 2);
+    width: 1000px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.cat-card > img
+{
+    float: left;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.cat-card .close
+{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.cat-desc
+{
+    margin-top: 70px;
+    font-family: Verdana, sans-serif;
+}
+
+.cat-desc h2
+{
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.input-model-first:checked ~ .models .model-first,
+.input-model-second:checked ~ .models .model-second,
+.input-model-third:checked ~ .models .model-third,
+.input-model-fourth:checked ~ .models .model-fourth,
+.input-model-fifth:checked ~ .models .model-fifth
+{
+    display: block;
+}

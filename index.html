@@ -3,7 +3,176 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>Мурмаркет</h1>
+    </header>
+    <main>
+        <input type="radio" id="first-input" class="first-input" name="current-slide" value="1" >
+        <input type="radio" id="second-input" class="second-input" name="current-slide" value="2">
+        <input type="radio" id="third-input" class="third-input" name="current-slide" value="3" checked>
+        <input type="radio" id="fourth-input" class="fourth-input" name="current-slide" value="4">
+        <input type="radio" id="fifth-input" class="fifth-input" name="current-slide" value="5">
+        <input type="checkbox" id="input-model-first" class="input-model-first">
+        <input type="checkbox" id="input-model-second" class="input-model-second">
+        <input type="checkbox" id="input-model-third" class="input-model-third">
+        <input type="checkbox" id="input-model-fourth" class="input-model-fourth">
+        <input type="checkbox" id="input-model-fifth" class="input-model-fifth">
+        <article class="carusel">
+            <section class="viewport">
+                <section class="slides">
+                    <section class="slide slide-first">
+                        <label for="first-input">
+                            <img src="img/cat1.jpg" alt="1">
+                        </label>
+                        <label for="input-model-first" class="name">Беспалевный</label>
+                    </section>
+                    <section class="slide slide-second">
+                        <label for="second-input">
+                            <img src="img/cat2.jpg" alt="2">
+                        </label>
+                        <label for="input-model-second" class="name">Заряженый</label>
+                    </section>
+                    <section class="slide slide-third">
+                        <label for="third-input">
+                            <img src="img/cat3.jpg" alt="3">
+                        </label>
+                        <label for="input-model-third" class="name">Обиженный на мир</label>
+                    </section>
+                    <section class="slide slide-fourth">
+                        <label for="fourth-input">
+                            <img src="img/cat4.jpg" alt="4">
+                        </label>
+                        <label for="input-model-fourth" class="name">Шуганый</label>
+                    </section>
+                    <section class="slide slide-fifth">
+                        <label for="fifth-input">
+                            <img src="img/cat5.jpg" alt="5">
+                        </label>
+                        <label for="input-model-fifth" class="name">Белоснежка</label>
+                    </section>
+                </section>
+            </section>
+            <nav>
+                <label for="first-input"></label>
+                <label for="second-input"></label>
+                <label for="third-input"></label>
+                <label for="fourth-input"></label>
+                <label for="fifth-input"></label>
+            </nav>
+        </article>
+        <article class="models">
+            <section class="model model-first">
+                <section class="cat-card">
+                    <img src="img/cat1.jpg" alt="кот1">
+                    <label for="input-model-first">
+                        <img src="img/close_cross.png" alt="Close" class="close">
+                    </label>
+                    <section class="cat-desc">
+                        <h2>Беспалевный</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="model model-second">
+                <section class="cat-card">
+                    <img src="img/cat2.jpg" alt="кот2">
+                    <label for="input-model-second">
+                        <img src="img/close_cross.png" alt="Close" class="close">
+                    </label>
+                    <section class="cat-desc">
+                        <h2>Заряженый</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="model model-third">
+                <section class="cat-card">
+                    <img src="img/cat3.jpg" alt="кот3">
+                    <label for="input-model-third">
+                        <img src="img/close_cross.png" alt="Close" class="close"></label>
+                    <section class="cat-desc">
+                        <h2>Обиженный на мир</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="model model-fourth">
+                <section class="cat-card">
+                    <img src="img/cat4.jpg" alt="кот4">
+                    <label for="input-model-fourth">
+                        <img src="img/close_cross.png" alt="Close" class="close">
+                    </label>
+                    <section class="cat-desc">
+                        <h2>Шуганый</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="model model-fifth">
+                <section class="cat-card">
+                    <img src="img/cat5.jpg" alt="кот5">
+                    <label for="input-model-fifth">
+                        <img src="img/close_cross.png" alt="Close" class="close">
+                    </label>
+                    <section class="cat-desc">
+                        <h2>Белоснежка</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <section class="contacts">
+            <p>Напишите нам:</p>
+            <p>
+               	<a href="mailto:cats@babuli.ru">cats@babuli.ru</a>
+            </p>
+            <p>
+                <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+            </p>
+        </section>
+        <section class="copyright">
+            <p>&copy; 2018 ООО &laquo;<a href="index.html">Бабушкины котятки</a>&raquo;</p>
+        </section>
+    </footer>
 </body>
 </html>
