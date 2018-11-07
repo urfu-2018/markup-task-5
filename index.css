@@ -8,16 +8,20 @@ body
 
 .shop-title
 {
-    position: sticky;
+    position: fixed;
+    top: 0;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #e7e7e7;
+    z-index: 1;
+    background: #fff;
 }
 
 .shop-title h1
 {
     font: 32px 'PT Sans Narrow', sans-serif;
-    margin: 5px;
+    margin: 0;
+    padding: 5px;
 }
 
 .shop-title h1:first-letter
@@ -25,62 +29,180 @@ body
     color: #f00;
 }
 
-.carousel-container
+.carousel-container > input[type='radio']
+{
+    display: none;
+}
+
+.carousel
+{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 100px;
+    white-space: nowrap;
+}
+
+.carousel-item
+{
+    left: -66%;
+    display: inline-block;
+    width: 30%;
+    height: 250px;
+    margin: 0 10px;
+    transition-property: left, right;
+    transition-duration: .5s;
+}
+
+.carousel-item img
+{
+
+    width: 100%;
+    height: 80%;
+    vertical-align: middle;
+    opacity: .7;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+.carousel-navigation
+{
+    display: block;
+    text-align: center;
+}
+
+.carousel-navigation > label
 {
     display: inline-block;
-    margin: 0 auto;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #d8d8d8;
 }
 
-.carousel-container img
+.carousel-navigation > label:hover
 {
-    width: 300px;
-    height: 250px;
+    cursor: pointer;
+    background: #888;
 }
 
-.shop-contact
+.first:checked ~ .carousel .carousel-item
+{
+    position: relative;
+    left: 33%;
+}
+
+.second:checked ~ .carousel .carousel-item
+{
+    position: relative;
+    left: 0;
+}
+
+.third:checked ~ .carousel .carousel-item
+{
+    position: relative;
+    left: -33%;
+}
+
+.fourth:checked ~ .carousel .carousel-item
+{
+    position: relative;
+    left: -66%;
+}
+
+.fifth:checked ~ .carousel .carousel-item
+{
+    position: relative;
+    left: -99%;
+}
+
+.sixth:checked ~ .carousel .carousel-item
+{
+    position: relative;
+    left: -133%;
+}
+
+.seventh:checked ~ .carousel .carousel-item
+{
+    position: relative;
+    left: -166%;
+}
+
+.first:checked ~ .carousel .carousel-item label[for='first'] > img,
+.second:checked ~ .carousel .carousel-item label[for='second'] > img,
+.third:checked ~ .carousel .carousel-item label[for='third'] > img,
+.fourth:checked ~ .carousel .carousel-item label[for='fourth'] > img,
+.fifth:checked ~ .carousel .carousel-item label[for='fifth'] > img,
+.sixth:checked ~ .carousel .carousel-item label[for='sixth'] > img,
+.seventh:checked ~ .carousel .carousel-item label[for='seventh'] > img
+{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.first:checked ~ .carousel .carousel-navigation label[for='first'],
+.second:checked ~ .carousel .carousel-navigation label[for='second'],
+.third:checked ~ .carousel .carousel-navigation label[for='third'],
+.fourth:checked ~ .carousel .carousel-navigation label[for='fourth'],
+.fifth:checked ~ .carousel .carousel-navigation label[for='fifth'],
+.sixth:checked ~ .carousel .carousel-navigation label[for='sixth'],
+.seventh:checked ~ .carousel .carousel-navigation label[for='seventh']
+{
+    background: #6d6d6d;
+}
+
+.contact-us
 {
     font: 14px 'Arial', sans-serif;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     border-top: 1px solid #e7e7e7;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    background: #fff;
 }
 
-.shop-contact a
+.contact-us a
 {
     text-decoration: none;
     color: #4c4cd8;
 }
 
-.shop-contact a:hover
+.contact-us a:hover
 {
     color: #3e3ea8;
 }
 
-.contact-left
+.contact
 {
     margin: 10px 0 12px 20px;
 }
 
-.contact-left span
+.contact span
 {
     display: block;
     margin: 0 0 4px;
 }
 
-.contact-left span:first-child
+.contact span:first-child
 {
     color: #808080;
 }
 
-.contact-left i
+.contact span:nth-child(3)
 {
-    margin: 0 5px 0 0;
+    display: inline-block;
 }
 
-.contact-right
+.contact span:last-child
 {
-    position: absolute;
-    right: 15px;
-    bottom: 12px;
+    float: right;
+    margin-right: 10px;
+}
+
+.contact i
+{
+    margin: 0 5px 0 0;
 }
