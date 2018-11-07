@@ -36,6 +36,34 @@ footer img
     margin: -2px;
 }
 
+.cat-card
+{
+    position: relative;
+    margin: 30px;
+    display: inline-block;
+    border: 2px solid lightgrey;
+}
+
+img
+{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 300px;
+    z-index: 101;
+}
+
+img:hover
+{
+    z-index: 99;
+}
+
+.cat-name
+{
+    font-size: 30px;
+    z-index: 100;
+}
+
 footer li
 {
     display: flex;
