@@ -57,7 +57,7 @@ input
     display: none;
 }
 
-.imgholder
+[id='imgholder']
  {
     display: inline-block;
     height: 280px;
@@ -77,26 +77,26 @@ img
     transition-duration: 300ms;
 }
 
-.Barsik:checked ~ section label[for='Barsik'] .imgholder,
-.Bony:checked ~ section label[for='Bony'] .imgholder,
-.Cleo:checked ~ section label[for='Cleo'] .imgholder,
-.Dimok:checked ~ section label[for='Dimok'] .imgholder,
-.Longname:checked ~ section label[for='Longname'] .imgholder,
-.Luci:checked ~ section label[for='Luci'] .imgholder,
-.Pushok:checked ~ section label[for='Pushok'] .imgholder
+.Barsik:checked ~ section .imgholder1,
+.Bony:checked ~ section .imgholder2,
+.Cleo:checked ~ section .imgholder3,
+.Dimok:checked ~ section .imgholder4,
+.Longname:checked ~ section .imgholder5,
+.Luci:checked ~ section .imgholder6,
+.Pushok:checked ~ section .imgholder7
  {
     height: 350px;
     opacity: 1;
     top: 35px;
 }
 
-.Barsik:checked ~ section label[for='Barsik'] .imgholder:hover img,
-.Bony:checked ~ section label[for='Bony'] .imgholder:hover img,
-.Cleo:checked ~ section label[for='Cleo'] .imgholder:hover img,
-.Dimok:checked ~ section label[for='Dimok'] .imgholder:hover img,
-.Longname:checked ~ section label[for='Longname'] .imgholder:hover img,
-.Luci:checked ~ section label[for='Luci'] .imgholder:hover img,
-.Pushok:checked ~ section label[for='Pushok'] .imgholder:hover img
+.Barsik:checked ~ section .imgholder1:hover label img,
+.Bony:checked ~ section .imgholder2:hover label img,
+.Cleo:checked ~ section .imgholder3:hover label img,
+.Dimok:checked ~ section .imgholder4:hover label img,
+.Longname:checked ~ section .imgholder5:hover label img,
+.Luci:checked ~ section .imgholder6:hover label img,
+.Pushok:checked ~ section .imgholder7:hover label img
  {
     filter: brightness(15%);
 }
@@ -113,13 +113,13 @@ img
     visibility: hidden;
 }
 
-.Barsik:checked ~ section label[for='Barsik'] .imgholder:hover .name,
-.Bony:checked ~ section label[for='Bony'] .imgholder:hover .name,
-.Cleo:checked ~ section label[for='Cleo'] .imgholder:hover .name,
-.Dimok:checked ~ section label[for='Dimok'] .imgholder:hover .name,
-.Longname:checked ~ section label[for='Longname'] .imgholder:hover .name,
-.Luci:checked ~ section label[for='Luci'] .imgholder:hover .name,
-.Pushok:checked ~ section label[for='Pushok'] .imgholder:hover .name
+.Barsik:checked ~ section .imgholder1:hover label .name,
+.Bony:checked ~ section .imgholder2:hover label .name,
+.Cleo:checked ~ section .imgholder3:hover label .name,
+.Dimok:checked ~ section .imgholder4:hover label .name,
+.Longname:checked ~ section .imgholder5:hover label .name,
+.Luci:checked ~ section .imgholder6:hover label .name,
+.Pushok:checked ~ section .imgholder7:hover label .name
  {
     visibility: visible;
 }
@@ -192,7 +192,7 @@ label.close
     top: 15%;
     left: 20%;
     width: 1000px;
-    height: 350px;
+    height: 400px;
     background-color: black;
     color: white;
     visibility: hidden;
