@@ -1,0 +1,312 @@
+.head
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    position: fixed;
+    width: 100%;
+    background: white;
+    margin: auto;
+}
+
+body
+{
+    margin: 0;
+    text-align: center;
+    background: white;
+}
+
+.shop-name
+{
+    margin: 10px;
+    font-size: 32px;
+}
+
+.shop-name::first-letter
+{
+    color: red;
+}
+
+input
+{
+    margin-top: 75px;
+    display: none;
+}
+
+.cat
+{
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+}
+
+img
+{
+    max-height: 160px;
+    height: 200px;
+    width: 250px;
+    opacity: .7;
+}
+
+.carousel
+{
+    text-align: left;
+    margin: auto;
+    margin-top: 10%;
+    overflow: hidden;
+}
+
+.slides
+{
+    width: 3000px;
+    height: 250px;
+    transition: all .1s linear;
+}
+
+[id='cat-1']:checked ~ .carousel .slides
+{
+    transform: translateX(16.5%);
+}
+
+[id='cat-2']:checked ~ .carousel .slides
+{
+    transform: translateX(6.7%);
+}
+
+[id='cat-3']:checked ~ .carousel .slides
+{
+    transform: translateX(-3.1%);
+}
+
+[id='cat-4']:checked ~ .carousel .slides
+{
+    transform: translateX(-12.9%);
+}
+
+[id='cat-5']:checked ~ .carousel .slides
+{
+    transform: translateX(-22.7%);
+}
+
+[id='cat-6']:checked ~ .carousel .slides
+{
+    transform: translateX(-32.5%);
+}
+
+[id='cat-7']:checked ~ .carousel .slides
+{
+    transform: translateX(-42.3%);
+}
+
+[id='cat-8']:checked ~ .carousel .slides
+{
+    transform: translateX(-52.1%);
+}
+
+[id='cat-9']:checked ~ .carousel .slides
+{
+    transform: translateX(-61.9%);
+}
+
+[id='cat-10']:checked ~ .carousel .slides
+{
+    transform: translateX(-71.7%);
+}
+
+[id='cat-1']:checked ~ .carousel .cat-1 img,
+[id='cat-2']:checked ~ .carousel .cat-2 img,
+[id='cat-3']:checked ~ .carousel .cat-3 img,
+[id='cat-4']:checked ~ .carousel .cat-4 img,
+[id='cat-5']:checked ~ .carousel .cat-5 img,
+[id='cat-6']:checked ~ .carousel .cat-6 img,
+[id='cat-7']:checked ~ .carousel .cat-7 img,
+[id='cat-8']:checked ~ .carousel .cat-8 img,
+[id='cat-9']:checked ~ .carousel .cat-9 img,
+[id='cat-10']:checked ~ .carousel .cat-10 img
+{
+    max-height: 200px;
+    opacity: 1;
+}
+
+[id='cat-1']:not(:checked) ~ .carousel .cat-1 img,
+[id='cat-2']:not(:checked) ~ .carousel .cat-2 img,
+[id='cat-3']:not(:checked) ~ .carousel .cat-3 img,
+[id='cat-4']:not(:checked) ~ .carousel .cat-4 img,
+[id='cat-5']:not(:checked) ~ .carousel .cat-5 img,
+[id='cat-6']:not(:checked) ~ .carousel .cat-6 img,
+[id='cat-7']:not(:checked) ~ .carousel .cat-7 img,
+[id='cat-8']:not(:checked) ~ .carousel .cat-8 img,
+[id='cat-9']:not(:checked) ~ .carousel .cat-9 img,
+[id='cat-10']:not(:checked) ~ .carousel .cat-10 img
+{
+    transform: translateY(-10%);
+}
+
+[id='cat-1']:checked ~ .carousel .cat-1:hover > img,
+[id='cat-2']:checked ~ .carousel .cat-2:hover > img,
+[id='cat-3']:checked ~ .carousel .cat-3:hover > img,
+[id='cat-4']:checked ~ .carousel .cat-4:hover > img,
+[id='cat-5']:checked ~ .carousel .cat-5:hover > img,
+[id='cat-6']:checked ~ .carousel .cat-6:hover > img,
+[id='cat-7']:checked ~ .carousel .cat-7:hover > img,
+[id='cat-8']:checked ~ .carousel .cat-8:hover > img,
+[id='cat-9']:checked ~ .carousel .cat-9:hover > img,
+[id='cat-10']:checked ~ .carousel .cat-10:hover > img
+{
+    transform: translateY(-204px);
+}
+
+[id='cat-1']:checked ~ .carousel .cat-1:hover > .slide-to-black-out,
+[id='cat-2']:checked ~ .carousel .cat-2:hover > .slide-to-black-out,
+[id='cat-3']:checked ~ .carousel .cat-3:hover > .slide-to-black-out,
+[id='cat-4']:checked ~ .carousel .cat-4:hover > .slide-to-black-out,
+[id='cat-5']:checked ~ .carousel .cat-5:hover > .slide-to-black-out,
+[id='cat-6']:checked ~ .carousel .cat-6:hover > .slide-to-black-out,
+[id='cat-7']:checked ~ .carousel .cat-7:hover > .slide-to-black-out,
+[id='cat-8']:checked ~ .carousel .cat-8:hover > .slide-to-black-out,
+[id='cat-9']:checked ~ .carousel .cat-9:hover > .slide-to-black-out,
+[id='cat-10']:checked ~ .carousel .cat-10:hover > .slide-to-black-out
+{
+    opacity: 1;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    color: white;
+    transform: translateY(-204px);
+    text-align: center;
+}
+
+.slide-to-black-out
+{
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    display: inline-block;
+    height: 200px;
+    opacity: 0;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+.slide-to-black-out-name
+{
+    display: inline-block;
+    line-height: 9em;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+}
+
+.popup
+{
+    position: absolute;
+    top: 20%;
+    left: 12.5%;
+    display: none;
+    width: 75%;
+    background: sandybrown;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+[id='popup-1']:checked ~ section .popup-1,
+[id='popup-2']:checked ~ section .popup-2,
+[id='popup-3']:checked ~ section .popup-3,
+[id='popup-4']:checked ~ section .popup-4,
+[id='popup-5']:checked ~ section .popup-5,
+[id='popup-6']:checked ~ section .popup-6,
+[id='popup-7']:checked ~ section .popup-7,
+[id='popup-8']:checked ~ section .popup-8,
+[id='popup-9']:checked ~ section .popup-9,
+[id='popup-10']:checked ~ section .popup-10
+{
+    display: block;
+}
+
+.cat-img
+{
+    width: 25%;
+}
+
+.cat-img img
+{
+    opacity: 1;
+}
+
+.cat-name
+{
+    margin: 0;
+    width: 90%;
+    background: rgb(23, 167, 224);
+    border-radius: 50px;
+}
+
+.short-info
+{
+    width: 75%;
+    background: darkkhaki;
+    border-radius: 25px;
+}
+
+.full-info
+{
+    border-radius: 25px;
+    background: tomato;
+}
+
+.close
+{
+    width: 10%;
+    border-radius: 100%;
+    background: black;
+}
+
+.close img
+{
+    width: 75%;
+    height: 25%;
+    opacity: 1;
+}
+
+.close img:hover
+{
+    opacity: .6;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+footer > table
+{
+    width: 100%;
+}
+
+footer > td
+{
+    width: 50%;
+}
+
+.link
+{
+    color: #4c4cd8;
+}
+
+.information-for-the-bundle
+{
+    text-align: left;
+    padding: 10px;
+}
+
+.information-about-us
+{
+    text-align: right;
+    padding: 10px;
+    vertical-align: bottom;
+}

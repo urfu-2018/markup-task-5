@@ -1,9 +1,514 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
+    <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
 </head>
+
 <body>
+    <header class="head">
+        <p class="shop-name">Мурмаркет</p>
+    </header>
+    <br>
+    <input type="radio" name="carousel" id="cat-1">
+    <input type="radio" name="carousel" id="cat-2" checked>
+    <input type="radio" name="carousel" id="cat-3">
+    <input type="radio" name="carousel" id="cat-4">
+    <input type="radio" name="carousel" id="cat-5">
+    <input type="radio" name="carousel" id="cat-6">
+    <input type="radio" name="carousel" id="cat-7">
+    <input type="radio" name="carousel" id="cat-8">
+    <input type="radio" name="carousel" id="cat-9">
+    <input type="radio" name="carousel" id="cat-10">
+
+    <input type="radio" name="popup" id="popup-0" checked>
+    <input type="radio" name="popup" id="popup-1">
+    <input type="radio" name="popup" id="popup-2">
+    <input type="radio" name="popup" id="popup-3">
+    <input type="radio" name="popup" id="popup-4">
+    <input type="radio" name="popup" id="popup-5">
+    <input type="radio" name="popup" id="popup-6">
+    <input type="radio" name="popup" id="popup-7">
+    <input type="radio" name="popup" id="popup-8">
+    <input type="radio" name="popup" id="popup-9">
+    <input type="radio" name="popup" id="popup-10">
+
+    <!--    Сама карусель   -->
+    <main class="carousel">
+        <div class="slides">
+            <div class="cat cat-1">
+                <label for="cat-1">
+                    <img src="cats/1.jpg" alt="Cat1">
+                </label>
+                <label class="slide-to-black-out" for="popup-1">
+                    <span class="slide-to-black-out-name">Кот c длинным именем</span>
+                </label>
+            </div>
+            <div class="cat cat-2">
+                <label for="cat-2">
+                    <img src="cats/2.jpg" alt="Cat2">
+                </label>
+                <label class="slide-to-black-out" for="popup-2">
+                    <span class="slide-to-black-out-name">Стримлер</span>
+                </label>
+            </div>
+            <div class="cat cat-3">
+                <label for="cat-3">
+                    <img src="cats/3.jpg" alt="Cat3">
+                </label>
+                <label class="slide-to-black-out" for="popup-3">
+                    <span class="slide-to-black-out-name">Вассерман</span>
+                </label>
+            </div>
+            <div class="cat cat-4">
+                <label for="cat-4">
+                    <img src="cats/4.jpg" alt="Cat4">
+                </label>
+                <label class="slide-to-black-out" for="popup-4">
+                    <span class="slide-to-black-out-name">Василий</span>
+                </label>
+            </div>
+            <div class="cat cat-5">
+                <label for="cat-5">
+                    <img src="cats/5.jpg" alt="Cat5">
+                </label>
+                <label class="slide-to-black-out" for="popup-5">
+                    <span class="slide-to-black-out-name">!Error</span>
+                </label>
+            </div>
+            <div class="cat cat-6">
+                <label for="cat-6">
+                    <img src="cats/6.jpg" alt="Cat6">
+                </label>
+                <label class="slide-to-black-out" for="popup-6">
+                    <span class="slide-to-black-out-name">Двуглавый Семён</span>
+                </label>
+            </div>
+            <div class="cat cat-7">
+                <label for="cat-7">
+                    <img src="cats/7.jpg" alt="Cat7">
+                </label>
+                <label class="slide-to-black-out" for="popup-7">
+                    <span class="slide-to-black-out-name">Грусняша</span>
+                </label>
+            </div>
+            <div class="cat cat-8">
+                <label for="cat-8">
+                    <img src="cats/8.jpg" alt="Cat8">
+                </label>
+                <label class="slide-to-black-out" for="popup-8">
+                    <span class="slide-to-black-out-name">Трехглазый Тигр</span>
+                </label>
+            </div>
+            <div class="cat cat-9">
+                <label for="cat-9">
+                    <img src="cats/9.jpg" alt="Cat9">
+                </label>
+                <label class="slide-to-black-out" for="popup-9">
+                    <span class="slide-to-black-out-name">Данунах</span>
+                </label>
+            </div>
+            <div class="cat cat-10">
+                <label for="cat-10">
+                    <img src="cats/10.jpg" alt="Cat10">
+                </label>
+                <label class="slide-to-black-out" for="popup-10">
+                    <span class="slide-to-black-out-name">Ну привет</span>
+                </label>
+            </div>
+        </div>
+    </main>
+
+    <!--    Всплывающие окошки  -->
+    <section>
+        <table class="popup popup-1">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Кот c длинным именем
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/1.jpg" alt="Cat1">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: около шести месяцев</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-2">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Стримлер
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/2.jpg" alt="Cat2">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: около 60000 подписчиков</p>
+                    <p>Порода: лол кек</p>
+                    <p>Болезни: бессоница</p>
+                    <p>Статус: ищет стримхату</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-3">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Вассерман
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/3.jpg" alt="Cat3">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: около пяти веков</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: гений</p>
+                    <p>Статус: обдумывает бытие</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-4">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Василий
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/4.jpg" alt="Cat4">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: 3 года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: в активном поиске</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-5">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Error!
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/5.jpg" alt="Cat5">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: Access is denied</p>
+                    <p>Порода: Access is denied</p>
+                    <p>Болезни: Access is denied</p>
+                    <p>Статус: top secret</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-6">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Двуглавый Семён
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/6.jpg" alt="Cat6">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: около 10 месяцев (х2)</p>
+                    <p>Порода: да чёрт его знает</p>
+                    <p>Болезни: сиамские близнецы</p>
+                    <p>Статус: ищут хозяина</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-7">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Грусняша
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/7.jpg" alt="Cat7">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: Возраст: около года</p>
+                    <p>Порода: нет</p>
+                    <p>Болезни: все</p>
+                    <p>Статус: ищет радость</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-8">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Трехглазый тигр
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/8.jpg" alt="Cat8">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: 4 месяца</p>
+                    <p>Порода: Тигр</p>
+                    <p>Болезни: третий глаз</p>
+                    <p>Статус: ищет хозяина</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-9">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Данунах
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/9.jpg" alt="Cat9">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: ты не поверишь</p>
+                    <p>Порода: шокирош</p>
+                    <p>Болезни: нет</p>
+                    <p>Статус: ищет хозяина</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+        <table class="popup popup-10">
+            <tr>
+                <td class="cat-name" colspan="2">
+                    <h2>
+                        Ну привет
+                    </h2>
+                </td>
+                <td class="close">
+                    <label for="popup-0">
+                        <img src="cats/close.png" alt="close">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="cat-img">
+                    <img src="cats/10.jpg" alt="Cat10">
+                </td>
+                <td class="short-info" colspan="2">
+                    <p>Возраст: неважно</p>
+                    <p>Порода: какое тебе дело</p>
+                    <p>Болезни: ты иди отсюда</p>
+                    <p>Статус: ищет собутыльника</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="full-info" colspan="3">
+                    Es gibt vier Jahreszeiten: den Winter, den Frühling, den Sommer und den Herbst. Fast jeder
+                    Mensch hat eine Lieblingsjahreszeit, einige auch mehrere. Jede Jahreszeit hat ihren Reiz,
+                    aber in jeder Jahreszeit gibt es auch Unannehmlichkeiten. Heutzutage sieht man im Winter
+                    kaum Schnee. Der Winter ist sehr schneearm. Es gibt weder Eis noch Schnee, dafür aber
+                    dichten Nebel. Die Temperatur schwankt zwischen 10 Grad Wärme und 10 Grad Kälte. Man muss
+                    sich warm anziehen. Die Wintermonate sind Dezember, Januar und Februar. Wenn es Schnee
+                    gibt, kann man Wintersport treiben, Schlitten fahren, Schlittschuh laufen, Schneebälle
+                    werfen, einen Schneemann bauen und Schi laufen.
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <table>
+            <tr>
+                <td class="information-for-the-bundle">
+                    Напишите нам:<br>
+                    ✉ <a class="link" href="index.html">cats@babuli.ru</a><br>
+                    ✉ <a class="link" href="index.html">vnuchek@babuli.ru</a><br>
+                </td>
+                <td class="information-about-us">
+                    © 2018 ООО «<a class="link" href="index.html">Бабушкины котятки</a>»
+                </td>
+            </tr>
+        </table>
+    </footer>
 </body>
+
 </html>
