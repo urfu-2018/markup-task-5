@@ -1,0 +1,261 @@
+.title
+{
+    border-bottom: solid lightgray 1px;
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.title:first-letter
+{
+    color: red;
+}
+
+body
+{
+    margin: 0;
+}
+
+.footer
+{
+
+    font-family: Arial, serif;
+    font-size: 14px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    border-top: solid lightgray 1px;
+}
+
+.footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.copyright
+{
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+}
+
+.contacts
+{
+    color: gray;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+}
+
+.contacts p
+{
+    margin-bottom: 5px;
+}
+
+.mail
+{
+    margin-left: 24px;
+}
+
+.mail:before
+{
+    content: url('mail.png');
+    height: 16px;
+    position: absolute;
+    left: 0;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+.radio-little
+{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #d6d6d6;
+    margin: 0 3px;
+}
+
+.carousel-preview
+{
+    width: fit-content;
+    margin: 10px auto;
+}
+
+input:checked[id='0'] ~ section .radio-little[for='0'],
+input:checked[id='1'] ~ section .radio-little[for='1'],
+input:checked[id='2'] ~ section .radio-little[for='2'],
+input:checked[id='3'] ~ section .radio-little[for='3'],
+input:checked[id='4'] ~ section .radio-little[for='4'],
+input:checked[id='5'] ~ section .radio-little[for='5']
+{
+    background: #969696;
+}
+
+.carousel-block
+{
+    height: 100%;
+    white-space: nowrap;
+    line-height: 400px;
+    position: relative;
+    padding-left: 50%;
+
+    transition: left .3s ease-out;
+    -o-transition: left .3s ease-out;
+    -moz-transition: left .3s ease-out;
+    -webkit-transition: left .3s ease-out;
+}
+
+input:checked[id='0'] ~ .carousel-main .carousel-block
+{
+    left: -295px;
+}
+
+input:checked[id='1'] ~ .carousel-main .carousel-block
+{
+    left: -787px;
+}
+
+input:checked[id='2'] ~ .carousel-main .carousel-block
+{
+    left: -1240px;
+}
+
+input:checked[id='3'] ~ .carousel-main .carousel-block
+{
+    left: -1715px;
+}
+
+input:checked[id='4'] ~ .carousel-main .carousel-block
+{
+    left: -2075px;
+}
+
+input:checked[id='5'] ~ .carousel-main .carousel-block
+{
+    left: -2483px;
+}
+
+.carousel-block .img-container
+{
+    display: inline-block;
+    margin: 0 20px;
+    line-height: normal;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.carousel-block img
+{
+    height: 300px;
+    opacity: .7;
+
+    transition: height .3s ease-in;
+    -o-transition: height .3s ease-in;
+    -moz-transition: height .3s ease-in;
+    -webkit-transition: height .3s ease-in;
+}
+
+input:checked[id='0'] ~ section .img-container-0 img,
+input:checked[id='1'] ~ section .img-container-1 img,
+input:checked[id='2'] ~ section .img-container-2 img,
+input:checked[id='3'] ~ section .img-container-3 img,
+input:checked[id='4'] ~ section .img-container-4 img,
+input:checked[id='5'] ~ section .img-container-5 img
+{
+    height: 375px;
+    opacity: 1;
+}
+
+.overlay
+{
+    position: absolute;
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay-container
+{
+    position: absolute;
+    height: 375px;
+    display: none;
+    visibility: hidden;
+}
+
+.img-container-0 .overlay-container
+{
+
+    width: 551px;
+}
+
+.img-container-1 .overlay-container
+{
+
+    width: 562px;
+}
+
+.img-container-2 .overlay-container
+{
+
+    width: 500px;
+}
+
+.img-container-3 .overlay-container
+{
+
+    width: 562px;
+}
+
+.img-container-4 .overlay-container
+{
+
+    width: 281px;
+}
+
+.img-container-5 .overlay-container
+{
+
+    width: 560px;
+}
+
+input:checked[id='0'] ~ section .img-container-0 .overlay-container ,
+input:checked[id='1'] ~ section .img-container-1 .overlay-container ,
+input:checked[id='2'] ~ section .img-container-2 .overlay-container ,
+input:checked[id='3'] ~ section .img-container-3 .overlay-container ,
+input:checked[id='4'] ~ section .img-container-4 .overlay-container ,
+input:checked[id='5'] ~ section .img-container-5 .overlay-container
+{
+    display: block;
+}
+
+input:checked[id='0'] ~ section .img-container-0:hover .overlay-container,
+input:checked[id='1'] ~ section .img-container-1:hover .overlay-container,
+input:checked[id='2'] ~ section .img-container-2:hover .overlay-container,
+input:checked[id='3'] ~ section .img-container-3:hover .overlay-container,
+input:checked[id='4'] ~ section .img-container-4:hover .overlay-container,
+input:checked[id='5'] ~ section .img-container-5:hover .overlay-container
+{
+    opacity: .7;
+    background: black;
+    visibility: visible;
+}
+
+.carousel-main
+{
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
