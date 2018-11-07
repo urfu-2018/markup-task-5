@@ -1,92 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
         <title>Задача «Мурмаркет»</title>
-        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <header><h1>Мурмаркет</h1></header>
         <main>
-            <input type="radio" name="itemspos" id="Barsik" class="Barsik" />
-            <input type="radio" name="itemspos" id="Bony" class="Bony" />
-            <input type="radio" name="itemspos" id="Cleo" class="Cleo" />
+            <input type="radio" name="itemspos" id="Barsik" class="Barsik">
+            <input type="radio" name="itemspos" id="Bony" class="Bony">
+            <input type="radio" name="itemspos" id="Cleo" class="Cleo">
             <input
                 type="radio"
                 name="itemspos"
                 id="Dimok"
                 class="Dimok"
                 checked
-            />
+            >
             <input
                 type="radio"
                 name="itemspos"
                 id="Longname"
                 class="Longname"
-            />
-            <input type="radio" name="itemspos" id="Luci" class="Luci" />
-            <input type="radio" name="itemspos" id="Pushok" class="Pushok" />
+            >
+            <input type="radio" name="itemspos" id="Luci" class="Luci">
+            <input type="radio" name="itemspos" id="Pushok" class="Pushok">
 
-            <section class="carousel">    
-                <div class="imgholder1" id="imgholder">
-                    <label for="Barsik"><img src="cat_photos/barsik.jpg" alt="Barsik" /></label>
-                    <label for="modal1"><h4 class="name">Барсик</h4></label>
+            <section class="carousel">
+                <div class="imgholder" id="imgholder1">
+                    <label for="Barsik"><img src="cat_photos/barsik.jpg" alt="Barsik"></label>
+                    <h4 class="name"><label for="modal1">Барсик</label></h4>
                 </div>
                            
-                <div class="imgholder2" id="imgholder">
-                    <label for="Bony"><img src="cat_photos/Bony.jpg" alt="Bony" /> </label>
-                    <label for="modal2"><h4 class="name">Бони</h4></label>
+                <div class="imgholder" id="imgholder2">
+                    <label for="Bony"><img src="cat_photos/Bony.jpg" alt="Bony"></label>
+                    <h4 class="name"><label for="modal2">Бони</label></h4>
                 </div>  
                
-
-                <div class="imgholder3" id="imgholder">
+                <div class="imgholder" id="imgholder3">
                     <label class="Cat" for="Cleo">
-                        <img src="cat_photos/Cleo.jpg" alt="Cleo" />
-                    </label>
-                    <label for="modal3">
-                        <h4 class="name">Клеопатра</h4>                        
-                    </label>
+                        <img src="cat_photos/Cleo.jpg" alt="Cleo">
+                    </label> 
+                    <h4 class="name"><label for="modal3">Клеопатра</label></h4>                        
                     </div>
 
-                <div class="imgholder4" id="imgholder">
+                <div class="imgholder" id="imgholder4">
                     <label for="Dimok">
-                        <img src="cat_photos/Dimok.jpg" alt="Dimok" />
+                        <img src="cat_photos/Dimok.jpg" alt="Dimok">
                     </label>
-                    <label for="modal4"><h4 class="name">Дымок</h4></label>
+                    <h4 class="name"><label for="modal4">Дымок</label></h4>
                     </div>
 
-                <div class="imgholder5" id="imgholder">
+                <div class="imgholder" id="imgholder5">
                     <label for="Longname">
-                        <img src="cat_photos/longname.jpg" alt="Longname" />
+                        <img src="cat_photos/longname.jpg" alt="Longname">
                     </label>
-                    <label for="modal5">
-                        <h4 class="name">
+                    <h4 class="name">
+                        <label for="modal5">
                             Котсоченьоченьоченьдлиннымименем
-                        </h4>
-                    </label>
+                        </label>
+                    </h4>
                 </div>
 
-                <div class="imgholder6" id="imgholder">
+                <div class="imgholder" id="imgholder6">
                     <label for="Luci">
-                        <img src="cat_photos/luci.jpg" alt="Luci" />
-                    </label>
-                    <label for="modal6">
-                        <h4 class="name">Люцифер</h4>
-                    </label>
+                        <img src="cat_photos/luci.jpg" alt="Luci">
+                    </label>                   
+                    <h4 class="name"><label for="modal6">Люцифер</label></h4>                    
                 </div>
 
-                <div class="imgholder7" id="imgholder">
+                <div class="imgholder" id="imgholder7">
                     <label for="Pushok">
-                        <img src="cat_photos/pushok.jpg" alt="Pushok" />
+                        <img src="cat_photos/pushok.jpg" alt="Pushok">
                     </label>
-                    <label for="modal7"><h4 class="name">Пушок</h4></label>
+                    <h4 class="name"><label for="modal7">Пушок</label></h4>
                 </div>
             </section>
 
-            <input type="radio" class="close_modal" name="modals" id="close1" />
-            <input type="radio" class="open_modal" name="modals" id="modal1" />
+            <input type="radio" class="close_modal" name="modals" id="close1">
+            <input type="radio" class="open_modal" name="modals" id="modal1">
             <article class="modal">
-                <img src="cat_photos/barsik.jpg" alt="Barsik" />
+                <img src="cat_photos/barsik.jpg" alt="Barsik">
                 <label class="close" for="close1">x</label>
                 <h2>Барсик</h2>
                 <p>Ласковый, наглый, любит поесть.</p>
@@ -97,10 +92,10 @@
                 </p>
             </article>
 
-            <input type="radio" class="close_modal" name="modals" id="close2" />
-            <input type="radio" class="open_modal" name="modals" id="modal2" />
+            <input type="radio" class="close_modal" name="modals" id="close2">
+            <input type="radio" class="open_modal" name="modals" id="modal2">
             <article class="modal">
-                <img src="cat_photos/Bony.jpg" alt="Bony" />
+                <img src="cat_photos/Bony.jpg" alt="Bony">
                 <label class="close" for="close2">x</label>
                 <h2>Бони</h2>
                 <p>Пугливая и осторожная кошечка, доверие которой нужно заслужить.</p>
@@ -108,10 +103,10 @@
                 <p>Очень хрупкая, нуждается в ласке, внимании и защите от страшных пылесосов.</p>
             </article>
             
-            <input type="radio" class="close_modal" name="modals" id="close3" />
-            <input type="radio" class="open_modal" name="modals" id="modal3" />
+            <input type="radio" class="close_modal" name="modals" id="close3">
+            <input type="radio" class="open_modal" name="modals" id="modal3">
             <article class="modal">
-                <img src="cat_photos/Cleo.jpg" alt="Cleo" />
+                <img src="cat_photos/Cleo.jpg" alt="Cleo">
                 <label class="close" for="close3">x</label>
                 <h2>Клеопатра</h2>
                 <p>Величественная и гордая царица Египта.</p>
@@ -120,10 +115,10 @@
                     перечить, ибо хозяин уже не вы, а она.</p>
             </article>
             
-            <input type="radio" class="close_modal" name="modals" id="close4" />
-            <input type="radio" class="open_modal" name="modals" id="modal4" />
+            <input type="radio" class="close_modal" name="modals" id="close4">
+            <input type="radio" class="open_modal" name="modals" id="modal4">
             <article class="modal">
-                <img src="cat_photos/Dimok.jpg" alt="Dimok" />
+                <img src="cat_photos/Dimok.jpg" alt="Dimok">
                 <label class="close" for="close4">x</label>
                 <h2>Дымок</h2>
                 <p>Милый, ласковый, замурлычет вас до смерти.</p>
@@ -132,10 +127,10 @@
                     он двигает и трётся. Мягкий как внутри, так и снаружи. И вообще милаха.</p>
             </article>
             
-            <input type="radio" class="close_modal" name="modals" id="close5" />
-            <input type="radio" class="open_modal" name="modals" id="modal5" />
+            <input type="radio" class="close_modal" name="modals" id="close5">
+            <input type="radio" class="open_modal" name="modals" id="modal5">
             <article class="modal">
-                <img src="cat_photos/longname.jpg" alt="Longname" />
+                <img src="cat_photos/longname.jpg" alt="Longname">
                 <label class="close" for="close5">x</label>
                 <h2>Котсоченьоченьоченьдлиннымименем</h2>
                 <div class="full_description">
@@ -145,10 +140,10 @@
                 </div>
             </article>
             
-            <input type="radio" class="close_modal" name="modals" id="close6" />
-            <input type="radio" class="open_modal" name="modals" id="modal6" />
+            <input type="radio" class="close_modal" name="modals" id="close6">
+            <input type="radio" class="open_modal" name="modals" id="modal6">
             <article class="modal">
-                <img src="cat_photos/Luci.jpg" alt="Luci" />
+                <img src="cat_photos/Luci.jpg" alt="Luci">
                 <label class="close" for="close6">x</label>
                 <h2>Люцифер</h2>
                 <p>Сатана</p>
@@ -157,10 +152,10 @@
                     пожалуйста.</p>
             </article>
             
-            <input type="radio" class="close_modal" name="modals" id="close7" />
-            <input type="radio" class="open_modal" name="modals" id="modal7" />
+            <input type="radio" class="close_modal" name="modals" id="close7">
+            <input type="radio" class="open_modal" name="modals" id="modal7">
             <article class="modal">
-                <img src="cat_photos/pushok.jpg" alt="Pushok" />
+                <img src="cat_photos/pushok.jpg" alt="Pushok">
                 <label class="close" for="close7">x</label>
                 <h2>Пушок</h2>
                 <p>Маленький милый комочек шерсти.</p>
@@ -170,11 +165,15 @@
         </main>
         <footer>
             <span class="write">Напишите нам:</span>
-            <p class="email"><img src="mail.png" alt="mail" class="mail"><a href="#">cats@babuli.ru</a></p>
+            <p class="email"><img src="mail.png" alt="mail" class="mail">
+                <a href="#">cats@babuli.ru</a>
+            </p>
             <aside class="copyright">
-                    &copy; 2018 ООО "<a href="#">Бабушкины котятки</a>"
-                </aside>
-            <p class="email"><img src="mail.png" alt="mail" class="mail"><a href="#">vnuchek@babuli.ru</a></p>           
+                 &copy; 2018 ООО "<a href="#">Бабушкины котятки</a>"
+            </aside>
+            <p class="email"><img src="mail.png" alt="mail" class="mail">
+                <a href="#">vnuchek@babuli.ru</a>
+            </p>           
         </footer>
     </body>
 </html>

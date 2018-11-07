@@ -57,7 +57,7 @@ input
     display: none;
 }
 
-[id='imgholder']
+.imgholder
  {
     display: inline-block;
     height: 280px;
@@ -77,26 +77,26 @@ img
     transition-duration: 300ms;
 }
 
-.Barsik:checked ~ section .imgholder1,
-.Bony:checked ~ section .imgholder2,
-.Cleo:checked ~ section .imgholder3,
-.Dimok:checked ~ section .imgholder4,
-.Longname:checked ~ section .imgholder5,
-.Luci:checked ~ section .imgholder6,
-.Pushok:checked ~ section .imgholder7
+.Barsik:checked ~ section div[id='imgholder1'],
+.Bony:checked ~ section div[id='imgholder2'],
+.Cleo:checked ~ section div[id='imgholder3'],
+.Dimok:checked ~ section div[id='imgholder4'],
+.Longname:checked ~ section div[id='imgholder5'],
+.Luci:checked ~ section div[id='imgholder6'],
+.Pushok:checked ~ section div[id='imgholder7']
  {
     height: 350px;
     opacity: 1;
     top: 35px;
 }
 
-.Barsik:checked ~ section .imgholder1:hover label img,
-.Bony:checked ~ section .imgholder2:hover label img,
-.Cleo:checked ~ section .imgholder3:hover label img,
-.Dimok:checked ~ section .imgholder4:hover label img,
-.Longname:checked ~ section .imgholder5:hover label img,
-.Luci:checked ~ section .imgholder6:hover label img,
-.Pushok:checked ~ section .imgholder7:hover label img
+.Barsik:checked ~ section div[id='imgholder1']:hover label img,
+.Bony:checked ~ section div[id='imgholder2']:hover label img,
+.Cleo:checked ~ section div[id='imgholder3']:hover label img,
+.Dimok:checked ~ section div[id='imgholder4']:hover label img,
+.Longname:checked ~ section div[id='imgholder5']:hover label img,
+.Luci:checked ~ section div[id='imgholder6']:hover label img,
+.Pushok:checked ~ section div[id='imgholder7']:hover label img
  {
     filter: brightness(15%);
 }
@@ -113,13 +113,13 @@ img
     visibility: hidden;
 }
 
-.Barsik:checked ~ section .imgholder1:hover label .name,
-.Bony:checked ~ section .imgholder2:hover label .name,
-.Cleo:checked ~ section .imgholder3:hover label .name,
-.Dimok:checked ~ section .imgholder4:hover label .name,
-.Longname:checked ~ section .imgholder5:hover label .name,
-.Luci:checked ~ section .imgholder6:hover label .name,
-.Pushok:checked ~ section .imgholder7:hover label .name
+.Barsik:checked ~ section div[id='imgholder1']:hover .name,
+.Bony:checked ~ section div[id='imgholder2']:hover .name,
+.Cleo:checked ~ section div[id='imgholder3']:hover .name,
+.Dimok:checked ~ section div[id='imgholder4']:hover .name,
+.Longname:checked ~ section div[id='imgholder5']:hover .name,
+.Luci:checked ~ section div[id='imgholder6']:hover .name,
+.Pushok:checked ~ section div[id='imgholder7']:hover .name
  {
     visibility: visible;
 }
