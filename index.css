@@ -20,7 +20,7 @@ body
 {
     display: inline-block;
     width: 20%;
-    margin: 0;
+    margin: 25px 0;
     height: 20%;
     border: 0;
     position: absolute;
@@ -46,17 +46,26 @@ body
     display: none;
 }
 
+.black-block
+{
+    display: none;
+    width: 95%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+}
+
 .cat-name
 {
     display: none;
     margin: 10px;
-    color: #361b01;
+    color: rgba(255, 255, 255, 1);
     font-family: serif;
 }
 
 .cat-radio
 {
-    display: none;
+    display: inline-block;
 }
 
 header
@@ -144,54 +153,33 @@ footer
     /*height: 80% !important;*/
 }
 
-/*input[id='cat1']:checked ~ .cat1 > .cat-label:hover,*/
-/*input[id='cat2']:checked ~ .cat2 > .cat-label:hover,*/
-/*input[id='cat3']:checked ~ .cat3 > .cat-label:hover,*/
-/*input[id='cat4']:checked ~ .cat4 > .cat-label:hover,*/
-/*input[id='cat5']:checked ~ .cat5 > .cat-label:hover,*/
-/*input[id='cat6']:checked ~ .cat6 > .cat-label:hover,*/
-/*input[id='cat7']:checked ~ .cat7 > .cat-label:hover,*/
-/*input[id='cat8']:checked ~ .cat8 > .cat-label:hover,*/
-/*input[id='cat9']:checked ~ .cat9 > .cat-label:hover,*/
-/*input[id='cat10']:checked ~ .cat10 > .cat-label:hover*/
-/*{*/
-    /*background: rgba(0, 0, 0, .5);*/
-/*}*/
-
-/*input[id='cat1']:checked ~ .cat1 > img:hover,*/
-/*input[id='cat2']:checked ~ .cat2 > img:hover,*/
-/*input[id='cat3']:checked ~ .cat3 > img:hover,*/
-/*input[id='cat4']:checked ~ .cat4 > img:hover,*/
-/*input[id='cat5']:checked ~ .cat5 > img:hover,*/
-/*input[id='cat6']:checked ~ .cat6 > img:hover,*/
-/*input[id='cat7']:checked ~ .cat7 > img:hover,*/
-/*input[id='cat8']:checked ~ .cat8 > img:hover,*/
-/*input[id='cat9']:checked ~ .cat9 > img:hover,*/
-/*input[id='cat10']:checked ~ .cat10 > img:hover*/
-/*{*/
-    /*-webkit-filter: brightness(-70%);*/
-/*}*/
-
-input[id='cat1']:checked ~ .cat1 > .cat-label:hover ~ .black-block,
-input[id='cat2']:checked ~ .cat2 > .cat-label:hover ~ .black-block,
-input[id='cat3']:checked ~ .cat3 > .cat-label:hover ~ .black-block,
-input[id='cat4']:checked ~ .cat4 > .cat-label:hover ~ .black-block,
-input[id='cat5']:checked ~ .cat5 > .cat-label:hover ~ .black-block,
-input[id='cat6']:checked ~ .cat6 > .cat-label:hover ~ .black-block,
-input[id='cat7']:checked ~ .cat7 > .cat-label:hover ~ .black-block,
-input[id='cat8']:checked ~ .cat8 > .cat-label:hover ~ .black-block,
-input[id='cat9']:checked ~ .cat9 > .cat-label:hover ~ .black-block,
-input[id='cat10']:checked ~ .cat10 > .cat-label:hover ~ .black-block
+input[id='cat1']:checked ~ .cat1:hover > .black-block,
+input[id='cat2']:checked ~ .cat2:hover > .black-block,
+input[id='cat3']:checked ~ .cat3:hover > .black-block,
+input[id='cat4']:checked ~ .cat4:hover > .black-block,
+input[id='cat5']:checked ~ .cat5:hover > .black-block,
+input[id='cat6']:checked ~ .cat6:hover > .black-block,
+input[id='cat7']:checked ~ .cat7:hover > .black-block,
+input[id='cat8']:checked ~ .cat8:hover > .black-block,
+input[id='cat9']:checked ~ .cat9:hover > .black-block,
+input[id='cat10']:checked ~ .cat10:hover > .black-block
 {
     display: block;
-    width: 100%;
-    height: 100%;
-    color: rgba(255, 255, 255, 1);
-    background: rgba(0, 0, 0, .5);
-    /*position: absolute;*/
-    text-align: center;
-    margin: auto;
 }
+
+/*input[id='cat1']:checked ~ .cat1 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat2']:checked ~ .cat2 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat3']:checked ~ .cat3 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat4']:checked ~ .cat4 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat5']:checked ~ .cat5 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat6']:checked ~ .cat6 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat7']:checked ~ .cat7 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat8']:checked ~ .cat8 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat9']:checked ~ .cat9 > .cat-label:hover ~ .black-block,*/
+/*input[id='cat10']:checked ~ .cat10 > .cat-label:hover ~ .black-block*/
+/*{*/
+    /*display: block;*/
+/*}*/
 
 input[id='cat3']:checked ~ .cat1,
 input[id='cat4']:checked ~ .cat2,
