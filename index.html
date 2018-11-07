@@ -3,7 +3,73 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header><h1>Мурмаркет</h1></header>
+<main>
+    <input type="radio" id="first-cat" class="first-cat" name="gallery" value="first-cat">
+    <input type="radio" id="second-cat" class="second-cat" name="gallery" value="second-cat">
+    <input type="radio" id="third-cat" class="third-cat" name="gallery" value="third-cat" checked>
+    <input type="radio" id="fourth-cat" class="fourth-cat" name="gallery" value="fourth-cat">
+    <input type="radio" id="fifth-cat" class="fifth-cat" name="gallery" value="fifth-cat">
+    <input type="radio" id="sixth-cat" class="sixth-cat" name="gallery" value="sixth-cat">
+
+
+    <article class="view">
+        <section class="gallery">
+            <section class="cat-card">
+                <label for="first-cat">
+                    <img class="photo" src="cats/1.jpg" alt="Ученый кот">
+                </label>
+                <p class="name">Ученый де Ларефан Репадье Мачачос Аквадорик</p>
+            </section>
+            <section class="cat-card">
+                <label for="second-cat">
+                    <img class="photo" src="cats/2.jpg" alt="Сонька кот">
+                </label>
+                <p class="name">Сонька</p>
+            </section>
+            <section class="cat-card">
+                <label for="third-cat">
+                    <img class="photo" src="cats/15.jpg" alt="Клюква кошка">
+                </label>
+                <p class="name">Клюква</p>
+            </section>
+            <section class="cat-card">
+                <label for="fourth-cat">
+                    <img class="photo" src="cats/4.jpg" alt="София кошка">
+                </label>
+                <p class="name">София</p>
+            </section>
+            <section class="cat-card">
+                <label for="fifth-cat">
+                    <img class="photo" src="cats/7.jpg" alt="Жаки кот">
+                </label>
+                <p class="name">Жаки</p>
+            </section>
+            <section class="cat-card">
+                <label for="sixth-cat">
+                    <img class="photo" src="cats/12.jpg" alt="Дым кот">
+                </label>
+                <p class="name">Дым</p>
+            </section>
+        </section>
+    </article>
+</main>
+<footer>
+    <div class="contacts">
+        <p>Напишите нам:</p>
+        <div class="email">
+            <img src="mail.png" alt="mail">
+            <a href="#">cats@babuli.ru</a>
+        </div>
+        <div class="email">
+            <img src="mail.png" alt="mail">
+            <a href="#">vnuchek@babuli.ru</a>
+        </div>
+    </div>
+    <div class="rights">&copy; 2018 OOO «<a href="#">Бабушкины котятки</a>»</div>
+</footer>
 </body>
 </html>
