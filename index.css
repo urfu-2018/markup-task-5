@@ -223,3 +223,67 @@ main > input[type='radio']
 {
     left: calc(-330px - 390px * 2);
 }
+
+.modals > .modal
+{
+    display: none;
+}
+
+.modal
+{
+    position: absolute;
+    background: rgba(0, 0, 0, .9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.modal .cat-card
+{
+    position: absolute;
+    left: calc(50% - 1000px / 2);
+    top: calc(50% - 400px / 2);
+    width: 1000px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.cat-card > img
+{
+    float: left;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.cat-card .close
+{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.cat-description
+{
+    margin-top: 70px;
+    font-family: Verdana, sans-serif;
+}
+
+.cat-description h2
+{
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.input-modal-first:checked ~ .modals .modal-first,
+.input-modal-second:checked ~ .modals .modal-second,
+.input-modal-third:checked ~ .modals .modal-third,
+.input-modal-fourth:checked ~ .modals .modal-fourth,
+.input-modal-fifth:checked ~ .modals .modal-fifth
+{
+    display: block;
+}

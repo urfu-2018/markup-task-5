@@ -15,11 +15,11 @@
         <input type="radio" id="third-input" class="third-input" name="current-slide" value="3" checked>
         <input type="radio" id="fourth-input" class="fourth-input" name="current-slide" value="4">
         <input type="radio" id="fifth-input" class="fifth-input" name="current-slide" value="5">
-        <input type="checkbox" id="modal-first">
-        <input type="checkbox" id="modal-second">
-        <input type="checkbox" id="modal-third">
-        <input type="checkbox" id="modal-fourth">
-        <input type="checkbox" id="modal-fifth">
+        <input type="checkbox" id="input-modal-first" class="input-modal-first">
+        <input type="checkbox" id="input-modal-second" class="input-modal-second">
+        <input type="checkbox" id="input-modal-third" class="input-modal-third">
+        <input type="checkbox" id="input-modal-fourth" class="input-modal-fourth">
+        <input type="checkbox" id="input-modal-fifth" class="input-modal-fifth">
         <article class="gallery">
             <section class="viewport">
                 <section class="slides">
@@ -27,31 +27,31 @@
                         <label for="first-input">
                             <img src="img/cat1.jpg" alt="1">
                         </label>
-                        <label for="modal-first" class="name">Тима</label>
+                        <label for="input-modal-first" class="name">Тима</label>
                     </section>
                     <section class="slide slide-second">
                         <label for="second-input">
                             <img src="img/cat2.jpg" alt="2">
                         </label>
-                        <label for="modal-second" class="name">Борька</label>
+                        <label for="input-modal-second" class="name">Борька</label>
                     </section>
                     <section class="slide slide-third">
                         <label for="third-input">
                             <img src="img/cat3.jpg" alt="3">
                         </label>
-                        <label for="modal-third" class="name">Ведьмак</label>
+                        <label for="input-modal-third" class="name">Ведьмак</label>
                     </section>
                     <section class="slide slide-fourth">
                         <label for="fourth-input">
                             <img src="img/cat4.jpg" alt="4">
                         </label>
-                        <label for="modal-fourth" class="name">Артемка</label>
+                        <label for="input-modal-fourth" class="name">Артемка</label>
                     </section>
                     <section class="slide slide-fifth">
                         <label for="fifth-input">
                             <img src="img/cat5.jpg" alt="5">
                         </label>
-                        <label for="modal-fifth" class="name">Братья соньки</label>
+                        <label for="input-modal-fifth" class="name">Братья соньки</label>
                     </section>
                 </section>
             </section>
@@ -63,78 +63,93 @@
                 <label for="fifth-input"></label>
             </nav>
         </article>
-        <!--<article>-->
-            <!--<section class="cat-card">-->
-                <!--<img src="img/cat1.jpg" alt="котик1">-->
-                <!--<section class="cat-description">-->
-                    <!--<h2>Тима</h2>-->
-                    <!--<p>-->
-                        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-                        <!--Vestibulum eget faucibus enim, a convallis justo.-->
-                        <!--Curabitur interdum diam quis bibendum consectetur.-->
-                        <!--Nam nec lectus risus. Aenean aliquam, ipsum vitae-->
-                        <!--mattis semper, tellus sem facilisis ligula, eget tristique-->
-                        <!--nisi erat non nulla.-->
-                    <!--</p>-->
-                <!--</section>-->
-            <!--</section>-->
-            <!--<section class="cat-card">-->
-                <!--<img src="img/cat2.jpg" alt="котик2">-->
-                <!--<section class="cat-description">-->
-                    <!--<h2>Борька</h2>-->
-                    <!--<p>-->
-                        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-                        <!--Vestibulum eget faucibus enim, a convallis justo.-->
-                        <!--Curabitur interdum diam quis bibendum consectetur.-->
-                        <!--Nam nec lectus risus. Aenean aliquam, ipsum vitae-->
-                        <!--mattis semper, tellus sem facilisis ligula, eget tristique-->
-                        <!--nisi erat non nulla.-->
-                    <!--</p>-->
-                <!--</section>-->
-            <!--</section>-->
-            <!--<section class="cat-card">-->
-                <!--<img src="img/cat3.jpg" alt="котик3">-->
-                <!--<section class="cat-description">-->
-                    <!--<h2>Ведьмак</h2>-->
-                    <!--<p>-->
-                        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-                        <!--Vestibulum eget faucibus enim, a convallis justo.-->
-                        <!--Curabitur interdum diam quis bibendum consectetur.-->
-                        <!--Nam nec lectus risus. Aenean aliquam, ipsum vitae-->
-                        <!--mattis semper, tellus sem facilisis ligula, eget tristique-->
-                        <!--nisi erat non nulla.-->
-                    <!--</p>-->
-                <!--</section>-->
-            <!--</section>-->
-            <!--<section class="cat-card">-->
-                <!--<img src="img/cat4.jpg" alt="котик4">-->
-                <!--<section class="cat-description">-->
-                    <!--<h2>Артемка</h2>-->
-                    <!--<p>-->
-                        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-                        <!--Vestibulum eget faucibus enim, a convallis justo.-->
-                        <!--Curabitur interdum diam quis bibendum consectetur.-->
-                        <!--Nam nec lectus risus. Aenean aliquam, ipsum vitae-->
-                        <!--mattis semper, tellus sem facilisis ligula, eget tristique-->
-                        <!--nisi erat non nulla.-->
-                    <!--</p>-->
-                <!--</section>-->
-            <!--</section>-->
-            <!--<section class="cat-card">-->
-                <!--<img src="img/cat5.jpg" alt="котик5">-->
-                <!--<section class="cat-description">-->
-                    <!--<h2>Братья соньки</h2>-->
-                    <!--<p>-->
-                        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
-                        <!--Vestibulum eget faucibus enim, a convallis justo.-->
-                        <!--Curabitur interdum diam quis bibendum consectetur.-->
-                        <!--Nam nec lectus risus. Aenean aliquam, ipsum vitae-->
-                        <!--mattis semper, tellus sem facilisis ligula, eget tristique-->
-                        <!--nisi erat non nulla.-->
-                    <!--</p>-->
-                <!--</section>-->
-            <!--</section>-->
-        <!--</article>-->
+        <article class="modals">
+            <section class="modal modal-first">
+                <section class="cat-card">
+                    <img src="img/cat1.jpg" alt="котик1">
+                    <label for="input-modal-first"><img src="img/cross.png" alt="Close" class="close"></label>
+                    <section class="cat-description">
+                        <h2>Тима</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="modal modal-second">
+                <section class="cat-card">
+                    <img src="img/cat2.jpg" alt="котик2">
+                    <label for="input-modal-second"><img src="img/cross.png" alt="Close" class="close"></label>
+                    <section class="cat-description">
+                        <h2>Борька</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="modal modal-third">
+                <section class="cat-card">
+                    <img src="img/cat3.jpg" alt="котик3">
+                    <label for="input-modal-third"><img src="img/cross.png" alt="Close" class="close"></label>
+                    <section class="cat-description">
+                        <h2>Ведьмак</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="modal modal-fourth">
+                <section class="cat-card">
+                    <img src="img/cat4.jpg" alt="котик4">
+                    <label for="input-modal-fourth"><img src="img/cross.png" alt="Close" class="close"></label>
+                    <section class="cat-description">
+                        <h2>Артемка</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+            <section class="modal modal-fifth">
+                <section class="cat-card">
+                    <img src="img/cat5.jpg" alt="котик5">
+                    <label for="input-modal-fifth"><img src="img/cross.png" alt="Close" class="close"></label>
+                    <section class="cat-description">
+                        <h2>Братья соньки</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Vestibulum eget faucibus enim, a convallis justo.
+                            Curabitur interdum diam quis bibendum consectetur.
+                            Nam nec lectus risus. Aenean aliquam, ipsum vitae
+                            mattis semper, tellus sem facilisis ligula, eget tristique
+                            nisi erat non nulla.
+                        </p>
+                    </section>
+                </section>
+            </section>
+        </article>
     </main>
     <footer>
         <section class="contacts">
