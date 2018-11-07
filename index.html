@@ -1,9 +1,171 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
+    <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Cats Task</title>
 </head>
 <body>
+<header>Murmarket</header>
+<article>
+    <input id="first" class="first" name="currentPhoto" type="radio" hidden checked>
+    <input id="second" class="second" name="currentPhoto" type="radio" hidden>
+    <input id="third" class="third" name="currentPhoto" type="radio" hidden>
+    <input id="fourth" class="fourth" name="currentPhoto" type="radio" hidden>
+    <input id="fifth" class="fifth" name="currentPhoto" type="radio" hidden>
+    <input id="sixth" class="sixth" name="currentPhoto" type="radio" hidden>
+    <input id="seventh" class="seventh" name="currentPhoto" type="radio" hidden>
+    <input id="eighth" class="eighth" name="currentPhoto" type="radio" hidden>
+    <input id="ninth" class="ninth" name="currentPhoto" type="radio" hidden>
+    <input id="tenth" class="tenth" name="currentPhoto" type="radio" hidden>
+    <input id="eleventh" class="eleventh" name="currentPhoto" type="radio" hidden>
+    <div class="gallery">
+        <label for="first">
+            <!--<a href="#profile_1">-->
+            <div id="profile_1" class="firstProfile catProfile">
+                <img src="spider.jpg" alt="spider">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Arachnid</a></h3>
+                <p>Breed: spider</p>
+                <p>Illnesses: molding</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    Has many lags and many eyes.
+                </p>
+            </div>
+            <!--</a>-->
+        </label>
+        <label for="second">
+            <div class="secondProfile catProfile">
+                <img src="alien.jpeg" alt="alien">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Alien</a></h3>
+                <p>Breed: alien</p>
+                <p>Illnesses: none</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    Maybe it came from Ulthar... or maybe from Yuggoth?
+                </p>
+            </div>
+        </label>
+        <label for="third">
+            <div class="catProfile">
+                <img src="cerberus.jpg" alt="cerberus">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Cerberus</a></h3>
+                <p>Breed: ferox</p>
+                <p>Illnesses: polyphagia</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc song">
+                    "Semper Sequindo Odorem Sanguis<br>
+                    Ferox Currendo Ex Infernalis<br>
+                    Est Cerberus"
+                </p>
+            </div>
+        </label>
+        <label for="fourth">
+            <div class="catProfile">
+                <img src="TheDeadOne.gif" alt="TheDeadOne">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">The Dead</a></h3>
+                <p>Breed: undead</p>
+                <p>Illnesses: epilepsy</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    He will never let you alone... I mean that's the reason you are looking for a cat right?
+                    And
+                    in
+                    this case not even death may tear you apart.
+                </p>
+            </div>
+        </label>
+        <label for="fifth">
+            <div class="catProfile">
+                <img src="shark.jpg" alt="shark">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Shark</a></h3>
+                <p>Breed: fish</p>
+                <p>Illnesses: polyphagia</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    Is always hungry.
+                </p>
+            </div>
+        </label>
+        <label for="sixth">
+            <div class="catProfile">
+                <img src="bee.jpg" alt="bee">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Bee</a></h3>
+                <p>Breed: insect</p>
+                <p>Illnesses: none</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    Not lazy at all, especially compared to normal cats.
+                </p>
+            </div>
+        </label>
+        <label for="seventh">
+            <div class="catProfile">
+                <img src="oni.jpg" alt="oni">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">鬼</a></h3>
+                <p>Breed: 妖怪</p>
+                <p>Illnesses: 風邪</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    人間ではなくて獣ではなくてただ不思議な天外の旅人。
+                </p>
+            </div>
+        </label>
+        <label for="eighth">
+            <div class="catProfile">
+                <img src="small.png" alt="small">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">The Small</a></h3>
+                <p>Breed: ferox</p>
+                <p>Illnesses: none</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    Small and furious.
+                </p>
+            </div>
+        </label>
+        <label for="ninth">
+            <div class="catProfile">
+                <img src="zombie.jpg" alt="zombie">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Zombie</a></h3>
+                <p>Breed: undead</p>
+                <p>Illnesses: leprosy</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    You have a wonderful opportunity to buy him before he decays completely.
+                </p>
+            </div>
+        </label>
+        <label for="tenth">
+            <div class="catProfile">
+                <img src="TheRustyOne.jpg" alt="TheRustyOne">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">The Rusty (technically he isn't a
+                    cat
+                    let
+                    alone alive one but anyway as you already have guessed I right it just to show you that I
+                    know
+                    how to shorten long names</a></h3>
+                <p>Breed: machine</p>
+                <p>Illnesses: Metal fatigue</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    Well, at least he will last for long time.
+                </p>
+            </div>
+        </label>
+        <label for="eleventh">
+            <div class="catProfile">
+                <img src="ugly.jpg" alt="ugly">
+                <h3><a href="https://www.youtube.com/watch?v=oHg5SJYRHA0">Ugly</a></h3>
+                <p>Breed: undead</p>
+                <p>Illnesses: none</p>
+                <p>Status: looking for an owner</p>
+                <p class="desc">
+                    He looked better while he was alive, I tell you!
+                </p>
+            </div>
+        </label>
+    </div>
+
+</article>
 </body>
 </html>
