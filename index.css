@@ -152,7 +152,12 @@ input.slide-1:checked ~ .slides .slide-1 img,
 input.slide-2:checked ~ .slides .slide-2 img,
 input.slide-3:checked ~ .slides .slide-3 img,
 input.slide-4:checked ~ .slides .slide-4 img,
-input.slide-5:checked ~ .slides .slide-5 img
+input.slide-5:checked ~ .slides .slide-5 img,
+input.slide-6:checked ~ .slides .slide-6 img,
+input.slide-7:checked ~ .slides .slide-7 img,
+input.slide-8:checked ~ .slides .slide-8 img,
+input.slide-9:checked ~ .slides .slide-9 img,
+input.slide-10:checked ~ .slides .slide-10 img
 {
     opacity: 1;
     height: 100%;
@@ -179,7 +184,12 @@ input.slide-1:checked ~ .slides .slide-1:hover .cat-name,
 input.slide-2:checked ~ .slides .slide-2:hover .cat-name,
 input.slide-3:checked ~ .slides .slide-3:hover .cat-name,
 input.slide-4:checked ~ .slides .slide-4:hover .cat-name,
-input.slide-5:checked ~ .slides .slide-5:hover .cat-name
+input.slide-5:checked ~ .slides .slide-5:hover .cat-name,
+input.slide-6:checked ~ .slides .slide-6:hover .cat-name,
+input.slide-7:checked ~ .slides .slide-7:hover .cat-name,
+input.slide-8:checked ~ .slides .slide-8:hover .cat-name,
+input.slide-9:checked ~ .slides .slide-9:hover .cat-name,
+input.slide-10:checked ~ .slides .slide-10:hover .cat-name
 {
     opacity: 1;
     color: #fff;
@@ -193,22 +203,47 @@ input.slide-1:checked ~ .slides
 
 input.slide-2:checked ~ .slides
 {
-    margin-left: calc(50% - 450px);
+    margin-left: calc(50% - 400px);
 }
 
 input.slide-3:checked ~ .slides
 {
-    margin-left: calc(50% - 750px);
+    margin-left: calc(50% - 650px);
 }
 
 input.slide-4:checked ~ .slides
 {
-    margin-left: calc(50% - 1050px);
+    margin-left: calc(50% - 900px);
 }
 
 input.slide-5:checked ~ .slides
 {
-    margin-left: calc(50% - 1350px);
+    margin-left: calc(50% - 1130px);
+}
+
+input.slide-6:checked ~ .slides
+{
+    margin-left: calc(50% - 1360px);
+}
+
+input.slide-7:checked ~ .slides
+{
+    margin-left: calc(50% - 1580px);
+}
+
+input.slide-8:checked ~ .slides
+{
+    margin-left: calc(50% - 1800px);
+}
+
+input.slide-9:checked ~ .slides
+{
+    margin-left: calc(50% - 2050px);
+}
+
+input.slide-10:checked ~ .slides
+{
+    margin-left: calc(50% - 2330px);
 }
 
 .overlay,
@@ -225,7 +260,7 @@ input.slide-5:checked ~ .slides
 
 .popup
 {
-    z-index: 200;
+    z-index: 10;
     background-color: rgba(0, 0, 0, .7);
 }
 
@@ -270,13 +305,72 @@ input.slide-5:checked ~ .slides
     white-space: normal;
 }
 
+.info h2,
+.cat-name
+{
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .close
 {
     position: absolute;
-    font-size: 30px;
-    line-height: 30px;
     top: 0;
     right: 0;
-    text-decoration: none;
-    color: #fff;
+    width: 32px;
+    height: 32px;
+}
+
+.close:before,
+.close:after
+{
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #fff;
+}
+
+.close:before
+{
+    transform: rotate(45deg);
+}
+
+.close:after
+{
+    transform: rotate(-45deg);
+}
+
+.controls
+{
+    width: 200px;
+    margin: 20px auto;
+}
+
+.control
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    margin: 0 2px;
+
+}
+
+input.slide-1:checked ~ .controls .control-1,
+input.slide-2:checked ~ .controls .control-2,
+input.slide-3:checked ~ .controls .control-3,
+input.slide-4:checked ~ .controls .control-4,
+input.slide-5:checked ~ .controls .control-5,
+input.slide-6:checked ~ .controls .control-6,
+input.slide-7:checked ~ .controls .control-7,
+input.slide-8:checked ~ .controls .control-8,
+input.slide-9:checked ~ .controls .control-9,
+input.slide-10:checked ~ .controls .control-10
+{
+    background: #a9a9a9;
 }
