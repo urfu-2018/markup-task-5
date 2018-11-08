@@ -29,19 +29,18 @@ body
     color: #f00;
 }
 
-.carousel-container > input[type='radio']
-{
-    display: none;
-}
-
 .carousel-container
 {
     width: 100%;
 }
 
+.carousel-container > input[type='radio']
+{
+    display: none;
+}
+
 .carousel
 {
-    position: relative;
     overflow: hidden;
     width: 100%;
     margin-top: 100px;
@@ -54,7 +53,6 @@ body
     display: inline-block;
     width: 30%;
     height: 300px;
-    position: relative;
     margin: 0 10px;
     transition-property: left, right;
     transition-duration: .5s;
@@ -71,7 +69,6 @@ body
 
 .carousel-navigation
 {
-    display: block;
     text-align: center;
 }
 
@@ -225,6 +222,7 @@ body
     height: 400px;
     color: white;
     z-index: 26;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
 .modal:target
@@ -265,7 +263,7 @@ body
     font-size: 20px;
 }
 
-.about-cat header h1
+.about-cat > header > h1
 {
     margin: 50px 0 10px 10px;
     font-size: 45px;
