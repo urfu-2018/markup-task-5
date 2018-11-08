@@ -37,13 +37,16 @@ footer
     font-size: 14px;
     border-top: 1px solid #949494;
     position: relative;
-    height: 105px;
 }
 
-footer .emails,
 footer .license
 {
     position: absolute;
+}
+
+footer .license p
+{
+    margin-bottom: 4px;
 }
 
 footer .emails
@@ -54,7 +57,7 @@ footer .emails
 footer .license
 {
     right: 8px;
-    bottom: 0px;
+    bottom: 0;
 }
 
 a
@@ -73,7 +76,105 @@ a
     margin: -3px 6px 0 0;
 }
 
+.carousel_images
+{
+    overflow: hidden;
+    position: relative;
+
+    height: 400px;
+
+    white-space: nowrap;
+}
+
 main
 {
+    padding-top: 90px;
+    min-height: 500px;
+}
+
+main input
+{
+    display: none;
+}
+
+.cat_block
+{
+    display: inline-block;
     position: relative;
+    height: 80%;
+    opacity: .6;
+}
+
+.cat_img
+{
+    height: 100%;
+}
+
+.cat_name_block
+{
+    display: block;
+    position: absolute;
+    top: 0;
+
+    color: #fff;
+    font-size: 40px;
+
+    width: 100%;
+    height: 100%;
+    line-height: 350px;
+
+    text-align: center;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.cat_name_block:hover
+{
+    opacity: .7;
+    background: #000;
+}
+
+.radio1:checked ~ .carousel .cat_name_block1,
+.radio2:checked ~ .carousel .cat_name_block2,
+.radio3:checked ~ .carousel .cat_name_block3,
+.radio4:checked ~ .carousel .cat_name_block4,
+.radio5:checked ~ .carousel .cat_name_block5
+{
+    visibility: visible;
+}
+
+.radio1:checked ~ .carousel .cat_block1,
+.radio2:checked ~ .carousel .cat_block2,
+.radio3:checked ~ .carousel .cat_block3,
+.radio4:checked ~ .carousel .cat_block4,
+.radio5:checked ~ .carousel .cat_block5
+{
+    opacity: 1;
+    height: 100%;
+}
+
+.radio1:checked ~ .carousel .carousel_images .cat_block
+{
+    left: calc(-440px + 440px * 2);
+}
+
+.radio2:checked ~ .carousel .carousel_images .cat_block
+{
+    left: calc(-440px + 440px);
+}
+
+.radio3:checked ~ .carousel .carousel_images .cat_block
+{
+    left: -440px;
+}
+
+.radio4:checked ~ .carousel .carousel_images .cat_block
+{
+    left: calc(-440px - 440px);
+}
+
+.radio5:checked ~ .carousel .carousel_images .cat_block
+{
+    left: calc(-440px - 440px * 2);
 }
