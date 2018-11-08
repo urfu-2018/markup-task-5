@@ -48,6 +48,9 @@ body
     width: 10000px;
     padding: calc((100vh - 37.5vw - 2vw - 30px) / 2) 0;
     position: relative;
+
+    will-change: transform;
+    transition: transform 200ms linear;
 }
 
 .opacity
@@ -72,12 +75,11 @@ body
     visibility: hidden;
     cursor: pointer;
 
-    position: fixed;
     height: 37.5vw;
     width: 50vw;
 
-    top: calc((100vh - 37.5vw - 2vw - 30px) / 2);
-    left: calc(25vw - 1vw);
+    position: absolute;
+    left: 0;
 
     border: 0;
     padding: 0;
@@ -100,7 +102,7 @@ label
 
 .id1:checked ~ .slider
 {
-    left: calc(25vw - 1vw);
+    transform: translateX(24vw);
 }
 
 .id1:checked ~ .slider .photo1
@@ -118,7 +120,7 @@ label
 
 .id2:checked ~ .slider
 {
-    left: calc(-15vw - 3vw - 4px);
+    transform: translateX(-18.75vw);
 }
 
 .id2:checked ~ .slider .photo2
@@ -136,7 +138,7 @@ label
 
 .id3:checked ~ .slider
 {
-    left: calc(-55vw - 5vw - 8px);
+    transform: translateX(-61.5vw);
 }
 
 .id3:checked ~ .slider .photo3
@@ -154,7 +156,7 @@ label
 
 .id4:checked ~ .slider
 {
-    left: calc(-95vw - 7vw - 12px);
+    transform: translateX(-104.25vw);
 }
 
 .id4:checked ~ .slider .photo4
@@ -183,9 +185,9 @@ label
 {
     z-index: 1;
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: calc(-18.75vw - (100vh - 37.5vw - 2vw - 30px) / 2);
+    left: -24vw;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,.9);
@@ -211,9 +213,8 @@ label
 
 .description
 {
-    vertical-align: top;
+    vertical-align: middle;
     width: 40vw;
-    height: 30vw;
     font: 2vw 'Segoe UI Light';
     color: white;
 }
