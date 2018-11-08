@@ -178,3 +178,42 @@ main input
 {
     left: calc(-440px - 440px * 2);
 }
+
+.popup
+{
+    position: absolute;
+    background: rgba(0, 0, 0, .9);
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    color: #fff;
+
+    display: none;
+}
+
+.popup_cat_block
+{
+    padding: 90px;
+}
+
+.popup_cat_block img
+{
+    height: 300px;
+    float: left;
+    margin: 10px;
+}
+
+.bt_close
+{
+    float: right;
+}
+
+.popup_bt1:checked ~ .popup1,
+.popup_bt2:checked ~ .popup2,
+.popup_bt3:checked ~ .popup3,
+.popup_bt4:checked ~ .popup4,
+.popup_bt5:checked ~ .popup5
+{
+    display: block;
+}
