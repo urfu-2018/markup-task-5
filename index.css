@@ -50,16 +50,16 @@ input
 
 .cat-box
 {
-    width: 300px;
+    width: 25vw;
     vertical-align: middle;
-    padding: 5vw;
+    padding: 2vw;
     display: inline-block;
 }
 
 .cat-photo
 {
-    width: 300px;
-    height: 300px;
+    width: 25vw;
+    height: 25vw;
     object-fit: cover;
 }
 
@@ -77,24 +77,25 @@ input
 .inp-cat10:checked:checked ~ .cat10 > label > .cat-photo
 {
     opacity: 1;
-    height: 300px;
-    width: 300px;
+    height: 25vw;
+    width: 25vw;
 }
 
 .cat-photo
 {
     opacity: .7;
-    height: 240px;
-    width: 240px;
+    height: 20vw;
+    width: 20vw;
 }
 
 .overlay-container
 {
     position: absolute;
     bottom: 0;
-    width: 300px;
-    height: 300px;
-    margin: 72px -300px;
+    width: 25vw;
+    height: 25vw;
+    margin: 2vw -25vw;
+    top: 0;
     background: rgba(0, 0, 0, .4);
     opacity: 0;
     transition: .5s ease;
@@ -261,59 +262,59 @@ a
 
 .inp-cat1:checked:checked ~ .cat-box
 {
-    transform: translate(33vw);
+    transform: translate(35vw);
 }
 
 .inp-cat2:checked:checked ~ .cat-box
 {
-    transform: translate(1vw);
+    transform: translate(5vw);
 }
 
 .inp-cat3:checked:checked ~ .cat-box
 {
-    transform: translate(-31vw);
+    transform: translate(-24vw);
 }
 
 .inp-cat4:checked:checked ~ .cat-box
 {
-    transform: translate(-64vw);
+    transform: translate(-54vw);
 }
 
 .inp-cat5:checked:checked ~ .cat-box
 {
-    transform: translate(-96vw);
+    transform: translate(-83vw);
 }
 
 .inp-cat6:checked:checked ~ .cat-box
 {
-    transform: translate(-128vw);
+    transform: translate(-112vw);
 }
 
 .inp-cat7:checked:checked ~ .cat-box
 {
-    transform: translate(-161vw);
+    transform: translate(-141vw);
 }
 
 .inp-cat8:checked:checked ~ .cat-box
 {
-    transform: translate(-193vw);
+    transform: translate(-171vw);
 }
 
 .inp-cat9:checked:checked ~ .cat-box
 {
-    transform: translate(-225vw);
+    transform: translate(-200vw);
 }
 
 .inp-cat10:checked:checked ~ .cat-box
 {
-    transform: translate(-258vw);
+    transform: translate(-229vw);
 }
 
 .circles
 {
     display: block;
     color: #888;
-    transform: translate(-113vw);
+    transform: translate(-97vw);
 }
 
 /* circles */
