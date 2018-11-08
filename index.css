@@ -5,6 +5,19 @@ body
     margin: 0;
 }
 
+.wrapper
+{
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.content
+{
+    display: table-row;
+    height: 100%;
+}
+
 .cat-shop
 {
     width: 100%;
@@ -30,6 +43,9 @@ body
     position: absolute;
     transition: all .5s ease-in;
     opacity: .7;
+    padding: 0 5px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .cat-label
@@ -39,8 +55,6 @@ body
     height: 80%;
     width: 100%;
     cursor: pointer;
-    padding: 0 5px;
-    box-sizing: border-box;
 }
 
 .cat-label img
@@ -57,28 +71,22 @@ body
 .black-block
 {
     display: none;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1;
-    text-align: center;
     background: rgba(0, 0, 0, .5);
 }
 
 .cat-name
 {
-    /*display: none;*/
-    padding: 10px;
-    /*margin: 30px;*/
-    color: rgba(255, 255, 255, 1);
-    font-family: serif;
+    color: #fff;
+    line-height: 150px;
+    text-align: center;
 }
 
 .cat-radio
 {
     display: inline-block;
-    position: static;
-    margin: 65px auto 0 8%;
 }
 
 header
@@ -368,4 +376,102 @@ input[id='cat10']:checked ~ .cat-items-wrapper > .cat2
 input[id='cat10']:checked ~ .cat-items-wrapper > .cat1
 {
     left: -140%;
+}
+
+.modal-link
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+input[id='cat1']:checked ~ .cat-items-wrapper > .cat1:hover > .modal-link,
+input[id='cat2']:checked ~ .cat-items-wrapper > .cat2:hover > .modal-link,
+input[id='cat3']:checked ~ .cat-items-wrapper > .cat3:hover > .modal-link,
+input[id='cat4']:checked ~ .cat-items-wrapper > .cat4:hover > .modal-link,
+input[id='cat5']:checked ~ .cat-items-wrapper > .cat5:hover > .modal-link,
+input[id='cat6']:checked ~ .cat-items-wrapper > .cat6:hover > .modal-link,
+input[id='cat7']:checked ~ .cat-items-wrapper > .cat7:hover > .modal-link,
+input[id='cat8']:checked ~ .cat-items-wrapper > .cat8:hover > .modal-link,
+input[id='cat9']:checked ~ .cat-items-wrapper > .cat9:hover > .modal-link,
+input[id='cat10']:checked ~ .cat-items-wrapper > .cat10:hover > .modal-link
+{
+    display: block;
+}
+
+.overlay
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .9);
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+}
+
+.overlay:target
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup
+{
+    margin: 75px auto;
+    padding: 20px;
+    width: 750px;
+    height: 250px;
+    position: relative;
+}
+
+.popup .close
+{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    right: 20px;
+    opacity: .8;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(150, 150, 150, 1);
+}
+
+.popup .close:hover
+{
+    opacity: 1;
+}
+
+.modal-cat-picture
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.modal-cat-name,
+.cat-info
+{
+    display: block;
+    margin: 20px auto auto 400px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.modal-cat-name
+{
+    font-size: 30px;
+}
+
+.cat-info
+{
+    font-size: 20px;
 }
