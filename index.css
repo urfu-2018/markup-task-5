@@ -1,0 +1,282 @@
+html,
+body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font: 16px 'Arial', sans-serif;
+}
+
+/* header */
+
+.market-header
+{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.market-header h1
+{
+    font: 32px 'PT Sans Narrow', sans-serif;
+    margin: 10px 0;
+}
+
+.market-header h1::first-letter
+{
+    color: #fc1b27;
+}
+
+/* main content */
+
+.wrap-page
+{
+    width: 100%;
+    min-height: 100%;
+}
+
+main
+{
+    padding: 150px 0 80px;
+}
+
+/* footer */
+
+footer
+{
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    margin-top: -80px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+footer a[href^='mailto']::before
+{
+    content: '\2709  ';
+    vertical-align: middle;
+    color: #000;
+}
+
+.contact-information
+{
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: #a8a8a8;
+}
+
+.contact-information > a
+{
+    display: block;
+}
+
+.copyright-information
+{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.copyright-information a::before
+{
+    content: '«';
+}
+
+.copyright-information a::after
+{
+    content: '»';
+}
+
+/* gallery */
+
+input[name='slides']
+{
+    display: none;
+}
+
+.wrap-page
+{
+    overflow: hidden;
+}
+
+.gallary
+{
+    height: 300px;
+    width: 100%;
+}
+
+.slides
+{
+    height: 300px;
+    min-width: 100%;
+    white-space: nowrap;
+}
+
+.slide
+{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    line-height: 300px;
+    margin: 0 10px;
+    box-sizing: border-box;
+
+}
+
+.slide img
+{
+    opacity: .7;
+    height: 80%;
+    vertical-align: middle;
+}
+
+input.slide-1:checked ~ .slides .slide-1 img,
+input.slide-2:checked ~ .slides .slide-2 img,
+input.slide-3:checked ~ .slides .slide-3 img,
+input.slide-4:checked ~ .slides .slide-4 img,
+input.slide-5:checked ~ .slides .slide-5 img
+{
+    opacity: 1;
+    height: 100%;
+}
+
+.cat-name
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    line-height: 300px;
+    font-size: 25px;
+    overflow: hidden;
+    opacity: 0;
+    text-decoration: none;
+}
+
+input.slide-1:checked ~ .slides .slide-1:hover .cat-name,
+input.slide-2:checked ~ .slides .slide-2:hover .cat-name,
+input.slide-3:checked ~ .slides .slide-3:hover .cat-name,
+input.slide-4:checked ~ .slides .slide-4:hover .cat-name,
+input.slide-5:checked ~ .slides .slide-5:hover .cat-name
+{
+    opacity: 1;
+    color: #fff;
+    z-index: 1;
+}
+
+input.slide-1:checked ~ .slides
+{
+    margin-left: calc(50% - 150px);
+}
+
+input.slide-2:checked ~ .slides
+{
+    margin-left: calc(50% - 450px);
+}
+
+input.slide-3:checked ~ .slides
+{
+    margin-left: calc(50% - 750px);
+}
+
+input.slide-4:checked ~ .slides
+{
+    margin-left: calc(50% - 1050px);
+}
+
+input.slide-5:checked ~ .slides
+{
+    margin-left: calc(50% - 1350px);
+}
+
+.overlay,
+.popup
+{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup
+{
+    z-index: 200;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.overlay
+{
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.overlay:target,
+.overlay:target + .popup
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay:target + .popup .cat-popup
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 700px;
+    height: 400px;
+}
+
+.overlay:target + .popup .cat-popup img
+{
+    height: 100%;
+}
+
+.overlay:target + .popup .cat-popup .info
+{
+    float: right;
+    line-height: 20px;
+    width: 300px;
+    height: 100%;
+    vertical-align: middle;
+    color: #fff;
+    white-space: normal;
+}
+
+.close
+{
+    position: absolute;
+    font-size: 30px;
+    line-height: 30px;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color: #fff;
+}
