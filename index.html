@@ -2,8 +2,71 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="site">
+<header class="shell_of_header">
+    <div class="header_text">
+        Мурмаркет
+    </div>
+</header>
+<main class="carousel">
+    <input type="radio" id="c1" name="navigate">
+    <input type="radio" id="c2" name="navigate">
+    <input type="radio" id="c3" name="navigate" checked>
+    <input type="radio" id="c4" name="navigate">
+    <input type="radio" id="c5" name="navigate">
+    <article class="elements_of_car">
+        <section class="element el-1">
+            <label for="c1">
+                <img src="cats/fashion.jpg" alt="pic1">
+            </label>
+            <div class="shell_of_name"><p class="name">Моника</p></div>
+        </section>
+        <section class="element el-2">
+            <label for="c2">
+                <img src="cats/academic.jpg" alt="pic2">
+            </label>
+            <div class="shell_of_name">
+                <p class="name">Леопольд</p>
+            </div>
+        </section>
+        <section class="element el-3">
+            <label for="c3">
+                <img src="cats/gangsta.jpg" alt="pic3">
+            </label>
+            <div class="shell_of_name">
+                <p class="name">Жожо</p>
+            </div>
+        </section>
+        <section class="element el-4">
+            <label for="c4">
+                <img src="cats/power.jpg" alt="pic4"
+                ></label>
+            <div class="shell_of_name">
+                <p class="name">Арнольд</p>
+            </div>
+        </section>
+        <section class="element el-5">
+            <label for="c5">
+                <img src="cats/police.jpg" alt="pic5">
+            </label>
+            <div class="shell_of_name">
+                <p class="name">Жибер</p>
+            </div>
+        </section>
+    </article>
+</main>
+<footer>
+    <aside class="footer_left">
+        Напишите нам:<br>
+        <a class="element_of_footer" href="#">cats@babuli.ru</a><br>
+        <a class="element_of_footer" href="#">vnuchek@babuli.ru</a>
+    </aside>
+    <section class="footer_right">
+        &copy; 2018 ООО <a href="#">Бабушкины котятки</a>
+    </section>
+</footer>
 </body>
 </html>

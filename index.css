@@ -1,0 +1,164 @@
+.site
+{
+    background: #faebd7;
+}
+
+.shell_of_header
+{
+    top: 0;
+    font-size: 32px;
+    font-family: PT SansNarrow, sans-serif;
+    position: fixed;
+    width: 100%;
+    background-color: #faebd7;
+    text-align: center;
+    z-index: 999;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header_text
+{
+    margin: 10px auto;
+}
+
+.header_text::first-letter
+{
+    color: #f00;
+}
+
+footer
+{
+    border-top: 1px solid gray;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+}
+
+footer .footer_left
+{
+    position: relative;
+    float: left;
+}
+
+footer .footer_right
+{
+    position: absolute;
+    right: 0;
+}
+
+a[href]
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+/*КАРУСЕЛЬ КАРУСЕЛЬ КАРУСЕЛЬ*/
+
+input
+{
+    display: none;
+}
+
+.carousel
+{
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    top: 70px;
+}
+
+.elements_of_car
+{
+    transition: left .3s ease-out;
+    -o-transition: left .3s ease-out;
+    -ms-transition: left .3s ease-out;
+    -moz-transition: left .3s ease-out;
+    -webkit-transition: left .3s ease-out;
+    height: 449px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.elements_of_car .element
+{
+    display: inline-block;
+    width: 500px;
+    height: 449px;
+    position: relative;
+}
+
+.elements_of_car img
+{
+    vertical-align: middle;
+    width: 80%;
+    opacity: .7;
+}
+
+.shell_of_name
+{
+    width: 500px;
+    height: 449px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    display: none;
+}
+
+.shell_of_name .name
+{
+    color: white;
+    font-size: 32px;
+    margin-top: 170px;
+}
+
+.carousel input[id='c1']:checked ~ .elements_of_car
+{
+    left: calc(50% - 250px);
+}
+
+.carousel input[id='c2']:checked ~ .elements_of_car
+{
+    left: calc(50% - 250px - 500px);
+}
+
+.carousel input[id='c3']:checked ~ .elements_of_car
+{
+    left: calc(50% - 250px - 1000px);
+}
+
+.carousel input[id='c4']:checked ~ .elements_of_car
+{
+    left: calc(50% - 250px - 1500px);
+}
+
+.carousel input[id='c5']:checked ~ .elements_of_car
+{
+    left: calc(50% - 250px - 2000px);
+}
+
+input[id='c1']:checked ~ .elements_of_car section label[for='c1'] img,
+input[id='c2']:checked ~ .elements_of_car section label[for='c2'] img,
+input[id='c3']:checked ~ .elements_of_car section label[for='c3'] img,
+input[id='c4']:checked ~ .elements_of_car section label[for='c4'] img,
+input[id='c5']:checked ~ .elements_of_car section label[for='c5'] img
+{
+    width: 100%;
+    opacity: 1;
+}
+
+input[id='c1']:checked ~ .elements_of_car .el-1:hover div,
+input[id='c2']:checked ~ .elements_of_car .el-2:hover div,
+input[id='c3']:checked ~ .elements_of_car .el-3:hover div,
+input[id='c4']:checked ~ .elements_of_car .el-4:hover div,
+input[id='c5']:checked ~ .elements_of_car .el-5:hover div
+{
+    display: block;
+}
