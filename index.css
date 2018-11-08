@@ -16,6 +16,11 @@ body
     background-color: #f5f5f5;
 }
 
+article
+{
+    height: 30vh;
+}
+
 footer
 {
     height: 80px;
@@ -63,9 +68,7 @@ header h1::first-letter
 
 .photoContainer
 {
-    position: relative;
-    left: -110px;
-    width: 100%;4336px;
+    width: 100%;
     height: 490px;
     box-sizing: border-box;
     overflow: hidden;
@@ -75,11 +78,11 @@ header h1::first-letter
 .photo
 {
     position: relative;
-    width: 420px;
-    height: 315px;
+    width: 20%;
+    height: 60%;
     display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 100px;
+    margin-right: 0.02%;
+    margin-bottom: 0.23%;
     margin-top: 80px;
     transition: right .5s linear;
     right: 0;
@@ -87,37 +90,37 @@ header h1::first-letter
 
 .photo img
 {
-    width: 336px;
-    height: 252px;
+    width: 80%;
+    height: 80%;
     display: block;
     margin: auto;
 }
 
 .firstPhoto:checked ~ .photoContainer .photo
 {
-    right: -860px;
+    right: -40%;
 }
 
- .firstPhoto:checked ~ .photoContainer .photo img
+ /* .firstPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) ~ .photo img
+ /* .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1)
 {
@@ -126,29 +129,29 @@ header h1::first-letter
 
 .secondPhoto:checked ~ .photoContainer .photo
 {
-    right: -430px;
+    right: -20%;
 }
 
- .secondPhoto:checked ~ .photoContainer .photo img
+ /* .secondPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) ~ .photo img
+ /* .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2)
 {
@@ -160,26 +163,26 @@ header h1::first-letter
     right: 0;
 }
 
- .thirdPhoto:checked ~ .photoContainer .photo img
+ /* .thirdPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) ~ .photo img
+ /* .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3)
 {
@@ -188,29 +191,29 @@ header h1::first-letter
 
 .fourthPhoto:checked ~ .photoContainer .photo
 {
-    right: 430px;
+    right: 20%;
 }
 
- .fourthPhoto:checked ~ .photoContainer .photo img
+ /* .fourthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) ~ .photo img
+ /* .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4)
 {
@@ -219,29 +222,29 @@ header h1::first-letter
 
 .fifthPhoto:checked ~ .photoContainer .photo
 {
-    right: 860px;
+    right: 40%;
 }
 
- .fifthPhoto:checked ~ .photoContainer .photo img
+ /* .fifthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) ~ .photo img
+ /* .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5)
 {
@@ -250,29 +253,29 @@ header h1::first-letter
 
 .sixthPhoto:checked ~ .photoContainer .photo
 {
-    right: 1290px;
+    right: 60%;
 }
  
-.sixthPhoto:checked ~ .photoContainer .photo img
+/* .sixthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(6) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
- 
+/*  
 .sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(6) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(6)
 {
@@ -281,29 +284,29 @@ header h1::first-letter
 
 .seventhPhoto:checked ~ .photoContainer .photo
 {
-    right: 1720px;
+    right: 80%;
 }
 
- .seventhPhoto:checked ~ .photoContainer .photo img
+ /* .seventhPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7) ~ .photo img
+ /* .seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7)
 {
@@ -312,29 +315,29 @@ header h1::first-letter
 
 .eighthPhoto:checked ~ .photoContainer .photo
 {
-    right: 2150px;
+    right: 100%;
 }
 
- .eighthPhoto:checked ~ .photoContainer .photo img
+ /* .eighthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8) ~ .photo img
+ /* .eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8)
 {
@@ -343,29 +346,29 @@ header h1::first-letter
 
 .ninthPhoto:checked ~ .photoContainer .photo
 {
-    right: 2580px;
+    right: 120%;
 }
 
- .ninthPhoto:checked ~ .photoContainer .photo img
+ /* .ninthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9) ~ .photo img
+ /* .ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9)
 {
@@ -374,29 +377,29 @@ header h1::first-letter
 
 .tenthPhoto:checked ~ .photoContainer .photo
 {
-    right: 3010px;
+    right: 140%;
 }
 
- .tenthPhoto:checked ~ .photoContainer .photo img
+ /* .tenthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
-} 
+}  */
 
 .tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10) img
 {
-    width: 420px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     transform: none;
     opacity: 1;
 }
 
- .tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10) ~ .photo img
+ /* .tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
-} 
+}  */
 
 .tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10)
 {
