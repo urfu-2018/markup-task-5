@@ -3,7 +3,246 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1 class="name-shop">Мурмаркет</h1>
+    </header>
+    <main id="cat">
+        <input type="radio" class="korat-checkbox" name="carousel-photo" id="korat" checked>
+        <input type="radio" class="singapura-checkbox" name="carousel-photo" id="singapura">
+        <input type="radio" class="bengal-checkbox" name="carousel-photo" id="bengal">
+        <input type="radio" class="siberian-checkbox" name="carousel-photo" id="siberian">
+        <input type="radio" class="highlend-fold-checkbox" name="carousel-photo" id="highlend-fold">
+        <input type="radio" class="egyptian-mau-checkbox" name="carousel-photo" id="egyptian-mau">
+        <input type="radio" class="norwegian-forest-checkbox" name="carousel-photo" id="norwegian-forest">
+        <input type="radio" class="bombei-checkbox" name="carousel-photo" id="bombei">
+        <input type="radio" class="american-curl-checkbox" name="carousel-photo" id="american-curl">
+        <input type="radio" class="shotlandskaya-vislouhaya-checkbox" name="carousel-photo" 
+            id="shotlandskaya-vislouhaya">
+        <div class="carousel">
+            <label for="korat" class="image">
+                <img src="img/korat.jpg" alt="Кошка Беатриче">
+                <a href="#cat" class="name-cat">
+                    Беатриче
+                </a>
+            </label>
+            <label for="singapura" class="image">
+                <img src="img/singapura.jpg" alt="Кошка Гертруда">
+                <a href="#cat" class="name-cat">
+                    Гертруда
+                </a>
+            </label>
+            <label for="bengal" class="image">
+                <img src="img/bengal.jpg" alt="Кошка Жоржетта">
+                <a href="#cat" class="name-cat">
+                    Жоржетта
+                </a>
+            </label>
+            <label for="siberian" class="image">
+                <img src="img/siberian.jpg" alt="Кот Арсений-Котовский">
+                <a href="#cat" class="name-cat">
+                    Арсений-Котовский
+                </a>
+            </label>
+            <label for="highlend-fold" class="image">
+                <img src="img/highlend-fold.jpg" alt="Кот Тамерлан">
+                <a href="#cat" class="name-cat">
+                    Тамерлан
+                </a>
+            </label>
+            <label for="egyptian-mau" class="image">
+                <img src="img/egyptian-mau.jpg" alt="Кошка Терпсихора">
+                <a href="#cat" class="name-cat">
+                    Терпсихора
+                </a>
+            </label>
+            <label for="norwegian-forest" class="image">
+                <img src="img/norwegian-forest.jpeg" alt="Кот Фердинанд">
+                <a href="#cat" class="name-cat">
+                    Фердинанд
+                </a>
+            </label>
+            <label for="bombei" class="image">
+                <img src="img/bombei.jpg" alt="Кошка Шерри">
+                <a href="#cat" class="name-cat">
+                    Шерри
+                </a>
+            </label>
+            <label for="american-curl" class="image">
+                <img src="img/american-curl.jpg" alt="Кошка Эзра">
+                <a href="#cat" class="name-cat">
+                    Эзра
+                </a>
+            </label>
+            <label for="shotlandskaya-vislouhaya" class="image">
+                <img src="img/shotlandskaya-vislouhaya.jpg" alt="Кот Яся">
+                <a href="#cat" class="name-cat">
+                    Яся
+                </a>
+            </label>
+        </div>
+        <div class="radio-carousel layout-positioner">
+            <label for="korat"></label>
+            <label for="singapura"></label>
+            <label for="bengal"></label>
+            <label for="siberian"></label>
+            <label for="highlend-fold"></label>
+            <label for="egyptian-mau"></label>
+            <label for="norwegian-forest"></label>
+            <label for="bombei"></label>
+            <label for="american-curl"></label>
+            <label for="shotlandskaya-vislouhaya"></label>
+        </div>
+        <div class="modal-windows">
+            <article class="modal-window korat-m-w">
+                <div class="image">
+                    <img src="img/korat.jpg" alt="Кошка Беатриче">
+                </div>
+                <div class="info">
+                    <h2>Беатриче</h2>
+                    <div class="description">
+                        <p>Энергичная, умная и ласковая.</p>
+                        <p>Возраст 2 года.</p>
+                        <p>Не любит громкие и резкие звуки.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window singapura-m-w">
+                <div class="image">
+                    <img src="img/singapura.jpg" alt="Кошка Гертруда">
+                </div>
+                <div class="info">
+                    <h2>Гертруда</h2>
+                    <div class="description">
+                        <p>Дружелюбная, миролюбивая, пугливая.</p>
+                        <p>Возраст ~10 месяцев.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window bengal-m-w">
+                <div class="image">
+                    <img src="img/bengal.jpg" alt="Кошка Жоржетта">
+                </div>
+                <div class="info">
+                    <h2>Жоржетта</h2>
+                    <div class="description">
+                        <p>Игривая, активная, ловкая.</p>
+                        <p>Возраст ~1 год.</p>
+                        <p>Обожает играть с водой.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window siberian-m-w">
+                <div class="image">
+                    <img src="img/siberian.jpg" alt="Кот Арсений-Котовский">
+                </div>
+                <div class="info">
+                    <h2>Арсений-Котовский</h2>
+                    <div class="description">
+                        <p>Умный и послушный.</p>
+                        <p>Возраст 1 год.</p>
+                        <p>Отличный охотник.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window highlend-fold-m-w">
+                <div class="image">
+                    <img src="img/highlend-fold.jpg" alt="Кот Тамерлан">
+                </div>
+                <div class="info">
+                    <h2>Тамерлан</h2>
+                    <div class="description">
+                        <p>Интеллигентна, мягка, спокойна и жизнерадостна.</p>
+                        <p>Возраст 2 года.</p>
+                        <p>Комфортно сосуществует со всеми членами семьи.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window egyptian-mau-m-w">
+                <div class="image">
+                    <img src="img/egyptian-mau.jpg" alt="Кошка Терпсихора">
+                </div>
+                <div class="info">
+                    <h2>Терпсихора</h2>
+                    <div class="description">
+                        <p>Преданная.</p>
+                        <p>Возраст 1 год.</p>
+                        <p>Любит ноутбуки.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window norwegian-forest-m-w">
+                <div class="image">
+                    <img src="img/norwegian-forest.jpeg" alt="Кот Фердинанд">
+                </div>
+                <div class="info">
+                    <h2>Фердинанд</h2>
+                    <div class="description">
+                        <p>Дружелюбный, обладает мягким нравом и хорошими манерами.</p>
+                        <p>Возраст 2 года.</p>
+                        <p>Любит поговорить, обожает играть и любит поохотиться на бантики.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window bombei-m-w">
+                <div class="image">
+                    <img src="img/bombei.jpg" alt="Кошка Шерри">
+                </div>
+                <div class="info">
+                    <h2>Шерри</h2>
+                    <div class="description">
+                        <p>Спокойная.</p>
+                        <p>Возраст 2 месяца.</p>
+                        <p>Обожает колени своего хозяина.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window american-curl-m-w">
+                <div class="image">
+                    <img src="img/american-curl.jpg" alt="Кошка Эзра">
+                </div>
+                <div class="info">
+                    <h2>Эзра</h2>
+                    <div class="description">
+                        <p>Уравновешенная, интеллигентная.</p>
+                        <p>Возраст ~1 года.</p>
+                        <p>Обожает детей.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="modal-window shotlandskaya-vislouhaya-m-w">
+                <div class="image">
+                    <img src="img/shotlandskaya-vislouhaya.jpg" alt="Кот Яся">
+                </div>
+                <div class="info">
+                    <h2>Яся</h2>
+                    <div class="description">
+                        <p>Интеллигентный</p>
+                        <p>Возраст 1 год.</p>
+                        <p>Отлично дружит с другими домашними животными.</p>
+                    </div>
+                </div>
+            </article>
+            <a href="#" class="close-modal-window"></a>
+        </div>
+    </main>
+    <footer>
+        <div class="mail">
+            <p>Напишите нам:</p>
+            <span>
+                <a href="#"><img class="icon-mail" src="img/icon-email.svg" alt="mail:"> 
+                    cats@babuli.ru</a>
+            </span>
+            <span>
+                <a href="#"><img class="icon-mail" src="img/icon-email.svg" alt="mail:"> 
+                    vnuchek@babuli.ru</a>
+            </span>
+        </div>
+        <div class="copyright">
+            <span>&copy; 2018 ООО &#171;<a href="#">Бабушкины котятки</a>&#187;</span>
+        </div>
+    </footer>
 </body>
 </html>
