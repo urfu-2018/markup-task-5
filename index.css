@@ -1,6 +1,7 @@
 body
 {
     margin: 0;
+    height: 100%;
 }
 
 header
@@ -56,8 +57,8 @@ footer > p + p
     overflow: hidden;
     top: 100px;
     width: 100%;
-    height: 400px;
-    padding-bottom: 30px;
+    height: 500px;
+    padding-top: 6%;
 }
 
 /* Длина и положение всей карусели */
@@ -65,7 +66,7 @@ footer > p + p
 .carousel
 {
     width: 9999px;
-    height: 400px;
+    height: 100vw;
     position: absolute;
     /* Я не знаю, почему, 
     но следующая строка сдвигает эл-ты влево чутка, как раз */
@@ -84,19 +85,6 @@ footer > p + p
 .carousel-selector
 {
     display: none;
-}
-
-/* Сколько места занимает невыделенная с карусели картинка */
-
-.carousel-item
-{
-    width: 400px;
-    height: 350px;
-    padding: 0 10px;
-    box-sizing: border-box;
-
-    display: inline-block;
-    position: relative;
 }
 
 /* Вид невыделенной картинки */
@@ -118,9 +106,9 @@ footer > p + p
     width: 200px;
     margin: 0 auto;
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
+    left: 0;
     user-select: none;
 }
 
@@ -147,18 +135,31 @@ footer > p + p
 
 /* Цвет для точки снизу при нажатии по ней или активированной картинке */
 
-.img1:checked ~ .carousel-dots .dot:nth-child(1),
-.img2:checked ~ .carousel-dots .dot:nth-child(2),
-.img3:checked ~ .carousel-dots .dot:nth-child(3),
-.img4:checked ~ .carousel-dots .dot:nth-child(4),
-.img5:checked ~ .carousel-dots .dot:nth-child(5),
-.img6:checked ~ .carousel-dots .dot:nth-child(6),
-.img7:checked ~ .carousel-dots .dot:nth-child(7),
-.img8:checked ~ .carousel-dots .dot:nth-child(8),
-.img9:checked ~ .carousel-dots .dot:nth-child(9),
-.img10:checked ~ .carousel-dots .dot:nth-child(10)
+.img1:checked ~ .carousel-dots .dot:nth-of-type(1),
+.img2:checked ~ .carousel-dots .dot:nth-of-type(2),
+.img3:checked ~ .carousel-dots .dot:nth-of-type(3),
+.img4:checked ~ .carousel-dots .dot:nth-of-type(4),
+.img5:checked ~ .carousel-dots .dot:nth-of-type(5),
+.img6:checked ~ .carousel-dots .dot:nth-of-type(6),
+.img7:checked ~ .carousel-dots .dot:nth-of-type(7),
+.img8:checked ~ .carousel-dots .dot:nth-of-type(8),
+.img9:checked ~ .carousel-dots .dot:nth-of-type(9),
+.img10:checked ~ .carousel-dots .dot:nth-of-type(10)
 {
     background-color: gray;
+}
+
+/* Сколько места занимает невыделенная с карусели картинка */
+
+.carousel-item
+{
+    width: 400px;
+    height: 350px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    display: inline-block;
+    position: relative;
 }
 
 /* Высчитывание, какая часть карусели 
@@ -217,21 +218,37 @@ footer > p + p
 /* Как отображать нажатую c карусели картинку, 
 которая просто показывается на слайдере */
 
-.img1:checked ~ .carousel > .carousel-item:nth-child(1) img,
-.img2:checked ~ .carousel > .carousel-item:nth-child(2) img,
-.img3:checked ~ .carousel > .carousel-item:nth-child(3) img,
-.img4:checked ~ .carousel > .carousel-item:nth-child(4) img,
-.img5:checked ~ .carousel > .carousel-item:nth-child(5) img,
-.img6:checked ~ .carousel > .carousel-item:nth-child(6) img,
-.img7:checked ~ .carousel > .carousel-item:nth-child(7) img,
-.img8:checked ~ .carousel > .carousel-item:nth-child(8) img,
-.img9:checked ~ .carousel > .carousel-item:nth-child(9) img,
-.img10:checked ~ .carousel > .carousel-item:nth-child(10) img
+.img1:checked ~ .carousel > .carousel-item:nth-of-type(1) img,
+.img2:checked ~ .carousel > .carousel-item:nth-of-type(2) img,
+.img3:checked ~ .carousel > .carousel-item:nth-of-type(3) img,
+.img4:checked ~ .carousel > .carousel-item:nth-of-type(4) img,
+.img5:checked ~ .carousel > .carousel-item:nth-of-type(5) img,
+.img6:checked ~ .carousel > .carousel-item:nth-of-type(6) img,
+.img7:checked ~ .carousel > .carousel-item:nth-of-type(7) img,
+.img8:checked ~ .carousel > .carousel-item:nth-of-type(8) img,
+.img9:checked ~ .carousel > .carousel-item:nth-of-type(9) img,
+.img10:checked ~ .carousel > .carousel-item:nth-of-type(10) img
 {
     height: 100%;
     width: 100%;
     opacity: 1;
     box-shadow: 10px 10px 5px gray;
+}
+
+/* Отступ справа для центральной картинки */
+
+.img1:checked ~ .carousel > .carousel-item:nth-of-type(1),
+.img2:checked ~ .carousel > .carousel-item:nth-of-type(2),
+.img3:checked ~ .carousel > .carousel-item:nth-of-type(3),
+.img4:checked ~ .carousel > .carousel-item:nth-of-type(4),
+.img5:checked ~ .carousel > .carousel-item:nth-of-type(5),
+.img6:checked ~ .carousel > .carousel-item:nth-of-type(6),
+.img7:checked ~ .carousel > .carousel-item:nth-of-type(7),
+.img8:checked ~ .carousel > .carousel-item:nth-of-type(8),
+.img9:checked ~ .carousel > .carousel-item:nth-of-type(9),
+.img10:checked ~ .carousel > .carousel-item:nth-of-type(10)
+{
+    margin-right: 80px;
 }
 
 /* Как должно выглядеть затемнение картинки */
@@ -263,16 +280,16 @@ footer > p + p
 /* Затемнение для высвечивания имени 
 кошечки, отобразить по наведении по картинке */
 
-.img1:checked ~ .carousel .carousel-item:nth-child(1):hover > .background,
-.img2:checked ~ .carousel .carousel-item:nth-child(2):hover > .background,
-.img3:checked ~ .carousel .carousel-item:nth-child(3):hover > .background,
-.img4:checked ~ .carousel .carousel-item:nth-child(4):hover > .background,
-.img5:checked ~ .carousel .carousel-item:nth-child(5):hover > .background,
-.img6:checked ~ .carousel .carousel-item:nth-child(6):hover > .background,
-.img7:checked ~ .carousel .carousel-item:nth-child(7):hover > .background,
-.img8:checked ~ .carousel .carousel-item:nth-child(8):hover > .background,
-.img9:checked ~ .carousel .carousel-item:nth-child(9):hover > .background,
-.img10:checked ~ .carousel .carousel-item:nth-child(10):hover > .background
+.img1:checked ~ .carousel .carousel-item:nth-of-type(1):hover > .background,
+.img2:checked ~ .carousel .carousel-item:nth-of-type(2):hover > .background,
+.img3:checked ~ .carousel .carousel-item:nth-of-type(3):hover > .background,
+.img4:checked ~ .carousel .carousel-item:nth-of-type(4):hover > .background,
+.img5:checked ~ .carousel .carousel-item:nth-of-type(5):hover > .background,
+.img6:checked ~ .carousel .carousel-item:nth-of-type(6):hover > .background,
+.img7:checked ~ .carousel .carousel-item:nth-of-type(7):hover > .background,
+.img8:checked ~ .carousel .carousel-item:nth-of-type(8):hover > .background,
+.img9:checked ~ .carousel .carousel-item:nth-of-type(9):hover > .background,
+.img10:checked ~ .carousel .carousel-item:nth-of-type(10):hover > .background
 {
     display: block;
 }
@@ -297,6 +314,35 @@ footer > p + p
     transition: opacity 400ms ease-in;
 }
 
+/* Ссылка на блоки карт */
+
+.carousel-item .modal-dialog-link
+{
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    left: 10px;
+    display: none;
+}
+
+/* Ссылка на отображение информациицентральной карты по нажатию */
+
+.img1:checked ~ .carousel .carousel-item:nth-of-type(1) .modal-dialog-link,
+.img2:checked ~ .carousel .carousel-item:nth-of-type(2) .modal-dialog-link,
+.img3:checked ~ .carousel .carousel-item:nth-of-type(3) .modal-dialog-link,
+.img4:checked ~ .carousel .carousel-item:nth-of-type(4) .modal-dialog-link,
+.img5:checked ~ .carousel .carousel-item:nth-of-type(5) .modal-dialog-link,
+.img6:checked ~ .carousel .carousel-item:nth-of-type(6) .modal-dialog-link,
+.img7:checked ~ .carousel .carousel-item:nth-of-type(7) .modal-dialog-link,
+.img8:checked ~ .carousel .carousel-item:nth-of-type(8) .modal-dialog-link,
+.img9:checked ~ .carousel .carousel-item:nth-of-type(9) .modal-dialog-link,
+.img10:checked ~ .carousel .carousel-item:nth-of-type(10) .modal-dialog-link
+{
+    display: block;
+}
+
 /* Что делать с блоком набора карт при переходе по ссылке */
 
 .modal-dialog:target
@@ -304,18 +350,19 @@ footer > p + p
     display: block;
 }
 
-/* Отображаем информацию о котейке по нажатию на точки снизу */
+/* Отображаем информацию о котейке по нажатию 
+на точки снизу или по нажатию по картинке */
 
-.img1:checked ~ .modal-dialog:target .cat_article:nth-child(1),
-.img2:checked ~ .modal-dialog:target .cat_article:nth-child(2),
-.img3:checked ~ .modal-dialog:target .cat_article:nth-child(3),
-.img4:checked ~ .modal-dialog:target .cat_article:nth-child(4),
-.img5:checked ~ .modal-dialog:target .cat_article:nth-child(5),
-.img6:checked ~ .modal-dialog:target .cat_article:nth-child(6),
-.img7:checked ~ .modal-dialog:target .cat_article:nth-child(7),
-.img8:checked ~ .modal-dialog:target .cat_article:nth-child(8),
-.img9:checked ~ .modal-dialog:target .cat_article:nth-child(9),
-.img10:checked ~ .modal-dialog:target .cat_article:nth-child(10)
+.img1:checked ~ .modal-dialog:target .cat_article:nth-of-type(1),
+.img2:checked ~ .modal-dialog:target .cat_article:nth-of-type(2),
+.img3:checked ~ .modal-dialog:target .cat_article:nth-of-type(3),
+.img4:checked ~ .modal-dialog:target .cat_article:nth-of-type(4),
+.img5:checked ~ .modal-dialog:target .cat_article:nth-of-type(5),
+.img6:checked ~ .modal-dialog:target .cat_article:nth-of-type(6),
+.img7:checked ~ .modal-dialog:target .cat_article:nth-of-type(7),
+.img8:checked ~ .modal-dialog:target .cat_article:nth-of-type(8),
+.img9:checked ~ .modal-dialog:target .cat_article:nth-of-type(9),
+.img10:checked ~ .modal-dialog:target .cat_article:nth-of-type(10)
 {
     display: block;
 }
@@ -334,7 +381,7 @@ footer > p + p
     float: left;
     width: 600px;
     height: 400px;
-    margin-right: 20px;
+    padding-right: 40px;
 }
 
 /* Размеры крестика и положение */
@@ -355,36 +402,6 @@ footer > p + p
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-decoration: none;
     font-size: 30px;
-}
-
-/* Ссылка на блоки карт */
-
-.carousel-item .modal-dialog-link
-{
-    position: absolute;
-    font-size: 12px;
-    z-index: 5;
-    top: 0;
-    right: 10px;
-    bottom: 0;
-    left: 10px;
-    display: none;
-}
-
-/* Ссылка на отображение центральной карты по нажатию */
-
-.img1:checked ~ .carousel .carousel-item:nth-child(1) .modal-dialog-link,
-.img2:checked ~ .carousel .carousel-item:nth-child(2) .modal-dialog-link,
-.img3:checked ~ .carousel .carousel-item:nth-child(3) .modal-dialog-link,
-.img4:checked ~ .carousel .carousel-item:nth-child(4) .modal-dialog-link,
-.img5:checked ~ .carousel .carousel-item:nth-child(5) .modal-dialog-link,
-.img6:checked ~ .carousel .carousel-item:nth-child(6) .modal-dialog-link,
-.img7:checked ~ .carousel .carousel-item:nth-child(7) .modal-dialog-link,
-.img8:checked ~ .carousel .carousel-item:nth-child(8) .modal-dialog-link,
-.img9:checked ~ .carousel .carousel-item:nth-child(9) .modal-dialog-link,
-.img10:checked ~ .carousel .carousel-item:nth-child(10) .modal-dialog-link
-{
-    display: block;
 }
 
 /* Изменим "вид" имени котейки, а так же его эффекты */
