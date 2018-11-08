@@ -1,0 +1,317 @@
+@import url(http://allfont.ru/allfont.css?fonts=pt-sans-narrow);
+
+body
+{
+    margin: 0;
+}
+
+.title
+{
+    font-family: 'PT SansNarrow', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 5px;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.title > h3
+{
+    margin: 10px 0;
+}
+
+.title > h3::first-letter
+{
+    color: #f00;
+}
+
+.main-content
+{
+    overflow: hidden;
+}
+
+input[name='cat_image'],
+input[name='modal-image']
+{
+    display: none;
+}
+
+.carousel
+{
+    width: 10000px;
+    margin: 70px 0;
+    position: relative;
+    transition-duration: .5s;
+}
+
+.cat-content
+{
+    margin-right: 35px;
+    display: inline-block;
+    position: relative;
+}
+
+.cat-content > a
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cat-content label[for^='image-']
+{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.cat-content .carousel-image
+{
+    width: 200px;
+    height: 140px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    opacity: .7;
+    transition-duration: .3s;
+    vertical-align: middle;
+}
+
+.activated-cat
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* display: none;
+    opacity: 0; */
+    visibility: hidden;
+}
+
+.activated-cat > h3
+{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 27% 0;
+    color: #fff;
+    /* z-index: 5; */
+}
+
+.info-about-cat
+{
+    display: none;
+}
+
+.photo-switch
+{
+    text-align: center;
+}
+
+.photo-switch > li
+{
+    display: inline-block;
+}
+
+.photo-switch label[for^='image-']
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #d3d3d3;
+}
+
+input[id='image-1']:checked ~ .carousel
+{
+    left: 40%;
+}
+
+input[id='image-2']:checked ~ .carousel
+{
+    left: 25%;
+}
+
+input[id='image-3']:checked ~ .carousel
+{
+    left: 10%;
+}
+
+input[id='image-4']:checked ~ .carousel
+{
+    left: -5%;
+}
+
+input[id='image-5']:checked ~ .carousel
+{
+    left: -20%;
+}
+
+input[id='image-1']:checked ~ .carousel label[for='image-1'] > .carousel-image,
+input[id='image-2']:checked ~ .carousel label[for='image-2'] > .carousel-image,
+input[id='image-3']:checked ~ .carousel label[for='image-3'] > .carousel-image,
+input[id='image-4']:checked ~ .carousel label[for='image-4'] > .carousel-image,
+input[id='image-5']:checked ~ .carousel label[for='image-5'] > .carousel-image
+{
+    height: 190px;
+    width: 250px;
+    opacity: 1;
+    transition-duration: .3s;
+    box-shadow: 0 0 10px #00000080;
+}
+
+input[id='image-1']:checked ~ .photo-switch label[for='image-1'],
+input[id='image-2']:checked ~ .photo-switch label[for='image-2'],
+input[id='image-3']:checked ~ .photo-switch label[for='image-3'],
+input[id='image-4']:checked ~ .photo-switch label[for='image-4'],
+input[id='image-5']:checked ~ .photo-switch label[for='image-5']
+{
+    background-color: #000;
+}
+
+input[id='image-1']:checked ~ .carousel label[for$='1']:hover .carousel-image,
+input[id='image-2']:checked ~ .carousel label[for$='2']:hover .carousel-image,
+input[id='image-3']:checked ~ .carousel label[for$='3']:hover .carousel-image,
+input[id='image-4']:checked ~ .carousel label[for$='4']:hover .carousel-image,
+input[id='image-5']:checked ~ .carousel label[for$='5']:hover .carousel-image
+{
+    filter: brightness(50%);
+}
+
+input[id='image-1']:checked ~ .carousel label[for$='1']:hover + .activated-cat,
+input[id='image-2']:checked ~ .carousel label[for$='2']:hover + .activated-cat,
+input[id='image-3']:checked ~ .carousel label[for$='3']:hover + .activated-cat,
+input[id='image-4']:checked ~ .carousel label[for$='4']:hover + .activated-cat,
+input[id='image-5']:checked ~ .carousel label[for$='5']:hover + .activated-cat
+{
+    visibility: visible;
+}
+
+input[id='image-1']:checked ~ .carousel label[for$='1'] ~ .activated-cat:hover,
+input[id='image-2']:checked ~ .carousel label[for$='2'] ~ .activated-cat:hover,
+input[id='image-3']:checked ~ .carousel label[for$='3'] ~ .activated-cat:hover,
+input[id='image-4']:checked ~ .carousel label[for$='4'] ~ .activated-cat:hover,
+input[id='image-5']:checked ~ .carousel label[for$='5'] ~ .activated-cat:hover
+{
+    filter: brightness(50%);
+}
+
+.modal-window-label
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.modal-window
+{
+    display: none;
+}
+
+.modal-window
+{
+    display: none;
+    pointer-events: none;
+}
+
+input[id='modal-window-1']:checked ~ .main-content .carousel .modal-window-1
+{
+    display: block;
+    pointer-events: all;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .95);
+    z-index: 100;
+}
+
+.left-panel
+{
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+}
+
+.right-panel
+{
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    text-align: left;
+}
+
+.describe_of_cat
+{
+    color: rgb(128, 128, 128);
+}
+
+.info_about_cat span
+{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.additional_info
+{
+    color: rgb(128, 128, 128);
+    margin-bottom: 50px;
+}
+
+.footer-content
+{
+    padding: 10px;
+    border-top: 1px solid #d3d3d3;
+    position: relative;
+    top: 320px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-content p
+{
+    margin: 5px;
+}
+
+.footer-content a[href]
+{
+    text-decoration: none;
+    color: #4c4cd8;
+}
+
+.contacts
+{
+    width: 250px;
+    display: inline-block;
+}
+
+.contacts a[href]::before
+{
+    content: '\2709';
+    color: #000;
+}
+
+.copyright
+{
+    width: 300px;
+    text-align: right;
+    padding-top: 25px;
+    float: right;
+}
+
+.organization-name::before
+{
+    content: '\00AB';
+    color: #000;
+}
+
+.organization-name::after
+{
+    content: '\00BB';
+    color: #000;
+}
