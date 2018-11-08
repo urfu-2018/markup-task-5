@@ -2,8 +2,115 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <title>Задача «Про котиков»</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+    <input type="radio" name="slider" id="1" class="hidden id1">
+    <input type="radio" name="slider" id="2" class="hidden id2" checked>
+    <input type="radio" name="slider" id="3" class="hidden id3">
+    <input type="radio" name="slider" id="4" class="hidden id4">
+    <header class="header">
+        <h1 class="title">Мурмаркет</h1>
+    </header>
+    <div class="slider">
+        <label for="1">
+            <img class="photo photo1 opacity" src="img/vasiliy.png">
+            <input class="shadow" type="text" value="Василий Петрович" readonly>
+            <div class="modal">
+                <img class="photo" src="img/vasiliy.png">
+                <div class="inline description">
+                    <h1 class="name inline">Василий Петрович</h1>
+                    <img class="close" src="img/cancel.png">
+                    <p>
+                        Серьёзный, самостоятельный<br>
+                        Любит сидеть на собеседованиях со студентами и с умным видом кивать им
+                    </p>
+                    <p>
+                        Возраст: 2 года<br>
+                        Порода: мейн-кун<br>
+                        Болезни: нет
+                    </p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+            </div>
+        </label>
+        <label for="2">
+            <img class="photo photo2 opacity" src="img/murzik.png">
+            <input class="shadow" type="text" value="Мурзик" readonly>
+            <div class="modal">
+                <img class="photo" src="img/murzik.png">
+                <div class="inline description">
+                    <h1 class="name inline">Мурзик</h1>
+                    <img class="close" src="img/cancel.png">
+                    <p>
+                        Ну чего ты лапками закрываешься, дурёха<br>
+                        Очень стеснительный
+                    </p>
+                    <p>
+                        Возраст: 6 месяцев<br>
+                        Порода: нет<br>
+                        Болезни: нет
+                    </p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+            </div>
+        </label>
+        <label for="3">
+            <img class="photo photo3 opacity" src="img/jojo.png">
+            <input class="shadow" type="text" value="ДжоДжо" readonly>
+            <div class="modal">
+                <img class="photo" src="img/dio.png">
+                <div class="inline description">
+                    <h1 class="name inline">Дио Брандо</h1>
+                    <img class="close" src="img/cancel.png">
+                    <p>
+                        Ехал JoJo через JoJo<br>
+                        Видит JoJo &ndash; в JoJo<br>
+                        Сунул JoJo JoJo в JoJo<br>
+                        Kono Dio Da!!
+                    </p>
+                    <p>
+                        Возраст: 16 лет<br>
+                        Порода: нет<br>
+                        Болезни: нет
+                    </p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+            </div>
+        </label>
+        <label for="4">
+            <img class="photo photo4 opacity" src="img/bolek+lelek.png">
+            <input class="shadow" type="text" value="Болек и Лёлек" readonly>
+            <div class="modal">
+                <img class="photo" src="img/vasiliy.png">
+                <div class="inline description">
+                    <h1 class="name inline">Василий Петрович</h1>
+                    <img class="close" src="img/cancel.png">
+                    <p>
+                        Серьёзный, самостоятельный<br>
+                        Любит сидеть на собеседованиях со студентами и с умным видом кивать им
+                    </p>
+                    <p>
+                        Возраст: 2 года<br>
+                        Порода: мейн-кун<br>
+                        Болезни: нет
+                    </p>
+                    <p>Статус: ищет хозяина</p>
+                </div>
+            </div>
+        </label>
+    </div>
+    
+    <footer class="footer">
+        <div class="column">
+            Напишите нам:<br>
+            <a class="link email" href="">cats@babuli.ru</a><br>
+            <a class="link email" href="">vnuchek@babuli.ru</a>
+        </div><!-- 
+     --><div class="column right">
+            &copy; 2018 ООО "<a class="link" href="">Бабушкины котятки</a>"
+        </div>
+    </footer>
 </body>
 </html>
