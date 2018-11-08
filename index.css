@@ -1,3 +1,7 @@
+/* ===================================================== */
+/* == Размещаем header, footer и карусель на странице == */
+/* ===================================================== */
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -90,14 +94,19 @@ footer .contacts li::before
 {
     padding-top: 70px;
     margin: 0 auto;
+    overflow: hidden;
     min-height: calc(100vh - 110px);
 }
 
-/* Slide show */
+/* ========================= */
+/* == Slide Show Карусель == */
+/* ========================= */
 
 .wrapper {
 	height: 250px;
     position: absolute;
+    overflow: inherit
+    ;
     top: 20%;
     left: calc((100% - 1740px)/2);
 }
@@ -227,7 +236,9 @@ footer .contacts li::before
 	border-radius: 50%;
 }
 
-/* Modals staff */
+/* ================================================ */
+/* == Попытка сделать модальное окно при нажатии == */
+/* ================================================ */
 
 #slide1:checked ~ .slider .slide1:hover > .name,
 #slide2:checked ~ .slider .slide2:hover > .name,
@@ -236,16 +247,6 @@ footer .contacts li::before
 #slide5:checked ~ .slider .slide5:hover > .name
 {
     visibility: visible;
-}
-
-.black-window,
-.black-window > .item1,
-.black-window > .item2,
-.black-window > .item3,
-.black-window > .item4,
-.black-window > .item5
-{
-    display: none;
 }
 
 .black-window
@@ -269,14 +270,14 @@ footer .contacts li::before
     color: #fff;
 }
 
-.cat-info > img
+.black-window .cat-info > img
 {
     float: left;
     width: 50%;
     margin-right: 20px;
 }
 
-.cat-info .close
+.black-window .cat-info .close
 {
     width: 25px;
     height: 25px;
@@ -286,16 +287,33 @@ footer .contacts li::before
     cursor: pointer;
 }
 
-.cat-description
+.black-window .cat-info .description
 {
-    margin-top: 70px;
-    font-family: Verdana, sans-serif;
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.cat-description h2
+.black-window .cat-info .description p
 {
-    font-size: 36px;
-    margin: 10px 0;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.black-window .cat-info .description h1
+{
+    font-size: 40px;
+    font-weight: lighter;
+    margin: 30px 0;
+}
+
+.black-window,
+.black-window > .item1,
+.black-window > .item2,
+.black-window > .item3,
+.black-window > .item4,
+.black-window > .item5
+{
+    display: none;
 }
 
 .modal-item1:checked ~ .black-window .item1,
