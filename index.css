@@ -8,6 +8,7 @@ body
 a
 {
     text-decoration: none;
+    color: #fff;
 }
 
 header
@@ -37,6 +38,11 @@ footer
     bottom: 0;
     width: 100%;
     background: #fff;
+}
+
+footer a
+{
+    color: #000;
 }
 
 .company
@@ -78,23 +84,20 @@ main
 .carousel > label span
 {
     display: none;
-}
-
-.carousel > label:hover > span
-{
-    display: block;
-    vertical-align: center;
     text-align: center;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
 }
 
-.carousel > label img
+.carousel > label > img
 {
     vertical-align: center;
 }
 
 nav
 {
-    width: 100px;
+    width: 66px;
     margin: 300px auto 0;
 }
 
@@ -113,17 +116,33 @@ input[type='radio']
     display: none;
 }
 
-input[type='radio']:not(:checked) ~ section > label img
+input[type='radio']:not(:checked) ~ section > label > img
 {
     height: 206px;
     opacity: .8;
 }
 
-input[id='item-1']:checked ~ section > .carousel-item-1 img,
-input[id='item-2']:checked ~ section > .carousel-item-2 img,
-input[id='item-3']:checked ~ section > .carousel-item-3 img,
-input[id='item-4']:checked ~ section > .carousel-item-4 img,
-input[id='item-5']:checked ~ section > .carousel-item-5 img
+input[id='item-1']:checked ~ section > .carousel-item-1:hover span,
+input[id='item-2']:checked ~ section > .carousel-item-2:hover span,
+input[id='item-3']:checked ~ section > .carousel-item-3:hover span,
+input[id='item-4']:checked ~ section > .carousel-item-4:hover span,
+input[id='item-5']:checked ~ section > .carousel-item-5:hover span
+{
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    line-height: 270px;
+    display: block;
+    z-index: 1;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+}
+
+input[id='item-1']:checked ~ section > .carousel-item-1 > img,
+input[id='item-2']:checked ~ section > .carousel-item-2 > img,
+input[id='item-3']:checked ~ section > .carousel-item-3 > img,
+input[id='item-4']:checked ~ section > .carousel-item-4 > img,
+input[id='item-5']:checked ~ section > .carousel-item-5 > img
 {
     height: 256px;
     opacity: 1;
@@ -140,14 +159,11 @@ input[id='item-5']:checked ~ .carousel-nav > .carousel-nav-item5
 
 input[id='item-1']:checked ~ .carousel
 {
-    transition: 1s;
-    transition-property: left;
     left: calc(50% - 128px);
 }
 
 input[id='item-2']:checked ~ .carousel
 {
-    transition: 1s;
     left: calc(50% - 205px - 128px);
 }
 
@@ -164,4 +180,41 @@ input[id='item-4']:checked ~ .carousel
 input[id='item-5']:checked ~ .carousel
 {
     left: calc(50% - 205px * 4 - 128px);
+}
+
+.pop-up-window
+{
+    position: absolute;
+    background: rgba(0,0,0,.4);
+    padding: 15%;
+    z-index: 2;
+    display: none;
+    width: 70%;
+    height: 70%;
+}
+
+.pop-up-window p,
+.pop-up-window img
+{
+    display: inline-block;
+}
+
+.pop-up-window p
+{
+    width: 30%;
+    height: 40%;
+    text-align: center;
+}
+
+.close-pop-up
+{
+    font-size: 60px;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+
+.pop-up-window:target
+{
+    display: block;
 }
