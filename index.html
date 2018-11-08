@@ -3,7 +3,181 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
 <body>
+<header>
+    <h1>Мурмаркет</h1>
+</header>
+<div class="header-padding"></div>
+<section class="carousel-wrapper">
+    <input type="radio" checked="checked" id="cat1" class="carousel-selector cat1" name="carousel-selector">
+    <input type="radio" id="cat2" class="carousel-selector cat2" name="carousel-selector">
+    <input type="radio" id="cat3" class="carousel-selector cat3" name="carousel-selector">
+    <input type="radio" id="cat4" class="carousel-selector cat4" name="carousel-selector">
+    <input type="radio" id="cat5" class="carousel-selector cat5" name="carousel-selector">
+    <input type="radio" id="cat6" class="carousel-selector cat6" name="carousel-selector">
+    <input type="radio" id="cat7" class="carousel-selector cat7" name="carousel-selector">
+    <input type="radio" id="cat8" class="carousel-selector cat8" name="carousel-selector">
+    <section class="carousel">
+        <article class="carousel-item">
+            <article class="background"><h1>Хосе</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat1"><img src="hose.jpeg" alt="Cat"></label>
+        </article>
+        <article class="carousel-item">
+            <article class="background"><h1>Кекс</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat2"><img src="keks.jpeg" alt="Cat"></label>
+        </article>
+        <article class="carousel-item">
+            <article class="background"><h1>Марфа</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat3"><img src="marfa.jpeg" alt="Cat"></label>
+        </article>
+        <article class="carousel-item">
+            <article class="background"><h1>Морти</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat4"><img src="morti.jpeg" alt="Cat"></label>
+        </article>
+        <article class="carousel-item">
+            <article class="background"><h1>Морзи</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat5"><img src="morzi.jpeg" alt="Cat"></label>
+        </article>
+        <article class="carousel-item">
+            <article class="background"><h1>Сандра</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat6"><img src="sandra.jpeg" alt="Cat"></label>
+        </article>
+        <article class="carousel-item">
+            <article class="background"><h1>Тучка</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat7"><img src="tuchka.jpeg" alt="Cat"></label>
+        </article>
+        <article class="carousel-item">
+            <article class="background"><h1>Туся</h1></article>
+            <a class="modal-dialog-link" href="#modal-dialog"></a>
+            <label for="cat8"><img src="tucya.jpeg" alt="Cat"></label>
+        </article>
+
+    </section>
+    <nav class="carousel-labels">
+        <aside class="label">
+            <label for="cat1"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat2"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat3"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat4"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat5"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat6"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat7"></label>
+        </aside>
+        <aside class="label">
+            <label for="cat8"></label>
+        </aside>
+    </nav>
+
+    <section class="modal-dialog" id="modal-dialog">
+        <article class="cat-item">
+            <img src="hose.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Хосе</h1></article>
+            <article class="description">
+                Очень спокойная, ласкова кошка,
+                общительная и очень умная.<br>
+                Возраст - 8 месяцев<br>
+                Перкасно контактирует с детьми и взрослыми<br>
+            </article>
+        </article>
+        <article class="cat-item">
+            <img src="keks.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Кекс</h1></article>
+            <article class="description">
+                Возраст ~ 2 года<br>
+                Любит ловить мышей<br>
+            </article>
+        </article>
+        <article class="cat-item">
+            <img src="marfa.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Марфа</h1></article>
+            <article class="description">
+                Общительный, умный кот<br>
+                Любит играть с веревочкой<br>
+                Возраст 5 месяца<br>
+            </article>
+        </article>
+        <article class="cat-item">
+            <img src="morti.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Морти</h1></article>
+            <article class="description">
+                это супер ласковая, легкая, мягкая молодая кошка.<br>
+                Возраст - 5 лет<br>
+            </article>
+        </article>
+        <article class="cat-item">
+            <img src="morzi.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Морзи</h1></article>
+            <article class="description">
+                Очень ласковый, общительный кот<br>
+                Любит, когда его гладят<br>
+                Возраст ~ 3 года<br>
+            </article>
+        </article>
+        <article class="cat-item">
+            <img src="sandra.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Сандра</h1></article>
+            <article class="description">
+                может нравиться быть с собакой,<br>
+                он определенно любит других кошек.<br>
+                Возраст: 7 месяцев<br>
+            </article>
+        </article>
+        <article class="cat-item">
+            <img src="tuchka.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Тучка</h1></article>
+            <article class="description">
+                Ласковая, дружелюбная, активная кошка.
+                Перкасно уживается с другими кошками
+                Любит играть с детьми<br>
+                Возраст: 1 год<br>
+            </article>
+        </article>
+        <article class="cat-item">
+            <img src="tucya.jpeg" alt="Cat">
+            <nav class="close"><a href="#">X</a></nav>
+            <article class="name"><h1>Туся</h1></article>
+            <article class="description">
+                Туся ОЧЕНЬ нежный и ласковый. Она немного кушетка с картофелем
+                / коленом. Она привыкла жить с другой кошкой.
+            </article>
+        </article>
+    </section>
+</section>
+<div class="footer-padding"></div>
+<footer>
+    <article class="write-us">Напишите:</article>
+    <article class="copyright">&copy; 2018 OOO &laquo;<a href="#">Бабушкины котятки</a>&raquo;</article>
+    <a href="#">cats@babuli.ru</a>
+    <a href="#">vnuchek@babuli.ru</a>
+</footer>
 </body>
 </html>
