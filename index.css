@@ -1,0 +1,478 @@
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header
+{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: 0 0 4px 0 #969696;
+}
+
+.header__h1
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+    color: #000;
+}
+
+.header__h1:first-letter
+{
+    color: red;
+
+}
+
+.main__carousel
+{
+    margin: 150px 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.slide1:checked ~ .carousel__items .carousel__item1,
+.slide2:checked ~ .carousel__items .carousel__item2,
+.slide3:checked ~ .carousel__items .carousel__item3,
+.slide4:checked ~ .carousel__items .carousel__item4,
+.slide5:checked ~ .carousel__items .carousel__item5,
+.slide6:checked ~ .carousel__items .carousel__item6,
+.slide7:checked ~ .carousel__items .carousel__item7,
+.slide8:checked ~ .carousel__items .carousel__item8,
+.slide9:checked ~ .carousel__items .carousel__item9,
+.slide10:checked ~ .carousel__items .carousel__item10
+{
+    width: 325px;
+    height: 210px;
+    margin: 0 128px;
+}
+
+.slide1:checked ~ .carousel__items .carousel__item1 .carousel__item-image,
+.slide2:checked ~ .carousel__items .carousel__item2 .carousel__item-image,
+.slide3:checked ~ .carousel__items .carousel__item3 .carousel__item-image,
+.slide4:checked ~ .carousel__items .carousel__item4 .carousel__item-image,
+.slide5:checked ~ .carousel__items .carousel__item5 .carousel__item-image,
+.slide6:checked ~ .carousel__items .carousel__item6 .carousel__item-image,
+.slide7:checked ~ .carousel__items .carousel__item7 .carousel__item-image,
+.slide8:checked ~ .carousel__items .carousel__item8 .carousel__item-image,
+.slide9:checked ~ .carousel__items .carousel__item9 .carousel__item-image,
+.slide10:checked ~ .carousel__items .carousel__item10 .carousel__item-image
+{
+    opacity: 1;
+}
+
+.carousel__item-label
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.carousel__item-label:hover
+{
+    cursor: pointer;
+}
+
+.slide1:checked ~ .carousel__items .carousel__item1 .carousel__item-label,
+.slide2:checked ~ .carousel__items .carousel__item2 .carousel__item-label,
+.slide3:checked ~ .carousel__items .carousel__item3 .carousel__item-label,
+.slide4:checked ~ .carousel__items .carousel__item4 .carousel__item-label,
+.slide5:checked ~ .carousel__items .carousel__item5 .carousel__item-label,
+.slide6:checked ~ .carousel__items .carousel__item6 .carousel__item-label,
+.slide7:checked ~ .carousel__items .carousel__item7 .carousel__item-label,
+.slide8:checked ~ .carousel__items .carousel__item8 .carousel__item-label,
+.slide9:checked ~ .carousel__items .carousel__item9 .carousel__item-label,
+.slide10:checked ~ .carousel__items .carousel__item10 .carousel__item-label
+{
+    bottom: auto;
+}
+
+.slide1:checked ~ .carousel__items .carousel__item1 .popup-label:hover,
+.slide2:checked ~ .carousel__items .carousel__item2 .popup-label:hover,
+.slide3:checked ~ .carousel__items .carousel__item3 .popup-label:hover,
+.slide4:checked ~ .carousel__items .carousel__item4 .popup-label:hover,
+.slide5:checked ~ .carousel__items .carousel__item5 .popup-label:hover,
+.slide6:checked ~ .carousel__items .carousel__item6 .popup-label:hover,
+.slide7:checked ~ .carousel__items .carousel__item7 .popup-label:hover,
+.slide8:checked ~ .carousel__items .carousel__item8 .popup-label:hover,
+.slide9:checked ~ .carousel__items .carousel__item9 .popup-label:hover,
+.slide10:checked ~ .carousel__items .carousel__item10 .popup-label:hover 
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.slide1:checked ~ .carousel__items
+{
+    transform: translateX(0);
+}
+
+.slide2:checked ~ .carousel__items
+{
+    transform: translateX(-595px);
+}
+
+.slide3:checked ~ .carousel__items
+{
+    transform: translateX(-1190px);
+}
+
+.carousel__input
+{
+    display: none;
+}
+
+.carousel__items
+{
+    padding: 0;
+    margin: 0;
+    width: 6000px;
+    transition: .5s;
+}
+
+.carousel__item
+{
+    width: 275px;
+    height: 183px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0 160px;
+}
+
+.popup-checkbox
+{
+    display: none;
+}
+
+.popup-label
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+    transition: .3s;
+    opacity: 0;
+    z-index: 99;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.carousel__popup-title
+{
+    font-size: 26px;
+    color: #fff;
+    margin-top: 65px;
+    display: block;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.carousel__item-image
+{
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+}
+
+.carousel__item-image:hover + .popup-label
+{
+    bottom: 0;
+}
+
+.popup-container
+{
+    display: none;
+}
+
+.popup1:checked ~ .popup-container
+{
+    display: block;
+}
+
+.check
+{
+    display: none;
+}
+
+.check__label
+{
+    width: 40px;
+    height: 30px;
+    position: relative;
+    transition: .3s;
+    transform: rotate(90deg);
+    margin: 145px 0 15px 15px;
+    display: inline-block;
+}
+
+.check__label:hover
+{
+    cursor: pointer;
+}
+
+.check__line
+{
+    width: 100%;
+    height: 4px;
+    background: #3a3434;
+    display: inline-block;
+    border-radius: 5px;
+    transition: .3s;
+    position: absolute;
+}
+
+.check__line_top
+{
+    top: 0;
+}
+
+.check__line_middle
+{
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.check__line_bottom
+{
+    bottom: 0;
+}
+
+.check:checked + .check__label
+{
+    transform: rotate(0deg);
+}
+
+.list
+{
+    max-width: 1400px;
+    width: 100%;
+    margin: 30px auto 100px;
+    box-sizing: border-box;
+}
+
+.list__item
+{
+    width: 300px;
+    display: inline-block;
+    margin: 0 15px 30px;
+    box-sizing: border-box;
+    border: 1px solid #cacaca;
+    transition: .5s;
+}
+
+.list__item:hover
+{
+    box-shadow: 0 4px 10px 2px #969696;
+}
+
+.list__block-img
+{
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.list__img
+{
+    width: 300px;
+    height: 200px;
+    transition: .3s;
+}
+
+.list__img:hover
+{
+    transform: scale(1.05);
+}
+
+.list__title
+{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 0;
+    padding: 0 15px;
+    color: #3a3434;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.list__title:hover
+{
+    color: #585858;
+}
+
+.list__brief-information
+{
+    padding: 0 15px 15px;
+    transition: .3s;
+}
+
+.list__full-information
+{
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: .3s;
+}
+
+.list__p
+{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #777;
+    transition: .3s;
+}
+
+.list__p:hover
+{
+    color: #3a3434;
+}
+
+.list__p_margin
+{
+    margin: 15px 0;
+}
+
+.check:checked ~ .list
+{
+    padding: 0 15px;
+}
+
+.check:checked ~ .list .list__item
+{
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.check:checked ~ .list .list__block-img
+{
+    width: 100%;
+    height: 400px;
+}
+
+.check:checked ~ .list .list__img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.check:checked ~ .list .list__brief-information
+{
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+.check:checked ~ .list .list__full-information
+{
+    height: auto;
+    overflow: auto;
+    padding: 0 15px 15px;
+}
+
+.footer
+{
+    border-top: 1px solid #cacaca;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 100;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.footer__write-us
+{
+    box-sizing: border-box;
+    margin: 15px 0;
+    color: #777;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer__p-email
+{
+    font-size: 14px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 15px;
+}
+
+.footer__email
+{
+    width: 50%;
+    float: left;
+}
+
+.footer__icon
+{
+    height: 15px;
+    width: 15px;
+}
+
+.footer__link
+{
+    font-size: 14px;
+    color: #4c4cd8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer__copyright
+{
+    width: 50%;
+    float: right;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.footer__copyright-p
+{
+    margin: 30px 0 0;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 1200px)
+{
+    .main__carousel
+    {
+        display: block;
+    }
+
+    .main__desktop
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1199px)
+{
+    .main__carousel
+    {
+        display: none;
+    }
+
+    .main__desktop
+    {
+        display: block;
+    }
+}
