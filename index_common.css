@@ -3,7 +3,8 @@ body
     font-family: sans-serif;
 }
 
-body > header{
+body > header
+{
     position: fixed;
     top: 0;
     left: 0;
@@ -15,16 +16,19 @@ body > header{
     border-bottom: 1px solid #e1e1e1;
 }
 
-body > header > div{
+body > header > div
+{
     font-size: 32px;
-    font-family: 'PT Sans Narrow'; 
+    font-family: 'PT Sans Narrow';
 }
 
-body > header > div::first-letter{
+body > header > div::first-letter
+{
     color: red;
 }
 
-body > footer{
+body > footer
+{
     position: fixed;
     bottom: 0;
     left: 0;
@@ -35,47 +39,55 @@ body > footer{
     border-top: 1px solid #e1e1e1;
 }
 
-body > footer > div{
+body > footer > div
+{
     display: inline-block;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.mails > div{
+.mails > div
+{
     color: gray;
 }
 
-body > footer a{
+body > footer a
+{
     text-decoration: none;
     color: #4c4cd8;
 }
 
-body > footer .mails a {
+body > footer .mails a
+{
     
     display: inline-block;
     vertical-align: super;
     line-height: 1.25;
 }
 
-body > footer ul{
+body > footer ul
+{
     padding: 0;
     margin: 0;
     margin-top: 5px;
 }
 
-body > footer li{
-    list-style-image: url("baseline_mail_outline_black_18dp.png");
+body > footer li
+{
+    list-style-image: url('baseline_mail_outline_black_18dp.png');
     list-style-position: inside;
 }
 
-body > footer .TM{
+body > footer .TM
+{
     float: right;
     height: 100%;
     width: 250px;
     position: relative;
 }
 
-body > footer .TM > div{
+body > footer .TM > div
+{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -83,6 +95,7 @@ body > footer .TM > div{
 
 body > article
 {
+    position: relative;
     padding-top: 60px;
-    text-align: center;
+    width: 100%;
 }

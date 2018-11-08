@@ -13,107 +13,167 @@
     <header>
         <div>Мурмаркет</div>
     </header>
-    <article>
-        <input type="checkbox" id="flow">
-        <label for="flow" class="flow"></label>
-        <br>
-        <section class="cat-info">
-            <div class="avatar">
-                <img src="avatars/Боря.jpg" alt="кот">
-            </div>
-            <div class="info">
-                <header class="name">Боря</header>
-                <div class="short-info">
-                    <ul>
-                        <li>Возраст: 6 месяцев</li>
-                        <li>Порода: нет</li>
-                        <li>Болезни: нет</li>
-                    </ul>
-                    <div>
-                        Статус: в поисках
+    <article class="carousel">
+        <input type="radio" name="cat" id="borya" class="borya" checked>
+        <input type="radio" name="cat" id="archi" class="archi">
+        <input type="radio" name="cat" id="cat" class="cat">
+        <input type="radio" name="cat" id="carl" class="carl">
+        <div class="wrap">
+            <section class="cat-info">
+                <input type="checkbox" name="modal" id="modal_borya" class="modal_borya">
+                <div class="avatar">
+                    <img src="avatars/Боря.jpg" alt="кот">
+                    <label for="modal_borya">
+                        <span class="name">
+                            <span>Боря</span> 
+                        </span>
+                    </label>
+                    <label for="borya"></label>
+                </div>
+                <div class="modal">
+                    <div class="black_back"></div>
+                    <div class="window">
+                        <label for="modal_borya">×</label>
+                        <div class="cat_image">
+                            <img src="avatars/Боря.jpg" alt="кот">
+                        </div>
+                        <div class="info">
+                            <header class="name">Боря</header>
+                            <ul>
+                                <li>Возраст: 6 месяцев</li>
+                                <li>Порода: нет</li>
+                                <li>Болезни: нет</li>
+                            </ul>
+                            <div>Статус: в поисках</div>
+                            <div>
+                                Борька игрвый мальчишка, постояно ищет
+                                приключения на свой пушистый зад. Но проблем
+                                не создает. Акуратный и ласковый пацан.
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="full-info">
-                    <div>
-                        Борька игрвый мальчишка, постояно ищет приключения на свой пушистый зад.
-                        Но проблем не создает. Акуратный и ласковый пацан.
+            </section>
+            <section class="cat-info">
+                <input type="checkbox" name="modal" id="modal_archi" class="modal_archi">
+                <div class="avatar">
+                    <img src="avatars/Арчибальт.jpg" alt="кот">
+                    <label for="modal_archi">
+                        <span class="name">
+                            <span>Арчибальт</span>
+                        </span>
+                    </label>
+                    <label for="archi"></label>
+                </div>
+                <div class="modal">
+                    <div class="black_back"></div>
+                    <div class="window">
+                        <label for="modal_archi">×</label>
+                        <div class="cat_image">
+                            <img src="avatars/Арчибальт.jpg" alt="кот">
+                        </div>
+                        <div class="info">
+                            <header class="name">Арчибальт</header>
+                            <ul>
+                                <li>Возраст: 6 месяцев</li>
+                                <li>Порода: нет</li>
+                                <li>Болезни: нет</li>
+                            </ul>
+                            <div>Статус: в поисках</div>
+                            <div>
+                                Борька игрвый мальчишка, постояно ищет
+                                приключения на свой пушистый зад. Но проблем
+                                не создает. Акуратный и ласковый пацан.
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="cat-info">
-            <div class="avatar">
-                <img src="avatars/Карл.jpg" alt="кот">
-            </div>
-            <div class="info">
-                <header class="name">Карл</header>
-                <div class="short-info">
-                    <ul>
-                        <li>Возраст: 2 года</li>
-                        <li>Порода: нет</li>
-                        <li>Болезни: нет</li>
-                    </ul>
-                    <div>
-                        Статус: в поисках
+            </section>
+            <section class="cat-info">
+                <input type="checkbox" name="modal" id="modal_cat" class="modal_cat">
+                <div class="avatar">
+                    <img src="avatars/Кот.jpg" alt="кот">
+                    <label for="modal_cat">
+                        <span class="name">
+                            <span>Кот</span>
+                        </span>
+                    </label>
+                    <label for="cat"></label>
+                </div>
+                <div class="modal">
+                    <div class="black_back"></div>
+                    <div class="window">
+                        <label for="modal_cat">×</label>
+                        <div class="cat_image">
+                            <img src="avatars/Кот.jpg" alt="кот">
+                        </div>
+                        <div class="info">
+                            <header class="name">Кот</header>
+                            <ul>
+                                <li>Возраст: 6 месяцев</li>
+                                <li>Порода: нет</li>
+                                <li>Болезни: нет</li>
+                            </ul>
+                            <div>Статус: в поисках</div>
+                            <div>
+                                Борька игрвый мальчишка, постояно ищет
+                                приключения на свой пушистый зад. Но проблем
+                                не создает. Акуратный и ласковый пацан.
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="full-info">
-                    <div>
-                        Карл добрый, толстый и любит есть. Много, часто, всегда.
+            </section>
+            <section class="cat-info">
+                <input type="checkbox" name="modal" id="modal_carl" class="modal_carl">
+                <div class="avatar">
+                    <img src="avatars/Карл.jpg" alt="кот">
+                    <label for="modal_carl">
+                        <span class="name">
+                            <span>Карл</span>
+                        </span>
+                    </label>
+                    <label for="carl"></label>
+                </div>
+                <div class="modal">
+                    <div class="black_back"></div>
+                    <div class="window">
+                        <label for="modal_carl">×</label>
+                        <div class="cat_image">
+                            <img src="avatars/Карл.jpg" alt="кот">
+                        </div>
+                        <div class="info">
+                            <header class="name">Карл</header>
+                            <ul>
+                                <li>Возраст: 6 месяцев</li>
+                                <li>Порода: нет</li>
+                                <li>Болезни: нет</li>
+                            </ul>
+                            <div>Статус: в поисках</div>
+                            <div>
+                                Борька игрвый мальчишка, постояно ищет
+                                приключения на свой пушистый зад. Но проблем
+                                не создает. Акуратный и ласковый пацан.
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="cat-info">
-            <div class="avatar">
-                <img src="avatars/Арчибальт.jpg" alt="кот">
-            </div>
-            <div class="info">
-                <header class="name">
-                    Арчибальт Великий IV драконорожденный освободитель цепей и не цепей
-                </header>
-                <div class="short-info">
-                    <ul>
-                        <li>Возраст: 8 месяцев</li>
-                        <li>Порода: Драконорожденный</li>
-                        <li>Болезни: нет</li>
-                    </ul>
-                    <div>
-                        Статус: в поисках железного трона
-                    </div>
-                </div>
-                <div class="full-info">
-                    <div>
-                        Арчибальт. Просто Арчибальт.
-                        Если его злить, то он натравит на тебя своих летающих дружков.
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="cat-info">
-            <div class="avatar">
-                <img src="avatars/Кот.jpg" alt="кот">
-            </div>
-            <div class="info">
-                <header class="name">Кот</header>
-                <div class="short-info">
-                    <ul>
-                        <li>Возраст: 3 года</li>
-                        <li>Порода: нет</li>
-                        <li>Болезни: нет</li>
-                    </ul>
-                    <div>
-                        Статус: в поисках
-                    </div>
-                </div>
-                <div class="full-info">
-                    <div>
-                        Просто Кот. Делает кошачьи дела.
-                        Спит, играет, ест. А что еще должен делать кот?
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
+        <div class="pagination">
+            <label for="borya">
+                <span class="borya">●</span>
+            </label>
+            <label for="archi">
+                <span class="archi">●</span>
+            </label>
+            <label for="cat">
+                <span class="cat">●</span>
+            </label>
+            <label for="carl">
+                <span class="carl">●</span>
+            </label>
+        </div>
     </article>
     <footer>
         <div class="mails">
@@ -128,5 +188,4 @@
         </div>
     </footer>
 </body>
-
 </html>

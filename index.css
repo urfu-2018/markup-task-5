@@ -1,57 +1,9 @@
-@keyframes rotate
-{
-    0%
-    {
-
-        transform: rotate(0deg) scaleX(1);
-    }
-
-    100%
-    {
-        transform: rotate(90deg) scaleX(.5);
-    }
-}
-
-input
+.modal
 {
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
+    overflow: hidden;
     width: 0;
-}
-
-input + .flow
-{
-    transition: all .3s;
-}
-
-input + .flow:hover
-{
-    cursor: pointer;
-}
-
-input + .flow
-{
-
-    transform: rotate(0deg) scaleY(1);
-    display: block;
-    background-image: url('baseline-view_week.svg');
-    background-position: left center;
-    background-size: auto 100%;
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-}
-
-input:checked + .flow
-{
-    transform: rotate(90deg) scaleX(.5);
-}
-
-.cat-info .name:hover
-{
-    text-decoration: underline black;
+    height: 0;
 }
 
 .cat-info .avatar img
@@ -60,38 +12,17 @@ input:checked + .flow
     z-index: -2;
 }
 
-.cat-info .avatar:hover
+.carousel
 {
-    box-shadow: inset 0 0 16px #eee;
-}
-
-/*вертска списком*/
-
-input:checked ~ .cat-info
-{
-    display: block;
-    width: 450px;
-    margin: auto;
-    margin-top: 20px;
-    padding: 20px;
-}
-
-input:checked ~ .cat-info .avatar
-{
-    text-align: center;
-    height: 250px;
-}
-
-input:checked ~ .cat-info .info .short-info
-{
-    display: none;
+    height: 100%;
     overflow: hidden;
 }
 
-input:checked ~ .cat-info .avatar img
+.carousel .wrap
 {
-    height: 100%;
-    width: auto;
+    position: relative;
+    width: 2000px;
+    height: 320px;
 }
 
 /*вертска плиткой*/
@@ -101,14 +32,305 @@ input:checked ~ .cat-info .avatar img
     text-align: left;
     display: inline-block;
     margin: 20px;
-    width: 250px;
-    border: 1px solid #e1e1e1;
 }
 
-.cat-info:hover
+.cat-info input
 {
-    box-shadow: 0 0 4px #aaa;
-    cursor: pointer;
+    position: absolute;
+}
+
+.cat-info label
+{
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+
+.avatar img
+{
+    transition: all .5s;
+}
+
+input.borya:not(:checked) ~ div .modal_borya ~ .avatar img,
+input.archi:not(:checked) ~ div .modal_archi ~ .avatar img,
+input.cat:not(:checked) ~ div .modal_cat ~ .avatar img,
+input.carl:not(:checked) ~ div .modal_carl ~ .avatar img
+{
+    opacity: .7;
+    height: 200px;
+}
+
+input.borya:checked ~ div .modal_borya ~ .avatar img,
+input.archi:checked ~ div .modal_archi ~ .avatar img,
+input.cat:checked ~ div .modal_cat ~ .avatar img,
+input.carl:checked ~ div .modal_carl ~ .avatar img
+{
+    height: 250px;
+}
+
+.wrap
+{
+    transition: all;
+    transition-duration: .5s;
+}
+
+.avatar
+{
+    position: relative;
+}
+
+.avatar label
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.avatar .name
+{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+input
+{
+    display: none;
+}
+
+.avatar .name span
+{
+    position: relative;
+    top: calc(50% - .75em);
+    margin: 0;
+    font-size: 45px;
+    color: white;
+}
+
+.black_back
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+}
+
+.modal
+{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.modal .window
+{
+    position: relative;
+    top: calc(50% - 200px);
+    width: 850px;
+    height: 400px;
+    color: white;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.cat_image
+{
+    width: 500px;
+    float: left;
+}
+
+.cat_image img
+{
+    max-width: 400px;
+    max-height: 100%;
+}
+
+.info
+{
+    padding: 0;
+    width: 300px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.info header
+{
+    font-size: 32px;
+}
+
+.window label
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 48px;
+}
+
+.avatar > label[for^='modal']
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*borya*/
+
+input.borya:checked ~ .wrap
+{
+    left: calc(50% - 225px);
+}
+
+input.borya:checked ~ .wrap .avatar:hover label[for='borya']
+{
+    display: none;
+}
+
+input.borya:checked ~ .wrap .avatar:hover label[for='modal_borya'] .name
+{
+    display: inline;
+}
+
+input.borya:checked ~ .pagination span.borya
+{
+    color: #888;
+}
+
+input.borya:not(:checked) ~ .wrap .avatar label[for='modal_borya']
+{
+    display: none;
+}
+
+input.modal_borya:not(:checked) ~ .modal
+{
+    display: none;
+}
+
+/*archi*/
+
+input.archi:checked ~ .wrap
+{
+    left: calc(50% - 600px);
+}
+
+input.archi:checked ~ .wrap .avatar:hover label[for='archi']
+{
+    display: none;
+}
+
+input.archi:checked ~ .wrap .avatar:hover label[for='modal_archi'] .name
+{
+    display: inline;
+}
+
+input.archi:checked ~ .pagination span.archi
+{
+    color: #888;
+}
+
+input.archi:not(:checked) ~ .wrap .avatar label[for='modal_archi']
+{
+    display: none;
+}
+
+input.modal_archi:not(:checked) ~ .modal
+{
+    display: none;
+}
+
+/*cat*/
+
+input.cat:checked ~ .wrap
+{
+    left: calc(50% - 900px);
+}
+
+input.cat:checked ~ .wrap .avatar:hover label[for='cat']
+{
+    display: none;
+}
+
+input.cat:checked ~ .wrap .avatar:hover label[for='modal_cat'] .name
+{
+    display: inline;
+}
+
+input.cat:checked ~ .pagination span.cat
+{
+    color: #888;
+}
+
+input.cat:not(:checked) ~ .wrap .avatar label[for='modal_cat']
+{
+    display: none;
+}
+
+input.modal_cat:not(:checked) ~ .modal
+{
+    display: none;
+}
+
+/*carl*/
+
+input.carl:checked ~ .wrap
+{
+    left: calc(50% - 1190px);
+}
+
+input.carl:checked ~ .wrap .avatar:hover label[for='carl']
+{
+    display: none;
+}
+
+input.carl:checked ~ .wrap .avatar:hover label[for='modal_carl'] .name
+{
+    display: inline;
+}
+
+input.carl:checked ~ .pagination span.carl
+{
+    color: #888;
+}
+
+input.carl:not(:checked) ~ .wrap .avatar label[for='modal_carl']
+{
+    display: none;
+}
+
+input.modal_carl:not(:checked) ~ .modal
+{
+    display: none;
+}
+
+.pagination
+{
+    text-align: center;
+}
+
+.pagination span
+{
+    transition: all .5s;
+    font-size: 20px;
+    color: #ccc;
 }
 
 input:not(:checked) ~ .cat-info .info .full-info
@@ -127,32 +349,13 @@ input:not(:checked) ~ .cat-info .name
 
 .cat-info .avatar
 {
-    width: 100%;
-    height: 160px;
-    overflow: hidden;
+    height: 100%;
 }
 
 .cat-info .avatar img
 {
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
-    min-height: 100%;
-    max-height: 400px;
-}
-
-.cat-info .info .name
-{
-    font-weight: 600;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.cat-info .info
-{
-    color: #555;
-    font-size: .75em;
-    padding: 10px;
 }
 
 .cat-info .info div
