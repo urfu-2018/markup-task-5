@@ -2,15 +2,19 @@ body
 {
     font: 18px Helvetica, serif;
     color: #444;
+    width: 99%;
 }
-
-/* header */
 
 header
 {
     font: 32px 'PT SansNarrow';
     text-align: center;
     line-height: .75rem;
+    position: fixed;
+    width: 99%; /* нужно отдельно указать, равный body - из-за position */
+    z-index: 2000;
+    border: 2px solid #aaa;
+    background: #fff;
 }
 
 header > p::first-letter
@@ -18,32 +22,24 @@ header > p::first-letter
     color: #f00;
 }
 
-header,
-main,
-footer
-{
-    width: 97%;
-}
-
-body
-{
-    border: 2px solid #aaa;
-}
-
 footer,
 main
 {
-    border-top: 2px solid #aaa;
+    border: 2px solid #aaa;
+    border-top: 0;
+    width: 100%; /* не 99, а 100, ведь наследует 99 от body */
+    overflow: hidden;
 }
 
 /* main */
 
 .carousel
 {
-    display: table;
+    display: inline-block;
     text-align: center;
-    padding: 20px;
+    padding: 100px 0;
     margin: 0 auto;
+    white-space: nowrap;
 }
 
 input
@@ -55,8 +51,8 @@ input
 {
     width: 300px;
     vertical-align: middle;
-    padding: 40px;
-    display: none; /* нужные потом будут отображены в input:checked */
+    padding: 5vw;
+    display: inline-block;
     position: relative;
 }
 
@@ -67,58 +63,139 @@ input
     object-fit: cover;
 }
 
-.overlay-container
-{
-    display: table;
-    position: absolute;
-    bottom: 0;
-    width: 300px;
-    height: 300px;
-    margin: 45px 0;
-}
+/* боковые котики меньше и прозрачнее */
 
-.overlay
-{
-    /* выставляет правильную позицию */
-
-    background: rgba(0, 0, 0, .4);
-    opacity: 0;
-    transition: .5s ease;
-    color: #f1f1f1;
-    font-size: 36px;
-
-    display: table-cell;
-    vertical-align: middle;
-}
-
-input:checked + div + input + .cat-box:hover .overlay
+.inp-cat1:checked ~ .cat1 > label > .cat-photo,
+.inp-cat2:checked ~ .cat2 > label > .cat-photo,
+.inp-cat3:checked ~ .cat3 > label > .cat-photo,
+.inp-cat4:checked ~ .cat4 > label > .cat-photo,
+.inp-cat5:checked ~ .cat5 > label > .cat-photo,
+.inp-cat6:checked ~ .cat6 > label > .cat-photo,
+.inp-cat7:checked ~ .cat7 > label > .cat-photo,
+.inp-cat8:checked ~ .cat8 > label > .cat-photo,
+.inp-cat9:checked ~ .cat9 > label > .cat-photo,
+.inp-cat10:checked ~ .cat10 > label > .cat-photo
 {
     opacity: 1;
+    height: 300px;
+    width: 300px;
 }
 
-/* я попробовал, но с nth-чтонибудь у меня так и не получилось */
-
-input:checked + div,
-input:checked + div + input + div,
-input:checked + div + input + div + input + div
-{
-    display: inline-block;
-}
-
-input:checked + div > label > .cat-photo,
-input:checked + div + input + div + input + div > label > .cat-photo
+.cat-photo
 {
     opacity: .7;
     height: 240px;
     width: 240px;
 }
 
-/* оверлей перекрывал инпуты */
+.overlay-container
+{
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    margin: 72px -300px;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
+    transition: .5s ease;
+    text-align: center;
+}
 
-input:checked + div > .overlay-container,
-input:checked + div + input + div + input + div > .overlay-container
+.overlay
+{
+    color: #f1f1f1;
+    font-size: 36px;
+}
+
+.overlay-container,
+.modal-box
 {
     display: none;
+}
+
+.inp-cat1:checked ~ .cat1 .overlay-container,
+.inp-cat2:checked ~ .cat2 .overlay-container,
+.inp-cat3:checked ~ .cat3 .overlay-container,
+.inp-cat4:checked ~ .cat4 .overlay-container,
+.inp-cat5:checked ~ .cat5 .overlay-container,
+.inp-cat6:checked ~ .cat6 .overlay-container,
+.inp-cat7:checked ~ .cat7 .overlay-container,
+.inp-cat8:checked ~ .cat8 .overlay-container,
+.inp-cat9:checked ~ .cat9 .overlay-container,
+.inp-cat10:checked ~ .cat10 .overlay-container
+{
+    display: initial;
+}
+
+.inp-cat1:checked ~ .cat1:hover .overlay-container,
+.inp-cat2:checked ~ .cat2:hover .overlay-container,
+.inp-cat3:checked ~ .cat3:hover .overlay-container,
+.inp-cat4:checked ~ .cat4:hover .overlay-container,
+.inp-cat5:checked ~ .cat5:hover .overlay-container,
+.inp-cat6:checked ~ .cat6:hover .overlay-container,
+.inp-cat7:checked ~ .cat7:hover .overlay-container,
+.inp-cat8:checked ~ .cat8:hover .overlay-container,
+.inp-cat9:checked ~ .cat9:hover .overlay-container,
+.inp-cat10:checked ~ .cat10:hover .overlay-container
+{
+    /* отображает оверлей */
+    opacity: 1;
+}
+
+/* отображение модалочек */
+
+input[name='modal']:checked + div + .modal-box
+{
+    display: block;
+}
+
+.modal-box
+{
+    position: fixed;
+    z-index: 4000;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .8);
+    height: 100%;
+    width: 100%;
+}
+
+.modal-box-content
+{
+    height: 50%;
+    width: 50%;
+    white-space: normal;
+    margin: 20vh 20vw;
+    color: #fff;
+    text-align: left;
+    display: table;
+}
+
+.modal-photo-section,
+.modal-text-section
+{
+    display: table-cell;
+    width: 50%;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.modal-cat-name
+{
+    font-size: 36px;
+}
+
+.modal-photo
+{
+    height: 50vh;
+}
+
+.exit
+{
+    float: right;
+    width: 50px;
+    filter: invert(100%);
+    /* файл - с черным крестиком, так проще всего исправить :) */
 }
 
 /* footer */
@@ -128,6 +205,7 @@ footer
     display: table;
     table-layout: fixed;
     font: 14px Arial;
+    width: 100%;
 }
 
 a
@@ -167,4 +245,56 @@ a
     display: table-cell;
     text-align: right;
     vertical-align: bottom;
+}
+
+/* scroll */
+
+.inp-cat1:checked ~ .cat-box
+{
+    transform: translate(100%);
+}
+
+.inp-cat2:checked ~ .cat-box
+{
+    transform: translate(1vw);
+}
+
+.inp-cat3:checked ~ .cat-box
+{
+    transform: translate(-31vw);
+}
+
+.inp-cat4:checked ~ .cat-box
+{
+    transform: translate(-64vw);
+}
+
+.inp-cat5:checked ~ .cat-box
+{
+    transform: translate(-96vw);
+}
+
+.inp-cat6:checked ~ .cat-box
+{
+    transform: translate(-128vw);
+}
+
+.inp-cat7:checked ~ .cat-box
+{
+    transform: translate(-161vw);
+}
+
+.inp-cat8:checked ~ .cat-box
+{
+    transform: translate(-193vw);
+}
+
+.inp-cat9:checked ~ .cat-box
+{
+    transform: translate(-225vw);
+}
+
+.inp-cat10:checked ~ .cat-box
+{
+    transform: translate(-258vw);
 }
