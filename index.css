@@ -1,0 +1,617 @@
+a
+{
+    text-decoration: none;
+    color: #000;
+}
+
+body
+{
+    margin: 0;
+}
+
+a:hover
+{
+    color: #8170c0;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+.view-mode-button
+{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    margin: 20px;
+}
+
+.view-mode-button:hover
+{
+    cursor: pointer;
+}
+
+.view-mode-button img
+{
+    width: 50px;
+    height: 50px;
+    transform: rotate(90deg);
+}
+
+input[type='checkbox']
+{
+    visibility: hidden;
+    position: absolute;
+}
+
+input[type='checkbox']:checked ~ label img
+{
+    transform: rotate(180deg);
+}
+
+input[type='checkbox']:checked ~ .cell-mode
+{
+    display: none;
+}
+
+input[type='checkbox']:checked ~ .gallery-mode
+{
+    display: block;
+}
+
+.gallery-mode
+{
+    width: 100%;
+    position: relative;
+    display: none;
+    height: 500px;
+    overflow: hidden;
+}
+
+.cell-mode
+{
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-page
+{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.kitty-box
+{
+    width: 250px;
+    border: 1px solid #cfcfcf;
+    margin: 10px;
+    display: inline-block;
+}
+
+.kitty-box:hover
+{
+    box-shadow: 0 0 10px #808080;
+}
+
+.header-with-img
+{
+    overflow: hidden;
+    height: 180px;
+}
+
+.header-with-img img
+{
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    transition: all .5s ease-out;
+}
+
+.header-with-img img:hover
+{
+    transform: scale(1.1);
+}
+
+.about-kitty
+{
+    padding: 10px;
+    text-align: left;
+}
+
+.list-mode-info
+{
+    display: none;
+}
+
+.kitty-name
+{
+    margin: 0;
+    font-weight: 300;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cell-mode-info
+{
+    transition: all .3s ease-out;
+}
+
+.cell-mode-info:hover
+{
+    color: #8170c0;
+    cursor: default;
+    transform: translate(3px, 0);
+}
+
+.page-header
+{
+    border-bottom: 1px solid #cfcfcf;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'PT Sans Narrow', arial;
+    font-size: 32px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+}
+
+.page-header::first-letter
+{
+    color: #f00;
+}
+
+footer
+{
+    z-index: 999;
+    font-size: 14px;
+    border-top: 1px solid #cfcfcf;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.copyright
+{
+    padding: 15px;
+    float: right;
+    margin-top: 38px;
+    text-align: right;
+}
+
+.contacts
+{
+    padding: 15px;
+    text-align: left;
+    float: left;
+}
+
+footer a
+{
+    color: #4c4cd8;
+}
+
+footer a:hover
+{
+    color: #f00;
+    cursor: pointer;
+}
+
+input[id='cat-1']:checked ~ .gallery
+{
+    left: calc(50% - 200px);
+}
+
+input[id='cat-1']:checked ~ .gallery .cat-1
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-1']:checked ~ .gallery .cat-1:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-1']:checked ~ nav label[for='cat-1']
+{
+    background: #808080;
+}
+
+input[id='cat-2']:checked ~ .gallery
+{
+    left: calc(50% - 620px);
+}
+
+input[id='cat-2']:checked ~ .gallery .cat-2
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-2']:checked ~ .gallery .cat-2:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-2']:checked ~ nav label[for='cat-2']
+{
+    background: #808080;
+}
+
+input[id='cat-3']:checked ~ .gallery
+{
+    left: calc(50% - 990px);
+}
+
+input[id='cat-3']:checked ~ .gallery .cat-3
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-3']:checked ~ .gallery .cat-3:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-3']:checked ~ nav label[for='cat-3']
+{
+    background: #808080;
+}
+
+input[id='cat-4']:checked ~ .gallery
+{
+    left: calc(50% - 1390px);
+}
+
+input[id='cat-4']:checked ~ .gallery .cat-4
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-4']:checked ~ .gallery .cat-4:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-4']:checked ~ nav label[for='cat-4']
+{
+    background: #808080;
+}
+
+input[id='cat-5']:checked ~ .gallery
+{
+    left: calc(50% - 1890px);
+}
+
+input[id='cat-5']:checked ~ .gallery .cat-5
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-5']:checked ~ .gallery .cat-5:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-5']:checked ~ nav label[for='cat-5']
+{
+    background: #808080;
+}
+
+input[id='cat-6']:checked ~ .gallery
+{
+    left: calc(50% - 2330px);
+}
+
+input[id='cat-6']:checked ~ .gallery .cat-6
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-6']:checked ~ .gallery .cat-6:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-6']:checked ~ nav label[for='cat-6']
+{
+    background: #808080;
+}
+
+input[id='cat-7']:checked ~ .gallery
+{
+    left: calc(50% - 2730px);
+}
+
+input[id='cat-7']:checked ~ .gallery .cat-7
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-7']:checked ~ .gallery .cat-7:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-7']:checked ~ nav label[for='cat-7']
+{
+    background: #808080;
+}
+
+input[id='cat-8']:checked ~ .gallery
+{
+    left: calc(50% - 3160px);
+}
+
+input[id='cat-8']:checked ~ .gallery .cat-8
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-8']:checked ~ .gallery .cat-8:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-8']:checked ~ nav label[for='cat-8']
+{
+    background: #808080;
+}
+
+input[id='cat-9']:checked ~ .gallery
+{
+    left: calc(50% - 3590px);
+}
+
+input[id='cat-9']:checked ~ .gallery .cat-9
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-9']:checked ~ .gallery .cat-9:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-9']:checked ~ nav label[for='cat-9']
+{
+    background: #808080;
+}
+
+input[id='cat-10']:checked ~ .gallery
+{
+    left: calc(50% - 4030px);
+}
+
+input[id='cat-10']:checked ~ .gallery .cat-10
+{
+    transform: scale(1);
+    opacity: 1;
+}
+
+input[id='cat-10']:checked ~ .gallery .cat-10:hover .kitty-name-view
+{
+    display: block;
+}
+
+input[id='cat-10']:checked ~ nav label[for='cat-10']
+{
+    background: #808080;
+}
+
+.gallery
+{
+    z-index: 1;
+    position: absolute;
+    width: 5000px;
+    text-align: left;
+    margin-top: 40px;
+    transition: all .5s ease-out;
+}
+
+.gallery-kitty-box
+{
+    display: inline-block;
+    position: relative;
+    transform: scale(.8);
+    opacity: .7;
+    transition: all .5s ease-out;
+}
+
+.gallery-kitty-box img
+{
+    height: 300px;
+}
+
+.kitty-name-view
+{
+    display: none;
+    background: rgba(0,0,0,.5);
+    top: 0;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: 300px;
+}
+
+.kitty-name-view label
+{
+    display: block;
+    height: 300px;
+    width: 100%;
+    padding-top: 130px;
+    font-size: 30px;
+    font-weight: 100;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.kitty-name-view label:hover
+{
+    cursor: pointer;
+}
+
+.kitty-name-view h1
+{
+    
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    
+    
+}
+
+.kitty-name-view h1:hover
+{
+    cursor: pointer;
+}
+
+.nav-buttons
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #c2c1c1;
+    border-radius: 8px;
+}
+
+nav
+{
+    cursor: default;
+    z-index: 1;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 380px;
+}
+
+.full-info
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    min-height: 100%;
+    text-align: center;
+}
+
+.kitty-info
+{
+    position: relative;
+    display: none;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.full-info-img
+{
+    height: 400px;
+}
+
+.kitty-description
+{
+    display: table-cell;
+    width: 300px;
+    vertical-align: middle;
+    text-align: left;
+    padding: 20px;
+    color: #fff;
+}
+
+.kitty-description h1
+{
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.full-info-exit
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(1.4);
+    color: #fff;
+}
+
+.full-info-exit:hover
+{
+    cursor: pointer;
+}
+
+input[id='without-info']:not(:checked) ~ .full-info
+{
+    z-index: 900;
+    background: rgba(0, 0, 0, .9);
+}
+
+input[id='info-cat-1']:checked ~ .full-info .cat-1
+{
+    display: table;
+}
+
+input[id='info-cat-2']:checked ~ .full-info .cat-2
+{
+    display: table;
+}
+
+input[id='info-cat-3']:checked ~ .full-info .cat-3
+{
+    display: table;
+}
+
+input[id='info-cat-4']:checked ~ .full-info .cat-4
+{
+    display: table;
+}
+
+input[id='info-cat-5']:checked ~ .full-info .cat-5
+{
+    display: table;
+}
+
+input[id='info-cat-6']:checked ~ .full-info .cat-6
+{
+    display: table;
+}
+
+input[id='info-cat-7']:checked ~ .full-info .cat-7
+{
+    display: table;
+}
+
+input[id='info-cat-8']:checked ~ .full-info .cat-8
+{
+    display: table;
+}
+
+input[id='info-cat-9']:checked ~ .full-info .cat-9
+{
+    display: table;
+}
+
+input[id='info-cat-10']:checked ~ .full-info .cat-10
+{
+    display: table;
+}

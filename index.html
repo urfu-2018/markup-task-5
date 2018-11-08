@@ -3,7 +3,516 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
 <body>
+    <main class="main-page">
+        <header class="page-header">
+            Мурмаркет
+        </header>
+        <input id="other-view-mode" type="checkbox" name="view-mode" checked>
+        <label for="other-view-mode" class="view-mode-button">
+            <img 
+                alt="Change view mode" 
+                src="icon.svg"
+            >
+        </label>
+        <section class="cell-mode">
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img alt="kitty img" src="https://look.com.ua/pic/201604/1280x960/look.com.ua-160849.jpg">
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Ловелас</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 7 месяцев<br>
+                        Порода: белый пушистик<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img 
+                        alt="kitty img" 
+                        src="https://www.otdih.pro/images/mixx/2015-11/2de8d3493349c8c2.jpg"
+                    >
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Исенгрим Фаоильтиарна</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 4 года<br>
+                        Порода: полосатый чертяка<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img alt="kitty img" src="https://i12.fotocdn.net/s7/212/user_l/484/2234901459.jpg">
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Дженни</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 4 месяца<br>
+                        Порода: беляшик<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img 
+                        alt="kitty img" 
+                        src="http://kotovasia.net/wp-content/uploads/2017/09/baklushi.jpg"
+                    >
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Лёня</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 3 годика<br>
+                        Порода: британский лежачий<br>
+                        Болезни: лень<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img alt="kitty img" src="https://w-dog.ru/wallpapers/6/2/347053652646281.jpg">
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Сэмми "Чертовы Гуки" Джонсон</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 1 год<br>
+                        Порода: черный ведьмачий<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img alt="kitty img" src="https://dl.backbook.me/full/ca3cb5f0ff.jpg">
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Пушок</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 2 года<br>
+                        Порода: рыжий шерстяка<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                    <p class="list-mode-info">
+                        Пушистый рыжик<br>
+                        Возраст 2 года<br>
+                        Пушок очень добрый и любит много кушать. Покроет вас слоем шерсти за один проход, 
+                        чем обезопасит вас от замерзания зимой
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img alt="kitty img" src="http://cdn1.mygazeta.com/i/2012/03/cats_081.jpg">
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Комочек Рон</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 4 месяца<br>
+                        Порода: британский шерстяка<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                    <p class="list-mode-info">
+                        Маленький и комковатый друг<br>
+                        Возраст 4 месяца<br>
+                        Комочек Рон очень серьезный, несмотря на свою милую внешность. 
+                        Это неудивительно - он стал ходить на спецкурс от Котяндекса
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img 
+                        alt="kitty img" 
+                        src="https://w-dog.ru/wallpapers/6/3/315678165250995.jpg"
+                    >
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Энни "Кокетка"</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 8 месяцев<br>
+                        Порода: азиатский рыжик<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                    <p class="list-mode-info">
+                        Кокетливая и веселая<br>
+                        Возраст 8 месяцев<br>
+                        Энни начала покарять сердца котов с ранних лет! Ей нужна любящая семья, 
+                        но будьте осторожны - коты будут тайно бегать на свиданки
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img 
+                        alt="kitty img" 
+                        src="https://c.wallhere.com/photos/32/e7/cat_face_fluffy_eyes_thick-578936.jpg!d"
+                    >
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Старичок Билли</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 10 лет<br>
+                        Порода: сибирский бандюган<br>
+                        Болезни: склероз<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                    <p class="list-mode-info">
+                        Спокойный и мудрый старичок<br>
+                        Возраст 10 лет<br>
+                        Билли повидал многое за свою жизнь, и, какжется, доволен тем, как он ее прожил. 
+                        Но ему нужен хороший друг
+                    </p>
+                </section>
+            </article>
+            <article class="kitty-box">
+                <header class="header-with-img">
+                    <img 
+                        alt="kitty img" 
+                        src="https://w-dog.ru/wallpapers/5/16/335325243995023.jpg"
+                    >
+                </header>
+                <section class="about-kitty">
+                    <h1 class="kitty-name"><a href="#">Милашка Пэппа</a></h1>
+                    <p class="cell-mode-info">
+                        Возраст: 5 лет<br>
+                        Порода: персидский перс<br>
+                        Болезни: нет<br><br>
+                        Статус: ищет хозяина
+                    </p>
+                    <p class="list-mode-info">
+                        Очаровательная кисонька<br>
+                        Возраст 5 лет<br>
+                        Пэппа до сих пор отходит от своего недавнего романа с сиамским котом, так что 
+                        ей очень нужна семья, готовая к ее любви ко всяким авантюрам
+                    </p>
+                </section>
+            </article>
+        </section>
+        <section class="gallery-mode">
+            <input id="cat-1" type="radio" name="active-kitty" checked>
+            <input id="cat-2" type="radio" name="active-kitty">
+            <input id="cat-3" type="radio" name="active-kitty">
+            <input id="cat-4" type="radio" name="active-kitty">
+            <input id="cat-5" type="radio" name="active-kitty">
+            <input id="cat-6" type="radio" name="active-kitty">
+            <input id="cat-7" type="radio" name="active-kitty">
+            <input id="cat-8" type="radio" name="active-kitty">
+            <input id="cat-9" type="radio" name="active-kitty">
+            <input id="cat-10" type="radio" name="active-kitty">
+            <section class="gallery">
+                <article class="gallery-kitty-box cat-1">
+                    <label for="cat-1">
+                        <img 
+                            alt="kitty img" 
+                            src="https://look.com.ua/pic/201604/1280x960/look.com.ua-160849.jpg"
+                        >
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-1">Ловелас</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-2">
+                    <label for="cat-2">
+                        <img 
+                            alt="kitty img" 
+                            src="https://www.otdih.pro/images/mixx/2015-11/2de8d3493349c8c2.jpg"
+                        >
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-2">Исенгрим Фаоильтиарна</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-3">
+                    <label for="cat-3">
+                        <img alt="kitty img" src="https://i12.fotocdn.net/s7/212/user_l/484/2234901459.jpg">
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-3">Дженни</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-4">
+                    <label for="cat-4">
+                        <img 
+                            alt="kitty img" 
+                            src="http://kotovasia.net/wp-content/uploads/2017/09/baklushi.jpg"
+                        >
+                    </label>
+                    <section class="kitty-name-view">
+                            <label for="info-cat-4">Лёня</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-5">
+                    <label for="cat-5">
+                        <img alt="kitty img" src="https://w-dog.ru/wallpapers/6/2/347053652646281.jpg">
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-5">Сэмми "Чертовы Гуки" Джонсон</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-6">
+                    <label for="cat-6">
+                        <img alt="kitty img" src="https://dl.backbook.me/full/ca3cb5f0ff.jpg">
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-6">Пушок</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-7">
+                    <label for="cat-7">
+                        <img alt="kitty img" src="http://cdn1.mygazeta.com/i/2012/03/cats_081.jpg">
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-7">Комочек Рон</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-8">
+                    <label for="cat-8">
+                        <img alt="kitty img" src="https://w-dog.ru/wallpapers/6/3/315678165250995.jpg">
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-8">Энни "Кокетка"</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-9">
+                    <label for="cat-9">
+                        <img 
+                            alt="kitty img" 
+                            src="https://c.wallhere.com/photos/32/e7/cat_face_fluffy_eyes_thick-578936.jpg!d"
+                        >
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-9">Старичок Билли</label>
+                    </section>
+                </article>
+                <article class="gallery-kitty-box cat-10">
+                    <label for="cat-10">
+                        <img alt="kitty img" src="https://w-dog.ru/wallpapers/5/16/335325243995023.jpg">
+                    </label>
+                    <section class="kitty-name-view">
+                        <label for="info-cat-10">Милашка Пэппа</label>
+                    </section>
+                </article>
+            </section>
+            <nav>
+                <label class="nav-buttons" for="cat-1"></label>
+                <label class="nav-buttons" for="cat-2"></label>
+                <label class="nav-buttons" for="cat-3"></label>
+                <label class="nav-buttons" for="cat-4"></label>
+                <label class="nav-buttons" for="cat-5"></label>
+                <label class="nav-buttons" for="cat-6"></label>
+                <label class="nav-buttons" for="cat-7"></label>
+                <label class="nav-buttons" for="cat-8"></label>
+                <label class="nav-buttons" for="cat-9"></label>
+                <label class="nav-buttons" for="cat-10"></label>
+            </nav>
+        </section>
+        <input id="without-info" type="radio" name="full-info-mode" checked>
+        <input id="info-cat-1" type="radio" name="full-info-mode">
+        <input id="info-cat-2" type="radio" name="full-info-mode">
+        <input id="info-cat-3" type="radio" name="full-info-mode">
+        <input id="info-cat-4" type="radio" name="full-info-mode">
+        <input id="info-cat-5" type="radio" name="full-info-mode">
+        <input id="info-cat-6" type="radio" name="full-info-mode">
+        <input id="info-cat-7" type="radio" name="full-info-mode">
+        <input id="info-cat-8" type="radio" name="full-info-mode">
+        <input id="info-cat-9" type="radio" name="full-info-mode">
+        <input id="info-cat-10" type="radio" name="full-info-mode">
+        <section class="full-info">
+            <article class="kitty-info cat-1">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://look.com.ua/pic/201604/1280x960/look.com.ua-160849.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Ловелас</h1>
+                    <p>Харизматичный и любвеобильный</p>
+                    <p>Возраст 7 месяцев</p>
+                    <p>
+                        В прошлой жизни, скорее всего, был моделью
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-2">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://www.otdih.pro/images/mixx/2015-11/2de8d3493349c8c2.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Исенгрим Фаоильтиарна</h1>
+                    <p>Не вы вибираете его, а он вас</p>
+                    <p>Возраст 4 года</p>
+                    <p>
+                        Если он обратит на вас свое драгоценное внимание - считайте, что вам повезло
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-3">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://i12.fotocdn.net/s7/212/user_l/484/2234901459.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Дженни</h1>
+                    <p>Ей нужна хорошая компания!</p>
+                    <p>Возраст 4 месяца</p>
+                    <p>
+                        У Дженни экзистенциальный кризис! Кто-нибудь, возьмите её к себе и объясните, 
+                        что жизнь прекрасна и без смысла!
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-4">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="http://kotovasia.net/wp-content/uploads/2017/09/baklushi.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Лёня</h1>
+                    <p>Ленивый и толстенький</p>
+                    <p>Возраст 3 года</p>
+                    <p>
+                        Он очень хочет стать успешным котом, но начнет он с завтрашнего дня
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-5">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://w-dog.ru/wallpapers/6/2/347053652646281.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Сэмми "Чертовы Гуки" Джонсон</h1>
+                    <p>Ветеран боевых дейтсивй в Котьетнаме</p>
+                    <p>Возраст 1 год</p>
+                    <p>
+                        Очень милый и общительный котик станет лучшим другом для ваших детей. 
+                        Изредка уходит в запой, вспоминая боевых товарищей
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-6">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://dl.backbook.me/full/ca3cb5f0ff.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Пушок</h1>
+                    <p>Пушистый рыжик</p>
+                    <p>Возраст 2 года</p>
+                    <p>
+                        Пушок очень добрый и любит много кушать. Покроет вас слоем шерсти за один проход, 
+                        чем обезопасит вас от замерзания зимой
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-7">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="http://cdn1.mygazeta.com/i/2012/03/cats_081.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Комочек Рон</h1>
+                    <p>Маленький и комковатый друг</p>
+                    <p>Возраст 4 месяца</p>
+                    <p>
+                        Комочек Рон очень серьезный, несмотря на свою милую внешность. 
+                        Это неудивительно - он стал ходить на спецкурс от Котяндекса
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-8">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://w-dog.ru/wallpapers/6/3/315678165250995.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Энни "Кокетка"</h1>
+                    <p>Кокетливая и веселая</p>
+                    <p>Возраст 8 месяцев</p>
+                    <p>
+                        Энни начала покарять сердца котов с ранних лет! Ей нужна любящая семья, 
+                        но будьте осторожны - коты будут тайно бегать на свиданки
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-9">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://c.wallhere.com/photos/32/e7/cat_face_fluffy_eyes_thick-578936.jpg!d"
+                >
+                <section class="kitty-description">
+                    <h1>Старичок Билли</h1>
+                    <p>Спокойный и мудрый старичок</p>
+                    <p>Возраст 10 лет</p>
+                    <p>
+                        Билли повидал многое за свою жизнь, и, какжется, доволен тем, как он ее прожил. 
+                        Но ему нужен хороший друг
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+            <article class="kitty-info cat-10">
+                <img 
+                    class="full-info-img" 
+                    alt="kitty img" 
+                    src="https://w-dog.ru/wallpapers/5/16/335325243995023.jpg"
+                >
+                <section class="kitty-description">
+                    <h1>Милашка Пэппа</h1>
+                    <p>Очаровательная кисонька</p>
+                    <p>Возраст 5 лет</p>
+                    <p>
+                        Пэппа до сих пор отходит от своего недавнего романа с сиамским котом, так что 
+                        ей очень нужна семья, готовая к ее любви ко всяким авантюрам
+                    </p>
+                </section>
+                <label class="full-info-exit" for="without-info">&#10006;</label>
+            </article>
+        </section>
+        <footer>
+            <section class="contacts">
+                Напишите нам:<br>
+                &#9993;<a href="#">cats@babuli.ru</a><br>
+                &#9993;<a href="#">vnuchek@babuli.ru</a>
+            </section>
+            <section class="copyright">
+                    &copy; 2018 ООО &laquo;<a href="#">Бабушкины котятки</a>&raquo;
+            </section>
+        </footer>
+    </main>
 </body>
 </html>
