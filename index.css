@@ -87,7 +87,7 @@
     white-space: nowrap;
 }
 
-.carousel-name
+.name-container
 {
     text-align: center;
     font-size: 30px;
@@ -96,14 +96,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
     visibility: hidden;
 }
 
-.cat-1-selector:checked ~ .carousel .cat-1-carousel-item:hover .carousel-name,
-.cat-2-selector:checked ~ .carousel .cat-2-carousel-item:hover .carousel-name,
-.cat-3-selector:checked ~ .carousel .cat-3-carousel-item:hover .carousel-name,
-.cat-4-selector:checked ~ .carousel .cat-4-carousel-item:hover .carousel-name,
-.cat-5-selector:checked ~ .carousel .cat-5-carousel-item:hover .carousel-name
+.cat-1-selector:checked ~ .carousel .cat-1-carousel-item:hover .name-container,
+.cat-2-selector:checked ~ .carousel .cat-2-carousel-item:hover .name-container,
+.cat-3-selector:checked ~ .carousel .cat-3-carousel-item:hover .name-container,
+.cat-4-selector:checked ~ .carousel .cat-4-carousel-item:hover .name-container,
+.cat-5-selector:checked ~ .carousel .cat-5-carousel-item:hover .name-container
 {
     visibility: visible;
 }
@@ -124,6 +126,15 @@
 .cat-5-selector:checked ~ .carousel .cat-5-carousel-item .cat-picture
 {
     opacity: 1;
+}
+
+.cat-1-selector:not(:checked) ~ .carousel .cat-1-carousel-item .cat-picture,
+.cat-2-selector:not(:checked) ~ .carousel .cat-2-carousel-item .cat-picture,
+.cat-3-selector:not(:checked) ~ .carousel .cat-3-carousel-item .cat-picture,
+.cat-4-selector:not(:checked) ~ .carousel .cat-4-carousel-item .cat-picture,
+.cat-5-selector:not(:checked) ~ .carousel .cat-5-carousel-item .cat-picture
+{
+    height: 267px;
 }
 
 .cat-picture
@@ -182,10 +193,38 @@
     margin-left: 33.67%;
 }
 
-.modal-container p
+.modal-container > .cat-picture,
+.modal-container > .modal-cat-info,
+.modal-container > .modal-close
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.modal-container > .modal-cat-info,
+.modal-container > .modal-close
+{
+    height: 100%;
+}
+
+.modal-container .modal-name
+{
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-container > .modal-cat-info
 {
     color: white;
-    width: 500px;
+    width: 300px;
+    padding-left: 10px;
+}
+
+.modal-container > .modal-close
+{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
 }
 
 .modal:target
@@ -193,7 +232,7 @@
     visibility: visible;
 }
 
-.carousel-name a
+.name-container
 {
     color: white;
     font-style: normal;
