@@ -1,13 +1,5 @@
 @font-face
 {
-    font-family: 'garamondnormal';
-    src: url('./garamond.woff2') format('woff2'), url('./garamond.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face
-{
     font-family: 'Comic Sans MS', arial;
     src: url('./comic.ttf') format('truetype');
 }
@@ -29,6 +21,12 @@ header
     border-bottom: 1px solid lightgray;
 }
 
+.menu-wrapper
+{
+    position: relative;
+    left: 480px;
+}
+
 .logo-img
 {
     width: 50px;
@@ -38,8 +36,8 @@ header
 .main-title
 {
     position: relative;
-    font-family: 'PT SansNarrow', arial;
     font-size: 32px;
+    font-family: 'PT Sans Narrow';
     padding-left: 30px;
     top: -15px;
 }
@@ -53,6 +51,7 @@ header div,
 header article
 {
     display: inline-block;
+    font-family: 'pt_sans_narrowregular';
 }
 
 /* radio-bottom */
@@ -61,7 +60,7 @@ header article
 {
     position: fixed;
     left: 41%;
-    bottom: 150px;
+    bottom: 130px;
 }
 
 input[type='radio']
@@ -71,7 +70,7 @@ input[type='radio']
 
 input[type='radio'] ~ div label
  {
-    content: url('./final.png');
+    content: url('./img/final.png');
     width: 15px;
     height: 15px;
 }
@@ -100,7 +99,7 @@ input[id='slide10']:checked ~ div label[for='slide10']
 .gallery
 {
     overflow: hidden;
-    height: 500px;
+    height: 450px;
     position: relative;
     margin-top: 60px;
     margin-bottom: 90px;
@@ -143,6 +142,7 @@ input[id='slide10']:checked ~ div label[for='slide10']
     height: 100%;
     text-decoration: none;
     font-size: 40px;
+    font-family: 'Comic Sans MS', arial;
     color: #fff;
     display: none;
     z-index: 1;
@@ -153,6 +153,12 @@ input[id='slide10']:checked ~ div label[for='slide10']
 .name-wrapper
 {
     margin-top: 30%;
+}
+
+.decorator
+{
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /*photo-view сдвиг фотокарточек*/
@@ -244,6 +250,7 @@ input[id='slide10']:checked ~ .carousel .slide[id='s10'] .cat-img
     height: 100%;
     margin-left: 0;
     margin-top: 0;
+    border: none;
 }
 
 .slide
@@ -341,4 +348,38 @@ footer
     width: 100%;
     height: 90px;
     border-top: 1px solid lightgray;
+    font: normal 14px Arial;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: #4c4cd8;
+}
+
+.left
+{
+    margin-left: 50px;
+}
+
+.left p
+{
+    margin: 5px;
+}
+
+.email::before
+{
+    background-image: url('./img/mail.png');
+    background-size: 30px 20px;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    content: '';
+}
+
+.right
+{
+    position: relative;
+    bottom: 30px;
+    left: 1000px;
 }
