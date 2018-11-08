@@ -1,9 +1,189 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
+
 <body>
+    <header>Мурмаркет</header>
+    <div class="gallery">
+        <input type="radio" name="cat-radio" id="img-1">
+        <input type="radio" name="cat-radio" id="img-2" checked>
+        <input type="radio" name="cat-radio" id="img-3">
+        <input type="radio" name="cat-radio" id="img-4">
+        <input type="radio" name="cat-radio" id="img-5">
+        <input type="radio" name="cat-radio" id="img-6">
+
+        <div class="cat-box">
+            <label for="img-1"><img src="img/img1.jpg" alt="котик"></label>
+            <a href="#modal1">
+                <div class="name">
+                    <h2>Шоко</h2>
+                </div>
+            </a>
+            <div id="modal1" class="modal">
+                <div class="content">
+                    <a class="close" href="#">&times;</a>
+                    <img src="img/img1.jpg" alt="котик">
+                    <div class="cat-note">
+                        <h3>Шоко</h3>
+                        <p>Возраст: 2&nbsp;года</p>
+                        <p>Порода: шоколадный британец</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                        <p>
+                            Дружелюбный, ласковый, ручной<br>
+                            С&nbsp;другими котами в&nbsp;приятных отношениях,<br>
+                            не&nbsp;любит детей
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cat-box">
+            <label for="img-2"><img src="img/img2.jpg" alt="котик"></label>
+            <a href="#modal2">
+                <div class="name">
+                    <h2>Малыш</h2>
+                </div>
+            </a>
+            <div id="modal2" class="modal">
+                <div class="content">
+                    <a class="close" href="#">&times;</a>
+                    <img src="img/img2.jpg" alt="котик">
+                    <div class="cat-note">
+                        <h3>Малыш</h3>
+                        <p>Возраст: 4&nbsp;месяца</p>
+                        <p>Порода: нет</p>
+                        <p>Статус: ищет друзей</p>
+                        <p>
+                            Душа компании<br>
+                            Любит людей и&nbsp;цветочки.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cat-box ">
+            <label for="img-3"><img src="img/img3.jpg" alt="котик"></label>
+            <a href="#modal3">
+                <div class="name">
+                    <h2>Лимончик</h2>
+                </div>
+            </a>
+            <div id="modal3" class="modal">
+                <div class="content">
+                    <a class="close" href="#">&times;</a>
+                    <img src="img/img3.jpg" alt="котик">
+                    <div class="cat-note">
+                        <h3>Лимончик</h3>
+                        <p>Возраст: 2&nbsp;месяца</p>
+                        <p>Порода: пушистик</p>
+                        <p>Статус: ищет семью</p>
+                        <p>
+                            Нежный, ласковый<br>
+                            Любит всё живое, готов дружить
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cat-box ">
+            <label for="img-4"><img src="img/img4.jpg" alt="котик"></label>
+            <a href="#modal4">
+                <div class="name">
+                    <h2>Рыжик</h2>
+                </div>
+            </a>
+            <div id="modal4" class="modal">
+                <div class="content">
+                    <a class="close" href="#">&times;</a>
+                    <img src="img/img4.jpg" alt="котик">
+                    <div class="cat-note">
+                        <h3>Рыжик</h3>
+                        <p>Возраст: 3&nbsp;месяца</p>
+                        <p>Порода: рыжик</p>
+                        <p>Статус: ищет хозяина</p>
+                        <p>
+                            Рыжий и&nbsp;хочет дружить<br>
+                            Готов полюбить новых хозяев
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cat-box ">
+            <label for="img-5"><img src="img/img5.jpg" alt="котик"></label>
+            <a href="#modal5">
+                <div class="name">
+                    <h2>Барон</h2>
+                </div>
+            </a>
+            <div id="modal5" class="modal">
+                <div class="content">
+                    <a class="close" href="#">&times;</a>
+                    <img src="img/img5.jpg" alt="котик">
+                    <div class="cat-note">
+                        <h3>Барон</h3>
+                        <p>Возраст: 3&nbsp;года</p>
+                        <p>Порода: красавчик</p>
+                        <p>Статус: ищет единомышленников</p>
+                        <p>
+                            Красив и&nbsp;в&nbsp;меру упитан<br>
+                            Имеет здоровый аппетит
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cat-box ">
+            <label for="img-6"><img src="img/img6.jpg" alt="котик"></label>
+            <a href="#modal6">
+                <div class="name">
+                    <h2>Мастер</h2>
+                </div>
+            </a>
+            <div id="modal6" class="modal">
+                <div class="content">
+                    <a class="close" href="#">&times;</a>
+                    <img src="img/img6.jpg" alt="котик">
+                    <div class="cat-note">
+                        <h3>Мастер</h3>
+                        <p>Возраст: 7&nbsp;месяцев</p>
+                        <p>Порода: рыжик</p>
+                        <p>Статус: ищет заботу</p>
+                        <p>
+                            Готов любить и&nbsp;быть любимым<br>
+                            Активный, спортивный, готов гулять с&nbsp;детьми
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div>
+            <p>Напишите нам:</p>
+            <a href="mailto:cats@babuli.ru">cats@babuli.ru</a><br>
+            <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a> <br>
+        </div>
+        <div>
+            2018 OOO &laquo;<a href="#">Бабушкины котята</a>&raquo;
+        </div>
+    </footer>
 </body>
+
 </html>
