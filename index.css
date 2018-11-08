@@ -149,13 +149,15 @@ footer .copyright
     width: auto;    
     margin: 0 auto;
     white-space: nowrap;
+    position: relative;
 }
 
 .slides {
     display: inline-block;
     position: relative;
 	height: 250px;
-	width: 400px;
+    width: 400px;
+    opacity: .5;
 }
 
 .slide1
@@ -167,15 +169,12 @@ footer .copyright
 {
     background-image: url(images/2.jpg);
     position: relative;
-    top: 0;
 }
 
 .slide3
 {
     background-image: url(images/3.jpg);
     position: relative;
-    top: 0;
-    left: 0;
 }
 
 .slide4
@@ -191,13 +190,33 @@ footer .copyright
 
 }
 
+#slide1:checked ~ .slider {
+    left: 800px;
+}
+
+#slide2:checked ~ .slider {
+    left: 400px;
+}
+
+#slide3:checked ~ .slider {
+    left: 0;
+}
+
+#slide4:checked ~ .slider {
+    left: -400px;
+}
+
+#slide5:checked ~ .slider {
+    left: -800px;
+}
+
+
 #slide1:checked ~ .slider > .slide1,
 #slide2:checked ~ .slider > .slide2,
 #slide3:checked ~ .slider > .slide3,
 #slide4:checked ~ .slider > .slide4,
 #slide5:checked ~ .slider > .slide5 {
-	opacity: .5;
-	z-index: 1;
+	opacity: 1;
 }
 
 .wrapper > input {
