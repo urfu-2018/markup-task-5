@@ -1,0 +1,290 @@
+header
+{
+    width: 100%;
+    height: 50px;
+    background: white;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    z-index: 1;
+}
+
+header::first-letter
+{
+    color: red;
+}
+
+main
+{
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+main > div
+{
+    width: 5440px;
+    text-align: center;
+}
+
+input.cats
+{
+    display: none;
+}
+
+nav
+{
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav > label
+{
+    display: inline-block;
+    background-color: lightblue;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+}
+
+footer
+{
+    width: 100%;
+    height: 60px;
+    background: white;
+    border-top: 1px solid gray;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+}
+
+footer a 
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+footer > div
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 5px;
+}
+
+div.contacts
+{
+    left: 0;
+    color: gray;
+}
+
+div.contacts > a::before
+{
+    content: '\2709\2002';
+    color: black;
+}
+
+img
+{
+    display: inline-block;
+    width: 500px;
+    height: 350px;
+    margin: 0 20px;
+}
+
+input[id='cat1']:not(:checked) ~ div img[alt='Kot1'],
+input[id='cat2']:not(:checked) ~ div img[alt='Kot2'],
+input[id='cat3']:not(:checked) ~ div img[alt='Kot3'],
+input[id='cat4']:not(:checked) ~ div img[alt='Kot4'],
+input[id='cat5']:not(:checked) ~ div img[alt='Kot5'],
+input[id='cat6']:not(:checked) ~ div img[alt='Kot6'],
+input[id='cat7']:not(:checked) ~ div img[alt='Kot7'],
+input[id='cat8']:not(:checked) ~ div img[alt='Kot8'],
+input[id='cat9']:not(:checked) ~ div img[alt='Kot9'],
+input[id='cat10']:not(:checked) ~ div img[alt='Kot10']
+{
+    opacity: .7;
+    height: 280px;
+}
+
+input[id='cat1']:checked ~ nav > label[for='cat1'],
+input[id='cat2']:checked ~ nav > label[for='cat2'],
+input[id='cat3']:checked ~ nav > label[for='cat3'],
+input[id='cat4']:checked ~ nav > label[for='cat4'],
+input[id='cat5']:checked ~ nav > label[for='cat5'],
+input[id='cat6']:checked ~ nav > label[for='cat6'],
+input[id='cat7']:checked ~ nav > label[for='cat7'],
+input[id='cat8']:checked ~ nav > label[for='cat8'],
+input[id='cat9']:checked ~ nav > label[for='cat9'],
+input[id='cat10']:checked ~ nav > label[for='cat10']
+{
+    border: 6px solid lightblue;
+    width: 8px;
+    height: 8px;
+    background: #2f4f4f;
+}
+
+input:checked ~ div
+{
+    transition: all .4s linear;
+    -webkit-transition: all .4s linear;
+}
+
+input[id='cat1']:checked ~ div
+{
+    transform: translateX(544px);
+}
+
+input[id='cat3']:checked ~ div
+{
+    transform: translateX(-544px);
+}
+
+input[id='cat4']:checked ~ div
+{
+    transform: translateX(-1088px);
+}
+
+input[id='cat5']:checked ~ div
+{
+    transform: translateX(-1632px);
+}
+
+input[id='cat6']:checked ~ div
+{
+    transform: translateX(-2176px);
+}
+
+input[id='cat7']:checked ~ div
+{
+    transform: translateX(-2720px);
+}
+
+input[id='cat8']:checked ~ div
+{
+    transform: translateX(-3264px);
+}
+
+input[id='cat9']:checked ~ div
+{
+    transform: translateX(-3808px);
+}
+
+input[id='cat10']:checked ~ div
+{
+    transform: translateX(-4362px);
+}
+
+/*Затемнённый фон, и текст*/
+
+div.cat
+{
+    display: inline-block;
+    position: relative;
+}
+
+div.cat > a > div
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+div.cat > a > div > p
+{
+    font-size: 30px;
+    display: none;
+}
+
+input[id='cat1']:checked ~ div > div.cat:hover img[alt='Kot1'],
+input[id='cat2']:checked ~ div > div.cat:hover img[alt='Kot2'],
+input[id='cat3']:checked ~ div > div.cat:hover img[alt='Kot3'],
+input[id='cat4']:checked ~ div > div.cat:hover img[alt='Kot4'],
+input[id='cat5']:checked ~ div > div.cat:hover img[alt='Kot5'],
+input[id='cat6']:checked ~ div > div.cat:hover img[alt='Kot6'],
+input[id='cat7']:checked ~ div > div.cat:hover img[alt='Kot7'],
+input[id='cat8']:checked ~ div > div.cat:hover img[alt='Kot8'],
+input[id='cat9']:checked ~ div > div.cat:hover img[alt='Kot9'],
+input[id='cat10']:checked ~ div > div.cat:hover img[alt='Kot10']
+{
+    filter: brightness(40%);
+    cursor: pointer;
+}
+
+input[id='cat1']:checked ~ div > div.cat1:hover > a p,
+input[id='cat2']:checked ~ div > div.cat2:hover > a p,
+input[id='cat3']:checked ~ div > div.cat3:hover > a p,
+input[id='cat4']:checked ~ div > div.cat4:hover > a p,
+input[id='cat5']:checked ~ div > div.cat5:hover > a p,
+input[id='cat6']:checked ~ div > div.cat6:hover > a p,
+input[id='cat7']:checked ~ div > div.cat7:hover > a p,
+input[id='cat8']:checked ~ div > div.cat8:hover > a p,
+input[id='cat9']:checked ~ div > div.cat9:hover > a p,
+input[id='cat10']:checked ~ div > div.cat10:hover > a p
+{
+    position: absolute;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 20px rgb(221, 9, 9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*Модальные окна*/
+
+.modal
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 2;
+}
+
+.modal a
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.modal a:hover
+{
+    color: red;
+    transform: scale(1.5);
+}
+
+.modal:target
+{
+    display: block;
+}
+
+.modal > div.modal-img
+{
+    margin: 50px 0 0 100px;
+    display: inline-block;
+}
+
+.modal > div.modal-text
+{
+    display: inline-block;
+    color: white;
+}
