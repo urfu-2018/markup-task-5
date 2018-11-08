@@ -3,7 +3,286 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="body">
+    <header class="header">
+        <h1 class="header__h1">Мурмаркет</h1>
+    </header>
+    <main class="main">
+        <div class="main__carousel">
+            <input type="radio" checked id="slide1" class="slide1 carousel__input" name="carousel">
+            <input type="radio" id="slide2" class="slide2 carousel__input" name="carousel">
+            <input type="radio" id="slide3" class="slide3 carousel__input" name="carousel">
+            <input type="radio" id="slide4" class="slide4 carousel__input" name="carousel">
+            <input type="radio" id="slide5" class="slide5 carousel__input" name="carousel">
+            <input type="radio" id="slide6" class="slide6 carousel__input" name="carousel">
+            <input type="radio" id="slide7" class="slide7 carousel__input" name="carousel">
+            <input type="radio" id="slide8" class="slide8 carousel__input" name="carousel">
+            <input type="radio" id="slide9" class="slide9 carousel__input" name="carousel">
+            <input type="radio" id="slide10" class="slide10 carousel__input" name="carousel">
+            <ul class="carousel__items">
+                <li class="carousel__item carousel__item_start"></li>
+                <li class="carousel__item carousel__item1">
+                    <input type="checkbox" id="popup1" class="popup-checkbox popup1">
+                    <label for="slide1" class="carousel__item-label"></label>
+                    <img src="images/cat-1.jpg" alt="Кот 1" title="Кот 1" class="carousel__item-image">
+                    <label for="popup1" class="popup-label">
+                        <span class="carousel__popup-title">Леонардо Леонардо Леонардо</span>
+                    </label>
+                    <div class="popup-container">
+                        <div class="popup-content">
+                            <p class="list__p">Возраст: 3 года</p>
+                            <p class="list__p">Порода: Японский</p>
+                            <p class="list__p">Болезни: Нет</p>
+                            <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel__item carousel__item2">
+                    <input type="checkbox" id="popup2" class="popup-checkbox popup2">
+                    <label for="slide2" class="carousel__item-label"></label>
+                    <img src="images/cat-2.jpg" alt="Кот 2" title="Кот 2" class="carousel__item-image">
+                    <label for="popup2" class="popup-label">
+                        <span class="carousel__popup-title">2Леонардо Леонардо Леонардо</span>
+                    </label>
+                    <div class="popup-container">
+                        <div class="popup-content">
+                            <p class="list__p">Возраст: 3 года</p>
+                            <p class="list__p">Порода: Японский</p>
+                            <p class="list__p">Болезни: Нет</p>
+                            <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel__item carousel__item3">
+                    <input type="checkbox" id="popup3" class="popup-checkbox popup3">
+                    <label for="slide3" class="carousel__item-label"></label>
+                    <img src="images/cat-3.jpg" alt="Кот 3" title="Кот 3" class="carousel__item-image">
+                    <label for="popup3" class="popup-label">
+                        <span class="carousel__popup-title">3Леонардо Леонардо Леонардо</span>
+                    </label>
+                    <div class="popup-container">
+                        <div class="popup-content">
+                            <p class="list__p">Возраст: 3 года</p>
+                            <p class="list__p">Порода: Японский</p>
+                            <p class="list__p">Болезни: Нет</p>
+                            <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="carousel__item carousel__item_finish"></li>
+            </ul>
+        </div>
+        <div class="main__desktop">
+            <input type="checkbox" id="check" class="check">
+            <label for="check" class="check__label">
+                <span class="check__line check__line_top"></span>
+                <span class="check__line check__line_middle"></span>
+                <span class="check__line check__line_bottom"></span>
+            </label>
+            <section class="list">
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-1.jpg" alt="Кот 1" title="Кот 1" class="list__img">
+                    </div>
+                    <p class="list__title">Леонардо Леонардо Леонардо</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-8.jpg" alt="Кот 2" title="Кот 2" class="list__img">
+                    </div>
+                    <p class="list__title">Рафаэль</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-3.jpg" alt="Кот 3" title="Кот 3" class="list__img">
+                    </div>
+                    <p class="list__title">Донателло</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-4.jpg" alt="Кот 4" title="Кот 4" class="list__img">
+                    </div>
+                    <p class="list__title">Микеланджело</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-5.jpg" alt="Кот 5" title="Кот 5" class="list__img">
+                    </div>
+                    <p class="list__title">Сплинтер</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-6.jpg" alt="Кот 6" title="Кот 6" class="list__img">
+                    </div>
+                    <p class="list__title">Шредер</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-7.jpg" alt="Кот 7" title="Кот 7" class="list__img">
+                    </div>
+                    <p class="list__title">Эйприл</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-2.jpg" alt="Кот 8" title="Кот 8" class="list__img">
+                    </div>
+                    <p class="list__title">Крэнг</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-9.jpg" alt="Кот 9" title="Кот 9" class="list__img">
+                    </div>
+                    <p class="list__title">Бибоп</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+                <article class="list__item">
+                    <div class="list__block-img">
+                        <img src="images/cat-10.jpg" alt="Кот 10" title="Кот 10" class="list__img">
+                    </div>
+                    <p class="list__title">Рокстеди</p>
+                    <div class="list__brief-information">
+                        <p class="list__p">Возраст: 3 года</p>
+                        <p class="list__p">Порода: Японский</p>
+                        <p class="list__p">Болезни: Нет</p>
+                        <p class="list__p list__p_margin">Статус: ищет хозяина</p>
+                    </div>
+                    <div class="list__full-information">
+                        <p class="list__p">Добрый, любопытный, ручной</p>
+                        <p class="list__p">Возрост 3 года</p>
+                        <p class="list__p">Дружит с другими котами. Является их людером, 
+                            когда дело доходит до поиска еды.</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__write-us">Напишите нам:</p>
+        <div class="footer__email">
+            <p class="footer__p-email">
+                <img src="images/lette.png" alt="Письмо" title="Письмо" class="footer__icon">
+                <a href="mail:cats@babuli.ru" class="footer__link">cats@babuli.ru</a>
+            </p>
+            <p class="footer__p-email">
+                <img src="images/lette.png" alt="Письмо" title="Письмо" class="footer__icon">
+                <a href="mail:vnuchek@babuli.ru" class="footer__link">vnuchek@babuli.ru</a>
+            </p>
+        </div>
+        <div class="footer__copyright">
+            <p class="footer__copyright-p">
+                &copy; 2018 ООО "<a href="#" class="footer__link">Бабушкины котятки</a>"
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
