@@ -6,13 +6,16 @@
 
 :root
 {
+    position: relative;
+    min-height: 100%;
     font: 14px Arial, Helvetica, sans-serif;
 }
 
 body
 {
-    overflow: hidden;
+    overflow-x: hidden;
     margin-top: 0;
+    margin-bottom: 60px;
 }
 
 .main-header
@@ -41,10 +44,19 @@ body
 
 /*----------Carousel----------*/
 
-
-.carousel-slide-switch
+.carousel-slide-switch,
+.modal-switch
 {
     display: none;
+}
+
+.cat-carousel
+{
+    margin-top: 100px;
+    text-align: center;
+    white-space: nowrap;
+
+    transition: .4s linear;
 }
 
 .switch-1:checked ~ .cat-carousel
@@ -123,14 +135,14 @@ body
 .switch-9:checked ~ .cat-carousel .slide-9:hover .slide-overlay,
 .switch-10:checked ~ .cat-carousel .slide-10:hover .slide-overlay
 {
-    display: initial;
+    display: block;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .5);
-    transition: .2s;
+    cursor: pointer;
 }
 
 .switch-1:checked ~ .cat-carousel .slide-1:hover .cat-name,
@@ -152,18 +164,10 @@ body
     color: white;
 }
 
-.cat-carousel
-{
-    margin-top: 100px;
-    text-align: center;
-    white-space: nowrap;
-
-    transition: .4s linear;
-}
-
 .slide
 {
     position: relative;
+    height: 360px;
     display: inline-block;
     margin: 8px;
 
@@ -179,11 +183,6 @@ body
 .slide:hover .cat-image
 {
     transform: scale(1.1);
-}
-
-.cat-image ~ *
-{
-    display: none;
 }
 
 .cat-image
@@ -203,34 +202,97 @@ body
     transition: .2s;
 }
 
-.cat-name:hover
+/*--------Modal--------*/
+
+.modal-overlay
 {
-    color: #852475;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+
+    z-index: 2;
 }
 
-.discription
+.modal-switch-1:checked ~ .modal-windows-block .modal-window-1,
+.modal-switch-2:checked ~ .modal-windows-block .modal-window-2,
+.modal-switch-3:checked ~ .modal-windows-block .modal-window-3,
+.modal-switch-4:checked ~ .modal-windows-block .modal-window-4,
+.modal-switch-5:checked ~ .modal-windows-block .modal-window-5,
+.modal-switch-6:checked ~ .modal-windows-block .modal-window-6,
+.modal-switch-7:checked ~ .modal-windows-block .modal-window-7,
+.modal-switch-8:checked ~ .modal-windows-block .modal-window-8,
+.modal-switch-9:checked ~ .modal-windows-block .modal-window-9,
+.modal-switch-10:checked ~ .modal-windows-block .modal-window-10
 {
-    margin-left: 8px;
-    margin-right: 8px;
+    display: initial;
+}
+
+.modal-switch-1:checked ~ .modal-overlay,
+.modal-switch-2:checked ~ .modal-overlay,
+.modal-switch-3:checked ~ .modal-overlay,
+.modal-switch-4:checked ~ .modal-overlay,
+.modal-switch-5:checked ~ .modal-overlay,
+.modal-switch-6:checked ~ .modal-overlay,
+.modal-switch-7:checked ~ .modal-overlay,
+.modal-switch-8:checked ~ .modal-overlay,
+.modal-switch-9:checked ~ .modal-overlay,
+.modal-switch-10:checked ~ .modal-overlay
+{
+    display: initial;
+}
+
+.modal-window
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid darkgray;
+    border-radius: 8px;
+    background: white;
+
+    z-index: 3;
+}
+
+.modal-cat-image
+{
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    width: 40%;
+    transform: translate(0, -50%);
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cat-info
+{
+    position: absolute;
+    width: 55%;
+    top: 50%;
+    right: 8px;
+    transform: translate(0, -50%);
     color: #332935;
+}
+
+.close-button
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
 
 .small-discription
 {
-    text-align: left;
     line-height: 1.3;
-
-    transition: .2s;
-}
-
-.small-discription:hover
-{
-    text-shadow: 0 0 20px #c57cb9, 0 0 5px white;
-}
-
-.full-discription
-{
-    display: none;
 }
 
 .main-footer
@@ -239,7 +301,7 @@ body
     width: 100%;
     height: 60px;
     bottom: 0;
-    margin: 0 -8px 8px;
+    margin: 0 -8px;
     border-top: 1px solid darkgray;
 }
 
