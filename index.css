@@ -1,0 +1,124 @@
+.header-content
+{
+    position: fixed;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid gray;
+    font-size: 32px;
+    text-align: center;
+    margin-top: -10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.header-content::first-letter
+{
+    color: red;
+}
+
+.footer-content 
+{
+    width: 100%;
+    background: white;
+    border-top: 1px solid gray;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-content .right-footer
+{
+    float: right;
+    margin-right: 10px;
+    margin-top: -20px;
+    padding: 5px;
+}
+
+input
+{
+    display: none;
+}
+
+.gallery
+{
+    padding-top: 64px;
+    margin-left: -25%;
+    width: 150%;
+}
+
+img 
+{
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.cat-card 
+{
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    opacity: .7;
+    position: relative;
+    transition: .5s;
+}
+
+.content 
+{
+    padding: 1em;
+}
+
+.cat-name
+{
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 15;
+    text-align: center;
+    float: center;
+    margin-top: -150px;
+    visibility: hidden;
+}
+
+.cat-name p 
+{
+    font-size: 1.7em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cat-description-short p 
+{
+    color: gray;
+    margin: 1px;
+}
+
+.cat-description-detail 
+{
+    display: none;
+}
+
+.cat-description-detail p 
+{
+    color: gray;
+    margin: 1px;
+}
+
+.selector
+{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.selector-item
+{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #dfe6e9;
+    border-radius: 50%;
+    margin: 10px auto;
+    cursor: pointer;
+}
