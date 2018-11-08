@@ -3,7 +3,65 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        Мурмаркет
+    </header>
+    <main>
+        <input type="radio" name="items-carousel" id="item-1" value="item-1">
+        <input type="radio" name="items-carousel" id="item-2" value="item-2" checked>
+        <input type="radio" name="items-carousel" id="item-3" value="item-3">
+        <input type="radio" name="items-carousel" id="item-4" value="item-4">
+        <input type="radio" name="items-carousel" id="item-5" value="item-5">
+        <section class="carousel">
+            <label class="carousel-item-1" for="item-1">
+                <span>Item 1</span>
+                <img src="favicon.ico">
+            </label>
+            <label class="carousel-item-2" for="item-2">
+                <span>Item 2</span>
+                <img src="favicon.ico">
+            </label>
+            <label  class="carousel-item-3" for="item-3">
+                <span>Item 3</span>
+                <img src="favicon.ico">
+            </label>
+            <label class="carousel-item-4" for="item-4">
+                <span>Item 4</span>
+                <img src="favicon.ico">
+            </label>
+            <label class="carousel-item-5" for="item-5">
+                <span>Item 5</span>
+                <img src="favicon.ico">
+            </label>
+        </section>
+        <nav class="carousel-nav">
+            <label for="item-1" class="carousel-nav-item1"></label>
+            <label for="item-2" class="carousel-nav-item2"></label>
+            <label for="item-3" class="carousel-nav-item3"></label>
+            <label for="item-4" class="carousel-nav-item4"></label>
+            <label for="item-5" class="carousel-nav-item5"></label>
+        </nav>
+    </main>
+    <footer>
+        <ul class="contacts">
+            <li>
+                &#9993;
+                <a href="#">cats@babuli.ru</a>
+            </li>
+            <li>
+                &#9993;
+                <a href="#">vnuchek@babuli.ru</a>
+            </li>
+        </ul>
+        <span class="company">
+            &copy;2018 OOO
+            <q>
+                <a href="#">Бабушкины котятки</a>
+            </q>
+        </span>
+    </footer>
 </body>
 </html>
