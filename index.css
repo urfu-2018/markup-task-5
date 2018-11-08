@@ -1,201 +1,62 @@
-@import url(http://allfont.ru/allfont.css?fonts=pt-sans-narrow);
-
-header
-{
-    position: fixed;
-    width: 97.5%;
-    text-align: center;
-    font-family: 'PT Sans Narrow', arial;
-    font-size: 32px;
-    border: solid 2px #dcdcdc;
-    padding: 10px;
-    z-index: 1;
-}
-
-header::first-letter
-{
-    color: #f00;
-}
-
-footer
-{
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    border: solid 2px #dcdcdc;
-    padding: 10px;
-    color: #000;
-    position: absolute;
-    bottom: 0;
-    width: 97.5%;
-    height: 55px;
-    margin-top: -60px;
-}
-
-html,
-body
-{
-    height: 100%;
-}
-
-.letter
-{
-    width: 20px;
-    padding-right: 8px;
-    opacity: .5;
-}
-
-[href]
-{
-    color: #4c4cd8;
-}
-
-.copyright
-{
-    text-align: right;
-    margin-right: 0;
-    margin-left: 73%;
-    display: inline;
-}
-
-.karusel
-{
-    min-height: calc(100vh - 80px);
-    text-align: center;
-}
-
-li
-{
-    display: inline-block;
-    vertical-align: middle;
-    opacity: 1;
-    margin: 20px 0;
-    height: 300px;
-}
-
-.karusel-list
-{
-    position: relative;
-    white-space: nowrap;
-    transition: left .9s ease-out;
-    -o-transition: left .9s ease-out;
-    -ms-transition: left .9s ease-out;
-    -moz-transition: left .9s ease-out;
-    -webkit-transition: left .9s ease-out;
-}
-
-img[class*='cat']
-{
-    height: 80%;
-    width: 300px;
-    margin: 10% 30px;
-    opacity: .7;
-}
-
-input
-{
-    margin-top: 100px;
-}
-
-/*изменение центрального изображения*/
-
-input[id='cat-1']:checked ~ ul li label[for='cat-1'] img,
-input[id='cat-2']:checked ~ ul li label[for='cat-2'] img,
-input[id='cat-3']:checked ~ ul li label[for='cat-3'] img,
-input[id='cat-4']:checked ~ ul li label[for='cat-4'] img,
-input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
-{
-    width: 400px;
-    height: 100%;
-    margin: 0 -10%;
-    opacity: 1;
-}
-
-/*сдвиги картинок*/
-
-.karusel input:nth-child(1):checked ~ ul
-{
-    left: calc(50% - 200px);
-}
-
-.karusel input:nth-child(2):checked ~ ul
-{
-    left: calc(50% - 300px - 300px);
-}
-
-.karusel input:nth-child(3):checked ~ ul
-{
-    left: calc(50% - 300px - 640px);
-}
-
-.karusel input:nth-child(4):checked ~ ul
-{
-    left: calc(50% - 300px - 990px);
-}
-
-.karusel input:nth-child(5):checked ~ ul
-{
-    left: calc(50% - 300px - 1375px);
-}
-
-.name
-{
-    display: none;
-    position: absolute;
-    width: 400px;
-    height: 298px;
-    margin: 0 -10%;
-    top: -101%;
-    left: 10%;
-    text-align: center;
-    vertical-align: middle;
-    background-color: rgba(47, 47, 50, .5);
-}
-
-a[href*='open-Modal']
-{
-    font-size: 32px;
-    color: #fff;
-    text-decoration: none;
-}
-
-input[id='cat-1']:checked ~ ul li:nth-child(1):hover .name,
-input[id='cat-2']:checked ~ ul li:nth-child(2):hover .name,
-input[id='cat-3']:checked ~ ul li:nth-child(3):hover .name,
-input[id='cat-4']:checked ~ ul li:nth-child(4):hover .name,
-input[id='cat-5']:checked ~ ul li:nth-child(5):hover .name
-{
-    display: block;
-}
-
-.modal-window
-{
-    z-index: 1;
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #00000fe8;
-    width: 100vw;
-}
-
-.modal-window:target
-{
-    display: block;
-}
-
-.cat-block
-{
-    margin: 100px auto;
-    width: 700px;
-    height: 300px;
-    background-color: #dcdcdc;
-}
-
-.cat-block img:not([class='close'])
-{
-    width: 300px;
-    float: left;
-    margin: 55px 0;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css" >
+    <title>Задача «Мурмаркет»</title>
+</head>
+<body>
+    <header>
+        Мурмаркет
+    </header>
+    <article>
+        <div class="karusel">
+            <input type="radio" id="cat-1" name="carousel">
+            <input type="radio" id="cat-2" name="carousel">
+            <input type="radio" id="cat-3" name="carousel" checked>
+            <input type="radio" id="cat-4" name="carousel">
+            <input type="radio" id="cat-5" name="carousel">
+            <ul class="karusel-list">
+                <li id="lcat-1">
+                    <label for="cat-1"><img class="cat-1" src="https://clck.ru/EcGYP" alt="cat"></label>
+                    <div class="name"><br><br><br><br><br><a href="#open-Modal-cat-1">Мурка</a></div>
+                    <div id="open-Modal-cat-1" class="modal-Dialog">
+                    </div>
+                </li>
+                <li id="lcat-2">
+                    <label for="cat-2"><img class="cat-2" src="https://clck.ru/EcGgP" alt="cat"></label>
+                    <div class="name"><br><br><br><br><br><a href="#open-Modal-cat-2">Мурлыка</a></div>
+                    <div id="open-Modal-cat-2" class="modal-Dialog">
+                    </div>
+                </li>
+                <li id="lcat-3">
+                    <label for="cat-3"><img class="cat-3" src="https://clck.ru/Ec9N2" alt="cat"></label>
+                    <div class="name"><br><br><br><br><br><a href="#open-Modal-cat-3">Василёк</a></div>
+                    <div id="open-Modal-cat-3" class="modal-Dialog">
+                    </div>
+                </li>
+                <li id="lcat-4">
+                    <label for="cat-4"><img class="cat-4" src="https://clck.ru/EcAYL" alt="cat"></label>
+                    <div class="name"><br><br><br><br><br><a href="#open-Modal-cat-4">Долли</a></div>
+                    <div id="open-Modal-cat-4" class="modal-Dialog">
+                    </div>
+                </li>
+                <li id="lcat-5">
+                    <label for="cat-5"><img class="cat-5" src="https://clck.ru/EcFeh" alt="cat"></label>
+                    <div class="name"><br><br><br><br><br><a href="#open-Modal-cat-5">Леотигря</a></div>
+                    <div id="open-Modal-cat-5" class="modal-Dialog">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <footer>
+        Напишите нам: 
+        <br>
+        <a href="mailto:cats@babuli.ru"><img class="letter" src="https://clck.ru/EfbA2" alt="письмо">cats@babuli.ru</a>
+        <br>
+        <a href="mailto:vnuchek@babuli.ru"><img class="letter" src="https://clck.ru/EfbA2" alt="письмо">vnuchek@babuli.ru</a>
+        <p class="copyright">&copy; 2018 OOO <a href=#>"Бабушкины котятки"</a></p>
+    </footer>
+</body>
+</html>
