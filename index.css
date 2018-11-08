@@ -140,7 +140,6 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
 .name
 {
     display: none;
-    position: absolute;
     width: 400px;
     height: 298px;
     margin: 0 -10%;
@@ -149,6 +148,7 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
     text-align: center;
     vertical-align: middle;
     background-color: rgba(47, 47, 50, .5);
+    position: relative;
 }
 
 a[href*='open-Modal']
