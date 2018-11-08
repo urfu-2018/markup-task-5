@@ -77,26 +77,26 @@ img
     transition-duration: 300ms;
 }
 
-.Barsik:checked ~ section div[id='imgholder1'],
-.Bony:checked ~ section div[id='imgholder2'],
-.Cleo:checked ~ section div[id='imgholder3'],
-.Dimok:checked ~ section div[id='imgholder4'],
-.Longname:checked ~ section div[id='imgholder5'],
-.Luci:checked ~ section div[id='imgholder6'],
-.Pushok:checked ~ section div[id='imgholder7']
+.Barsik:checked ~ .carousel div[id='imgholder1'],
+.Bony:checked ~ .carousel div[id='imgholder2'],
+.Cleo:checked ~ .carousel div[id='imgholder3'],
+.Dimok:checked ~ .carousel div[id='imgholder4'],
+.Longname:checked ~ .carousel div[id='imgholder5'],
+.Luci:checked ~ .carousel div[id='imgholder6'],
+.Pushok:checked ~ .carousel div[id='imgholder7']
  {
     height: 350px;
     opacity: 1;
     top: 35px;
 }
 
-.Barsik:checked ~ section div[id='imgholder1']:hover label img,
-.Bony:checked ~ section div[id='imgholder2']:hover label img,
-.Cleo:checked ~ section div[id='imgholder3']:hover label img,
-.Dimok:checked ~ section div[id='imgholder4']:hover label img,
-.Longname:checked ~ section div[id='imgholder5']:hover label img,
-.Luci:checked ~ section div[id='imgholder6']:hover label img,
-.Pushok:checked ~ section div[id='imgholder7']:hover label img
+.Barsik:checked ~ .carousel div[id='imgholder1']:hover label img,
+.Bony:checked ~ .carousel div[id='imgholder2']:hover label img,
+.Cleo:checked ~ .carousel div[id='imgholder3']:hover label img,
+.Dimok:checked ~ .carousel div[id='imgholder4']:hover label img,
+.Longname:checked ~ .carousel div[id='imgholder5']:hover label img,
+.Luci:checked ~ .carousel div[id='imgholder6']:hover label img,
+.Pushok:checked ~ .carousel div[id='imgholder7']:hover label img
  {
     filter: brightness(15%);
 }
@@ -113,13 +113,13 @@ img
     visibility: hidden;
 }
 
-.Barsik:checked ~ section div[id='imgholder1']:hover .name,
-.Bony:checked ~ section div[id='imgholder2']:hover .name,
-.Cleo:checked ~ section div[id='imgholder3']:hover .name,
-.Dimok:checked ~ section div[id='imgholder4']:hover .name,
-.Longname:checked ~ section div[id='imgholder5']:hover .name,
-.Luci:checked ~ section div[id='imgholder6']:hover .name,
-.Pushok:checked ~ section div[id='imgholder7']:hover .name
+.Barsik:checked ~ .carousel div[id='imgholder1']:hover .name,
+.Bony:checked ~ .carousel div[id='imgholder2']:hover .name,
+.Cleo:checked ~ .carousel div[id='imgholder3']:hover .name,
+.Dimok:checked ~ .carousel div[id='imgholder4']:hover .name,
+.Longname:checked ~ .carousel div[id='imgholder5']:hover .name,
+.Luci:checked ~ .carousel div[id='imgholder6']:hover .name,
+.Pushok:checked ~ .carousel div[id='imgholder7']:hover .name
  {
     visibility: visible;
 }
@@ -131,42 +131,43 @@ img
     top: 10%;
     overflow: hidden;
     transition-duration: 1000ms;
-    width: 10000px;
+    width: 6000px;
+    right: 1500;
 }
 
-.Barsik:checked ~ section
+.Barsik:checked ~ .carousel .imgholder
  {
-    left: 25%;
+    right: -8%;
 }
 
-.Bony:checked ~ section
+.Bony:checked ~ .carousel .imgholder
  {
-    left: 0;
+    right: 1%;
 }
 
-.Cleo:checked ~ section
+.Cleo:checked ~ .carousel .imgholder
  {
-    left: -27%;
+    right: 7.5%;
 }
 
-.Dimok:checked ~ section
+.Dimok:checked ~ .carousel .imgholder
  {
-    left: -55%;
+    right: 15%;
 }
 
-.Longname:checked ~ section
+.Longname:checked ~ .carousel .imgholder
  {
-    left: -90%;
+    right: 22.5%;
 }
 
-.Luci:checked ~ section
+.Luci:checked ~ .carousel .imgholder
  {
-    left: -120%;
+    right: 31%;
 }
 
-.Pushok:checked ~ section
+.Pushok:checked ~ .carousel .imgholder
  {
-    left: -150%;
+    right: 40%;
 }
 
 .modal > img
