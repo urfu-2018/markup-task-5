@@ -1,7 +1,7 @@
 @font-face
 {
     font-family: 'PT SansNarrow';
-    src: local('PT SansNarrow'), url(fonts/PT_Sans-Narrow-Web-Regular.ttf) format('truetype')
+    src: local('PT SansNarrow'), url(fonts/PT_Sans-Narrow-Web-Regular.ttf) format('truetype');
 }
 
 body
@@ -72,14 +72,19 @@ body
 
 .shadow
 {
+    position: absolute;
     visibility: hidden;
+}
+
+.shadow_input
+{
     cursor: pointer;
 
     height: 37.5vw;
     width: 50vw;
 
-    position: absolute;
-    left: 0;
+    position: relative;
+    left: calc(-52vw - 4px);
 
     border: 0;
     padding: 0;
@@ -117,7 +122,6 @@ label
     visibility: visible;
 }
 
-
 .id2:checked ~ .slider
 {
     transform: translateX(-18.75vw);
@@ -135,7 +139,6 @@ label
     visibility: visible;
 }
 
-
 .id3:checked ~ .slider
 {
     transform: translateX(-61.5vw);
@@ -152,7 +155,6 @@ label
 {
     visibility: visible;
 }
-
 
 .id4:checked ~ .slider
 {
@@ -176,7 +178,7 @@ label
     visibility: visible;
 }
 
-.shadow:focus ~ .modal
+.shadow_input:focus ~ .modal
 {
     display: block;
 }
@@ -186,13 +188,12 @@ label
     z-index: 1;
     display: none;
     position: absolute;
-    top: calc(-18.75vw - (100vh - 37.5vw - 2vw - 30px) / 2);
-    left: -24vw;
+    top: calc((-100vh + 37.5vw) / 2 + 1vw);
+    left: -80vw;
     width: 100vw;
-    height: 100vh;
     background-color: rgba(0,0,0,.9);
 
-    padding: calc(30px + (100vh - 40px - 80px - 30vw) / 2) 10vw;
+    padding: calc((100vh - 37.5vw) / 2) 15vw;
 }
 
 .close
@@ -208,6 +209,7 @@ label
 
 .name
 {
+    font-size: 1.5em;
     margin: 0;
 }
 
@@ -237,7 +239,7 @@ label
 .column
 {
     display: inline-block;
-    width: calc(50vw - 24px);
+    width: calc(50vw - 28px);
     padding: 12px;
 }
 
@@ -255,5 +257,5 @@ label
 .email::before
 {
     color: #000;
-    content: "✉ ";
+    content: '✉ ';
 }
