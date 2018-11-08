@@ -29,6 +29,27 @@
     height: 60px;
     background: white;
     box-shadow: 0 -3px 15px rgba(0,0,0,.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.footer-left-part
+{
+    margin: 3px 0 0 10px;
+}
+
+.footer-right-part
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 10px 5px 0;
+}
+
+.site-footer a
+{
+    text-decoration: none;
+    color: #4c4cd8;
 }
 
 .logo-layout
@@ -42,9 +63,11 @@
 
 .carousel-label-layout
 {
+    margin-top: 15px;
     width: 100%;
     text-align: center;
     padding-top: 3px;
+    display: inline-block;
 }
 
 .carousel-label-bot
@@ -64,17 +87,16 @@
     padding: 8px;
     background: white;
     border-radius: 7px;
-    width: 150px;
+    width: 280px;
     box-shadow: 0 3px 15px rgba(0,0,0,.4);
 }
 
 .carousel-wrapper
 {
     width: 100%;
-    height: 370px;
     overflow: hidden;
     white-space: nowrap;
-    margin: 50px 0 0;
+    padding-bottom: 10px;
 }
 
 .img-label-wrapper
@@ -109,7 +131,7 @@
 {
     display: inline-block;
     width: 80%;
-    height: 80%;
+    height: 100%;
     transition-property: all;
     transition-duration: .8s;
     padding: 10px;
@@ -160,10 +182,68 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.9);
+    background: rgba(0,0,0,.95);
     z-index: 2;
     display: none;
     padding: 80px 0 60px;
+}
+
+.cats-description
+{
+    margin: 70px auto 0;
+    width: 70%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+.close-label
+{
+    float: right;
+    font-size: 35px;
+    margin-top: -7px;
+}
+
+.text-about-cat
+{
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.cats-photo
+{
+    display: inline-block;
+    width: 50%;
+    height: auto;
+}
+
+.cat-name-wrapper
+{
+    width: 80%;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cat-name
+{
+    margin-top: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.cat-breed,
+.cat-disease
+{
+    margin: .15em 0;
+}
+
+.cat-age
+{
+    margin-bottom: .15em;
 }
 
 input[name='carousel-switch']
@@ -183,27 +263,56 @@ input[id='cat_2']:checked ~ main .carousel-wrapper .img-label-wrapper
 
 input[id='cat_3']:checked ~ main .carousel-wrapper .img-label-wrapper
 {
-    left: -33%;
+    left: -33.3%;
 }
 
 input[id='cat_4']:checked ~ main .carousel-wrapper .img-label-wrapper
 {
-    left: -66%;
+    left: -66.6%;
 }
 
 input[id='cat_5']:checked ~ main .carousel-wrapper .img-label-wrapper
 {
-    left: -99%;
+    left: -100%;
+}
+
+input[id='cat_6']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -133.3%;
+}
+
+input[id='cat_7']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -166.6%;
+}
+
+input[id='cat_8']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -200%;
+}
+
+input[id='cat_9']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -233.3%;
+}
+
+input[id='cat_10']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -266.6%;
 }
 
 input[id='cat_1']:checked ~ main .img-label[for='cat_1'] .photo-wrapper,
 input[id='cat_2']:checked ~ main .img-label[for='cat_2'] .photo-wrapper,
 input[id='cat_3']:checked ~ main .img-label[for='cat_3'] .photo-wrapper,
 input[id='cat_4']:checked ~ main .img-label[for='cat_4'] .photo-wrapper,
-input[id='cat_5']:checked ~ main .img-label[for='cat_5'] .photo-wrapper
+input[id='cat_5']:checked ~ main .img-label[for='cat_5'] .photo-wrapper,
+input[id='cat_6']:checked ~ main .img-label[for='cat_6'] .photo-wrapper,
+input[id='cat_7']:checked ~ main .img-label[for='cat_7'] .photo-wrapper,
+input[id='cat_8']:checked ~ main .img-label[for='cat_8'] .photo-wrapper,
+input[id='cat_9']:checked ~ main .img-label[for='cat_9'] .photo-wrapper,
+input[id='cat_10']:checked ~ main .img-label[for='cat_10'] .photo-wrapper
 {
     width: 100%;
-    height: 100%;
     opacity: 1;
 }
 
@@ -211,7 +320,12 @@ input[id='cat_1']:checked ~ main .carousel-label-bot[for='cat_1'],
 input[id='cat_2']:checked ~ main .carousel-label-bot[for='cat_2'],
 input[id='cat_3']:checked ~ main .carousel-label-bot[for='cat_3'],
 input[id='cat_4']:checked ~ main .carousel-label-bot[for='cat_4'],
-input[id='cat_5']:checked ~ main .carousel-label-bot[for='cat_5']
+input[id='cat_5']:checked ~ main .carousel-label-bot[for='cat_5'],
+input[id='cat_6']:checked ~ main .carousel-label-bot[for='cat_6'],
+input[id='cat_7']:checked ~ main .carousel-label-bot[for='cat_7'],
+input[id='cat_8']:checked ~ main .carousel-label-bot[for='cat_8'],
+input[id='cat_9']:checked ~ main .carousel-label-bot[for='cat_9'],
+input[id='cat_10']:checked ~ main .carousel-label-bot[for='cat_10']
 {
     background: #c2e3ff;
 }
@@ -220,7 +334,12 @@ input[id='cat_1']:checked ~ main .img-label[for='cat_1'] ~ .cov-block,
 input[id='cat_2']:checked ~ main .img-label[for='cat_2'] ~ .cov-block,
 input[id='cat_3']:checked ~ main .img-label[for='cat_3'] ~ .cov-block,
 input[id='cat_4']:checked ~ main .img-label[for='cat_4'] ~ .cov-block,
-input[id='cat_5']:checked ~ main .img-label[for='cat_5'] ~ .cov-block
+input[id='cat_5']:checked ~ main .img-label[for='cat_5'] ~ .cov-block,
+input[id='cat_6']:checked ~ main .img-label[for='cat_6'] ~ .cov-block,
+input[id='cat_7']:checked ~ main .img-label[for='cat_7'] ~ .cov-block,
+input[id='cat_8']:checked ~ main .img-label[for='cat_8'] ~ .cov-block,
+input[id='cat_9']:checked ~ main .img-label[for='cat_9'] ~ .cov-block,
+input[id='cat_10']:checked ~ main .img-label[for='cat_10'] ~ .cov-block
 {
     display: block;
 }
@@ -229,7 +348,12 @@ input[id='cat_1']:checked ~ main .img-label[for='cat_1'] ~ .cov-block:hover,
 input[id='cat_2']:checked ~ main .img-label[for='cat_2'] ~ .cov-block:hover,
 input[id='cat_3']:checked ~ main .img-label[for='cat_3'] ~ .cov-block:hover,
 input[id='cat_4']:checked ~ main .img-label[for='cat_4'] ~ .cov-block:hover,
-input[id='cat_5']:checked ~ main .img-label[for='cat_5'] ~ .cov-block:hover
+input[id='cat_5']:checked ~ main .img-label[for='cat_5'] ~ .cov-block:hover,
+input[id='cat_6']:checked ~ main .img-label[for='cat_6'] ~ .cov-block:hover,
+input[id='cat_7']:checked ~ main .img-label[for='cat_7'] ~ .cov-block:hover,
+input[id='cat_8']:checked ~ main .img-label[for='cat_8'] ~ .cov-block:hover,
+input[id='cat_9']:checked ~ main .img-label[for='cat_9'] ~ .cov-block:hover,
+input[id='cat_10']:checked ~ main .img-label[for='cat_10'] ~ .cov-block:hover
 {
     background: rgba(0,0,0,.5);
     opacity: 1;
@@ -244,7 +368,12 @@ input[id='modal_cat_1']:checked ~ main .modal-cat-1,
 input[id='modal_cat_2']:checked ~ main .modal-cat-2,
 input[id='modal_cat_3']:checked ~ main .modal-cat-3,
 input[id='modal_cat_4']:checked ~ main .modal-cat-4,
-input[id='modal_cat_5']:checked ~ main .modal-cat-5
+input[id='modal_cat_5']:checked ~ main .modal-cat-5,
+input[id='modal_cat_6']:checked ~ main .modal-cat-6,
+input[id='modal_cat_7']:checked ~ main .modal-cat-7,
+input[id='modal_cat_8']:checked ~ main .modal-cat-8,
+input[id='modal_cat_9']:checked ~ main .modal-cat-9,
+input[id='modal_cat_10']:checked ~ main .modal-cat-10
 {
     display: block;
 }
