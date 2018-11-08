@@ -1,0 +1,112 @@
+html
+{
+    height: 100%;
+    position: relative;
+}
+
+header
+{
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    box-shadow: 0 0 15px #000;
+}
+
+header:first-letter
+{
+    color: red;
+}
+
+footer
+{
+    font-family: 'Black And White Picture', sans-serif;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 15px #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.slider
+{
+    position: relative;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.slider input[type='radio']
+{
+    display: none;
+}
+
+.slides
+{
+    text-align: center;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.slides img
+{
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    float: left;
+}
+
+.one:checked ~ .slides .slides-1,
+.two:checked ~ .slides .slides-2,
+.three:checked ~ .slides .slides-3
+{
+    transform: scale(1.15);
+}
+
+.one:checked ~ .slides
+{
+    transform: translate(calc(50% - 220px));
+}
+
+.two:checked ~ .slides
+{
+    transform: translate(calc(50% - 670px));
+}
+
+.three:checked ~ .slides
+{
+    transform: translate(calc(50% - 1120px));
+}
+
+.one:checked ~ .slides .slides-2,
+.one:checked ~ .slides .slides-3,
+.three:checked ~ .slides .slides-1,
+.three:checked ~ .slides .slides-2,
+.two:checked ~ .slides .slides-1,
+.two:checked ~ .slides .slides-3
+{
+    opacity: .7;
+}
+
+.one:checked:hover ~ .slides .slides-2,
+.one:checked:hover ~ .slides .slides-3,
+.three:checked:hover ~ .slides .slides-1,
+.three:checked:hover ~ .slides .slides-2,
+.two:checked:hover ~ .slides .slides-1,
+.two:checked:hover ~ .slides .slides-3
+{
+    opacity: .7;
+}
+
+.elements
+{
+    transition: linear .3s;
+    padding: 50px;
+}
