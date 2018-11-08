@@ -1,0 +1,318 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: url('ptsansnarrow.woff2') format('woff2');
+}
+
+html,
+body
+{
+    width: 100%;
+    margin: 0;
+}
+
+header,
+footer
+{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+header h1
+{
+    font-size: 32px;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+header h1:first-letter
+{
+    color: red;
+}
+
+main
+{
+    margin-top: 120px;
+}
+
+input
+{
+    display: none;
+}
+
+input[id='option1']:checked ~ .wrapper > .gallery
+{
+    left: 480px;
+}
+
+input[id='option2']:checked ~ .wrapper > .gallery
+{
+    left: 0;
+}
+
+input[id='option3']:checked ~ .wrapper > .gallery
+{
+    left: -480px;
+}
+
+input[id='option4']:checked ~ .wrapper > .gallery
+{
+    left: -960px;
+}
+
+input[id='option5']:checked ~ .wrapper > .gallery
+{
+    left: -1440px;
+}
+
+input[id='option1']:checked ~ .wrapper .element-1 img,
+input[id='option2']:checked ~ .wrapper .element-2 img,
+input[id='option3']:checked ~ .wrapper .element-3 img,
+input[id='option4']:checked ~ .wrapper .element-4 img,
+input[id='option5']:checked ~ .wrapper .element-5 img
+{
+    opacity: 1;
+}
+
+input[id='option1']:checked ~ .wrapper .element-1,
+input[id='option2']:checked ~ .wrapper .element-2,
+input[id='option3']:checked ~ .wrapper .element-3,
+input[id='option4']:checked ~ .wrapper .element-4,
+input[id='option5']:checked ~ .wrapper .element-5
+{
+    width: 568px;
+    height: 426px;
+    background-color: black;
+}
+
+input[id='option1']:checked ~ nav .nav-label-1,
+input[id='option2']:checked ~ nav .nav-label-2,
+input[id='option3']:checked ~ nav .nav-label-3,
+input[id='option4']:checked ~ nav .nav-label-4,
+input[id='option5']:checked ~ nav .nav-label-5
+{
+    background: red;
+}
+
+input[id='option1']:checked ~ .wrapper .element-1:hover .popup-label,
+input[id='option2']:checked ~ .wrapper .element-2:hover .popup-label,
+input[id='option3']:checked ~ .wrapper .element-3:hover .popup-label,
+input[id='option4']:checked ~ .wrapper .element-4:hover .popup-label,
+input[id='option5']:checked ~ .wrapper .element-5:hover .popup-label,
+
+input[id='popup-input-1']:checked ~ .popups .popup1,
+input[id='popup-input-2']:checked ~ .popups .popup2,
+input[id='popup-input-3']:checked ~ .popups .popup3,
+input[id='popup-input-4']:checked ~ .popups .popup4,
+input[id='popup-input-5']:checked ~ .popups .popup5
+
+{
+    visibility: visible;
+}
+
+input[id='no-popup-input']:checked ~ .popups
+{
+    visibility: hidden;
+}
+
+.wrapper
+{
+    position: relative;
+    width: 1538px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.gallery
+{
+    position: relative;
+    white-space: nowrap;
+}
+
+.elements
+{
+    position: relative;
+}
+
+.element
+{
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 455px;
+    height: 341px;
+}
+
+.element img
+{
+    width: 100%;
+    opacity: .7;
+    vertical-align: middle;
+}
+
+label
+{
+    display: block;
+}
+
+.popup-label
+{
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    text-align: center;
+    padding-top: 150px;
+    overflow: hidden;
+}
+
+.popup-label span
+{
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px black;
+    white-space: nowrap;
+}
+
+nav
+{
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+nav label
+{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin-left: 5px;
+    background: white;
+}
+
+.popup1,
+.popup2,
+.popup3,
+.popup4,
+.popup5
+{
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.close
+{
+    width: 32px;
+    height: 32px;
+    background-image: url('cross.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.info
+{
+    position: relative;
+    width: 1200px;
+    height: 487px;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.info img
+{
+    float: left;
+    margin-right: 30px;
+}
+
+.description
+{
+    color: white;
+    padding-top: 60px;
+}
+
+.description h2
+{
+    font-size: 30px;
+}
+
+.description p
+{
+    font-size: 20px;
+}
+
+footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px 0 15px;
+}
+
+footer p
+{
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 5px;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.clearfix:after
+{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+footer .contacts
+{
+    float: left;
+    margin-left: 70px;
+}
+
+footer .contacts p.mail::before
+{
+    position: relative;
+    top: 8px;
+    right: 4px;
+    content: url('message.png');
+    width: 24px;
+    height: 24px;
+}
+
+footer .organization
+{
+    float: right;
+    margin-right: 70px;
+    margin-top: 30px;
+}

@@ -3,7 +3,170 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header>
+    <h1>Мурмаркет</h1>
+</header>
+<main>
+    <input type="radio" id="option1" name="options">
+    <input type="radio" id="option2" name="options">
+    <input type="radio" id="option3" name="options" checked>
+    <input type="radio" id="option4" name="options">
+    <input type="radio" id="option5" name="options">
+
+    <input type="radio" id="popup-input-1" name="popup-inputs">
+    <input type="radio" id="popup-input-2" name="popup-inputs">
+    <input type="radio" id="popup-input-3" name="popup-inputs">
+    <input type="radio" id="popup-input-4" name="popup-inputs">
+    <input type="radio" id="popup-input-5" name="popup-inputs">
+    <input type="radio" id="no-popup-input" name="popup-inputs" checked>
+
+    <div class="wrapper">
+        <div class="gallery">
+            <div class="elements">
+                <div class="element element-1">
+                    <label class="option-label" for="option1">
+                        <img src="cat-images/bombey.jpg" alt="Черняк">
+                    </label>
+                    <label class="popup-label" for="popup-input-1">
+                        <span>Черняк</span>
+                    </label>
+                </div>
+                <div class="element element-2">
+                    <label class="option-label" for="option2">
+                        <img src="cat-images/ceylon.jpg" alt="Песчи">
+                    </label>
+                    <label class="popup-label" for="popup-input-2">
+                        <span>Песчаная Буря</span>
+                    </label>
+                </div>
+                <div class="element element-3">
+                    <label class="option-label" for="option3">
+                        <img src="cat-images/ginger.jpg" alt="Огник">
+                    </label>
+                    <label class="popup-label" for="popup-input-3">
+                        <span>Огнегрив</span>
+                    </label>
+                </div>
+                <div class="element element-4">
+                    <label class="option-label" for="option4">
+                        <img src="cat-images/himalai.jpg" alt="Дымка">
+                    </label>
+                    <label class="popup-label" for="popup-input-4">
+                        <span>Дымка</span>
+                    </label>
+                </div>
+                <div class="element element-5">
+                    <label class="option-label" for="option5">
+                        <img src="cat-images/newspaper.jpg" alt="Газетка">
+                    </label>
+                    <label class="popup-label" for="popup-input-5">
+                        <span>Газетка</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <label class="nav-label-1" for="option1"></label>
+        <label class="nav-label-2" for="option2"></label>
+        <label class="nav-label-3" for="option3"></label>
+        <label class="nav-label-4" for="option4"></label>
+        <label class="nav-label-5" for="option5"></label>
+    </nav>
+    <div class="popups">
+        <div class="popup1">
+            <div class="info">
+                <label for="no-popup-input">
+                    <span class="close"></span>
+                </label>
+                <img src="cat-images/bombey.jpg" alt="Черняк">
+                <article class="description">
+                    <h2>Черняк</h2>
+                    <p>Грубый, самостоятельный</p>
+                    <p>Возраст: 24 луны</p>
+                    <p>Независимый кот, который откроет любую дверь, лишь бы выйти на свободу.
+                    Всегда возвращается через неопределенный срок (один раз вернулся через месяц).</p>
+                </article>
+            </div>
+        </div>
+        <div class="popup2">
+            <div class="info">
+                <label for="no-popup-input">
+                    <span class="close"></span>
+                </label>
+                <img src="cat-images/ceylon.jpg" alt="Песчи">
+                <article class="description">
+                    <h2>Песчаная Буря</h2>
+                    <p>Хитрая, дерзкая</p>
+                    <p>Возраст: 50 лун</p>
+                    <p>Несмотря на возраст очень активная. Очень удивляет своими хитрыми уловками.
+                    Идеальна для съемок смешных видео на YouTube.</p>
+                </article>
+            </div>
+        </div>
+        <div class="popup3">
+            <div class="info">
+                <label for="no-popup-input">
+                    <span class="close"></span>
+                </label>
+                <img src="cat-images/ginger.jpg" alt="Огник">
+                <article class="description">
+                    <h2>Огнегрив</h2>
+                    <p>Справедливый, чуткий</p>
+                    <p>Возраст: 100 лун</p>
+                    <p>Этот кот всегда будет стоять за справедливость.
+                        Он очень воинственен, всегда защитит своего хозяина и свой дом.
+                        Но все-таки это не собака, а кот, поэтому не забывайте, что он
+                        спит по 12 часов в день.</p>
+                </article>
+            </div>
+        </div>
+        <div class="popup4">
+            <div class="info">
+                <label for="no-popup-input">
+                    <span class="close"></span>
+                </label>
+                <img src="cat-images/himalai.jpg" alt="Дымка">
+                <article class="description">
+                    <h2>Дымка</h2>
+                    <p>Спокойная, тихая</p>
+                    <p>Возраст: 18 лун</p>
+                    <p>Не царапает мебель, обои и шторы. Опасается гостей, но очень привязана к хозяевам.
+                    Ее любимое занятие - лежать на коленках, наслаждаясь поглаживаниями.</p>
+                </article>
+            </div>
+        </div>
+        <div class="popup5">
+            <div class="info">
+                <label for="no-popup-input">
+                    <span class="close"></span>
+                </label>
+                <img src="cat-images/newspaper.jpg" alt="Газетка">
+                <article class="description">
+                    <h2>Газетка</h2>
+                    <p>Шустрая непоседа</p>
+                    <p>Возраст: 6 лун</p>
+                    <p>Очень забавная, постоянно шалит, и что-то нам подсказывает, что
+                        даже через много лет она останется такой же озорной.
+                        Газетка еще котеночек, но уже с характером, вполне может показать коготки.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="clearfix">
+    <div class="contacts">
+        <p>Напишите нам:</p>
+        <p class="mail"><a href="#">cats@babuli.ru</a></p>
+        <p class="mail"><a href="#">vnuchek@babuli.ru</a></p>
+    </div>
+    <div class="organization">
+        <p>&copy; 2018 ООО "<a href="#">Бабушкины котятки</a>"</p>
+    </div>
+</footer>
 </body>
 </html>
