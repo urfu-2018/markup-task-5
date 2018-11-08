@@ -3,7 +3,111 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body>
+<body class="grandma-cats-body">
+    <input type="radio" id="cat_1" class="carousel-switch" name="carousel-switch">
+    <input type="radio" id="cat_2" class="carousel-switch" name="carousel-switch" checked>
+    <input type="radio" id="cat_3" class="carousel-switch" name="carousel-switch">
+    <input type="radio" id="cat_4" class="carousel-switch" name="carousel-switch">
+    <input type="radio" id="cat_5" class="carousel-switch" name="carousel-switch">
+    <input type="checkbox" id="modal_cat_1" class="modal" name="modal">
+    <input type="checkbox" id="modal_cat_2" class="modal" name="modal">
+    <input type="checkbox" id="modal_cat_3" class="modal" name="modal">
+    <input type="checkbox" id="modal_cat_4" class="modal" name="modal">
+    <input type="checkbox" id="modal_cat_5" class="modal" name="modal">
+    <main class="general-layout">
+        <header class="site-header">
+            <div class="logo-layout">
+                <img src="pictures/logo.png" alt="logo" width="220" height="60">
+            </div>
+        </header>
+        <section class="main-part-wrapper">
+            <div class="carousel-wrapper">
+                <div class="img-label-wrapper">
+                    <label for="cat_1" class="img-label">
+                        <span class="photo-wrapper">
+                            <img src="pictures/cat_1.jpg" alt="Уолтер" width="480" height="349">
+                        </span>
+                    </label>
+                    <div class="cov-block">
+                        <div class="covered-cat-name">Уолтер</div>
+                        <label for="modal_cat_1" class="modal-label"></label>
+                    </div>
+                </div>
+                <div class="img-label-wrapper">
+                    <label for="cat_2" class="img-label">
+                        <span class="photo-wrapper">
+                            <img src="pictures/cat_2.jpg" alt="Каспер" width="480" height="349">
+                        </span>
+                    </label>
+                    <div class="cov-block">
+                        <div class="covered-cat-name">Каспер</div>
+                        <label for="modal_cat_2" class="modal-label"></label>
+                    </div>
+                </div>
+                <div class="img-label-wrapper">
+                    <label for="cat_3" class="img-label">
+                        <span class="photo-wrapper">
+                            <img src="pictures/cat_3.jpg" alt="Морган" width="480" height="349">
+                        </span>
+                    </label>
+                    <div class="cov-block">
+                        <div class="covered-cat-name">Морган</div>
+                        <label for="modal_cat_3" class="modal-label"></label>
+                    </div>
+                </div>
+                <div class="img-label-wrapper">
+                    <label for="cat_4" class="img-label">
+                        <span class="photo-wrapper">
+                            <img src="pictures/cat_4.jpg" alt="Уильям" width="480" height="349">
+                        </span>
+                    </label>
+                    <div class="cov-block">
+                        <div class="covered-cat-name">Уильям</div>
+                        <label for="modal_cat_4" class="modal-label"></label>
+                    </div>
+                </div>
+                <div class="img-label-wrapper">
+                    <label for="cat_5" class="img-label">
+                        <span class="photo-wrapper">
+                            <img src="pictures/cat_5.jpg" alt="Монти" width="480" height="349">
+                        </span>
+                    </label>
+                    <div class="cov-block">
+                        <div class="covered-cat-name">Монти</div>
+                        <label for="modal_cat_5" class="modal-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-label-layout">
+                <div class="bot-label-wrapper">
+                    <label for="cat_1" class="carousel-label-bot"></label>
+                    <label for="cat_2" class="carousel-label-bot"></label>
+                    <label for="cat_3" class="carousel-label-bot"></label>
+                    <label for="cat_4" class="carousel-label-bot"></label>
+                    <label for="cat_5" class="carousel-label-bot"></label>
+                </div>
+            </div>
+        </section>
+        <div class="modal-cats-windows">
+            <div class="modal-window modal-cat-1">
+                <label for="modal_cat_1" class="close-label">✕</label>
+            </div>
+            <div class="modal-window modal-cat-2">
+                <label for="modal_cat_2" class="close-label">✕</label>
+            </div>
+            <div class="modal-window modal-cat-3">
+                <label for="modal_cat_3" class="close-label">✕</label>
+            </div>
+            <div class="modal-window modal-cat-4">
+                <label for="modal_cat_4" class="close-label">✕</label>
+            </div>
+            <div class="modal-window modal-cat-5">
+                <label for="modal_cat_5" class="close-label">✕</label>
+            </div>
+        </div>
+        <footer class="site-footer"></footer>
+    </main>
 </body>
 </html>

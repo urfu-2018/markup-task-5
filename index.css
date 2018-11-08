@@ -1,0 +1,250 @@
+.grandma-cats-body
+{
+    margin: 0;
+    background: #cadae8;
+}
+
+.main-part-wrapper
+{
+    margin-top: 120px;
+}
+
+.site-header
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #3386cb;
+    box-shadow: 0 3px 15px rgba(0,0,0,.25);
+}
+
+.site-footer
+{
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+    box-shadow: 0 -3px 15px rgba(0,0,0,.25);
+}
+
+.logo-layout
+{
+    box-sizing: border-box;
+    height: 80px;
+    width: 80%;
+    padding: 10px 0;
+    margin: auto;
+}
+
+.carousel-label-layout
+{
+    width: 100%;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.carousel-label-bot
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    margin: 3px;
+    background: #3386cb;
+    vertical-align: middle;
+}
+
+.bot-label-wrapper
+{
+    display: inline-block;
+    padding: 8px;
+    background: white;
+    border-radius: 7px;
+    width: 150px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+}
+
+.carousel-wrapper
+{
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 50px 0 0;
+}
+
+.img-label-wrapper
+{
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    transition-property: left;
+    transition-duration: 1s;
+    border-radius: 10px;
+    width: 33%;
+    height: auto;
+    text-align: center;
+}
+
+.img-label
+{
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+}
+
+.img-label img
+{
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.photo-wrapper
+{
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    transition-property: all;
+    transition-duration: .8s;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 3px 15px rgba(0,0,0,.4);
+    opacity: .7;
+}
+
+.cov-block
+{
+    transition-property: opacity;
+    transition-duration: .8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    display: none;
+    text-align: center;
+}
+
+.covered-cat-name
+{
+    margin-top: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+}
+
+.modal-label
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.modal-window
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+    z-index: 2;
+    display: none;
+    padding: 80px 0 60px;
+}
+
+input[name='carousel-switch']
+{
+    display: none;
+}
+
+input[id='cat_1']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: 33%;
+}
+
+input[id='cat_2']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: 0;
+}
+
+input[id='cat_3']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -33%;
+}
+
+input[id='cat_4']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -66%;
+}
+
+input[id='cat_5']:checked ~ main .carousel-wrapper .img-label-wrapper
+{
+    left: -99%;
+}
+
+input[id='cat_1']:checked ~ main .img-label[for='cat_1'] .photo-wrapper,
+input[id='cat_2']:checked ~ main .img-label[for='cat_2'] .photo-wrapper,
+input[id='cat_3']:checked ~ main .img-label[for='cat_3'] .photo-wrapper,
+input[id='cat_4']:checked ~ main .img-label[for='cat_4'] .photo-wrapper,
+input[id='cat_5']:checked ~ main .img-label[for='cat_5'] .photo-wrapper
+{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+input[id='cat_1']:checked ~ main .carousel-label-bot[for='cat_1'],
+input[id='cat_2']:checked ~ main .carousel-label-bot[for='cat_2'],
+input[id='cat_3']:checked ~ main .carousel-label-bot[for='cat_3'],
+input[id='cat_4']:checked ~ main .carousel-label-bot[for='cat_4'],
+input[id='cat_5']:checked ~ main .carousel-label-bot[for='cat_5']
+{
+    background: #c2e3ff;
+}
+
+input[id='cat_1']:checked ~ main .img-label[for='cat_1'] ~ .cov-block,
+input[id='cat_2']:checked ~ main .img-label[for='cat_2'] ~ .cov-block,
+input[id='cat_3']:checked ~ main .img-label[for='cat_3'] ~ .cov-block,
+input[id='cat_4']:checked ~ main .img-label[for='cat_4'] ~ .cov-block,
+input[id='cat_5']:checked ~ main .img-label[for='cat_5'] ~ .cov-block
+{
+    display: block;
+}
+
+input[id='cat_1']:checked ~ main .img-label[for='cat_1'] ~ .cov-block:hover,
+input[id='cat_2']:checked ~ main .img-label[for='cat_2'] ~ .cov-block:hover,
+input[id='cat_3']:checked ~ main .img-label[for='cat_3'] ~ .cov-block:hover,
+input[id='cat_4']:checked ~ main .img-label[for='cat_4'] ~ .cov-block:hover,
+input[id='cat_5']:checked ~ main .img-label[for='cat_5'] ~ .cov-block:hover
+{
+    background: rgba(0,0,0,.5);
+    opacity: 1;
+}
+
+input[name='modal']
+{
+    display: none;
+}
+
+input[id='modal_cat_1']:checked ~ main .modal-cat-1,
+input[id='modal_cat_2']:checked ~ main .modal-cat-2,
+input[id='modal_cat_3']:checked ~ main .modal-cat-3,
+input[id='modal_cat_4']:checked ~ main .modal-cat-4,
+input[id='modal_cat_5']:checked ~ main .modal-cat-5
+{
+    display: block;
+}
