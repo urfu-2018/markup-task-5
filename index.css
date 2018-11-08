@@ -63,7 +63,6 @@ body
     position: fixed;
     top: 0;
     left: 0;
-    scroll-behavior: smooth;
     overflow-x: auto;
     height: 100vw;
     width: 100vh;
@@ -73,43 +72,29 @@ body
 
 .cat-card
 {
-    display: inline-block;
     transform: rotate(90deg);
-    width: 20vw;
-    height: 300px;
-    margin: 25% 30%;
+    width: auto;
+    height: 30vh;
+    margin: 25vw 25%;
 }
 
 .popup-block
 {
-    display: table;
-    top: 40vw;
-    left: 10vh;
-    position: fixed;
-    height: 400px;
-    width: auto;
-    transform: rotate(90deg);
+    top: 0;
+    left: 0;
+    height: 40vh;
+    width: 60vw;
+    position: absolute;
+    transform: rotate(90deg) translateX(40vw) translateY(10vh);
     text-align: center;
     padding: 0;
 }
 
-.popup-image
+.image-container
 {
-    display: table-cell;
-    float: left;
+    display: inline-block;
     height: 100%;
-    width: 100%;
-}
-
-.text
-{
-    width: 40%;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: left;
-    padding: 20px;
-    color: white;
-    font-size: 20px;
+    width: 50%;
 }
 
 .cat-card:target + div + .cat-card .hidden-image
@@ -132,36 +117,6 @@ body
     opacity: .7;
 }
 
-.overlay
-{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, .7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    z-index: 1;
-}
-
-.close
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 50px;
-    line-height: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-
-.overlay:target
-{
-    visibility: visible;
-}
-
 .cat-card .hidden-image
 {
     position: absolute;
@@ -171,7 +126,7 @@ body
     visibility: hidden;
     object-fit: cover;
     height: 125%;
-    z-index: 0;
+    z-index: 1;
 }
 
 .hidden-image:hover
@@ -187,22 +142,6 @@ body
     filter: brightness(50%);
     -webkit-filter: brightness(50%);
 }
-
-/*input:checked + .popup*/
-/*{*/
-/*display: initial;*/
-/*}*/
-
-/*.inner-block img:hover*/
-/*{*/
-/*border-radius: 15px;*/
-/*border: 2px solid black;*/
-/*filter: initial;*/
-/*-webkit-filter: initial;*/
-/*box-sizing: border-box;*/
-/*-moz-box-sizing: border-box;*/
-/*-webkit-box-sizing: border-box;*/
-/*}*/
 
 .name-container
 {
@@ -226,60 +165,51 @@ body
     white-space: nowrap;
 }
 
-/*.short*/
-/*{*/
-/*display: none;*/
-/*}*/
+.overlay
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    z-index: 1;
+}
 
-/*.long*/
-/*{*/
-/*display: -webkit-box;*/
-/*text-overflow: ellipsis;*/
-/*overflow: hidden;*/
-/*-webkit-line-clamp: 4;*/
-/*-webkit-box-orient: vertical;*/
-/*}*/
+.overlay:target
+{
+    visibility: visible;
+}
 
-/*.long:hover*/
-/*{*/
-/*overflow: auto;*/
-/*-webkit-box-orient: initial;*/
-/*}*/
+.popup-image
+{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+}
 
-/*.tile-mode:checked ~ .main-block .cat-card*/
-/*{*/
-/*display: inline-block;*/
-/*overflow: hidden;*/
-/*margin: 10px;*/
-/*width: 300px;*/
-/*text-align: initial;*/
-/*}*/
+.text
+{
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 20px;
+    color: white;
+    font-size: 15px;
+}
 
-/*.tile-mode:checked ~ .main-block .cat-card .inner-block .text*/
-/*{*/
-/*margin: 5%;*/
-/*text-overflow: ellipsis;*/
-/*max-height: 90%;*/
-/*}*/
-
-/*.tile-mode:checked ~ .main-block .cat-card .inner-block*/
-/*{*/
-/*margin: 0;*/
-/*max-width: 100%;*/
-/*}*/
-
-/*.tile-mode:checked ~ .main-block .cat-card .inner-block .text .short*/
-/*{*/
-/*display: initial;*/
-/*}*/
-
-/*.tile-mode:checked ~ .main-block .cat-card .inner-block .text .long*/
-/*{*/
-/*display: none;*/
-/*}*/
-
-/*.tile-mode:checked ~ .main-block .cat-card .inner-block img*/
-/*{*/
-/*width: 100%;*/
-/*object-fit: cover;*/
-/*}*/
+.close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+    line-height: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
