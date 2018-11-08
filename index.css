@@ -107,17 +107,18 @@ input[id='cat10']:checked ~ .slider .cat_10
     transform: scaleY(1.1);
 }
 
-input[id='cat1']:checked ~ .slider label[for='cat_name1'],
+input[id='cat1']:checked ~ .slider a[href='#cat_name1'],
 input[id='cat2']:checked ~ .slider a[href='#cat_name2'],
-input[id='cat3']:checked ~ .slider label[for='cat_name3'],
-input[id='cat4']:checked ~ .slider label[for='cat_name4'],
-input[id='cat5']:checked ~ .slider label[for='cat_name5'],
-input[id='cat6']:checked ~ .slider label[for='cat_name6'],
-input[id='cat7']:checked ~ .slider label[for='cat_name7'],
-input[id='cat8']:checked ~ .slider label[for='cat_name8'],
-input[id='cat9']:checked ~ .slider label[for='cat_name9'],
-input[id='cat10']:checked ~ .slider label[for='cat_name10']
+input[id='cat3']:checked ~ .slider a[href='#cat_name3'],
+input[id='cat4']:checked ~ .slider a[href='#cat_name4'],
+input[id='cat5']:checked ~ .slider a[href='#cat_name5'],
+input[id='cat6']:checked ~ .slider a[href='#cat_name6'],
+input[id='cat7']:checked ~ .slider a[href='#cat_name7'],
+input[id='cat8']:checked ~ .slider a[href='#cat_name8'],
+input[id='cat9']:checked ~ .slider a[href='#cat_name9'],
+input[id='cat10']:checked ~ .slider a[href='#cat_name10']
 {
+    text-decoration: none;
     display: block;
 }
 
@@ -142,41 +143,6 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
     font-family: 'Segoe UI', sans-serif;
 }
 
-.overlay
-{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, .7);
-    transition: opacity 500ms;
-    /*   visibility: hidden; */
-    display: none;
-    opacity: 0;
-}
-
-.overlay:before
-{
-    display: block;
-    content: ' ';
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    opacity: .9;
-}
-
-.overlay:target
-{
-    /*   visibility: visible; */
-    display: block;
-    opacity: 1;
-}
-
 .wrapper_popup
 {
     display: none;
@@ -187,8 +153,6 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
     width: 100%;
     height: 100%;
     opacity: 0;
-    visibility: hidden;
-
 }
 
 .wrapper_popup:before
@@ -203,6 +167,12 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
     left: 0;
     background-color: #000;
     opacity: .9;
+}
+
+.wrapper_popup:target
+{
+    display: block;
+    opacity: 1;
 }
 
 .popup-content
@@ -252,6 +222,7 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
 
 .popup-closer
 {
+    text-decoration: none;
     position: absolute;
     top: 5px;
     right: 5px;
@@ -271,23 +242,6 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
 {
     color: white;
     transform: rotate(100grad);
-}
-
-.popup_cat2:target,
-input[id='cat_name1']:checked ~ .popup_cat1 > .wrapper_popup,
-input[id='cat_name2']:checked ~ .popup_cat2 > .wrapper_popup,
-input[id='cat_name3']:checked ~ .popup_cat3 > .wrapper_popup,
-input[id='cat_name4']:checked ~ .popup_cat4 > .wrapper_popup,
-input[id='cat_name5']:checked ~ .popup_cat5 > .wrapper_popup,
-input[id='cat_name6']:checked ~ .popup_cat6 > .wrapper_popup,
-input[id='cat_name7']:checked ~ .popup_cat7 > .wrapper_popup,
-input[id='cat_name8']:checked ~ .popup_cat8 > .wrapper_popup,
-input[id='cat_name9']:checked ~ .popup_cat9 > .wrapper_popup,
-input[id='cat_name10']:checked ~ .popup_cat10 > .wrapper_popup
-{
-    opacity: 1;
-    visibility: visible;
-    display: block;
 }
 
 .slider-cat_name:hover
