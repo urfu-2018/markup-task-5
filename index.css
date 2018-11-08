@@ -70,6 +70,7 @@ body
     position: absolute;
     top: 60px;
     bottom: 60px;
+    padding-top: 45px;
     left: 0;
     right: 0;
     overflow: hidden;
