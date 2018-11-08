@@ -60,84 +60,13 @@ footer .copyright
     min-height: calc(100vh - 120px - 68px);
 }
 
-.items
-{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 300;
-}
-
-.items h2
-{
-    font-weight: 400;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.items h2 a
-{
-    text-decoration: none;
-    color: inherit;
-}
-
-.item
-{
-    padding: 15px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    width: 300px;
-    display: inline-block;
-    border: 1px solid #ccc;
-}
-
-.item h2:hover
-{
-    text-decoration: underline;
-}
-
-.item img
-{
-    width: 300px;
-    height: 200px;
-    background-size: cover;
-}
-
-.item img:hover
-{
-    width: 330px;
-    height: 230px;
-    margin: -15px;
-}
-
-.item .description li
-{
-    list-style-type: none;
-}
-
-.item .description ul
-{
-    padding: 0;
-    margin: 0;
-}
-
-.item .full-description
-{
-    display: none;
-}
-
-.item .description ul :last-child
-{
-    padding-top: 10px;
-}
-
-
 /* Slide show */
 
 .wrapper {
 	height: 250px;
     margin: 0 auto;
     position: absolute;
-    left: calc((100% - 2016px)/2);
+    left: calc((100% - 1800px)/2);
 }
 
 .slider {
@@ -151,24 +80,24 @@ footer .copyright
 .slides {
     display: inline-block;
     position: relative;
-	height: 250px;
-    width: 400px;
+    margin: 0 10px;
     opacity: .5;
 }
 
 .slides img
 {
-    padding: 25px;
+    height: 200px;
+    width: 320px;
 }
 
 
 #slide1:checked ~ .slider,
 .slide1:hover #slide1 {
-    left: 800px;
+    left: 640px;
 }
 
 #slide2:checked ~ .slider {
-    left: 400px;
+    left: 320px;
 }
 
 #slide3:checked ~ .slider {
@@ -176,11 +105,11 @@ footer .copyright
 }
 
 #slide4:checked ~ .slider {
-    left: -400px;
+    left: -320px;
 }
 
 #slide5:checked ~ .slider {
-    left: -800px;
+    left: -640px;
 }
 
 
@@ -193,6 +122,7 @@ footer .copyright
     opacity: 1;
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 100%
 }
 
 #slide1:checked ~ .slider > .slide1 img,
@@ -201,7 +131,8 @@ footer .copyright
 #slide4:checked ~ .slider > .slide4 img,
 #slide5:checked ~ .slider > .slide5 img
 {
-    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .wrapper > input {
@@ -209,7 +140,8 @@ footer .copyright
 }
 
 .controls {
-	text-align: center;
+    text-align: center;
+    padding: 40px;
 }
 
 .controls label {
