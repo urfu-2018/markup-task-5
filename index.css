@@ -96,6 +96,11 @@ input
     background: #d6d6d6;
     margin: 0 3px;
     cursor: pointer;
+
+    transition: background .3s ease-in;
+    -o-transition: background .3s ease-in;
+    -moz-transition: background .3s ease-in;
+    -webkit-transition: background .3s ease-in;
 }
 
 .carousel-navigation
@@ -202,6 +207,11 @@ input:checked[id='radio-5'] ~ .carousel-main .img-container-5 img
     color: white;
     text-align: center;
     cursor: pointer;
+
+    transition: opacity .1s ease-in;
+    -o-transition: opacity .1s ease-in;
+    -moz-transition: opacity .1s ease-in;
+    -webkit-transition: opacity .1s ease-in;
 }
 
 .overlay span
