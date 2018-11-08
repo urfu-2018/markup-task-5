@@ -1,0 +1,189 @@
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.header-title
+{
+    margin: 3px;
+    text-align: center;
+    font: normal 32px 'PT Sans Narrow', sans-serif;
+}
+
+.header-title::first-letter
+{
+    color: #f00;
+}
+
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font: normal 14px Arial;
+    border-top: 1px solid #dcdcdc;
+}
+
+.mail-list li
+{
+    background: url('./images/mail_icon.png') no-repeat left top;
+    padding: 3px 0 3px 23px;
+    list-style: none;
+    margin: 0;
+}
+
+.mail-list li:first-of-type
+{
+    background: none;
+}
+
+.footer .mail-list
+{
+    margin: 0;
+    padding: 10px 0 10px 40px;
+    color: #727272;
+}
+
+.footer .company-copyright
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 10px 10px 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.footer a
+{
+    color: #4c4cd8;
+}
+
+.short-description,
+.full-description
+{
+    display: none;
+}
+
+main
+{
+    margin-top: 50px;
+    margin-bottom: 90px;
+    height: 450px;
+}
+
+.carousel-wrapper
+{
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+}
+
+.carousel
+{
+    position: absolute;
+    width: 5000px;
+    height: 400px;
+}
+
+.cat-card
+{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    width: 450px;
+    height: 100%;
+}
+
+.img-container
+{
+    overflow: hidden;
+}
+
+img
+{
+    margin-left: 10%;
+    width: 80%;
+    height: 80%;
+    opacity: .7;
+}
+
+input[id='slide-1']:checked ~ .carousel
+{
+    left: 460px;
+}
+
+input[id='slide-2']:checked ~ .carousel
+{
+    left: 0;
+}
+
+input[id='slide-3']:checked ~ .carousel
+{
+    left: -460px;
+}
+
+input[id='slide-4']:checked ~ .carousel
+{
+    left: -920px;
+}
+
+input[id='slide-5']:checked ~ .carousel
+{
+    left: -1380px;
+}
+
+input[id='slide-1']:checked ~ .carousel .img-container[for='slide-1'] img,
+input[id='slide-2']:checked ~ .carousel .img-container[for='slide-2'] img,
+input[id='slide-3']:checked ~ .carousel .img-container[for='slide-3'] img,
+input[id='slide-4']:checked ~ .carousel .img-container[for='slide-4'] img,
+input[id='slide-5']:checked ~ .carousel .img-container[for='slide-5'] img
+{
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+}
+
+.shadow-box
+{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    bottom: 0;
+    color: white;
+}
+
+.shadow-box a
+{
+    color: #fff;
+}
+
+.shadow-box h2
+{
+    position: relative;
+    top: 40%;
+    left: 35%;
+    z-index: 1;
+    font: 400 32px 'Roboto', sans-serif;
+}
+
+input[id='slide-1']:checked ~ .carousel .cat-card[id='cc1']:hover .shadow-box,
+input[id='slide-2']:checked ~ .carousel .cat-card[id='cc2']:hover .shadow-box,
+input[id='slide-3']:checked ~ .carousel .cat-card[id='cc3']:hover .shadow-box,
+input[id='slide-4']:checked ~ .carousel .cat-card[id='cc4']:hover .shadow-box,
+input[id='slide-5']:checked ~ .carousel .cat-card[id='cc5']:hover .shadow-box
+{
+    display: block;
+}

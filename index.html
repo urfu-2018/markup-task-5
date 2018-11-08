@@ -1,9 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic-ext" rel="stylesheet">
 </head>
+
 <body>
+    <header class="header">
+        <h1 class="header-title">Мурмаркет</h1>
+    </header>
+    <main>
+        <section class="carousel-wrapper">
+            <input type="radio" name="carousel" id="slide-1" class="slide-1">
+            <input type="radio" name="carousel" id="slide-2" class="slide-2">
+            <input type="radio" name="carousel" id="slide-3" class="slide-3" checked="checked">
+            <input type="radio" name="carousel" id="slide-4" class="slide-4">
+            <input type="radio" name="carousel" id="slide-5" class="slide-5">
+            <section class="carousel">
+                <article class="cat-card" id="cc1">
+                    <label class="img-container" for="slide-1">
+                        <img src="./images/matilda.jpg" alt="Матильда">
+                    </label>
+                    <div class="shadow-box">
+                        <h2><a href="#">Матильда</a></h2>
+                    </div>
+
+                    <div class="short-description">
+                        <p>Возраст: 3,5 года</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-description">
+                        Славная кошечка 3,5 года, но игривая, как котёнок.
+                        Она не против отправиться в новый дом вторым питомцем.
+                        Но боится агрессивных животных.
+                        Матильда - кошечка-компаньонка для доброго, любящего животных человека.
+                    </div>
+                </article>
+                <article class="cat-card" id="cc2">
+                    <label class="img-container" for="slide-2">
+                        <img src="./images/martin.jpg" alt="Мартин">
+                    </label>
+                    <div class="shadow-box">
+                        <h2><a href="#">Мартин</a></h2>
+                    </div>
+
+                    <div class="short-description">
+                        <p>Возраст: 5 лет</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: мочекаменная</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-description">
+                        Крупный котик весом около 6 кг уже.
+                        Несмотря на свою упитанность, он любит побегать-поиграть, кого-нибудь погонять...
+                        Любит полежать на спинке, раскинув в стороны свои лапки...
+                        Мартину требуется периодическое наблюдение у ветеринара,
+                        потому что он болел мочекаменной болезнью.
+                    </div>
+                </article>
+                <article class="cat-card" id="cc3">
+                    <label class="img-container" for="slide-3">
+                        <img src="./images/molly.jpg" alt="Молли">
+                    </label>
+                    <div class="shadow-box">
+                        <h2><a href="#">Молли</a></h2>
+                    </div>
+                    <div class="short-description">
+                        <p>Возраст: 3 года</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-description">
+                        Кошка-пушинка, весом всего 2 кг. Невероятная красотка!
+                        Миниатюрная, счастливого трёхцветного окраса с ярко-зелеными глазками и
+                        пикантным рыжим пятнышком на мордочке!
+                    </div>
+                </article>
+                <article class="cat-card" id="cc4">
+                    <label class="img-container" for="slide-4">
+                        <img src="./images/steffy.jpg" alt="Штеффи">
+                    </label>
+                    <div class="shadow-box">
+                        <h2><a href="#">Штеффи</a></h2>
+                    </div>
+                    <div class="short-description">
+                        <p>Возраст: 7 лет</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-description">
+                        Возраст 7 лет. По прошествии месяца, кошечка все еще не доверяет,
+                        иногда шипит или пытается бить лапой. Такое поведение
+                        свойственно кошками при стрессе, смене места жительства.
+                        Кошечка достаточно упитанная, у неё очень мягкая,
+                        плюшевая шёрстка, как и у всех бриташек, и толстенькие щёчки.
+                    </div>
+                </article>
+                <article class="cat-card" id="cc5">
+                    <label class="img-container" for="slide-5">
+                        <img src="./images/george.jpg" alt="Джордж">
+                    </label>
+                    <div class="shadow-box">
+                        <h2><a href="#">Джордж</a></h2>
+                    </div>
+
+                    <div class="short-description">
+                        <p>Возраст: 5 лет</p>
+                        <p>Порода: нет</p>
+                        <p>Болезни: нет</p>
+                        <p>Статус: ищет хозяина</p>
+                    </div>
+                    <div class="full-description">
+                        Джордж - взрослый кот, 5 лет.
+                        Очень спокойный, серьезный и с неповторимой харизмой...
+                        Не смотрите, что у Джорджа простой неприметный окрас.
+                        Зато у него большое любящее своих хозяев сердце.
+                        Это очень преданный кот, которому нужна своя семья и общение.
+                    </div>
+                </article>
+            </section>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <ul class="mail-list">
+            <li>Напишите нам:</li>
+            <li><a href="mailto:cats@babuli.ru">cats@babuli.ru</a></li>
+            <li><a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a></li>
+        </ul>
+        <div class="company-copyright">© 2018 ООО «<a href="#">Бабушкины котятки</a>»</div>
+    </footer>
 </body>
+
 </html>
