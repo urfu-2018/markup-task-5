@@ -67,10 +67,50 @@ a
     color: #4c4cd8;
 }
 
-.short-description,
-.full-description
+.description
 {
+    background-color: rgba(0,0,0,.9);
+    position: fixed;
+    width: 1400px;
+    height: 78%;
+    top: 49px;
+    left: 0;
+    color: #fff;
+    z-index: 2;
     display: none;
+}
+
+.description img[alt='Закрыть']
+{
+    position: relative;
+    top: 0;
+    left: 90%;
+    width: 30px;
+    height: 30px;
+}
+
+.description img
+{
+    float: left;
+    margin: 30px 15px 30px 30px;
+    width: 40%;
+    height: 90%;
+}
+
+.description-text
+{
+    font: 400 16px 'Roboto', sans-serif;
+    margin: 45px 0;
+    width: 80%;
+}
+
+input[id='slide-1']:checked ~ .carousel .cat-card[id='cc1'] .description:target,
+input[id='slide-2']:checked ~ .carousel .cat-card[id='cc2'] .description:target,
+input[id='slide-3']:checked ~ .carousel .cat-card[id='cc3'] .description:target,
+input[id='slide-4']:checked ~ .carousel .cat-card[id='cc4'] .description:target,
+input[id='slide-5']:checked ~ .carousel .cat-card[id='cc5'] .description:target
+{
+    display: block;
 }
 
 main
@@ -165,11 +205,6 @@ input[id='slide-5']:checked ~ .carousel .img-container[for='slide-5'] img
     color: white;
 }
 
-.shadow-box a
-{
-    color: #fff;
-}
-
 .shadow-box h2
 {
     position: relative;
@@ -177,6 +212,7 @@ input[id='slide-5']:checked ~ .carousel .img-container[for='slide-5'] img
     left: 35%;
     z-index: 1;
     font: 400 32px 'Roboto', sans-serif;
+    color: #fff;
 }
 
 input[id='slide-1']:checked ~ .carousel .cat-card[id='cc1']:hover .shadow-box,
