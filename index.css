@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 
-header
-{
-}
-
 header h1
 {
     font-size: 32px;
@@ -23,45 +19,109 @@ main
     z-index: 99;
 }
 
-footer
-{
-    font-size: 14px;
-    font-family: Arial;
-}
-
-footer img
-{
-    width: 18px;
-    height: 18px;
-    margin: -2px;
-}
-
 .cat-card
 {
     position: relative;
     margin: 30px;
     display: inline-block;
-    border: 2px solid lightgrey;
+    max-height: 500px;
+    max-width: 400px;
 }
 
-img
+main .cat-card img
 {
+    border: 2px solid lightgrey;
     position: relative;
     left: 0;
     top: 0;
-    width: 300px;
+    width: 100%;
+    height: 100%;
     z-index: 101;
 }
 
-img:hover
+main .cat-card img:hover
 {
     z-index: 99;
+    filter: brightness(50%);
+}
+
+.modal .close
+{
+    float: right;
+    width: 32px;
+    height: 32px;
+    margin: 0 0 20px 20px;
+}
+
+.modal .close a
+{
+    top: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.modal
+{
+    visibility: hidden;
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 80%;
+    background-color: #000;
+}
+
+.modal .cat-model
+{
+    display: block;
+}
+
+.modal:target
+{
+    visibility: visible;
+    opacity: .9;
+}
+
+.modal img
+{
+    left: 50%;
+    top: 200px;
+    position: relative;
+    display: block;
+    height: 300px;
+    width: 400px;
+    opacity: 1;
+    z-index: 9999;
 }
 
 .cat-name
 {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    text-align: center;
     font-size: 30px;
     z-index: 100;
+}
+
+.white
+{
+    color: aliceblue;
+}
+
+footer
+{
+    font: 14px Arial;
+    border: 1px solid gray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 80px;
+    padding: 10px;
 }
 
 footer li
@@ -74,6 +134,13 @@ footer li
 {
     display: block;
     line-height: 1.8;
+}
+
+footer img
+{
+    width: 18px;
+    height: 18px;
+    margin: -2px;
 }
 
 .right
