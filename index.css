@@ -2,6 +2,14 @@
 /* == Размещаем header, footer и карусель на странице == */
 /* ===================================================== */
 
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/pt-sans-narrow.ttf') format('truetype');
+}
+
 body
 {
     font-family: Arial, Helvetica, sans-serif;
@@ -74,7 +82,7 @@ footer .contacts ul
 
 footer .contacts li::before
 {
-    content: "\2709 ";
+    content: '\2709 ';
     font-size: 1.5em;
     padding-right: 2px;
     padding-top: 100px;
@@ -218,7 +226,8 @@ footer .contacts li::before
 .slide2-input:checked ~ .controls label:nth-of-type(2),
 .slide3-input:checked ~ .controls label:nth-of-type(3),
 .slide4-input:checked ~ .controls label:nth-of-type(4),
-.slide5-input:checked ~ .controls label:nth-of-type(5) {
+.slide5-input:checked ~ .controls label:nth-of-type(5)
+{
     background: #ccc;
 }
 
