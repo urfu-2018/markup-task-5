@@ -31,6 +31,7 @@ header
 main
 {
     position: relative;
+    overflow: hidden;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
 }
@@ -43,9 +44,10 @@ main input
 .carousel
 {
     white-space: nowrap;
-    
     height: 27em;
     margin-bottom: 10px;
+    transition-property: transform;
+    transition-duration: .7s;
 }
 
 .card
