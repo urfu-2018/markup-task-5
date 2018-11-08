@@ -1,4 +1,3 @@
-*,
 html,
 body
 {
@@ -16,7 +15,7 @@ header
     width: 100%;
     text-align: center;
     font-size: 32px;
-    font-family: "PT Sans Narrow";
+    font-family: 'PT Sans Narrow';
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
     padding: 5px 0;
@@ -26,7 +25,7 @@ header
 
 header:first-letter
 {
-    color: #fc1d29
+    color: #fc1d29;
 }
 
 footer
@@ -59,7 +58,6 @@ main
 {
     padding: 70px 0 ;
 }
-
 
 .carousel
 {
@@ -97,7 +95,7 @@ main
 nav
 {
     width: 100px;
-    margin: 300px auto 0 auto;
+    margin: 300px auto 0;
 }
 
 nav > label
@@ -110,62 +108,60 @@ nav > label
     cursor: pointer;
 }
 
-input[type="radio"]
+input[type='radio']
 {
     display: none;
 }
 
-input[type="radio"]:not(:checked) ~ section > label img
+input[type='radio']:not(:checked) ~ section > label img
 {
     height: 206px;
     opacity: .8;
 }
 
-input[id="item-1"]:checked ~ section > .carousel-item-1 img,
-input[id="item-2"]:checked ~ section > .carousel-item-2 img,
-input[id="item-3"]:checked ~ section > .carousel-item-3 img,
-input[id="item-4"]:checked ~ section > .carousel-item-4 img,
-input[id="item-5"]:checked ~ section > .carousel-item-5 img
+input[id='item-1']:checked ~ section > .carousel-item-1 img,
+input[id='item-2']:checked ~ section > .carousel-item-2 img,
+input[id='item-3']:checked ~ section > .carousel-item-3 img,
+input[id='item-4']:checked ~ section > .carousel-item-4 img,
+input[id='item-5']:checked ~ section > .carousel-item-5 img
 {
     height: 256px;
     opacity: 1;
 }
 
-input[id="item-1"]:checked ~ .carousel-nav > .carousel-nav-item1,
-input[id="item-2"]:checked ~ .carousel-nav > .carousel-nav-item2,
-input[id="item-3"]:checked ~ .carousel-nav > .carousel-nav-item3,
-input[id="item-4"]:checked ~ .carousel-nav > .carousel-nav-item4,
-input[id="item-5"]:checked ~ .carousel-nav > .carousel-nav-item5
+input[id='item-1']:checked ~ .carousel-nav > .carousel-nav-item1,
+input[id='item-2']:checked ~ .carousel-nav > .carousel-nav-item2,
+input[id='item-3']:checked ~ .carousel-nav > .carousel-nav-item3,
+input[id='item-4']:checked ~ .carousel-nav > .carousel-nav-item4,
+input[id='item-5']:checked ~ .carousel-nav > .carousel-nav-item5
 {
     background: #979797;
 }
 
-input[id="item-1"]:checked ~ .carousel
+input[id='item-1']:checked ~ .carousel
 {
     transition: 1s;
     transition-property: left;
     left: calc(50% - 128px);
 }
 
-input[id="item-2"]:checked ~ .carousel
+input[id='item-2']:checked ~ .carousel
 {
     transition: 1s;
     left: calc(50% - 205px - 128px);
 }
 
-input[id="item-3"]:checked ~ .carousel
+input[id='item-3']:checked ~ .carousel
 {
-    left: calc(50% - 205px * 2 - 128px)
+    left: calc(50% - 205px * 2 - 128px);
 }
 
-input[id="item-4"]:checked ~ .carousel
+input[id='item-4']:checked ~ .carousel
 {
     left: calc(50% - 205px * 3 - 128px);
 }
 
-input[id="item-5"]:checked ~ .carousel
+input[id='item-5']:checked ~ .carousel
 {
     left: calc(50% - 205px * 4 - 128px);
 }
-
-
