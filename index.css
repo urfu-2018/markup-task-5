@@ -1,0 +1,205 @@
+html,
+body,
+h2
+{
+    margin: 0;
+    height: 100%;
+}
+
+.container
+{
+    width: 100%;
+}
+
+.main
+{
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.header
+{
+    position: sticky;
+    top: 0;
+    font-family: PT SansNarrow, serif;
+    font-size: 32px;
+    text-align: center;
+    background-color: white;
+    z-index: 1000;
+}
+
+.header::first-letter
+{
+    color: red;
+}
+
+.footer
+{
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    height: 80px;
+    font-family: Arial, serif;
+    font-size: 14px;
+    background-color: white;
+}
+
+.footer-inner
+{
+    margin: 10px;
+}
+
+.footer p
+{
+    margin: 2px;
+}
+
+.footer a
+{
+    color: #4c4cd8;
+}
+
+.footer .right-side
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: inherit;
+}
+
+.footer .left-side
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: inherit;
+}
+
+.carousel
+{
+    width: 2020px;
+    position: relative;
+    top: 10px;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.carousel-inner
+{
+    position: relative;
+}
+
+.cat-element
+{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.label-container
+{
+    width: 400px;
+    height: 240px;
+    display: inline-block;
+    opacity: .7;
+    margin: 0 50px;
+}
+
+.label-container label
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cat-1 .label-container
+{
+    background-image: url('./images/cats/1.png');
+}
+
+.cat-2 .label-container
+{
+    background-image: url('./images/cats/2.png');
+}
+
+.cat-3 .label-container
+{
+    background-image: url('./images/cats/3.png');
+}
+
+.cat-4 .label-container
+{
+    background-image: url('./images/cats/4.png');
+}
+
+input[id='cat-1']:checked ~ .carousel .carousel-inner
+{
+    left: -250px;
+}
+
+input[id='cat-2']:checked ~ .carousel .carousel-inner
+{
+    left: -750px;
+}
+
+input[id='cat-3']:checked ~ .carousel .carousel-inner
+{
+    left: -1250px;
+}
+
+input[id='cat-4']:checked ~ .carousel .carousel-inner
+{
+    left: -1750px;
+}
+
+input[id='cat-1']:checked ~ .carousel .cat-1 .label-container,
+input[id='cat-2']:checked ~ .carousel .cat-2 .label-container,
+input[id='cat-3']:checked ~ .carousel .cat-3 .label-container,
+input[id='cat-4']:checked ~ .carousel .cat-4 .label-container
+{
+    width: 500px;
+    height: 300px;
+    opacity: 1;
+    margin: 0;
+}
+
+.cat-info
+{
+    display: none;
+    background-color: white;
+}
+
+input[id='cat-1']:checked ~ .carousel label[for='cat-1'],
+input[id='cat-2']:checked ~ .carousel label[for='cat-2'],
+input[id='cat-3']:checked ~ .carousel label[for='cat-3'],
+input[id='cat-4']:checked ~ .carousel label[for='cat-4']
+{
+    display: none;
+}
+
+input[id='lightbox-1']:checked ~ .carousel .cat-1,
+input[id='lightbox-2']:checked ~ .carousel .cat-2,
+input[id='lightbox-3']:checked ~ .carousel .cat-3,
+input[id='lightbox-4']:checked ~ .carousel .cat-4
+{
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 4000;
+}
+
+input[id='lightbox-1']:checked ~ .carousel .cat-1 .cat-info,
+input[id='lightbox-2']:checked ~ .carousel .cat-2 .cat-info,
+input[id='lightbox-3']:checked ~ .carousel .cat-3 .cat-info,
+input[id='lightbox-4']:checked ~ .carousel .cat-4 .cat-info
+{
+    display: block;
+    text-align: center;
+}
