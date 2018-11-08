@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: local('PT Sans Narrow'), 
+         local('PTSans-Narrow'), 
+         url(fonts/ptsansnarrow.woff2)  format('woff2'),
+         url(fonts/ptsansnarrow.woff)   format('woff'),
+         url(fonts/ptsansnarrow.ttf) format('truetype');
+    font-style: normal;
+}
+
 .view-changer
 {
     display: none;
@@ -113,4 +123,89 @@ li:hover
 {
     font-size: 13.5px;
     padding: 0 15px;
+}
+
+.fixed
+{
+    position: fixed;
+}
+
+.header
+{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    top: 0;
+    left: 0;
+}
+
+.store-name
+{
+    font-size: 32px;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: normal;
+    margin: 5px;
+}
+
+.store-name::first-letter
+{
+    color: red;
+}
+
+.header-wrapper
+{
+    height: 60px;
+}
+
+.footer
+{
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid gray;
+    width: 100%;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.footer-wrapper
+{
+    height: 85px;
+}
+
+.float-left
+{
+    float: left;
+}
+
+.float-right
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.margin
+{
+    margin: 10px 20px 20px 20px;
+}
+
+.left-info
+{
+    color: gray;
+}
+
+.footer > .margin > a
+{
+    color: #4c4cd8;
+}
+
+.footer > .margin > img
+{
+    width:  12.5px;
+    height: 12.5px;
+    display: inline-block;
+    background-image: url(img/mail-img.png);
+    background-size: cover;
 }

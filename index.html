@@ -6,9 +6,10 @@
     <title>Задача «Про котиков»</title>
 </head>
 <body>
-    <header>
-        <h2>Мурмаркет</h2>
+    <header class="fixed header">
+        <h2 class="store-name">Мурмаркет</h2>
     </header>
+    <div class="header-wrapper"></div>
     <input id="view-changer-inp" class="view-changer" type="checkbox">
     <label class="view-changer-img" for="view-changer-inp"></label>
     <article class="cat-info">
@@ -161,8 +162,20 @@
             Никогда не пускает когти в человека.
         </p>
     </article>
-    <footer>
-        info
+    <div class="footer-wrapper"></div>
+    <footer class="fixed footer">
+        <div class="float-left left-info margin">
+            Напишите нам:
+            <br>
+            <img src="img/mail-img.png" alt="Почта">
+            <a href="https://ya.ru">cats@babuli.ru</a>
+            <br>
+            <img src="img/mail-img.png" alt="Почта">
+            <a href="https://ya.ru">vnuchek@babuli.ru</a>
+        </div>
+        <div class="float-right margin">
+            &copy; 2018 ООО«<a href="https://ya.ru">Бабушкины котятки</a>»
+        </div>
     </footer>
 </body>
 </html>
