@@ -2,8 +2,160 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
+    <link type="text/css" href="index.css" rel="stylesheet">
+    <title>Мурмаркет</title>
 </head>
 <body>
+<header class="header">
+    <h1 class="title">Мурмаркет</h1>
+</header>
+<div class="body">
+    <input type="radio" id="cat-1-selector" class="cat-selector cat-1-selector" name="cat-selector">
+    <input type="radio" id="cat-2-selector" class="cat-selector cat-2-selector" name="cat-selector">
+    <input type="radio" id="cat-3-selector" class="cat-selector cat-3-selector" name="cat-selector" checked>
+    <input type="radio" id="cat-4-selector" class="cat-selector cat-4-selector" name="cat-selector">
+    <input type="radio" id="cat-5-selector" class="cat-selector cat-5-selector" name="cat-selector">
+    <!-- Modals -->
+    <div class="modals">
+        <article id="modal-1" class="modal">
+            <div class="modal-container">
+                <img class="cat-picture" alt="Изображение котика" title="Няша" src="cat1.jpg">
+                <p>
+                    Будет радовать вас каждый день.
+                </p>
+                <a class="close" href="#">&#10005;</a>
+            </div>
+        </article>
+        <article id="modal-2" class="modal">
+            <div class="modal-container">
+                <img class="cat-picture" alt="Изображение котика" title="Барсик" src="cat2.jpg">
+                <p>
+                    Продаётся кот, 2 года.
+                    Любит играть, сильно привязывается к своим хозяевам.
+                    Постоянно требует внимания.
+                </p>
+                <a class="close" href="#">&#10005;</a>
+            </div>
+        </article>
+        <article id="modal-3" class="modal">
+            <div class="modal-container">
+                <img class="cat-picture" alt="Изображение котика" title="Беспризорник" src="cat3.jpg">
+                <p>
+                    Нашли на улице этого милого котёнка. Хотим отдать в хорошие руки.
+                </p>
+                <a class="close" href="#">&#10005;</a>
+            </div>
+        </article>
+        <article id="modal-4" class="modal">
+            <div class="modal-container">
+                <img class="cat-picture" alt="Изображение котика" title="Роман" src="cat4.jpg">
+                <p>
+                    Взрослый кот средних лет ищет себе новый дом.
+                    Ведёт себя хорошо, принесёт вам только хорошие эмоции.
+                </p>
+                <a class="close" href="#">&#10005;</a>
+            </div>
+        </article>
+        <article id="modal-5" class="modal">
+            <div class="modal-container">
+                <img class="cat-picture" alt="Изображение котика" title="Котэ" src="cat5.jpg">
+                <p>
+                    Relax, maaan. What's your problem? Calm down.
+                    Just close your eyes. And feel it. Yeahh. Do you feel it?
+                    Don't worry about anything. Everything's alright, man.
+                </p>
+                <a class="close" href="#">&#10005;</a>
+            </div>
+        </article>
+    </div>
+    <!-- Carousel -->
+    <div class="carousel">
+        <article class="cat-carousel-item cat-1-carousel-item">
+            <section class="carousel-picture">
+                <label for="cat-1-selector">
+                    <img class="cat-picture" alt="Изображение котика" title="Няша" src="cat1.jpg">
+                </label>
+            </section>
+            <section class="carousel-name">
+                <a href="#modal-1">
+                    <h1>Няша</h1>
+                </a>
+            </section>
+        </article>
+        <article class="cat-carousel-item cat-2-carousel-item">
+            <section class="carousel-picture">
+                <label for="cat-2-selector">
+                    <img class="cat-picture" alt="Изображение котика" title="Барсик" src="cat2.jpg">
+                </label>
+            </section>
+            <section class="carousel-name">
+                <a href="#modal-2">
+                    <h1>Барсик</h1>
+                </a>
+            </section>
+        </article>
+        <article class="cat-carousel-item cat-3-carousel-item">
+            <section class="carousel-picture">
+                <label for="cat-3-selector">
+                    <img class="cat-picture" alt="Изображение котика" title="Беспризорник" src="cat3.jpg">
+                </label>
+            </section>
+            <section class="carousel-name">
+                <a href="#modal-3">
+                    <h1>Беспризорник</h1>
+                </a>
+            </section>
+        </article>
+        <article class="cat-carousel-item cat-4-carousel-item">
+            <section class="carousel-picture">
+                <label for="cat-4-selector">
+                    <img class="cat-picture" alt="Изображение котика" title="Роман" src="cat4.jpg">
+                </label>
+            </section>
+            <section class="carousel-name">
+                <a href="#modal-4">
+                    <h1>Роман</h1>
+                </a>
+            </section>
+        </article>
+        <article class="cat-carousel-item cat-5-carousel-item">
+            <section class="carousel-picture">
+                <label for="cat-5-selector">
+                    <img class="cat-picture" alt="Изображение котика" title="Котэ" src="cat5.jpg">
+                </label>
+            </section>
+            <section class="carousel-name">
+                <a href="#modal-5">
+                    <h1>Котэ</h1>
+                </a>
+            </section>
+        </article>
+    </div>
+</div>
+<footer class="footer">
+    <table class="contact-info">
+        <tr>
+            <td>Напишите нам:</td>
+        </tr>
+        <tr>
+            <td>
+                <img class="mail-image" src="mail.jpg" alt="Изображение почтового конверта">
+                <a href="mailto:cats@babuli.ru" class="hyperlink">cats@babuli.ru</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img class="mail-image" src="mail.jpg" alt="Изображение почтового конверта">
+                <a href="mailto:vnuchek@babuli.ru">vnuchek@babuli.ru</a>
+            </td>
+            <td>
+                <div class="footer-website-link">&copy; 2018 OOO&laquo;
+                    <a href="http://example.com">Бабушкины котятки</a>
+                    &raquo;
+                </div>
+            </td>
+        </tr>
+    </table>
+</footer>
 </body>
 </html>

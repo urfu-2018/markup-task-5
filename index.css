@@ -1,0 +1,201 @@
+@font-face
+{
+    font-family: 'Spicy Rice';
+    src: url('https://fonts.googleapis.com/css?family=Spicy+Rice');
+}
+
+.title
+{
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+    border-bottom: #808080 solid 1px;
+    background-color: #fff;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+}
+
+.title:first-letter
+{
+    color: #f00;
+}
+
+.contact-info
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border-top: #808080 solid 1px;
+}
+
+.contact-info a
+{
+    color: #4c4cd8;
+}
+
+.contact-info
+{
+    width: 100%;
+}
+
+.footer-website-link
+{
+    text-align: right;
+}
+
+.mail-image
+{
+    width: 20px;
+}
+
+.body
+{
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.cat-selector
+{
+    display: none;
+}
+
+.cat-carousel-item
+{
+    position: relative;
+    display: inline-block;
+}
+
+.carousel
+{
+    position: relative;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.carousel-name
+{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Spicy Rice', cursive;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.cat-1-selector:checked ~ .carousel .cat-1-carousel-item:hover .carousel-name,
+.cat-2-selector:checked ~ .carousel .cat-2-carousel-item:hover .carousel-name,
+.cat-3-selector:checked ~ .carousel .cat-3-carousel-item:hover .carousel-name,
+.cat-4-selector:checked ~ .carousel .cat-4-carousel-item:hover .carousel-name,
+.cat-5-selector:checked ~ .carousel .cat-5-carousel-item:hover .carousel-name
+{
+    visibility: visible;
+}
+
+.cat-1-selector:checked ~ .carousel .cat-1-carousel-item:hover .cat-picture,
+.cat-2-selector:checked ~ .carousel .cat-2-carousel-item:hover .cat-picture,
+.cat-3-selector:checked ~ .carousel .cat-3-carousel-item:hover .cat-picture,
+.cat-4-selector:checked ~ .carousel .cat-4-carousel-item:hover .cat-picture,
+.cat-5-selector:checked ~ .carousel .cat-5-carousel-item:hover .cat-picture
+{
+    filter: brightness(50%);
+}
+
+.cat-1-selector:checked ~ .carousel .cat-1-carousel-item .cat-picture,
+.cat-2-selector:checked ~ .carousel .cat-2-carousel-item .cat-picture,
+.cat-3-selector:checked ~ .carousel .cat-3-carousel-item .cat-picture,
+.cat-4-selector:checked ~ .carousel .cat-4-carousel-item .cat-picture,
+.cat-5-selector:checked ~ .carousel .cat-5-carousel-item .cat-picture
+{
+    opacity: 1;
+}
+
+.cat-picture
+{
+    width: 500px;
+    opacity: .7;
+}
+
+.category
+{
+    font-size: 15px;
+}
+
+.cat-1-selector:checked ~ .carousel
+{
+    left: 500px;
+}
+
+.cat-2-selector:checked ~ .carousel
+{
+    left: 0;
+}
+
+.cat-3-selector:checked ~ .carousel
+{
+    left: -500px;
+}
+
+.cat-4-selector:checked ~ .carousel
+{
+    left: -1000px;
+}
+
+.cat-5-selector:checked ~ .carousel
+{
+    left: -1500px;
+}
+
+.modal
+{
+    visibility: hidden;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, .9);
+}
+
+.modal-container
+{
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    margin-left: 33.67%;
+}
+
+.modal-container p
+{
+    color: white;
+    width: 500px;
+}
+
+.modal:target
+{
+    visibility: visible;
+}
+
+.carousel-name a
+{
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+}
