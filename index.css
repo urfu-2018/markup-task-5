@@ -45,7 +45,8 @@ body
 /*----------Carousel----------*/
 
 .carousel-slide-switch,
-.modal-switch
+.modal-switch,
+.slide-overlay
 {
     display: none;
 }
@@ -175,7 +176,7 @@ body
     cursor: pointer;
 
     opacity: .7;
-    transform: scale(0.8);
+    transform: scale(.8);
 
     transition: .2s ease-in-out;
 }
@@ -193,6 +194,7 @@ body
 
 .cat-name
 {
+    display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
