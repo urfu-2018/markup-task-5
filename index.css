@@ -1,0 +1,320 @@
+@font-face
+{
+    font-family: 'PT-Sans-Narrow';
+    src: url('font/PT_Sans_Narrow/PT_Sans-Narrow-Web-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'PT-Sans-Narrow';
+}
+
+header
+{
+    text-align: center;
+    position: fixed;
+    width: 1080px;
+    top: 0;
+    background: #fff;
+    z-index: 1;
+    padding-top: 5px;
+}
+
+.head-title
+{
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding: 10px 0;
+    margin: 0;
+    font-size: 32px;
+}
+
+.head-title:first-letter
+{
+    color: red;
+}
+
+.main
+{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    min-height: 400px;
+    height: 100%;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 110px;
+}
+
+.radio
+{
+    display: none;
+}
+
+.radio-dot
+{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    background: #d8d8d8;
+    position: relative;
+    top: 285px;
+}
+
+.radio:checked + .radio-dot
+{
+    background: #979797;
+}
+
+.slider-block
+{
+    text-align: center;
+    white-space: nowrap;
+    margin: 20px 0;
+    position: absolute;
+    margin-left: calc(-50% + 20px * 5 * 2);
+}
+
+.slide-block
+{
+    width: 300px;
+    height: 200px;
+    background: blue;
+    display: inline-block;
+    margin: 20px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, .5);
+    vertical-align: middle;
+    position: relative;
+}
+
+.slide-block img
+{
+    width: 300px;
+    height: 200px;
+}
+
+.fisrt-radio:checked ~ .slider-block,
+.second-radio:checked ~ .slider-block,
+.third-radio:checked ~ .slider-block,
+.fourth-radio:checked ~ .slider-block,
+.fifth-radio:checked ~ .slider-block
+{
+    transition: 300ms;
+}
+
+.fisrt-radio:checked ~ .slider-block
+{
+    transform: translateX(41%);
+}
+
+.second-radio:checked ~ .slider-block
+{
+    transform: translateX(21%);
+}
+
+.third-radio:checked ~ .slider-block
+{
+    transform: translateX(1%);
+}
+
+.fourth-radio:checked ~ .slider-block
+{
+    transform: translateX(-19%);
+}
+
+.fifth-radio:checked ~ .slider-block
+{
+    transform: translateX(-40%);
+}
+
+.fisrt-radio:checked ~ .slider-block .slide-1,
+.second-radio:checked ~ .slider-block .slide-2,
+.third-radio:checked ~ .slider-block .slide-3,
+.fourth-radio:checked ~ .slider-block .slide-4,
+.fifth-radio:checked ~ .slider-block .slide-5
+{
+    transform: scale(1.2);
+}
+
+.open-dialog
+{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.open-dialog span
+{
+    display: none;
+}
+
+.fisrt-radio:checked ~ .slider-block .slide-1 .open-dialog,
+.second-radio:checked ~ .slider-block .slide-2 .open-dialog,
+.third-radio:checked ~ .slider-block .slide-3 .open-dialog,
+.fourth-radio:checked ~ .slider-block .slide-4 .open-dialog,
+.fifth-radio:checked ~ .slider-block .slide-5 .open-dialog
+{
+    display: block;
+}
+
+.fisrt-radio:checked ~ .slider-block .slide-1 .label-slide,
+.second-radio:checked ~ .slider-block .slide-2 .label-slide,
+.third-radio:checked ~ .slider-block .slide-3 .label-slide,
+.fourth-radio:checked ~ .slider-block .slide-4 .label-slide,
+.fifth-radio:checked ~ .slider-block .slide-5 .label-slide
+{
+    z-index: -1;
+}
+
+.fisrt-radio:checked ~ .slider-block .slide-1 .open-dialog:hover,
+.second-radio:checked ~ .slider-block .slide-2 .open-dialog:hover,
+.third-radio:checked ~ .slider-block .slide-3 .open-dialog:hover,
+.fourth-radio:checked ~ .slider-block .slide-4 .open-dialog:hover,
+.fifth-radio:checked ~ .slider-block .slide-5 .open-dialog:hover
+{
+    background: rgba(0, 0, 0, .3);
+}
+
+.fisrt-radio:checked ~ .slider-block .slide-1 .open-dialog:hover span,
+.second-radio:checked ~ .slider-block .slide-2 .open-dialog:hover span,
+.third-radio:checked ~ .slider-block .slide-3 .open-dialog:hover span,
+.fourth-radio:checked ~ .slider-block .slide-4 .open-dialog:hover span,
+.fifth-radio:checked ~ .slider-block .slide-5 .open-dialog:hover span
+{
+    line-height: 200px;
+    vertical-align: middle;
+    margin: 0;
+    display: block;
+    color: #fff;
+    font-size: 24px;
+}
+
+.dialog
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .9);
+    z-index: 2;
+}
+
+.checkbox-dialog
+{
+    display: none;
+}
+
+.checkbox-dialog:checked + .dialog
+{
+    display: block;
+}
+
+.body-dialog
+{
+    width: 900px;
+    min-height: 400px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: calc((100vh - 400px) / 2);
+    position: relative;
+}
+
+.close-dialog
+{
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-dialog::before
+{
+    content: '';
+    transform: rotate(45deg);
+    top: -10px;
+    border-right: 1px solid #fff;
+}
+
+.close-dialog::after
+{
+    content: '';
+    transform: rotate(135deg);
+    top: 4px;
+    border-left: 1px solid #fff;
+}
+
+.close-dialog::before,
+.close-dialog::after
+{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.img-dialog,
+.info-dialog
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.img-dialog
+{
+    width: 600px;
+}
+
+.info-dialog
+{
+    width: 255px;
+    padding: 20px;
+}
+
+footer
+{
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    font-family: 'Arial';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    width: 1080px;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    background: #fff;
+    padding-bottom: 5px;
+}
+
+footer p:last-child
+{
+    text-align: right;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.label-slide
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}

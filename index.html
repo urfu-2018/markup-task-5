@@ -3,7 +3,145 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <header>
+        <h1 class="head-title">Мурмаркет</h1>
+    </header>
+    <main class="main">
+        <input type="radio" name="slide" id="fisrt-radio" class="radio fisrt-radio">
+        <span class="radio-dot"></span>
+        <input type="radio" name="slide" id="second-radio" class="radio second-radio">
+        <span class="radio-dot"></span>
+        <input type="radio" name="slide" id="third-radio" class="radio third-radio" checked>
+        <span class="radio-dot"></span>
+        <input type="radio" name="slide" id="fourth-radio" class="radio fourth-radio">
+        <span class="radio-dot"></span>
+        <input type="radio" name="slide" id="fifth-radio" class="radio fifth-radio">
+        <span class="radio-dot"></span>
+        <article class="slider-block">
+            <section class="slide-block slide-1">
+                <label for="fisrt-radio" class="label-slide"></label>
+                <img src="img/cat-636172_1280.jpg" alt="Boris">
+                <label class="open-dialog" for="checkbox-dialog-1">
+                    <span>Борис</span>
+                </label>
+            </section>
+            <section class="slide-block slide-2">
+                <label for="second-radio" class="label-slide"></label>
+                <img src="img/cat-about-to-hunt-or-chase-a-toy.jpg" alt="Leonard">
+                <label class="open-dialog" for="checkbox-dialog-2">
+                    <span>Леонард</span>
+                </label>
+            </section>
+            <section class="slide-block slide-3">
+                <label for="third-radio" class="label-slide"></label>
+                <img src="img/cat-green-eyes.jpg" alt="Petka">
+                <label class="open-dialog" for="checkbox-dialog-3">
+                    <span>Пётр</span>
+                </label>
+            </section>
+            <section  class="slide-block slide-4">
+                <label for="fourth-radio" class="label-slide"></label>
+                <img src="img/cat-pexels-photo-177809.jpg" alt="Ivan">
+                <label class="open-dialog" for="checkbox-dialog-4">
+                    <span>Иван</span>
+                </label>
+            </section>
+            <section class="slide-block slide-5">
+                <label for="fifth-radio" class="label-slide"></label>
+                <img src="img/grumpy-cat.jpg" alt="Ignat">
+                <label class="open-dialog" for="checkbox-dialog-5">
+                    <span>Игнат</span>
+                </label>
+            </section>
+        </article>
+    </main>
+    <input type="checkbox" id="checkbox-dialog-1" class="checkbox-dialog">
+    <article class="dialog">
+        <section class="body-dialog">
+            <label class="close-dialog" for="checkbox-dialog-1"></label>
+            <div class="img-dialog">
+                <img src="img/cat-636172_1280.jpg" alt="Boris">
+            </div>
+            <div class="info-dialog">
+                <h2>Борис</h2>
+                <p>Спокойный, мирный, дружелюбный</p>
+                <p>Возраст: 3 года</p>
+                <p>У кота всё хорошо</p>
+            </div>
+        </section>
+    </article>
+    <input type="checkbox" id="checkbox-dialog-2" class="checkbox-dialog">
+    <article class="dialog">
+        <section class="body-dialog">
+            <label class="close-dialog" for="checkbox-dialog-2"></label>
+            <div class="img-dialog">
+                <img src="img/cat-about-to-hunt-or-chase-a-toy.jpg" alt="Leonard">
+            </div>
+            <div class="info-dialog">
+                <h2>Леонард</h2>
+                <p>Хитрый, умный, ловкий</p>
+                <p>Возраст: 2 года</p>
+                <p>Максимально быстрый кот не даст заскучать</p>
+            </div>
+        </section>
+    </article>
+    <input type="checkbox" id="checkbox-dialog-3" class="checkbox-dialog">
+    <article class="dialog">
+        <section class="body-dialog">
+            <label class="close-dialog" for="checkbox-dialog-3"></label>
+            <div class="img-dialog">
+                <img src="img/cat-green-eyes.jpg" alt="Petka">
+            </div>
+            <div class="info-dialog">
+                <h2>Леонард</h2>
+                <p>Фотогеничный, спокойный, знает себе цену</p>
+                <p>Возраст: 3 года</p>
+                <p>Прекрасные зелёные глаза заставляют думать людей, что нарисованы в фотошопе</p>
+            </div>
+        </section>
+    </article>
+    <input type="checkbox" id="checkbox-dialog-4" class="checkbox-dialog">
+    <article class="dialog">
+        <section class="body-dialog">
+            <label class="close-dialog" for="checkbox-dialog-4"></label>
+            <div class="img-dialog">
+                <img src="img/cat-pexels-photo-177809.jpg" alt="Ivan">
+            </div>
+            <div class="info-dialog">
+                <h2>Иван</h2>
+                <p>Ленивый, гордый</p>
+                <p>Возраст: 2 года</p>
+                <p>Прекрасный кот</p>
+            </div>
+        </section>
+    </article>
+    <input type="checkbox" id="checkbox-dialog-5" class="checkbox-dialog">
+    <article class="dialog">
+        <section class="body-dialog">
+            <label class="close-dialog" for="checkbox-dialog-5"></label>
+            <div class="img-dialog">
+                <img src="img/grumpy-cat.jpg" alt="Ignat">
+            </div>
+            <div class="info-dialog">
+                <h2>Игнат</h2>
+                <p>весельчак и озорник</p>
+                <p>Возраст: 5 месяцев</p>
+                <p>Не любит целоваться</p>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <p>
+            Напишите
+            <br><a href="#">cats@babuli.ru</a>
+            <br><a href="#">vnuchek@babuli.ru</a>
+        </p>
+        <p>
+            &#169; 2018 &laquo;<a href="#">Бабушкины котятки</a>&raquo;
+        </p>
+    </footer>
 </body>
 </html>
