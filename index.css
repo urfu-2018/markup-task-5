@@ -123,11 +123,6 @@ input[type='checkbox']:checked ~ .gallery-mode
     text-align: left;
 }
 
-.list-mode-info
-{
-    display: none;
-}
-
 .kitty-name
 {
     margin: 0;
