@@ -1,8 +1,21 @@
+@font-face
+{
+    font-family: 'PT SansNarrow';
+    src: url('pt-sans-narrow.ttf');
+}
+
+@font-face
+{
+    font-family: 'Arial';
+    src: url('arial.ttf');
+}
+
 header h1
 {
     text-align: center;
     font-size: 32px;
-    font-family: "PT SansNarrow";
+    font-family: 'PT SansNarrow';
+    margin: 10px;
 }
 
 header h1:first-letter
@@ -21,13 +34,65 @@ header
     width: 100%;
     background: white;
     z-index: 2;
-    border: gray solid 1px;
+    border-bottom: gray solid 1px;
 }
 
 body
 {
     margin: 0;
     padding: 0;
+}
+
+.modal
+{
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.modal-windows
+{
+    width: 100%;
+    z-index: 1;
+}
+
+.modal-windows .modal
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .9);
+    z-index: 1;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.modal-windows .modal .photo
+{
+    padding-left: 100px;
+    width: 400px;
+    height: 300px;
+}
+
+.description p
+{
+    margin: 2px;
+}
+
+.description .name
+{
+    padding: 8px;
+    font-size: 40px;
+}
+
+.description
+{
+    float: right;
+    padding-top: 70px;
+    padding-right: 300px;
+    font-size: 20px;
+    color: white;
 }
 
 article.view
@@ -37,16 +102,25 @@ article.view
     white-space: nowrap;
 }
 
-section.gallery
+.gallery
 {
     position: relative;
-    left: -400px;
+    left: -340px;
+}
+
+.close-image
+{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 1037px;
+    top: 150px;
 }
 
 .cat-card
 {
     display: inline-block;
-    margin: 5px;
+    margin: 3px;
     width: 400px;
     height: 300px;
     padding: 0;
@@ -54,7 +128,7 @@ section.gallery
     overflow: hidden;
 }
 
-p.name
+.cat-card p.name
 {
     color: white;
     font-size: 60px;
@@ -65,28 +139,42 @@ p.name
     display: none;
     position: absolute;
     top: 40px;
-    text-align:center;
+    text-align: center;
     width: 100%;
 }
 
-.photo
+.view .gallery .cat-card .modal-label
 {
-    position:absolute;
-    margin:auto;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    width: 80%;
-    height: 80%;
-    opacity: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
-label
+.view .gallery .cat-card label .photo
+{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    opacity: .7;
+}
+
+.view .gallery .cat-card .first-label,
+.view .gallery .cat-card .second-label,
+.view .gallery .cat-card .third-label,
+.view .gallery .cat-card .fourth-label,
+.view .gallery .cat-card .fifth-label,
+.view .gallery .cat-card .sixth-label
 {
     display: inline-block;
     width: 100%;
     height: 100%;
+    position: absolute;
 }
 
 footer > div
@@ -101,6 +189,10 @@ footer .email img
 
 footer
 {
+    position: relative;
+    background: white;
+    z-index: 3;
+    height: 90px;
     font-size: 14px;
     font-family: Arial;
     border: gray solid 1px;
@@ -123,49 +215,125 @@ footer .rights
     text-align: right;
 }
 
+.switcher > label
+{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #d8d8d8;
+}
+
+.switcher
+{
+    text-align: center;
+    margin: 20px;
+}
+
+main
+{
+    min-height: calc(100vh - 222px);
+}
+
 input
 {
     display: none;
 }
 
-input[name="gallery"].first-cat:checked ~ .view .gallery .cat-card:hover > label[for="first-cat"] .photo,
-input[name="gallery"].second-cat:checked ~ .view .gallery .cat-card:hover > label[for="second-cat"] .photo,
-input[name="gallery"].third-cat:checked ~ .view .gallery .cat-card:hover > label[for="third-cat"] .photo,
-input[name="gallery"].fourth-cat:checked ~ .view .gallery .cat-card:hover > label[for="fourth-cat"] .photo,
-input[name="gallery"].fifth-cat:checked ~ .view .gallery .cat-card:hover > label[for="fifth-cat"] .photo,
-input[name="gallery"].sixth-cat:checked ~ .view .gallery .cat-card:hover > label[for="sixth-cat"] .photo
+.first-cat:checked ~ .view .gallery
+{
+    left: 480px;
+}
+
+.second-cat:checked ~ .view .gallery
+{
+    left: 70px;
+}
+
+.fourth-cat:checked ~ .view .gallery
+{
+    left: -750px;
+}
+
+.fifth-cat:checked ~ .view .gallery
+{
+    left: -1160px;
+}
+
+.sixth-cat:checked ~ .view .gallery
+{
+    left: -1570px;
+}
+
+.first-cat:checked ~ .view .gallery .cat-card:hover > .first-label .photo,
+.second-cat:checked ~ .view .gallery .cat-card:hover > .second-label .photo,
+.third-cat:checked ~ .view .gallery .cat-card:hover > .third-label .photo,
+.fourth-cat:checked ~ .view .gallery .cat-card:hover > .fourth-label .photo,
+.fifth-cat:checked ~ .view .gallery .cat-card:hover > .fifth-label .photo,
+.sixth-cat:checked ~ .view .gallery .cat-card:hover > .sixth-label .photo
 {
     opacity: .5;
 }
 
-input[name="gallery"].first-cat:checked ~ .view .gallery .cat-card:hover > label[for="first-cat"],
-input[name="gallery"].second-cat:checked ~ .view .gallery .cat-card:hover > label[for="second-cat"],
-input[name="gallery"].third-cat:checked ~ .view .gallery .cat-card:hover > label[for="third-cat"],
-input[name="gallery"].fourth-cat:checked ~ .view .gallery .cat-card:hover > label[for="fourth-cat"],
-input[name="gallery"].fifth-cat:checked ~ .view .gallery .cat-card:hover > label[for="fifth-cat"],
-input[name="gallery"].sixth-cat:checked ~ .view .gallery .cat-card:hover > label[for="sixth-cat"]
+.first-cat:checked ~ .view .gallery .cat-card:hover > .first-label,
+.second-cat:checked ~ .view .gallery .cat-card:hover > .second-label,
+.third-cat:checked ~ .view .gallery .cat-card:hover > .third-label,
+.fourth-cat:checked ~ .view .gallery .cat-card:hover > .fourth-label,
+.fifth-cat:checked ~ .view .gallery .cat-card:hover > .fifth-label,
+.sixth-cat:checked ~ .view .gallery .cat-card:hover > .sixth-label
 {
     background: #000;
     opacity: 1;
 }
 
-input[name="gallery"].first-cat:checked ~ .view .gallery .cat-card:hover > label[for="first-cat"] + .name,
-input[name="gallery"].second-cat:checked ~ .view .gallery .cat-card:hover > label[for="second-cat"] + .name,
-input[name="gallery"].third-cat:checked ~ .view .gallery .cat-card:hover > label[for="third-cat"] + .name,
-input[name="gallery"].fourth-cat:checked ~ .view .gallery .cat-card:hover > label[for="fourth-cat"] + .name,
-input[name="gallery"].fifth-cat:checked ~ .view .gallery .cat-card:hover > label[for="fifth-cat"] + .name,
-input[name="gallery"].sixth-cat:checked ~ .view .gallery .cat-card:hover > label[for="sixth-cat"] + .name
+.first-cat:checked ~ .view .gallery .cat-card:hover > .first-label + .name,
+.second-cat:checked ~ .view .gallery .cat-card:hover > .second-label + .name,
+.third-cat:checked ~ .view .gallery .cat-card:hover > .third-label + .name,
+.fourth-cat:checked ~ .view .gallery .cat-card:hover > .fourth-label + .name,
+.fifth-cat:checked ~ .view .gallery .cat-card:hover > .fifth-label + .name,
+.sixth-cat:checked ~ .view .gallery .cat-card:hover > .sixth-label + .name
 {
     display: block;
 }
 
-input[name="gallery"].first-cat:checked ~ .view .gallery .cat-card label[for="first-cat"] .photo,
-input[name="gallery"].second-cat:checked ~ .view .gallery .cat-card label[for="second-cat"] .photo,
-input[name="gallery"].third-cat:checked ~ .view .gallery .cat-card label[for="third-cat"] .photo,
-input[name="gallery"].fourth-cat:checked ~ .view .gallery .cat-card label[for="fourth-cat"] .photo,
-input[name="gallery"].fifth-cat:checked ~ .view .gallery .cat-card label[for="fifth-cat"] .photo,
-input[name="gallery"].sixth-cat:checked ~ .view .gallery .cat-card label[for="sixth-cat"] .photo
+.first-cat:checked ~ .view .gallery .first-cat-card:hover > .modal-label,
+.second-cat:checked ~ .view .gallery .second-cat-card:hover > .modal-label,
+.third-cat:checked ~ .view .gallery .third-cat-card:hover > .modal-label,
+.fourth-cat:checked ~ .view .gallery .fourth-cat-card:hover > .modal-label,
+.fifth-cat:checked ~ .view .gallery .fifth-cat-card:hover > .modal-label,
+.sixth-cat:checked ~ .view .gallery .sixth-cat-card:hover > .modal-label
 {
+    display: block;
+}
+
+.first-cat:checked ~ .view .gallery .cat-card .first-label .photo,
+.second-cat:checked ~ .view .gallery .cat-card .second-label .photo,
+.third-cat:checked ~ .view .gallery .cat-card .third-label .photo,
+.fourth-cat:checked ~ .view .gallery .cat-card .fourth-label .photo,
+.fifth-cat:checked ~ .view .gallery .cat-card .fifth-label .photo,
+.sixth-cat:checked ~ .view .gallery .cat-card .sixth-label .photo
+{
+    opacity: 1;
     width: 100%;
     height: 100%;
+}
+
+.first-cat:checked ~ .view .switcher .first-label,
+.second-cat:checked ~ .view .switcher .second-label,
+.third-cat:checked ~ .view .switcher .third-label,
+.fourth-cat:checked ~ .view .switcher .fourth-label,
+.fifth-cat:checked ~ .view .switcher .fifth-label,
+.sixth-cat:checked ~ .view .switcher .sixth-label
+{
+    background: #979797;
+}
+
+.first-modal:checked ~ .modal-windows .first-modal-window,
+.second-modal:checked ~ .modal-windows .second-modal-window,
+.third-modal:checked ~ .modal-windows .third-modal-window,
+.fourth-modal:checked ~ .modal-windows .fourth-modal-window,
+.fifth-modal:checked ~ .modal-windows .fifth-modal-window,
+.sixth-modal:checked ~ .modal-windows .sixth-modal-window
+{
+    display: inline-block;
 }

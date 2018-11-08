@@ -15,45 +15,139 @@
     <input type="radio" id="fifth-cat" class="fifth-cat" name="gallery" value="fifth-cat">
     <input type="radio" id="sixth-cat" class="sixth-cat" name="gallery" value="sixth-cat">
 
+    <input type="checkbox" id="first-modal" class="first-modal" name="modal" value="first-modal">
+    <input type="checkbox" id="second-modal" class="second-modal" name="modal" value="second-modal">
+    <input type="checkbox" id="third-modal" class="third-modal" name="modal" value="third-modal">
+    <input type="checkbox" id="fourth-modal" class="fourth-modal" name="modal" value="fourth-modal">
+    <input type="checkbox" id="fifth-modal" class="fifth-modal" name="modal" value="fifth-modal">
+    <input type="checkbox" id="sixth-modal" class="sixth-modal" name="modal" value="sixth-modal">
 
     <article class="view">
         <section class="gallery">
-            <section class="cat-card">
-                <label for="first-cat">
+            <section class="cat-card first-cat-card">
+                <label for="first-cat" class="first-label">
                     <img class="photo" src="cats/1.jpg" alt="Ученый кот">
                 </label>
                 <p class="name">Ученый де Ларефан Репадье Мачачос Аквадорик</p>
+                <label for="first-modal" class="modal-label"></label>
             </section>
-            <section class="cat-card">
-                <label for="second-cat">
+            <section class="cat-card second-cat-card">
+                <label for="second-cat" class="second-label">
                     <img class="photo" src="cats/2.jpg" alt="Сонька кот">
                 </label>
                 <p class="name">Сонька</p>
+                <label for="second-modal" class="modal-label"></label>
             </section>
-            <section class="cat-card">
-                <label for="third-cat">
+            <section class="cat-card third-cat-card">
+                <label for="third-cat" class="third-label">
                     <img class="photo" src="cats/15.jpg" alt="Клюква кошка">
                 </label>
                 <p class="name">Клюква</p>
+                <label for="third-modal" class="modal-label"></label>
             </section>
-            <section class="cat-card">
-                <label for="fourth-cat">
+            <section class="cat-card fourth-cat-card">
+                <label for="fourth-cat" class="fourth-label">
                     <img class="photo" src="cats/4.jpg" alt="София кошка">
                 </label>
                 <p class="name">София</p>
+                <label for="fourth-modal" class="modal-label"></label>
             </section>
-            <section class="cat-card">
-                <label for="fifth-cat">
+            <section class="cat-card fifth-cat-card">
+                <label for="fifth-cat" class="fifth-label">
                     <img class="photo" src="cats/7.jpg" alt="Жаки кот">
                 </label>
                 <p class="name">Жаки</p>
+                <label for="fifth-modal" class="modal-label"></label>
             </section>
-            <section class="cat-card">
-                <label for="sixth-cat">
+            <section class="cat-card sixth-cat-card">
+                <label for="sixth-cat" class="sixth-label">
                     <img class="photo" src="cats/12.jpg" alt="Дым кот">
                 </label>
                 <p class="name">Дым</p>
+                <label for="sixth-modal" class="modal-label"></label>
             </section>
+        </section>
+        <section class="switcher">
+            <label for="first-cat" class="first-label"></label>
+            <label for="second-cat" class="second-label"></label>
+            <label for="third-cat" class="third-label"></label>
+            <label for="fourth-cat" class="fourth-label"></label>
+            <label for="fifth-cat" class="fifth-label"></label>
+            <label for="sixth-cat" class="sixth-label"></label>
+        </section>
+    </article>
+    <article class="modal-windows">
+        <section class="modal first-modal-window">
+            <img class="photo" src="cats/1.jpg" alt="Ученый кот">
+            <label for="first-modal">
+                <img src="close.png" alt="close" class="close-image">
+            </label>
+            <div class="description">
+                <p class="name">Ученый</p>
+                <p>Дружелюбный, ласковый.</p>
+                <p>Возраст 2 года.</p>
+                <p>Ходит по стенам.</p>
+            </div>
+        </section>
+        <section class="modal second-modal-window">
+            <img class="photo" src="cats/2.jpg" alt="Сонька кот">
+            <label for="second-modal">
+                <img src="close.png" alt="close" class="close-image">
+            </label>
+            <div class="description">
+                <p class="name">Сонька</p>
+                <p>Сонный, добрый.</p>
+                <p>Возраст 5 лет.</p>
+                <p>Много ест. Ходит по тебе.</p>
+            </div>
+        </section>
+        <section class="modal third-modal-window">
+            <img class="photo" src="cats/15.jpg" alt="Клюква кошка">
+            <label for="third-modal">
+                <img src="close.png" alt="close" class="close-image">
+            </label>
+            <div class="description">
+                <p class="name">Клюква</p>
+                <p>Нежная, тихая.</p>
+                <p>Возраст 3 года.</p>
+                <p>Принцесска, обожает спать на спине.</p>
+            </div>
+        </section>
+        <section class="modal fourth-modal-window">
+            <img class="photo" src="cats/4.jpg" alt="София кошка">
+            <label for="fourth-modal">
+                <img src="close.png" alt="close" class="close-image">
+            </label>
+            <div class="description">
+                <p class="name">София</p>
+                <p>Чистолюбивая, игривая.</p>
+                <p>Возраст 2 года.</p>
+                <p>Шипит и боится чужих, хозяина не даст в обиду.</p>
+            </div>
+        </section>
+        <section class="modal fifth-modal-window">
+            <img class="photo" src="cats/7.jpg" alt="Жаки кот">
+            <label for="fifth-modal">
+                <img src="close.png" alt="close" class="close-image">
+            </label>
+            <div class="description">
+                <p class="name">Жаки</p>
+                <p>Обожает детей.</p>
+                <p>Возраст 6 лет.</p>
+                <p>Кот-расписание, у него все по распианию: еда, сон, игры.</p>
+            </div>
+        </section>
+        <section class="modal sixth-modal-window">
+            <img class="photo" src="cats/12.jpg" alt="Дым кот">
+            <label for="sixth-modal">
+                <img src="close.png" alt="close" class="close-image">
+            </label>
+            <div class="description">
+                <p class="name">Дым</p>
+                <p>Приветливый, добрый.</p>
+                <p>Возраст 1 год.</p>
+                <p>Всегда рад, когда ты приходишь домой. Любит внимание.</p>
+            </div>
         </section>
     </article>
 </main>
