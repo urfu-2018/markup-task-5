@@ -3,7 +3,87 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header class="header">
+    <h1>Мурмаркет</h1>
+</header>
+<input type="radio" class="cb-cat cb-cat-1" id="cb-cat-1" name="cat-switch">
+<input type="radio" class="cb-cat cb-cat-2" id="cb-cat-2" name="cat-switch">
+<input type="radio" class="cb-cat cb-cat-3" id="cb-cat-3" name="cat-switch" checked="checked">
+<input type="radio" class="cb-cat cb-cat-4" id="cb-cat-4" name="cat-switch">
+<input type="radio" class="cb-cat cb-cat-5" id="cb-cat-5" name="cat-switch">
+<main class="main">
+    <div class="carousel">
+        <div class="slide slide-1">
+            <a href="#modal-1">
+                Снежок
+            </a>
+            <img
+                class="image"
+                src="https://i.ytimg.com/vi/R28lU1Ua8J0/maxresdefault.jpg"
+                alt="Кот Снежок"
+                title="Кот Снежок"
+            >
+            <label for="cb-cat-1" class="label-for-1"></label>
+        </div>
+        <div class="slide slide-2">
+            <a href="#modal-2">Фёдор</a>
+            <img
+                class="image"
+                src="https://rozetked.me/images/uploads/dwoilp3BVjlE.jpg"
+                alt="Кот Фёдор"
+                title="Кот Фёдор"
+            >
+            <label for="cb-cat-2" class="label-for-2"></label>
+        </div>
+        <div class="slide slide-3">
+            <a href="#modal-3">Котау</a>
+            <img
+                class="image"
+                src="https://habrastorage.org/webt/wa/qf/-o/waqf-owmpttacam4c02kgmo5sgi.jpeg"
+                alt="Кот Котау"
+                title="Кот Котау"
+            >
+            <label for="cb-cat-3" class="label-for-3"></label>
+        </div>
+        <div class="slide slide-4">
+            <a href="#modal-4">Васька</a>
+            <img
+                class="image"
+                src="http://cdn.tvc.ru/pictures/mood/o/149/60.jpg"
+                alt="Кот Васька"
+                title="Кот Васька"
+            >
+            <label for="cb-cat-4" class="label-for-4"></label>
+        </div>
+        <div class="slide slide-5">
+            <a href="#modal-5">Бэмби</a>
+            <img
+                class="image"
+                src="https://kotostudio.ru/gallery/details/__52/__20180303_1133355613.jpg"
+                alt="Кот Бэмби"
+                title="Кот Бэмби"
+            >
+            <label for="cb-cat-5" class="label-for-5"></label>
+        </div>
+    </div>
+</main>
+<div class="modals">
+    div.modal-$#modal-$*5
+</div>
+<footer class="footer">
+    <div class="left-contacts">
+        <div>Напишите нам:</div>
+        <address>
+            <a href="mailto:cats@babuli.com">cats@babuli.com</a>
+            <a href="mailto:vnuchek@babuli.com">vnuchek@babuli.com</a>
+        </address>
+    </div>
+    <div class="right-contacts">
+        &copy; 2018 ООО &quot;<a href="#">Бабушкины котятки</a>&quot;
+    </div>
+</footer>
 </body>
 </html>

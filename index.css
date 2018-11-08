@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=cyrillic');
+
+body
+{
+    margin: 0;
+}
+
+.cb-cat
+{
+    display: none;
+}
+
+.header
+{
+    border-bottom: 1px solid rgba(0,0,0,.75);
+}
+
+.header h1
+{
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.footer
+{
+    border-top: 1px solid rgba(0,0,0,.75);
+    box-sizing: border-box;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.left-contacts
+{
+    float: left;
+}
+
+.left-contacts a
+{
+    display: block;
+}
+
+.left-contacts a::before
+{
+    content: '📬 ';
+}
+
+.right-contacts
+{
+    float: right;
+}
+
+.main
+{
+    font-family: Arial, sans-serif;
+}
+
+.slide
+{
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    transition: opacity .3s ease .3s;
+    margin: 20px;
+}
+
+.slide a
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    line-height: 300px;
+    text-align: center;
+    transition: opacity .3s ease;
+    opacity: 0;
+}
+
+.slide a:hover
+{
+    opacity: 1;
+}
+
+.slide img
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide label
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+}
+
+.carousel
+{
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: transform .3s ease-in;
+}
+
+.cb-cat-1:checked ~ .main .carousel
+{
+    transform: translateX(calc(50vw - 220px));
+}
+
+.cb-cat-2:checked ~ .main .carousel
+{
+    transform: translateX(calc(50vw - 440px - 220px));
+}
+
+.cb-cat-3:checked ~ .main .carousel
+{
+    transform: translateX(calc(50vw - 440px * 2 - 220px));
+}
+
+.cb-cat-4:checked ~ .main .carousel
+{
+    transform: translateX(calc(50vw - 440px * 3 - 220px));
+}
+
+.cb-cat-5:checked ~ .main .carousel
+{
+    transform: translateX(calc(50vw - 440px * 4 - 220px));
+}
+
+.cb-cat-1:checked ~ .main .slide-3,
+.cb-cat-1:checked ~ .main .slide-4,
+.cb-cat-1:checked ~ .main .slide-5,
+.cb-cat-2:checked ~ .main .slide-4,
+.cb-cat-2:checked ~ .main .slide-5,
+.cb-cat-3:checked ~ .main .slide-1,
+.cb-cat-3:checked ~ .main .slide-5,
+.cb-cat-4:checked ~ .main .slide-1,
+.cb-cat-4:checked ~ .main .slide-2,
+.cb-cat-5:checked ~ .main .slide-1,
+.cb-cat-5:checked ~ .main .slide-2,
+.cb-cat-5:checked ~ .main .slide-3
+{
+    opacity: 0;
+}
+
+.cb-cat-1:checked ~ .main .slide-1,
+.cb-cat-2:checked ~ .main .slide-2,
+.cb-cat-3:checked ~ .main .slide-3,
+.cb-cat-4:checked ~ .main .slide-4,
+.cb-cat-5:checked ~ .main .slide-5
+{
+    transform: scale(1.1, 1.1);
+}
+
+.cb-cat-1:checked ~ .main .slide-1 label,
+.cb-cat-2:checked ~ .main .slide-2 label,
+.cb-cat-3:checked ~ .main .slide-3 label,
+.cb-cat-4:checked ~ .main .slide-4 label,
+.cb-cat-5:checked ~ .main .slide-5 label
+{
+    display: none;
+}
+
+.cb-cat-1:checked ~ .main .slide-1:hover a,
+.cb-cat-2:checked ~ .main .slide-2:hover a,
+.cb-cat-3:checked ~ .main .slide-3:hover a,
+.cb-cat-4:checked ~ .main .slide-4:hover a,
+.cb-cat-5:checked ~ .main .slide-5:hover a
+{
+    display: block;
+}
