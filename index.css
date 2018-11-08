@@ -1,128 +1,8 @@
-@font-face {
+@font-face
+{
     font-family: 'PT Sans Narrow';
-    src: local('PT Sans Narrow'), 
-         local('PTSans-Narrow'), 
-         url(fonts/ptsansnarrow.woff2)  format('woff2'),
-         url(fonts/ptsansnarrow.woff)   format('woff'),
-         url(fonts/ptsansnarrow.ttf) format('truetype');
+    src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(fonts/ptsansnarrow.woff2) format('woff2'), url(fonts/ptsansnarrow.woff) format('woff'), url(fonts/ptsansnarrow.ttf) format('truetype');
     font-style: normal;
-}
-
-.view-changer
-{
-    display: none;
-}
-
-.view-changer-img
-{
-    height: 30px;
-    width: 30px;
-    display: block;
-    cursor: pointer;
-    background-position: center;
-    background-size: cover;
-}
-
-.view-changer:not(:checked) + .view-changer-img,
-.view-changer:checked + .view-changer-img
-{
-    background-image: url(img/list-menu.png);
-}
-
-.view-changer:checked + .view-changer-img
-{
-    transform: rotate(90deg);
-}
-
-.view-changer:checked ~ .cat-info
-{
-    display: block;
-}
-
-.view-changer:checked ~ .cat-info
-{
-    margin-left: auto;
-    margin-right: auto;
-    width: 450px;
-    height: auto;
-    border: none;
-    border-bottom: 1px solid gray;
-}
-
-.cat-info
-{
-    width: 300px;
-    height: 350px;
-    border: 1px solid gray;
-    border-radius: 3px;
-    display: inline-block;
-    margin: 20px;
-}
-
-.cat-img
-{
-    display: block;
-    width: 100%;
-}
-
-.cat-name
-{
-    margin: 10px 0 0 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cat-info:hover
-{
-    box-shadow: 0 0 30px;
-}
-
-.cat-name > a
-{
-    text-decoration: none;
-    color: #2d2d2d;
-}
-
-.cat-name:hover > a
-{
-    color: brown;
-}
-
-li
-{
-    list-style-type: none;
-}
-
-li:hover
-{
-    font-weight: bold;
-}
-
-.cat-info > ul
-{
-    padding: 0 0 0 15px;
-    margin: 10px 0;
-}
-
-.view-changer:not(:checked) ~ .cat-info > .full-info,
-.view-changer:checked ~ .cat-info > .short-info
-{
-    display: none;
-}
-
-.short-info,
-.full-info
-{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    color: #707070;
-}
-
-.full-info
-{
-    font-size: 13.5px;
-    padding: 0 15px;
 }
 
 .fixed
@@ -143,7 +23,7 @@ li:hover
 .store-name
 {
     font-size: 32px;
-    font-family: "PT Sans Narrow", sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
     font-weight: normal;
     margin: 5px;
 }
@@ -188,7 +68,7 @@ li:hover
 
 .margin
 {
-    margin: 10px 20px 20px 20px;
+    margin: 10px 20px 20px;
 }
 
 .left-info
@@ -203,9 +83,32 @@ li:hover
 
 .footer > .margin > img
 {
-    width:  12.5px;
+    width: 12.5px;
     height: 12.5px;
     display: inline-block;
     background-image: url(img/mail-img.png);
     background-size: cover;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+.r1
+{
+    background-image: url(img/British-Shorthair.jpg);
+    display: block;
+}
+
+.carousel
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 100px;
+    width: 130%;
+    height: 500px;
+    
 }
