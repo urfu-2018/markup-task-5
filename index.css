@@ -257,7 +257,6 @@ footer
 [id='slide-4']:checked ~ .carousel .slide-4 .popup,
 [id='slide-5']:checked ~ .carousel .slide-5 .popup
 {
-    /*opacity: 1;*/
     display: block;
 }
 
