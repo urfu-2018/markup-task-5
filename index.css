@@ -7,6 +7,11 @@
     padding: 0;
 }
 
+body
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
 header
 {
     height: 48px;
@@ -24,7 +29,6 @@ header h1
     text-align: center;
     margin: 0;
     font-size: 32px;
-    font-family: 'PT Sans Narrow', sans-serif;
     font-weight: 400;
 }
 
@@ -37,42 +41,69 @@ footer
 {
     width: 100%;
     background: white;
-    height: 120px;
+    height: 70px;
+    padding: 0 20px;
+    padding-top: 20px;
+    line-height: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #ccc;
+    background: white;
+    z-index: 3;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
 }
 
 footer .contacts
 {
-    width: 50%;
-    display: inline-block;
+    height: inherit;
+    float: left;
 }
 
 footer .copyright
 {
-    width: 49%;
-    display: inline-block;
+    height: inherit;
     text-align: right;
+    padding-top: 45px;
+}
+
+footer .contacts ul
+{
+    list-style: none;
+}
+
+footer .contacts li::before
+{
+    content: "\2709 ";
+    font-size: 1.5em;
+    padding-right: 2px;
+    padding-top: 100px;
+
 }
 
 .container
 {
-    padding-top: 68px;
+    padding-top: 70px;
     margin: 0 auto;
-    min-height: calc(100vh - 120px - 68px);
+    min-height: calc(100vh - 110px);
 }
 
 /* Slide show */
 
 .wrapper {
 	height: 250px;
-    margin: 0 auto;
     position: absolute;
-    left: calc((100% - 1800px)/2);
+    top: 20%;
+    left: calc((100% - 1740px)/2);
 }
 
 .slider {
-    height: 250px;
-    width: auto;    
-    margin: 0 auto;
+    height: inherit;
     white-space: nowrap;
     position: relative;
 }
@@ -90,9 +121,24 @@ footer .copyright
     width: 320px;
 }
 
+.slider .name
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 110px;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+}
 
-#slide1:checked ~ .slider,
-.slide1:hover #slide1 {
+#slide1:checked ~ .slider
+{
     left: 640px;
 }
 
@@ -179,4 +225,84 @@ footer .copyright
 	-moz-border-radius: 50%;
 	-o-border-radius: 50%;
 	border-radius: 50%;
+}
+
+/* Modals staff */
+
+#slide1:checked ~ .slider .slide1:hover > .name,
+#slide2:checked ~ .slider .slide2:hover > .name,
+#slide3:checked ~ .slider .slide3:hover > .name,
+#slide4:checked ~ .slider .slide4:hover > .name,
+#slide5:checked ~ .slider .slide5:hover > .name
+{
+    visibility: visible;
+}
+
+.black-window,
+.black-window > .item1,
+.black-window > .item2,
+.black-window > .item3,
+.black-window > .item4,
+.black-window > .item5
+{
+    display: none;
+}
+
+.black-window
+{
+    background: rgba(0, 0, 0, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.black-window .cat-info
+{
+    position: absolute;
+    left: calc(50% - 1000px / 2);
+    top: calc(50% - 400px / 2);
+    width: 1000px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.cat-info > img
+{
+    float: left;
+    width: 50%;
+    margin-right: 20px;
+}
+
+.cat-info .close
+{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.cat-description
+{
+    margin-top: 70px;
+    font-family: Verdana, sans-serif;
+}
+
+.cat-description h2
+{
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.modal-item1:checked ~ .black-window .item1,
+.modal-item2:checked ~ .black-window .item2,
+.modal-item3:checked ~ .black-window .item3,
+.modal-item4:checked ~ .black-window .item4,
+.modal-item5:checked ~ .black-window .item5
+{
+    display: block;
 }
