@@ -15,6 +15,7 @@
     font-size: 32px;
     font-family: 'PT_Sans_Narrow';
     border-bottom: 1px solid gray;
+    z-index: 1;
 }
 
 .footer
@@ -27,6 +28,11 @@
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
+}
+
+body
+{
+    margin: 0;
 }
 
 .right-align
@@ -76,48 +82,41 @@ main
 {
     position: relative;
     top: 50px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
 }
 
 .carousel
 {
-    width: 100%;
-    height: 550px;
+    height: 100%;
     overflow: hidden;
-    transition: left 1s ease-out;
-    position: absolute;
-    top: 10%;
+    transition: left .3s ease;
 }
 
 .carousel-slides
 {
-    height: 300px;
+    top: 100px;
     white-space: nowrap;
     position: relative;
     transition: left .7s ease-out;
-    -o-transition: left .7s ease-out;
-    -ms-transition: left .7s ease-out;
-    -moz-transition: left .7s ease-out;
-    -webkit-transition: left .7s ease-out;
 }
 
 .carousel-slides article
 {
     display: inline-block;
+    position: relative;
+    transform: scale(.8, .8);
+    transition: all .3s ease;
+    opacity: .7;
     width: 450px;
     height: 300px;
-    margin: 0;
-    position: relative;
 }
 
 .carousel-slides img
 {
-    width: 80%;
-    height: 240px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     vertical-align: middle;
-    opacity: .7;
-    border: 1px solid lightgrey;
 }
 
 .carousel input:nth-child(1):checked ~ .carousel-slides
@@ -145,40 +144,95 @@ main
     left: calc(50% - 225px - 1800px);
 }
 
-input[id='slide-1']:checked ~ .carousel-slides article label[for='slide-1'] img,
-input[id='slide-2']:checked ~ .carousel-slides article label[for='slide-2'] img,
-input[id='slide-3']:checked ~ .carousel-slides article label[for='slide-3'] img,
-input[id='slide-4']:checked ~ .carousel-slides article label[for='slide-4'] img,
-input[id='slide-5']:checked ~ .carousel-slides article label[for='slide-5'] img
+.cat-wrapper
 {
-    border: 2px solid #831e34;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.cat-wrapper .catname
+{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.cat-wrapper label
+{
+    display: block;
     width: 100%;
-    height: 350px;
-    margin-left: -10%;
+    height: 100%;
+}
+
+.catname
+{
+    color: white;
+    opacity: 0;
+    text-align: center;
+    line-height: 300px;
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,.6);
+    transition: opacity .2s ease;
+    pointer-events: none;
+}
+
+input.i-slide-1:checked ~ .carousel-slides article:nth-child(1):hover .catname,
+input.i-slide-2:checked ~ .carousel-slides article:nth-child(2):hover .catname,
+input.i-slide-3:checked ~ .carousel-slides article:nth-child(3):hover .catname,
+input.i-slide-4:checked ~ .carousel-slides article:nth-child(4):hover .catname,
+input.i-slide-5:checked ~ .carousel-slides article:nth-child(5):hover .catname
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+input.i-slide-1:checked ~ .carousel-slides article:nth-child(1):hover label,
+input.i-slide-2:checked ~ .carousel-slides article:nth-child(2):hover label,
+input.i-slide-3:checked ~ .carousel-slides article:nth-child(3):hover label,
+input.i-slide-4:checked ~ .carousel-slides article:nth-child(4):hover label,
+input.i-slide-5:checked ~ .carousel-slides article:nth-child(5):hover label
+{
+    opacity: 1;
+    pointer-events: none;
+}
+
+input[id='slide-1']:checked ~ .carousel-slides .slide-1,
+input[id='slide-2']:checked ~ .carousel-slides .slide-2,
+input[id='slide-3']:checked ~ .carousel-slides .slide-3,
+input[id='slide-4']:checked ~ .carousel-slides .slide-4,
+input[id='slide-5']:checked ~ .carousel-slides .slide-5
+{
+    transform: scale(1, 1);
     opacity: 1;
 }
 
-input[id='slide-1']:checked ~ .carousel-slides article label[for='slide-3'] img,
-input[id='slide-1']:checked ~ .carousel-slides article label[for='slide-4'] img,
-input[id='slide-1']:checked ~ .carousel-slides article label[for='slide-5'] img,
-input[id='slide-2']:checked ~ .carousel-slides article label[for='slide-4'] img,
-input[id='slide-2']:checked ~ .carousel-slides article label[for='slide-5'] img,
-input[id='slide-3']:checked ~ .carousel-slides article label[for='slide-1'] img,
-input[id='slide-3']:checked ~ .carousel-slides article label[for='slide-5'] img,
-input[id='slide-4']:checked ~ .carousel-slides article label[for='slide-1'] img,
-input[id='slide-4']:checked ~ .carousel-slides article label[for='slide-2'] img,
-input[id='slide-5']:checked ~ .carousel-slides article label[for='slide-1'] img,
-input[id='slide-5']:checked ~ .carousel-slides article label[for='slide-2'] img,
-input[id='slide-5']:checked ~ .carousel-slides article label[for='slide-3'] img
+input[id='slide-1']:checked ~ .carousel-slides .slide-3,
+input[id='slide-1']:checked ~ .carousel-slides .slide-4,
+input[id='slide-1']:checked ~ .carousel-slides .slide-5,
+input[id='slide-2']:checked ~ .carousel-slides .slide-4,
+input[id='slide-2']:checked ~ .carousel-slides .slide-5,
+input[id='slide-3']:checked ~ .carousel-slides .slide-1,
+input[id='slide-3']:checked ~ .carousel-slides .slide-5,
+input[id='slide-4']:checked ~ .carousel-slides .slide-1,
+input[id='slide-4']:checked ~ .carousel-slides .slide-2,
+input[id='slide-5']:checked ~ .carousel-slides .slide-1,
+input[id='slide-5']:checked ~ .carousel-slides .slide-2,
+input[id='slide-5']:checked ~ .carousel-slides .slide-3
 {
-    display: none;
+    visibility: hidden;
 }
 
 .carousel-dots
 {
-    left: 46%;
     position: absolute;
-    bottom: 30px;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .carousel-dots .dot
@@ -199,12 +253,57 @@ input[id='slide-5']:checked ~ .carousel-dots .dot[for='slide-5']
     background-color: rgb(87, 86, 86, .8);
 }
 
-.cat-info
+.modal-wrapper
 {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,.8);
 }
 
-.cat-photo img
+.modal-wrapper:target
 {
-    display: none;
+    display: block;
+}
+
+.modal
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 800px;
+    color: #fff;
+}
+
+.modal img
+{
+    width: 60%;
+    float: left;
+}
+
+.modal .cat-info span
+{
+    display: block;
+    padding: 5px 0;
+}
+
+.modal .cat-info
+{
+    position: absolute;
+    width: 30%;
+    right: 0;
+}
+
+.modal .close img
+{
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: 15px;
+    position: absolute;
 }
