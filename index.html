@@ -1,9 +1,258 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
-</head>
-<body>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Задача «Про котиков»</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <h1>
+                    Мурмаркет
+                </h1>
+                <hr>
+            </div>
+        </header>
+        <input type="radio" id="cat-1" class="onclick-image" name ="cats" checked="checked">
+        <input type="radio" id="cat-2" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-3" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-4" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-5" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-6" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-7" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-8" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-9" class="onclick-image" name ="cats">
+        <input type="radio" id="cat-10" class="onclick-image" name ="cats">
+
+        <input type="checkbox" class="modal-close" id="modal-close">
+        <main class="blog">
+            <div class="content">
+                <label class="card" for="cat-1" tabindex="0" id="card-1">
+                    <img src="pictures/fullEyes.jpg" alt="Оливия">
+                    <span>Оливия</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <img src="pictures/fullEyes.jpg" alt="Оливия">
+                        <label for="modal-close">X</label>
+                        <h1><a href="#">Оливия</a></h1>
+                        <p>
+                            Характеристика: ошалевшая, но очень преданная<br><br>
+                            Возраст: 8 месяцев<br><br>
+                            Описание: только не добавляйте в салат<br><br>
+                            Статус: шалит
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-2" tabindex="0" class="card" id="card-2">
+                    <img src="pictures/offering.jpg" alt="Кошмар">
+                    <span>Кошмар</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <img src="pictures/offering.jpg" alt="Кошмар">
+                        <label for="modal-close">X</label><br>
+                        <h1><a href="#">Кошмар</a></h1>
+                        <p>
+                            Характеристика: самовлюбленный, требовательный<br><br>
+                            Возраст: 1.5 года<br><br>
+                            Описание: этот кот не только знает себе цену, но и любит закатывать
+                            междворовые вечеринки<br><br>
+                            Статус: кутит
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-3" tabindex="0" class="card" id="card-3">
+                    <img src="pictures/there.jpg" alt="Росана">
+                    <span>Росана</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/there.jpg" alt="Росана">
+                        <h1><a href="#">Росана</a></h1>
+                        <p>
+                            Характеристика: ласковая, притягивает дворовых котов<br><br>
+                            Возраст: 1.5 года<br><br>
+                            Описание: всегда рядом, когда это от нее требуется<br><br>
+                            Статус: сердечко
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-4" tabindex="0" class="card" id="card-4">
+                    <img src="pictures/washed.jpg" alt="Никифор">
+                    <span>Никифор</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/washed.jpg" alt="Никифор">
+                        <h1><a href="#">Никифор</a></h1>
+                        <p>
+                            Характеристика: опасный, мстительный, защитник<br><br>
+                            Возраст: 2.5 года<br><br>
+                            Описание: никогда не запирайте его в туалете<br><br>
+                            Статус: уже в пути
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-5" tabindex="0" class="card" id="card-5">
+                    <img src="pictures/withThirdEye.jpg" alt="Кедиф">
+                    <span>Кедиф</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/withThirdEye.jpg" alt="Кедиф">
+                        <h1><a href="#">Кедиф</a></h1>
+                        <p>
+                            Характеристика: смышленный, непослушный<br><br>
+                            Возраст: 4 месяца<br><br>
+                            Описание: не верьте его щенячьему взгляду, он знает, что натворил<br><br>
+                            Статус: учит диффуры<br><br>
+                            В планах: захватить мир
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-6" tabindex="0" class="card" id="card-6">
+                    <img src="pictures/wow.jpg" alt="Задор">
+                    <span>Задор</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/wow.jpg" alt="Задор">
+                        <h1><a href="#">Задор</a></h1>
+                        <p>
+                            Характеристика: любитель консервов и острых ощущений<br><br>
+                            Возраст: 2 года<br><br>
+                            Описание: почти никогда не бывает дома, но местные продавцы
+                            говорят о нем только хорошее<br><br>
+                            Статус: последний раз был в сети: 15:25 30.11.2018
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-7" tabindex="0" class="card" id="card-7">
+                    <img src="pictures/paws.jpg" alt="Лапочник">
+                    <span>Лапочник</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/paws.jpg" alt="Лапочник">
+                        <h1><a href="#">Лапочник</a></h1>
+                        <p>
+                            Характеристика: ленивый, вседремлющий<br><br>
+                            Возраст: 1.5 года<br><br>
+                            Описание: что вы от него хотите? У него же лапки!<br><br>
+                            Статус: у меня лапки
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-8" tabindex="0" class="card" id="card-8">
+                    <img src="pictures/pacifist.jpg" alt="Пацифистофель">
+                    <span>Пацифистофель</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/pacifist.jpg" alt="Пацифистофель">
+                        <h1><a href="#">Пацифистофель</a></h1>
+                        <p>
+                            Характеристика: пацифист, пофигист<br><br>
+                            Возраст: 4 года<br><br>
+                            Описание: не годится для ловли домашних мышей,
+                            но можете не переживать за своего хомячка<br><br>
+                            Статус: пофигистирует
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-9" tabindex="0" class="card" id="card-9">
+                    <img src="pictures/cap.jpg" alt="Капитан Коробка">
+                    <span>Капитан коробка</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card" id="description-9">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/cap.jpg" alt="Капитан Коробка">
+                        <h1><a href="#">Капитан Коробка</a></h1>
+                        <p>
+                            Характеристика: патриот, коробконосец<br><br>
+                            Возраст: 4.5 года<br><br>
+                            Описание: всегда встает на защиту слабых, особенно если
+                            у них есть лишняя упаковочка whiskas<br><br>
+                            Статус: ищет очередную жертву спасения
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <label for="cat-10" tabindex="0" class="card" id="card-10">
+                    <img src="pictures/bread.jpg" alt="Рауль">
+                    <span>Рауль</span>
+                </label>
+
+                <div class="description">
+                    <div class="desc-card" id="description-10">
+                        <label for="modal-close">X</label>
+                        <img src="pictures/bread.jpg" alt="Рауль">
+                        <h1><a href="#">Рауль</a></h1>
+                        <p>
+                            Характеристика: воздушный и теплый как свежеиспеченный хлеб<br><br>
+                            Возраст: 2 года<br><br>
+                            Описание: он кот - не ешь, подумай!<br><br>
+                            Статус: ищет маслице
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <hr>
+                <p class="left-footer-part">Напишите нам:<br>
+                    <a href="#">neko-neko@gmail.com</a><br>
+                    <a href="#">cats-are-the-best@yandex.ru</a>
+                </p>
+                <p class="right-footer-part">
+                    &copy;2018 ООО &laquo;<a href="#">Кавайные истории</a>&raquo;
+                </p>
+            </div>
+        </footer>
+    </body>
 </html>
