@@ -19,7 +19,7 @@
     height: 400px;
 }
 
-.slider > label
+.slider > label[class^='cat_']
 {
     background-size: 400px 100%;
     background-repeat: no-repeat;
@@ -108,7 +108,7 @@ input[id='cat10']:checked ~ .slider .cat_10
 }
 
 input[id='cat1']:checked ~ .slider label[for='cat_name1'],
-input[id='cat2']:checked ~ .slider label[for='cat_name2'],
+input[id='cat2']:checked ~ .slider a[href='#cat_name2'],
 input[id='cat3']:checked ~ .slider label[for='cat_name3'],
 input[id='cat4']:checked ~ .slider label[for='cat_name4'],
 input[id='cat5']:checked ~ .slider label[for='cat_name5'],
@@ -128,6 +128,7 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
     text-overflow: ellipsis;
     position: absolute;
     display: none;
+    /*display: block;*/
     padding: 0;
     margin: 0;
     width: 400px;
@@ -136,8 +137,44 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
     line-height: 320px;
     text-align: center;
     opacity: 0;
+    /*opacity: 1;*/
     color: white;
     font-family: 'Segoe UI', sans-serif;
+}
+
+.overlay
+{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    transition: opacity 500ms;
+    /*   visibility: hidden; */
+    display: none;
+    opacity: 0;
+}
+
+.overlay:before
+{
+    display: block;
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .9;
+}
+
+.overlay:target
+{
+    /*   visibility: visible; */
+    display: block;
+    opacity: 1;
 }
 
 .wrapper_popup
@@ -150,6 +187,7 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
     width: 100%;
     height: 100%;
     opacity: 0;
+    visibility: hidden;
 
 }
 
@@ -235,6 +273,7 @@ input[id='cat10']:checked ~ .slider label[for='cat_name10']
     transform: rotate(100grad);
 }
 
+.popup_cat2:target,
 input[id='cat_name1']:checked ~ .popup_cat1 > .wrapper_popup,
 input[id='cat_name2']:checked ~ .popup_cat2 > .wrapper_popup,
 input[id='cat_name3']:checked ~ .popup_cat3 > .wrapper_popup,
@@ -247,6 +286,7 @@ input[id='cat_name9']:checked ~ .popup_cat9 > .wrapper_popup,
 input[id='cat_name10']:checked ~ .popup_cat10 > .wrapper_popup
 {
     opacity: 1;
+    visibility: visible;
     display: block;
 }
 
