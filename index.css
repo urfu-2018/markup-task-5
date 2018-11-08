@@ -42,12 +42,6 @@ footer a
     min-height: 100%;
 }
 
-.main
-{
-    padding: 20px;
-    padding-bottom: 80px;
-}
-
 header
 {
     position: fixed;
@@ -75,14 +69,34 @@ header h1::first-letter
     white-space: nowrap;
 }
 
+.hoverBlock
+{
+    width: 100%;
+    height: 100%;
+    transform: translate(0, -100%);
+    background-color: rgba(0, 0, 0, .6);
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    display: none;
+}
+
+.hoverBlock .catName
+{
+    color: white;
+    display: inline-block;
+    margin-top: 20%;
+    font-size: 30px;
+}
+
 .photo
 {
     position: relative;
     width: 20%;
     height: 60%;
     display: inline-block;
-    margin-right: 0.02%;
-    margin-bottom: 0.23%;
+    margin-right: .02%;
+    margin-bottom: .23%;
     margin-top: 80px;
     transition: right .5s linear;
     right: 0;
@@ -94,6 +108,7 @@ header h1::first-letter
     height: 80%;
     display: block;
     margin: auto;
+    opacity: .7;
 }
 
 .firstPhoto:checked ~ .photoContainer .photo
@@ -101,7 +116,7 @@ header h1::first-letter
     right: -40%;
 }
 
- /* .firstPhoto:checked ~ .photoContainer .photo img
+/* .firstPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
@@ -116,7 +131,15 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) ~ .photo img
+.firstPhoto:checked ~ .photoContainer .photo:nth-of-type(
+1) img:hover ~ .hoverBlock,
+.firstPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    1) img ~ .hoverBlock:hover
+{
+    display: block;
+}
+
+/* .firstPhoto:checked ~ .photoContainer .photo:nth-of-type(1) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -132,7 +155,15 @@ header h1::first-letter
     right: -20%;
 }
 
- /* .secondPhoto:checked ~ .photoContainer .photo img
+.secondPhoto:checked ~ .photoContainer .photo:nth-of-type(
+2) img:hover ~ .hoverBlock,
+.secondPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    2) img ~ .hoverBlock:hover
+{
+    display: block;
+}
+
+/* .secondPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
@@ -147,7 +178,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) ~ .photo img
+/* .secondPhoto:checked ~ .photoContainer .photo:nth-of-type(2) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -158,12 +189,20 @@ header h1::first-letter
     box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
+.thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(
+3) img:hover ~ .hoverBlock,
+.thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    3) img ~ .hoverBlock:hover
+{
+    display: block;
+}
+
 .thirdPhoto:checked ~ .photoContainer .photo
 {
     right: 0;
 }
 
- /* .thirdPhoto:checked ~ .photoContainer .photo img
+/* .thirdPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
@@ -178,7 +217,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) ~ .photo img
+/* .thirdPhoto:checked ~ .photoContainer .photo:nth-of-type(3) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -194,12 +233,20 @@ header h1::first-letter
     right: 20%;
 }
 
- /* .fourthPhoto:checked ~ .photoContainer .photo img
+/* .fourthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
 }  */
+
+.fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+4) img:hover ~ .hoverBlock,
+.fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    4) img ~ .hoverBlock:hover
+{
+    display: block;
+}
 
 .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) img
 {
@@ -209,7 +256,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) ~ .photo img
+/* .fourthPhoto:checked ~ .photoContainer .photo:nth-of-type(4) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -225,12 +272,20 @@ header h1::first-letter
     right: 40%;
 }
 
- /* .fifthPhoto:checked ~ .photoContainer .photo img
+/* .fifthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
     opacity: 0.7;
 }  */
+
+.fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+5) img:hover ~ .hoverBlock,
+.fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    5) img ~ .hoverBlock:hover
+{
+    display: block;
+}
 
 .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) img
 {
@@ -240,7 +295,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) ~ .photo img
+/* .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -249,6 +304,14 @@ header h1::first-letter
 .fifthPhoto:checked ~ .photoContainer .photo:nth-of-type(5)
 {
     box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
+}
+
+.sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+6) img:hover ~ .hoverBlock,
+.sixthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    6) img ~ .hoverBlock:hover
+{
+    display: block;
 }
 
 .sixthPhoto:checked ~ .photoContainer .photo
@@ -282,12 +345,20 @@ header h1::first-letter
     box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
+.seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(
+7) img:hover ~ .hoverBlock,
+.seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    7) img ~ .hoverBlock:hover
+{
+    display: block;
+}
+
 .seventhPhoto:checked ~ .photoContainer .photo
 {
     right: 80%;
 }
 
- /* .seventhPhoto:checked ~ .photoContainer .photo img
+/* .seventhPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
@@ -302,7 +373,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7) ~ .photo img
+/* .seventhPhoto:checked ~ .photoContainer .photo:nth-of-type(7) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -313,12 +384,20 @@ header h1::first-letter
     box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
+.eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+8) img:hover ~ .hoverBlock,
+.eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    8) img ~ .hoverBlock:hover
+{
+    display: block;
+}
+
 .eighthPhoto:checked ~ .photoContainer .photo
 {
     right: 100%;
 }
 
- /* .eighthPhoto:checked ~ .photoContainer .photo img
+/* .eighthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
@@ -333,7 +412,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8) ~ .photo img
+/* .eighthPhoto:checked ~ .photoContainer .photo:nth-of-type(8) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -344,12 +423,20 @@ header h1::first-letter
     box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
+.ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+9) img:hover ~ .hoverBlock,
+.ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    9) img ~ .hoverBlock:hover
+{
+    display: block;
+}
+
 .ninthPhoto:checked ~ .photoContainer .photo
 {
     right: 120%;
 }
 
- /* .ninthPhoto:checked ~ .photoContainer .photo img
+/* .ninthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
@@ -364,7 +451,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9) ~ .photo img
+/* .ninthPhoto:checked ~ .photoContainer .photo:nth-of-type(9) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
@@ -375,12 +462,20 @@ header h1::first-letter
     box-shadow: inset #6e6e6ea6 0 0 120px 30px, #6e6e6ea6 0 0 72px 36px;
 }
 
+.tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+10) img:hover ~ .hoverBlock,
+.tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(
+    10) img ~ .hoverBlock:hover
+{
+    display: block;
+}
+
 .tenthPhoto:checked ~ .photoContainer .photo
 {
     right: 140%;
 }
 
- /* .tenthPhoto:checked ~ .photoContainer .photo img
+/* .tenthPhoto:checked ~ .photoContainer .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, 0.001, 0, 1, 0, 0,
      -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(30px);
@@ -395,7 +490,7 @@ header h1::first-letter
     opacity: 1;
 }
 
- /* .tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10) ~ .photo img
+/* .tenthPhoto:checked ~ .photoContainer .photo:nth-of-type(10) ~ .photo img
 {
     transform: matrix3d(0.94, 0, 0.34, -0.001, 0, 1, 0, 0, 
     -0.34, 0, 0.94, 0, 1, 0, 10, 1) translateX(-10px);
