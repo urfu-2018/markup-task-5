@@ -28,13 +28,14 @@ footer
     bottom: 0;
     width: 97.5%;
     height: 55px;
+    height: 80px;
     margin-top: -60px;
 }
 
 html,
 body
 {
-    height: 100%;
+  height: 100%;
 }
 
 .letter
@@ -116,22 +117,18 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
 {
     left: calc(50% - 200px);
 }
-
 .karusel input:nth-child(2):checked ~ ul
 {
     left: calc(50% - 300px - 300px);
 }
-
 .karusel input:nth-child(3):checked ~ ul
 {
     left: calc(50% - 300px - 640px);
 }
-
 .karusel input:nth-child(4):checked ~ ul
 {
     left: calc(50% - 300px - 990px);
 }
-
 .karusel input:nth-child(5):checked ~ ul
 {
     left: calc(50% - 300px - 1375px);
@@ -148,7 +145,8 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
     left: 10%;
     text-align: center;
     vertical-align: middle;
-    background-color: rgba(47, 47, 50, .5);
+    background-color:rgba(47, 47, 50, .5);
+    position: relative;
 }
 
 a[href*='open-Modal']
@@ -178,13 +176,11 @@ input[id='cat-5']:checked ~ ul li:nth-child(5):hover .name
     bottom: 0;
     background-color: #00000fe8;
     width: 100vw;
-    pointer-events: none;
 }
 
 .modal-window:target
 {
     display: block;
-    pointer-events: auto;
 }
 
 .cat-block
