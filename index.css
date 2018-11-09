@@ -1,5 +1,11 @@
 @import url(http://allfont.ru/allfont.css?fonts=pt-sans-narrow);
 
+@font-face
+{
+    font-family: Schoen;
+    src: url('Eskal Font4You.ttf');
+}
+
 header
 {
     position: fixed;
@@ -35,6 +41,7 @@ html,
 body
 {
     height: 100%;
+    overflow: hidden;
 }
 
 .letter
@@ -47,6 +54,7 @@ body
 [href]
 {
     color: #4c4cd8;
+    text-decoration: none;
 }
 
 .copyright
@@ -59,6 +67,7 @@ body
 
 .karusel
 {
+    margin-top: 100px;
     min-height: calc(100vh - 80px);
     text-align: center;
 }
@@ -94,6 +103,31 @@ img[class*='cat']
 input
 {
     margin-top: 100px;
+    display: none;
+}
+
+.karusel-navigation
+{
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.karusel-navigation .radio
+{
+    display: inline-block;
+    background-color: #f0bb9c;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+}
+
+input[id='cat-1']:checked ~ .karusel-navigation .radio[for='cat-1'],
+input[id='cat-2']:checked ~ .karusel-navigation .radio[for='cat-2'],
+input[id='cat-3']:checked ~ .karusel-navigation .radio[for='cat-3'],
+input[id='cat-4']:checked ~ .karusel-navigation .radio[for='cat-4'],
+input[id='cat-5']:checked ~ .karusel-navigation .radio[for='cat-5']
+{
+    background-color: #685143;
 }
 
 /*изменение центрального изображения*/
@@ -176,7 +210,7 @@ input[id='cat-5']:checked ~ ul li:nth-child(5):hover .name
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #00000fe8;
+    background-color: #00000ff3;
     width: 100vw;
 }
 
@@ -185,17 +219,49 @@ input[id='cat-5']:checked ~ ul li:nth-child(5):hover .name
     display: block;
 }
 
-.cat-block
+section
 {
-    margin: 100px auto;
-    width: 700px;
+    width: 70%;
     height: 300px;
-    background-color: #dcdcdc;
+    margin: 200px auto;
 }
 
-.cat-block img:not([class='close'])
+.modal-photo
 {
-    width: 300px;
+    margin: 0 10px 0 0;
+    height: 100%;
     float: left;
-    margin: 55px 0;
+}
+
+.close
+{
+    float: right;
+    position: relative;
+}
+
+.cat-info-block
+{
+    padding: .2%;
+    float: left;
+    color: #fff;
+}
+
+h3
+{
+    font-family: Schoen;
+    font-size: 38px;
+    letter-spacing: 3px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.info
+{
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    text-align: left;
+    width: 550px;
+    height: 90%;
+    white-space: normal;
 }
