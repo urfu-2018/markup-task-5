@@ -12,7 +12,7 @@ body
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 2000;
     background: #fff;
     box-shadow: 0 0 4px 0 #969696;
 }
@@ -562,7 +562,7 @@ img.popup-img
     left: 0;
     right: 0;
     background: #fff;
-    z-index: 100;
+    z-index: 2000;
     padding: 0 15px;
     box-sizing: border-box;
 }
