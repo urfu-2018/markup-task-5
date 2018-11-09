@@ -78,7 +78,6 @@ body
     margin: 25vw 25%;
 }
 
-
 .cat-card:target + div + .cat-card .hidden-image
 {
     max-width: 500px;
