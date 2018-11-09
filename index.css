@@ -182,8 +182,7 @@ body
     position: relative;
     display: inline-block;
     text-align: center;
-    transition: .3s;
-    /*transform: scale(0.8);*/
+    transition: .5s;
 }
 
 .carousel__item_start
@@ -226,6 +225,7 @@ body
     height: 100%;
     opacity: .7;
     transform: scale(.8);
+    transition: .5s;
 }
 
 .carousel__item-image:hover + .popup-label
@@ -299,7 +299,7 @@ body
     cursor: pointer;
 }
 
-img.popup-img
+.popup-img
 {
     width: 100%;
     height: 100%;
