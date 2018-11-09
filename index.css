@@ -3,14 +3,13 @@
     font-family: 'PT Sans Narrow', sans-serif;
     position: fixed;
     width: 100%;
-    background: white;
     margin: auto;
+    text-align: center;
 }
 
 body
 {
     margin: 0;
-    text-align: center;
     background: white;
 }
 
@@ -22,10 +21,11 @@ body
 
 .shop-name::first-letter
 {
-    color: red;
+    color: #f00;
 }
 
-input
+input[name='carousel'],
+input[name='popup']
 {
     margin-top: 75px;
     display: none;
@@ -39,7 +39,8 @@ input
     display: inline-block;
 }
 
-img
+.cat-img img,
+.cat img
 {
     max-height: 160px;
     height: 200px;
@@ -49,8 +50,6 @@ img
 
 .carousel
 {
-    text-align: left;
-    margin: auto;
     margin-top: 10%;
     overflow: hidden;
 }
@@ -167,16 +166,12 @@ img
 [id='cat-10']:checked ~ .carousel .cat-10:hover > .slide-to-black-out
 {
     opacity: 1;
-    display: inline-block;
-    background: rgba(0,0,0,.5);
-    color: white;
+    background: #00000080;
     transform: translateY(-204px);
-    text-align: center;
 }
 
 .slide-to-black-out
 {
-    background: rgba(0, 0, 0, .5);
     color: #fff;
     display: inline-block;
     height: 200px;
@@ -204,8 +199,8 @@ img
     left: 12.5%;
     display: none;
     width: 75%;
-    background: sandybrown;
-    border: 5px solid black;
+    background: #f4a460;
+    border: 5px solid #000;
     border-radius: 10px;
 }
 
@@ -221,6 +216,7 @@ img
 [id='popup-10']:checked ~ section .popup-10
 {
     display: block;
+    text-align: center;
 }
 
 .cat-img
@@ -237,28 +233,16 @@ img
 {
     margin: 0;
     width: 90%;
-    background: rgb(23, 167, 224);
-    border-radius: 50px;
 }
 
 .short-info
 {
     width: 75%;
-    background: darkkhaki;
-    border-radius: 25px;
-}
-
-.full-info
-{
-    border-radius: 25px;
-    background: tomato;
 }
 
 .close
 {
     width: 10%;
-    border-radius: 100%;
-    background: black;
 }
 
 .close img
@@ -280,7 +264,6 @@ footer
     width: 100%;
     font-size: 14px;
     font-family: Arial, sans-serif;
-    background: white;
 }
 
 footer > table
