@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+html,
+body
+{
+    height: 100%;
+    margin: 0;
+}
+
 .fixed
 {
     position: fixed;
@@ -90,27 +97,43 @@
     background-size: cover;
 }
 
-.carousel-wrapper
+.carousel
 {
     position: absolute;
     margin: 0;
     padding: 0;
     left: 0;
-    top: 20%;
-    width: 130%;
-    height: 55%;
+    top: 100px;
+    width: 500%;
+    height: 65%;
+    transition: left 1s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 100%;
+}
+
+.carousel-wrapper
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
 }
 
 .carousel-wrapper > .switcher
 {
-    display: inline;
+    display: none;
 }
 
 .carousel-pointers
 {
     /* отключаем стиль маркера списка */
+    position: absolute;
+    top: 80%;
+    text-align: center;
     list-style: none;
     width: 100%;
+    padding: 10px 0;
 }
 
 .carousel-pointers > li
@@ -130,7 +153,155 @@
 
 #carousel-1:checked ~ .carousel-pointers li:nth-child(1) > .carousel-pointer,
 #carousel-2:checked ~ .carousel-pointers li:nth-child(2) > .carousel-pointer,
-#carousel-3:checked ~ .carousel-pointers li:nth-child(3) > .carousel-pointer
+#carousel-3:checked ~ .carousel-pointers li:nth-child(3) > .carousel-pointer,
+#carousel-4:checked ~ .carousel-pointers li:nth-child(4) > .carousel-pointer,
+#carousel-5:checked ~ .carousel-pointers li:nth-child(5) > .carousel-pointer,
+#carousel-6:checked ~ .carousel-pointers li:nth-child(6) > .carousel-pointer,
+#carousel-7:checked ~ .carousel-pointers li:nth-child(7) > .carousel-pointer,
+#carousel-8:checked ~ .carousel-pointers li:nth-child(8) > .carousel-pointer,
+#carousel-9:checked ~ .carousel-pointers li:nth-child(9) > .carousel-pointer,
+#carousel-10:checked ~ .carousel-pointers li:nth-child(10) > .carousel-pointer
 {
     background-color: #a9a9a9;
+}
+
+.carousel-item
+{
+    display: inline-block;
+    width: 10%;
+    margin: 10px;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.7;
+    position: relative;
+    height: 80%;
+    bottom: 10%;
+}
+
+.carousel-item label
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.item-1
+{
+    background-image: url(img/British-Shorthair.jpg);
+}
+
+.item-2
+{
+    background-image: url(img/Bengal.jpg);
+}
+
+.item-3
+{
+    background-image: url(img/Alley.jpg);
+}
+
+.item-4
+{
+    background-image: url(img/Maine-Coon.jpg);
+}
+
+.item-5
+{
+    background-image: url(img/Burmese.jpg);
+}
+
+.item-6
+{
+    background-image: url(img/Siamese.jpg);
+}
+
+.item-7
+{
+    background-image: url(img/Munchkin.jpg);
+}
+
+.item-8
+{
+    background-image: url(img/Persian.jpg);
+}
+
+.item-9
+{
+    background-image: url(img/Persian2.jpg);
+}
+
+.item-10
+{
+    background-image: url(img/Russian-Blue.jpg);
+    background-position: center right;
+}
+
+
+
+#carousel-1:checked ~ .carousel
+{
+    left: 30%;
+}
+
+#carousel-2:checked ~ .carousel
+{
+    left: -25%;
+}
+
+#carousel-3:checked ~ .carousel
+{
+    left: -77%;
+}
+
+#carousel-4:checked ~ .carousel
+{
+    left: -130%;
+}
+
+#carousel-5:checked ~ .carousel
+{
+    left: -180%;
+}
+
+#carousel-6:checked ~ .carousel
+{
+    left: -235%;
+}
+
+#carousel-7:checked ~ .carousel
+{
+    left: -287%;
+}
+
+#carousel-8:checked ~ .carousel
+{
+    left: -339%;
+}
+
+#carousel-9:checked ~ .carousel
+{
+    left: -390%;
+}
+
+#carousel-10:checked ~ .carousel
+{
+    left: -435%;
+}
+
+
+#carousel-1:checked ~ .carousel > .item-1,
+#carousel-2:checked ~ .carousel > .item-2,
+#carousel-3:checked ~ .carousel > .item-3,
+#carousel-4:checked ~ .carousel > .item-4,
+#carousel-5:checked ~ .carousel > .item-5,
+#carousel-6:checked ~ .carousel > .item-6,
+#carousel-7:checked ~ .carousel > .item-7,
+#carousel-8:checked ~ .carousel > .item-8,
+#carousel-9:checked ~ .carousel > .item-9,
+#carousel-10:checked ~ .carousel > .item-10
+{
+    height: 100%;
+    top: 0;
+    opacity: 1;
+    transition: opacity 1s;  
 }
