@@ -42,8 +42,7 @@ input[name='popup']
 .cat-img img,
 .cat img
 {
-    max-height: 160px;
-    height: 200px;
+    height: 160px;
     width: 250px;
     opacity: .7;
 }
@@ -122,7 +121,7 @@ input[name='popup']
 [id='cat-9']:checked ~ .carousel .cat-9 img,
 [id='cat-10']:checked ~ .carousel .cat-10 img
 {
-    max-height: 200px;
+    height: 200px;
     opacity: 1;
 }
 
@@ -199,8 +198,8 @@ input[name='popup']
     left: 12.5%;
     display: none;
     width: 75%;
-    background: #f4a460;
-    border: 5px solid #000;
+    background: #000;
+    color: #fff;
     border-radius: 10px;
 }
 
@@ -216,16 +215,18 @@ input[name='popup']
 [id='popup-10']:checked ~ section .popup-10
 {
     display: block;
-    text-align: center;
 }
 
 .cat-img
 {
-    width: 25%;
+    width: 65%;
+    background: #000;
 }
 
-.cat-img img
+.cat-img > img
 {
+    width: 100%;
+    height: 175%;
     opacity: 1;
 }
 
@@ -235,9 +236,11 @@ input[name='popup']
     width: 90%;
 }
 
-.short-info
+.cat-name,
+.short-info,
+.full-info
 {
-    width: 75%;
+    padding: 5px;
 }
 
 .close
@@ -247,7 +250,8 @@ input[name='popup']
 
 .close img
 {
-    width: 75%;
+    float: right;
+    width: 25%;
     height: 25%;
     opacity: 1;
 }
