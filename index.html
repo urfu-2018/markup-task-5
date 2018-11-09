@@ -12,25 +12,43 @@
     <div class="header-wrapper"></div>
 
     <main>
-        <input type="radio" id="r1" name="carousel">
-        <input type="radio" id="r2" name="carousel">
-        <input type="radio" id="r3" name="carousel">
-        <input type="radio" id="r4" name="carousel">
-        <input type="radio" id="r5" name="carousel" checked>
-        <input type="radio" id="r6" name="carousel">
-        <input type="radio" id="r7" name="carousel">
-        <input type="radio" id="r8" name="carousel">
-        <input type="radio" id="r9" name="carousel">
-        <input type="radio" id="r10" name="carousel">
+        <div class="carousel-wrapper">
+            <!-- Скрытые кнопки для выбора нужной картинки -->
+            <input type="radio" class="switcher" id="carousel-1" name="carousel">
+            <input type="radio" class="switcher" id="carousel-2" name="carousel" checked>
+            <input type="radio" class="switcher" id="carousel-3" name="carousel">
 
-        <div class="carousel">
-            
+            <!-- Сами элементы карусели(котики) -->
+            <div class="carousel-items">
+                <div class="carousel-item item-1">
+                    <label for="carousel-1"></label>
+                </div>
+                <div class="carousel-item item-2">
+                    <label for="carousel-2"></label>
+                </div>
+                <div class="carousel-item item-3">
+                    <label for="carousel-3"></label>
+                </div>
+            </div>
+
+            <!-- Переключатели элементов -->
+            <ul class="carousel-pointers">
+                <li>
+                    <label class="carousel-pointer" for="carousel-1"></label>
+                </li>
+                <li>
+                    <label class="carousel-pointer" for="carousel-2"></label>
+                </li>
+                <li>
+                    <label class="carousel-pointer" for="carousel-3"></label>
+                </li>
+            </ul>
         </div>
     </main>
 
-    <div class="footer-wrapper"></div>
+    <!-- <div class="footer-wrapper"></div> -->
     <footer class="fixed footer">
-        <div class="float-left left-info margin">
+        <div class="float-left left-footer-info footer-element-margin">
             Напишите нам:
             <br>
             <img src="img/mail-img.png" alt="Почта">
@@ -39,7 +57,7 @@
             <img src="img/mail-img.png" alt="Почта">
             <a href="https://ya.ru">vnuchek@babuli.ru</a>
         </div>
-        <div class="float-right margin">
+        <div class="float-right footer-element-margin">
             &copy; 2018 ООО«<a href="https://ya.ru">Бабушкины котятки</a>»
         </div>
     </footer>
