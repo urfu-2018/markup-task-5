@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face
+{
+    font-family: 'Embrionic 85 Swash';
+    src: local('Embrionic85SwashCyr'), url(fonts/Embrionic85SwashCyr.otf) format('opentype');
+    font-style: bold;
+}
+
 html,
 body
 {
@@ -104,7 +111,7 @@ body
     padding: 0;
     left: 0;
     top: 100px;
-    width: 500%;
+    width: 700%;
     height: 65%;
     transition: left 1s ease-in-out;
     overflow: hidden;
@@ -149,6 +156,7 @@ body
     background-color: #d3d3d3;
     /* Радиус скругления */
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .carousel-1:checked ~ .carousel-pointers li:nth-child(1) > .carousel-pointer,
@@ -168,7 +176,7 @@ body
 .carousel-item
 {
     display: inline-block;
-    width: 10%;
+    width: 8%;
     margin: 10px;
     background-size: cover;
     background-position: center center;
@@ -238,52 +246,52 @@ body
 
 .carousel-1:checked ~ .carousel
 {
-    left: 30%;
+    left: 23%;
 }
 
 .carousel-2:checked ~ .carousel
 {
-    left: -25%;
+    left: -35%;
 }
 
 .carousel-3:checked ~ .carousel
 {
-    left: -77%;
+    left: -95%;
 }
 
 .carousel-4:checked ~ .carousel
 {
-    left: -130%;
+    left: -152%;
 }
 
 .carousel-5:checked ~ .carousel
 {
-    left: -180%;
+    left: -210%;
 }
 
 .carousel-6:checked ~ .carousel
 {
-    left: -235%;
+    left: -265%;
 }
 
 .carousel-7:checked ~ .carousel
 {
-    left: -287%;
+    left: -323%;
 }
 
 .carousel-8:checked ~ .carousel
 {
-    left: -339%;
+    left: -380%;
 }
 
 .carousel-9:checked ~ .carousel
 {
-    left: -390%;
+    left: -438%;
 }
 
 .carousel-10:checked ~ .carousel
 {
-    left: -435%;
+    left: -496%;
 }
 
 .carousel-1:checked ~ .carousel > .item-1,
@@ -300,5 +308,39 @@ body
     height: 100%;
     top: 0;
     opacity: 1;
-    transition: opacity 1s;
+}
+
+.description
+{
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
+    cursor: pointer;
+}
+
+.cat-name
+{
+    font-size: 50px;
+    color: white;
+    font-family: 'Embrionic 85 Swash', sans-serif;
+    text-align: center;
+}
+
+.carousel-1:checked ~ .carousel .item-1:hover .description,
+.carousel-2:checked ~ .carousel .item-2:hover .description,
+.carousel-3:checked ~ .carousel .item-3:hover .description,
+.carousel-4:checked ~ .carousel .item-4:hover .description,
+.carousel-5:checked ~ .carousel .item-5:hover .description,
+.carousel-6:checked ~ .carousel .item-6:hover .description,
+.carousel-7:checked ~ .carousel .item-7:hover .description,
+.carousel-8:checked ~ .carousel .item-8:hover .description,
+.carousel-9:checked ~ .carousel .item-9:hover .description,
+.carousel-10:checked ~ .carousel .item-10:hover .description
+{
+    visibility: visible;
 }
