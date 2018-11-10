@@ -125,22 +125,22 @@ input[id='cat-5']:checked ~ ul
     left: calc(50% - 275px - 2200px);
 }
 
-input[id='cat-1']:checked ~ ul li a[for='cat-1'] img,
-input[id='cat-2']:checked ~ ul li a[for='cat-2'] img,
-input[id='cat-3']:checked ~ ul li a[for='cat-3'] img,
-input[id='cat-4']:checked ~ ul li a[for='cat-4'] img,
-input[id='cat-5']:checked ~ ul li a[for='cat-5'] img
+input[id='cat-1']:checked ~ ul li[for='cat-1'] a img,
+input[id='cat-2']:checked ~ ul li[for='cat-2'] a img,
+input[id='cat-3']:checked ~ ul li[for='cat-3'] a img,
+input[id='cat-4']:checked ~ ul li[for='cat-4'] a img,
+input[id='cat-5']:checked ~ ul li[for='cat-5'] a img
 {
     width: 100%;
     margin-left: -10%;
     opacity: 1;
 }
 
-input[id='cat-1']:checked ~ ul li a[for='cat-1'] img:hover,
-input[id='cat-2']:checked ~ ul li a[for='cat-2'] img:hover,
-input[id='cat-3']:checked ~ ul li a[for='cat-3'] img:hover,
-input[id='cat-4']:checked ~ ul li a[for='cat-4'] img:hover,
-input[id='cat-5']:checked ~ ul li a[for='cat-5'] img:hover
+input[id='cat-1']:checked ~ ul li[for='cat-1'] a img:hover,
+input[id='cat-2']:checked ~ ul li[for='cat-2'] a img:hover,
+input[id='cat-3']:checked ~ ul li[for='cat-3'] a img:hover,
+input[id='cat-4']:checked ~ ul li[for='cat-4'] a img:hover,
+input[id='cat-5']:checked ~ ul li[for='cat-5'] a img:hover
 {
     z-index: 99;
     filter: brightness(50%);
