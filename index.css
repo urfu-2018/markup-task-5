@@ -83,11 +83,11 @@ ul
     height: 80%;
     position: relative;
     white-space: nowrap;
-    transition: left .7s ease-out;
     -o-transition: left .7s ease-out;
     -ms-transition: left .7s ease-out;
     -moz-transition: left .7s ease-out;
     -webkit-transition: left .7s ease-out;
+    transition: left .7s ease-out;
 }
 
 .carousel li
@@ -125,22 +125,26 @@ input[id='cat-5']:checked ~ ul
     left: calc(50% - 275px - 2200px);
 }
 
-input[id='cat-1']:checked ~ ul li[for='cat-1'] a img,
-input[id='cat-2']:checked ~ ul li[for='cat-2'] a img,
-input[id='cat-3']:checked ~ ul li[for='cat-3'] a img,
-input[id='cat-4']:checked ~ ul li[for='cat-4'] a img,
-input[id='cat-5']:checked ~ ul li[for='cat-5'] a img
+input[id='cat-1']:checked ~ ul li label[for='cat-1'] ~ a img,
+input[id='cat-2']:checked ~ ul li label[for='cat-2'] ~ a img,
+input[id='cat-3']:checked ~ ul li label[for='cat-3'] ~ a img,
+input[id='cat-4']:checked ~ ul li label[for='cat-4'] ~ a img,
+input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img
 {
     width: 100%;
     margin-left: -10%;
     opacity: 1;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
 }
 
-input[id='cat-1']:checked ~ ul li[for='cat-1'] a img:hover,
-input[id='cat-2']:checked ~ ul li[for='cat-2'] a img:hover,
-input[id='cat-3']:checked ~ ul li[for='cat-3'] a img:hover,
-input[id='cat-4']:checked ~ ul li[for='cat-4'] a img:hover,
-input[id='cat-5']:checked ~ ul li[for='cat-5'] a img:hover
+input[id='cat-1']:checked ~ ul li label[for='cat-1'] ~ a img:hover,
+input[id='cat-2']:checked ~ ul li label[for='cat-2'] ~ a img:hover,
+input[id='cat-3']:checked ~ ul li label[for='cat-3'] ~ a img:hover,
+input[id='cat-4']:checked ~ ul li label[for='cat-4'] ~ a img:hover,
+input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img:hover
 {
     z-index: 99;
     filter: brightness(50%);
