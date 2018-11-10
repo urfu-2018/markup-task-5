@@ -1,5 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 
+header
+{
+    border: 1px solid gray;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 80px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+main
+{
+    position: fixed;
+    top: 100px;
+    bottom: 80px;
+    width: 100%;
+}
+
+footer
+{
+    font: 14px Arial;
+    border: 1px solid gray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    height: 80px;
+    padding: 10px;
+    z-index: 1000;
+}
+
 header h1
 {
     font-size: 32px;
@@ -12,50 +47,135 @@ header h1:first-letter
     color: #ff3c17;
 }
 
-main
+.carousel-navigation
 {
-    position: relative;
-    margin-top: 100px;
-    z-index: 99;
+    position: absolute;
+    bottom: 10%;
+    left: 48%;
 }
 
-.cat-card
+input
 {
-    position: relative;
-    margin: 30px;
+    display: none;
+}
+
+input[id='cat-1']:checked ~ .carousel-navigation .selector[for='cat-1'],
+input[id='cat-2']:checked ~ .carousel-navigation .selector[for='cat-2'],
+input[id='cat-3']:checked ~ .carousel-navigation .selector[for='cat-3'],
+input[id='cat-4']:checked ~ .carousel-navigation .selector[for='cat-4'],
+input[id='cat-5']:checked ~ .carousel-navigation .selector[for='cat-5']
+{
+    background-color: rgb(87, 86, 86);
+}
+
+.carousel-navigation .selector
+{
+    z-index: 1500;
     display: inline-block;
-    max-height: 500px;
-    max-width: 400px;
+    background-color: lightgrey;
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 6px;
 }
 
-main .cat-card img
+ul
 {
-    border: 2px solid lightgrey;
+    height: 80%;
     position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 101;
+    white-space: nowrap;
+    transition: left .7s ease-out;
+    -o-transition: left .7s ease-out;
+    -ms-transition: left .7s ease-out;
+    -moz-transition: left .7s ease-out;
+    -webkit-transition: left .7s ease-out;
 }
 
-main .cat-card img:hover
+.carousel li
+{
+    top: 20%;
+    display: inline-block;
+    width: 450px;
+    height: 330px;
+    margin: 50px;
+    position: relative;
+}
+
+input[id='cat-1']:checked ~ ul
+{
+    left: calc(50% - 275px);
+}
+
+input[id='cat-2']:checked ~ ul
+{
+    left: calc(50% - 275px - 550px);
+}
+
+input[id='cat-3']:checked ~ ul
+{
+    left: calc(50% - 275px - 1100px);
+}
+
+input[id='cat-4']:checked ~ ul
+{
+    left: calc(50% - 275px - 1650px);
+}
+
+input[id='cat-5']:checked ~ ul
+{
+    left: calc(50% - 275px - 2200px);
+}
+
+input[id='cat-1']:checked ~ ul li a[for='cat-1'] img,
+input[id='cat-2']:checked ~ ul li a[for='cat-2'] img,
+input[id='cat-3']:checked ~ ul li a[for='cat-3'] img,
+input[id='cat-4']:checked ~ ul li a[for='cat-4'] img,
+input[id='cat-5']:checked ~ ul li a[for='cat-5'] img
+{
+    width: 100%;
+    margin-left: -10%;
+    opacity: 1;
+}
+
+input[id='cat-1']:checked ~ ul li a[for='cat-1'] img:hover,
+input[id='cat-2']:checked ~ ul li a[for='cat-2'] img:hover,
+input[id='cat-3']:checked ~ ul li a[for='cat-3'] img:hover,
+input[id='cat-4']:checked ~ ul li a[for='cat-4'] img:hover,
+input[id='cat-5']:checked ~ ul li a[for='cat-5'] img:hover
 {
     z-index: 99;
     filter: brightness(50%);
 }
 
+.cat-card .cat-name
+{
+    position: absolute;
+    top: 37%;
+    left: 34%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+}
+
+.cat-card img
+{
+    border: 2px solid lightgrey;
+    position: relative;
+    width: 70%;
+    opacity: .7;
+    z-index: 101;
+}
+
 .modal .close
 {
+    margin: 30px;
+    top: 20%;
     float: right;
     width: 32px;
     height: 32px;
-    margin: 0 0 20px 20px;
 }
 
 .modal .close a
 {
-    top: 10px;
     color: white;
     text-decoration: none;
     font-size: 30px;
@@ -75,53 +195,41 @@ main .cat-card img:hover
 
 .modal .cat-model
 {
-    display: block;
+    height: 80%;
+    position: fixed;
+    right: 20%;
+    top: 30%;
+}
+
+.cat-info
+{
+    width: 300px;
+    margin: 40px;
+    float: right;
 }
 
 .modal:target
 {
     visibility: visible;
-    opacity: .9;
+    opacity: 1;
+    background: rgba(0, 0, 0, .86);
+    transition-duration: 700ms;
 }
 
 .modal img
 {
-    left: 50%;
-    top: 200px;
+    float: right;
     position: relative;
-    display: block;
-    height: 300px;
-    width: 400px;
-    opacity: 1;
+    display: inline-block;
+    height: 350px;
+    width: 450px;
     z-index: 9999;
-}
-
-.cat-name
-{
-    position: absolute;
-    top: 30%;
-    left: 40%;
-    text-align: center;
-    font-size: 30px;
-    z-index: 100;
+    margin: 25px    ;
 }
 
 .white
 {
     color: aliceblue;
-}
-
-footer
-{
-    font: 14px Arial;
-    border: 1px solid gray;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: white;
-    height: 80px;
-    padding: 10px;
 }
 
 footer li

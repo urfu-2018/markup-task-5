@@ -9,52 +9,136 @@
     <header>
         <h1>Мурмаркет</h1>
     </header>
-    <hr>
     <main>
-        <article class="cat-card">
-            <a class="modal-dialog-link" href="#modal-dialog">
-                <img src="img/images.jpeg" alt="cat Ivan" title="Ivan">
-                <h2 class="cat-name white">Иван</h2>
-            </a>
-        </article>
-        <article class="cat-card">
-            <img src="img/mika.jpg" alt="cat Ivan" title="Ivan">
-            <div class="cat-info">
-                <h2 class="cat-name white">Иван</h2>
-            </div>
-        </article>
-        <article class="cat-card">
-            <img src="img/images.jpeg" alt="cat Ivan" title="Ivan">
-            <div class="cat-info">
-                <h2 class="cat-name white">Иван</h2>
-            </div>
-        </article>
-        <article class="cat-card">
-            <img src="img/mika.jpg" alt="cat Ivan" title="Ivan">
-            <div class="cat-info">
-                <h2 class="cat-name white">Иван</h2>
-            </div>
-        </article>
+        <input type="radio" id="cat-1" name="carousel">
+        <input type="radio" id="cat-2" name="carousel">
+        <input type="radio" id="cat-3" name="carousel" checked>
+        <input type="radio" id="cat-4" name="carousel">
+        <input type="radio" id="cat-5" name="carousel">
 
-        <div class="modal" id="modal-dialog">
+        <div class="carousel-navigation">
+            <label class="selector" for="cat-1"></label>
+            <label class="selector" for="cat-2"></label>
+            <label class="selector" for="cat-3"></label>
+            <label class="selector" for="cat-4"></label>
+            <label class="selector" for="cat-5"></label>
+        </div>
+
+        <ul class="carousel">
+            <li>
+                <a for="cat-1" class="cat-card" href="#modal-dialog1">
+                    <img src="img/images.jpeg" alt="cat Ivan" title="Ivan">
+                    <h2 class="cat-name white">Иван</h2>
+                </a>
+            </li>
+            <li>
+                <a for="cat-2" class="cat-card" href="#modal-dialog2">
+                    <img src="img/mika.jpg" alt="cat Ivan" title="Ivan">
+                    <h2 class="cat-name white">Мика</h2>
+                </a>
+            </li>
+            <li>
+                <a for="cat-3" class="cat-card" href="#modal-dialog3">
+                    <img src="img/Busya.jpg" alt="cat Ivan" title="Ivan">
+                    <h2 class="cat-name white">Буся</h2>
+                </a>
+            </li>
+            <li>
+                <a for="cat-4" class="cat-card" href="#modal-dialog4">
+                    <img src="img/bait.jpg" alt="cat Ivan" title="Ivan">
+                    <h2 class="cat-name white">Байт</h2>
+                </a>
+            </li>
+            <li>
+                <a for="cat-5" class="cat-card" href="#modal-dialog5">
+                    <img src="img/lol.jpg" alt="cat Ivan" title="Ivan">
+                    <h2 class="cat-name white">Лол</h2>
+                </a>
+            </li>
+        </ul>
+
+        <div class="modal" id="modal-dialog1">
             <article class="cat-model">
-                <img src="img/images.jpeg" alt="cat Ivan">
                 <nav class="close"><a href="#">X</a></nav>
-                <h1 class="name">
-                    ZZZZZZZZZZZZZZZZ
-                </h1>
-                <div class="description">
-                    <p>ZZZZZZZZZZZZZZZZ</p>
-                    <p>ZZZZZZZZZZZZZZZZ</p>
+                <div class="cat-info white">
+                    <h1 class="name">
+                        Иван
+                    </h1>
+                    <p>Он очень любит спать. Он очень пушистый, не кусается, не царапается. Он очень
+                        старый и добрый. У него синии глаза и курносый нос</p>
                     <p>
-                        ZZZZZZZZZZZZZzzzzzzzzzzzzzzzzzzzzzZZZ
-                        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+                        Летом он отдыхает в деревне.
+                        В дом заходит только поесть. Я видел как он дрался с другими котами и ему поранили лапку.
+                        Мы с бабушкой мазали котику лапку зелёнкой.
                     </p>
                 </div>
+                <img src="img/images.jpeg" alt="cat Ivan">
+            </article>
+        </div>
+        <div class="modal" id="modal-dialog2">
+            <article class="cat-model">
+                <nav class="close"><a href="#">X</a></nav>
+                <div class="cat-info white">
+                    <h1 class="name">
+                        Мика
+                    </h1>
+                    <p>Возраст 2 года</p>
+                    <p>
+                        У этой кошки мускулистое тело и сильные лапы, созданные для охоты. Дружелюбная и
+                        неприхотливая.
+                    </p>
+                </div>
+                <img src="img/mika.jpg" alt="cat Ivan">
+            </article>
+        </div>
+        <div class="modal" id="modal-dialog3">
+            <article class="cat-model">
+                <nav class="close"><a href="#">X</a></nav>
+                <div class="cat-info white">
+                    <h1 class="name">
+                        Буся
+                    </h1>
+                    <p>Возраст: 2 года</p>
+                    <p>
+                        Всегда ласкается, но очень гордая, нужно завоевать доверие
+                    </p>
+                </div>
+                <img src="img/Busya.jpg" alt="cat Ivan">
+            </article>
+        </div>
+        <div class="modal" id="modal-dialog4">
+            <article class="cat-model">
+                <nav class="close"><a href="#">X</a></nav>
+                <div class="cat-info white">
+                    <h1 class="name">
+                        Байт
+                    </h1>
+                    <p>Возраст: около 3 лет</p>
+                    <p>Порода:  Белый волк</p>
+                    <p>
+                        Смелый и отважный, уверен в своих силах никогда не отсупает.
+                    </p>
+                </div>
+                <img src="img/bait.jpg" alt="cat Ivan">
+            </article>
+        </div>
+        <div class="modal" id="modal-dialog5">
+            <article class="cat-model">
+                <nav class="close"><a href="#">X</a></nav>
+                <div class="cat-info white">
+                    <h1 class="name">
+                        Лол
+                    </h1>
+                    <p>Возраст 3 года</p>
+                    <p>
+                        Очень веселый, но в тоже время и спокойный. Он не устраивает в доме неразбериху,
+                        как это делают иные животные.
+                    </p>
+                </div>
+                <img src="img/lol.jpg" alt="cat Ivan">
             </article>
         </div>
     </main>
-    <hr>
     <footer>
         <ul>
             <li>Напишите нам:</li>
