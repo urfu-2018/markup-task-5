@@ -9,7 +9,7 @@
     <header class="fixed header">
         <h2 class="store-name">Мурмаркет</h2>
     </header>
-    <div class="header-wrapper"></div>
+    <!-- <div class="header-wrapper"></div> -->
 
     <main class="carousel-wrapper">
         <!-- Скрытые кнопки для выбора нужной картинки -->
@@ -28,62 +28,72 @@
         <div class="carousel">
             <div class="carousel-item item-1">
                 <label for="carousel-1"></label>
-                <div class="description">
+                <label for="modal-1"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Олимпия</h3>
                     <!-- чет не получилось у меня выровнять по вертикали h3 -->
                 </div>
             </div>
             <div class="carousel-item item-2">
                 <label for="carousel-2"></label>
-                <div class="description">
+                <label for="modal-2"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Пуффи</h3>
                 </div>
             </div>
             <div class="carousel-item item-3">
                 <label for="carousel-3"></label>
-                <div class="description">
+                <label for="modal-3"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Рыжик</h3>
                 </div>
             </div>
             <div class="carousel-item item-4">
                 <label for="carousel-4"></label>
-                <div class="description">
+                <label for="modal-4"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Перат</h3>
                 </div>
             </div>
             <div class="carousel-item item-5">
                 <label for="carousel-5"></label>
-                <div class="description">
+                <label for="modal-5"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Одри</h3>
                 </div>
             </div>
             <div class="carousel-item item-6">
                 <label for="carousel-6"></label>
-                <div class="description">
+                <label for="modal-6"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Йошка</h3>
                 </div>
             </div>
             <div class="carousel-item item-7">
                 <label for="carousel-7"></label>
-                <div class="description">
+                <label for="modal-7"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Пуша</h3>
                 </div>
             </div>
             <div class="carousel-item item-8">
                 <label for="carousel-8"></label>
-                <div class="description">
+                <label for="modal-8"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Риччи</h3>
                 </div>
             </div>
             <div class="carousel-item item-9">
                 <label for="carousel-9"></label>
-                <div class="description">
+                <label for="modal-9"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Малибу</h3>
                 </div>
             </div>
             <div class="carousel-item item-10">
                 <label for="carousel-10"></label>
-                <div class="description">
+                <label for="modal-10"></label>
+                <div class="name-only">
                     <h3 class="cat-name">Семми</h3>
                 </div>
             </div>
@@ -123,6 +133,141 @@
             </li>
         </ul>
     </main>
+
+    <input type="checkbox" class="switcher temp checkbox-1" id="modal-1">
+    <input type="checkbox" class="switcher temp checkbox-2" id="modal-2">
+    <input type="checkbox" class="switcher temp checkbox-3" id="modal-3">
+    <input type="checkbox" class="switcher temp checkbox-4" id="modal-4">
+    <input type="checkbox" class="switcher temp checkbox-5" id="modal-5">
+    <input type="checkbox" class="switcher temp checkbox-6" id="modal-6">
+    <input type="checkbox" class="switcher temp checkbox-7" id="modal-7">
+    <input type="checkbox" class="switcher temp checkbox-8" id="modal-8">
+    <input type="checkbox" class="switcher temp checkbox-9" id="modal-9">
+    <input type="checkbox" class="switcher temp checkbox-10" id="modal-10">
+
+    <div class="desc-container">
+        <section class="description">
+            <img class="cat-img" src="img/British-Shorthair.jpg" alt="Британская Короткошерстная">
+            <label class="close-label" for="modal-1">&#x2715;</label>
+            <div class="description-text">
+                <h3>Олимпия</h3>
+                <p>
+                    Милая, но местами настырная.<br>
+                    Возраст 2 года.<br>
+                    С другими котами дружит, любит играть, но не лежит на коленках.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Bengal.jpg" alt="Бенгальская">
+            <label class="close-label" for="modal-2">&#x2715;</label>
+            <div class="description-text">
+                <h3>Пуффи</h3>
+                <p>
+                    Святая кошка, лечит болезни.<br>
+                    Возраст почти год.<br>
+                    Остальные коты смотрят на нее как на Иисуса.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Alley.jpg" alt="Дворовой">
+            <label class="close-label" for="modal-3">&#x2715;</label>
+            <div class="description-text">
+                <h3>Рыжик</h3>
+                <p>
+                    Очень добрый и послушный кот.<br>
+                    Возраст точно не известен, но примерно 3 года.<br>
+                    Принес мне мышку после того, как я его покормил. Поэтому и взяли домой.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Maine-Coon.jpg" alt="Мэйн-Кун">
+            <label class="close-label" for="modal-4">&#x2715;</label>
+            <div class="description-text">
+                <h3>Рыжик</h3>
+                <p>
+                    Его и правда так зовут<br>
+                    Это не ошибка редактора.<br>
+                    Просто у предыдущего хозяина было плохо с орфографией.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Burmese.jpg" alt="Бирманская">
+            <label class="close-label" for="modal-5">&#x2715;</label>
+            <div class="description-text">
+                <h3>Одри</h3>
+                <p>
+                    Этот кот знает себе цену.<br>
+                    Невероятно умен для кота.<br>
+                    Если знаете, что готовы к нему - вы подходите друг другу.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Siamese.jpg" alt="Сиамская">
+            <label class="close-label" for="modal-6">&#x2715;</label>
+            <div class="description-text">
+                <h3>Йошка</h3>
+                <p>
+                    Активный, требующий внимания.<br>
+                    Скоро ему будет год.<br>
+                    Кот немного надрессирован, умеет стоят на задних лапах.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Munchkin.jpg" alt="Манчкин">
+            <label class="close-label" for="modal-7">&#x2715;</label>
+            <div class="description-text">
+                <h3>Пуша</h3>
+                <p>
+                    Спокойный и ласковый.<br>
+                    Не выглядит на свои 2 года.<br>
+                    Любите спокойно сидеть у камина? Он точно ваш вариант!
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Persian.jpg" alt="Персидский">
+            <label class="close-label" for="modal-8">&#x2715;</label>
+            <div class="description-text">
+                <h3>Риччи</h3>
+                <p>
+                    Ворчливый, как богач.<br>
+                    Возраст 7 лет.<br>
+                    Он никуда, без своего брата Малибу.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Persian2.jpg" alt="Персидский">
+            <label class="close-label" for="modal-9">&#x2715;</label>
+            <div class="description-text">
+                <h3>Малибу</h3>
+                <p class="full-info">
+                    Милый котик, любит когда его тискают.<br>
+                    Возраст тоже 7 лет.<br>
+                    Хоть он часто достает своего брата Риччи, они друг без друга не могут.
+                </p>
+            </div>
+        </section>
+        <section class="description">
+            <img class="cat-img" src="img/Russian-Blue.jpg" alt="Русская Голубая">
+            <label class="close-label" for="modal-10">&#x2715;</label>
+            <div class="description-text">
+                <h3>Семми</h3>
+                <p>
+                    Понимает все ваши жесты и эмоции.<br>
+                    Умеет утешать своим присутсвием.<br>
+                    Никогда не пускает когти в человека.
+                </p>
+            </div>
+        </section>
+    </div>
+
     <footer class="fixed footer">
         <div class="float-left left-footer-info footer-element-margin">
             Напишите нам:

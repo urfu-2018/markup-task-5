@@ -32,6 +32,7 @@ body
     background-color: white;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .store-name
@@ -127,7 +128,7 @@ body
     overflow: hidden;
 }
 
-.carousel-wrapper > .switcher
+.switcher
 {
     display: none;
 }
@@ -188,9 +189,12 @@ body
 
 .carousel-item label
 {
-    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
+    z-index: 90;
 }
 
 .item-1
@@ -310,7 +314,7 @@ body
     opacity: 1;
 }
 
-.description
+.name-only
 {
     visibility: hidden;
     position: absolute;
@@ -331,16 +335,107 @@ body
     text-align: center;
 }
 
-.carousel-1:checked ~ .carousel .item-1:hover .description,
-.carousel-2:checked ~ .carousel .item-2:hover .description,
-.carousel-3:checked ~ .carousel .item-3:hover .description,
-.carousel-4:checked ~ .carousel .item-4:hover .description,
-.carousel-5:checked ~ .carousel .item-5:hover .description,
-.carousel-6:checked ~ .carousel .item-6:hover .description,
-.carousel-7:checked ~ .carousel .item-7:hover .description,
-.carousel-8:checked ~ .carousel .item-8:hover .description,
-.carousel-9:checked ~ .carousel .item-9:hover .description,
-.carousel-10:checked ~ .carousel .item-10:hover .description
+.carousel-1:checked ~ .carousel .item-1:hover .name-only,
+.carousel-2:checked ~ .carousel .item-2:hover .name-only,
+.carousel-3:checked ~ .carousel .item-3:hover .name-only,
+.carousel-4:checked ~ .carousel .item-4:hover .name-only,
+.carousel-5:checked ~ .carousel .item-5:hover .name-only,
+.carousel-6:checked ~ .carousel .item-6:hover .name-only,
+.carousel-7:checked ~ .carousel .item-7:hover .name-only,
+.carousel-8:checked ~ .carousel .item-8:hover .name-only,
+.carousel-9:checked ~ .carousel .item-9:hover .name-only,
+.carousel-10:checked ~ .carousel .item-10:hover .name-only
 {
     visibility: visible;
+}
+
+ .desc-container
+{
+    display: block;
+    padding: 70px 0 0;
+}
+ 
+.desc-container::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.9);
+    z-index: -1;
+    visibility: hidden
+}
+
+.description
+{
+    position: relative;
+    margin: 0 auto;
+    width: 50%;
+    display: none;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.cat-img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.close-label
+{
+    position: absolute;
+    top: 0;
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 40px;
+} 
+
+.checkbox-1:checked ~ .desc-container::before,
+.checkbox-2:checked ~ .desc-container::before,
+.checkbox-3:checked ~ .desc-container::before,
+.checkbox-4:checked ~ .desc-container::before,
+.checkbox-5:checked ~ .desc-container::before,
+.checkbox-6:checked ~ .desc-container::before,
+.checkbox-7:checked ~ .desc-container::before,
+.checkbox-8:checked ~ .desc-container::before,
+.checkbox-9:checked ~ .desc-container::before,
+.checkbox-10:checked ~ .desc-container::before
+{
+    visibility: visible;
+    z-index: 0;
+}
+
+.checkbox-1:checked ~ .desc-container,
+.checkbox-2:checked ~ .desc-container,
+.checkbox-3:checked ~ .desc-container,
+.checkbox-4:checked ~ .desc-container,
+.checkbox-5:checked ~ .desc-container,
+.checkbox-6:checked ~ .desc-container,
+.checkbox-7:checked ~ .desc-container,
+.checkbox-8:checked ~ .desc-container,
+.checkbox-9:checked ~ .desc-container,
+.checkbox-10:checked ~ .desc-container
+{
+    z-index: 11;
+    display: block;
+}
+
+.checkbox-1:checked ~ .desc-container > .description:nth-child(1),
+.checkbox-2:checked ~ .desc-container > .description:nth-child(2),
+.checkbox-3:checked ~ .desc-container > .description:nth-child(3),
+.checkbox-4:checked ~ .desc-container > .description:nth-child(4),
+.checkbox-5:checked ~ .desc-container > .description:nth-child(5),
+.checkbox-6:checked ~ .desc-container > .description:nth-child(6),
+.checkbox-7:checked ~ .desc-container > .description:nth-child(7),
+.checkbox-8:checked ~ .desc-container > .description:nth-child(8),
+.checkbox-9:checked ~ .desc-container > .description:nth-child(9),
+.checkbox-10:checked ~ .desc-container > .description:nth-child(10)
+{
+    display: table;
 }
