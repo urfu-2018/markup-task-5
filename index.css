@@ -412,7 +412,7 @@ main
     height: 100%;
     text-align: justify;
     top: 20%;
-    font-family: Caveat, cursive;
+    font-family: 'Caveat', cursive;
 }
 
 .modal-view .cat-name
