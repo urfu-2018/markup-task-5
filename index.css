@@ -1,0 +1,275 @@
+.cats-carousel
+{
+    width: 100%;
+    height: 600px;
+    background: #ffe4e1;
+}
+
+.cats-carousel h1 
+{
+    font-size: 32px;
+    font-family: 'PT Sans Narrow';
+    text-align: center;
+    color: rgb(252, 6, 129);
+}
+
+.cats-carousel h1::first-letter 
+{
+    color: rgb(134, 7, 71);
+}
+
+.name
+{
+    display: none;
+    width: 400px;
+    height: 298px;
+    margin: 0 -10%;
+    top: -101%;
+    left: 10%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(252, 91, 217, .5);
+    position: relative;
+}
+
+input[name='carousel'] 
+{
+    display: none;
+}
+
+input[id='cat1']:checked ~ ul li label[for='cat1'] img,
+input[id='cat2']:checked ~ ul li label[for='cat2'] img,
+input[id='cat3']:checked ~ ul li label[for='cat3'] img,
+input[id='cat4']:checked ~ ul li label[for='cat4'] img,
+input[id='cat5']:checked ~ ul li label[for='cat5'] img
+{
+    width: 400px;
+    height: 100%;
+    margin: 0 -10%;
+    opacity: 1;
+}
+
+input[id='cat1']:checked ~ .karusel-navigation .switch[for='cat1'],
+input[id='cat2']:checked ~ .karusel-navigation .switch[for='cat2'],
+input[id='cat3']:checked ~ .karusel-navigation .switch[for='cat3'],
+input[id='cat4']:checked ~ .karusel-navigation .switch[for='cat4'],
+input[id='cat5']:checked ~ .karusel-navigation .switch[for='cat5']
+{
+    background-color: #920658;
+}
+
+li
+{
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 1;
+    margin: 20px 0;
+    height: 300px;
+}
+
+input
+{
+    margin-top: 100px;
+    display: none;
+}
+
+.carousel-list
+{
+    position: relative;
+    white-space: nowrap;
+    transition: left .9s ease-out;
+    -o-transition: left .9s ease-out;
+    -ms-transition: left .9s ease-out;
+    -moz-transition: left .9s ease-out;
+    -webkit-transition: left .9s ease-out;
+}
+
+.karusel-navigation .switch
+{
+    display: inline-block;
+    background-color: #fa5fcc;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.karusel-navigation
+{
+    vertical-align: bottom;
+    text-align: center;
+    margin-right: 80px;
+}
+
+.envelope 
+{
+    width: 25px;
+    height: 20px;
+}
+
+.left
+{
+    float: left;
+    width: 50%;
+}
+
+.right
+{
+    float: right;
+    width: 50%;
+}
+
+.right p
+{
+    float: right;
+}
+
+footer 
+{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(134, 7, 71);
+}
+
+a 
+{
+    color: #4c4cd8;
+}
+
+input[id='cat1']:checked ~ .carousel-list 
+{
+    left: calc(50% - 200px);
+}
+
+input[id='cat2']:checked ~ .carousel-list 
+{
+    left: calc(50% - 300px - 300px);
+}
+
+input[id='cat3']:checked ~ .carousel-list 
+{
+    left: calc(50% - 300px - 640px);
+}
+
+input[id='cat4']:checked ~ .carousel-list
+{
+    left: calc(50% - 300px - 990px);
+}
+
+input[id='cat5']:checked ~ .carousel-list 
+{
+    left: calc(50% - 300px - 1375px);
+}
+
+.modal-window
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(90, 6, 76, .8);
+    z-index: 2;
+}
+
+.modal-window a
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.modal-window:target
+{
+    display: block;
+    pointer-events: auto;
+}
+
+.modal-window > img
+{
+    margin: 50px 0 0 100px;
+    display: inline-block;
+}
+
+.modal-window > div.modal-text
+{
+    display: inline-block;
+    color: white;
+}
+
+img[class*='pic']
+{
+    height: 80%;
+    width: 300px;
+    margin-right: 70px;
+    opacity: .7;
+}
+
+img[class*='pic']:hover
+{
+    filter: brightness(30%);
+    cursor: pointer;
+}
+
+input[id='cat1']:checked ~ ul > li.cat1:hover > div.name a p,
+input[id='cat2']:checked ~ ul > li.cat2:hover > div.name a p,
+input[id='cat3']:checked ~ ul > li.cat3:hover > div.name a p,
+input[id='cat4']:checked ~ ul > li.cat4:hover > div.name a p,
+input[id='cat5']:checked ~ ul > li.cat5:hover > div.name a p,
+{
+    position: absolute;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    z-index: 1;
+    color: white;
+    text-shadow: 0 0 20px rgb(221, 9, 9);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+li.cat > a > div > p
+{
+    font-size: 30px;
+    display: none;
+}
+
+li.cat
+{
+    display: inline-block;
+    position: relative;
+}
+
+li.cat > a > div
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.close
+{
+    float: right;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+img[alt='Закрыть']
+{
+    width: 20px;
+    height: 20px;
+}
+
+section
+{
+    width: 70%;
+    height: 300px;
+    margin: 200px auto;
+}
