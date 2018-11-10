@@ -119,30 +119,39 @@ footer .contacts li::before
     display: inline-block;
     position: relative;
     margin: 0 5px;
-    opacity: .5;
+    opacity: .7;
     overflow: hidden;
 }
 
 .slides img
 {
-    height: 200px;
+    height: 80%;
     width: 320px;
 }
 
 .slider .name
 {
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    bottom: 0;
+    right: 0;
     color: #fff;
     font-size: 40px;
     text-align: center;
+    text-decoration: none;
     padding-top: 110px;
     background-color: rgba(0,0,0,.7);
-    visibility: hidden;
+}
+
+.slide1-input:checked ~ .slider .slide1:hover > .name,
+.slide2-input:checked ~ .slider .slide2:hover > .name,
+.slide3-input:checked ~ .slider .slide3:hover > .name,
+.slide4-input:checked ~ .slider .slide4:hover > .name,
+.slide5-input:checked ~ .slider .slide5:hover > .name
+{
+    display: block;
 }
 
 .slide1-input:checked ~ .slider
@@ -250,24 +259,20 @@ footer .contacts li::before
 /* == Попытка сделать модальное окно при нажатии == */
 /* ================================================ */
 
-.slide1-input:checked ~ .slider .slide1:hover > .name,
-.slide2-input:checked ~ .slider .slide2:hover > .name,
-.slide3-input:checked ~ .slider .slide3:hover > .name,
-.slide4-input:checked ~ .slider .slide4:hover > .name,
-.slide5-input:checked ~ .slider .slide5:hover > .name
-{
-    visibility: visible;
-}
-
 .black-window
 {
     background: rgba(0, 0, 0, .9);
     position: absolute;
-    top: 0;
+    top: -100%;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 4;
+}
+
+.black-window:target
+{
+    top: 0;
 }
 
 .black-window .cat-info
@@ -297,12 +302,6 @@ footer .contacts li::before
     cursor: pointer;
 }
 
-.black-window .cat-info .description
-{
-
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .black-window .cat-info .description p
 {
     margin-bottom: 20px;
@@ -316,21 +315,7 @@ footer .contacts li::before
     margin: 30px 0;
 }
 
-.black-window,
-.black-window > .item1,
-.black-window > .item2,
-.black-window > .item3,
-.black-window > .item4,
-.black-window > .item5
-{
-    display: none;
-}
-
-.modal-item1:checked ~ .black-window .item1,
-.modal-item2:checked ~ .black-window .item2,
-.modal-item3:checked ~ .black-window .item3,
-.modal-item4:checked ~ .black-window .item4,
-.modal-item5:checked ~ .black-window .item5
+.cat-info:target
 {
     display: block;
 }
