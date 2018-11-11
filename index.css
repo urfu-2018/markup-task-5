@@ -36,89 +36,217 @@
     padding: 5px;
 }
 
-input
+.cat-radio
 {
     display: none;
 }
 
-.gallery
+.ullla
 {
-    padding-top: 64px;
-    margin-left: -25%;
-    width: 150%;
+    padding: 10%;
 }
 
-img 
+.carousel
 {
-    display: block;
-    margin: 0 auto;
-    height: 200px;
+    position: relative;
+    width: 100%;
+    height: 300px;
 }
 
-.cat-card 
+.carousel-container
+{
+    height: 100%;
+    width: 120%;
+    text-align: center;
+}
+
+.carousel-item
 {
     display: inline-block;
-    margin: 20px;
-    width: 300px;
-    height: 300px;
-    opacity: .7;
-    position: relative;
-    transition: .5s;
 }
 
-.content 
+.cat-card
 {
-    padding: 1em;
-}
-
-.cat-name
-{
-    background-color: rgba(0, 0, 0, .4);
-    z-index: 15;
-    text-align: center;
-    float: center;
-    margin-top: -150px;
-    visibility: hidden;
-}
-
-.cat-name p 
-{
-    font-size: 1.7em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.cat-description-short p 
-{
-    color: gray;
-    margin: 1px;
-}
-
-.cat-description-detail 
-{
-    display: none;
-}
-
-.cat-description-detail p 
-{
-    color: gray;
-    margin: 1px;
-}
-
-.selector
-{
-    width: fit-content;
+    height: 80%;
     margin: 0 auto;
+    opacity: .7;
+    cursor: pointer;
+    display: block;
 }
 
-.selector-item
+.points
+{
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+.point
 {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background: #dfe6e9;
+    background: gray;
     border-radius: 50%;
     margin: 10px auto;
     cursor: pointer;
+}
+
+.carousel-item
+{
+    position: relative;
+    height: 300px;
+}
+
+.carousel-item img
+{
+    height: 100%;
+}
+
+.name
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.name h1
+{
+    color: white;
+    font-size: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 100px;
+}
+
+.cat-1-radio:checked ~ .ullla .carousel-item
+{
+    left: 28%;
+}
+
+.cat-2-radio:checked ~ .ullla .carousel-item
+{
+    left: 13%;
+}
+
+.cat-3-radio:checked ~ .ullla .carousel-item
+{
+    left: -6%;
+}
+
+.cat-4-radio:checked ~ .ullla .carousel-item
+{
+    left: -25%;
+}
+
+.cat-5-radio:checked ~ .ullla .carousel-item
+{
+    left: -45%;
+}
+
+.cat-1-radio:checked ~ .ullla .cat-1-item .cat-card,
+.cat-2-radio:checked ~ .ullla .cat-2-item .cat-card,
+.cat-3-radio:checked ~ .ullla .cat-3-item .cat-card,
+.cat-4-radio:checked ~ .ullla .cat-4-item .cat-card,
+.cat-5-radio:checked ~ .ullla .cat-5-item .cat-card
+{
+    height: 100%;
+    opacity: 1;
+}
+
+.cat-1-radio:checked ~ .ullla .cat-1-item:hover .name,
+.cat-2-radio:checked ~ .ullla .cat-2-item:hover .name,
+.cat-3-radio:checked ~ .ullla .cat-3-item:hover .name,
+.cat-4-radio:checked ~ .ullla .cat-4-item:hover .name,
+.cat-5-radio:checked ~ .ullla .cat-5-item:hover .name
+{
+    display: block;
+}
+
+.cat-1-radio:checked ~ .ullla .point-1,
+.cat-2-radio:checked ~ .ullla .point-2,
+.cat-3-radio:checked ~ .ullla .point-3,
+.cat-4-radio:checked ~ .ullla .point-4,
+.cat-5-radio:checked ~ .ullla .point-5
+{
+    background-color: black;
+}
+
+.modal
+{
+    display: none;
+    width: 60%;
+    height: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .9);
+    margin: auto;
+    top: 15%;
+    position: absolute;
+}
+
+.modal:target
+{
+    display: block;
+}
+
+.modal-left-section
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+.modal-left-section img
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-description
+{
+    padding: 40px;
+    color: white;
+    height: 100%;
+    display: block;
+    float: left;
+}
+
+.cross
+{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.cross:before
+{
+    position: absolute;
+    left: 15px;
+    content: '';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.cross:after
+{
+    position: absolute;
+    left: 15px;
+    content: '';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+    transform: rotate(-45deg);
 }
