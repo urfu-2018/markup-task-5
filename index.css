@@ -1,26 +1,26 @@
 body
 {
-    background: url(фон.png);
+    background: #fff;
     margin: 0;
+    height: 900px;
 }
 
-header
+.shop-name
 {
+    background: #fff;
+    top: 0;
+    z-index: 500;
     font-size: 32px;
     font-family: 'PT Sans Narrow', sans-serif;
     position: fixed;
     width: 100%;
     text-align: center;
     border-bottom: 1px solid #808080;
-}
-
-h1
-{
     font-weight: normal;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
-h1::first-letter
+.shop-name::first-letter
 {
     color: #f00;
 }
@@ -32,8 +32,10 @@ h1::first-letter
     text-align: center;
 }
 
-footer
+.contacts
 {
+    z-index: 500;
+    background: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     position: fixed;
@@ -42,57 +44,59 @@ footer
     border-top: 1px solid #808080;
 }
 
-footer a
+.contacts a
 {
     color: #4c4cd8;
 }
 
-footer .contact
+.contacts .contact
 {
     float: left;
-    margin-left: 3%;
+    margin-left: 1%;
 }
 
-footer .organization
+.contacts .organization
 {
     float: right;
-    margin-right: 5%;
+    margin-right: 1%;
     margin-top: 45px;
 }
 
-footer .organization-name::before
+.contacts .organization-name::before
 {
     content: '\00AB';
 }
 
-footer .organization-name::after
+.contacts .organization-name::after
 {
     content: '\00BB';
 }
 
-footer .mail::before
+.contacts .mail::before
 {
     content: '\2709';
 }
 
-footer .organization-name::after,
-footer .organization-name::before,
-footer .mail::before
+.contacts .organization-name::after,
+.contacts .organization-name::before,
+.contacts .mail::before
 {
     color: #000;
 }
 
-footer a
+.contacts a
 {
     text-decoration: none;
 }
 
-main
+.carousel
 {
     width: 100%;
+    height: 100%;
+    top: 42px;
+    bottom: 82px;
     position: relative;
     overflow: hidden;
-    height: 700px;
 }
 
 .cat-list
@@ -116,6 +120,7 @@ main
     display: inline-block;
     width: 400px;
     height: 80%;
+    top: calc(50% - 160px);
     margin: 0 50px;
     transition: all .8s ease-in-out;
     -webkit-transition: all .8s ease-in-out;
@@ -136,13 +141,13 @@ main
     
 }
 
-.cat .name:hover
+.cat .image-name:hover
 {
     box-shadow: 0 0 4px 3px #f00;
     -webkit-box-shadow: 0 0 4px 3px #f00;
 }
 
-.name
+.image-name
 {
     display: none;
     position: absolute;
@@ -154,7 +159,6 @@ main
     z-index: 1;
     font-family: Comfortaa, cursive;
     color: #fff;
-    
     cursor: pointer;
     transition: .5s ease-in-out;
     -webkit-transition: .5s ease-in-out;
@@ -163,7 +167,7 @@ main
     -o-transition: .5s ease-in-out;
 }
 
-.name a
+.image-name a
 {
     background-color: #000;
     opacity: .7;
@@ -189,17 +193,17 @@ main
     display: none;
 }
 
-.radios
+.radio-buttons
 {
     position: absolute;
     user-select: none;
-    margin: 0 20px;
     left: calc(50% - 100px);
+    top: calc(75%);
     right: 0;
-    bottom: 0;
 }
 
-.circle
+.circle,
+.circle a
 {
     display: inline-block;
     width: 16px;
@@ -209,16 +213,21 @@ main
     cursor: pointer;
 }
 
-.first:checked ~ .radios .first-circle,
-.second:checked ~ .radios .second-circle,
-.third:checked ~ .radios .third-circle,
-.fourth:checked ~ .radios .fourth-circle,
-.fifth:checked ~ .radios .fifth-circle,
-.sixth:checked ~ .radios .sixth-circle,
-.seventh:checked ~ .radios .seventh-circle,
-.eighth:checked ~ .radios .eighth-circle,
-.ninth:checked ~ .radios .ninth-circle,
-.tenth:checked ~ .radios .tenth-circle
+.circle a
+{
+    display: none;
+}
+
+.first:checked ~ .radio-buttons .first-circle a,
+.second:checked ~ .radio-buttons .second-circle a,
+.third:checked ~ .radio-buttons .third-circle a,
+.fourth:checked ~ .radio-buttons .fourth-circle a,
+.fifth:checked ~ .radio-buttons .fifth-circle a,
+.sixth:checked ~ .radio-buttons .sixth-circle a,
+.seventh:checked ~ .radio-buttons .seventh-circle a,
+.eighth:checked ~ .radio-buttons .eighth-circle a,
+.ninth:checked ~ .radio-buttons .ninth-circle a,
+.tenth:checked ~ .radio-buttons .tenth-circle a
 {
     background: #777;
     border: 1px solid #000;
@@ -303,16 +312,16 @@ main
     opacity: 1;
 }
 
-.first:checked ~ .cat-list .first-cat:hover .name,
-.second:checked ~ .cat-list .second-cat:hover .name,
-.third:checked ~ .cat-list .third-cat:hover .name,
-.fourth:checked ~ .cat-list .fourth-cat:hover .name,
-.fifth:checked ~ .cat-list .fifth-cat:hover .name,
-.sixth:checked ~ .cat-list .sixth-cat:hover .name,
-.seventh:checked ~ .cat-list .seventh-cat:hover .name,
-.eighth:checked ~ .cat-list .eighth-cat:hover .name,
-.ninth:checked ~ .cat-list .ninth-cat:hover .name,
-.tenth:checked ~ .cat-list .tenth-cat:hover .name
+.first:checked ~ .cat-list .first-cat:hover .image-name,
+.second:checked ~ .cat-list .second-cat:hover .image-name,
+.third:checked ~ .cat-list .third-cat:hover .image-name,
+.fourth:checked ~ .cat-list .fourth-cat:hover .image-name,
+.fifth:checked ~ .cat-list .fifth-cat:hover .image-name,
+.sixth:checked ~ .cat-list .sixth-cat:hover .image-name,
+.seventh:checked ~ .cat-list .seventh-cat:hover .image-name,
+.eighth:checked ~ .cat-list .eighth-cat:hover .image-name,
+.ninth:checked ~ .cat-list .ninth-cat:hover .image-name,
+.tenth:checked ~ .cat-list .tenth-cat:hover .image-name
 {
     display: block;
 }
@@ -328,6 +337,16 @@ main
     display: none;
 }
 
+.first:checked ~ .radio-buttons .first-circle a,
+.second:checked ~ .radio-buttons .second-circle a,
+.third:checked ~ .radio-buttons .third-circle a,
+.fourth:checked ~ .radio-buttons .fourth-circle a,
+.fifth:checked ~ .radio-buttons .fifth-circle a,
+.sixth:checked ~ .radio-buttons .sixth-circle a,
+.seventh:checked ~ .radio-buttons .seventh-circle a,
+.eighth:checked ~ .radio-buttons .eighth-circle a,
+.ninth:checked ~ .radio-buttons .ninth-circle a,
+.tenth:checked ~ .radio-buttons .tenth-circle a,
 .first:checked ~ .cat-list .first-cat .link-to-modal-view,
 .second:checked ~ .cat-list .second-cat .link-to-modal-view,
 .third:checked ~ .cat-list .third-cat .link-to-modal-view,
@@ -339,7 +358,7 @@ main
 .ninth:checked ~ .cat-list .ninth-cat .link-to-modal-view,
 .tenth:checked ~ .cat-list .tenth-cat .link-to-modal-view
 {
-    display: block;
+    display: inline-block;
 }
 
 .modal-view:target
@@ -349,12 +368,12 @@ main
 
 .modal-view
 {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 82px;
-    z-index: 500;
+    bottom: -40px;
+    z-index: 499;
     color: #fff;
     display: none;
     background: rgba(0, 0, 0, .9);
@@ -411,7 +430,7 @@ main
     width: 25%;
     height: 100%;
     text-align: justify;
-    top: 20%;
+    top: 15%;
     font-family: 'Caveat', cursive;
 }
 
