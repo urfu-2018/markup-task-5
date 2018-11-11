@@ -31,7 +31,7 @@ body
 }
 
 input[name='cat_image'],
-input[name='modal-image']
+input[name='modal-checkbox']
 {
     display: none;
 }
@@ -73,10 +73,10 @@ input[name='modal-image']
     border: 1px solid #000;
     border-radius: 6px;
     opacity: .7;
-    transition-duration: .3s;
+    transition-duration: .7s;
     vertical-align: middle;
 }
-
+    
 .activated-cat
 {
     position: absolute;
@@ -84,8 +84,6 @@ input[name='modal-image']
     height: 100%;
     top: 0;
     left: 0;
-    /* display: none;
-    opacity: 0; */
     visibility: hidden;
 }
 
@@ -96,12 +94,16 @@ input[name='modal-image']
     text-align: center;
     margin: 27% 0;
     color: #fff;
-    /* z-index: 5; */
 }
 
-.info-about-cat
+.modal-label
 {
-    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }
 
 .photo-switch
@@ -126,39 +128,68 @@ input[name='modal-image']
 
 input[id='image-1']:checked ~ .carousel
 {
-    left: 40%;
+    left: calc(50% - 150px - 0*240px);
 }
 
 input[id='image-2']:checked ~ .carousel
 {
-    left: 25%;
+    left: calc(50% - 150px - 1*240px);
 }
 
 input[id='image-3']:checked ~ .carousel
 {
-    left: 10%;
+    left: calc(50% - 150px - 2*240px);
 }
 
 input[id='image-4']:checked ~ .carousel
 {
-    left: -5%;
+    left: calc(50% - 150px - 3*240px);
 }
 
 input[id='image-5']:checked ~ .carousel
 {
-    left: -20%;
+    left: calc(50% - 150px - 4*240px);
 }
 
-input[id='image-1']:checked ~ .carousel label[for='image-1'] > .carousel-image,
-input[id='image-2']:checked ~ .carousel label[for='image-2'] > .carousel-image,
-input[id='image-3']:checked ~ .carousel label[for='image-3'] > .carousel-image,
-input[id='image-4']:checked ~ .carousel label[for='image-4'] > .carousel-image,
-input[id='image-5']:checked ~ .carousel label[for='image-5'] > .carousel-image
+input[id='image-6']:checked ~ .carousel
+{
+    left: calc(50% - 150px - 5*240px);
+}
+
+input[id='image-7']:checked ~ .carousel
+{
+    left: calc(50% - 150px - 6*240px);
+}
+
+input[id='image-8']:checked ~ .carousel
+{
+    left: calc(50% - 150px - 7*240px);
+}
+
+input[id='image-9']:checked ~ .carousel
+{
+    left: calc(50% - 150px - 8*240px);
+}
+
+input[id='image-10']:checked ~ .carousel
+{
+    left: calc(50% - 150px - 9*240px);
+}
+
+input[id='image-1']:checked ~ .carousel label[for='image-1'] .carousel-image,
+input[id='image-2']:checked ~ .carousel label[for='image-2'] .carousel-image,
+input[id='image-3']:checked ~ .carousel label[for='image-3'] .carousel-image,
+input[id='image-4']:checked ~ .carousel label[for='image-4'] .carousel-image,
+input[id='image-5']:checked ~ .carousel label[for='image-5'] .carousel-image,
+input[id='image-6']:checked ~ .carousel label[for='image-6'] .carousel-image,
+input[id='image-7']:checked ~ .carousel label[for='image-7'] .carousel-image,
+input[id='image-8']:checked ~ .carousel label[for='image-8'] .carousel-image,
+input[id='image-9']:checked ~ .carousel label[for='image-9'] .carousel-image,
+input[id='image-10']:checked ~ .carousel label[for='image-10'] .carousel-image
 {
     height: 190px;
     width: 250px;
     opacity: 1;
-    transition-duration: .3s;
     box-shadow: 0 0 10px #00000080;
 }
 
@@ -166,7 +197,12 @@ input[id='image-1']:checked ~ .photo-switch label[for='image-1'],
 input[id='image-2']:checked ~ .photo-switch label[for='image-2'],
 input[id='image-3']:checked ~ .photo-switch label[for='image-3'],
 input[id='image-4']:checked ~ .photo-switch label[for='image-4'],
-input[id='image-5']:checked ~ .photo-switch label[for='image-5']
+input[id='image-5']:checked ~ .photo-switch label[for='image-5'],
+input[id='image-6']:checked ~ .photo-switch label[for='image-6'],
+input[id='image-7']:checked ~ .photo-switch label[for='image-7'],
+input[id='image-8']:checked ~ .photo-switch label[for='image-8'],
+input[id='image-9']:checked ~ .photo-switch label[for='image-9'],
+input[id='image-10']:checked ~ .photo-switch label[for='image-10']
 {
     background-color: #000;
 }
@@ -175,7 +211,12 @@ input[id='image-1']:checked ~ .carousel label[for$='1']:hover .carousel-image,
 input[id='image-2']:checked ~ .carousel label[for$='2']:hover .carousel-image,
 input[id='image-3']:checked ~ .carousel label[for$='3']:hover .carousel-image,
 input[id='image-4']:checked ~ .carousel label[for$='4']:hover .carousel-image,
-input[id='image-5']:checked ~ .carousel label[for$='5']:hover .carousel-image
+input[id='image-5']:checked ~ .carousel label[for$='5']:hover .carousel-image,
+input[id='image-6']:checked ~ .carousel label[for$='6']:hover .carousel-image,
+input[id='image-7']:checked ~ .carousel label[for$='7']:hover .carousel-image,
+input[id='image-8']:checked ~ .carousel label[for$='8']:hover .carousel-image,
+input[id='image-9']:checked ~ .carousel label[for$='9']:hover .carousel-image,
+input[id='image-10']:checked ~ .carousel label[for$='10']:hover .carousel-image
 {
     filter: brightness(50%);
 }
@@ -184,91 +225,93 @@ input[id='image-1']:checked ~ .carousel label[for$='1']:hover + .activated-cat,
 input[id='image-2']:checked ~ .carousel label[for$='2']:hover + .activated-cat,
 input[id='image-3']:checked ~ .carousel label[for$='3']:hover + .activated-cat,
 input[id='image-4']:checked ~ .carousel label[for$='4']:hover + .activated-cat,
-input[id='image-5']:checked ~ .carousel label[for$='5']:hover + .activated-cat
+input[id='image-5']:checked ~ .carousel label[for$='5']:hover + .activated-cat,
+input[id='image-6']:checked ~ .carousel label[for$='6']:hover + .activated-cat,
+input[id='image-7']:checked ~ .carousel label[for$='7']:hover + .activated-cat,
+input[id='image-8']:checked ~ .carousel label[for$='8']:hover + .activated-cat,
+input[id='image-9']:checked ~ .carousel label[for$='9']:hover + .activated-cat,
+input[id='image-10']:checked ~ .carousel label[for$='10']:hover + .activated-cat
 {
     visibility: visible;
-}
-
-input[id='image-1']:checked ~ .carousel label[for$='1'] ~ .activated-cat:hover,
-input[id='image-2']:checked ~ .carousel label[for$='2'] ~ .activated-cat:hover,
-input[id='image-3']:checked ~ .carousel label[for$='3'] ~ .activated-cat:hover,
-input[id='image-4']:checked ~ .carousel label[for$='4'] ~ .activated-cat:hover,
-input[id='image-5']:checked ~ .carousel label[for$='5'] ~ .activated-cat:hover
-{
-    filter: brightness(50%);
-}
-
-.modal-window-label
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.modal-window
-{
-    display: none;
 }
 
 .modal-window
 {
     display: none;
     pointer-events: none;
-}
-
-input[id='modal-window-1']:checked ~ .main-content .carousel .modal-window-1
-{
-    display: block;
-    pointer-events: all;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .95);
-    z-index: 100;
+    background-color: #000000e6;
+}
+
+input[id='modal-input-1']:checked ~ .modal-windows .modal-window-1,
+input[id='modal-input-2']:checked ~ .modal-windows .modal-window-2,
+input[id='modal-input-3']:checked ~ .modal-windows .modal-window-3,
+input[id='modal-input-4']:checked ~ .modal-windows .modal-window-4,
+input[id='modal-input-5']:checked ~ .modal-windows .modal-window-5,
+input[id='modal-input-6']:checked ~ .modal-windows .modal-window-6,
+input[id='modal-input-7']:checked ~ .modal-windows .modal-window-7,
+input[id='modal-input-8']:checked ~ .modal-windows .modal-window-8,
+input[id='modal-input-9']:checked ~ .modal-windows .modal-window-9,
+input[id='modal-input-10']:checked ~ .modal-windows .modal-window-10
+{
+    display: block;
+    pointer-events: all;
+}
+
+.exit-block
+{
+    text-align: right;
+    width: 100%;
+}
+
+.close
+{
+    font-size: 40px;
+    color: #fff;
 }
 
 .left-panel
 {
     display: inline-block;
-    width: 50%;
-    height: 50%;
+    margin: 100px 0 0 150px;
+    width: 40%;
+}
+
+.left-panel > img
+{
+    width: 80%;
 }
 
 .right-panel
 {
+    width: 30%;
     display: inline-block;
-    width: 50%;
-    height: 50%;
     text-align: left;
+    color: #fff;
 }
 
-.describe_of_cat
+.name-of-cat
 {
-    color: rgb(128, 128, 128);
+    font-size: 40px;
 }
 
-.info_about_cat span
+.describe-of-cat span
 {
-    color: rgb(0, 0, 0);
+    color: #adff2f;
     font-weight: bold;
-}
-
-.additional_info
-{
-    color: rgb(128, 128, 128);
-    margin-bottom: 50px;
 }
 
 .footer-content
 {
-    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
     border-top: 1px solid #d3d3d3;
-    position: relative;
-    top: 320px;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
