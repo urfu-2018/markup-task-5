@@ -1,9 +1,184 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <title>Задача «Мурмаркет»</title>
-</head>
-<body>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Задача «Мурмаркет»</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <header>Мурмаркет</header>
+        <div class="carusel">
+            <input type="radio" id="cat-1" name="position-slide">
+            <input type="checkbox" id="information-1" name="current-information">
+            <input type="radio" id="cat-2" name="position-slide">
+            <input type="checkbox" id="information-2" name="current-information">
+            <input type="radio" id="cat-3" name="position-slide" checked>
+            <input type="checkbox" id="information-3" name="current-information">
+            <input type="radio" id="cat-4" name="position-slide">
+            <input type="checkbox" id="information-4" name="current-information">
+            <input type="radio" id="cat-5" name="position-slide">
+            <input type="checkbox" id="information-5" name="current-information">
+            <div class="slide">
+                <div class="photo">
+                    <label for="cat-1" class="img-label">
+                        <img src="./pictures/44.jpg" alt="Борис">
+                    </label>
+                    <div class="information">
+                        <div class="name">Борис</div>
+                        <label for="information-1" class="modal-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="photo">
+                    <label for="cat-2" class="img-label">
+                        <img src="./pictures/22.jpg" alt="Айша">
+                    </label>
+                    <div class="information">
+                        <div class="name">Айша</div>
+                        <label for="information-2" class="modal-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="photo">
+                    <label for="cat-3" class="img-label">
+                        <img src="./pictures/66.jpg" alt="Марфа">
+                    </label>
+                    <div class="information">
+                        <div class="name">Марфа</div>
+                        <label for="information-3" class="modal-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="photo">
+                    <label for="cat-4" class="img-label">
+                        <img src="./pictures/55.jpg" alt="Стеша">
+                    </label>
+                    <div class="information">
+                        <div class="name">Стеша</div>
+                        <label for="information-4" class="modal-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="photo">
+                    <label for="cat-5" class="img-label">
+                        <img src="./pictures/111.jpg" alt="Шелдон">
+                    </label>
+                    <div class="information">
+                        <div class="name">Шелдон</div>
+                        <label for="information-5" class="modal-label"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="push">
+                <label for="cat-1"></label>
+                <label for="cat-2"></label>
+                <label for="cat-3"></label>
+                <label for="cat-4"></label>
+                <label for="cat-5"></label>
+            </div>
+            <div class="new-window">
+                <div class="window window-cat-1">
+                    <div class="wrapper-information">
+                        <div class="window-photo">
+                            <img src="./pictures/44.jpg" alt="Борис">    
+                        </div>
+                        <div class="window-text">
+                            <label for="information-1" class="close">X</label>
+                            <p class="nickname">Борис</p>
+                            <p class="age">Возраст: 5 лет</p>
+                            <p class="breed">Порода: шотландская вислоухая</p>
+                            <p class="description">
+                                Не требует много внимания, 
+                                желательно в дом без других домашних животных
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="window window-cat-2">
+                    <div class="wrapper-information">
+                        <div class="window-photo">
+                            <img src="./pictures/22.jpg" alt="Айша">    
+                        </div>
+                        <div class="window-text">
+                            <label for="information-2" class="close">X</label>
+                            <p class="nickname">Айша</p>
+                            <p class="age">Возраст: 3 года</p>
+                            <p class="breed">Порода: шотландская</p>
+                            <p class="description">Добрая и ласковая. Можно в дом с другими животными.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="window window-cat-3">
+                        <div class="wrapper-information">
+                                <div class="window-photo">
+                                    <img src="./pictures/66.jpg" alt="Марфа">    
+                                </div>
+                                <div class="window-text">
+                                    <label for="information-3" class="close">X</label>
+                                    <p class="nickname">Марфа</p>
+                                    <p class="age">Возраст: 2 года</p>
+                                    <p class="breed">Порода: персидская</p>
+                                    <p class="description">Ласковая, требуется особый уход за шерстью.</p>
+                                </div>
+                            </div>
+                </div>
+                <div class="window window-cat-4">
+                    <div class="wrapper-information">
+                        <div class="window-photo">
+                                <img src="./pictures/66.jpg" alt="Стеша">    
+                        </div>
+                        <div class="window-text">
+                            <label for="information-4" class="close">X</label>
+                            <p class="nickname">Стеша</p>
+                            <p class="age">Возраст: 2 года</p>
+                            <p class="breed">Порода: метис</p>
+                            <p class="description">
+                                Кошка с непростым характером, но очень игривая и активная. 
+                                Никогда не даст в обиды не себя ни кого-то из домочадцев.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="window window-cat-5">
+                    <div class="wrapper-information">
+                        <div class="window-photo">
+                            <img src="./pictures/111.jpg" alt="Шелдон">    
+                        </div>
+                        <div class="window-text">
+                            <label for="information-5" class="close">X</label>
+                            <p class="nickname">Шелдон</p>
+                            <p class="age">Возраст: 2 месяца</p>
+                            <p class="breed">Порода: британская</p>
+                            <p class="description">
+                                Смышленный не по годам малыш, 
+                                будет рад жить в большой семье
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="contacts">
+                <ul>
+                    <li>Напишите нам</li>
+                    <li>
+                        <img src="./pictures/email.png" alt="email" width="18" height="18">
+                        <a href="#">cats@babuli.com</a>
+                    </li>
+                    <li>
+                        <img src="./pictures/email.png" alt="email" width="18" height="18">
+                        <a href="#">vnuchek@babuli.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="company">
+                © 2018 ООО &#171;<a href="#">Сумасшедшая бабулька</a>&#187;
+            </div>
+        </div>
+    </body>
 </html>

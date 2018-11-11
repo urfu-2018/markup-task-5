@@ -1,0 +1,316 @@
+body
+{
+    margin: 0;
+}
+
+header
+{
+    text-align: center;
+    font-size: 32px;
+    font-family: PT SansNarrow, sans-serif;
+    padding: 10px;
+    box-shadow: 1px 3px 5px #666;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 5;
+}
+
+header::first-letter
+{
+    color: red;
+}
+
+html,
+body
+{
+    height: 100%;
+}
+
+.footer
+{
+    font-size: 16px;
+    position: fixed;
+    background: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 5;
+}
+
+.contacts
+{
+    width: 75%;
+    display: inline-block;
+}
+
+.company
+{
+    display: inline-block;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+ul
+{
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+input[name='position-slide'],
+input[name='current-information']
+{
+    display: none;
+}
+
+.carusel
+{
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slide
+{
+    display: inline-block;
+    padding-top: 10%;
+    position: relative;
+    box-sizing: border-box;
+    width: 33%;
+    height: 433px;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    transition: left .5s ease-out;
+}
+
+.photo
+{
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.img-label
+{
+    display: block;
+}
+
+.photo img
+{
+    display: block;
+    box-sizing: border-box;
+    margin: auto;
+    width: 80%;
+    border: 2px solid grey;
+    transition: width .5s;
+    opacity: .7;
+}
+
+input[id='cat-1']:checked ~ .slide
+{
+    left: 33%;
+}
+
+input[id='cat-2']:checked ~ .slide
+{
+    left: 0;
+}
+
+input[id='cat-3']:checked ~ .slide
+{
+    left: -33%;
+}
+
+input[id='cat-4']:checked ~ .slide
+{
+    left: -66%;
+}
+
+input[id='cat-5']:checked ~ .slide
+{
+    left: -99%;
+}
+
+.information
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity .8s;
+}
+
+.name
+{
+    margin-top: 25%;
+    width: 100%;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+input[id='cat-1']:checked ~ .slide .img-label[for='cat-1'] img,
+input[id='cat-2']:checked ~ .slide .img-label[for='cat-2'] img,
+input[id='cat-3']:checked ~ .slide .img-label[for='cat-3'] img,
+input[id='cat-4']:checked ~ .slide .img-label[for='cat-4'] img,
+input[id='cat-5']:checked ~ .slide .img-label[for='cat-5'] img
+{
+    width: 100%;
+    opacity: 1;
+}
+
+input[id='cat-1']:checked ~ .slide .img-label[for='cat-1'] ~ .information,
+input[id='cat-2']:checked ~ .slide .img-label[for='cat-2'] ~ .information,
+input[id='cat-3']:checked ~ .slide .img-label[for='cat-3'] ~ .information,
+input[id='cat-4']:checked ~ .slide .img-label[for='cat-4'] ~ .information,
+input[id='cat-5']:checked ~ .slide .img-label[for='cat-5'] ~ .information
+{
+    display: block;
+}
+
+input[id='cat-1']:checked ~ .slide .img-label[for='cat-1'] ~ .information:hover,
+input[id='cat-2']:checked ~ .slide .img-label[for='cat-2'] ~ .information:hover,
+input[id='cat-3']:checked ~ .slide .img-label[for='cat-3'] ~ .information:hover,
+input[id='cat-4']:checked ~ .slide .img-label[for='cat-4'] ~ .information:hover,
+input[id='cat-5']:checked ~ .slide .img-label[for='cat-5'] ~ .information:hover
+{
+    opacity: 1;
+    background: rgba(0, 0, 0, .9);
+}
+
+input[id='cat-1']:checked ~ .push label[for='cat-1'],
+input[id='cat-2']:checked ~ .push label[for='cat-2'],
+input[id='cat-3']:checked ~ .push label[for='cat-3'],
+input[id='cat-4']:checked ~ .push label[for='cat-4'],
+input[id='cat-5']:checked ~ .push label[for='cat-5']
+{
+    background: red;
+}
+
+.modal-label
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.window
+{
+    display: none;
+    background: rgba(0, 0, 0, .9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    white-space: normal;
+
+}
+
+input[id='information-1']:checked ~ .new-window .window-cat-1,
+input[id='information-2']:checked ~ .new-window .window-cat-2,
+input[id='information-3']:checked ~ .new-window .window-cat-3,
+input[id='information-4']:checked ~ .new-window .window-cat-4,
+input[id='information-5']:checked ~ .new-window .window-cat-5
+{
+    display: block;
+}
+
+.wrapper-information
+{
+    display: inline-block;
+    margin-top: 8%;
+    margin-left: 10%;
+    width: 80%;
+    height: 58%;
+    position: absolute;
+}
+
+.window-photo
+{
+    width: 50%;
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.window-photo img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.window-text
+{
+    width: 45%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.nickname
+{
+    margin-top: 15%;
+    margin-bottom: 0;
+}
+
+.age,
+.breed
+{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.description
+{
+    margin-top: 2%;
+}
+
+.push
+{
+    display: block;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.close
+{
+    float: right;
+}
+
+.push label
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    background: #999;
+    border-radius: 100%;
+    cursor: pointer;
+}
