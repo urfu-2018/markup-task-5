@@ -37,6 +37,8 @@ html
 
 .footer
 {
+    background: white;
+    z-index: 5;
     font-family: Arial, serif;
     font-size: 14px;
 
@@ -49,6 +51,7 @@ html
 .footer-table
 {
     width: 100%;
+    padding: 0 25px;
 }
 
 .footer a
@@ -253,7 +256,7 @@ input:checked[id='radio-5'] ~ .carousel-main label[for='more-5'].overlay
 {
     display: none;
     position: absolute;
-    top: 46px;
+    top: 0;
     bottom: 81px;
     right: 0;
     left: 0;
@@ -271,7 +274,7 @@ input[type='checkbox']:checked ~ .more-bg
 .close
 {
     position: absolute;
-    top: 46px;
+    top: 0;
     right: 0;
     display: none;
 }
