@@ -3,7 +3,123 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <div class="ya-ya">Мурмаркет</div>
+    </header>
+        <input id="slide_1" type="radio" name="switch" value="slide_1">
+        <input id="slide_2" type="radio" name="switch" value="slide_2">
+        <input id="slide_3" type="radio" name="switch" value="slide_3" checked>
+        <input id="slide_4" type="radio" name="switch" value="slide_4">
+        <input id="slide_5" type="radio" name="switch" value="slide_5">
+
+    <section class="carousel">
+        <div class="gallery">
+            <div class="slide cat-1">
+                <label for="slide_1">
+                    <img class="cat-card" src="cats/американский-керл.jpg" alt="Амеркинакский керл">
+                    <a class="cat-name popup-link" href="#popup-1">Жулик</a>
+                </label> 
+            </div>
+            <div class="slide cat-2">
+                <label for="slide_2">
+                    <img class="cat-card" src="cats/бенгал.jpg" alt="Бенгал">
+                    <a class="cat-name popup-link" href="#popup-2">Шарлотта</a>
+                </label>
+            </div>
+            <div class="slide cat-3">
+                <label for="slide_3">
+                    <img class="cat-card" src="cats/Бурмилла.jpg" alt="Бурмилла">
+                    <a class="cat-name popup-link" href="#popup-3">Ума</a>
+                </label>
+            </div>
+            <div class="slide cat-4">
+                <label for="slide_4">
+                    <img class="cat-card" src="cats/као-мани.jpg" alt="Као мани">
+                    <a class="cat-name popup-link" href="#popup-4">Пупа и Лупа</a>
+                </label>
+            </div>
+            <div class="slide cat-5">
+                <label for="slide_5">
+                    <img class="cat-card" src="cats/мейн-кун.jpg" alt="Мэйн кун">
+                    <a class="cat-name popup-link" href="#popup-5">Дон Винни Ля Хуаанито Котталес</a>
+                </label>
+            </div>
+        </div>
+    </section>
+
+        <div id="popup-1" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <img src="cats/американский-керл.jpg" class="cat-photo" alt="Котик Американский керл">
+                <div class="popup-content">
+                    <h1>Жулик</h1>
+                    <p>Возраст: 1 год</p>
+                    <p>Веселый, игривый и хитрый!</p>
+                    <p>Жулик раскрасит ваши вечера весело бегая по квартире или мило мурлыкая у вас 
+                    под боком. Любит рисовую кашу и вискас</p>
+                </div>
+            </div>
+        </div>
+        <div id="popup-2" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <img src="cats/бенгал.jpg" class="cat-photo" alt="Киска бенгал">
+                <div class="popup-content">
+                    <h1>Шарлотта</h1>
+                    <p>Возраст: 3 год</p>
+                    <p>Очень требовательная красотка.</p>
+                    <p>Жить ради нее, вот что нужно, чтобы с ней поладить. Она должна чувствовать ваше
+                    внимание к своей персоне постоянно. Очень ревнива.</p>
+                </div>
+            </div>
+        </div>
+        <div id="popup-3" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <img src="cats/Бурмилла.jpg" class="cat-photo" alt="Котик бурмилла">
+                <div class="popup-content">
+                    <h1>Ума</h1>
+                    <p>Возраст: 1 год</p>
+                    <p>Любитель поиграть в прятки и плотно поесть</p>
+                    <p>Ума поддержит в трудную минуту и будет веселить вас всегда, когда вам станет
+                    грустно. Главное давайте ему выспаться и играйте, когда он сильно этого хочет!</p>
+                </div>
+            </div>
+        </div>
+        <div id="popup-4" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <img src="cats/као-мани.jpg" class="cat-photo" alt="Котики као-мани">
+                <div class="popup-content">
+                    <h1>Пупа и Лупа</h1>
+                    <p>Возраст: Полгода и год</p>
+                    <p>Два милых брата. Идут в комплекте!</p>
+                    <p>Эти два брата не могут друг без друга. Никак. Вообще! спать - только вместе. 
+                    Играть - только вместе! Они от разных кошек, но сошлись как братья. 
+                    Лупе пол года, а Пупе полтора.</p>
+                </div>
+            </div>
+        </div>
+        <div id="popup-5" class="overlay">
+            <div class="popup">
+                <a class="close" href="#">&times;</a>
+                <img src="cats/мейн-кун.jpg" class="cat-photo" alt="Котик мейн кун">
+                <div class="popup-content">
+                    <h1>Дон Винни Ля Хуаанито Котталес</h1>
+                    <p>Возраст: 4 года</p>
+                    <p>Воспитан, элегантен, превосходен.</p>
+                    <p>Этот большой красавчик от итальянского борона Хуана поразит вас своей 
+                    серьезностью и тактичностью!</p>
+                </div>
+            </div>
+        </div>
+
+    <footer>
+        <div class="contact-phone">Телефон для связи: <a href="tel:+79002207777">+7-900-220-77-77</a></div>
+    </footer>
 </body>
 </html>
