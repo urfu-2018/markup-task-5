@@ -167,7 +167,7 @@ input:checked[id='radio-5'] ~ .carousel-main .carousel-block
     left: -2483px;
 }
 
-.carousel-block .img-container
+.carousel-block .carousel-item
 {
     display: inline-block;
     margin: 0 20px;
