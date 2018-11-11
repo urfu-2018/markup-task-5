@@ -1,6 +1,6 @@
 .title-text::first-letter
 {
-    color: #ff0000; 
+    color: rgba(255, 255, 0, 0);
 }
 
 .title-text
@@ -9,21 +9,24 @@
     margin: 0;
     text-align: center;
 }
+
 .top-bar
 {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 10px 0;
-    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, .16);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
 }
 
 /*слайдер*/
+
 body
 {
     overflow-x: hidden;
-    background-color: #edeef0;
+    background-color: rgb(237, 238, 240);
     margin: 0;
     font-family: 'PT Sans Narrow', sans-serif;
 }
+
 .slider-container
 {
     position: relative;
@@ -32,76 +35,79 @@ body
 }
 
 .slide img
-{   
+{
     height: 100%;
 }
+
 .slide
 {
     position: absolute;
     top: 25px;
     left: calc(50% + 190px);
     display: inline-block;
-    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, .16);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
     width: 320px;
     height: 250px;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     transition: height 1s;
 }
 
 .slide-1
 {
-    transform: translateX(0)
+    transform: translateX(0);
 }
 
 .slide-2
 {
-    transform: translateX(350px)
+    transform: translateX(350px);
 }
 
 .slide-3
 {
-    transform: translateX(700px)
+    transform: translateX(700px);
 }
 
 .slide-4
 {
-    transform: translateX(1050px)
+    transform: translateX(1050px);
 }
 
 .slide-5
 {
-    transform: translateX(1400px)
+    transform: translateX(1400px);
 }
 
 .slide-6
 {
-    transform: translateX(1750px)
+    transform: translateX(1750px);
 }
 
 .slide-7
 {
-    transform: translateX(2100px)
+    transform: translateX(2100px);
 }
 
 .slide-8
 {
-    transform: translateX(2450px)
+    transform: translateX(2450px);
 }
 
 .slide-9
 {
-    transform: translateX(2800px)
+    transform: translateX(2800px);
 }
 
 .slide-10
 {
-    transform: translateX(3150px)
+    transform: translateX(3150px);
 }
 
-#cat-1:checked  ~ .slider-container
+/* stylelint-disable selector-max-id  */
+
+#cat-1:checked ~ .slider-container
 {
     transform: translateX(-350px);
 }
@@ -111,7 +117,7 @@ body
     transform: translateX(-700px);
 }
 
-#cat-3:checked ~  .slider-container
+#cat-3:checked ~ .slider-container
 {
     transform: translateX(-1050px);
 }
@@ -181,17 +187,17 @@ input
 .circle
 {
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 4px solid rgb(255, 255, 255);
     box-sizing: border-box;
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     display: inline-block;
-    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.161);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
 }
 
 #cat-1:checked ~ .circle-container .circle:nth-child(1),
-#cat-2:checked ~ .circle-container .circle:nth-child(2), 
+#cat-2:checked ~ .circle-container .circle:nth-child(2),
 #cat-3:checked ~ .circle-container .circle:nth-child(3),
 #cat-4:checked ~ .circle-container .circle:nth-child(4),
 #cat-5:checked ~ .circle-container .circle:nth-child(5),
@@ -201,14 +207,15 @@ input
 #cat-9:checked ~ .circle-container .circle:nth-child(9),
 #cat-10:checked ~ .circle-container .circle:nth-child(10)
 {
-    background-color: #2196f3;
+    background-color: rgb(33, 150, 243);
 }
 
 /*Имя кота*/
+
 .circle:hover
 {
-    background-color: #eee;
-    border-color: #eee;
+    background-color: rgb(238, 238, 238);
+    border-color: rgb(238, 238, 238);
 }
 
 .cat-name-wrap
@@ -239,5 +246,77 @@ input
 {
     vertical-align: middle;
     font-size: 28px;
-    color: #fff;;
+    color: rgb(255, 255, 255);
+}
+
+.popup
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    text-align: center;
+}
+
+#popup-1:checked ~ .popup-1,
+#popup-2:checked ~ .popup-2,
+#popup-3:checked ~ .popup-3,
+#popup-4:checked ~ .popup-4,
+#popup-5:checked ~ .popup-5,
+#popup-6:checked ~ .popup-6,
+#popup-7:checked ~ .popup-7,
+#popup-8:checked ~ .popup-8,
+#popup-9:checked ~ .popup-9,
+#popup-10:checked ~ .popup-10
+{
+    display: block;
+}
+
+.cat-container
+{
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
+    width: 450px;
+    height: 400px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.cat-container img
+{
+    height: 100%;
+}
+
+.popup
+{
+    line-height: 100vh;
+}
+
+.cat-description
+{
+    line-height: initial;
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding-left: 25px;
+}
+
+.close  
+{
+    display: block;
+    text-align: right;
+    font-size: 25px;
+}
+
+.description-title
+{
+    font-size: 28px;
+    margin: 0;
 }
