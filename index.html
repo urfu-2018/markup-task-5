@@ -7,11 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>Мурмаркет</h1>
-</header>
 
-<div class="header-padding"></div>
+<div class="header-wrapper">
+    <header class="main-header">
+        <h1>Мурмаркет</h1>
+    </header>
+</div>
 
 <section class="carousel-wrapper">
 
@@ -29,7 +30,7 @@
     <section class="carousel">
         <article class="carousel-item">
 
-            <article class="background"><h1>Борис</h1></article>
+            <article class="cat-name"><h1>Борис</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat1"><img src="images/grumpy-cat.jpg" alt="Cat"></label>
 
@@ -37,7 +38,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Анабелла</h1></article>
+            <article class="cat-name"><h1>Анабелла</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat2"><img src="images/odd-eyed-cat.jpg" alt="Cat"></label>
 
@@ -45,7 +46,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Пабло Диего Хозе Франциско де Паула Хуан Непомукено Криспин
+            <article class="cat-name"><h1>Пабло Диего Хозе Франциско де Паула Хуан Непомукено Криспин
                 Криспиано де ла Сантисима Тринидад Руиз и Пикассо</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat3"><img src="images/pablo-picasso.jpeg" alt="Cat"></label>
@@ -54,7 +55,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Обжорка</h1></article>
+            <article class="cat-name"><h1>Обжорка</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat4"><img src="images/fat-cat.jpg" alt="Cat"></label>
 
@@ -62,7 +63,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Мурзик</h1></article>
+            <article class="cat-name"><h1>Мурзик</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat5"><img src="images/purring-cat.jpg" alt="Cat"></label>
 
@@ -70,7 +71,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Сэм</h1></article>
+            <article class="cat-name"><h1>Сэм</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat6"><img src="images/surprised-cat.jpeg" alt="Cat"></label>
 
@@ -78,7 +79,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Рыжик</h1></article>
+            <article class="cat-name"><h1>Рыжик</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat7"><img src="images/red-cat.jpg" alt="Cat"></label>
 
@@ -86,7 +87,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Барсик</h1></article>
+            <article class="cat-name"><h1>Барсик</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat8"><img src="images/barsik.jpg" alt="Cat"></label>
 
@@ -94,7 +95,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Пушистик</h1></article>
+            <article class="cat-name"><h1>Пушистик</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat9"><img src="images/white-cat.jpg" alt="Cat"></label>
 
@@ -102,7 +103,7 @@
 
         <article class="carousel-item">
 
-            <article class="background"><h1>Сильвестр</h1></article>
+            <article class="cat-name"><h1>Сильвестр</h1></article>
             <a class="modal-dialog-link" href="#modal-dialog"></a>
             <label for="cat10"><img src="images/licked-cat.jpg" alt="Cat"></label>
 
@@ -110,150 +111,133 @@
     </section>
 
     <nav class="carousel-labels">
-        <aside class="label">
-            <label for="cat1"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat2"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat3"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat4"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat5"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat6"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat7"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat8"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat9"></label>
-        </aside>
-        <aside class="label">
-            <label for="cat10"></label>
-        </aside>
+        <label for="cat1" class="label"></label>
+        <label for="cat2" class="label"></label>
+        <label for="cat3" class="label"></label>
+        <label for="cat4" class="label"></label>
+        <label for="cat5" class="label"></label>
+        <label for="cat6" class="label"></label>
+        <label for="cat7" class="label"></label>
+        <label for="cat8" class="label"></label>
+        <label for="cat9" class="label"></label>
+        <label for="cat10" class="label"></label>
     </nav>
 
     <section class="modal-dialog" id="modal-dialog">
         <article class="cat-item">
             <img src="images/grumpy-cat.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Борис</h1></article>
-            <article class="description">
-                Милый, ласковый, общительный<br>
-                Возраст - 4 года<br>
-                Любит смотреть чужой код<br>
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Борис</h1></header>
+            <ul class="description">
+                <li>Милый, ласковый, общительный</li>
+                <li>Возраст - 4 года</li>
+                <li>Любит смотреть чужой код</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/odd-eyed-cat.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Анабелла</h1></article>
-            <article class="description">
-                Возраст ~ 2 года<br>
-                Любит ловить мышей<br>
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Анабелла</h1></header>
+            <ul class="description">
+                <li>Возраст ~ 2 года</li>
+                <li>Любит ловить мышей</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/pablo-picasso.jpeg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Пабло Диего Хозе Франциско де Паула Хуан Непомукено Криспин
-                Криспиано де ла Сантисима Тринидад Руиз и Пикассо</h1></article>
-            <article class="description">
-                Общительный, умный кот<br>
-                Любит играть с веревочкой<br>
-                Возраст 5 лет<br>
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Пабло Диего Хозе Франциско де Паула Хуан Непомукено Криспин
+                Криспиано де ла Сантисима Тринидад Руиз и Пикассо</h1></header>
+            <ul class="description">
+                <li>Общительный, умный кот</li>
+                <li>Любит играть с веревочкой</li>
+                <li>Возраст 5 лет</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/fat-cat.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Обжорка</h1></article>
-            <article class="description">
-                Возраст - 7 лет<br>
-                Не против немного перекусить<br>
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Обжорка</h1></header>
+            <ul class="description">
+                <li>Возраст - 7 лет</li>
+                <li>Не против немного перекусить</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/purring-cat.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Мурзик</h1></article>
-            <article class="description">
-                Очень ласковый, общительный кот<br>
-                Любит, когда его гладят<br>
-                Возраст ~ 3 года<br>
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Мурзик</h1></header>
+            <ul class="description">
+                <li>Очень ласковый, общительный кот</li>
+                <li>Любит, когда его гладят</li>
+                <li>Возраст ~ 3 года</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/surprised-cat.jpeg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Сэм</h1></article>
-            <article class="description">
-                (=^ ◡ ^=)
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Сэм</h1></header>
+            <ul class="description">
+                <li>(=^ ◡ ^=)</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/red-cat.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Рыжик</h1></article>
-            <article class="description">
-                Просто рыжий кот<br>
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Рыжик</h1></header>
+            <ul class="description">
+                <li>Просто рыжий кот</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/barsik.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Барсик</h1></article>
-            <article class="description">
-
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Барсик</h1></header>
+            <ul class="description">
+                <li>Серый пушистый кот</li>
+                <li>Возраст - 5 лет</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/white-cat.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Пушистик</h1></article>
-            <article class="description">
-
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Пушистик</h1></header>
+            <ul class="description">
+                <li>Возраст < 1 года</li>
+            </ul>
         </article>
 
         <article class="cat-item">
             <img src="images/licked-cat.jpg" alt="Cat">
-            <nav class="close"><a href="#">X</a></nav>
-            <article class="name"><h1>Сильвестр</h1></article>
-            <article class="description">
-
-            </article>
+            <nav class="close"><a href="#"></a></nav>
+            <header class="name"><h1>Сильвестр</h1></header>
+            <ul class="description">
+                <li>Очень любит свежее молоко</li>
+                <li>Возраст - 3 года</li>
+            </ul>
         </article>
     </section>
 
 </section>
 
-<div class="footer-padding"></div>
+<div class="footer-wrapper">
 
-<footer>
-    <article class="write-us">Напишите нам:</article>
-    <article class="copyright">&copy; 2018 OOO &laquo;<a href="#">Бабушкины котятки</a>&raquo;</article>
+    <footer class="main-footer">
+        <article class="write-us">Напишите нам:</article>
+        <article class="copyright">&copy; 2018 OOO &laquo;<a href="#">Бабушкины котятки</a>&raquo;</article>
 
-    <a href="#">cats@babuli.ru</a>
-    <a href="#">vnuchek@babuli.ru</a>
-</footer>
+        <a href="#" class="mail-link">cats@babuli.ru</a>
+        <a href="#" class="mail-link">vnuchek@babuli.ru</a>
+    </footer>
 
+</div>
 </body>
 </html>
