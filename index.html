@@ -3,7 +3,147 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <header>
+        <p>Мурмаркет</p>
+    </header>
+    <main>
+        <input name="shift" class="shift first" id="shift-first" type="radio" checked>
+        <input name="shift" class="shift second" id="shift-second" type="radio">
+        <input name="shift" class="shift third" id="shift-third" type="radio">
+        <input name="shift" class="shift fourth" id="shift-fourth" type="radio">
+        <input name="shift" class="shift fifth" id="shift-fifth" type="radio">
+        <div class="carusel">
+            <label class="label first" for="shift-first">
+                <a href="#long-description-first">Чарли</a>
+                <img class="photo first" src="img/1.jpg" alt="Кот">
+            </label>
+            <label class="label second" for="shift-second">
+                <a href="#long-description-second">Матвей</a>
+                <img class="photo second" src="img/2.jpg" alt="Кот">
+            </label>
+            <label class="label third" for="shift-third">
+                <a href="#long-description-third">Бруно</a>
+                <img class="photo third" src="img/3.jpg" alt="Кот">
+            </label>
+            <label class="label fourth" for="shift-fourth">
+                <a href="#long-description-fourth">Платон</a>
+                <img class="photo fourth" src="img/4.jpeg" alt="Кот">
+            </label>
+            <label class="label fifth" for="shift-fifth">
+                <a href="#long-description-fifth">Фурия</a>
+                <img class="photo fifth" src="img/5.jpg" alt="Кот">
+            </label>
+        </div>
+    </main>
+    <div id="long-description-first" class="long-description first">
+        <a class="close" href="#"><img src="img/close.png" alt="close"></a>
+        <div class="description">
+            <img src="img/1.jpg" alt="Кот">
+            <ul>
+                <li>Чарли</li>
+                <li>Возраст: 1 год</li>
+                <li>
+                    Самостоятельный, прекрасно приспосабливается к новым условиям.
+                    Не любит, когда его берут на руки, ценит свою свободу и независимость.
+                    Прекрасно ладит с маленькими детьми и другими домашними питомцами. 
+                    Неприхотливый, спокойный, крепкий. С ним не будет никаких хлопот.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="long-description-second" class="long-description second">
+        <a class="close" href="#"><img src="img/close.png" alt="close"></a>
+        <div class="description">
+            <img src="img/2.jpg" alt="Кот">
+            <ul>
+                <li>Матвей</li>
+                <li>Возраст: 5 лет</li>
+                <li>
+                    Очень спокойный, общительный и ласковый кот. Любит тепло, ласку и игры.
+                    Сильно и быстро привязывается к хозяевам.
+                    Любит находиться в окружении людей. Уживается с детьми и другими питомцами.
+                    Любит спать вместе с хозяином.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="long-description-third" class="long-description third">
+        <a class="close" href="#"><img src="img/close.png" alt="close"></a>
+        <div class="description">
+            <img src="img/3.jpg" alt="Кот">
+            <ul>
+                <li>Бруно</li>
+                <li>Возраст: 3 года</li>
+                <li>
+                    Спокойный. 
+                    Гладить себя и проявлять нежность в свой адрес позволяет лишь если сам этого захочет. 
+                    Очень привязывается к хозяину и может страдать от одиночества.
+                    Если почувствует, что его не замечают, 
+                    то постарается сразу же привлечь к себе внимания.
+                    Очень любопытный, сообразительные и обаятельный. 
+                    С большим интересом будет исследовать разные шкафы, полки и тумбы.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="long-description-fourth" class="long-description fourth">
+        <a class="close" href="#"><img src="img/close.png" alt="close"></a>
+        <div class="description">
+            <img src="img/4.jpeg" alt="Кот">
+            <ul>
+                <li>Платон</li>
+                <li>Возраст: 4 года</li>
+                <li>
+                    Общительный, интеллигентный, умный, очень нежный и ласковый.
+                    Характер спокойный и уравновешенный. Сильно привязываются к хозяину, 
+                    отлично ладят с детьми. Прекрасно чувствует настроение своего хозяина и 
+                    подстраивается под атмосферу, царящую в доме.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="long-description-fifth" class="long-description fifth">
+        <a class="close" href="#"><img src="img/close.png" alt="close"></a>
+        <div class="description">
+            <img src="img/5.jpg" alt="Кот">
+            <ul>
+                <li>Фурия</li>
+                <li>Возраст: 2 года</li>
+                <li>
+                    По характеру независима, но послушна, не будет преследовать Вас,
+                    и требовать к себе постоянного внимания, но с лаской и теплом будет
+                    относиться ко всем членам семьи, отлично подходит для детей. 
+                    Хорошо ладит другими домашними животным. Сообразительная, любопытная и подвижная. 
+                    Очень аккуратная и грациозная кошка, практически сразу поймёт установленные правила.
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Напишите нам:</li>
+                        <li>
+                            <img class="email-icon" src="img/email.png" alt="email">
+                            <a href="#">cats@babuli.ru</a>
+                        </li>
+                        <li>
+                            <img class="email-icon" src="img/email.png" alt="email">
+                            <a href="#">vnuchek@babuli.ru</a>                            
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                    &copy; 2018 ООО &#171;<a href="#">Бабушкины котятки</a>&#187;
+                </td>
+            </tr>
+        </table>
+    </footer>
 </body>
 </html>

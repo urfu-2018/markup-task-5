@@ -1,0 +1,216 @@
+:root
+{
+    --photo-width: 360px;
+}
+
+body
+{
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header
+{
+    text-align: center;
+    font: 32px 'PT SansNarrow';
+    border-bottom: 1px solid gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: white;
+}
+
+.carusel
+{
+    position: relative;
+    width: 2000px;
+    height: 260px;
+    padding: 20px 0;
+}
+
+.shift.first:checked ~ .carusel
+{
+    left: 35%;
+}
+
+.shift.first:checked ~ .carusel .photo.first,
+.shift.second:checked ~ .carusel .photo.second,
+.shift.third:checked ~ .carusel .photo.third,
+.shift.fourth:checked ~ .carusel .photo.fourth,
+.shift.fifth:checked ~ .carusel .photo.fifth
+{
+    height: 100%;
+    opacity: 1;
+}
+
+.shift.first:checked ~ .carusel .label.first:hover > a,
+.shift.second:checked ~ .carusel .label.second:hover > a,
+.shift.third:checked ~ .carusel .label.third:hover > a,
+.shift.fourth:checked ~ .carusel .label.fourth:hover > a,
+.shift.fifth:checked ~ .carusel .label.fifth:hover > a
+{
+    display: block;
+}
+
+.shift.second:checked ~ .carusel
+{
+    left: calc(35% - var(--photo-width));
+    transition: 500ms;
+}
+
+.shift.third:checked ~ .carusel
+{
+    left: calc(35% - 2 * var(--photo-width));
+    transition: 500ms;
+}
+
+.shift.fourth:checked ~ .carusel
+{
+    left: calc(35% - 3 * var(--photo-width));
+    transition: 500ms;
+}
+
+.shift.fifth:checked ~ .carusel
+{
+    left: calc(35% - 4 * var(--photo-width));
+    transition: 500ms;
+}
+
+label
+{
+    display: inline-block;
+    position: relative;
+    margin: 0 20px;
+    height: 100%;
+}
+
+label a
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 140px;
+    text-align: center;
+    margin: 0;
+    padding-top: 120px;
+    background: rgba(0, 0, 0, .5);
+    color: white;
+    font: 32px 'PT SansNarrow';
+    text-decoration: none;
+}
+
+input
+{
+    display: none;
+}
+
+.photo
+{
+    height: 80%;
+    opacity: .7;
+    vertical-align: middle;
+}
+
+.long-description
+{
+    position: fixed;
+    width: 100%;
+    display: none;
+    padding: 10% 30%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+.long-description.first:target,
+.long-description.second:target,
+.long-description.third:target,
+.long-description.fourth:target,
+.long-description.fifth:target
+{
+    display: block;
+}
+
+.description
+{
+    width: 52%;
+    height: 50%;
+    border: 1px solid black;
+    font: 20px 'PT SansNarrow';
+    background: black;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.close
+{
+    margin-left: 50%;
+}
+
+.description img
+{
+    float: left;
+    margin-right: 10px;
+}
+
+header p::first-letter
+{
+    color: red;
+}
+
+main
+{
+    margin: 100px 0;
+}
+
+table
+{
+    width: 100%;
+}
+
+td
+{
+    vertical-align: bottom;
+}
+
+td:last-child
+{
+    text-align: right;
+}
+
+footer
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid gray;
+    font: 14px Arial;
+    padding: 20px 0;
+    background: white;
+}
+
+footer a
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+    margin: 0;
+    text-align: justify;
+
+}
+
+.email-icon
+{
+    vertical-align: middle;
+    height: 20px;
+}
