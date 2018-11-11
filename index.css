@@ -1,3 +1,10 @@
+body,
+html
+{
+    margin: 0;
+    height: 100%;
+}
+
 .title
 {
     border-bottom: solid lightgray 1px;
@@ -15,19 +22,17 @@
     color: red;
 }
 
-body,
-html
+.wrapper
 {
-    margin: 0;
-    height: 100%;
+    width: 100%;
 }
 
 .main
 {
-    position: absolute;
-    top: 46px;
-    width: 100%;
-    bottom: 80px;
+    min-height: calc(100vh - 128px);
+    padding-bottom: 81px;
+    overflow: hidden;
+    position: relative;
 }
 
 .footer
@@ -35,12 +40,15 @@ html
     font-family: Arial, serif;
     font-size: 14px;
 
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
     height: 80px;
+    margin-top: -80px;
+
     border-top: solid lightgray 1px;
+}
+
+.footer-table
+{
+    width: 100%;
 }
 
 .footer a
@@ -51,17 +59,12 @@ html
 
 .copyright
 {
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
+    float: right;
 }
 
 .contacts
 {
     color: gray;
-    position: absolute;
-    left: 10px;
-    bottom: 20px;
 }
 
 .contacts p
@@ -69,17 +72,10 @@ html
     margin-bottom: 5px;
 }
 
-.mail
-{
-    margin-left: 24px;
-}
-
 .mail:before
 {
     content: url('mail.png');
     height: 16px;
-    position: absolute;
-    left: 0;
 }
 
 input
@@ -101,6 +97,14 @@ input
     -o-transition: background .3s ease-in;
     -moz-transition: background .3s ease-in;
     -webkit-transition: background .3s ease-in;
+}
+
+.carousel
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
 }
 
 .carousel-navigation
@@ -184,12 +188,12 @@ input:checked[id='radio-5'] ~ .carousel-main .carousel-block
     -webkit-transition: height .3s ease-in;
 }
 
-input:checked[id='radio-0'] ~ .carousel-main .img-container-0 img,
-input:checked[id='radio-1'] ~ .carousel-main .img-container-1 img,
-input:checked[id='radio-2'] ~ .carousel-main .img-container-2 img,
-input:checked[id='radio-3'] ~ .carousel-main .img-container-3 img,
-input:checked[id='radio-4'] ~ .carousel-main .img-container-4 img,
-input:checked[id='radio-5'] ~ .carousel-main .img-container-5 img
+input:checked[id='radio-0'] ~ .carousel-main label[for='radio-0'] img,
+input:checked[id='radio-1'] ~ .carousel-main label[for='radio-1'] img,
+input:checked[id='radio-2'] ~ .carousel-main label[for='radio-2'] img,
+input:checked[id='radio-3'] ~ .carousel-main label[for='radio-3'] img,
+input:checked[id='radio-4'] ~ .carousel-main label[for='radio-4'] img,
+input:checked[id='radio-5'] ~ .carousel-main label[for='radio-5'] img
 {
     height: 375px;
     opacity: 1;
@@ -222,12 +226,12 @@ input:checked[id='radio-5'] ~ .carousel-main .img-container-5 img
     font-family: Arial, serif;
 }
 
-input:checked[id='radio-0'] ~ .carousel-main .img-container-0 .overlay,
-input:checked[id='radio-1'] ~ .carousel-main .img-container-1 .overlay,
-input:checked[id='radio-2'] ~ .carousel-main .img-container-2 .overlay,
-input:checked[id='radio-3'] ~ .carousel-main .img-container-3 .overlay,
-input:checked[id='radio-4'] ~ .carousel-main .img-container-4 .overlay,
-input:checked[id='radio-5'] ~ .carousel-main .img-container-5 .overlay
+input:checked[id='radio-0'] ~ .carousel-main label[for='more-0'].overlay,
+input:checked[id='radio-1'] ~ .carousel-main label[for='more-1'].overlay,
+input:checked[id='radio-2'] ~ .carousel-main label[for='more-2'].overlay,
+input:checked[id='radio-3'] ~ .carousel-main label[for='more-3'].overlay,
+input:checked[id='radio-4'] ~ .carousel-main label[for='more-4'].overlay,
+input:checked[id='radio-5'] ~ .carousel-main label[for='more-5'].overlay
 {
     display: block;
 }
@@ -245,16 +249,12 @@ input:checked[id='radio-5'] ~ .carousel-main .img-container-5 .overlay
     overflow: hidden;
 }
 
-.more
-{
-    display: none;
-}
-
 .more-bg
 {
+    display: none;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 46px;
+    bottom: 81px;
     right: 0;
     left: 0;
 
@@ -263,7 +263,7 @@ input:checked[id='radio-5'] ~ .carousel-main .img-container-5 .overlay
 
 }
 
-input[type='checkbox']:checked ~ .more
+input[type='checkbox']:checked ~ .more-bg
 {
     display: block;
 }
@@ -271,7 +271,7 @@ input[type='checkbox']:checked ~ .more
 .close
 {
     position: absolute;
-    top: 0;
+    top: 46px;
     right: 0;
     display: none;
 }
@@ -281,12 +281,12 @@ input[type='checkbox']:checked ~ .more
     cursor: pointer;
 }
 
-input[id='more-0']:checked ~ .close-0,
-input[id='more-1']:checked ~ .close-1,
-input[id='more-2']:checked ~ .close-2,
-input[id='more-3']:checked ~ .close-3,
-input[id='more-4']:checked ~ .close-4,
-input[id='more-5']:checked ~ .close-5
+input[id='more-0']:checked ~ .close[for='more-0'],
+input[id='more-1']:checked ~ .close[for='more-1'],
+input[id='more-2']:checked ~ .close[for='more-2'],
+input[id='more-3']:checked ~ .close[for='more-3'],
+input[id='more-4']:checked ~ .close[for='more-4'],
+input[id='more-5']:checked ~ .close[for='more-5']
 {
     display: block;
 }
