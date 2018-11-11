@@ -70,7 +70,10 @@ input
 
 .name1,
 .name2,
-.name3
+.name3,
+.name4,
+.name5,
+.name6
 {
     display: none;
     position: absolute;
@@ -131,43 +134,70 @@ label
 
 .carousel input:nth-child(1):checked ~ .carousel-list
 {
-    transform: translateX(350px);
+    transform: translateX(570px);
 }
 
 .carousel input:nth-child(2):checked ~ .carousel-list
 {
-    transform: translateX(0);
+    transform: translateX(210px);
 }
 
 .carousel input:nth-child(3):checked ~ .carousel-list
 {
-    transform: translateX(-350px);
+    transform: translateX(-140px);
+}
+
+.carousel input:nth-child(4):checked ~ .carousel-list
+{
+    transform: translateX(-490px);
+}
+
+.carousel input:nth-child(5):checked ~ .carousel-list
+{
+    transform: translateX(-840px);
+}
+
+.carousel input:nth-child(6):checked ~ .carousel-list
+{
+    transform: translateX(-1190px);
 }
 
 .carousel input:nth-child(1):checked ~ .carousel-list .list-item .img-cat1,
 .carousel input:nth-child(2):checked ~ .carousel-list .list-item .img-cat2,
-.carousel input:nth-child(3):checked ~ .carousel-list .list-item .img-cat3
+.carousel input:nth-child(3):checked ~ .carousel-list .list-item .img-cat3,
+.carousel input:nth-child(4):checked ~ .carousel-list .list-item .img-cat4,
+.carousel input:nth-child(5):checked ~ .carousel-list .list-item .img-cat5,
+.carousel input:nth-child(6):checked ~ .carousel-list .list-item .img-cat6
 {
     width: 350px;
 }
 
 .carousel input:nth-child(1):checked ~ .carousel-list .list-item .img-cat1 img,
 .carousel input:nth-child(2):checked ~ .carousel-list .list-item .img-cat2 img,
-.carousel input:nth-child(3):checked ~ .carousel-list .list-item .img-cat3 img
+.carousel input:nth-child(3):checked ~ .carousel-list .list-item .img-cat3 img,
+.carousel input:nth-child(4):checked ~ .carousel-list .list-item .img-cat4 img,
+.carousel input:nth-child(5):checked ~ .carousel-list .list-item .img-cat5 img,
+.carousel input:nth-child(6):checked ~ .carousel-list .list-item .img-cat6 img
 {
     opacity: 1;
 }
 
-.carousel input:nth-child(1):checked ~ .carousel-list .list-item:hover a .name1,
+.carousel input:nth-child(1):checked ~ .carousel-list .list-item:hover .name1,
 .carousel input:nth-child(2):checked ~ .carousel-list .list-item:hover .name2,
-.carousel input:nth-child(3):checked ~ .carousel-list .list-item:hover .name3
+.carousel input:nth-child(3):checked ~ .carousel-list .list-item:hover .name3,
+.carousel input:nth-child(4):checked ~ .carousel-list .list-item:hover .name4,
+.carousel input:nth-child(5):checked ~ .carousel-list .list-item:hover .name5,
+.carousel input:nth-child(6):checked ~ .carousel-list .list-item:hover .name6
 {
     display: inline-block;
 }
 
 .carousel input:nth-child(1):checked ~ .cat1,
 .carousel input:nth-child(2):checked ~ .cat2,
-.carousel input:nth-child(3):checked ~ .cat3
+.carousel input:nth-child(3):checked ~ .cat3,
+.carousel input:nth-child(4):checked ~ .cat4,
+.carousel input:nth-child(5):checked ~ .cat5,
+.carousel input:nth-child(6):checked ~ .cat6
 {
     background-position: 0 -2px;
 }
