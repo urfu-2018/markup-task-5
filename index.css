@@ -18,18 +18,12 @@
     color: rgb(134, 7, 71);
 }
 
-.name
+img[class*='pic']
 {
-    display: none;
-    width: 400px;
-    height: 298px;
-    margin: 0 -10%;
-    top: -101%;
-    left: 10%;
-    text-align: center;
-    vertical-align: middle;
-    background-color: rgba(252, 91, 217, .5);
-    position: relative;
+    height: 80%;
+    width: 300px;
+    margin-right: 70px;
+    opacity: .7;
 }
 
 input[name='carousel'] 
@@ -37,68 +31,10 @@ input[name='carousel']
     display: none;
 }
 
-input[id='cat1']:checked ~ ul li label[for='cat1'] img,
-input[id='cat2']:checked ~ ul li label[for='cat2'] img,
-input[id='cat3']:checked ~ ul li label[for='cat3'] img,
-input[id='cat4']:checked ~ ul li label[for='cat4'] img,
-input[id='cat5']:checked ~ ul li label[for='cat5'] img
-{
-    width: 400px;
-    height: 100%;
-    margin: 0 -10%;
-    opacity: 1;
-}
-
-input[id='cat1']:checked ~ .karusel-navigation .switch[for='cat1'],
-input[id='cat2']:checked ~ .karusel-navigation .switch[for='cat2'],
-input[id='cat3']:checked ~ .karusel-navigation .switch[for='cat3'],
-input[id='cat4']:checked ~ .karusel-navigation .switch[for='cat4'],
-input[id='cat5']:checked ~ .karusel-navigation .switch[for='cat5']
-{
-    background-color: #920658;
-}
-
-li
-{
-    display: inline-block;
-    vertical-align: middle;
-    opacity: 1;
-    margin: 20px 0;
-    height: 300px;
-}
-
 input
 {
     margin-top: 100px;
     display: none;
-}
-
-.carousel-list
-{
-    position: relative;
-    white-space: nowrap;
-    transition: left .9s ease-out;
-    -o-transition: left .9s ease-out;
-    -ms-transition: left .9s ease-out;
-    -moz-transition: left .9s ease-out;
-    -webkit-transition: left .9s ease-out;
-}
-
-.karusel-navigation .switch
-{
-    display: inline-block;
-    background-color: #fa5fcc;
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-    margin-left: 10px;
-}
-
-.karusel-navigation
-{
-    vertical-align: bottom;
-    text-align: center;
-    margin-right: 80px;
 }
 
 .envelope 
@@ -131,9 +67,70 @@ footer
     color: rgb(134, 7, 71);
 }
 
+a
+{
+    text-decoration: none;
+}
+
 a 
 {
     color: #4c4cd8;
+}
+
+/*карусель*/
+
+input[id='cat1']:checked ~ .carousel-list li label[for='cat1'] img,
+input[id='cat2']:checked ~ .carousel-list li label[for='cat2'] img,
+input[id='cat3']:checked ~ .carousel-list li label[for='cat3'] img,
+input[id='cat4']:checked ~ .carousel-list li label[for='cat4'] img,
+input[id='cat5']:checked ~ .carousel-list li label[for='cat5'] img
+{
+    width: 400px;
+    height: 100%;
+    margin: 0 -10%;
+    opacity: 1;
+}
+
+.carousel-list
+{
+    position: relative;
+    white-space: nowrap;
+    transition: left .9s ease-out;
+}
+
+.karusel-navigation .switch
+{
+    display: inline-block;
+    background-color: #fa5fcc;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    margin-left: 10px;
+}
+
+.karusel-navigation
+{
+    vertical-align: bottom;
+    text-align: center;
+    margin-right: 80px;
+}
+
+input[id='cat1']:checked ~ .karusel-navigation .switch[for='cat1'],
+input[id='cat2']:checked ~ .karusel-navigation .switch[for='cat2'],
+input[id='cat3']:checked ~ .karusel-navigation .switch[for='cat3'],
+input[id='cat4']:checked ~ .karusel-navigation .switch[for='cat4'],
+input[id='cat5']:checked ~ .karusel-navigation .switch[for='cat5']
+{
+    background-color: #920658;
+}
+
+li
+{
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 1;
+    margin: 20px 0;
+    height: 300px;
 }
 
 input[id='cat1']:checked ~ .carousel-list 
@@ -161,115 +158,89 @@ input[id='cat5']:checked ~ .carousel-list
     left: calc(50% - 300px - 1375px);
 }
 
-.modal-window
+/*Затемнённый фон, и текст*/
+
+div.cat
 {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(90, 6, 76, .8);
-    z-index: 2;
-}
-
-.modal-window a
-{
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-.modal-window:target
-{
-    display: block;
-    pointer-events: auto;
-}
-
-.modal-window > img
-{
-    margin: 50px 0 0 100px;
-    display: inline-block;
-}
-
-.modal-window > div.modal-text
-{
-    display: inline-block;
-    color: white;
-}
-
-img[class*='pic']
-{
-    height: 80%;
-    width: 300px;
-    margin-right: 70px;
-    opacity: .7;
-}
-
-img[class*='pic']:hover
-{
-    filter: brightness(30%);
-    cursor: pointer;
-}
-
-input[id='cat1']:checked ~ ul > li.cat1:hover > div.name a p,
-input[id='cat2']:checked ~ ul > li.cat2:hover > div.name a p,
-input[id='cat3']:checked ~ ul > li.cat3:hover > div.name a p,
-input[id='cat4']:checked ~ ul > li.cat4:hover > div.name a p,
-input[id='cat5']:checked ~ ul > li.cat5:hover > div.name a p,
-{
     position: absolute;
-    max-width: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: block;
-    z-index: 1;
+    height: 300px;
+    width: 400px;
+    background-color: rgba(138, 5, 82, .6);
     color: white;
-    text-shadow: 0 0 20px rgb(221, 9, 9);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-top: -304px;
+    margin-left: -40px;
 }
 
-li.cat > a > div > p
+div.cat p
+{
+    position: relative;
+    top: 40%;
+    left: 35%;
+    z-index: 1;
+    font: 400 32px 'Roboto', sans-serif;
+    color: rgb(253, 188, 228);
+}
+
+input[id='cat1']:checked ~ .carousel-list > li.card1:hover div.cat,
+input[id='cat2']:checked ~ .carousel-list > li.card2:hover div.cat,
+input[id='cat3']:checked ~ .carousel-list > li.card3:hover div.cat,
+input[id='cat4']:checked ~ .carousel-list > li.card4:hover div.cat,
+input[id='cat5']:checked ~ .carousel-list > li.card5:hover div.cat
+{
+    display: block;
+}
+
+/*модальное окно*/
+
+.modal
+{
+    background-color: rgba(75, 3, 57, .9);
+    position: fixed;
+    width: 1350px;
+    height: 800px;
+    left: 0;
+    color: #fff;
+    z-index: 2;
+    display: none;
+    top: 0;
+}
+
+.close img
+{
+    position: relative;
+    top: 30px;
+    left: 700px;
+    width: 30px;
+    height: 30px;
+}
+
+.modal-photo
+{
+    float: left;
+    margin-left: 200px;
+    margin-top: 80px;
+    width: 400px;
+    height: 300px;
+}
+
+.modal-text
 {
     font-size: 30px;
-    display: none;
+    margin-top: 40px;
 }
 
-li.cat
+.modal h2
 {
-    display: inline-block;
-    position: relative;
+    font-size: 35px;
+    font-weight: 500;
+    padding-left: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fa5fcc;
 }
 
-li.cat > a > div
+.modal:target
 {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.close
-{
-    float: right;
-    position: relative;
-    width: 20px;
-    height: 20px;
-}
-
-img[alt='Закрыть']
-{
-    width: 20px;
-    height: 20px;
-}
-
-section
-{
-    width: 70%;
-    height: 300px;
-    margin: 200px auto;
+    display: block;
 }
