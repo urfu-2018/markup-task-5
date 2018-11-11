@@ -62,14 +62,14 @@ footer
     padding-bottom: 100px;
 }
 
-.cats > article
+.cats > .carousel > article
 {
     text-align: center;
     display: inline-block;
     position: relative;
 }
 
-.cats article .description
+.cats .carousel article .description
 {
     text-align: center;
     vertical-align: middle;
@@ -85,55 +85,55 @@ footer
     z-index: 1;
 }
 
-.cats > input.article-1:checked ~ article.article-1,
-.cats > input.article-2:checked ~ article.article-2,
-.cats > input.article-3:checked ~ article.article-3,
-.cats > input.article-4:checked ~ article.article-4,
-.cats > input.article-5:checked ~ article.article-5
+.cats > input.article-1:checked ~ .carousel > article.article-1,
+.cats > input.article-2:checked ~ .carousel > article.article-2,
+.cats > input.article-3:checked ~ .carousel > article.article-3,
+.cats > input.article-4:checked ~ .carousel > article.article-4,
+.cats > input.article-5:checked ~ .carousel > article.article-5
 {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, .6);
 }
 
-.cats > input.article-1:checked ~ article.article-1:hover label.description,
-.cats > input.article-2:checked ~ article.article-2:hover label.description,
-.cats > input.article-3:checked ~ article.article-3:hover label.description,
-.cats > input.article-4:checked ~ article.article-4:hover label.description,
-.cats > input.article-5:checked ~ article.article-5:hover label.description
+.cats > input.article-1:checked ~ .carousel .article-1:hover label.description,
+.cats > input.article-2:checked ~ .carousel .article-2:hover label.description,
+.cats > input.article-3:checked ~ .carousel .article-3:hover label.description,
+.cats > input.article-4:checked ~ .carousel .article-4:hover label.description,
+.cats > input.article-5:checked ~ .carousel .article-5:hover label.description
 {
     display: block;
     color: #fff;
 }
 
-.cats > input.article-1:checked ~ article
+.cats > input.article-1:checked ~ .carousel > article
 {
     left: 500px;
 }
 
-.cats > input.article-2:checked ~ article
+.cats > input.article-2:checked ~ .carousel > article
 {
     left: 250px;
 }
 
-.cats > input.article-3:checked ~ article
+.cats > input.article-3:checked ~ .carousel > article
 {
     left: 0;
 }
 
-.cats > input.article-4:checked ~ article
+.cats > input.article-4:checked ~ .carousel > article
 {
     left: -250px;
 }
 
-.cats > input.article-5:checked ~ article
+.cats > input.article-5:checked ~ .carousel > article
 {
     left: -500px;
 }
 
-.cats > input.article-1:not(:checked) ~ article.article-1,
-.cats > input.article-2:not(:checked) ~ article.article-2,
-.cats > input.article-3:not(:checked) ~ article.article-3,
-.cats > input.article-4:not(:checked) ~ article.article-4,
-.cats > input.article-5:not(:checked) ~ article.article-5
+.cats > input.article-1:not(:checked) ~ .carousel > article.article-1,
+.cats > input.article-2:not(:checked) ~ .carousel > article.article-2,
+.cats > input.article-3:not(:checked) ~ .carousel > article.article-3,
+.cats > input.article-4:not(:checked) ~ .carousel > article.article-4,
+.cats > input.article-5:not(:checked) ~ .carousel > article.article-5
 {
     opacity: .7;
 }
@@ -153,13 +153,32 @@ footer
     margin: 0;
 }
 
-.cats > input.article-1:not(:checked) ~ article.article-1 label.carousel-action,
-.cats > input.article-2:not(:checked) ~ article.article-2 label.carousel-action,
-.cats > input.article-3:not(:checked) ~ article.article-3 label.carousel-action,
-.cats > input.article-4:not(:checked) ~ article.article-4 label.carousel-action,
-.cats > input.article-5:not(:checked) ~ article.article-5 label.carousel-action
+.cats > input.article-1:not(:checked) ~ .carousel .article-1 .carousel-action,
+.cats > input.article-2:not(:checked) ~ .carousel .article-2 .carousel-action,
+.cats > input.article-3:not(:checked) ~ .carousel .article-3 .carousel-action,
+.cats > input.article-4:not(:checked) ~ .carousel .article-4 .carousel-action,
+.cats > input.article-5:not(:checked) ~ .carousel .article-5 .carousel-action
 {
     transform: matrix(.8, 0, 0, .8, 0, 0);
+}
+
+.cats > .carousel-nav
+{
+    margin: 10px;
+}
+
+.cats > input.article-1:not(:checked) ~ .carousel-nav .article-1 .checked,
+.cats > input.article-2:not(:checked) ~ .carousel-nav .article-2 .checked,
+.cats > input.article-3:not(:checked) ~ .carousel-nav .article-3 .checked,
+.cats > input.article-4:not(:checked) ~ .carousel-nav .article-4 .checked,
+.cats > input.article-5:not(:checked) ~ .carousel-nav .article-5 .checked,
+.cats > input.article-1:checked ~ .carousel-nav .article-1 .unchecked,
+.cats > input.article-2:checked ~ .carousel-nav .article-2 .unchecked,
+.cats > input.article-3:checked ~ .carousel-nav .article-3 .unchecked,
+.cats > input.article-4:checked ~ .carousel-nav .article-4 .unchecked,
+.cats > input.article-5:checked ~ .carousel-nav .article-5 .unchecked
+{
+    display: none;
 }
 
 .nickname a,
