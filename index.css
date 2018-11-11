@@ -27,7 +27,7 @@ body
 .modal
 {
     opacity: 0;
-    background: rgba(0, 0, 0, .86);
+    background-color: rgba(0, 0, 0, .86);
     pointer-events: none;
     position: fixed;
     top: 0;
@@ -45,17 +45,35 @@ body
     pointer-events: auto;
 }
 
+.modal:target > .close-body-link
+{
+    display: block;
+}
+
 .modal-inner
 {
     left: 25%;
     top: 29%;
     position: absolute;
+    z-index: 99999;
 }
 
 .modal-side
 {
     display: inline-block;
     vertical-align: top;
+}
+
+.close-body-link
+{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    display: none;
+    z-index: 999;
+    position: fixed;
 }
 
 .cat-info
@@ -256,32 +274,32 @@ li.card
     display: inline-block;
 }
 
+.indicator:checked ~ .carousel-list 
+{
+    transition-duration: 300ms;
+}
+
 .indicator-1:checked ~ .carousel-list 
 {
     transform: translateX(0);
-    transition-duration: 300ms;
 }
 
 .indicator-2:checked ~ .carousel-list 
 {
     transform: translateX(-250px);
-    transition-duration: 300ms;
 }
 
 .indicator-3:checked ~ .carousel-list 
 {
     transform: translateX(-500px);
-    transition-duration: 300ms;
 }
 
 .indicator-4:checked ~ .carousel-list
 {
     transform: translateX(-750px);
-    transition-duration: 300ms;
 }
 
 .indicator-5:checked ~ .carousel-list 
 {
     transform: translateX(-1000px);
-    transition-duration: 300ms;
 }
