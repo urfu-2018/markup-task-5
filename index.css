@@ -27,7 +27,7 @@ html
     width: 100%;
 }
 
-.main
+.content
 {
     min-height: calc(100vh - 128px);
     padding-top: 40px;
@@ -76,8 +76,15 @@ html
     margin-bottom: 5px;
 }
 
+.mail
+{
+    padding-left: 10px;
+}
+
 .mail:before
 {
+    position: relative;
+    right: 10px;
     content: url('mail.png');
     height: 16px;
 }
