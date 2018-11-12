@@ -6,33 +6,101 @@
     <link type="text/css" rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
 </head>
+
 <body>
 <header>
     MurMarket
 </header>
+
+    <input class="one-1" type="checkbox" name="switch-1" id="cb1">
+    <input class="two-1" type="checkbox" name="switch-1" id="cb2">
+    <input class="three-1" type="checkbox" name="switch-1" id="cb3">
+
     <div class="slider">
         <input class="one" type="radio" name="switch" id="btn1">
         <input class="two" type="radio" name="switch" id="btn2" checked>
         <input class="three" type="radio" name="switch" id="btn3">
 
-        <!--<input class="one-1" type="checkbox" name="switch-1" id="cb1">-->
-        <!--<input class="two-1" type="checkbox" name="switch-1" id="cb2">-->
-        <!--<input class="three-1" type="checkbox" name="switch-1" id="cb3">-->
-
-        <div class="switch">
-            <label for="btn1"></label>
-            <label for="btn2"></label>
-            <label for="btn3"></label>
-        </div>
         <div class="slides">
-            <label for="btn1"><img class="slides-1 elements" alt="cheshire" src="https://clck.ru/EdG3e">
-            </label>
-            <label for="btn2"><img class="slides-2 elements" alt="lion" src="https://clck.ru/EdG5h">
-            </label>
-            <label for="btn3"><img class="slides-3 elements" alt="sad" src="https://bit.ly/2yIg9m5">
-            </label>
+
+            <div class="slides-1 elements">
+                <label for="btn1">
+                    <img alt="cheshire" src="https://clck.ru/EdG3e">
+                </label>
+                <label for="cb1" class="name">Чеширский кот
+                </label>
+            </div>
+
+            <div class="slides-2 elements">
+                <label for="btn2">
+                    <img alt="lion" src="https://clck.ru/EdG5h">
+                </label>
+
+                    <label for="cb2" class="name">
+                        Большой кот
+                    </label>
+            </div>
+
+            <div class="slides-3 elements">
+                <label for="btn3">
+                    <img alt="sad_cat" src="https://bit.ly/2yIg9m5">
+                </label>
+                <label for="cb3" class="name">Грустный кот
+                </label>
+            </div>
         </div>
     </div>
+
+    <div class="big-view-1 big-view">
+        <img class="cat-photo" src="https://clck.ru/EdG5h" alt="big_cat">
+
+        <div class="information">
+            <h1 class="name">Очень большой котик</h1>
+            <ul>
+                <li class="age">Возраст: 4 года</li>
+                <li class="breed">Порода: Лев</li>
+                <li class="diseases">Болезни: ---</li>
+            </ul>
+            <p class="description">Не очень любит быть голодным</p>
+        </div>
+
+        <label for="cb2"><img class="exit" alt="exit" src="https://bit.ly/2zJvT7Y"></label>
+    </div>
+
+    <div class="big-view-2 big-view">
+        <img class="cat-photo" src="https://clck.ru/EdG3e" alt="cheshire_cat">
+
+        <div class="information">
+            <h1 class="name">Чеширский котик</h1>
+            <ul>
+                <li class="age">Возраст: Неизвестно</li>
+                <li class="breed">Порода: Неизвестно</li>
+                <li class="diseases">Болезни: Неизвестно</li>
+            </ul>
+            <p class="description">Добродушный Чеширский кот постоянно улыбается и может исчезать,
+                оставляя на рассмотрение только свою широкую улыбку. Кот - философ, он может толкнуть не
+                одну речь. Кот свободно перемещается по воздуху и телепортируется.
+                Считает себя сумасшедшим. Он виляет своим
+                хвостиком когда злой и когда довольный.</p>
+        </div>
+        <label for="cb1"><img class="exit" alt="exit" src="https://bit.ly/2zJvT7Y"></label>
+    </div>
+
+    <div class="big-view-3 big-view">
+        <img class="cat-photo" alt="sad" src="https://bit.ly/2yIg9m5">
+
+        <div class="information">
+            <h1 class="name">Грустный котик((9</h1>
+            <ul>
+                <li class="age">Возраст: Он был слишком молод для такого кода</li>
+                <li  class="breed">Порода: Грустный</li>
+                <li class="diseases">Болезни: ---</li>
+            </ul>
+            <p class="description">Он случайно увидел мой код</p>
+        </div>
+        <label for="cb3"><img class="exit" alt="exit" src="https://bit.ly/2zJvT7Y"></label>
+    </div>
+
     <footer>
         contact information: cfgi@yandex.ru
     </footer>

@@ -1,7 +1,15 @@
 html
 {
     height: 100%;
+    width: 100%;
     position: relative;
+}
+
+.name
+{
+    z-index: 111;
+    display: none;
+    font-size: 10px;
 }
 
 header
@@ -41,6 +49,8 @@ footer
     position: relative;
     width: 100%;
     margin: 50px auto;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .slider input[type='radio']
@@ -50,23 +60,24 @@ footer
 
 .slides
 {
+    transition: .5s;
     text-align: center;
-    overflow: hidden;
-    transition: all .5s;
+
 }
 
-.slides img
+img
 {
+    transition: .5s;
     width: 350px;
     height: 300px;
     object-fit: cover;
-    float: left;
 }
 
-.one:checked ~ .slides .slides-1,
-.two:checked ~ .slides .slides-2,
-.three:checked ~ .slides .slides-3
+.one:checked ~ .slides .slides-1 img,
+.two:checked ~ .slides .slides-2 img,
+.three:checked ~ .slides .slides-3 img
 {
+    transition: .5s;
     transform: scale(1.15);
 }
 
@@ -92,21 +103,79 @@ footer
 .two:checked ~ .slides .slides-1,
 .two:checked ~ .slides .slides-3
 {
+    transition: .5s;
     opacity: .7;
 }
 
-.one:checked:hover ~ .slides .slides-2,
-.one:checked:hover ~ .slides .slides-3,
-.three:checked:hover ~ .slides .slides-1,
-.three:checked:hover ~ .slides .slides-2,
-.two:checked:hover ~ .slides .slides-1,
-.two:checked:hover ~ .slides .slides-3
+.one:checked:hover ~ .slides .slides-1 img,
+.two:checked:hover ~ .slides .slides-2 img,
+.three:checked:hover ~ .slides .slides-3 img
 {
     opacity: .7;
+}
+
+.one:checked:hover ~ .slides .slides-1 .name,
+.two:checked:hover ~ .slides .slides-2 .name,
+.three:checked:hover ~ .slides .slides-3 .name
+{
+    position: absolute;
+    display: inline-block;
+    left: calc(50% - 175px);
+    top: calc(50% - 190px);
+    font-size: 25px;
 }
 
 .elements
 {
-    transition: linear .3s;
     padding: 50px;
+    position: relative;
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    display: inline ;
+}
+
+.one-1:checked ~ .big-view-2,
+.two-1:checked ~ .big-view-1,
+.three-1:checked ~ .big-view-3
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(0,0,0,.7);
+}
+
+.information
+{
+    position: absolute;
+    color: white;
+    height: 300px;
+    width: 350px;
+    left: calc(35% + 175px);
+    top: calc(25% + 80px);
+}
+
+.cat-photo
+{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+
+.exit
+{
+    position: absolute;
+    z-index: 1000;
+    width: 60px;
+    height: 30px;
+    left: 75%;
+    top: 36%;
+}
+
+.big-view
+{
+    display: none;
 }
