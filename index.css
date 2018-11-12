@@ -47,8 +47,8 @@ header
     color: red;
 }
 
-header div,
-header article
+.logo,
+.main-title-wrapper
 {
     display: inline-block;
     font-family: 'pt_sans_narrowregular';
@@ -165,7 +165,13 @@ input[id='slide10']:checked ~ div label[for='slide10']
 
 input[id='slide1']:checked ~ .carousel
 {
-    left: 410px;
+    left: 420px;
+}
+
+input[id='slide1']:checked ~ .carousel .cat[id='card10']
+{
+    position: absolute;
+    left: -440px;
 }
 
 input[id='slide2']:checked ~ .carousel
@@ -210,7 +216,13 @@ input[id='slide9']:checked ~ .carousel
 
 input[id='slide10']:checked ~ .carousel
 {
-    left: calc(-445*8px);
+    left: calc(-445*7px);
+}
+
+input[id='slide10']:checked ~ .carousel .cat[id='card1']
+{
+    position: absolute;
+    right: 50px;
 }
 
 /*active-photo-hover эффект,
@@ -304,27 +316,27 @@ input[id='slide10']:checked ~ .slide[id='s10']:hover .cat-information:target
 .cat-information img[alt='close']
 {
     position: absolute;
-    bottom: 400px;
-    left: 1100px;
-    width: 50px;
+    right: 150px;
+    top: 50px;
     height: 50px;
     filter: invert(100%);
 }
 
 .cat-information .cat-img
 {
+    position: absolute;
     width: auto;
     height: 350px;
-    float: left;
+    right: calc(15% + 450px);
     border: none;
     opacity: 1;
 }
 
 .cat-information .information
 {
+    position: absolute;
     width: 400px;
-    display: inline-block;
-    margin-left: 30px;
+    right: 15%;
 }
 
 .information h1
