@@ -5,7 +5,6 @@ body
 
 main
 {
-    text-align: center;
     width: 100%;
 }
 
@@ -22,8 +21,7 @@ header
     height: 64px;
     background: #fff;
     border-bottom: 1px solid #dfe6e9;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 32px;
+    font: 32px 'PT Sans Narrow', sans-serif;
     line-height: 64px;
     text-align: center;
     vertical-align: middle;
@@ -46,6 +44,7 @@ main
 
 footer
 {
+    height: 60px;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -83,11 +82,6 @@ footer ul
     list-style-type: none;
 }
 
-footer a
-{
-    color: #4c4cd8;
-}
-
 .carousel
 {
     position: relative;
@@ -98,9 +92,10 @@ footer a
 
 .carousel-container
 {
-    width: 100%;
+    width: 3200px;
+    position: relative;
     height: 100%;
-    text-align: center;
+    transition: .5s;
 }
 
 .carousel-item
@@ -174,29 +169,29 @@ footer a
 
 /* Padding cats */
 
-.cat-1-selector:checked ~ main .carousel-item
+.cat-1-selector:checked ~ main .carousel-container
 {
-    left: 600px;
+    left: calc(50% - 150px - 0 * 300px);
 }
 
-.cat-2-selector:checked ~ main .carousel-item
+.cat-2-selector:checked ~ main .carousel-container
 {
-    left: 300px;
+    left: calc(50% - 150px - 1 * 300px);
 }
 
-.cat-3-selector:checked ~ main .carousel-item
+.cat-3-selector:checked ~ main .carousel-container
 {
-    left: 0;
+    left: calc(50% - 150px - 2 * 300px);
 }
 
-.cat-4-selector:checked ~ main .carousel-item
+.cat-4-selector:checked ~ main .carousel-container
 {
-    left: -300px;
+    left: calc(50% - 150px - 3 * 300px);
 }
 
-.cat-5-selector:checked ~ main .carousel-item
+.cat-5-selector:checked ~ main .carousel-container
 {
-    left: -600px;
+    left: calc(50% - 150px - 4 * 300px);
 }
 
 /* Highlighting active cat */
@@ -246,21 +241,20 @@ footer a
 .modal
 {
     display: none;
-    width: 600px;
-    height: 400px;
     left: 0;
     right: 0;
+    bottom: 92px;
+    top: 64px;
     z-index: 1;
     background-color: rgba(0, 0, 0, .9);
     margin: 0 auto;
-    top: 100px;
     position: absolute;
 }
 
 .modal-image
 {
     position: relative;
-    width: 200px;
+    width: 400px;
 }
 
 .modal-image img
