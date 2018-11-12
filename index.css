@@ -11,10 +11,10 @@ html
     font-size: 32px;
     font-family: 'PT Sans Narrow', sans-serif;
     text-align: center;
-    padding-bottom: 5px;
 
     height: 40px;
     width: 100%;
+    position: fixed;
 }
 
 .title:first-letter
@@ -30,6 +30,7 @@ html
 .main
 {
     min-height: calc(100vh - 128px);
+    padding-top: 40px;
     padding-bottom: 81px;
     overflow: hidden;
     position: relative;
@@ -256,7 +257,7 @@ input:checked[id='radio-5'] ~ .carousel-main label[for='more-5'].overlay
 {
     display: none;
     position: absolute;
-    top: 0;
+    top: 40px;
     bottom: 81px;
     right: 0;
     left: 0;
@@ -274,7 +275,7 @@ input[type='checkbox']:checked ~ .more-bg
 .close
 {
     position: absolute;
-    top: 0;
+    top: 40px;
     right: 0;
     display: none;
 }
@@ -300,6 +301,7 @@ input[id='more-5']:checked ~ .close[for='more-5']
     top: 100px;
     left: 100px;
     right: 100px;
+    bottom: 100px;
 
     font-family: Arial, serif;
     font-size: 20px;
@@ -313,6 +315,15 @@ input[id='more-5']:checked ~ .close[for='more-5']
     float: left;
     height: 300px;
     padding-right: 15px;
+}
+
+.more-wrapper
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 85%;
+    transform: translate(-50%, -50%);
 }
 
 input[id='more-0']:checked ~ .info-0,
