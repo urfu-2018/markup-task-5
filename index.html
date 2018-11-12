@@ -3,7 +3,208 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header class="head">Мурмакет</header>
+    <main class="main">
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat1">
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat2">
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat3">
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat4">
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat5" checked>
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat6">
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat7">
+        <input class="carousel-cats-img" type="radio" name="cats-img" id="cat8">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-1">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-2">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-3">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-4">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-5">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-6">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-7">
+        <input class="model-checkbox" type="checkbox" name="model" id="model-8">
+        <article class="carousel">
+            <section class="cats cat-1">
+                <label for="cat1">
+                    <img class="img-cat" src="cats/Соня.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-1">Соня</label>
+            </section>
+            <section class="cats cat-2">
+                <label for="cat2">
+                    <img class="img-cat" src="cats/Рыжик.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-2">Рыжик</label>
+            </section>
+            <section class="cats cat-3">
+                <label for="cat3">
+                    <img class="img-cat" src="cats/Мурзик.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-3">Мурзик</label>
+            </section>
+            <section class="cats cat-4">
+                <label for="cat4">
+                    <img class="img-cat" src="cats/Арти.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-4">Арти</label>
+                <div class="some"></div>
+            </section>
+            <section class="cats cat-5">
+                <label for="cat5">
+                    <img class="img-cat" src="cats/Крошка.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-5">Крошка</label>
+            </section>
+            <section class="cats cat-6">
+                <label for="cat6">
+                    <img class="img-cat" src="cats/Грация.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-6">Грация</label>
+            </section>
+            <section class="cats cat-7">
+                <label for="cat7">
+                    <img class="img-cat" src="cats/Барсик.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-7">Барсик</label>
+            </section>
+            <section class="cats cat-8">
+                <label for="cat8">
+                    <img class="img-cat" src="cats/Тихон.jpg" alt="Соня">
+                </label>
+                <label class="cat-name-hover" for="model-8">Тихон</label>
+            </section>
+        </article>
+        <article class="models">
+            <section class="model model-1">
+                <img class="model-img" src="cats/Соня.jpg" alt="Соня">
+                <label for="model-1">
+                    <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                </label>
+                <section class="text">
+                    <h3 class="cat-name">Соня</h3>
+                    <p>Начнём с того, что все Сони топовые и не стоит с этим спорить.</p>
+                    <p>Этому милому созданию всего 3 месяца.</p>
+                    <p>И эта крошка ищет заботливых хозяев.</p>
+                </section>
+            </section>
+            <section class="model model-2">
+                    <img class="model-img" src="cats/Рыжик.jpg" alt="Рыжик">
+                    <label for="model-2">
+                        <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                    </label>
+                    <section class="text">
+                        <h3 class="cat-name">Рыжик</h3>
+                        <p>Будущий царь зверей.</p>
+                        <p>Будет оберегать вас и вашу семью. Очень любит играть и общаться.</p>
+                        <p>Золотой котёнок ищет дом. Милее кота вы ещё не встречали!</p>
+                    </section>
+            </section>
+            <section class="model model-3">
+                    <img class="model-img" src="cats/Мурзик.jpg" alt="Мурзик">
+                    <label for="model-3">
+                        <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                    </label>
+                    <section class="text">
+                        <h3 class="cat-name">Мурзик</h3>
+                        <p>У меня закончилась фантазия. Поэтому тут будет анекдот.</p>
+                        <p>&mdash;Любимая, что тебе во мне нравится?</p>
+                        <p>&mdash;В тебе нравится то, что во мне.</p>
+                    </section>
+            </section>
+            <section class="model model-4">
+                    <img class="model-img" src="cats/Арти.jpg" alt="Арти">
+                    <label for="model-4">
+                        <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                    </label>
+                    <section class="text">
+                        <h3 class="cat-name">Арти</h3>
+                        <p>Очень серьёзный кот.</p>
+                        <p>Может за вас оплатить счета.</p>
+                        <p>Обещает быть милым и послушным.(нет)</p>
+                    </section>
+            </section>
+            <section class="model model-5">
+                    <img class="model-img" src="cats/Крошка.jpg" alt="Крошка">
+                    <label for="model-5">
+                        <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                    </label>
+                    <section class="text">
+                        <h3 class="cat-name">Крошка</h3>
+                        <p>Эта кошечка очень любит объятия и поцелуи.</p>
+                        <p>Маленький белый комочек счастья ищет дом, ну как тут можно устоять.</p>
+                    </section>
+            </section>
+            <section class="model model-6">
+                    <img class="model-img" src="cats/Грация.jpg" alt="Грация">
+                    <label for="model-6">
+                        <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                    </label>
+                    <section class="text">
+                        <h3 class="cat-name">Грация</h3>
+                        <p>Самая грациозная кошка, которую вы только могли увидеть.</p>
+                        <p>Обладательница самых красивых глаз ищет добрых хозяев.</p>
+                    </section>
+            </section>
+            <section class="model model-7">
+                    <img class="model-img" src="cats/Барсик.jpg" alt="Барсик">
+                    <label for="model-7">
+                        <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                    </label>
+                    <section class="text">
+                        <h3 class="cat-name">Барсик</h3>
+                        <p>
+                            Он доброжелательно относится к людям и с удовольствием играет
+                            с бантиком и другими его игрушками.
+                        </p>
+                        <p>Барсик очень красивый кот.</p>
+                    </section>
+            </section>
+            <section class="model model-8">
+                    <img class="model-img" src="cats/Тихон.jpg" alt="Тихон">
+                    <label for="model-8">
+                        <img class="cancel" src="icon/Cancel.png" alt="cancel">
+                    </label>
+                    <section class="text">
+                        <h3 class="cat-name">Тихон</h3>
+                        <p>Знакомтесь, этого демона зовут Тихон.</p>
+                        <p>Хоть ему всего и год, но не стоит его недооценивать.</p>
+                        <p>
+                            Если вы отвлечётесь хоть на секунду, то он сможет перевернуть
+                            всю квартиру верх дном.
+                        </p>
+                    </section>
+            </section>
+        </article>
+
+        <div class="radio-button">
+            <label class="radio" for="cat1"></label>
+            <label class="radio" for="cat2"></label>
+            <label class="radio" for="cat3"></label>
+            <label class="radio" for="cat4"></label>
+            <label class="radio" for="cat5"></label>
+            <label class="radio" for="cat6"></label>
+            <label class="radio" for="cat7"></label>
+            <label class="radio" for="cat8"></label>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="mail">
+            <p>
+                Напишите нам:
+            </p>
+            <p>
+                <a class="link" href="#">cats&commat;babuli.ru</a>
+            </p>
+            <p>
+                <a class="link" href="#">vnuchek&commat;babuli.ru</a>
+            </p>
+        </div>
+        <div class="copyright">
+            <p>
+                &copy;2018 OOO &laquo;<a class="link" href="#">Бабушкины котятки</a>&raquo;
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

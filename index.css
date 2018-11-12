@@ -1,0 +1,285 @@
+@font-face
+{
+    font-family: 'PT SansNarrow';
+    font-display: auto;
+
+    src: local('PT SansNarrow'), url('PTSansNarrow/ptsansnarrow.woff2') format('woff2')
+        , url('PTSansNarrow/ptsansnarrow.woff') format('woff');
+}
+
+html,
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+/*Header*/
+
+.head
+{
+    font-size: 38px;
+    text-align: center;
+    font-family: 'PT SansNarrow', sans-serif;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    position: fixed;
+    background-color: #f8f8f8;
+}
+
+.head::first-letter
+{
+    color: #f00;
+}
+
+/*Carousel*/
+
+.main
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.radio-button
+{
+    text-align: center;
+    padding-top: 220px;
+}
+
+.carousel-cats-img[id='cat1']:checked ~ .radio-button [for='cat1'],
+.carousel-cats-img[id='cat2']:checked ~ .radio-button [for='cat2'],
+.carousel-cats-img[id='cat3']:checked ~ .radio-button [for='cat3'],
+.carousel-cats-img[id='cat4']:checked ~ .radio-button [for='cat4'],
+.carousel-cats-img[id='cat5']:checked ~ .radio-button [for='cat5'],
+.carousel-cats-img[id='cat6']:checked ~ .radio-button [for='cat6'],
+.carousel-cats-img[id='cat7']:checked ~ .radio-button [for='cat7'],
+.carousel-cats-img[id='cat8']:checked ~ .radio-button [for='cat8']
+{
+    content: url('icon/radio-active.jpg');
+    transition: all .2s;
+}
+
+.radio
+{
+    content: url('icon/radio.jpg');
+    width: 30px;
+    height: 30px;
+    transition: all .2s;
+}
+
+.carousel
+{
+    white-space: nowrap;
+}
+
+.cats
+{
+    top: 150px;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+    position: relative;
+}
+
+.cat-name-hover
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    padding-top: 44%;
+}
+
+.img-cat
+{
+    opacity: .5;
+    margin: 0 10px;
+    transition: all .5s;
+}
+
+.model
+{
+    position: absolute;
+    background: black;
+    opacity: .9;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 125px;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.model-img
+{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    opacity: 1;
+}
+
+.cancel
+{
+    position: absolute;
+    float: right;
+    top: 25%;
+    left: 70%;
+}
+
+.text
+{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    float: right;
+    color: #fff;
+}
+
+.carousel-cats-img[id='cat1']:checked ~ .carousel .cat-1 .img-cat,
+.carousel-cats-img[id='cat2']:checked ~ .carousel .cat-2 .img-cat,
+.carousel-cats-img[id='cat3']:checked ~ .carousel .cat-3 .img-cat,
+.carousel-cats-img[id='cat4']:checked ~ .carousel .cat-4 .img-cat,
+.carousel-cats-img[id='cat5']:checked ~ .carousel .cat-5 .img-cat,
+.carousel-cats-img[id='cat6']:checked ~ .carousel .cat-6 .img-cat,
+.carousel-cats-img[id='cat7']:checked ~ .carousel .cat-7 .img-cat,
+.carousel-cats-img[id='cat8']:checked ~ .carousel .cat-8 .img-cat
+{
+    opacity: 1;
+}
+
+.carousel-cats-img[id='cat1']:checked ~ .carousel .cat-1:hover .img-cat,
+.carousel-cats-img[id='cat2']:checked ~ .carousel .cat-2:hover .img-cat,
+.carousel-cats-img[id='cat3']:checked ~ .carousel .cat-3:hover .img-cat,
+.carousel-cats-img[id='cat4']:checked ~ .carousel .cat-4:hover .img-cat,
+.carousel-cats-img[id='cat5']:checked ~ .carousel .cat-5:hover .img-cat,
+.carousel-cats-img[id='cat6']:checked ~ .carousel .cat-6:hover .img-cat,
+.carousel-cats-img[id='cat7']:checked ~ .carousel .cat-7:hover .img-cat,
+.carousel-cats-img[id='cat8']:checked ~ .carousel .cat-8:hover .img-cat
+{
+    filter: brightness(40%);
+    transition: all .5s;
+}
+
+.carousel-cats-img[id='cat1']:checked ~ .carousel .cat-1:hover .cat-name-hover,
+.carousel-cats-img[id='cat2']:checked ~ .carousel .cat-2:hover .cat-name-hover,
+.carousel-cats-img[id='cat3']:checked ~ .carousel .cat-3:hover .cat-name-hover,
+.carousel-cats-img[id='cat4']:checked ~ .carousel .cat-4:hover .cat-name-hover,
+.carousel-cats-img[id='cat5']:checked ~ .carousel .cat-5:hover .cat-name-hover,
+.carousel-cats-img[id='cat6']:checked ~ .carousel .cat-6:hover .cat-name-hover,
+.carousel-cats-img[id='cat7']:checked ~ .carousel .cat-7:hover .cat-name-hover,
+.carousel-cats-img[id='cat8']:checked ~ .carousel .cat-8:hover .cat-name-hover
+{
+    display: block;
+    transition: all .5s;
+}
+
+.model-checkbox[id='model-1']:checked ~ .models .model-1,
+.model-checkbox[id='model-2']:checked ~ .models .model-2,
+.model-checkbox[id='model-3']:checked ~ .models .model-3,
+.model-checkbox[id='model-4']:checked ~ .models .model-4,
+.model-checkbox[id='model-5']:checked ~ .models .model-5,
+.model-checkbox[id='model-6']:checked ~ .models .model-6,
+.model-checkbox[id='model-7']:checked ~ .models .model-7,
+.model-checkbox[id='model-8']:checked ~ .models .model-8
+{
+    visibility: visible;
+}
+
+[id='cat1']:checked ~ .carousel
+{
+    transform: translate3d(38%, 0, 0);
+    transition: all .5s;
+}
+
+[id='cat2']:checked ~ .carousel
+{
+    transform: translate3d(20%, 0, 0);
+    transition: all .5s;
+}
+
+[id='cat3']:checked ~ .carousel
+{
+    transform: translate3d(-2%, 0, 0);
+    transition: all .5s;
+}
+
+[id='cat4']:checked ~ .carousel
+{
+    transform: translate3d(-20%, 0, 0);
+    transition: all .5s;
+}
+
+[id='cat5']:checked ~ .carousel
+{
+    transform: translate3d(-40%, 0, 0);
+    transition: all .5s;
+}
+
+[id='cat6']:checked ~ .carousel
+{
+    transform: translate3d(-60%, 0, 0);
+    transition: all .5s;
+}
+
+[id='cat7']:checked ~ .carousel
+{
+    transform: translate3d(-80%, 0, 0);
+    transition: all .5s;
+}
+
+[id='cat8']:checked ~ .carousel
+{
+    transform: translate3d(-100%, 0, 0);
+    transition: all .5s;
+}
+
+.model-checkbox,
+.carousel-cats-img
+{
+    display: none;
+}
+
+/*Footer*/
+
+.footer
+{
+    background-color: #f8f8f8;
+    border-top: 1px solid #d7d7d7;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Arial', serif;
+}
+
+.mail
+{
+    float: left;
+    padding: 10px;
+}
+
+.link:link
+{
+    color: #4c4cd8;
+}
+
+.link:hover
+{
+    color: #ff69b4;
+}
+
+.copyright
+{
+    float: right;
+    padding: 60px 10px 0;
+}
