@@ -1,23 +1,32 @@
-html,
-body
-{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.footer-space
-{
-    height: 55px;
-}
-
 .wrapper
 {
-    height: 100%;
-    margin-bottom: -50px;
+    display: table;
 }
 
+.article-title,
+.koto-carousel,
+.contact-us
+{
+    display: table-row;
+}
+
+html,
+body,
+.wrapper
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+/*_______________________________________________________________*/
+
 .article-title
+{
+    height: 60px;
+}
+
+.header-content
 {
     font-family: 'PT SansNarrow', sans-serif;
     font-size: 32px;
@@ -38,27 +47,28 @@ body
     box-shadow: 0 0 20px 0 gray;
 }
 
-.article-title > span
+.header-content > span
 {
     color: black;
 }
 
-.article-title:hover
+.header-content:hover
 {
     color: black;
 }
 
-.article-title:hover > span
+.header-content:hover > span
 {
     color: #f00;
 }
+
+/*___________________________________________________________________________________*/
 
 .contact-us
 {
     font-family: Arial, serif;
     font-size: 14px;
 
-    position: fixed;
     z-index: 5;
 
     width: 100%;
@@ -77,7 +87,7 @@ body
 
     display: inline-block;
 
-    margin: 0 0 10px 20px;
+    margin: 5px 0 0 20px;
 
     text-decoration: none;
 
@@ -95,15 +105,28 @@ body
 {
     float: right;
 
-    margin: 0 10px 0 0;
+    margin: 5px 10px 0 0;
 }
 
 .footer-title
 {
+    display: block;
+
+    padding-left: 10px;
+
     text-align: center;
 }
 
+/*__________________________________________________________________*/
+
 .koto-carousel
+{
+    position: relative;
+
+    height: 100%;
+}
+
+.carousel-item
 {
     position: absolute;
     top: 0;
@@ -113,18 +136,46 @@ body
 
     display: block;
 
+    width: 1200px;
     min-width: 1200px;
     max-width: 1200px;
+    height: 500px;
     margin: auto;
+
+    transition: all .5s ease-in-out;
+    text-align: center;
+
+    opacity: 0;
+}
+
+.arrow
+{
+    position: absolute;
+    bottom: 30%;
+
+    width: 320px;
+    height: 200px;
+}
+
+.arrow-prev
+{
+    left: 1%;
+
+    opacity: .7;
+}
+
+.arrow-next
+{
+    right: 1%;
+
+    opacity: .7;
 }
 
 .koto-photo
 {
     position: absolute;
-    top: 20%;
+    bottom: 30%;
     left: 33.5%;
-
-    display: inline-block;
 
     width: 400px;
     height: 250px;
@@ -144,7 +195,7 @@ body
 
     display: block;
 
-    margin: 20% auto;
+    margin: 25% auto;
 
     text-decoration: none;
 
@@ -169,44 +220,7 @@ body
     text-overflow: ellipsis;
 }
 
-.carousel-item
-{
-    position: absolute;
-    top: 100px;
-    right: 0;
-    bottom: 50px;
-    left: 0;
-
-    transition: all .5s ease-in-out;
-    text-align: center;
-
-    opacity: 0;
-}
-
-.arrow
-{
-    position: absolute;
-    top: 25%;
-
-    display: block;
-
-    width: 320px;
-    height: 200px;
-}
-
-.arrow-prev
-{
-    left: 1%;
-
-    opacity: .7;
-}
-
-.arrow-next
-{
-    right: 1%;
-
-    opacity: .7;
-}
+/*_______________________________________________________________________*/
 
 .target-item-2:target ~ .item-1,
 .target-item-3:target ~ .item-1,
@@ -246,6 +260,8 @@ body
 
     opacity: 1;
 }
+
+/*______________________________________________________________________*/
 
 .cat-1
 {
@@ -297,23 +313,33 @@ body
     background-image: url('cat-10.png');
 }
 
+/*_________________________________________________________________*/
+
 .overlay
 {
     position: fixed;
     z-index: 2;
-    top: 0;
+    top: 60px;
     right: 0;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
 
     display: none;
 
-    background-color: white;
+    background-color: black;
 }
 
 .overlay:target
 {
     display: block;
+}
+
+.modals
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
 }
 
 .popup
@@ -322,17 +348,18 @@ body
 
     position: absolute;
     z-index: 3;
-    top: 15%;
+    top: 0;
+    bottom: 0;
     left: 50%;
 
-    width: 70%;
-    min-width: 500px;
-    max-width: 1000px;
+    width: 1200px;
+    height: 400px;
+    margin: auto 0;
 
     transition: transform .6s ease-out;
     transform: translate(-50%, -500%);
 
-    color: black;
+    color: white;
 }
 
 .popup > img
@@ -344,26 +371,29 @@ body
 
 .popup > h2
 {
+    font-size: 50px;
+
+    display: block;
+
+    margin-bottom: 50px;
+
     text-align: center;
 }
 
 .popup > p
 {
-    margin-top: 25%;
+    font-size: 20px;
+
+    display: block;
+
+    margin: 0 20px 0 620px;
+
+    text-align: left;
 }
 
 .popup > h2:hover:first-letter
 {
     color: #f00;
-}
-
-.popup > ul
-{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-
-    text-align: left;
 }
 
 .overlay:target + .popup
