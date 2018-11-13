@@ -45,9 +45,19 @@ body
     pointer-events: auto;
 }
 
-.modal:target > .close-body-link
+.modal:target ~ .close-body-link
 {
     display: block;
+}
+
+.modal:target ~ .close-common
+{
+    display: inline-block;
+    position: absolute;
+    top: 29%;
+    left: 73.2%;
+    z-index: 999999;
+    font-size: 110%;
 }
 
 .modal-inner
@@ -62,6 +72,7 @@ body
 {
     display: inline-block;
     vertical-align: top;
+    margin-top: 20px;
 }
 
 .close-body-link
@@ -124,13 +135,6 @@ body
     position: relative;
     line-height: 140px;
     margin: auto;
-}
-
-.close
-{
-    display: block;
-    text-align: right;
-    font-size: 110%;
 }
 
 .close-link:hover,
@@ -200,6 +204,7 @@ body
     padding-right: 5px;
 }
 
+.close-common,
 .indicator
 {
     display: none;
