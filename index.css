@@ -11,7 +11,12 @@ body
     font-family: 'PT Sans Narrow', arial;
     font-size: 22px;
     text-align: center;
-    height: 10vh;
+    height: 60px;
+}
+
+.head > h1
+{
+    margin-top: 0;
 }
 
 .head::first-letter
@@ -19,18 +24,22 @@ body
     color: #f33446;
 }
 
-footer
-{
-    position: sticky;
-    font-family: arial;
-    font-size: 14px;
-    border-top: 1px solid #000;
-    bottom: 0;
-}
-
 img:hover
 {
     box-shadow: 0 0 5px 1px #505050;
+}
+
+footer
+{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background: #fff;
+    width: 100%;
+    font-family: arial;
+    font-size: 14px;
+    border-top: 1px solid #000;
+    height: 80px;
 }
 
 .footer-left
@@ -41,13 +50,19 @@ img:hover
 
 .footer-right
 {
-    float: right;
+    position: fixed;
+    right: 6px;
+    bottom: 0px;
+}
+.footer-right a
+{
+    color: #4c4cd8;
 }
 
-.footer-right a,
 .footer-left a 
 {
     color: #4c4cd8;
+    padding: 0 4px;
 }
 
 .footer-left img
@@ -93,9 +108,11 @@ label
 .carousel
 {
     width: 100%;
-    height: 70vh;
     overflow: hidden;
     text-align: center;
+    margin-top: 5%;
+    vertical-align: middle;
+    
 }
 
 .carousel-list
@@ -112,6 +129,7 @@ label
     display: inline-block;
     width: 350px;
     position: relative;
+    vertical-align: middle;
 }
 
 .carousel-list img
@@ -199,7 +217,7 @@ label
 .carousel input:nth-child(5):checked ~ .cat5,
 .carousel input:nth-child(6):checked ~ .cat6
 {
-    background-position: 0 -2px;
+    background-position: 0 -3px;
 }
 
 /*#region Модальное окно*/
@@ -227,7 +245,7 @@ label
     pointer-events: auto;
 }
 
-.modalDialog > div
+.modalDialog > main
 {
     width: 400px;
     display: inline-block;
@@ -238,7 +256,7 @@ label
     background: linear-gradient(#fff, #999);
 }
 
-.modalDialog > div img
+.modalDialog > main img
 {
     width: 390px;
     margin-top: 5%;
