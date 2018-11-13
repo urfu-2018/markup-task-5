@@ -152,6 +152,7 @@ label
 }
 
 /*#region движение карусели*/
+
 .carousel input:nth-child(1):checked ~ .carousel-list
 {
     transform: translateX(570px);
@@ -181,9 +182,11 @@ label
 {
     transform: translateX(-1190px);
 }
+
 /*#endregion*/
 
 /*#region для активную картику делаем больше и убираем прозрачность*/
+
 .carousel input:nth-child(1):checked ~ .carousel-list .list-item .img-cat1,
 .carousel input:nth-child(2):checked ~ .carousel-list .list-item .img-cat2,
 .carousel input:nth-child(3):checked ~ .carousel-list .list-item .img-cat3,
@@ -203,9 +206,11 @@ label
 {
     opacity: 1;
 }
+
 /*#endregion*/
 
 /*#region выводим имя котика*/
+
 .carousel input:nth-child(1):checked ~ .carousel-list .list-item:hover .name1,
 .carousel input:nth-child(2):checked ~ .carousel-list .list-item:hover .name2,
 .carousel input:nth-child(3):checked ~ .carousel-list .list-item:hover .name3,
@@ -218,6 +223,7 @@ label
 /*#endregion*/
 
 /*#region подмена изображения в circle*/
+
 .carousel input:nth-child(1):checked ~ .cat1,
 .carousel input:nth-child(2):checked ~ .cat2,
 .carousel input:nth-child(3):checked ~ .cat3,
@@ -227,6 +233,7 @@ label
 {
     background-position: 0 -3px;
 }
+
 /*#endregion*/
 
 /*#region Модальное окно*/
