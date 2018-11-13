@@ -100,7 +100,7 @@ body
 .cat-card:target + .overlay + .cat-card .popup-ref .cat-name.hidden-name,
 .cat-card:target + .cat-card .popup-ref .cat-name.hidden-name
 {
-    display: initial;
+    visibility: visible;
 }
 
 .cat-card .simple-image
@@ -136,12 +136,12 @@ body
 
 .hidden-name
 {
-    display: none;
+    visibility: hidden;
     z-index: 1;
     left: 0;
+    top: 10vh;
     position: absolute;
     text-align: center;
-    top: 29%;
     width: 100%;
 }
 
