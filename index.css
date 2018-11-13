@@ -117,6 +117,7 @@ footer ul
 {
     width: fit-content;
     margin: 0 auto;
+    display: table;
 }
 
 .bullet
