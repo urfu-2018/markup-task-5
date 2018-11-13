@@ -32,8 +32,8 @@ img:hover
 footer
 {
     position: fixed;
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     background: #fff;
     width: 100%;
     font-family: arial;
@@ -52,8 +52,9 @@ footer
 {
     position: fixed;
     right: 6px;
-    bottom: 0px;
+    bottom: 0;
 }
+
 .footer-right a
 {
     color: #4c4cd8;
@@ -245,7 +246,7 @@ label
     pointer-events: auto;
 }
 
-.modalDialog > main
+.modalDialog > div
 {
     width: 400px;
     display: inline-block;
@@ -256,7 +257,7 @@ label
     background: linear-gradient(#fff, #999);
 }
 
-.modalDialog > main img
+.modalDialog > div img
 {
     width: 390px;
     margin-top: 5%;
