@@ -163,7 +163,7 @@ input
 .modal-box
 {
     position: fixed;
-    z-index: 4000;
+    z-index: 3000;
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, .8);
@@ -173,6 +173,7 @@ input
 
 .modal-box-content
 {
+    position: absolute;
     height: 50%;
     width: 75%;
     white-space: normal;
@@ -180,6 +181,8 @@ input
     color: #fff;
     text-align: left;
     display: table;
+    z-index: 4000;
+    pointer-events: none;
 }
 
 .modal-photo-section,
@@ -373,4 +376,15 @@ a
 .inp-cat10:checked ~ section > .fisheye10
 {
     display: initial;
+}
+
+.background-exit
+{
+    display: inline-block;
+    position: absolute;
+    z-index: 3500;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
 }
