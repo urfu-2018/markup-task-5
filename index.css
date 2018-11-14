@@ -1,3 +1,9 @@
+@font-face
+{
+    font-family: 'PT Sans Narrow';
+    src: url('pt-sans-narrow_[allfont.ru].ttf');
+}
+
 body
 {
     margin: 0;
@@ -5,21 +11,25 @@ body
 
 .head
 {
+    position: sticky;
+    background: #fff;
+    top: 0;
     border-bottom: 1px solid #000;
-    font-family: 'PT Sans Narrow', arial;
+    font-family: 'PT Sans Narrow';
     font-size: 22px;
     text-align: center;
     height: 60px;
+    z-index: 2;
+}
+
+.head > h1::first-letter
+{
+    color: #f33446;
 }
 
 .head > h1
 {
     margin-top: 0;
-}
-
-.head::first-letter
-{
-    color: #f33446;
 }
 
 img:hover
@@ -56,12 +66,14 @@ footer
 .footer-right a
 {
     color: #4c4cd8;
+    text-decoration: none;
 }
 
 .footer-left a 
 {
     color: #4c4cd8;
     padding: 0 4px;
+    text-decoration: none;
 }
 
 .footer-left img
@@ -89,9 +101,10 @@ input
 {
     display: none;
     position: absolute;
+    text-align: center;
     left: 0;
     top: 0;
-    width: 350px;
+    width: 280px;
     height: 233.6px;
     border-radius: 5px;
     background: #00000056;
@@ -104,27 +117,24 @@ label
 
 .carousel
 {
-    width: 100%;
     overflow: hidden;
-    text-align: center;
-    margin-top: 5%;
-    vertical-align: middle;
-    
+    margin-top: calc(20% - 167px);
 }
 
 .carousel-list
 {
     white-space: nowrap;
     border: none;
+    height: 235px;
     transition: transform .3s;
-    margin-top: 5%;
+    padding: 0;
 }
 
-.carousel-list .list-item
+.carousel-list li
 {
     white-space: normal; /* сброс */
     display: inline-block;
-    width: 350px;
+    width: 280px;
     position: relative;
     vertical-align: middle;
 }
@@ -147,72 +157,90 @@ label
     height: 38px;
 }
 
+.circle-main
+{
+    width: 100%;
+    text-align: center;
+}
+
 .carousel input:nth-child(1):checked ~ .carousel-list
 {
-    transform: translateX(570px);
+    transform: translateX(calc(50% - 195px));
 }
 
 .carousel input:nth-child(2):checked ~ .carousel-list
 {
-    transform: translateX(210px);
+    transform: translateX(calc(50% - 490px));
 }
 
 .carousel input:nth-child(3):checked ~ .carousel-list
 {
-    transform: translateX(-140px);
+    transform: translateX(calc(50% - 770px));
 }
 
 .carousel input:nth-child(4):checked ~ .carousel-list
 {
-    transform: translateX(-490px);
+    transform: translateX(calc(50% - 1050px));
 }
 
 .carousel input:nth-child(5):checked ~ .carousel-list
 {
-    transform: translateX(-840px);
+    transform: translateX(calc(50% - 1330px));
 }
 
 .carousel input:nth-child(6):checked ~ .carousel-list
 {
-    transform: translateX(-1190px);
+    transform: translateX(calc(50% - 1610px));
 }
 
-.carousel input:nth-child(1):checked ~ .carousel-list .list-item .img-cat1,
-.carousel input:nth-child(2):checked ~ .carousel-list .list-item .img-cat2,
-.carousel input:nth-child(3):checked ~ .carousel-list .list-item .img-cat3,
-.carousel input:nth-child(4):checked ~ .carousel-list .list-item .img-cat4,
-.carousel input:nth-child(5):checked ~ .carousel-list .list-item .img-cat5,
-.carousel input:nth-child(6):checked ~ .carousel-list .list-item .img-cat6
+.carousel input:nth-child(1):checked ~ .carousel-list .list-item1 .img-cat1,
+.carousel input:nth-child(2):checked ~ .carousel-list .list-item2 .img-cat2,
+.carousel input:nth-child(3):checked ~ .carousel-list .list-item3 .img-cat3,
+.carousel input:nth-child(4):checked ~ .carousel-list .list-item4 .img-cat4,
+.carousel input:nth-child(5):checked ~ .carousel-list .list-item5 .img-cat5,
+.carousel input:nth-child(6):checked ~ .carousel-list .list-item6 .img-cat6
 {
     width: 350px;
 }
 
-.carousel input:nth-child(1):checked ~ .carousel-list .list-item .img-cat1 img,
-.carousel input:nth-child(2):checked ~ .carousel-list .list-item .img-cat2 img,
-.carousel input:nth-child(3):checked ~ .carousel-list .list-item .img-cat3 img,
-.carousel input:nth-child(4):checked ~ .carousel-list .list-item .img-cat4 img,
-.carousel input:nth-child(5):checked ~ .carousel-list .list-item .img-cat5 img,
-.carousel input:nth-child(6):checked ~ .carousel-list .list-item .img-cat6 img
+.carousel input:nth-child(1):checked ~ .carousel-list .list-item1,
+.carousel input:nth-child(2):checked ~ .carousel-list .list-item2,
+.carousel input:nth-child(3):checked ~ .carousel-list .list-item3,
+.carousel input:nth-child(4):checked ~ .carousel-list .list-item4,
+.carousel input:nth-child(5):checked ~ .carousel-list .list-item5,
+.carousel input:nth-child(6):checked ~ .carousel-list .list-item6
+{
+    width: 350px;
+    margin: 0 20px;
+}
+
+.carousel input:nth-child(1):checked ~ .carousel-list .list-item1 .img-cat1 img,
+.carousel input:nth-child(2):checked ~ .carousel-list .list-item2 .img-cat2 img,
+.carousel input:nth-child(3):checked ~ .carousel-list .list-item3 .img-cat3 img,
+.carousel input:nth-child(4):checked ~ .carousel-list .list-item4 .img-cat4 img,
+.carousel input:nth-child(5):checked ~ .carousel-list .list-item5 .img-cat5 img,
+.carousel input:nth-child(6):checked ~ .carousel-list .list-item6 .img-cat6 img
 {
     opacity: 1;
 }
 
-.carousel input:nth-child(1):checked ~ .carousel-list .list-item:hover .name1,
-.carousel input:nth-child(2):checked ~ .carousel-list .list-item:hover .name2,
-.carousel input:nth-child(3):checked ~ .carousel-list .list-item:hover .name3,
-.carousel input:nth-child(4):checked ~ .carousel-list .list-item:hover .name4,
-.carousel input:nth-child(5):checked ~ .carousel-list .list-item:hover .name5,
-.carousel input:nth-child(6):checked ~ .carousel-list .list-item:hover .name6
+.carousel input:nth-child(1):checked ~ .carousel-list .list-item1:hover .name1,
+.carousel input:nth-child(2):checked ~ .carousel-list .list-item2:hover .name2,
+.carousel input:nth-child(3):checked ~ .carousel-list .list-item3:hover .name3,
+.carousel input:nth-child(4):checked ~ .carousel-list .list-item4:hover .name4,
+.carousel input:nth-child(5):checked ~ .carousel-list .list-item5:hover .name5,
+.carousel input:nth-child(6):checked ~ .carousel-list .list-item6:hover .name6
 {
     display: inline-block;
+    width: 350px;
 }
 
-.carousel input:nth-child(1):checked ~ .cat1,
-.carousel input:nth-child(2):checked ~ .cat2,
-.carousel input:nth-child(3):checked ~ .cat3,
-.carousel input:nth-child(4):checked ~ .cat4,
-.carousel input:nth-child(5):checked ~ .cat5,
-.carousel input:nth-child(6):checked ~ .cat6
+.carousel input:nth-child(1):checked ~ section .cat1,
+.carousel input:nth-child(2):checked ~ section .cat2,
+.carousel input:nth-child(3):checked ~ section .cat3,
+.carousel input:nth-child(4):checked ~ section .cat4,
+.carousel input:nth-child(5):checked ~ section .cat5,
+.carousel input:nth-child(6):checked ~ section .cat6
 {
     background-position: 0 -3px;
 }
@@ -226,7 +254,7 @@ label
     bottom: 0;
     left: 0;
     background: #000000a6;
-    z-index: 99999;
+    z-index: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
@@ -236,7 +264,7 @@ label
 
 .modalDialog:target
 {
-    display: block;
+    display: flex;
     pointer-events: auto;
 }
 
@@ -245,10 +273,11 @@ label
     width: 400px;
     display: inline-block;
     position: relative;
-    margin: 10% auto;
+    margin: auto;
     padding: 5px 20px 13px;
     border-radius: 10px;
     background: linear-gradient(#fff, #999);
+    text-align: center;
 }
 
 .modalDialog > section img
