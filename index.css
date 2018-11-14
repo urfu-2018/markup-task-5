@@ -79,7 +79,7 @@ body
 
 .cat-name
 {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
     line-height: 150px;
     text-align: center;
 }
@@ -157,6 +157,33 @@ footer
 {
     content: '\2709  ';
     color: rgba(0, 0, 0, 1);
+}
+
+.dot-labels
+{
+    margin: auto;
+    width: 250px;
+}
+
+.dot-cat-label img
+{
+    width: 20px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+input[id='cat1']:checked ~ .dot-labels label[for='cat1'] img,
+input[id='cat2']:checked ~ .dot-labels label[for='cat2'] img,
+input[id='cat3']:checked ~ .dot-labels label[for='cat3'] img,
+input[id='cat4']:checked ~ .dot-labels label[for='cat4'] img,
+input[id='cat5']:checked ~ .dot-labels label[for='cat5'] img,
+input[id='cat6']:checked ~ .dot-labels label[for='cat6'] img,
+input[id='cat7']:checked ~ .dot-labels label[for='cat7'] img,
+input[id='cat8']:checked ~ .dot-labels label[for='cat8'] img,
+input[id='cat9']:checked ~ .dot-labels label[for='cat9'] img,
+input[id='cat10']:checked ~ .dot-labels label[for='cat10'] img
+{
+    opacity: 1;
 }
 
 input[id='cat1']:checked ~ .cat-items-wrapper > .cat1:hover > .black-block,
@@ -404,8 +431,8 @@ input[id='cat10']:checked ~ .cat-items-wrapper > .cat10:hover > .modal-link
 .overlay
 {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 60px;
+    bottom: 85px;
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, .9);
@@ -459,7 +486,7 @@ input[id='cat10']:checked ~ .cat-items-wrapper > .cat10:hover > .modal-link
 }
 
 .modal-cat-name,
-.cat-info
+.modal-cat-info
 {
     display: block;
     margin: 20px auto auto 400px;
@@ -471,7 +498,7 @@ input[id='cat10']:checked ~ .cat-items-wrapper > .cat10:hover > .modal-link
     font-size: 30px;
 }
 
-.cat-info
+.modal-cat-info
 {
     font-size: 20px;
 }
