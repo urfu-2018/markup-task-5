@@ -30,7 +30,6 @@
 {
     font-family: 'Arial', sans-serif;
     font-size: 14px;
-    position: fixed;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
@@ -67,6 +66,24 @@
     padding-top: 50px;
     height: 600px;
     overflow: hidden;
+}
+
+.body-wrapper
+{
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+
+.body-wrapper:after
+{
+    content: '';
+    display: block;
+}
+
+.contact-info,
+.body-wrapper:after
+{
+    height: 50px;
 }
 
 .cat-selector
