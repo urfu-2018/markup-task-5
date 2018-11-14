@@ -44,7 +44,9 @@ input
     overflow: hidden;
     border: 1px solid #d8d8d8;
     height: 230px;
-    width: 400px;
+    /*height: 16%;*/
+    /*width: 400px;*/
+    width: 28%;
     margin: 7px;
     display: inline-block;
     background: #000;
@@ -210,7 +212,9 @@ a[href^='mailto']
 .carousel[value='item9']:checked ~ .slides .item-9
 {
     height: 290px;
-    width: 450px;
+    /*height: 20%;*/
+    /*width: 450px;*/
+    width: 31%;
     opacity: 1;
 }
 
