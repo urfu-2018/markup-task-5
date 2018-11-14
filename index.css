@@ -26,10 +26,10 @@ body
 
 .header
 {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #d3d3d3;
     width: 100%;
     text-align: center;
-    background-color: white;
+    background-color: #ffffff;
     top: 0;
     left: 0;
     z-index: 1;
@@ -45,7 +45,7 @@ body
 
 .store-name::first-letter
 {
-    color: red;
+    color: #ff0000;
 }
 
 .header-wrapper
@@ -62,11 +62,10 @@ body
 {
     left: 0;
     bottom: 0;
-    border-top: 1px solid gray;
+    border-top: 1px solid #d3d3d3;
     width: 100%;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    font: 14px Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
 }
 
 .float-left
@@ -74,35 +73,36 @@ body
     float: left;
 }
 
-.float-right
+.right-footer-element
 {
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
-.footer-element-margin
+.footer-element
 {
     margin: 10px 20px 20px;
 }
 
 .left-footer-info
 {
-    color: gray;
+    color: #d3d3d3;
 }
 
-.footer > .footer-element-margin > a
+.footer > .footer-element > a
 {
     color: #4c4cd8;
 }
 
-.footer > .footer-element-margin > img
+.footer > .footer-element > a::before
 {
-    width: 12.5px;
-    height: 12.5px;
+    content: "";
     display: inline-block;
     background-image: url(img/mail-img.png);
     background-size: cover;
+    width: 13px;
+    height: 13px;
 }
 
 .carousel
@@ -135,7 +135,6 @@ body
 
 .carousel-pointers
 {
-    /* отключаем стиль маркера списка */
     position: absolute;
     top: 80%;
     text-align: center;
@@ -194,7 +193,7 @@ body
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 90;
+    z-index: 70;
 }
 
 .item-1
@@ -245,7 +244,6 @@ body
 .item-10
 {
     background-image: url(img/Russian-Blue.jpg);
-    background-position: center right;
 }
 
 .carousel-1:checked ~ .carousel
@@ -330,9 +328,14 @@ body
 .cat-name
 {
     font-size: 50px;
-    color: white;
+    color: #ffffff;
     font-family: 'Embrionic 85 Swash', sans-serif;
     text-align: center;
+}
+
+.modal-label
+{
+    display: none;
 }
 
 .carousel-1:checked ~ .carousel .item-1:hover .name-only,
@@ -348,6 +351,21 @@ body
 {
     visibility: visible;
 }
+
+.carousel-1:checked ~ .carousel .item-1 .modal-label,
+.carousel-2:checked ~ .carousel .item-2 .modal-label,
+.carousel-3:checked ~ .carousel .item-3 .modal-label,
+.carousel-4:checked ~ .carousel .item-4 .modal-label,
+.carousel-5:checked ~ .carousel .item-5 .modal-label,
+.carousel-6:checked ~ .carousel .item-6 .modal-label,
+.carousel-7:checked ~ .carousel .item-7 .modal-label,
+.carousel-8:checked ~ .carousel .item-8 .modal-label,
+.carousel-9:checked ~ .carousel .item-9 .modal-label,
+.carousel-10:checked ~ .carousel .item-10 .modal-label
+{
+    display: block;
+}
+
 
 .desc-container
 {
@@ -374,15 +392,14 @@ body
     margin: 0 auto;
     width: 50%;
     display: none;
-    color: white;
+    color: #ffffff;
     text-align: center;
     font-family: Arial, sans-serif;
 }
 
 .cat-img
 {
-    height: 100%;
-    width: 100%;
+    width: 80%;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -394,6 +411,23 @@ body
     margin: 0 20px;
     cursor: pointer;
     font-size: 40px;
+}
+
+
+
+.checkbox-1:checked ~ .carousel-wrapper .carousel > .item-1:hover .name-only,
+.checkbox-2:checked ~ .carousel-wrapper .carousel > .item-2:hover .name-only,
+.checkbox-3:checked ~ .carousel-wrapper .carousel > .item-3:hover .name-only,
+.checkbox-4:checked ~ .carousel-wrapper .carousel > .item-4:hover .name-only,
+.checkbox-5:checked ~ .carousel-wrapper .carousel > .item-5:hover .name-only,
+.checkbox-6:checked ~ .carousel-wrapper .carousel > .item-6:hover .name-only,
+.checkbox-7:checked ~ .carousel-wrapper .carousel > .item-7:hover .name-only,
+.checkbox-8:checked ~ .carousel-wrapper .carousel > .item-8:hover .name-only,
+.checkbox-9:checked ~ .carousel-wrapper .carousel > .item-9:hover .name-only,
+.checkbox-10:checked ~ .carousel-wrapper .carousel > .item-10:hover .name-only
+{
+    visibility: hidden;
+    z-index: -100;
 }
 
 .checkbox-1:checked ~ .desc-container::before,
