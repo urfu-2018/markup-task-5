@@ -1,6 +1,6 @@
 body
 {
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0;
 }
 
@@ -55,13 +55,15 @@ body
     padding-top: 35px;
 }
 
-.main-wrapper
+.main
 {
-    height: calc(100vh - 130px);
+    min-height: calc(100vh - 133px);
+    height: auto;
+    width: 100%;
     padding-top: 60px;
 }
 
-.main-block
+.rotated-block
 {
     overflow: hidden;
     position: fixed;
@@ -139,7 +141,7 @@ body
     visibility: hidden;
     z-index: 1;
     left: 0;
-    top: 10vh;
+    top: 40%;
     position: absolute;
     text-align: center;
     width: 100%;
