@@ -53,11 +53,6 @@ body
     height: 60px;
 }
 
-/* .footer-wrapper
-{
-    height: 85px;
-} */
-
 .footer
 {
     left: 0;
@@ -95,7 +90,7 @@ body
     color: #4c4cd8;
 }
 
-.footer > .footer-element > a::before
+.footer > .footer-element > .email::before
 {
     content: '';
     display: inline-block;
