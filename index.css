@@ -38,7 +38,7 @@ main
 {
     display: inline-block;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 0 20px;
     margin: 0 auto;
     white-space: nowrap;
 }
@@ -201,7 +201,21 @@ input
     height: 50vh;
 }
 
+input:checked[class*='modal-cat'] ~ .exit
+{
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    z-index: 4000;
+}
+
 .exit
+{
+    display: none;
+}
+
+.exit-img
 {
     float: right;
     width: 50px;
