@@ -29,7 +29,7 @@ body
     border-bottom: 1px solid #d3d3d3;
     width: 100%;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #fff;
     top: 0;
     left: 0;
     z-index: 1;
@@ -45,7 +45,7 @@ body
 
 .store-name::first-letter
 {
-    color: #ff0000;
+    color: #f00;
 }
 
 .header-wrapper
@@ -65,7 +65,7 @@ body
     border-top: 1px solid #d3d3d3;
     width: 100%;
     font: 14px Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .float-left
@@ -97,7 +97,7 @@ body
 
 .footer > .footer-element > a::before
 {
-    content: "";
+    content: '';
     display: inline-block;
     background-image: url(img/mail-img.png);
     background-size: cover;
@@ -328,7 +328,7 @@ body
 .cat-name
 {
     font-size: 50px;
-    color: #ffffff;
+    color: #fff;
     font-family: 'Embrionic 85 Swash', sans-serif;
     text-align: center;
 }
@@ -366,7 +366,6 @@ body
     display: block;
 }
 
-
 .desc-container
 {
     display: block;
@@ -392,7 +391,7 @@ body
     margin: 0 auto;
     width: 50%;
     display: none;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     font-family: Arial, sans-serif;
 }
@@ -412,8 +411,6 @@ body
     cursor: pointer;
     font-size: 40px;
 }
-
-
 
 .checkbox-1:checked ~ .carousel-wrapper .carousel > .item-1:hover .name-only,
 .checkbox-2:checked ~ .carousel-wrapper .carousel > .item-2:hover .name-only,
