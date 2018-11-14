@@ -465,16 +465,6 @@ input[id='cat-10']:checked ~ nav label[for='cat-10']
     cursor: pointer;
 }
 
-.kitty-name-view h1
-{
-    
-    height: 300px;
-    width: 100%;
-    margin: 0;
-    
-    
-}
-
 .kitty-name-view h1:hover
 {
     cursor: pointer;
@@ -486,7 +476,7 @@ input[id='cat-10']:checked ~ nav label[for='cat-10']
     width: 15px;
     height: 15px;
     background: #c2c1c1;
-    border-radius: 8px;
+    border-radius: 50%;
 }
 
 nav
