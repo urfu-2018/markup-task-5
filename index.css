@@ -72,12 +72,13 @@ body,
 html
 {
     height: 100%;
+    margin: 0;
 }
 
 .body-wrapper
 {
     min-height: 100%;
-    margin-bottom: -50px;
+    margin-bottom: -70px;
 }
 
 .body-wrapper:after
@@ -89,7 +90,7 @@ html
 .contact-info,
 .body-wrapper:after
 {
-    height: 50px;
+    height: 70px;
 }
 
 .cat-selector
