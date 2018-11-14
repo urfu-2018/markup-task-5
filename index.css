@@ -43,6 +43,9 @@ main input
 
 .carousel
 {
+    --x-shift: 39.75%;
+    position: relative;
+    left: -6.9%;
     white-space: nowrap;
     height: 27em;
     margin-bottom: 10px;
@@ -56,8 +59,8 @@ main input
     display: inline-block;
     overflow: hidden;
     height: 24em;
-    width: 650px;
-    margin-right: 100px;
+    width: 34%;
+    margin-right: 5.52%;
     vertical-align: middle;
     box-shadow: 0 0 10px #505050;
 }
@@ -162,52 +165,52 @@ main input
 
 .korat-checkbox:checked ~ .carousel
 {
-    transform: translateX(625px);
+    transform: translate3d(var(--x-shift), 0, 0);
 }
 
 .singapura-checkbox:checked ~ .carousel
 {
-    transform: translateX(-129px);
+    transform: translate3d(0, 0, 0);
 }
 
 .bengal-checkbox:checked ~ .carousel
 {
-    transform: translateX(-884px);
+    transform: translate3d(calc(var(--x-shift) * (-1)), 0, 0);
 }
 
 .siberian-checkbox:checked ~ .carousel
 {
-    transform: translateX(-1638px);
+    transform: translate3d(calc(var(--x-shift) * (-2)), 0, 0);
 }
 
 .highlend-fold-checkbox:checked ~ .carousel
 {
-    transform: translateX(-2393px);
+    transform: translate3d(calc(var(--x-shift) * (-3)), 0, 0);
 }
 
 .egyptian-mau-checkbox:checked ~ .carousel
 {
-    transform: translateX(-3147px);
+    transform: translate3d(calc(var(--x-shift) * (-4)), 0, 0);
 }
 
 .norwegian-forest-checkbox:checked ~ .carousel
 {
-    transform: translateX(-3902px);
+    transform: translate3d(calc(var(--x-shift) * (-5)), 0, 0);
 }
 
 .bombei-checkbox:checked ~ .carousel
 {
-    transform: translateX(-4655px);
+    transform: translate3d(calc(var(--x-shift) * (-6)), 0, 0);
 }
 
 .american-curl-checkbox:checked ~ .carousel
 {
-    transform: translateX(-5411px);
+    transform: translate3d(calc(var(--x-shift) * (-7)), 0, 0);
 }
 
 .shotlandskaya-v-checkbox:checked ~ .carousel
 {
-    transform: translateX(-6165px);
+    transform: translate3d(calc(var(--x-shift) * (-8)), 0, 0);
 }
 
 .radio-carousel
@@ -264,15 +267,16 @@ for='shotlandskaya-v']
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
+    width: 50%;
     z-index: 10;
 }
 
 .image
 {
-    display: inline-block;
+    float: left;
     overflow: hidden;
     height: 27em;
-    width: 650px;
+    width: calc(70% - 20px);
 }
 
 .modal-windows .close-modal-window
@@ -294,9 +298,9 @@ for='shotlandskaya-v']
 
 .modal-window .info
 {
-    display: inline-block;
+    float: left;
     vertical-align: top;
-    max-width: 300px;
+    width: 30%;
     margin-top: 50px;
     margin-left: 20px;
     color: #fff;
