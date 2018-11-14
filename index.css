@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
 
-
 .header
 {
     z-index: 1;
@@ -15,7 +14,8 @@
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.footer {
+.footer
+{
     z-index: 1;
     background-color: white;
     position: fixed;
@@ -135,4 +135,3 @@ img
     text-align: center;
     height: 250px;
 }
-
