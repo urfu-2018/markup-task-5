@@ -65,16 +65,16 @@ input
 
 /* боковые котики меньше и прозрачнее */
 
-.inp-cat1:checked:checked ~ .cat1 > label > .cat-photo,
-.inp-cat2:checked:checked ~ .cat2 > label > .cat-photo,
-.inp-cat3:checked:checked ~ .cat3 > label > .cat-photo,
-.inp-cat4:checked:checked ~ .cat4 > label > .cat-photo,
-.inp-cat5:checked:checked ~ .cat5 > label > .cat-photo,
-.inp-cat6:checked:checked ~ .cat6 > label > .cat-photo,
-.inp-cat7:checked:checked ~ .cat7 > label > .cat-photo,
-.inp-cat8:checked:checked ~ .cat8 > label > .cat-photo,
-.inp-cat9:checked:checked ~ .cat9 > label > .cat-photo,
-.inp-cat10:checked:checked ~ .cat10 > label > .cat-photo
+.inp-cat1:checked:checked ~ .cat1 .cat-photo,
+.inp-cat2:checked:checked ~ .cat2 .cat-photo,
+.inp-cat3:checked:checked ~ .cat3 .cat-photo,
+.inp-cat4:checked:checked ~ .cat4 .cat-photo,
+.inp-cat5:checked:checked ~ .cat5 .cat-photo,
+.inp-cat6:checked:checked ~ .cat6 .cat-photo,
+.inp-cat7:checked:checked ~ .cat7 .cat-photo,
+.inp-cat8:checked:checked ~ .cat8 .cat-photo,
+.inp-cat9:checked:checked ~ .cat9 .cat-photo,
+.inp-cat10:checked:checked ~ .cat10 .cat-photo
 {
     opacity: 1;
     height: 25vw;
@@ -182,7 +182,6 @@ input
     text-align: left;
     display: table;
     z-index: 4000;
-    pointer-events: none;
 }
 
 .modal-photo-section,
@@ -204,7 +203,16 @@ input
     height: 50vh;
 }
 
-input:checked[class*='modal-cat'] ~ .exit
+.inp-modal-cat1:checked ~ .exit,
+.inp-modal-cat2:checked ~ .exit,
+.inp-modal-cat3:checked ~ .exit,
+.inp-modal-cat4:checked ~ .exit,
+.inp-modal-cat5:checked ~ .exit,
+.inp-modal-cat6:checked ~ .exit,
+.inp-modal-cat7:checked ~ .exit,
+.inp-modal-cat8:checked ~ .exit,
+.inp-modal-cat9:checked ~ .exit,
+.inp-modal-cat10:checked ~ .exit
 {
     display: block;
     position: absolute;
@@ -213,7 +221,8 @@ input:checked[class*='modal-cat'] ~ .exit
     z-index: 4000;
 }
 
-.exit
+.exit,
+.background-exit
 {
     display: none;
 }
@@ -224,6 +233,26 @@ input:checked[class*='modal-cat'] ~ .exit
     width: 50px;
     filter: invert(100%);
     /* файл - с черным крестиком, так проще всего исправить :) */
+}
+
+.inp-modal-cat1:checked ~ .background-exit,
+.inp-modal-cat2:checked ~ .background-exit,
+.inp-modal-cat3:checked ~ .background-exit,
+.inp-modal-cat4:checked ~ .background-exit,
+.inp-modal-cat5:checked ~ .background-exit,
+.inp-modal-cat6:checked ~ .background-exit,
+.inp-modal-cat7:checked ~ .background-exit,
+.inp-modal-cat8:checked ~ .background-exit,
+.inp-modal-cat9:checked ~ .background-exit,
+.inp-modal-cat10:checked ~ .background-exit
+{
+    display: inline-block;
+    position: absolute;
+    z-index: 3500;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* footer */
@@ -277,52 +306,52 @@ a
 
 /* scroll */
 
-.inp-cat1:checked:checked ~ .cat-box
+.inp-cat1:checked ~ .cat-box
 {
     transform: translate(35vw);
 }
 
-.inp-cat2:checked:checked ~ .cat-box
+.inp-cat2:checked ~ .cat-box
 {
     transform: translate(5vw);
 }
 
-.inp-cat3:checked:checked ~ .cat-box
+.inp-cat3:checked ~ .cat-box
 {
     transform: translate(-24vw);
 }
 
-.inp-cat4:checked:checked ~ .cat-box
+.inp-cat4:checked ~ .cat-box
 {
     transform: translate(-54vw);
 }
 
-.inp-cat5:checked:checked ~ .cat-box
+.inp-cat5:checked ~ .cat-box
 {
     transform: translate(-83vw);
 }
 
-.inp-cat6:checked:checked ~ .cat-box
+.inp-cat6:checked ~ .cat-box
 {
     transform: translate(-112vw);
 }
 
-.inp-cat7:checked:checked ~ .cat-box
+.inp-cat7:checked ~ .cat-box
 {
     transform: translate(-141vw);
 }
 
-.inp-cat8:checked:checked ~ .cat-box
+.inp-cat8:checked ~ .cat-box
 {
     transform: translate(-171vw);
 }
 
-.inp-cat9:checked:checked ~ .cat-box
+.inp-cat9:checked ~ .cat-box
 {
     transform: translate(-200vw);
 }
 
-.inp-cat10:checked:checked ~ .cat-box
+.inp-cat10:checked ~ .cat-box
 {
     transform: translate(-229vw);
 }
@@ -376,15 +405,4 @@ a
 .inp-cat10:checked ~ section > .fisheye10
 {
     display: initial;
-}
-
-.background-exit
-{
-    display: inline-block;
-    position: absolute;
-    z-index: 3500;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
 }
