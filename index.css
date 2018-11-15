@@ -14,7 +14,7 @@ header
     z-index: 4;
 }
 
-header h1
+.mur_market
 {
     font: 32px 'PT Sans Narrow', sans-serif;
     margin: .2em;
@@ -67,13 +67,8 @@ a
 
 .mail::before
 {
-    content: '';
-    display: block;
-    background: url('resources/email.png') no-repeat;
-    width: 24px;
-    height: 24px;
-    float: left;
-    margin: -3px 6px 0 0;
+    content: '\2709 ';
+    margin: 0 4px;
 }
 
 .carousel_images
@@ -89,7 +84,8 @@ a
 main
 {
     padding-top: 90px;
-    min-height: 500px;
+    height: 75vh;
+    position: relative;
 }
 
 main input
@@ -133,6 +129,12 @@ main input
 {
     opacity: .7;
     background: #000;
+}
+
+.cat_name_block:hover,
+.bt_close:hover
+{
+    cursor: pointer;
 }
 
 .radio1:checked ~ .carousel .cat_name_block1,
@@ -216,4 +218,14 @@ main input
 .popup_bt5:checked ~ .popup5
 {
     display: block;
+}
+
+.emails_wrapper
+{
+    padding: 0;
+}
+
+.emails_wrapper > li
+{
+    list-style-type: none;
 }
