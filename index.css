@@ -4,9 +4,28 @@
     src: url('pt-sans-narrow_[allfont.ru].ttf');
 }
 
-body
+body,
+html
 {
     margin: 0;
+    height: 100%;
+}
+
+.page-wrap 
+{
+    min-height: 100%;
+    margin-bottom: -81px;
+}
+
+.page-wrap:after
+{
+    display: block;
+}
+
+footer,
+.page-wrap:after 
+{
+    height: 80px;
 }
 
 .head
@@ -44,12 +63,6 @@ footer
     font-family: arial;
     font-size: 14px;
     border-top: 1px solid #000;
-}
-
-.carousel::after
-{
-    content: '';
-    display: block;
 }
 
 .footer-left
@@ -119,9 +132,10 @@ label
 .carousel
 {
     overflow: hidden;
-    margin-top: calc(20% - 167px);
-    margin-bottom: -10px;
-    height: 65vh;
+    min-height: calc(100vh - 61px - 81px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .carousel-list
