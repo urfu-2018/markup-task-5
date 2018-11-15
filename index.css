@@ -212,8 +212,10 @@ html
 
 .cat-modal-container
 {
-    margin-left: calc(50% - 250px);
-    margin-top: calc(25% - 250px);
+    position: absolute;
+    margin-top: 50px;
+    left: calc(50% - 250px);
+    top: calc(50% - 250px);
 }
 
 .cat-modal-container > .cat-picture,
