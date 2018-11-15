@@ -5,13 +5,6 @@ html
     position: relative;
 }
 
-.name
-{
-    z-index: 111;
-    display: none;
-    font-size: 10px;
-}
-
 header
 {
     font-family: 'Black And White Picture', sans-serif;
@@ -107,19 +100,24 @@ img
     opacity: .7;
 }
 
-.one:checked:hover ~ .slides .slides-1 img,
-.two:checked:hover ~ .slides .slides-2 img,
-.three:checked:hover ~ .slides .slides-3 img
+.one:checked:checked ~ .slides .slides-1:hover img,
+.two:checked:checked ~ .slides .slides-2:hover img,
+.three:checked:checked ~ .slides .slides-3:hover img
 {
     opacity: .7;
 }
 
-.one:checked:hover ~ .slides .slides-1 .name,
-.two:checked:hover ~ .slides .slides-2 .name,
-.three:checked:hover ~ .slides .slides-3 .name
+.one:checked:checked ~ .slides .slides-1:hover .overlay,
+.two:checked:checked ~ .slides .slides-2:hover .overlay,
+.three:checked:checked ~ .slides .slides-3:hover .overlay
 {
+    display: inline;
+}
+
+.overlay
+{
+    display: none;
     position: absolute;
-    display: inline-block;
     left: calc(50% - 175px);
     top: calc(50% - 190px);
     font-size: 25px;
