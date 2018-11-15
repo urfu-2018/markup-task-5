@@ -58,7 +58,6 @@ body
 .main
 {
     min-height: calc(100vh - 133px);
-    height: auto;
     width: 100%;
     padding-top: 60px;
 }
@@ -84,7 +83,6 @@ body
     margin: 21vw auto;
 }
 
-.cat-card:target + .overlay + .cat-card .hidden-image,
 .cat-card:target + .cat-card .hidden-image
 {
     box-shadow: 0 0 20px 5px #000;
@@ -93,13 +91,11 @@ body
     opacity: 1;
 }
 
-.cat-card:target + .overlay + .cat-card .simple-image,
 .cat-card:target + .cat-card .simple-image
 {
     visibility: hidden;
 }
 
-.cat-card:target + .overlay + .cat-card .popup-ref .cat-name.hidden-name,
 .cat-card:target + .cat-card .popup-ref .cat-name.hidden-name
 {
     visibility: visible;
@@ -165,10 +161,10 @@ body
 
 .overlay
 {
+    overflow: hidden;
     position: absolute;
-    right: 60px;
-    width: calc(100% - 130px);
-    height: 100%;
+    width: 100%;
+    height: calc(100vh - 133px);
     background: rgba(0, 0, 0, .7);
     transition: opacity 500ms;
     visibility: hidden;
@@ -182,19 +178,19 @@ body
 
 .popup-block
 {
-    top: 0;
-    left: 0;
-    height: 40vh;
-    width: 60vw;
     position: absolute;
-    transform: rotate(90deg) translateX(40vw) translateY(22vh);
-    text-align: center;
-    padding: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    width: 60%;
+    margin: auto;
 }
 
 .image-container
 {
-    display: inline-block;
+    float: left;
     height: 100%;
     width: 50%;
 }
@@ -208,7 +204,7 @@ body
 
 .text
 {
-    display: inline-block;
+    position: relative;
     width: 30%;
     height: 100%;
     overflow: hidden;
@@ -221,8 +217,8 @@ body
 .close
 {
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     font-size: 50px;
     line-height: 30px;
     font-weight: bold;
