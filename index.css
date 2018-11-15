@@ -14,6 +14,11 @@
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
+.header p
+{
+    margin: 5px;
+}
+
 .footer
 {
     z-index: 1;
@@ -55,7 +60,7 @@
 
 body
 {
-    padding-top: 120px;
+    padding-top: 60px;
 }
 
 .header::first-letter
@@ -134,4 +139,360 @@ img
 {
     text-align: center;
     height: 250px;
+}
+
+.bar:checked ~ main .wrapper
+{
+    display: none;
+}
+
+.list:checked ~ main .bar-list
+{
+    display: none;
+}
+
+.wrapper
+{
+    top: 20%;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel
+{
+    list-style-type: none;
+    height: 400px;
+}
+
+.slider > label[class^='cat-']
+{
+    background-size: 400px 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 40px 20px;
+    opacity: .7;
+    cursor: pointer;
+    width: 400px;
+    height: 60vh;
+}
+
+.cat-1
+{
+    background-image: url(cat1.png);
+}
+
+.cat-2
+{
+    background-image: url(cat2.png);
+}
+
+.cat-3
+{
+    background-image: url(cat3.png);
+}
+
+.cat-4
+{
+    background-image: url(cat4.png);
+}
+
+.cat-5
+{
+    background-image: url(cat5.jpg);
+}
+
+.cat-6
+{
+    background-image: url(cat6.png);
+}
+
+.cat-7
+{
+    background-image: url(cat7.jpg);
+}
+
+.cat-8
+{
+    background-image: url(cat8.jpg);
+}
+
+.cat-9
+{
+    background-image: url(cat9.png);
+}
+
+.cat-10
+{
+    background-image: url(cat10.jpg);
+}
+
+input[name^='carousel-input']
+{
+    display: none;
+}
+
+.carousel
+{
+    transition: .5s;
+}
+
+input[id='cat1']:checked ~ .carousel .cat-1,
+input[id='cat2']:checked ~ .carousel .cat-2,
+input[id='cat3']:checked ~ .carousel .cat-3,
+input[id='cat4']:checked ~ .carousel .cat-4,
+input[id='cat5']:checked ~ .carousel .cat-5,
+input[id='cat6']:checked ~ .carousel .cat-6,
+input[id='cat7']:checked ~ .carousel .cat-7,
+input[id='cat8']:checked ~ .carousel .cat-8,
+input[id='cat9']:checked ~ .carousel .cat-9,
+input[id='cat10']:checked ~ .carousel .cat-10
+{
+    transition: .5s;
+    opacity: 1;
+    transform: scaleY(1.1);
+}
+
+input[id='cat1']:checked ~ .slider a[href='#cat-name1'],
+input[id='cat2']:checked ~ .slider a[href='#cat-name2'],
+input[id='cat3']:checked ~ .slider a[href='#cat-name3'],
+input[id='cat4']:checked ~ .slider a[href='#cat-name4'],
+input[id='cat5']:checked ~ .slider a[href='#cat-name5'],
+input[id='cat6']:checked ~ .slider a[href='#cat-name6'],
+input[id='cat7']:checked ~ .slider a[href='#cat-name7'],
+input[id='cat8']:checked ~ .slider a[href='#cat-name8'],
+input[id='cat9']:checked ~ .slider a[href='#cat-name9'],
+input[id='cat10']:checked ~ .slider a[href='#cat-name10']
+{
+    text-decoration: none;
+    display: block;
+}
+
+.cat-name
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+    width: 400px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 320px;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.carousel_popup
+{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.carousel_popup:before
+{
+    display: block;
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .9;
+}
+
+.carousel_popup:target
+{
+    display: block;
+    opacity: 1;
+}
+
+.content
+{
+    width: 1050px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+}
+
+.cat-photo
+{
+    width: 600px;
+    height: 400px;
+    float: left;
+}
+
+.long
+{
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+}
+
+.long > .character
+{
+    font-size: 36px;
+    margin: 20px;
+}
+
+.long > .description
+{
+    font-size: 18px;
+    overflow: hidden;
+    margin: 0 5px 0 20px;
+}
+
+.close
+{
+    text-decoration: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: grey;
+    font-size: 45px;
+    margin: 0;
+    display: block;
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.close:hover
+{
+    color: white;
+    transform: rotate(100grad);
+}
+
+.cat-name:hover
+{
+    transition: .3s;
+    height: 60vh;
+    opacity: 1;
+    background: rgba(0,0,0,.5);
+    cursor: pointer;
+
+}
+
+input[id='cat1']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - 220px));
+}
+
+input[id='cat2']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 440px)));
+}
+
+input[id='cat3']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*2)));
+}
+
+input[id='cat4']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*3)));
+}
+
+input[id='cat5']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*4)));
+}
+
+input[id='cat6']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*5)));
+}
+
+input[id='cat7']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*6)));
+}
+
+input[id='cat8']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*7)));
+}
+
+input[id='cat9']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*8)));
+}
+
+input[id='cat10']:checked ~ .slider
+{
+    transform: translateX(calc(50vw - (220px + 443px*9)));
+}
+
+.navigator
+{
+    position: relative;
+    left: calc(50vw - 100px);
+}
+
+.navigator label
+{
+    background-color: #d8d8d8;
+    cursor: pointer;
+    display: inline-block;
+    height: 12px;
+    margin: 15px 4px 0;
+    position: relative;
+    width: 12px;
+    border-radius: 50%;
+    transition: background .5s;
+}
+
+[class^='cat-*']:hover
+{
+    background-color: #d8d8d8;
+    cursor: pointer;
+    display: inline-block;
+    height: 12px;
+    margin: 15px 4px 0;
+    position: relative;
+    width: 12px;
+    border-radius: 50%;
+    transition: background .5s;
+}
+
+.navigator label:hover,
+input[id='cat1']:checked ~ .navigator label[for='cat1'],
+input[id='cat2']:checked ~ .navigator label[for='cat2'],
+input[id='cat3']:checked ~ .navigator label[for='cat3'],
+input[id='cat4']:checked ~ .navigator label[for='cat4'],
+input[id='cat5']:checked ~ .navigator label[for='cat5'],
+input[id='cat6']:checked ~ .navigator label[for='cat6'],
+input[id='cat7']:checked ~ .navigator label[for='cat7'],
+input[id='cat8']:checked ~ .navigator label[for='cat8'],
+input[id='cat9']:checked ~ .navigator label[for='cat9'],
+input[id='cat10']:checked ~ .navigator label[for='cat10']
+{
+    background: #979797;
+}
+
+.wrapper
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
