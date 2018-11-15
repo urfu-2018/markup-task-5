@@ -160,7 +160,7 @@ img
     white-space: nowrap;
 }
 
-.carousel
+.slider
 {
     list-style-type: none;
     height: 400px;
@@ -233,21 +233,21 @@ input[name^='carousel-input']
     display: none;
 }
 
-.carousel
+.slider
 {
     transition: .5s;
 }
 
-input[id='cat1']:checked ~ .carousel .cat-1,
-input[id='cat2']:checked ~ .carousel .cat-2,
-input[id='cat3']:checked ~ .carousel .cat-3,
-input[id='cat4']:checked ~ .carousel .cat-4,
-input[id='cat5']:checked ~ .carousel .cat-5,
-input[id='cat6']:checked ~ .carousel .cat-6,
-input[id='cat7']:checked ~ .carousel .cat-7,
-input[id='cat8']:checked ~ .carousel .cat-8,
-input[id='cat9']:checked ~ .carousel .cat-9,
-input[id='cat10']:checked ~ .carousel .cat-10
+input[id='cat1']:checked ~ .slider .cat-1,
+input[id='cat2']:checked ~ .slider .cat-2,
+input[id='cat3']:checked ~ .slider .cat-3,
+input[id='cat4']:checked ~ .slider .cat-4,
+input[id='cat5']:checked ~ .slider .cat-5,
+input[id='cat6']:checked ~ .slider .cat-6,
+input[id='cat7']:checked ~ .slider .cat-7,
+input[id='cat8']:checked ~ .slider .cat-8,
+input[id='cat9']:checked ~ .slider .cat-9,
+input[id='cat10']:checked ~ .slider .cat-10
 {
     transition: .5s;
     opacity: 1;
