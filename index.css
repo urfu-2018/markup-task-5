@@ -1,7 +1,12 @@
 @font-face
 {
     font-family: 'PT SansNarrow';
-    src: local('PT SansNarrow'), url(fonts/PT_Sans-Narrow-Web-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    src: local('PT Sans Narrow'),
+        local('PTSans-Narrow'),
+        url('fonts/pt-sans-narrow-v9-cyrillic-regular.woff2') format('woff2'),
+        url('fonts/pt-sans-narrow-v9-cyrillic-regular.woff') format('woff');
 }
 
 body
@@ -31,10 +36,8 @@ body
 
 .title
 {
-    font-family: 'PT SansNarrow';
+    font: 100 32px 'PT SansNarrow';
     text-align: center;
-    font-weight: 100;
-    font-size: 32px;
     margin: 0 0 4px;
 }
 
@@ -110,14 +113,26 @@ label
     transform: translateX(24vw);
 }
 
-.id1:checked ~ .slider .photo1
+.id1:checked ~ .slider .photo1,
+.id2:checked ~ .slider .photo2,
+.id3:checked ~ .slider .photo3,
+.id4:checked ~ .slider .photo4
 {
     height: 37.5vw;
     width: 50vw;
     opacity: 1;
 }
 
-.id1:checked ~ .slider .photo1:hover ~ .shadow
+.id1:checked ~ .slider .photo1:hover ~ .shadow,
+.id2:checked ~ .slider .photo2:hover ~ .shadow,
+.id3:checked ~ .slider .photo3:hover ~ .shadow,
+.id4:checked ~ .slider .photo4:hover ~ .shadow,
+.shadow:hover
+{
+    visibility: visible;
+}
+
+.shadow:hover ~ 
 {
     visibility: visible;
 }
@@ -127,55 +142,14 @@ label
     transform: translateX(-18.75vw);
 }
 
-.id2:checked ~ .slider .photo2
-{
-    height: 37.5vw;
-    width: 50vw;
-    opacity: 1;
-}
-
-.id2:checked ~ .slider .photo2:hover ~ .shadow
-{
-    visibility: visible;
-}
-
 .id3:checked ~ .slider
 {
     transform: translateX(-61.5vw);
 }
 
-.id3:checked ~ .slider .photo3
-{
-    height: 37.5vw;
-    width: 50vw;
-    opacity: 1;
-}
-
-.id3:checked ~ .slider .photo3:hover ~ .shadow
-{
-    visibility: visible;
-}
-
 .id4:checked ~ .slider
 {
     transform: translateX(-104.25vw);
-}
-
-.id4:checked ~ .slider .photo4
-{
-    height: 37.5vw;
-    width: 50vw;
-    opacity: 1;
-}
-
-.id4:checked ~ .slider .photo4:hover ~ .shadow
-{
-    visibility: visible;
-}
-
-.shadow:hover
-{
-    visibility: visible;
 }
 
 .shadow_input:focus ~ .modal
@@ -199,7 +173,9 @@ label
 .close
 {
     width: 2vw;
-    margin-left: 1vw;
+    position: absolute;
+    top: calc(46px + 2vw);
+    right: 2vw;
 }
 
 .inline
