@@ -44,14 +44,12 @@ footer
     font-family: arial;
     font-size: 14px;
     border-top: 1px solid #000;
-    height: 80px;
 }
 
 .carousel::after
 {
     content: '';
     display: block;
-    height: 100px;
 }
 
 .footer-left
@@ -63,7 +61,7 @@ footer
 .footer-right
 {
     float: right;
-    margin: 35px 6px;
+    margin: 35px 6px 0 0;
 }
 
 .footer-right a
@@ -123,6 +121,7 @@ label
     overflow: hidden;
     margin-top: calc(20% - 167px);
     margin-bottom: -10px;
+    height: 65vh;
 }
 
 .carousel-list
