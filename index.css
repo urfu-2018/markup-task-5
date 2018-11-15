@@ -7,7 +7,6 @@ body
 
 label,
 input,
-a,
 img
 {
     cursor: pointer;
@@ -121,7 +120,7 @@ a
 
 .right-footer-part
 {
-    text-align: right;
+    float: right;
 }
 
 .footer a
@@ -156,7 +155,7 @@ a
     position: relative;
 }
 
-.desc-card h1
+.desc-card h2
 {
     text-align: center;
     font-size: 30px;
@@ -169,7 +168,7 @@ a
     height: 100%;
 }
 
-.card span
+.card h2
 {
     position: absolute;
     width: 100%;
@@ -202,7 +201,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-1']:checked:hover ~ .blog [id='card-1'] span
+[id='cat-1']:checked:hover ~ .blog [id='card-1'] h2
 {
     display: inline;
 }
@@ -229,7 +228,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-2']:checked:hover ~ .blog .card[id='card-2'] span
+[id='cat-2']:checked:hover ~ .blog .card[id='card-2'] h2
 {
     display: inline;
 }
@@ -261,7 +260,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-3']:checked:hover ~ .blog .card[id='card-3'] span
+[id='cat-3']:checked:hover ~ .blog .card[id='card-3'] h2
 {
     display: inline;
 }
@@ -293,7 +292,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-4']:checked:hover ~ .blog .card[id='card-4'] span
+[id='cat-4']:checked:hover ~ .blog .card[id='card-4'] h2
 {
     display: inline;
 }
@@ -325,7 +324,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-5']:checked:hover ~ .blog .card[id='card-5'] span
+[id='cat-5']:checked:hover ~ .blog .card[id='card-5'] h2
 {
     display: inline;
 }
@@ -357,7 +356,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-6']:checked:hover ~ .blog .card[id='card-6'] span
+[id='cat-6']:checked:hover ~ .blog .card[id='card-6'] h2
 {
     display: inline;
 }
@@ -389,7 +388,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-7']:checked:hover ~ .blog .card[id='card-7'] span
+[id='cat-7']:checked:hover ~ .blog .card[id='card-7'] h2
 {
     display: inline;
 }
@@ -421,7 +420,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-8']:checked:hover ~ .blog .card[id='card-8'] span
+[id='cat-8']:checked:hover ~ .blog .card[id='card-8'] h2
 {
     display: inline;
 }
@@ -453,7 +452,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-9']:checked:hover ~ .blog .card[id='card-9'] span
+[id='cat-9']:checked:hover ~ .blog .card[id='card-9'] h2
 {
     display: inline;
 }
@@ -485,7 +484,7 @@ a
     filter: brightness(.75);
 }
 
-[id='cat-10']:checked:hover ~ .blog .card[id='card-10'] span
+[id='cat-10']:checked:hover ~ .blog .card[id='card-10'] h2
 {
     display: inline;
 }
