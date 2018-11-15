@@ -75,7 +75,7 @@ body
     text-align: center;
 }
 
-li
+.cat
 {
     display: inline-block;
     vertical-align: middle;
@@ -135,11 +135,11 @@ input[id='cat-5']:checked ~ .karusel-navigation .radio[for='cat-5']
 
 /*изменение центрального изображения*/
 
-input[id='cat-1']:checked ~ ul li label[for='cat-1'] img,
-input[id='cat-2']:checked ~ ul li label[for='cat-2'] img,
-input[id='cat-3']:checked ~ ul li label[for='cat-3'] img,
-input[id='cat-4']:checked ~ ul li label[for='cat-4'] img,
-input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
+input[id='cat-1']:checked ~ .karusel-list .cat label[for='cat-1'] img,
+input[id='cat-2']:checked ~ .karusel-list .cat label[for='cat-2'] img,
+input[id='cat-3']:checked ~ .karusel-list .cat label[for='cat-3'] img,
+input[id='cat-4']:checked ~ .karusel-list .cat label[for='cat-4'] img,
+input[id='cat-5']:checked ~ .karusel-list .cat label[for='cat-5'] img
 {
     width: 400px;
     height: 100%;
@@ -149,27 +149,27 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] img
 
 /*сдвиги картинок*/
 
-.karusel input:nth-child(1):checked ~ ul
+.karusel input:nth-child(1):checked ~ .karusel-list
 {
     left: calc(50% - 200px);
 }
 
-.karusel input:nth-child(2):checked ~ ul
+.karusel input:nth-child(2):checked ~ .karusel-list
 {
     left: calc(50% - 300px - 300px);
 }
 
-.karusel input:nth-child(3):checked ~ ul
+.karusel input:nth-child(3):checked ~ .karusel-list
 {
     left: calc(50% - 300px - 640px);
 }
 
-.karusel input:nth-child(4):checked ~ ul
+.karusel input:nth-child(4):checked ~ .karusel-list
 {
     left: calc(50% - 300px - 990px);
 }
 
-.karusel input:nth-child(5):checked ~ ul
+.karusel input:nth-child(5):checked ~ .karusel-list
 {
     left: calc(50% - 300px - 1375px);
 }
@@ -196,11 +196,11 @@ a[href*='open-Modal']
     z-index: 2;
 }
 
-input[id='cat-1']:checked ~ ul li:nth-child(1):hover .name,
-input[id='cat-2']:checked ~ ul li:nth-child(2):hover .name,
-input[id='cat-3']:checked ~ ul li:nth-child(3):hover .name,
-input[id='cat-4']:checked ~ ul li:nth-child(4):hover .name,
-input[id='cat-5']:checked ~ ul li:nth-child(5):hover .name
+input[id='cat-1']:checked ~ .karusel-list .cat:nth-child(1):hover .name,
+input[id='cat-2']:checked ~ .karusel-list .cat:nth-child(2):hover .name,
+input[id='cat-3']:checked ~ .karusel-list .cat:nth-child(3):hover .name,
+input[id='cat-4']:checked ~ .karusel-list .cat:nth-child(4):hover .name,
+input[id='cat-5']:checked ~ .karusel-list .cat:nth-child(5):hover .name
 {
     display: block;
 }
