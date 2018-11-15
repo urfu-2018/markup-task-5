@@ -67,7 +67,7 @@ main
 
 .carousel
 {
-    height: 270px;
+    height: 256px;
     overflow: hidden;
     position: absolute;
     transition: 1s;
@@ -118,6 +118,9 @@ input[type='radio']
 
 input[type='radio']:not(:checked) ~ section > label > img
 {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 206px;
     height: 206px;
     opacity: .8;
 }
@@ -129,6 +132,7 @@ input[id='item-4']:checked ~ section > .carousel-item-4:hover span,
 input[id='item-5']:checked ~ section > .carousel-item-5:hover span
 {
     position: absolute;
+    object-fit: cover;
     width: 256px;
     height: 256px;
     line-height: 270px;
@@ -145,6 +149,7 @@ input[id='item-4']:checked ~ section > .carousel-item-4 > img,
 input[id='item-5']:checked ~ section > .carousel-item-5 > img
 {
     height: 256px;
+    width: 256px;
     opacity: 1;
 }
 
@@ -185,12 +190,13 @@ input[id='item-5']:checked ~ .carousel
 .pop-up-window
 {
     position: absolute;
-    background: rgba(0,0,0,.4);
+    background: rgba(0,0,0,.8);
     padding: 15%;
     z-index: 2;
     display: none;
     width: 70%;
-    height: 70%;
+    height: 30%;
+    color: #fff;
 }
 
 .pop-up-window p,
@@ -199,10 +205,20 @@ input[id='item-5']:checked ~ .carousel
     display: inline-block;
 }
 
+.pop-up-window img
+{
+    vertical-align: top;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 256px;
+    width: 256px;
+}
+
 .pop-up-window p
 {
-    width: 30%;
+    width: 50%;
     height: 40%;
+    margin-right: 50px;
     text-align: center;
 }
 
@@ -211,7 +227,7 @@ input[id='item-5']:checked ~ .carousel
     font-size: 60px;
     position: absolute;
     top: 15%;
-    right: 15%;
+    right: 25%;
 }
 
 .pop-up-window:target
