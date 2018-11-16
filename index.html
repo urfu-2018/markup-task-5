@@ -6,38 +6,40 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header shadow">
         <h1 class="title">Мурмаркет</h1> 
     </header>
     <input type="radio" name="slider" id="slide1" class="hidden slide1">
     <input type="radio" name="slider" id="slide2" class="hidden slide2" checked>
     <input type="radio" name="slider" id="slide3" class="hidden slide3">
     <input type="radio" name="slider" id="slide4" class="hidden slide4">
-    <input type="checkbox" id="modal1" class="hidden modal1">
-    <input type="checkbox" id="modal2" class="hidden modal2">
-    <input type="checkbox" id="modal3" class="hidden modal3">
-    <input type="checkbox" id="modal4" class="hidden modal4">
+    <input type="radio" name="modal" id="close" class="hidden close" checked>
+    <input type="radio" name="modal" id="modal1" class="hidden modal1">
+    <input type="radio" name="modal" id="modal2" class="hidden modal2">
+    <input type="radio" name="modal" id="modal3" class="hidden modal3">
+    <input type="radio" name="modal" id="modal4" class="hidden modal4">
     <main class="slider">
         <label for="slide1">
-            <img class="photo opacity photo1" src="img/vasiliy.png" title="Василий" alt="photo">
+            <img class="photo photo1 opacity size" src="img/vasiliy.png" title="Василий" alt="photo">
         </label>
         <label for="slide2">
-            <img class="photo opacity photo2" src="img/murzik.png" title="Василий" alt="photo">
+            <img class="photo photo2 opacity size" src="img/murzik.png" title="Василий" alt="photo">
         </label>
         <label for="slide3">
-            <img class="photo opacity photo3" src="img/jojo.png" title="ДжоДжо" alt="photo">
+            <img class="photo photo3 opacity size" src="img/jojo.png" title="ДжоДжо" alt="photo">
         </label>
         <label for="slide4">
-            <img class="photo opacity photo4" src="img/bolek+lelek.png" title="Болек и Лёлек" alt="photo">
+            <img class="photo photo4 opacity size" src="img/bolek+lelek.png"
+                 title="Болек и Лёлек" alt="photo">
         </label>
     </main>
-    <label for="modal1" class="hover name hover1">Василий Иванович</label>
-    <label for="modal2" class="hover name hover2">Мурзик</label>
-    <label for="modal3" class="hover name hover3">Джонатан Джостар</label>
-    <label for="modal4" class="hover name hover4">Болек и Лёлек</label>
+    <label for="modal1" class="hover hover1 size hover_name">Василий Иванович</label>
+    <label for="modal2" class="hover hover2 size hover_name">Мурзик</label>
+    <label for="modal3" class="hover hover3 size hover_name">Джонатан Джостар</label>
+    <label for="modal4" class="hover hover4 size hover_name">Болек и Лёлек</label>
     <div class="modal window1">
-        <img class="photo" src="img/vasiliy.png" alt="modal_photo" title="Василий">
-        <div class="info">
+        <img class="photo size" src="img/vasiliy.png" alt="modal_photo" title="Василий">
+        <div class="info size">
             <h2 class="name">Василий Иванович</h2>
             <p class="text">Серьёзный, самостоятельный</p>
             <p class="text">
@@ -53,8 +55,61 @@
             </p>
         </div>
     </div>
-    <label for="modal1" class="close">❌</div>
-    <footer class="footer">
+    <div class="modal window2">
+        <img class="photo size" src="img/murzik.png" alt="modal_photo" title="Мурзик">
+        <div class="info">
+            <h2 class="name">Мурзик</h2>
+            <p class="text">Стеснительный</p>
+            <p class="text">
+                Очень лень писать описание, прости
+            </p>
+            <p class="text">
+                Возраст: 2 года<br>
+                Порода: нет<br>
+                Болезни: нет
+            </p>
+            <p class="text">
+                Статус: ищет хозяина
+            </p>
+        </div>
+    </div>
+    <div class="modal window3">
+        <img class="photo size" src="img/jojo.png" alt="modal_photo" title="Джонатан Джостар">
+        <div class="info">
+            <h2 class="name">Джонатан Джостар</h2>
+            <p class="text">
+                Фыр-фыр-фыр
+            </p>
+            <p class="text">
+                Возраст: 2 года<br>
+                Порода: нет<br>
+                Болезни: нет
+            </p>
+            <p class="text">
+                Статус: ищет хозяина
+            </p>
+        </div>
+    </div>
+    <div class="modal window4">
+        <img class="photo size" src="img/bolek+lelek.png" alt="modal_photo" title="Болек и Лёлек">
+        <div class="info">
+            <h2 class="name">Болек и Лёлек</h2>
+            <p class="text">Lorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+            <p class="text">
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+            </p>
+            <p class="text">
+                Возраст: по 6 месяцев<br>
+                Порода: нет<br>
+                Болезни: нет
+            </p>
+            <p class="text">
+                Статус: ищут хозяина
+            </p>
+        </div>
+    </div>
+    <label for="close" class="close_button">❌</label>
+    <footer class="footer shadow">
         <div class="column">
             Напишите нам:<br>
             <a class="link email" href="">cats@babuli.ru</a><br>
