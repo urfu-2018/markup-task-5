@@ -1,5 +1,10 @@
 /* stylelint-disable selector-max-id  */
 
+html
+{
+    height: 100%;
+}
+
 .title-text::first-letter
 {
     color: rgb(255, 0, 0);
@@ -14,6 +19,10 @@
 
 .top-bar
 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
     background-color: rgb(255, 255, 255);
     padding: 10px 0;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, .16);
@@ -23,10 +32,17 @@
 
 body
 {
+    position: relative;
     overflow-x: hidden;
     background-color: rgb(237, 238, 240);
     margin: 0;
     font-family: 'PT Sans Narrow', sans-serif;
+    min-height: 100%;
+}
+
+.content
+{
+    padding-top: 50px;
 }
 
 .slider-container
@@ -206,7 +222,7 @@ body
 
 /*Кнопки*/
 
-input
+.hidden-input
 {
     display: none;
 }
@@ -362,7 +378,6 @@ input
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(85, 85, 85);
-    
 }
 
 .footer-info-wrap a
@@ -385,20 +400,20 @@ input
     margin-bottom: 0;
 }
 
-.footer-left,
-.footer-right
+.mail,
+.year
 {
     display: inline-block;
     vertical-align: bottom;
     width: 50%;
 }
 
-.footer-right
+.year
 {
     text-align: right;
 }
 
-.mail::first-letter
+.mail-href::first-letter
 {
     color: rgb(26, 26, 26);
 }
