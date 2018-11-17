@@ -7,7 +7,7 @@ header
     left: 0;
     top: 0;
     width: 100%;
-    background-color: white;
+    background-color: #fff;
     height: 80px;
     padding: 10px;
     z-index: 1000;
@@ -29,7 +29,7 @@ footer
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    background-color: #fff;
     height: 80px;
     padding: 10px;
     z-index: 1000;
@@ -65,7 +65,7 @@ input[id='cat-3']:checked ~ .carousel-navigation .selector[for='cat-3'],
 input[id='cat-4']:checked ~ .carousel-navigation .selector[for='cat-4'],
 input[id='cat-5']:checked ~ .carousel-navigation .selector[for='cat-5']
 {
-    background-color: rgb(87, 86, 86);
+    background-color: #52212d;
 }
 
 .carousel-navigation .selector
@@ -76,6 +76,20 @@ input[id='cat-5']:checked ~ .carousel-navigation .selector[for='cat-5']
     min-width: 12px;
     min-height: 12px;
     border-radius: 6px;
+}
+
+input[id='cat-1']:not(:checked) ~ ul .selector[for='cat-1'],
+input[id='cat-2']:not(:checked) ~ ul .selector[for='cat-2'],
+input[id='cat-3']:not(:checked) ~ ul .selector[for='cat-3'],
+input[id='cat-4']:not(:checked) ~ ul .selector[for='cat-4'],
+input[id='cat-5']:not(:checked) ~ ul .selector[for='cat-5']
+{
+    display: block;
+    z-index: 9000;
+    position: absolute;
+    top: 0;
+    width: 70%;
+    height: 70%;
 }
 
 ul
@@ -125,11 +139,11 @@ input[id='cat-5']:checked ~ ul
     left: calc(50% - 275px - 2200px);
 }
 
-input[id='cat-1']:checked ~ ul li label[for='cat-1'] ~ a img,
-input[id='cat-2']:checked ~ ul li label[for='cat-2'] ~ a img,
-input[id='cat-3']:checked ~ ul li label[for='cat-3'] ~ a img,
-input[id='cat-4']:checked ~ ul li label[for='cat-4'] ~ a img,
-input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img
+input[id='cat-1']:checked ~ ul .cat-1 img,
+input[id='cat-2']:checked ~ ul .cat-2 img,
+input[id='cat-3']:checked ~ ul .cat-3 img,
+input[id='cat-4']:checked ~ ul .cat-4 img,
+input[id='cat-5']:checked ~ ul .cat-5 img
 {
     width: 100%;
     margin-left: -10%;
@@ -140,11 +154,11 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img
     transition: all 1s ease-out;
 }
 
-input[id='cat-1']:checked ~ ul li label[for='cat-1'] ~ a img:hover,
-input[id='cat-2']:checked ~ ul li label[for='cat-2'] ~ a img:hover,
-input[id='cat-3']:checked ~ ul li label[for='cat-3'] ~ a img:hover,
-input[id='cat-4']:checked ~ ul li label[for='cat-4'] ~ a img:hover,
-input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img:hover
+input[id='cat-1']:checked ~ ul .cat-1 img:hover,
+input[id='cat-2']:checked ~ ul .cat-2 img:hover,
+input[id='cat-3']:checked ~ ul .cat-3 img:hover,
+input[id='cat-4']:checked ~ ul .cat-4 img:hover,
+input[id='cat-5']:checked ~ ul .cat-5 img:hover
 {
     z-index: 99;
     filter: brightness(50%);
@@ -212,7 +226,11 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img:hover
     float: right;
 }
 
-.modal:target
+input[id='cat-1']:checked ~ .modal.cat-1:target,
+input[id='cat-2']:checked ~ .modal.cat-2:target,
+input[id='cat-3']:checked ~ .modal.cat-3:target,
+input[id='cat-4']:checked ~ .modal.cat-4:target,
+input[id='cat-5']:checked ~ .modal.cat-5:target
 {
     visibility: visible;
     opacity: 1;
@@ -228,7 +246,7 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img:hover
     height: 350px;
     width: 450px;
     z-index: 9999;
-    margin: 25px    ;
+    margin: 25px;
 }
 
 .white
@@ -236,16 +254,9 @@ input[id='cat-5']:checked ~ ul li label[for='cat-5'] ~ a img:hover
     color: aliceblue;
 }
 
-footer li
+footer p
 {
-    display: flex;
-    line-height: 1.8;
-}
-
-footer li
-{
-    display: block;
-    line-height: 1.8;
+    line-height: 1;
 }
 
 footer img
@@ -257,7 +268,9 @@ footer img
 
 .right
 {
-    float: right;
+    position: fixed;
+    bottom: 15px;
+    right: 0;
     margin-right: 150px;
 }
 
