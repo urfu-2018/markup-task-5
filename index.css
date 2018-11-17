@@ -72,7 +72,7 @@ input[id='cat-5']:checked ~ .carousel-navigation .selector[for='cat-5']
 {
     z-index: 1500;
     display: inline-block;
-    background-color: lightgrey;
+    background-color: #cacbca;
     min-width: 12px;
     min-height: 12px;
     border-radius: 6px;
@@ -194,7 +194,7 @@ input[id='cat-5']:checked ~ ul .cat-5 img:hover
 
 .modal .close a
 {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 30px;
 }
@@ -251,7 +251,7 @@ input[id='cat-5']:checked ~ .modal.cat-5:target
 
 .white
 {
-    color: aliceblue;
+    color: #e6ebe1;
 }
 
 footer p
