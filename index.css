@@ -1,8 +1,14 @@
+html
+{
+    height: 100%;
+}
+
 body
 {
     box-sizing: border-box;
     margin: 0;
     min-width: 1000px;
+    height: 100%;
 }
 
 .header
@@ -36,8 +42,15 @@ body
 {
     position: relative;
     width: 100%;
-    min-height: calc( 100vh - 97px);
-    display: inline-block;
+    min-height: 100%;
+    margin-bottom: -93px;
+}
+
+.main:after
+{
+    content: '';
+    display: block;
+    height: 93px;
 }
 
 .main__carousel
@@ -374,6 +387,7 @@ img.popup-img
 
 .footer
 {
+    height: 93px;
     border-top: 1px solid #cacaca;
     width: 100%;
     background: #fff;
