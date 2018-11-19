@@ -1,8 +1,9 @@
+html,
 body
 {
     background: #fff;
     margin: 0;
-    height: 900px;
+    height: 99%;
 }
 
 .shop-name
@@ -14,6 +15,7 @@ body
     font-family: 'PT Sans Narrow', sans-serif;
     position: fixed;
     width: 100%;
+    height: 42px;
     text-align: center;
     border-bottom: 1px solid #808080;
     font-weight: normal;
@@ -28,7 +30,7 @@ body
 .buttons
 {
     position: relative;
-    bottom: -160px;
+    bottom: -200px;
     text-align: center;
 }
 
@@ -38,7 +40,8 @@ body
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    position: fixed;
+    position: relative;
+    height: 60px;
     bottom: 0;
     width: 100%;
     border-top: 1px solid #808080;
@@ -64,12 +67,12 @@ body
 
 .contacts .organization-name::before
 {
-    content: '\00AB';
+    content: '\00AB'; /*«*/
 }
 
 .contacts .organization-name::after
 {
-    content: '\00BB';
+    content: '\00BB'; /*»*/
 }
 
 .contacts .mail::before
@@ -92,19 +95,25 @@ body
 .carousel
 {
     width: 100%;
-    height: 100%;
-    top: 42px;
-    bottom: 82px;
+    min-height: 100%;
+    margin-bottom: -60px;
     position: relative;
     overflow: hidden;
+}
+
+.carousel::after
+{
+    content: '';
+    display: block;
+    height: 60px;
 }
 
 .cat-list
 {
     width: 5000px;
     height: 400px;
-    position: relative;
-    top: 200px;
+    top: calc(50% - 200px);
+    position: absolute;
     font-size: 0;
     user-select: none;
     transition: left .5s ease-out;
@@ -120,7 +129,6 @@ body
     display: inline-block;
     width: 400px;
     height: 80%;
-    top: calc(50% - 160px);
     margin: 0 50px;
     transition: all .8s ease-in-out;
     -webkit-transition: all .8s ease-in-out;
@@ -198,7 +206,7 @@ body
     position: absolute;
     user-select: none;
     left: calc(50% - 100px);
-    top: calc(75%);
+    top: calc(50% + 250px);
     right: 0;
 }
 
@@ -369,22 +377,23 @@ body
 .modal-view
 {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -40px;
+    min-height: 100%;
+    width: 100%;
     z-index: 499;
     color: #fff;
     display: none;
     background: rgba(0, 0, 0, .9);
+    bottom: -60px;
 }
 
 .modal-view .photo
 {
+    top: 50px;
     position: relative;
     width: 50%;
     height: 100%;
     float: left;
+    opacity: 1;
 }
 
 .modal-view img
@@ -395,14 +404,14 @@ body
 .modal-view .vertical
 {
     width: 50%;
-    top: 10%;
+    top: 20px;
     left: 40%;
 }
 
 .modal-view .horizontal
 {
     width: 70%;
-    top: 15%;
+    top: 50px;
     left: 25%;
 }
 
@@ -430,7 +439,7 @@ body
     width: 25%;
     height: 100%;
     text-align: justify;
-    top: 15%;
+    top: 50px;
     font-family: 'Caveat', cursive;
 }
 
