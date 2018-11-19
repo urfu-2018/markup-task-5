@@ -1,4 +1,4 @@
-@font-face 
+@font-face
 {
     font-family: 'PT Sans Narrow';
     src: local('PT Sans Narrow'), local('ptsansnarrow'), url('./Fonts/ptsansnarrow.woff2') format('woff2'), url('./Fonts/ptsansnarrow.woff') format('woff'), url('./Fonts/ptsansnarrow.ttf') format('truetype');
@@ -6,15 +6,23 @@
     font-style: normal;
 }
 
-body 
+body
 {
     margin: 0;
 }
 
-header 
+header,
+main,
+footer
+{
+    display: block;
+}
+
+header
 {
     background-color: white;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 50px;
     border-bottom: 1px solid gray;
@@ -22,29 +30,28 @@ header
     z-index: 1;
 }
 
-.header-padding 
+.header-padding
 {
     height: 50px;
 }
 
-header h1:first-letter 
+header h1:first-letter
 {
     color: red;
 }
 
-header h1 
+header h1
 {
     font: 32px 'PT Sans Narrow';
     text-align: center;
     margin: 0;
 }
 
-footer 
+footer
 {
     font: 14px Arial;
     border: 1px solid gray;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     background-color: white;
@@ -52,35 +59,35 @@ footer
     padding: 10px;
 }
 
-footer a 
+footer a
 {
     color: #4c4cd8;
 }
 
-footer p 
+footer p
 {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-footer img 
+footer img
 {
     width: 25px;
 }
 
-.footer-right 
+.footer-right
 {
     position: absolute;
     bottom: 10px;
     right: 30px;
 }
 
-.footer-padding 
+.footer-padding
 {
     height: 80px;
 }
 
-.carousel-wrapper 
+.carousel-wrapper
 {
     width: 100%;
     height: 400px;
@@ -89,12 +96,12 @@ footer img
     overflow: hidden;
 }
 
-.carousel-selector 
+.carousel-selector
 {
     display: none;
 }
 
-.carousel 
+.carousel
 {
     width: 5000px;
     height: 400px;
@@ -109,20 +116,16 @@ footer img
     -webkit-transition: left .5s ease-out;
 }
 
-.carousel-item 
+.carousel-item
 {
     width: 400px;
     height: 350px;
     padding: 0 10px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
     display: inline-block;
     position: relative;
 }
 
-.carousel-item img 
+.carousel-item img
 {
     width: 80%;
     height: 80%;
@@ -132,7 +135,7 @@ footer img
     cursor: pointer;
 }
 
-.carousel-labels 
+.carousel-labels
 {
     height: 20px;
     width: 200px;
@@ -143,7 +146,7 @@ footer img
     bottom: 0;
 }
 
-.carousel-labels .carousel-label 
+.carousel-labels .carousel-label
 {
     width: 16px;
     height: 16px;
@@ -152,7 +155,7 @@ footer img
     display: inline-block;
 }
 
-.carousel-labels .carousel-label label 
+.carousel-labels .carousel-label label
 {
     width: 100%;
     height: 100%;
@@ -160,107 +163,80 @@ footer img
     cursor: pointer;
 }
 
-.cat1:checked ~ .carousel-labels .carousel-label:nth-child(1) 
+.cat1:checked ~ .carousel-labels .carousel-label:nth-child(1),
+.cat2:checked ~ .carousel-labels .carousel-label:nth-child(2),
+.cat3:checked ~ .carousel-labels .carousel-label:nth-child(3),
+.cat4:checked ~ .carousel-labels .carousel-label:nth-child(4),
+.cat5:checked ~ .carousel-labels .carousel-label:nth-child(5),
+.cat6:checked ~ .carousel-labels .carousel-label:nth-child(6),
+.cat7:checked ~ .carousel-labels .carousel-label:nth-child(7),
+.cat8:checked ~ .carousel-labels .carousel-label:nth-child(8),
+.cat9:checked ~ .carousel-labels .carousel-label:nth-child(9),
+.cat10:checked ~ .carousel-labels .carousel-label:nth-child(10)
 {
     background-color: gray;
 }
 
-.cat2:checked ~ .carousel-labels .carousel-label:nth-child(2) 
-{
-    background-color: gray;
-}
-
-.cat3:checked ~ .carousel-labels .carousel-label:nth-child(3) 
-{
-    background-color: gray;
-}
-
-.cat4:checked ~ .carousel-labels .carousel-label:nth-child(4) 
-{
-    background-color: gray;
-}
-
-.cat5:checked ~ .carousel-labels .carousel-label:nth-child(5) 
-{
-    background-color: gray;
-}
-
-.cat6:checked ~ .carousel-labels .carousel-label:nth-child(6) 
-{
-    background-color: gray;
-}
-
-.cat7:checked ~ .carousel-labels .carousel-label:nth-child(7) 
-{
-    background-color: gray;
-}
-
-.cat8:checked ~ .carousel-labels .carousel-label:nth-child(8) 
-{
-    background-color: gray;
-}
-
-.cat9:checked ~ .carousel-labels .carousel-label:nth-child(9) 
-{
-    background-color: gray;
-}
-
-.cat10:checked ~ .carousel-labels .carousel-label:nth-child(10) 
-{
-    background-color: gray;
-}
-
-.cat1:checked ~ .carousel 
+.cat1:checked ~ .carousel
 {
     left: calc(50% - 200px - 0*400px);
 }
 
-.cat2:checked ~ .carousel 
+.cat2:checked ~ .carousel
 {
     left: calc(50% - 200px - 1*400px);
 }
 
-.cat3:checked ~ .carousel 
+.cat3:checked ~ .carousel
 {
     left: calc(50% - 200px - 2*400px);
 }
 
-.cat4:checked ~ .carousel 
+.cat4:checked ~ .carousel
 {
     left: calc(50% - 200px - 3*400px);
 }
 
-.cat5:checked ~ .carousel 
+.cat5:checked ~ .carousel
 {
     left: calc(50% - 200px - 4*400px);
 }
 
-.cat6:checked ~ .carousel 
+.cat6:checked ~ .carousel
 {
     left: calc(50% - 200px - 5*400px);
 }
 
-.cat7:checked ~ .carousel 
+.cat7:checked ~ .carousel
 {
     left: calc(50% - 200px - 6*400px);
 }
 
-.cat8:checked ~ .carousel 
+.cat8:checked ~ .carousel
 {
     left: calc(50% - 200px - 7*400px);
 }
 
-.cat9:checked ~ .carousel 
+.cat9:checked ~ .carousel
 {
     left: calc(50% - 200px - 8*400px);
 }
 
-.cat10:checked ~ .carousel 
+.cat10:checked ~ .carousel
 {
     left: calc(50% - 200px - 9*400px);
 }
 
-.cat1:checked ~ .carousel > .carousel-item:nth-child(1) img 
+.cat1:checked ~ .carousel > .carousel-item:nth-child(1) img,
+.cat2:checked ~ .carousel > .carousel-item:nth-child(2) img,
+.cat3:checked ~ .carousel > .carousel-item:nth-child(3) img,
+.cat4:checked ~ .carousel > .carousel-item:nth-child(4) img,
+.cat5:checked ~ .carousel > .carousel-item:nth-child(5) img,
+.cat6:checked ~ .carousel > .carousel-item:nth-child(6) img,
+.cat7:checked ~ .carousel > .carousel-item:nth-child(7) img,
+.cat8:checked ~ .carousel > .carousel-item:nth-child(8) img,
+.cat9:checked ~ .carousel > .carousel-item:nth-child(9) img,
+.cat10:checked ~ .carousel > .carousel-item:nth-child(10) img
 {
     height: 100%;
     width: 100%;
@@ -269,88 +245,7 @@ footer img
     box-shadow: 0 0 5px gray;
 }
 
-.cat2:checked ~ .carousel > .carousel-item:nth-child(2) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat3:checked ~ .carousel > .carousel-item:nth-child(3) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat4:checked ~ .carousel > .carousel-item:nth-child(4) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat5:checked ~ .carousel > .carousel-item:nth-child(5) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat6:checked ~ .carousel > .carousel-item:nth-child(6) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat7:checked ~ .carousel > .carousel-item:nth-child(7) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat8:checked ~ .carousel > .carousel-item:nth-child(8) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat9:checked ~ .carousel > .carousel-item:nth-child(9) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.cat10:checked ~ .carousel > .carousel-item:nth-child(10) img 
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    margin: 0;
-    box-shadow: 0 0 5px gray;
-}
-
-.carousel-item .background 
+.carousel-item .background
 {
     z-index: 1;
     background-color: black;
@@ -364,7 +259,7 @@ footer img
     cursor: pointer;
 }
 
-.carousel-item .background h1 
+.carousel-item .background h1
 {
     position: absolute;
     margin-top: 100px;
@@ -375,57 +270,21 @@ footer img
     text-align: center;
 }
 
-.cat1:checked ~ .carousel .carousel-item:nth-child(1):hover > .background 
+.cat1:checked ~ .carousel .carousel-item:nth-child(1):hover > .background,
+.cat2:checked ~ .carousel .carousel-item:nth-child(2):hover > .background,
+.cat3:checked ~ .carousel .carousel-item:nth-child(3):hover > .background,
+.cat4:checked ~ .carousel .carousel-item:nth-child(4):hover > .background,
+.cat5:checked ~ .carousel .carousel-item:nth-child(5):hover > .background,
+.cat6:checked ~ .carousel .carousel-item:nth-child(6):hover > .background,
+.cat7:checked ~ .carousel .carousel-item:nth-child(7):hover > .background,
+.cat8:checked ~ .carousel .carousel-item:nth-child(8):hover > .background,
+.cat9:checked ~ .carousel .carousel-item:nth-child(9):hover > .background,
+.cat10:checked ~ .carousel .carousel-item:nth-child(10):hover > .background
 {
     display: block;
 }
 
-.cat2:checked ~ .carousel .carousel-item:nth-child(2):hover > .background 
-{
-    display: block;
-}
-
-.cat3:checked ~ .carousel .carousel-item:nth-child(3):hover > .background 
-{
-    display: block;
-}
-
-.cat4:checked ~ .carousel .carousel-item:nth-child(4):hover > .background 
-{
-    display: block;
-}
-
-.cat5:checked ~ .carousel .carousel-item:nth-child(5):hover > .background 
-{
-    display: block;
-}
-
-.cat6:checked ~ .carousel .carousel-item:nth-child(6):hover > .background 
-{
-    display: block;
-}
-
-.cat7:checked ~ .carousel .carousel-item:nth-child(7):hover > .background 
-{
-    display: block;
-}
-
-.cat8:checked ~ .carousel .carousel-item:nth-child(8):hover > .background 
-{
-    display: block;
-}
-
-.cat9:checked ~ .carousel .carousel-item:nth-child(9):hover > .background 
-{
-    display: block;
-}
-
-.cat10:checked ~ .carousel .carousel-item:nth-child(10):hover > .background 
-{
-    display: block;
-}
-
-.modal-dialog 
+.modal-dialog
 {
     position: fixed;
     top: 0;
@@ -442,67 +301,31 @@ footer img
     transition: opacity 400ms ease-in;
 }
 
-.modal-dialog:target 
+.modal-dialog:target
 {
     display: block;
 }
 
-.cat1:checked ~ .modal-dialog:target .cat-item:nth-child(1) 
+.cat1:checked ~ .modal-dialog:target .cat-item:nth-child(1),
+.cat2:checked ~ .modal-dialog:target .cat-item:nth-child(2),
+.cat3:checked ~ .modal-dialog:target .cat-item:nth-child(3),
+.cat4:checked ~ .modal-dialog:target .cat-item:nth-child(4),
+.cat5:checked ~ .modal-dialog:target .cat-item:nth-child(5),
+.cat6:checked ~ .modal-dialog:target .cat-item:nth-child(6),
+.cat7:checked ~ .modal-dialog:target .cat-item:nth-child(7),
+.cat8:checked ~ .modal-dialog:target .cat-item:nth-child(8),
+.cat9:checked ~ .modal-dialog:target .cat-item:nth-child(9),
+.cat10:checked ~ .modal-dialog:target .cat-item:nth-child(10)
 {
     display: block;
 }
 
-.cat2:checked ~ .modal-dialog:target .cat-item:nth-child(2) 
-{
-    display: block;
-}
-
-.cat3:checked ~ .modal-dialog:target .cat-item:nth-child(3) 
-{
-    display: block;
-}
-
-.cat4:checked ~ .modal-dialog:target .cat-item:nth-child(4) 
-{
-    display: block;
-}
-
-.cat5:checked ~ .modal-dialog:target .cat-item:nth-child(5) 
-{
-    display: block;
-}
-
-.cat6:checked ~ .modal-dialog:target .cat-item:nth-child(6) 
-{
-    display: block;
-}
-
-.cat7:checked ~ .modal-dialog:target .cat-item:nth-child(7) 
-{
-    display: block;
-}
-
-.cat8:checked ~ .modal-dialog:target .cat-item:nth-child(8) 
-{
-    display: block;
-}
-
-.cat9:checked ~ .modal-dialog:target .cat-item:nth-child(9) 
-{
-    display: block;
-}
-
-.cat10:checked ~ .modal-dialog:target .cat-item:nth-child(10) 
-{
-    display: block;
-}
-
-.modal-dialog .cat-item 
+.modal-dialog .cat-item
 {
     display: none;
 }
 
-.modal-dialog .cat-item img 
+.modal-dialog .cat-item img
 {
     float: left;
     width: 600px;
@@ -510,17 +333,17 @@ footer img
     margin-right: 20px;
 }
 
-.modal-dialog .cat-item .name 
+.modal-dialog .cat-item .name
 {
     font-size: 32px;
 }
 
-.modal-dialog .cat-item .description 
+.modal-dialog .cat-item .description
 {
     font-size: 20px;
 }
 
-.modal-dialog .cat-item .close 
+.modal-dialog .cat-item .close
 {
     float: right;
     width: 32px;
@@ -528,14 +351,14 @@ footer img
     margin: 0 0 20px 20px;
 }
 
-.modal-dialog .cat-item .close a 
+.modal-dialog .cat-item .close a
 {
     color: white;
     text-decoration: none;
     font-size: 30px;
 }
 
-.carousel-item .modal-dialog-link 
+.carousel-item .modal-dialog-link
 {
     position: absolute;
     font-size: 12px;
@@ -547,52 +370,16 @@ footer img
     display: none;
 }
 
-.cat1:checked ~ .carousel .carousel-item:nth-child(1) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat2:checked ~ .carousel .carousel-item:nth-child(2) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat3:checked ~ .carousel .carousel-item:nth-child(3) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat4:checked ~ .carousel .carousel-item:nth-child(4) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat5:checked ~ .carousel .carousel-item:nth-child(5) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat6:checked ~ .carousel .carousel-item:nth-child(6) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat7:checked ~ .carousel .carousel-item:nth-child(7) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat8:checked ~ .carousel .carousel-item:nth-child(8) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat9:checked ~ .carousel .carousel-item:nth-child(9) .modal-dialog-link 
-{
-    display: block;
-}
-
-.cat10:checked ~ .carousel .carousel-item:nth-child(10) .modal-dialog-link 
+.cat1:checked ~ .carousel .carousel-item:nth-child(1) .modal-dialog-link,
+.cat2:checked ~ .carousel .carousel-item:nth-child(2) .modal-dialog-link,
+.cat3:checked ~ .carousel .carousel-item:nth-child(3) .modal-dialog-link,
+.cat4:checked ~ .carousel .carousel-item:nth-child(4) .modal-dialog-link,
+.cat5:checked ~ .carousel .carousel-item:nth-child(5) .modal-dialog-link,
+.cat6:checked ~ .carousel .carousel-item:nth-child(6) .modal-dialog-link,
+.cat7:checked ~ .carousel .carousel-item:nth-child(7) .modal-dialog-link,
+.cat8:checked ~ .carousel .carousel-item:nth-child(8) .modal-dialog-link,
+.cat9:checked ~ .carousel .carousel-item:nth-child(9) .modal-dialog-link,
+.cat10:checked ~ .carousel .carousel-item:nth-child(10) .modal-dialog-link
 {
     display: block;
 }
