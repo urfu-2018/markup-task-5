@@ -203,11 +203,6 @@ input[id='slide5']:checked ~ .carousel_switch label[for='slide5']
     font-size: 20px;
 }
 
-.close:hover
-{
-    color: black;
-}
-
 .img_modal
 {
     width: 100%;

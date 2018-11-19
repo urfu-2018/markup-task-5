@@ -3,7 +3,7 @@
 
 .content
 {
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 165px);
 }
 
 body
@@ -12,10 +12,6 @@ body
     padding: 0;
 }
 
-.header_block
-{
-    height: 42px;
-}
 /*Хедер*/
 
 header
@@ -25,7 +21,8 @@ header
     border-bottom: 1px solid #8a8f99;
     margin-bottom: 10px;
     width: 100%;
-    position: fixed;
+    position: sticky;
+    top: 0;
     background-color: #fff;
     z-index: 1;
 }
