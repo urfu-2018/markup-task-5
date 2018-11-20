@@ -1,153 +1,298 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
     <title>Задача «Про котиков»</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>Мурмаркет</header>
+    <input type="radio" name="nav" id="cat1Input" class="cat1Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat2Input" class="cat2Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat3Input" class="cat3Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat4Input" class="cat4Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat5Input" class="cat5Input" checked>
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat6Input" class="cat6Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat7Input" class="cat7Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat8Input" class="cat8Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat9Input" class="cat9Input">
+    <img src="images/nav.png" alt="nav">
+    <input type="radio" name="nav" id="cat10Input" class="cat10Input">
+    <img src="images/nav.png" alt="nav">
+
+    <input type="checkbox" name="modalPage" id="cat1PageInfo" class="cat1ModalPage">
+    <input type="checkbox" name="modalPage" id="cat2PageInfo" class="cat2ModalPage">
+    <input type="checkbox" name="modalPage" id="cat3PageInfo" class="cat3ModalPage">
+    <input type="checkbox" name="modalPage" id="cat4PageInfo" class="cat4ModalPage">
+    <input type="checkbox" name="modalPage" id="cat5PageInfo" class="cat5ModalPage">
+    <input type="checkbox" name="modalPage" id="cat6PageInfo" class="cat6ModalPage">
+    <input type="checkbox" name="modalPage" id="cat7PageInfo" class="cat7ModalPage">
+    <input type="checkbox" name="modalPage" id="cat8PageInfo" class="cat8ModalPage">
+    <input type="checkbox" name="modalPage" id="cat9PageInfo" class="cat9ModalPage">
+    <input type="checkbox" name="modalPage" id="cat10PageInfo" class="cat10ModalPage">
+
     <div class="container">
-        <input type="radio" name="nav" id="cat1" class="cat1">
-        <img src="images/nav.png" alt="nav">
-        <article>
-            <label for="cat1">
+        <article class="cat1">
+            <label for="cat1Input">
                 <img src="images/cat1.jpg" alt="cat1">
             </label>
-            <h2 class="name">Плюша</h2>
-            <p class="shortInfo">
-                Возраст: 1 год
-            </p>
-            <p class="longInfo">
-                Ласковая кошечка.<br>Возраст: 1 год.<br>Любит спать в шкафу.
-            </p>
+            <label for="cat1PageInfo">
+                <span class="info">
+                    Плюша
+                </span>
+            </label>
         </article>
-        <input type="radio" name="nav" id="cat2" class="cat2">
-        <img src="images/nav.png" alt="nav">
-        <article>
-            <label for="cat2">
+        <article class="cat2">
+            <label for="cat2Input">
                 <img src="images/cat2.jpg" alt="cat2">
             </label>
-            <h2 class="name">Рыжа</h2>
-            <p class="shortInfo">
-                Возраст: 2 года
-            </p>
-            <p class="longInfo">
-                Кот-обормот.<br>Возраст 2 года.<br>Любит себя и полки.
-            </p>
+            <label for="cat2PageInfo">
+                <span class="info">
+                    Рыжа
+                </span>
+            </label>
         </article>
-        <input type="radio" name="nav" id="cat3" class="cat3" checked>
-        <img src="images/nav.png" alt="nav">
-        <article>
-            <label for="cat3">
+        <article class="cat3">
+            <label for="cat3Input">
                 <img src="images/cat3.jpg" alt="cat3">
             </label>
-            <h2 class="name">Коша</h2>
-            <p class="shortInfo">
-                Возраст: 2 года
-            </p>
-            <p class="longInfo">
-                Сладенький котик.<br>Возраст 2 года.<br>Любит спать.
-            </p>
+            <label for="cat3PageInfo">
+                <span class="info">
+                    Коша
+                </span>
+            </label>
         </article>
-        <input type="radio" name="nav" id="cat4" class="cat4">
-        <img src="images/nav.png" alt="nav">
-        <article>
-            <label for="cat4">
+        <article class="cat4">
+            <label for="cat4Input">
                 <img src="images/cat4.jpg" alt="cat4">
             </label>
-            <h2 class="name">Петя</h2>
-            <p class="shortInfo">
-                Возраст: 2.5 года
-            </p>
-            <p class="longInfo">
-                Кот простой.<br>Возраст: 2.5 года.<br>Мяу звучит гордо.
-            </p>
+            <label for="cat4PageInfo">
+                <span class="info">
+                    Петя
+                </span>
+            </label>
         </article>
-        <input type="radio" name="nav" id="cat5" class="cat5">
-        <img src="images/nav.png" alt="nav">
-        <article>
-            <label for="cat5">
+        <article class="cat5">
+            <label for="cat5Input">
                 <img src="images/cat5.jpg" alt="cat5">
             </label>
-            <h2 class="name">Мур-Мурыч</h2>
+            <label for="cat5PageInfo">
+                <span class="info">
+                    Мур-Мурыч
+                </span>
+            </label>
+        </article>
+        <article class="cat6">
+            <label for="cat6Input">
+                <img src="images/cat6.jpg" alt="cat6">
+            </label>
+            <label for="cat6PageInfo">
+                <span class="info">
+                    Муня
+                </span>
+            </label>
+        </article>
+        <article class="cat7">
+            <label for="cat7Input">
+                <img src="images/cat7.jpg" alt="cat7">
+            </label>
+            <label for="cat7PageInfo">
+                <span class="info">
+                    Фёдор
+                </span>
+            </label>
+        </article>
+        <article class="cat8">
+            <label for="cat8Input">
+                <img src="images/cat8.jpg" alt="cat8">
+            </label>
+            <label for="cat8PageInfo">
+                <span class="info">
+                    Пушок
+                </span>
+            </label>
+        </article>
+        <article class="cat9">
+            <label for="cat9Input">
+                <img src="images/cat9.jpg" alt="cat9">
+            </label>
+            <label for="cat9PageInfo">
+                <span class="info">
+                    Сильвестр
+                </span>
+            </label>
+        </article>
+        <article class="cat10">
+            <label for="cat10Input">
+                <img src="images/cat10.jpg" alt="cat10">
+            </label>
+            <label for="cat10PageInfo">
+                <span class="info">
+                    Михаил
+                </span>
+            </label>
+        </article>
+    </div>
+    <div class="blackBackground"></div>
+    <div class="modalPage">
+        <article>
+            <img src="images/cat1.jpg" alt="cat1">
+            <div class="info">
+                <h3 class="name">Плюша</h3>
                 <p class="shortInfo">
                     Возраст: 1 год
                 </p>
                 <p class="longInfo">
-                    Кот цвета шоколада с молоком.<br>Возраст: 1 год.<br>Не съедобен.
+                    Ласковая кошечка.<br>Любит спать в шкафу.
                 </p>
-            </article>
-            <input type="radio" name="nav" id="cat6" class="cat6">
-            <img src="images/nav.png" alt="nav">
-        <article>
-            <label for="cat6">
-                <img src="images/cat6.jpg" alt="cat6">
+            </div>
+            <label for="cat1PageInfo">
+                <img src="images/close.png" alt="close" class="close">
             </label>
-            <h2 class="name">Муня</h2>
-            <p class="shortInfo">
-                Возраст: 2 года
-            </p>
-            <p class="longInfo">
-                Женщина.<br>Возраст: 2 года.<br>При Длительном контакте вы видите две кошки.
-            </p>
         </article>
-        <input type="radio" name="nav" id="cat7" class="cat7">
-        <img src="images/nav.png" alt="nav">
         <article>
-            <label for="cat7">
-                <img src="images/cat7.jpg" alt="cat7">
+            <img src="images/cat2.jpg" alt="cat2">
+            <div class="info">
+                <h3 class="name">Рыжа</h3>
+                <p class="shortInfo">
+                    Возраст: 2 года
+                </p>
+                <p class="longInfo">
+                    Кот-обормот.<br>Любит себя и полки.
+                </p>
+            </div>
+            <label for="cat2PageInfo">
+                <img src="images/close.png" alt="close" class="close">
             </label>
-            <h2 class="name">Фёдор</h2>
-            <p class="shortInfo">
-                Возраст: 4 года
-            </p>
-            <p class="longInfo">
-                Кот с опытом.<br>Возраст: 4 года.<br>Научит вас жизни.
-            </p>
         </article>
-        <input type="radio" name="nav" id="cat8" class="cat8">
-        <img src="images/nav.png" alt="nav">
         <article>
-            <label for="cat8">
-                <img src="images/cat8.jpg" alt="cat8">
+            <img src="images/cat3.jpg" alt="cat3">
+            <div class="info">
+                <h3 class="name">Коша</h3>
+                <p class="shortInfo">
+                    Возраст: 2 года
+                </p>
+                <p class="longInfo">
+                    Сладенький котик.<br>Любит спать.
+                </p>
+            </div>
+            <label for="cat3PageInfo">
+                <img src="images/close.png" alt="close" class="close">
             </label>
-            <h2 class="name">Пушок</h2>
-            <p class="shortInfo">
-                Возраст: 3 месяца
-            </p>
-            <p class="longInfo">
-                Маленький, пушистый котя.<br>Возраст: 3 месяца.<br>Любит вас и весь мир.
-            </p>
         </article>
-        <input type="radio" name="nav" id="cat9" class="cat9">
-        <img src="images/nav.png" alt="nav">
         <article>
-            <label for="cat9">
-                <img src="images/cat9.jpg" alt="cat9">
+            <img src="images/cat4.jpg" alt="cat4">
+            <div class="info">
+                <h3 class="name">Петя</h3>
+                <p class="shortInfo">
+                    Возраст: 2.5 года
+                </p>
+                <p class="longInfo">
+                    Кот простой.<br>Мяу звучит гордо.
+                </p>
+            </div>
+            <label for="cat4PageInfo">
+                <img src="images/close.png" alt="close" class="close">
             </label>
-            <h2 class="name">Сильвестр</h2>
-            <p class="shortInfo">
-                Возраст: 6 месяцев
-            </p>
-            <p class="longInfo">
-                Замечательный серебристый кот.<br>Возраст: 6 месяцев.<br>
-                Украсит собой ваше вечернее платье, при должном внимании украсит платье откровенным разрезом.
-            </p>
         </article>
-        <input type="radio" name="nav" id="cat10" class="cat10">
-        <img src="images/nav.png" alt="nav">
         <article>
-            <label for="cat10">
-                <img src="images/cat10.jpg" alt="cat10">
+            <img src="images/cat5.jpg" alt="cat5">
+            <div class="info">
+                <h3 class="name">Мур-Мурыч</h3>
+                <p class="shortInfo">
+                    Возраст: 1 год
+                </p>
+                <p class="longInfo">
+                    Кот цвета шоколада с молоком.<br>Не съедобен.
+                </p>
+            </div>
+            <label for="cat5PageInfo">
+                <img src="images/close.png" alt="close" class="close">
             </label>
-            <h2 class="name">Михаил</h2>
-            <p class="shortInfo">
-                Возраст: 1.5 года
-            </p>
-            <p class="longInfo">
-                Кот.<br>Возраст: 1.5 года.<br>Научит вас манерам.
-            </p>
+        </article>
+        <article>
+            <img src="images/cat6.jpg" alt="cat6">
+            <div class="info">
+                <h3 class="name">Муня</h3>
+                <p class="shortInfo">
+                    Возраст: 2 года
+                </p>
+                <p class="longInfo">
+                    Женщина.<br>При Длительном контакте вы видите две кошки.
+                </p>
+            </div>
+            <label for="cat6PageInfo">
+                <img src="images/close.png" alt="close" class="close">
+            </label>
+        </article>
+        <article>
+            <img src="images/cat7.jpg" alt="cat7">
+            <div class="info">
+                <h3 class="name">Фёдор</h3>
+                <p class="shortInfo">
+                    Возраст: 4 года
+                </p>
+                <p class="longInfo">
+                    Кот с опытом.<br>Научит вас жизни.
+                </p>
+            </div>
+            <label for="cat7PageInfo">
+                <img src="images/close.png" alt="close" class="close">
+            </label>
+        </article>
+        <article>
+            <img src="images/cat8.jpg" alt="cat8">
+            <div class="info">
+                <h3 class="name">Пушок</h3>
+                <p class="shortInfo">
+                    Возраст: 3 месяца
+                </p>
+                <p class="longInfo">
+                    Маленький, пушистый котя.<br>Любит вас и весь мир.
+                </p>
+            </div>
+            <label for="cat8PageInfo">
+                <img src="images/close.png" alt="close" class="close">
+            </label>
+        </article>
+        <article>
+            <img src="images/cat9.jpg" alt="cat9">
+            <div class="info">
+                <h3 class="name">Сильвестр</h3>
+                <p class="shortInfo">
+                    Возраст: 6 месяцев
+                </p>
+                <p class="longInfo">
+                    Замечательный серебристый кот.<br>
+                    Украшение вашего дома.
+                </p>
+            </div>
+            <label for="cat9PageInfo">
+                <img src="images/close.png" alt="close" class="close">
+            </label>
+        </article>
+        <article>
+            <img src="images/cat10.jpg" alt="cat10">
+            <div class="info">
+                <h3 class="name">Михаил</h3>
+                <p class="shortInfo">
+                    Возраст: 1.5 года
+                </p>
+                <p class="longInfo">
+                    Кот.<br>Научит вас манерам.
+                </p>
+            </div>
+            <label for="cat10PageInfo">
+                <img src="images/close.png" alt="close" class="close">
+            </label>
         </article>
     </div>
     <footer>

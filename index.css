@@ -40,100 +40,7 @@ a
     text-decoration: none;
 }
 
-.container p
-{
-    color: #555;
-    font-size: 1.3em;
-}
-
-.container
-{
-    position: absolute;
-    height: 80vh;
-    margin: 0;
-    padding-left: 200px;
-    top: 10vh;
-    overflow: hidden;
-    border: 1px solid #dadada;
-    white-space: nowrap;
-}
-
-.cat2 + img
-{
-    left: 43vw;
-}
-
-.cat3 + img
-{
-    left: 45vw;
-}
-
-.cat4 + img
-{
-    left: 47vw;
-}
-
-.cat5 + img
-{
-    left: 49vw;
-}
-
-.cat6 + img
-{
-    left: 51vw;
-}
-
-.cat7 + img
-{
-    left: 53vw;
-}
-
-.cat8 + img
-{
-    left: 55vw;
-}
-
-.cat9 + img
-{
-    left: 57vw;
-}
-
-.cat10 + img
-{
-    left: 59vw;
-}
-
-article
-{
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 12vh 0;
-    height: 50vh;
-    overflow: hidden;
-}
-
-article > :not(:first-child)
-{
-    display: none;
-}
-
-article img
-{
-    margin: 5vh;
-    display: block;
-    height: 40vh;
-    opacity: .7;
-}
-
-input:checked + img + article > label > img
-{
-    height: 50vh;
-    margin: 0;
-    opacity: 1;
-    box-shadow: 2px 2px 10px #333;
-}
-
-.longInfo
+input
 {
     display: none;
 }
@@ -143,22 +50,324 @@ input + img
     position: fixed;
     bottom: 20vh;
     left: 41vw;
-}
-
-input + img
-{
     width: 14px;
     opacity: .4;
-}
-
-input
-{
-    display: none;
 }
 
 input:checked + img
 {
     opacity: .7;
+}
+
+.container
+{
+    position: absolute;
+    height: 80vh;
+    margin: 0;
+    padding: 0 50vw;
+    top: 10vh;
+    overflow: hidden;
+    border: 1px solid #dadada;
+    border-left: none;
+    border-right: none;
+    white-space: nowrap;
+    color: #555;
+    font-size: 1.3em;
+}
+
+.cat2Input + img
+{
+    left: 43vw;
+}
+
+.cat3Input + img
+{
+    left: 45vw;
+}
+
+.cat4Input + img
+{
+    left: 47vw;
+}
+
+.cat5Input + img
+{
+    left: 49vw;
+}
+
+.cat6Input + img
+{
+    left: 51vw;
+}
+
+.cat7Input + img
+{
+    left: 53vw;
+}
+
+.cat8Input + img
+{
+    left: 55vw;
+}
+
+.cat9Input + img
+{
+    left: 57vw;
+}
+
+.cat10Input + img
+{
+    left: 59vw;
+}
+
+.container article
+{
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 12vh 0;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.container article img
+{
+    margin: 5vh;
+    display: block;
+    height: 40vh;
+    opacity: .7;
+}
+
+.container .info
+{
+    display: none;
+    width: 100%;
+    height: 50vh;
+    margin-top: -53vh;
+    text-align: center;
+    padding-top: 22vh;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.cat1Input:checked ~ .container
+{
+    margin-left: -19vw;
+}
+
+.cat2Input:checked ~ .container
+{
+    margin-left: -56vw;
+}
+
+.cat3Input:checked ~ .container
+{
+    margin-left: -85vw;
+}
+
+.cat4Input:checked ~ .container
+{
+    margin-left: -115vw;
+}
+
+.cat5Input:checked ~ .container
+{
+    margin-left: -149vw;
+}
+
+.cat6Input:checked ~ .container
+{
+    margin-left: -187vw;
+}
+
+.cat7Input:checked ~ .container
+{
+    margin-left: -224vw;
+}
+
+.cat8Input:checked ~ .container
+{
+    margin-left: -258vw;
+}
+
+.cat9Input:checked ~ .container
+{
+    margin-left: -293vw;
+}
+
+.cat10Input:checked ~ .container
+{
+    margin-left: -331vw;
+}
+
+.cat1Input:checked ~ .container > article > label > img[alt='cat1'],
+.cat2Input:checked ~ .container > article > label > img[alt='cat2'],
+.cat3Input:checked ~ .container > article > label > img[alt='cat3'],
+.cat4Input:checked ~ .container > article > label > img[alt='cat4'],
+.cat5Input:checked ~ .container > article > label > img[alt='cat5'],
+.cat6Input:checked ~ .container > article > label > img[alt='cat6'],
+.cat7Input:checked ~ .container > article > label > img[alt='cat7'],
+.cat8Input:checked ~ .container > article > label > img[alt='cat8'],
+.cat9Input:checked ~ .container > article > label > img[alt='cat9'],
+.cat10Input:checked ~ .container > article > label > img[alt='cat10']
+{
+    height: 50vh;
+    margin: 0;
+    opacity: 1;
+    box-shadow: 2px 2px 10px #333;
+}
+
+.cat1Input:checked ~ .container > .cat1:hover .info,
+.cat2Input:checked ~ .container > .cat2:hover .info,
+.cat3Input:checked ~ .container > .cat3:hover .info,
+.cat4Input:checked ~ .container > .cat4:hover .info,
+.cat5Input:checked ~ .container > .cat5:hover .info,
+.cat6Input:checked ~ .container > .cat6:hover .info,
+.cat7Input:checked ~ .container > .cat7:hover .info,
+.cat8Input:checked ~ .container > .cat8:hover .info,
+.cat9Input:checked ~ .container > .cat9:hover .info,
+.cat10Input:checked ~ .container > .cat10:hover .info
+{
+    display: block;
+    background-color: #000;
+    opacity: .6;
+}
+
+.cat1Input:checked ~ .cat1ModalPage:checked ~ .container > .cat1:hover .info,
+.cat2Input:checked ~ .cat2ModalPage:checked ~ .container > .cat2:hover .info,
+.cat3Input:checked ~ .cat3ModalPage:checked ~ .container > .cat3:hover .info,
+.cat4Input:checked ~ .cat4ModalPage:checked ~ .container > .cat4:hover .info,
+.cat5Input:checked ~ .cat5ModalPage:checked ~ .container > .cat5:hover .info,
+.cat6Input:checked ~ .cat6ModalPage:checked ~ .container > .cat6:hover .info,
+.cat7Input:checked ~ .cat7ModalPage:checked ~ .container > .cat7:hover .info,
+.cat8Input:checked ~ .cat8ModalPage:checked ~ .container > .cat8:hover .info,
+.cat9Input:checked ~ .cat9ModalPage:checked ~ .container > .cat9:hover .info,
+.cat10Input:checked ~ .cat10ModalPage:checked ~ .container > .cat10:hover .info
+{
+    display: none;
+}
+
+.modalPage article
+{
+    display: none;
+}
+
+.blackBackground
+{
+    display: none;
+}
+
+.cat1ModalPage:checked ~ .blackBackground,
+.cat2ModalPage:checked ~ .blackBackground,
+.cat3ModalPage:checked ~ .blackBackground,
+.cat4ModalPage:checked ~ .blackBackground,
+.cat5ModalPage:checked ~ .blackBackground,
+.cat6ModalPage:checked ~ .blackBackground,
+.cat7ModalPage:checked ~ .blackBackground,
+.cat8ModalPage:checked ~ .blackBackground,
+.cat9ModalPage:checked ~ .blackBackground,
+.cat10ModalPage:checked ~ .blackBackground
+{
+    display: block;
+    background-color: #000;
+    opacity: .85;
+    width: 100vw;
+    position: absolute;
+    height: 80vh;
+    margin: 0;
+    left: 0;
+    top: 10vh;
+}
+
+.modalPage
+{
+    height: 50vh;
+}
+
+.modalPage > article
+{
+    position: relative;
+    width: 60vw;
+    margin: calc(22vh + 1px) auto;
+    white-space: nowrap;
+}
+
+.modalPage > article > img
+{
+    display: inline-block;
+    height: 50vh;
+    position: absolute;
+    right: 23vw;
+}
+
+.modalPage > article > .info
+{
+    display: inline-block;
+    position: absolute;
+    top: 4vh;
+    left: 39vw;
+    width: 18vw;
+    color: #fff;
+}
+
+.modalPage .info > .name
+{
+    font-size: 200%;
+}
+
+.modalPage .info > .longInfo
+{
+    white-space: normal;
+}
+
+.cat1ModalPage:checked ~ .modalPage > article:nth-child(1),
+.cat2ModalPage:checked ~ .modalPage > article:nth-child(2),
+.cat3ModalPage:checked ~ .modalPage > article:nth-child(3),
+.cat4ModalPage:checked ~ .modalPage > article:nth-child(4),
+.cat5ModalPage:checked ~ .modalPage > article:nth-child(5),
+.cat6ModalPage:checked ~ .modalPage > article:nth-child(6),
+.cat7ModalPage:checked ~ .modalPage > article:nth-child(7),
+.cat8ModalPage:checked ~ .modalPage > article:nth-child(8),
+.cat9ModalPage:checked ~ .modalPage > article:nth-child(9),
+.cat10ModalPage:checked ~ .modalPage > article:nth-child(10)
+{
+    display: block;
+    z-index: 1000;
+}
+
+.modalPage .close
+{
+    display: none;
+    position: relative;
+    float: right;
+    margin: 0;
+    margin-left: auto;
+    width: 2em;
+    height: 2em;
+    color: #fff;
+    z-index: 2000;
+    top: 0;
+    right: 3.6vw;
+    opacity: .6;
+}
+
+.modalPage .close:hover
+{
+    opacity: 1;
+}
+
+.cat1ModalPage:checked ~ .modalPage > article:nth-child(1) .close,
+.cat2ModalPage:checked ~ .modalPage > article:nth-child(2) .close,
+.cat3ModalPage:checked ~ .modalPage > article:nth-child(3) .close,
+.cat4ModalPage:checked ~ .modalPage > article:nth-child(4) .close,
+.cat5ModalPage:checked ~ .modalPage > article:nth-child(5) .close,
+.cat6ModalPage:checked ~ .modalPage > article:nth-child(6) .close,
+.cat7ModalPage:checked ~ .modalPage > article:nth-child(7) .close,
+.cat8ModalPage:checked ~ .modalPage > article:nth-child(8) .close,
+.cat9ModalPage:checked ~ .modalPage > article:nth-child(9) .close,
+.cat10ModalPage:checked ~ .modalPage > article:nth-child(10) .close
+{
+    display: block;
 }
 
 footer
@@ -178,6 +387,8 @@ footer > .contacts
 
 footer > :last-child
 {
-    float: right;
+    position: absolute;
+    right: 2vw;
+    bottom: 0;
     text-align: end;
 }
