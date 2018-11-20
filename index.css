@@ -50,14 +50,22 @@ body
     display: block;
 }
 
-.modal:target ~ .close-common
+.close-common
 {
-    display: inline-block;
+    opacity: 0;
+    transition-duration: 700ms;
     position: absolute;
     top: 29%;
     left: 73.2%;
-    z-index: 999999;
+    z-index: 99999;
     font-size: 110%;
+    pointer-events: none;
+}
+
+.modal:target ~ .close-common
+{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .modal-inner
@@ -204,7 +212,6 @@ body
     padding-right: 5px;
 }
 
-.close-common,
 .indicator
 {
     display: none;
