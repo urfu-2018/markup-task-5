@@ -1,108 +1,85 @@
 html,
-body
- {
+body {
     height: 100%;
     margin: 0;
-    overflow: hidden;
 }
 
-header
- {
-    position: fixed;
+header {
     text-align: center;
     width: 100%;
     border-bottom: 1px solid gray;
 }
 
-h1
- {
+h1 {
     margin-top: 0;
     margin-bottom: 5px;
     font: 32px PT SansNarrow;
 }
 
-h1::first-letter
- {
+h1::first-letter {
     color: red;
 }
 
-h4
- {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;
-}
-
-main
- {
-    height: 700px;
-    min-height: 100%;
+main {
+    height: 660px;
+    min-height: 80%;
     margin-bottom: -80px;
-    position: relative;
-    top: 7%;
+    overflow: hidden;
 }
 
-footer
- {
+footer {
     border-top: 1px solid gray;
-    height: 80px;
+    height: 50px;
     min-height: 5%;
     padding: 10px;
     font: 14px Arial;
 }
 
-input
- {
+input {
     display: none;
 }
 
-.imgholder
- {
+.imgholder {
     display: inline-block;
     height: 280px;
-    opacity: .7;
+    opacity: 0.7;
     margin: 30px;
     max-width: 100%;
     text-align: center;
     overflow: hidden;
     position: relative;
-    transition-duration: 300ms;
+    transition-duration: 2.5s;
 }
 
-img
- {
+img {
     height: 100%;
     margin: 0;
     transition-duration: 300ms;
 }
 
-.Barsik:checked ~ .carousel div[id='imgholder1'],
-.Bony:checked ~ .carousel div[id='imgholder2'],
-.Cleo:checked ~ .carousel div[id='imgholder3'],
-.Dimok:checked ~ .carousel div[id='imgholder4'],
-.Longname:checked ~ .carousel div[id='imgholder5'],
-.Luci:checked ~ .carousel div[id='imgholder6'],
-.Pushok:checked ~ .carousel div[id='imgholder7']
- {
+.Barsik:checked ~ .carousel div[id="imgholder1"],
+.Bony:checked ~ .carousel div[id="imgholder2"],
+.Cleo:checked ~ .carousel div[id="imgholder3"],
+.Dimok:checked ~ .carousel div[id="imgholder4"],
+.Longname:checked ~ .carousel div[id="imgholder5"],
+.Luci:checked ~ .carousel div[id="imgholder6"],
+.Pushok:checked ~ .carousel div[id="imgholder7"] {
     height: 350px;
     opacity: 1;
-    top: 35px;
+    transform: translate(0, 35px);
 }
 
-.Barsik:checked ~ .carousel div[id='imgholder1']:hover label img,
-.Bony:checked ~ .carousel div[id='imgholder2']:hover label img,
-.Cleo:checked ~ .carousel div[id='imgholder3']:hover label img,
-.Dimok:checked ~ .carousel div[id='imgholder4']:hover label img,
-.Longname:checked ~ .carousel div[id='imgholder5']:hover label img,
-.Luci:checked ~ .carousel div[id='imgholder6']:hover label img,
-.Pushok:checked ~ .carousel div[id='imgholder7']:hover label img
- {
+.Barsik:checked ~ .carousel div[id="imgholder1"]:hover label img,
+.Bony:checked ~ .carousel div[id="imgholder2"]:hover label img,
+.Cleo:checked ~ .carousel div[id="imgholder3"]:hover label img,
+.Dimok:checked ~ .carousel div[id="imgholder4"]:hover label img,
+.Longname:checked ~ .carousel div[id="imgholder5"]:hover label img,
+.Luci:checked ~ .carousel div[id="imgholder6"]:hover label img,
+.Pushok:checked ~ .carousel div[id="imgholder7"]:hover label img {
     filter: brightness(15%);
 }
 
-.name
- {
+.name {
     margin: auto;
     position: absolute;
     top: 50%;
@@ -111,21 +88,30 @@ img
     color: antiquewhite;
     font-size: 300%;
     visibility: hidden;
+    width: 100%;
 }
 
-.Barsik:checked ~ .carousel div[id='imgholder1']:hover .name,
-.Bony:checked ~ .carousel div[id='imgholder2']:hover .name,
-.Cleo:checked ~ .carousel div[id='imgholder3']:hover .name,
-.Dimok:checked ~ .carousel div[id='imgholder4']:hover .name,
-.Longname:checked ~ .carousel div[id='imgholder5']:hover .name,
-.Luci:checked ~ .carousel div[id='imgholder6']:hover .name,
-.Pushok:checked ~ .carousel div[id='imgholder7']:hover .name
- {
+.Barsik:checked ~ .carousel div[id="imgholder1"]:hover .name,
+.Bony:checked ~ .carousel div[id="imgholder2"]:hover .name,
+.Cleo:checked ~ .carousel div[id="imgholder3"]:hover .name,
+.Dimok:checked ~ .carousel div[id="imgholder4"]:hover .name,
+.Longname:checked ~ .carousel div[id="imgholder5"]:hover .name,
+.Luci:checked ~ .carousel div[id="imgholder6"]:hover .name,
+.Pushok:checked ~ .carousel div[id="imgholder7"]:hover .name {
     visibility: visible;
 }
 
-.carousel
- {
+label.modal_label {
+    display: block;
+    height: 350px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 330px;
+}
+
+.carousel {
     position: relative;
     height: 400px;
     top: 10%;
@@ -135,43 +121,35 @@ img
     right: 1500;
 }
 
-.Barsik:checked ~ .carousel .imgholder
- {
+.Barsik:checked ~ .carousel .imgholder {
     right: -8%;
 }
 
-.Bony:checked ~ .carousel .imgholder
- {
+.Bony:checked ~ .carousel .imgholder {
     right: 1%;
 }
 
-.Cleo:checked ~ .carousel .imgholder
- {
+.Cleo:checked ~ .carousel .imgholder {
     right: 7.5%;
 }
 
-.Dimok:checked ~ .carousel .imgholder
- {
+.Dimok:checked ~ .carousel .imgholder {
     right: 15%;
 }
 
-.Longname:checked ~ .carousel .imgholder
- {
-    right: 22.5%;
+.Longname:checked ~ .carousel .imgholder {
+    right: 24%;
 }
 
-.Luci:checked ~ .carousel .imgholder
- {
+.Luci:checked ~ .carousel .imgholder {
     right: 31%;
 }
 
-.Pushok:checked ~ .carousel .imgholder
- {
+.Pushok:checked ~ .carousel .imgholder {
     right: 40%;
 }
 
-.modal > img
- {
+.modal > img {
     float: left;
     width: 55%;
     height: 100%;
@@ -179,15 +157,14 @@ img
     margin-right: 20px;
 }
 
-label.close
- {
+label.close {
     float: right;
     width: 20px;
     font-size: 20px;
+    cursor: pointer;
 }
 
-.modal
- {
+.modal {
     border: 1px solid black;
     position: absolute;
     top: 15%;
@@ -199,48 +176,40 @@ label.close
     visibility: hidden;
 }
 
-.open_modal:checked + .modal
- {
+.open_modal:checked + .modal {
     visibility: visible;
 }
 
-.close_modal:checked ~ .modal
- {
+.close_modal:checked ~ .modal {
     visibility: hidden;
 }
 
-h2
- {
+h2 {
     width: 30%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.write
- {
+.write {
     color: #404040;
 }
 
-.mail
- {
+.mail {
     height: 15px;
     margin-right: 3px;
     position: relative;
     top: 3px;
 }
 
-.email
- {
+.email {
     margin: 3px;
 }
 
-aside
- {
+aside {
     float: right;
 }
 
-a
- {
+a {
     color: #4c4cd8;
 }
