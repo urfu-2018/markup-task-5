@@ -208,7 +208,11 @@ main input
 
 .bt_close
 {
-    float: right;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 80px;
+    display: none;
 }
 
 .popup_bt1:checked ~ .popup1,
@@ -216,6 +220,11 @@ main input
 .popup_bt3:checked ~ .popup3,
 .popup_bt4:checked ~ .popup4,
 .popup_bt5:checked ~ .popup5
+{
+    display: block;
+}
+
+.popup_bt:checked ~ .bt_close
 {
     display: block;
 }
