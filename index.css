@@ -1,0 +1,203 @@
+header
+{
+    height: 100px;
+    width: 100%;
+    background-color: #50b6cc;
+    overflow: hidden;
+}
+
+.carousel
+{
+    margin-top: 50px;
+    padding-top: 30px;
+}
+
+body,
+html
+{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.container
+{
+    font-size: 0;
+    overflow: hidden;
+}
+
+.input-container
+{
+    position: relative;
+    height: 400px;
+    width: 300%;
+    margin-left: -100%;
+}
+
+.input
+{
+    display: none;
+}
+
+.input:checked + .q + .q + .q + .q + .q + .q + .q
+{
+    width: 400px;
+    height: 230px;
+    opacity: 1;
+}
+
+.input:checked + .q + .q + .q + .q + .q + .q + .q > .cat-internal:hover
+{
+    box-shadow: 0 0 0 128px rgba(0, 0, 0, .33) inset;
+}
+
+.input:checked + .q + .q + .q + .q + .q + .q + .q > .cat-internal:hover > p
+{
+    display: block;
+    color: white;
+    opacity: 1;
+}
+
+.input:checked + .q + .q + .q ~ .left.offset
+{
+    width: 320px;
+}
+
+.input:checked + .q + .q + .q + .q + .q + .q + .q + .q + .q + .q ~ .right.offset
+{
+    width: 0;
+}
+
+.offset.left
+{
+    width: 0;
+}
+
+.offset.right
+{
+    width: 320px;
+}
+
+.offset
+{
+    display: inline-block;
+    width: 0;
+    height: 230px;
+    transition: width .3s ease-in-out;
+}
+
+.cat-square
+{
+    display: inline-block;
+    width: 320px;
+    height: 184px;
+    transition: width .3s ease-in-out, height .3s ease-in-out;
+    position: relative;
+    opacity: .7;
+    margin-top: 50px;
+}
+
+.cat-square > .cat-internal
+{
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    background-size: cover;
+}
+
+.cat-square1
+{
+    background-image: url(./cat1.jpeg);
+}
+
+.cat-square2
+{
+    background-image: url(./cat2.jpg);
+}
+
+.cat-square3
+{
+    background-image: url(./cat3.jpg);
+}
+
+.cat-square4
+{
+    background-image: url(./cat4.jpg);
+}
+
+.labels-container
+{
+    display: inline-block;
+    margin-bottom: 40px;
+
+}
+
+.labels-container > label
+{
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-color: #50b6cc;
+    display: block;
+    float: left;
+    margin: 0 3px;
+    border-radius: 5px;
+}
+
+.cat-square > .cat-internal > p
+{
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    bottom: 0;
+    text-align: center;
+    font-size: 30px;
+    display: none;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+footer
+{
+    height: 60px;
+    width: 100%;
+    background-color: #50b6cc;
+    overflow: hidden;
+}
+
+.contacts ul
+{
+    float: left;
+}
+
+section.contacts
+{
+    text-align: left;
+}
+
+.contacts li
+{
+    list-style-image: url(letter.png);
+    font-family: 'Arial', sans-serif;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.contacts p
+{
+    margin-right: 20px;
+    float: right;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin-bottom: 0;
+
+}
+
+.contacts a
+{
+    color: #4c4cd8;
+}
