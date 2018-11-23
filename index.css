@@ -3,12 +3,7 @@ body
     height: 100%;
     margin: 0;
     min-width: 1500px;
-}
-
-hr
-{
-    margin: 0;
-    padding: 0;
+    overflow-y: hidden;
 }
 
 main
@@ -18,10 +13,10 @@ main
 
 .middle-align-section
 {
-    display: table-cell;
-    vertical-align: middle;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 98px);
+    text-align: center;
+    overflow-y: scroll;
 }
 
 .page-fixed-header
@@ -29,10 +24,12 @@ main
     z-index: 50;
     width: 100%;
     background-color: white;
-    position: absolute;
+    height: 44px;
     text-align: center;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 32px;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
 }
 
 .first-letter-red::first-letter
@@ -45,11 +42,10 @@ footer
     z-index: 50;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    position: absolute;
-    bottom: 0;
+    height: 54px;
     background-color: white;
-    right: 0;
-    left: 0;
+    border-top: 1px solid black;
+    box-sizing: border-box;
 }
 
 footer .left-align-block
@@ -72,12 +68,6 @@ footer img
 {
     width: 20px;
     height: 15px;
-}
-
-.carousel-wrapper
-{
-    width: 100%;
-    text-align: center;
 }
 
 .corousel-label
@@ -108,10 +98,8 @@ label > img
 .labels
 {
     width: 100%;
-    height: 100%;
     white-space: nowrap;
     overflow: hidden;
-
 }
 
 .title-black-back
