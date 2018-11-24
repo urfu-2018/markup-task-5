@@ -1,3 +1,8 @@
+html
+{
+    height: 100%;
+}
+
 body
 {
     margin: 0;
@@ -7,7 +12,6 @@ body
 header
 {
     font: 32px 'PT Sans Narrow';
-    position: fixed;
     display: inline-block;
     vertical-align: top;
     border-bottom: 2px solid gray;
@@ -29,6 +33,8 @@ footer
     bottom: 0;
     padding: 20px;
     height: 60px;
+    background: white;
+    z-index: 50;
     width: calc(100% - 3em); /* Строгое отображение на всю ширину окна */
     border-top: 2px solid gray;
 }
@@ -72,11 +78,10 @@ footer > p + p
     но следующая строка сдвигает эл-ты влево чутка, как раз */
     font-size: 0;
 
-    -o-transition: left .5s ease-out;
-    -ms-transition: left .5s ease-out;
-    -moz-transition: left .5s ease-out;
-    -webkit-transition: left .5s ease-out;
-    transition: left .5s ease-out;
+    -o-transition: left .5s ease-in-out;
+    -moz-transition: left .5s ease-in-out;
+    -webkit-transition: left .5s ease-in-out;
+    transition: left .5s ease-in-out;
     user-select: none;
 }
 
@@ -97,6 +102,49 @@ footer > p + p
     opacity: .7;
     vertical-align: middle;
     cursor: pointer;
+}
+
+/* Как отображать нажатую c карусели картинку,
+которая просто показывается на слайдере */
+
+.img1:checked ~ .carousel > .carousel-item:nth-of-type(1) img,
+.img2:checked ~ .carousel > .carousel-item:nth-of-type(2) img,
+.img3:checked ~ .carousel > .carousel-item:nth-of-type(3) img,
+.img4:checked ~ .carousel > .carousel-item:nth-of-type(4) img,
+.img5:checked ~ .carousel > .carousel-item:nth-of-type(5) img,
+.img6:checked ~ .carousel > .carousel-item:nth-of-type(6) img,
+.img7:checked ~ .carousel > .carousel-item:nth-of-type(7) img,
+.img8:checked ~ .carousel > .carousel-item:nth-of-type(8) img,
+.img9:checked ~ .carousel > .carousel-item:nth-of-type(9) img,
+.img10:checked ~ .carousel > .carousel-item:nth-of-type(10) img
+{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    box-shadow: 10px 10px 5px gray;
+}
+
+/* Сколько места занимает невыделенная с карусели картинка */
+
+.carousel-item
+{
+    width: 500px;
+    height: 400px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    display: inline-block;
+    position: relative;
+}
+
+/* Картинки в подробной информации о котэторе */
+
+.modal-dialog .cat_article img
+{
+    float: left;
+    max-width: 50%;
+    max-height: 50%;
+    padding-right: 40px;
 }
 
 /* Блок точек */
@@ -150,90 +198,57 @@ footer > p + p
     background-color: gray;
 }
 
-/* Сколько места занимает невыделенная с карусели картинка */
-
-.carousel-item
-{
-    width: 400px;
-    height: 350px;
-    padding: 0 10px;
-    box-sizing: border-box;
-
-    display: inline-block;
-    position: relative;
-}
-
 /* Высчитывание, какая часть карусели 
 должна отображаться при нажатии на картинку */
 
 .img1:checked ~ .carousel
 {
-    left: calc(50% - 200px - 0*400px);
+    left: calc(50% - 250px - 0*400px);
 }
 
 .img2:checked ~ .carousel
 {
-    left: calc(50% - 200px - 1*400px);
+    left: calc(50% - 350px - 1*400px);
 }
 
 .img3:checked ~ .carousel
 {
-    left: calc(50% - 200px - 2*400px);
+    left: calc(50% - 450px - 2*400px);
 }
 
 .img4:checked ~ .carousel
 {
-    left: calc(50% - 200px - 3*400px);
+    left: calc(50% - 560px - 3*400px);
 }
 
 .img5:checked ~ .carousel
 {
-    left: calc(50% - 200px - 4*400px);
+    left: calc(50% - 660px - 4*400px);
 }
 
 .img6:checked ~ .carousel
 {
-    left: calc(50% - 200px - 5*400px);
+    left: calc(50% - 760px - 5*400px);
 }
 
 .img7:checked ~ .carousel
 {
-    left: calc(50% - 200px - 6*400px);
+    left: calc(50% - 860px - 6*400px);
 }
 
 .img8:checked ~ .carousel
 {
-    left: calc(50% - 200px - 7*400px);
+    left: calc(50% - 960px - 7*400px);
 }
 
 .img9:checked ~ .carousel
 {
-    left: calc(50% - 200px - 8*400px);
+    left: calc(50% - 1060px - 8*400px);
 }
 
 .img10:checked ~ .carousel
 {
-    left: calc(50% - 200px - 9*400px);
-}
-
-/* Как отображать нажатую c карусели картинку, 
-которая просто показывается на слайдере */
-
-.img1:checked ~ .carousel > .carousel-item:nth-of-type(1) img,
-.img2:checked ~ .carousel > .carousel-item:nth-of-type(2) img,
-.img3:checked ~ .carousel > .carousel-item:nth-of-type(3) img,
-.img4:checked ~ .carousel > .carousel-item:nth-of-type(4) img,
-.img5:checked ~ .carousel > .carousel-item:nth-of-type(5) img,
-.img6:checked ~ .carousel > .carousel-item:nth-of-type(6) img,
-.img7:checked ~ .carousel > .carousel-item:nth-of-type(7) img,
-.img8:checked ~ .carousel > .carousel-item:nth-of-type(8) img,
-.img9:checked ~ .carousel > .carousel-item:nth-of-type(9) img,
-.img10:checked ~ .carousel > .carousel-item:nth-of-type(10) img
-{
-    height: 100%;
-    width: 100%;
-    opacity: 1;
-    box-shadow: 10px 10px 5px gray;
+    left: calc(50% - 1150px - 9*400px);
 }
 
 /* Отступ справа для центральной картинки */
@@ -249,7 +264,7 @@ footer > p + p
 .img9:checked ~ .carousel > .carousel-item:nth-of-type(9),
 .img10:checked ~ .carousel > .carousel-item:nth-of-type(10)
 {
-    margin-right: 80px;
+    margin-right: 90px;
 }
 
 /* Как должно выглядеть затемнение картинки */
@@ -300,7 +315,7 @@ footer > p + p
 .modal-dialog
 {
     position: fixed;
-    top: 0;
+    top: 44px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -375,16 +390,6 @@ footer > p + p
     display: none;
 }
 
-/* Картинки в подробной информации о котэторе */
-
-.modal-dialog .cat_article img
-{
-    float: left;
-    width: 600px;
-    height: 400px;
-    padding-right: 40px;
-}
-
 /* Размеры крестика и положение */
 
 .modal-dialog .cat_article .close
@@ -445,7 +450,6 @@ footer > p + p
 span:hover
 {
     color: #0f9;
-    cursor: pointer;
 }
 
 /* Ну а почему бы и нет */
