@@ -3,7 +3,100 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1 class="page-name">Мурмаркет</h1>    
+    </header>
+    <main>
+        <input type="radio" name="carousel" id="cat-1" value="item-1">
+        <input type="radio" name="carousel" id="cat-2" value="item-2" checked>
+        <input type="radio" name="carousel" id="cat-3" value="item-3">
+        <input type="radio" name="carousel" id="cat-4" value="item-4">
+        <input type="radio" name="carousel" id="cat-5" value="item-5">
+        <div class="info-window" id="info-1">
+            <a class="close-info" href="#">&times;</a>
+            <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-1">
+            <p>CAT DESCRIPTION</p>
+        </div>
+        <div class="info-window" id="info-2">
+            <a class="close-info" href="#">&times;</a>
+            <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-2">
+            <p>CAT DESCRIPTION</p>
+        </div>
+        <div class="info-window" id="info-3">
+            <a class="close-info" href="#">&times;</a>
+            <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-3">
+            <p>CAT DESCRIPTION</p>
+        </div>
+        <div class="info-window" id="info-4">
+            <a class="close-info" href="#">&times;</a>
+            <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-4">
+            <p>CAT DESCRIPTION</p>
+        </div>
+        <div class="info-window" id="info-5">
+            <a class="close-info" href="#">&times;</a>
+            <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-5">
+            <p>CAT DESCRIPTION</p>
+        </div>
+        <section class="carousel">
+            <label class="carousel-1" for="cat-1">
+                <span>
+                    <a href="#info-1">КОТИК-1</a>
+                </span>
+                <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-1">
+            </label>
+            <label class="carousel-2" for="cat-2">
+                <span>
+                    <a href="#info-2">КОТИК-2</a>
+                </span>
+                <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-2">
+            </label>
+            <label class="carousel-3" for="cat-3">
+                <span>
+                    <a href="#info-3">КОТИК-3</a>
+                </span>
+                <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-3">
+            </label>
+            <label class="carousel-4" for="cat-4">
+                <span>
+                    <a href="#info-4">КОТИК-4</a>
+                </span>
+                <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-4">
+            </label>
+            <label class="carousel-5" for="cat-5">
+                <span>
+                    <a href="#info-5">КОТИК-5</a>
+                </span>
+                <img src="images/kitten_fluffy_look_piano-60352.jpg" alt="cat-5">
+            </label>
+        </section>
+        <nav class="carousel-nav">
+            <label for="cat-1" class="carousel-nav-1"></label>
+            <label for="cat-2" class="carousel-nav-2"></label>
+            <label for="cat-3" class="carousel-nav-3"></label>
+            <label for="cat-4" class="carousel-nav-4"></label>
+            <label for="cat-5" class="carousel-nav-5"></label>
+        </nav>
+    </main>
+    <footer>
+        <div class="contacts">
+            <ul>
+                <li>Напишите</li>
+                <li>
+                    &#9993;
+                    <a href="">cats@babuli.ru</a>
+                </li>
+                <li>
+                    &#9993;
+                    <a href="">vnuchek@babuli.ru</a>
+                </li>
+            </ul>
+        </div>
+        <div class="company-name">
+            &copy; 2018 ООО <a href="">"Бабушкины котятки"</a>
+        </div>
+    </footer>
 </body>
 </html>
