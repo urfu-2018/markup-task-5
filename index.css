@@ -4,6 +4,7 @@ header
     width: 100%;
     background-color: #50b6cc;
     overflow: hidden;
+    z-index: 5;
 }
 
 .carousel
@@ -32,7 +33,7 @@ html
 .input-container
 {
     position: relative;
-    height: 400px;
+    height: 336px;
     width: 300%;
     margin-left: -100%;
 }
@@ -47,7 +48,7 @@ html
     width: 400px;
     height: 230px;
     opacity: 1;
-    pointer-events:  auto;
+    pointer-events: auto;
     cursor: pointer;
 }
 
@@ -99,7 +100,6 @@ html
     transition: width .3s ease-in-out, height .3s ease-in-out;
     position: relative;
     opacity: .7;
-    margin-top: 50px;
     pointer-events: none;
     cursor: default;
 }
@@ -171,6 +171,7 @@ footer
     width: 100%;
     background-color: #50b6cc;
     overflow: hidden;
+    z-index: 5;
 }
 
 .contacts ul
@@ -206,38 +207,36 @@ section.contacts
     color: #4c4cd8;
 }
 
-.overlay {
+.overlay
+{
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, .7);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
 }
-.overlay:target {
+
+.overlay:target
+{
     visibility: visible;
     opacity: 1;
 }
 
-.popup {
-    margin: 70px auto;
-    padding: 0px;
+.popup
+{
+    margin: 150px auto;
     background: #fff;
-    border-radius: 5px;
-    width: 40%;
+    width: 60% ;
     position: relative;
     transition: all 5s ease-in-out;
 }
 
-.popup h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
+.popup .close
+{
     position: absolute;
     top: 20px;
     right: 30px;
@@ -247,25 +246,52 @@ section.contacts
     text-decoration: none;
     color: #333;
 }
-.popup .close:hover {
-    color: #06D85F;
+
+.popup .close:hover
+{
+    color: #50b6cc;
 }
-.popup .content {
+
+.popup .info
+{
+    display: inline-block;
+    width: 300px;
+}
+
+.popup .content
+{
     max-height: 30%;
     overflow: auto;
+    width: 100%;
 }
 
-.popup .content img {
+.popup .content .head
+{
+    padding-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+.popup .content .text
+{
+    text-align: justify;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.popup .content img
+{
     width: 500px;
     height: 330px;
-
+    display: inline-block;
+    float: left;
 }
 
-@media screen and (max-width: 700px){
-    .box{
-        width: 70%;
-    }
-    .popup{
+@media screen and (max-width: 700px)
+{
+    .popup
+    {
         width: 70%;
     }
 }
