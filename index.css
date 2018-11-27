@@ -296,7 +296,7 @@ input[id='modal-input-10']:checked ~ .modal-windows .modal-window-10
     width: 80%;
     -moz-user-select: none;
     -webkit-user-select: none;
-    -ms-user-select: none;   
+    -ms-user-select: none;
 }
 
 .modal-window__right-panel
