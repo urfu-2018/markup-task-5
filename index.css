@@ -35,14 +35,16 @@ html
 {
     position: relative;
     height: 336px;
-    width: 300%;
-    margin-left: -100%;
+    width: 30000%;
+    margin-left: -14950%;
 }
 
 .input
 {
     display: none;
 }
+
+/*"q" for queue of elements*/
 
 .input:checked + .q + .q + .q + .q + .q + .q + .q
 {
@@ -229,11 +231,10 @@ section.contacts
 
 .popup
 {
-    margin: 150px auto;
+    margin: 180px auto;
     background: #fff;
-    width: 60% ;
+    width: 90%;
     position: relative;
-    transition: all 5s ease-in-out;
 }
 
 .popup .close
@@ -246,6 +247,7 @@ section.contacts
     font-weight: bold;
     text-decoration: none;
     color: #333;
+    z-index: 1;
 }
 
 .popup .close:hover
@@ -261,9 +263,7 @@ section.contacts
 
 .popup .content
 {
-    max-height: 30%;
     overflow: auto;
-    width: 100%;
 }
 
 .popup .content .head
@@ -283,17 +283,25 @@ section.contacts
 
 .popup .content img
 {
-    width: 500px;
-    height: 330px;
+    width: 355px;
     display: inline-block;
     float: left;
+    position: relative;
 }
 
-@media screen and (max-width: 700px)
+@media screen and (max-width: 750px)
 {
-    .popup
-    {
-        width: 70%;
+    .popup {
+        margin: 110px auto;
+        width: 50%;
     }
 
+    .popup .content img {
+        width: 100%;
+        float: none;
+    }
+
+    .popup .content .head {
+        padding-top: 0;
+    }
 }
