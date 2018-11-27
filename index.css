@@ -291,17 +291,20 @@ section.contacts
 
 @media screen and (max-width: 750px)
 {
-    .popup {
+    .popup
+    {
         margin: 110px auto;
         width: 50%;
     }
 
-    .popup .content img {
+    .popup .content img
+    {
         width: 100%;
         float: none;
     }
 
-    .popup .content .head {
+    .popup .content .head
+    {
         padding-top: 0;
     }
 }
