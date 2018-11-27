@@ -5,22 +5,23 @@ body
     margin: 0;
 }
 
-.title
+.headline
 {
     font-family: 'PT SansNarrow', sans-serif;
     font-size: 32px;
     text-align: center;
+
     margin-top: 5px;
     border-top: 1px solid #d3d3d3;
     border-bottom: 1px solid #d3d3d3;
 }
 
-.title > h3
+.headline__title
 {
     margin: 10px 0;
 }
 
-.title > h3::first-letter
+.headline__title::first-letter
 {
     color: #f00;
 }
@@ -28,6 +29,7 @@ body
 .main-content
 {
     overflow: hidden;
+    padding: 0 10px;
 }
 
 input[name='cat_image'],
@@ -39,6 +41,7 @@ input[name='modal-checkbox']
 .carousel
 {
     width: 10000px;
+    height: 200px;
     margin: 70px 0;
     position: relative;
     transition-duration: .5s;
@@ -207,30 +210,30 @@ input[id='image-10']:checked ~ .photo-switch label[for='image-10']
     background-color: #000;
 }
 
-input[id='image-1']:checked ~ .carousel label[for$='1']:hover .carousel-image,
-input[id='image-2']:checked ~ .carousel label[for$='2']:hover .carousel-image,
-input[id='image-3']:checked ~ .carousel label[for$='3']:hover .carousel-image,
-input[id='image-4']:checked ~ .carousel label[for$='4']:hover .carousel-image,
-input[id='image-5']:checked ~ .carousel label[for$='5']:hover .carousel-image,
-input[id='image-6']:checked ~ .carousel label[for$='6']:hover .carousel-image,
-input[id='image-7']:checked ~ .carousel label[for$='7']:hover .carousel-image,
-input[id='image-8']:checked ~ .carousel label[for$='8']:hover .carousel-image,
-input[id='image-9']:checked ~ .carousel label[for$='9']:hover .carousel-image,
-input[id='image-10']:checked ~ .carousel label[for$='10']:hover .carousel-image
+input[id='image-1']:checked ~ .carousel .cat-content-1:hover .carousel-image,
+input[id='image-2']:checked ~ .carousel .cat-content-2:hover .carousel-image,
+input[id='image-3']:checked ~ .carousel .cat-content-3:hover .carousel-image,
+input[id='image-4']:checked ~ .carousel .cat-content-4:hover .carousel-image,
+input[id='image-5']:checked ~ .carousel .cat-content-5:hover .carousel-image,
+input[id='image-6']:checked ~ .carousel .cat-content-6:hover .carousel-image,
+input[id='image-7']:checked ~ .carousel .cat-content-7:hover .carousel-image,
+input[id='image-8']:checked ~ .carousel .cat-content-8:hover .carousel-image,
+input[id='image-9']:checked ~ .carousel .cat-content-9:hover .carousel-image,
+input[id='image-10']:checked ~ .carousel .cat-content-10:hover .carousel-image
 {
     filter: brightness(50%);
 }
 
-input[id='image-1']:checked ~ .carousel label[for$='1']:hover + .activated-cat,
-input[id='image-2']:checked ~ .carousel label[for$='2']:hover + .activated-cat,
-input[id='image-3']:checked ~ .carousel label[for$='3']:hover + .activated-cat,
-input[id='image-4']:checked ~ .carousel label[for$='4']:hover + .activated-cat,
-input[id='image-5']:checked ~ .carousel label[for$='5']:hover + .activated-cat,
-input[id='image-6']:checked ~ .carousel label[for$='6']:hover + .activated-cat,
-input[id='image-7']:checked ~ .carousel label[for$='7']:hover + .activated-cat,
-input[id='image-8']:checked ~ .carousel label[for$='8']:hover + .activated-cat,
-input[id='image-9']:checked ~ .carousel label[for$='9']:hover + .activated-cat,
-input[id='image-10']:checked ~ .carousel label[for$='10']:hover + .activated-cat
+input[id='image-1']:checked ~ .carousel .cat-content-1:hover .activated-cat,
+input[id='image-2']:checked ~ .carousel .cat-content-2:hover .activated-cat,
+input[id='image-3']:checked ~ .carousel .cat-content-3:hover .activated-cat,
+input[id='image-4']:checked ~ .carousel .cat-content-4:hover .activated-cat,
+input[id='image-5']:checked ~ .carousel .cat-content-5:hover .activated-cat,
+input[id='image-6']:checked ~ .carousel .cat-content-6:hover .activated-cat,
+input[id='image-7']:checked ~ .carousel .cat-content-7:hover .activated-cat,
+input[id='image-8']:checked ~ .carousel .cat-content-8:hover .activated-cat,
+input[id='image-9']:checked ~ .carousel .cat-content-9:hover .activated-cat,
+input[id='image-10']:checked ~ .carousel .cat-content-10:hover .activated-cat
 {
     visibility: visible;
 }
@@ -272,31 +275,44 @@ input[id='modal-input-10']:checked ~ .modal-windows .modal-window-10
 {
     font-size: 40px;
     color: #fff;
+
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
-.left-panel
+.modal-window__left-panel
 {
     display: inline-block;
     margin: 100px 0 0 150px;
     width: 40%;
+
+    vertical-align: top;
 }
 
-.left-panel > img
+.left-panel__image
 {
     width: 80%;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;   
 }
 
-.right-panel
+.modal-window__right-panel
 {
     width: 30%;
+    margin-top: 100px;
     display: inline-block;
     text-align: left;
     color: #fff;
+    vertical-align: top;
 }
 
 .name-of-cat
 {
     font-size: 40px;
+    margin-top: 0;
 }
 
 .describe-of-cat span
@@ -311,6 +327,7 @@ input[id='modal-input-10']:checked ~ .modal-windows .modal-window-10
     left: 0;
     bottom: 0;
     right: 0;
+    padding: 10px;
     border-top: 1px solid #d3d3d3;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
