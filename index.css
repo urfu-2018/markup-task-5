@@ -165,6 +165,12 @@ label
     display: block;
 }
 
+.popup-label,
+.option-label
+{
+    cursor: pointer;
+}
+
 .popup-label
 {
     visibility: hidden;
@@ -195,7 +201,7 @@ nav
     margin-top: 20px;
 }
 
-nav label
+.nav-label
 {
     display: inline-block;
     width: 20px;
@@ -204,6 +210,7 @@ nav label
     border: 1px solid gray;
     margin-left: 5px;
     background: white;
+    cursor: pointer;
 }
 
 .popup1,
