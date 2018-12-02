@@ -31,7 +31,7 @@ a
     display: inline-block;
     margin: 0;
     width: 30vw;
-    height: 100%;
+    height: 95%;
     position: relative;
 }
 
@@ -177,9 +177,10 @@ a
 
 .navigation
 {
-    text-align: center;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 1.5vw;
+    width: 100vw;
+    z-index: 1;
 }
 
 .nav-box-1::before,
@@ -197,26 +198,26 @@ a
     margin: 5px;
 }
 
-.nav-box-1:checked ~ .navigation .nav-box-1::before,
-.nav-box-2:checked ~ .navigation .nav-box-2::before,
-.nav-box-3:checked ~ .navigation .nav-box-3::before,
-.nav-box-4:checked ~ .navigation .nav-box-4::before,
-.nav-box-5:checked ~ .navigation .nav-box-5::before,
-.nav-box-6:checked ~ .navigation .nav-box-6::before,
-.nav-box-7:checked ~ .navigation .nav-box-7::before,
-.nav-box-8:checked ~ .navigation .nav-box-8::before,
-.nav-box-9:checked ~ .navigation .nav-box-9::before,
-.nav-box-10:checked ~ .navigation .nav-box-10::before,
-.cat-1:checked ~ .navigation .nav-box-1::before,
-.cat-2:checked ~ .navigation .nav-box-2::before,
-.cat-3:checked ~ .navigation .nav-box-3::before,
-.cat-4:checked ~ .navigation .nav-box-4::before,
-.cat-5:checked ~ .navigation .nav-box-5::before,
-.cat-6:checked ~ .navigation .nav-box-6::before,
-.cat-7:checked ~ .navigation .nav-box-7::before,
-.cat-8:checked ~ .navigation .nav-box-8::before,
-.cat-9:checked ~ .navigation .nav-box-9::before,
-.cat-10:checked ~ .navigation .nav-box-10::before
+.nav-box-1:checked ~ .blog .navigation .nav-box-1::before,
+.nav-box-2:checked ~ .blog .navigation .nav-box-2::before,
+.nav-box-3:checked ~ .blog .navigation .nav-box-3::before,
+.nav-box-4:checked ~ .blog .navigation .nav-box-4::before,
+.nav-box-5:checked ~ .blog .navigation .nav-box-5::before,
+.nav-box-6:checked ~ .blog .navigation .nav-box-6::before,
+.nav-box-7:checked ~ .blog .navigation .nav-box-7::before,
+.nav-box-8:checked ~ .blog .navigation .nav-box-8::before,
+.nav-box-9:checked ~ .blog .navigation .nav-box-9::before,
+.nav-box-10:checked ~ .blog .navigation .nav-box-10::before,
+.cat-1:checked ~ .blog .navigation .nav-box-1::before,
+.cat-2:checked ~ .blog .navigation .nav-box-2::before,
+.cat-3:checked ~ .blog .navigation .nav-box-3::before,
+.cat-4:checked ~ .blog .navigation .nav-box-4::before,
+.cat-5:checked ~ .blog .navigation .nav-box-5::before,
+.cat-6:checked ~ .blog .navigation .nav-box-6::before,
+.cat-7:checked ~ .blog .navigation .nav-box-7::before,
+.cat-8:checked ~ .blog .navigation .nav-box-8::before,
+.cat-9:checked ~ .blog .navigation .nav-box-9::before,
+.cat-10:checked ~ .blog .navigation .nav-box-10::before
 {
     content: '☀️';
     margin: 5px;
@@ -326,6 +327,12 @@ a
     transform: translateX(36vw);
 }
 
+.nav-box-2:checked ~ .blog .navigation,
+.cat-2:checked ~ .blog .navigation
+{
+    transform: translateX(30vw);
+}
+
 .cat-3:checked ~ .blog,
 .nav-box-3:checked ~ .blog
 {
@@ -335,6 +342,12 @@ a
 .cat-3:checked ~ .blog .card-3:focus ~ .description .desc-card
 {
     transform: translateX(65vw);
+}
+
+.nav-box-3:checked ~ .blog .navigation,
+.cat-3:checked ~ .blog .navigation
+{
+    transform: translateX(61vw);
 }
 
 .cat-4:checked ~ .blog,
@@ -348,6 +361,12 @@ a
     transform: translateX(95vw);
 }
 
+.nav-box-4:checked ~ .blog .navigation,
+.cat-4:checked ~ .blog .navigation
+{
+    transform: translateX(91vw);
+}
+
 .cat-5:checked ~ .blog,
 .nav-box-5:checked ~ .blog
 {
@@ -357,6 +376,12 @@ a
 .cat-5:checked ~ .blog .card-5:focus ~ .description .desc-card
 {
     transform: translateX(123vw);
+}
+
+.nav-box-5:checked ~ .blog .navigation,
+.cat-5:checked ~ .blog .navigation
+{
+    transform: translateX(121vw);
 }
 
 .cat-6:checked ~ .blog,
@@ -370,6 +395,12 @@ a
     transform: translateX(155vw);
 }
 
+.nav-box-6:checked ~ .blog .navigation,
+.cat-6:checked ~ .blog .navigation
+{
+    transform: translateX(151vw);
+}
+
 .cat-7:checked ~ .blog,
 .nav-box-7:checked ~ .blog
 {
@@ -379,6 +410,12 @@ a
 .cat-7:checked ~ .blog .card-7:focus ~ .description .desc-card
 {
     transform: translateX(180vw);
+}
+
+.nav-box-7:checked ~ .blog .navigation,
+.cat-7:checked ~ .blog .navigation
+{
+    transform: translateX(181vw);
 }
 
 .cat-8:checked ~ .blog,
@@ -392,6 +429,12 @@ a
     transform: translateX(210vw);
 }
 
+.nav-box-8:checked ~ .blog .navigation,
+.cat-8:checked ~ .blog .navigation
+{
+    transform: translateX(211vw);
+}
+
 .cat-9:checked ~ .blog,
 .nav-box-9:checked ~ .blog
 {
@@ -403,6 +446,12 @@ a
     transform: translateX(240vw);
 }
 
+.nav-box-9:checked ~ .blog .navigation,
+.cat-9:checked ~ .blog .navigation
+{
+    transform: translateX(241vw);
+}
+
 .cat-10:checked ~ .blog,
 .nav-box-10:checked ~ .blog
 {
@@ -412,4 +461,10 @@ a
 .cat-10:checked ~ .blog .card-10:focus ~ .description .desc-card
 {
     transform: translateX(270vw);
+}
+
+.nav-box-10:checked ~ .blog .navigation,
+.cat-10:checked ~ .blog .navigation
+{
+    transform: translateX(271vw);
 }
