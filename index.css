@@ -20,7 +20,8 @@ a
 
 .desc-card,
 .onclick-image,
-.modal-close
+.modal-close,
+.onclick-navigation-box
 {
     display: none;
 }
@@ -29,7 +30,7 @@ a
 {
     display: inline-block;
     margin: 0;
-    width: 600px;
+    width: 30vw;
     height: 100%;
     position: relative;
 }
@@ -45,18 +46,12 @@ a
     font-size: 32px;
     font-family: PT SansNarrow;
     z-index: 1;
+    border-bottom: 3px solid black;
 }
 
 .header h1
 {
     margin: 0;
-}
-
-.header hr,
-.footer hr
-{
-    margin: 0;
-    border: 2px solid black;
 }
 
 .description
@@ -75,10 +70,10 @@ a
 {
     position: fixed;
     color: rgb(255, 255, 255);
-    left: 8%;
-    top: 20%;
-    width: 12%;
-    height: 70%;
+    top: 5vw;
+    left: 35vw;
+    width: 45vw;
+    height: 30vw;
 }
 
 .desc-card label
@@ -88,7 +83,6 @@ a
 
 .desc-card p
 {
-    overflow: hidden;
     text-align: left;
     font-size: 25px;
 }
@@ -96,16 +90,16 @@ a
 .desc-card img
 {
     height: 100%;
-    width: 60%;
+    width: 65%;
     margin-right: 15px;
     float: left;
 }
 
 .footer
 {
-    bottom: 0;
     font-size: 14px;
     font-family: Arial;
+    border-top: 3px solid black;
 }
 
 .footer p
@@ -139,20 +133,16 @@ a
     overflow: hidden;
     width: 7000px;
     margin-top: 80px;
-    padding-left: 800px;
-    padding-right: 800px;
+    padding-left: 43vw;
     height: 750px;
 }
 
 .card
 {
+    margin-top: calc((750px - 30vw) / 2);
     display: inline-block;
-    margin: 0;
-    margin-left: 10px;
-    margin-top: 50px;
-    width: 600px;
-    height: 85%;
-    position: relative;
+    width: 30vw;
+    height: 30vw;
 }
 
 .desc-card h2
@@ -172,10 +162,10 @@ a
 {
     position: absolute;
     width: 100%;
-    top: 45%;
     text-align: center;
+    top: calc((750px - 5vw) / 2);
     z-index: 0;
-    font-size: 50px;
+    font-size: 2.5vw;
     color: rgb(255, 255, 255);
     display: none;
 }
@@ -192,431 +182,234 @@ a
     font-size: 25px;
 }
 
-.active-nav-box-1,
-.active-nav-box-2,
-.active-nav-box-3,
-.active-nav-box-4,
-.active-nav-box-5,
-.active-nav-box-6,
-.active-nav-box-7,
-.active-nav-box-8,
-.active-nav-box-9,
-.active-nav-box-10
+.nav-box-1::before,
+.nav-box-2::before,
+.nav-box-3::before,
+.nav-box-4::before,
+.nav-box-5::before,
+.nav-box-6::before,
+.nav-box-7::before,
+.nav-box-8::before,
+.nav-box-9::before,
+.nav-box-10::before
 {
-    display: none;
+    content: '⚪';
+    margin: 5px;
 }
 
-[id='cat-1']:checked ~ .blog
+.nav-box-1:checked ~ .navigation .nav-box-1::before,
+.nav-box-2:checked ~ .navigation .nav-box-2::before,
+.nav-box-3:checked ~ .navigation .nav-box-3::before,
+.nav-box-4:checked ~ .navigation .nav-box-4::before,
+.nav-box-5:checked ~ .navigation .nav-box-5::before,
+.nav-box-6:checked ~ .navigation .nav-box-6::before,
+.nav-box-7:checked ~ .navigation .nav-box-7::before,
+.nav-box-8:checked ~ .navigation .nav-box-8::before,
+.nav-box-9:checked ~ .navigation .nav-box-9::before,
+.nav-box-10:checked ~ .navigation .nav-box-10::before,
+.cat-1:checked ~ .navigation .nav-box-1::before,
+.cat-2:checked ~ .navigation .nav-box-2::before,
+.cat-3:checked ~ .navigation .nav-box-3::before,
+.cat-4:checked ~ .navigation .nav-box-4::before,
+.cat-5:checked ~ .navigation .nav-box-5::before,
+.cat-6:checked ~ .navigation .nav-box-6::before,
+.cat-7:checked ~ .navigation .nav-box-7::before,
+.cat-8:checked ~ .navigation .nav-box-8::before,
+.cat-9:checked ~ .navigation .nav-box-9::before,
+.cat-10:checked ~ .navigation .nav-box-10::before
 {
-    transform: translateX(-2%);
+    content: '☀️';
+    margin: 5px;
 }
 
-[id='cat-1']:checked ~ .navigation .nav-box-1
+.cat-1:checked ~ .blog,
+.nav-box-1:checked ~ .blog
 {
-    display: none;
+    transform: translateX(-9vw);
 }
 
-[id='cat-1']:checked ~ .navigation .active-nav-box-1
-{
-    display: inline;
-}
-
-[id='cat-1']:not(:checked) ~ .blog [id='card-1'] img
-{
-    opacity: .7;
-    transform: scale(.8);
-}
-
-[id='cat-1']:checked:hover ~ .blog [id='card-1'] img
-{
-    filter: brightness(.75);
-}
-
-[id='cat-1']:checked:hover ~ .blog [id='card-1'] span
-{
-    display: inline;
-}
-
-[id='cat-1']:checked ~ .blog [id='card-1']:focus ~ .description,
-[id='cat-1']:checked ~ .blog [id='card-1']:focus ~ .description .desc-card
-{
-    display: block;
-}
-
-[id='cat-2']:checked ~ .blog
-{
-    transform: translateX(-9%);
-}
-
-[id='cat-2']:checked ~ .navigation .nav-box-2
-{
-    display: none;
-}
-
-[id='cat-2']:checked ~ .navigation .active-nav-box-2
-{
-    display: inline;
-}
-
-[id='cat-2']:not(:checked) ~ .blog .card[id='card-2'] img
+.cat-1:not(:checked) ~ .nav-box-1:not(:checked) ~ .blog .card-1,
+.cat-2:not(:checked) ~ .nav-box-2:not(:checked) ~ .blog .card-2,
+.cat-3:not(:checked) ~ .nav-box-3:not(:checked) ~ .blog .card-3,
+.cat-4:not(:checked) ~ .nav-box-4:not(:checked) ~ .blog .card-4,
+.cat-5:not(:checked) ~ .nav-box-5:not(:checked) ~ .blog .card-5,
+.cat-6:not(:checked) ~ .nav-box-6:not(:checked) ~ .blog .card-6,
+.cat-7:not(:checked) ~ .nav-box-7:not(:checked) ~ .blog .card-7,
+.cat-8:not(:checked) ~ .nav-box-8:not(:checked) ~ .blog .card-8,
+.cat-9:not(:checked) ~ .nav-box-9:not(:checked) ~ .blog .card-9,
+.cat-10:not(:checked) ~ .nav-box-10:not(:checked) ~ .blog .card-10
 {
     opacity: .7;
     transform: scale(.8);
 }
 
-[id='cat-2']:checked:hover ~ .blog .card[id='card-2'] img
+.cat-1:not(:checked):hover ~ .nav-box-1:checked ~ .blog .card-1 img,
+.cat-2:not(:checked):hover ~ .nav-box-2:checked ~ .blog .card-2 img,
+.cat-3:not(:checked):hover ~ .nav-box-3:checked ~ .blog .card-3 img,
+.cat-4:not(:checked):hover ~ .nav-box-4:checked ~ .blog .card-4 img,
+.cat-5:not(:checked):hover ~ .nav-box-5:checked ~ .blog .card-5 img,
+.cat-6:not(:checked):hover ~ .nav-box-6:checked ~ .blog .card-6 img,
+.cat-7:not(:checked):hover ~ .nav-box-7:checked ~ .blog .card-7 img,
+.cat-8:not(:checked):hover ~ .nav-box-8:checked ~ .blog .card-8 img,
+.cat-9:not(:checked):hover ~ .nav-box-9:checked ~ .blog .card-9 img,
+.cat-10:not(:checked):hover ~ .nav-box-10:checked ~ .blog .card-10 img,
+.cat-1:checked:hover ~ .blog .card-1 img,
+.cat-2:checked:hover ~ .blog .card-2 img,
+.cat-3:checked:hover ~ .blog .card-3 img,
+.cat-4:checked:hover ~ .blog .card-4 img,
+.cat-5:checked:hover ~ .blog .card-5 img,
+.cat-6:checked:hover ~ .blog .card-6 img,
+.cat-7:checked:hover ~ .blog .card-7 img,
+.cat-8:checked:hover ~ .blog .card-8 img,
+.cat-9:checked:hover ~ .blog .card-9 img,
+.cat-10:checked:hover ~ .blog .card-10 img
 {
     filter: brightness(.75);
 }
 
-[id='cat-2']:checked:hover ~ .blog .card[id='card-2'] span
+.cat-1:not(:checked):hover ~ .nav-box-1:checked ~ .blog .card-1 span,
+.cat-2:not(:checked):hover ~ .nav-box-2:checked ~ .blog .card-2 span,
+.cat-3:not(:checked):hover ~ .nav-box-3:checked ~ .blog .card-3 span,
+.cat-4:not(:checked):hover ~ .nav-box-4:checked ~ .blog .card-4 span,
+.cat-5:not(:checked):hover ~ .nav-box-5:checked ~ .blog .card-5 span,
+.cat-6:not(:checked):hover ~ .nav-box-6:checked ~ .blog .card-6 span,
+.cat-7:not(:checked):hover ~ .nav-box-7:checked ~ .blog .card-7 span,
+.cat-8:not(:checked):hover ~ .nav-box-8:checked ~ .blog .card-8 span,
+.cat-9:not(:checked):hover ~ .nav-box-9:checked ~ .blog .card-9 span,
+.cat-10:not(:checked):hover ~ .nav-box-10:checked ~ .blog .card-10 span,
+.cat-1:checked:hover ~ .blog .card-1 span,
+.cat-2:checked:hover ~ .blog .card-2 span,
+.cat-3:checked:hover ~ .blog .card-3 span,
+.cat-4:checked:hover ~ .blog .card-4 span,
+.cat-5:checked:hover ~ .blog .card-5 span,
+.cat-6:checked:hover ~ .blog .card-6 span,
+.cat-7:checked:hover ~ .blog .card-7 span,
+.cat-8:checked:hover ~ .blog .card-8 span,
+.cat-9:checked:hover ~ .blog .card-9 span,
+.cat-10:checked:hover ~ .blog .card-10 span
 {
     display: inline;
 }
 
-[id='cat-2']:checked ~ .blog [id='card-2']:focus ~ .description
+.cat-1:checked ~ .blog .card-1:focus ~ .description,
+.cat-2:checked ~ .blog .card-2:focus ~ .description,
+.cat-3:checked ~ .blog .card-3:focus ~ .description,
+.cat-4:checked ~ .blog .card-4:focus ~ .description,
+.cat-5:checked ~ .blog .card-5:focus ~ .description,
+.cat-6:checked ~ .blog .card-6:focus ~ .description,
+.cat-7:checked ~ .blog .card-7:focus ~ .description,
+.cat-8:checked ~ .blog .card-8:focus ~ .description,
+.cat-9:checked ~ .blog .card-9:focus ~ .description,
+.cat-10:checked ~ .blog .card-10:focus ~ .description,
+.cat-1:checked ~ .blog .card-1:focus ~ .description .desc-card,
+.cat-2:checked ~ .blog .card-2:focus ~ .description .desc-card,
+.cat-3:checked ~ .blog .card-3:focus ~ .description .desc-card,
+.cat-4:checked ~ .blog .card-4:focus ~ .description .desc-card,
+.cat-5:checked ~ .blog .card-5:focus ~ .description .desc-card,
+.cat-6:checked ~ .blog .card-6:focus ~ .description .desc-card,
+.cat-7:checked ~ .blog .card-7:focus ~ .description .desc-card,
+.cat-8:checked ~ .blog .card-8:focus ~ .description .desc-card,
+.cat-9:checked ~ .blog .card-9:focus ~ .description .desc-card,
+.cat-10:checked ~ .blog .card-10:focus ~ .description .desc-card
 {
     display: block;
 }
 
-[id='cat-2']:checked ~ .blog [id='card-2']:focus ~ .description .desc-card
+.cat-2:checked ~ .blog,
+.nav-box-2:checked ~ .blog
 {
-    transform: translateX(55%);
-    display: block;
+    transform: translateX(-39vw);
 }
 
-[id='cat-3']:checked ~ .blog
+.cat-2:checked ~ .blog .card-2:focus ~ .description .desc-card
 {
-    transform: translateX(-16.5%);
+    transform: translateX(36vw);
 }
 
-[id='cat-3']:checked ~ .navigation .nav-box-3
+.cat-3:checked ~ .blog,
+.nav-box-3:checked ~ .blog
 {
-    display: none;
+    transform: translateX(-70vw);
 }
 
-[id='cat-3']:checked ~ .navigation .active-nav-box-3
+.cat-3:checked ~ .blog .card-3:focus ~ .description .desc-card
 {
-    display: inline;
+    transform: translateX(65vw);
 }
 
-[id='cat-3']:not(:checked) ~ .blog .card[id='card-3'] img
+.cat-4:checked ~ .blog,
+.nav-box-4:checked ~ .blog
 {
-    opacity: .7;
-    transform: scale(.8);
+    transform: translateX(-100vw);
 }
 
-[id='cat-3']:checked:hover ~ .blog .card[id='card-3'] img
+.cat-4:checked ~ .blog .card-4:focus ~ .description .desc-card
 {
-    filter: brightness(.75);
+    transform: translateX(95vw);
 }
 
-[id='cat-3']:checked:hover ~ .blog .card[id='card-3'] span
+.cat-5:checked ~ .blog,
+.nav-box-5:checked ~ .blog
 {
-    display: inline;
+    transform: translateX(-130vw);
 }
 
-[id='cat-3']:checked ~ .blog [id='card-3']:focus ~ .description
+.cat-5:checked ~ .blog .card-5:focus ~ .description .desc-card
 {
-    display: block;
+    transform: translateX(123vw);
 }
 
-[id='cat-3']:checked ~ .blog [id='card-3']:focus ~ .description .desc-card
+.cat-6:checked ~ .blog,
+.nav-box-6:checked ~ .blog
 {
-    transform: translateX(115%);
-    display: block;
+    transform: translateX(-160vw);
 }
 
-[id='cat-4']:checked ~ .blog
+.cat-6:checked ~ .blog .card-6:focus ~ .description .desc-card
 {
-    transform: translateX(-23.5%);
+    transform: translateX(155vw);
 }
 
-[id='cat-4']:checked ~ .navigation .nav-box-4
+.cat-7:checked ~ .blog,
+.nav-box-7:checked ~ .blog
 {
-    display: none;
+    transform: translateX(-190vw);
 }
 
-[id='cat-4']:checked ~ .navigation .active-nav-box-4
+.cat-7:checked ~ .blog .card-7:focus ~ .description .desc-card
 {
-    display: inline;
+    transform: translateX(180vw);
 }
 
-[id='cat-4']:not(:checked) ~ .blog .card[id='card-4'] img
+.cat-8:checked ~ .blog,
+.nav-box-8:checked ~ .blog
 {
-    opacity: .7;
-    transform: scale(.8);
+    transform: translateX(-220vw);
 }
 
-[id='cat-4']:checked:hover ~ .blog .card[id='card-4'] img
+.cat-8:checked ~ .blog .card-8:focus ~ .description .desc-card
 {
-    filter: brightness(.75);
+    transform: translateX(210vw);
 }
 
-[id='cat-4']:checked:hover ~ .blog .card[id='card-4'] span
+.cat-9:checked ~ .blog,
+.nav-box-9:checked ~ .blog
 {
-    display: inline;
+    transform: translateX(-250vw);
 }
 
-[id='cat-4']:checked ~ .blog [id='card-4']:focus ~ .description
+.cat-9:checked ~ .blog .card-9:focus ~ .description .desc-card
 {
-    display: block;
+    transform: translateX(240vw);
 }
 
-[id='cat-4']:checked ~ .blog [id='card-4']:focus ~ .description .desc-card
+.cat-10:checked ~ .blog,
+.nav-box-10:checked ~ .blog
 {
-    transform: translateX(175%);
-    display: block;
+    transform: translateX(-280vw);
 }
 
-[id='cat-5']:checked ~ .blog
+.cat-10:checked ~ .blog .card-10:focus ~ .description .desc-card
 {
-    transform: translateX(-30.5%);
-}
-
-[id='cat-5']:checked ~ .navigation .nav-box-5
-{
-    display: none;
-}
-
-[id='cat-5']:checked ~ .navigation .active-nav-box-5
-{
-    display: inline;
-}
-
-[id='cat-5']:not(:checked) ~ .blog .card[id='card-5'] img
-{
-    opacity: .7;
-    transform: scale(.8);
-}
-
-[id='cat-5']:checked:hover ~ .blog .card[id='card-5'] img
-{
-    filter: brightness(.75);
-}
-
-[id='cat-5']:checked:hover ~ .blog .card[id='card-5'] span
-{
-    display: inline;
-}
-
-[id='cat-5']:checked ~ .blog [id='card-5']:focus ~ .description
-{
-    display: block;
-}
-
-[id='cat-5']:checked ~ .blog [id='card-5']:focus ~ .description .desc-card
-{
-    transform: translateX(235%);
-    display: block;
-}
-
-[id='cat-6']:checked ~ .blog
-{
-    transform: translateX(-37.5%);
-}
-
-[id='cat-6']:checked ~ .navigation .nav-box-6
-{
-    display: none;
-}
-
-[id='cat-6']:checked ~ .navigation .active-nav-box-6
-{
-    display: inline;
-}
-
-[id='cat-6']:not(:checked) ~ .blog .card[id='card-6'] img
-{
-    opacity: .7;
-    transform: scale(.8);
-}
-
-[id='cat-6']:checked:hover ~ .blog .card[id='card-6'] img
-{
-    filter: brightness(.75);
-}
-
-[id='cat-6']:checked:hover ~ .blog .card[id='card-6'] span
-{
-    display: inline;
-}
-
-[id='cat-6']:checked ~ .blog [id='card-6']:focus ~ .description
-{
-    display: block;
-}
-
-[id='cat-6']:checked ~ .blog [id='card-6']:focus ~ .description .desc-card
-{
-    transform: translateX(285%);
-    display: block;
-}
-
-[id='cat-7']:checked ~ .blog
-{
-    transform: translateX(-45%);
-}
-
-[id='cat-7']:checked ~ .navigation .nav-box-7
-{
-    display: none;
-}
-
-[id='cat-7']:checked ~ .navigation .active-nav-box-7
-{
-    display: inline;
-}
-
-[id='cat-7']:not(:checked) ~ .blog .card[id='card-7'] img
-{
-    opacity: .7;
-    transform: scale(.8);
-}
-
-[id='cat-7']:checked:hover ~ .blog .card[id='card-7'] img
-{
-    filter: brightness(.75);
-}
-
-[id='cat-7']:checked:hover ~ .blog .card[id='card-7'] span
-{
-    display: inline;
-}
-
-[id='cat-7']:checked ~ .blog [id='card-7']:focus ~ .description
-{
-    display: block;
-}
-
-[id='cat-7']:checked ~ .blog [id='card-7']:focus ~ .description .desc-card
-{
-    transform: translateX(345%);
-    display: block;
-}
-
-[id='cat-8']:checked ~ .blog
-{
-    transform: translateX(-52%);
-}
-
-[id='cat-8']:checked ~ .navigation .nav-box-8
-{
-    display: none;
-}
-
-[id='cat-8']:checked ~ .navigation .active-nav-box-8
-{
-    display: inline;
-}
-
-[id='cat-8']:not(:checked) ~ .blog .card[id='card-8'] img
-{
-    opacity: .7;
-    transform: scale(.8);
-}
-
-[id='cat-8']:checked:hover ~ .blog .card[id='card-8'] img
-{
-    filter: brightness(.75);
-}
-
-[id='cat-8']:checked:hover ~ .blog .card[id='card-8'] span
-{
-    display: inline;
-}
-
-[id='cat-8']:checked ~ .blog [id='card-8']:focus ~ .description
-{
-    display: block;
-}
-
-[id='cat-8']:checked ~ .blog [id='card-8']:focus ~ .description .desc-card
-{
-    transform: translateX(405%);
-    display: block;
-}
-
-[id='cat-9']:checked ~ .blog
-{
-    transform: translateX(-59%);
-}
-
-[id='cat-9']:checked ~ .navigation .nav-box-9
-{
-    display: none;
-}
-
-[id='cat-9']:checked ~ .navigation .active-nav-box-9
-{
-    display: inline;
-}
-
-[id='cat-9']:not(:checked) ~ .blog .card[id='card-9'] img
-{
-    opacity: .7;
-    transform: scale(.8);
-}
-
-[id='cat-9']:checked:hover ~ .blog .card[id='card-9'] img
-{
-    filter: brightness(.75);
-}
-
-[id='cat-9']:checked:hover ~ .blog .card[id='card-9'] span
-{
-    display: inline;
-}
-
-[id='cat-9']:checked ~ .blog [id='card-9']:focus ~ .description
-{
-    display: block;
-}
-
-[id='cat-9']:checked ~ .blog [id='card-9']:focus ~ .description .desc-card
-{
-    transform: translateX(465%);
-    display: block;
-}
-
-[id='cat-10']:checked ~ .blog
-{
-    transform: translateX(-66%);
-}
-
-[id='cat-10']:checked ~ .navigation .nav-box-10
-{
-    display: none;
-}
-
-[id='cat-10']:checked ~ .navigation .active-nav-box-10
-{
-    display: inline;
-}
-
-[id='cat-10']:not(:checked) ~ .blog .card[id='card-10'] img
-{
-    opacity: .7;
-    transform: scale(.8);
-}
-
-[id='cat-10']:checked:hover ~ .blog .card[id='card-10'] img
-{
-    filter: brightness(.75);
-}
-
-[id='cat-10']:checked:hover ~ .blog .card[id='card-10'] span
-{
-    display: inline;
-}
-
-[id='cat-10']:checked ~ .blog [id='card-10']:focus ~ .description
-{
-    display: block;
-}
-
-[id='cat-10']:checked ~ .blog [id='card-10']:focus ~ .description .desc-card
-{
-    transform: translateX(525%);
-    display: block;
+    transform: translateX(270vw);
 }
