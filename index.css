@@ -29,26 +29,27 @@ body
 
 .footer
 {
+    padding-left: 50px;
     font-size: 16px;
     position: fixed;
     background: white;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100px;
+    min-height: 80px;
     font-family: Arial, Helvetica, sans-serif;
     z-index: 5;
 }
 
 .contacts
 {
-    width: 75%;
     display: inline-block;
 }
 
 .company
 {
     display: inline-block;
+    margin-left: 780px;
+    padding-right: 50px;
 }
 
 li
@@ -84,13 +85,12 @@ input[name='current-information']
 .slide
 {
     display: inline-block;
-    padding-top: 10%;
+    padding-top: 100px;
     position: relative;
     box-sizing: border-box;
     width: 33%;
     height: 433px;
     color: white;
-    vertical-align: middle;
     text-align: center;
     transition: left .5s ease-out;
 }
@@ -110,7 +110,9 @@ input[name='current-information']
 
 .photo img
 {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
+
     box-sizing: border-box;
     margin: auto;
     width: 80%;
@@ -212,6 +214,7 @@ input[id='cat-5']:checked ~ .push label[for='cat-5']
     position: absolute;
     top: 0;
     left: 0;
+    cursor: pointer;
 }
 
 .window
@@ -296,7 +299,7 @@ input[id='information-5']:checked ~ .new-window .window-cat-5
 {
     display: block;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 0%;
 }
 
 .close
