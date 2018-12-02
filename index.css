@@ -19,13 +19,15 @@
 
 .footer-content 
 {
+    bottom: 0px;
     width: 100%;
     background: white;
     border-top: 1px solid gray;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
 }
 
 .footer-content .right-footer
@@ -56,8 +58,9 @@
 .carousel-container
 {
     height: 100%;
-    width: 120%;
+    width: 300%;
     text-align: center;
+    overflow: hidden;
 }
 
 .carousel-item
@@ -124,22 +127,22 @@
 
 .cat-1-radio:checked ~ .ullla .carousel-item
 {
-    left: 28%;
+    left: -15%;
 }
 
 .cat-2-radio:checked ~ .ullla .carousel-item
 {
-    left: 13%;
+    left: -20%;
 }
 
 .cat-3-radio:checked ~ .ullla .carousel-item
 {
-    left: -6%;
+    left: -30%;
 }
 
 .cat-4-radio:checked ~ .ullla .carousel-item
 {
-    left: -25%;
+    left: -40%;
 }
 
 .cat-5-radio:checked ~ .ullla .carousel-item
@@ -212,11 +215,8 @@
 
 .modal-description
 {
-    padding: 40px;
     color: white;
-    height: 100%;
-    display: block;
-    float: left;
+    display: inline;
 }
 
 .cross
