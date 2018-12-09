@@ -1,34 +1,42 @@
 html,
 body
 {
-    width: 100%;
-    height: 100%;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+html
+{
+    position: absolute;
+    overflow: hidden;
 }
 
 body
 {
     font: 16px 'Arial', sans-serif;
+    overflow: auto;
 }
 
 /* header */
 
 .market-header
 {
-    position: fixed;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 60px;
+    height: 45px;
+    border-bottom: 1px solid #ddd;
     background: #fff;
     text-align: center;
-    border-bottom: 1px solid #ddd;
     z-index: 1000;
 }
 
 .market-header h1
 {
     font: 32px 'PT Sans Narrow', sans-serif;
-    margin: 10px 0;
+    margin: 0;
 }
 
 .market-header h1::first-letter
@@ -40,10 +48,22 @@ body
 
 main
 {
-    padding: 150px 0 80px;
+    padding: 45px 0 80px;
+    min-height: calc(100% - 125px);
+}
+
+.gallery
+{
+    position: relative;
     width: 100%;
-    min-height: calc(100% - 230px);
-    overflow: hidden;
+    margin-top: 90px;
+}
+
+.gallery,
+.slides,
+.gallery-tape
+{
+    height: 300px;
 }
 
 input[name='slides']
@@ -51,16 +71,16 @@ input[name='slides']
     display: none;
 }
 
-.gallary,
 .slides
 {
-    height: 300px;
+    overflow: hidden;
     min-width: 100%;
 }
 
-.slides
+.gallery-tape
 {
     white-space: nowrap;
+    transition: all 1s ease-in-out;
 }
 
 .slide
@@ -73,23 +93,29 @@ input[name='slides']
     line-height: 300px;
 }
 
-.slide img
+.slide .photo:hover
+{
+    cursor: pointer;
+}
+
+.slide .photo
 {
     height: 80%;
     vertical-align: middle;
     opacity: .7;
+    transition: height .5s linear;
 }
 
-input.slide-1:checked ~ .slides .slide-1 img,
-input.slide-2:checked ~ .slides .slide-2 img,
-input.slide-3:checked ~ .slides .slide-3 img,
-input.slide-4:checked ~ .slides .slide-4 img,
-input.slide-5:checked ~ .slides .slide-5 img,
-input.slide-6:checked ~ .slides .slide-6 img,
-input.slide-7:checked ~ .slides .slide-7 img,
-input.slide-8:checked ~ .slides .slide-8 img,
-input.slide-9:checked ~ .slides .slide-9 img,
-input.slide-10:checked ~ .slides .slide-10 img
+input.slide-1:checked ~ .slides .slide-1 .photo,
+input.slide-2:checked ~ .slides .slide-2 .photo,
+input.slide-3:checked ~ .slides .slide-3 .photo,
+input.slide-4:checked ~ .slides .slide-4 .photo,
+input.slide-5:checked ~ .slides .slide-5 .photo,
+input.slide-6:checked ~ .slides .slide-6 .photo,
+input.slide-7:checked ~ .slides .slide-7 .photo,
+input.slide-8:checked ~ .slides .slide-8 .photo,
+input.slide-9:checked ~ .slides .slide-9 .photo,
+input.slide-10:checked ~ .slides .slide-10 .photo
 {
     opacity: 1;
     height: 100%;
@@ -102,7 +128,8 @@ input.slide-10:checked ~ .slides .slide-10 img
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
     text-align: center;
     line-height: 300px;
     font-size: 25px;
@@ -124,64 +151,66 @@ input.slide-9:checked ~ .slides .slide-9:hover .cat-name,
 input.slide-10:checked ~ .slides .slide-10:hover .cat-name
 {
     opacity: 1;
-    color: #fff;
+    transition: all 1s ease-in-out .5s;
     z-index: 1;
 }
 
-input.slide-1:checked ~ .slides
+input.slide-1:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 150px);
 }
 
-input.slide-2:checked ~ .slides
+input.slide-2:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 400px);
 }
 
-input.slide-3:checked ~ .slides
+input.slide-3:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 650px);
 }
 
-input.slide-4:checked ~ .slides
+input.slide-4:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 900px);
 }
 
-input.slide-5:checked ~ .slides
+input.slide-5:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 1130px);
 }
 
-input.slide-6:checked ~ .slides
+input.slide-6:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 1360px);
 }
 
-input.slide-7:checked ~ .slides
+input.slide-7:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 1580px);
 }
 
-input.slide-8:checked ~ .slides
+input.slide-8:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 1800px);
 }
 
-input.slide-9:checked ~ .slides
+input.slide-9:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 2050px);
 }
 
-input.slide-10:checked ~ .slides
+input.slide-10:checked ~ .slides .gallery-tape
 {
     margin-left: calc(50% - 2330px);
 }
 
 .controls
 {
-    width: 200px;
-    margin: 20px auto;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -50px;
 }
 
 .control
@@ -192,7 +221,7 @@ input.slide-10:checked ~ .slides
     border-radius: 50%;
     background: #ddd;
     margin: 0 2px;
-
+    transition: all 1s ease-in-out;
 }
 
 input.slide-1:checked ~ .controls .control-1,
@@ -212,25 +241,28 @@ input.slide-10:checked ~ .controls .control-10
 .overlay,
 .popup
 {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
     visibility: hidden;
     opacity: 0;
+    transition: opacity .5s;
 }
 
 .popup
 {
     z-index: 10;
-    background-color: rgba(0, 0, 0, .7);
+    width: 750px;
+    height: 400px;
+    margin: auto;
 }
 
 .overlay
 {
     z-index: 1;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .9);
 }
 
 .overlay:target,
@@ -240,37 +272,26 @@ input.slide-10:checked ~ .controls .control-10
     opacity: 1;
 }
 
-.overlay:target + .popup .cat-popup
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 700px;
-    height: 400px;
-}
-
-.overlay:target + .popup .cat-popup img
+.popup img
 {
     height: 100%;
     margin-right: 30px;
 }
 
-.overlay:target + .popup .cat-popup .info,
-.overlay:target + .popup .cat-popup img
+.info,
+.popup img
 {
     display: inline-block;
+    vertical-align: middle;
 }
 
-.overlay:target + .popup .cat-popup .info
+.info
 {
     width: 300px;
-    line-height: 20px;
+    max-height: 100%;
     color: #fff;
-    vertical-align: middle;
     white-space: normal;
+    overflow: auto;
 }
 
 .info h2,
