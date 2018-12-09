@@ -1,47 +1,44 @@
-p
-{
-    margin: 0;
-    padding: 0;
-}
-
-a
+.link
 {
     color: #4c4cd8;
 }
 
-body
+.footer-link
+{
+    display: block;
+}
+
+.body
 {
     background: #ebebeb;
     padding: 0;
     margin: 0;
-    height: 100%;
 }
 
-header
+.header
 {
     position: fixed;
     top: 0;
     width: 100%;
     height: 50px;
     text-align: center;
-    background: #ebebeb;
     font-family: 'PT Sans Narrow', sans-serif;
     border-bottom: 1px solid #787878;
 
 }
 
-header h1
+.site-name
 {
     margin: auto;
     font-size: 32px;
 }
 
-h1::first-letter
+.site-name::first-letter
 {
     color: #ff1e1e;
 }
 
-main
+.main
 {
     position: fixed;
     top: 50px;
@@ -51,10 +48,16 @@ main
     overflow-x: hidden;
 }
 
-article
+.carousel
 {
     white-space: nowrap;
-    /*background: red;*/
+    height: 100%;
+
+}
+
+.slides
+{
+    height: 70%;
 }
 
 .slide-selectors
@@ -64,7 +67,7 @@ article
     margin-top: 90px;
 }
 
-.slide-selectors label
+.slide-radio
 {
     content: url('./images/radio.png');
     width: 24px;
@@ -72,24 +75,14 @@ article
     cursor: pointer;
 }
 
-[id='slide-1']:checked ~ .slide-selectors [for='slide-1'],
-[id='slide-2']:checked ~ .slide-selectors [for='slide-2'],
-[id='slide-3']:checked ~ .slide-selectors [for='slide-3'],
-[id='slide-4']:checked ~ .slide-selectors [for='slide-4'],
-[id='slide-5']:checked ~ .slide-selectors [for='slide-5']
-{
-    content: url('./images/check-radio.png');
-}
-
 .slider-radio
 {
     display: none;
 }
 
-footer
+.footer
 {
     position: fixed;
-    background: #ebebeb;
     height: 70px;
     width: 100%;
     bottom: 0;
@@ -119,7 +112,7 @@ footer
 {
     display: inline-block;
     width: 30%;
-    height: 300px;
+    height: 320px;
     position: relative;
     top: 60px;
 }
@@ -175,26 +168,37 @@ footer
     vertical-align: middle;
 }
 
+.popup-hover
+{
+    position: absolute;
+    visibility: hidden;
+    background: black;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    width: 100%;
+    height: 100%;
+}
+
 .popup
 {
-    background: #dcdcdc;
-    width: 200%;
-    height: 140%;
+    opacity: 1;
+    width: 60%;
+    height: 80%;
     position: absolute;
-    z-index: 100;
-    top: -15%;
-    left: -50%;
+    top: 10%;
+    left: 20%;
     visibility: hidden;
 }
 
 .popup-text
 {
     display: inline-block;
-    opacity: 2;
+    color: white;
     position: absolute;
     width: 40%;
     height: 70%;
-    top: 15%;
+    top: 5%;
     white-space: normal;
     margin-left: 20px;
 }
@@ -202,14 +206,8 @@ footer
 .cancel-img
 {
     float: right;
-    margin-right: 10px;
-    margin-top: 10px ;
+    margin-right: 20px;
     cursor: pointer;
-}
-
-.center
-{
-    text-align: center;
 }
 
 [id*='popup']
@@ -217,28 +215,41 @@ footer
     display: none;
 }
 
-[id='popup-1']:checked ~ .carousel .slide-1 .popup,
-[id='popup-2']:checked ~ .carousel .slide-2 .popup,
-[id='popup-3']:checked ~ .carousel .slide-3 .popup,
-[id='popup-4']:checked ~ .carousel .slide-4 .popup,
-[id='popup-5']:checked ~ .carousel .slide-5 .popup
-{
-    visibility: visible;
-}
-
 .popup-img
 {
     display: inline-block;
     position: relative;
-    width: 50%;
-    height: 70%;
-    top: 15%;
-    margin-left: 10px;
+    width: 60%;
+    height: 90%;
 }
 
-.popup-checkbox:checked ~ .carousel .cat-img
+.popup-header
 {
-    display: none;
+    text-align: left;
+}
+
+.popup-checkbox:checked ~ .popup-hover
+{
+    display: block;
+}
+
+[id='slide-1']:checked ~ .carousel .slide-selectors [for='slide-1'],
+[id='slide-2']:checked ~ .carousel .slide-selectors [for='slide-2'],
+[id='slide-3']:checked ~ .carousel .slide-selectors [for='slide-3'],
+[id='slide-4']:checked ~ .carousel .slide-selectors [for='slide-4'],
+[id='slide-5']:checked ~ .carousel .slide-selectors [for='slide-5']
+{
+    content: url('./images/check-radio.png');
+}
+
+[id='popup-1']:checked ~ .carousel .popup-1,
+[id='popup-2']:checked ~ .carousel .popup-2,
+[id='popup-3']:checked ~ .carousel .popup-3,
+[id='popup-4']:checked ~ .carousel .popup-4,
+[id='popup-5']:checked ~ .carousel .popup-5,
+[id*='popup']:checked ~ .carousel .popup-hover
+{
+    visibility: visible;
 }
 
 [id='slide-1']:checked ~ .carousel .slide-1 .cat-img,
@@ -249,15 +260,6 @@ footer
 {
     opacity: 1;
     transform: scale3d(1, 1, 1);
-}
-
-[id='slide-1']:checked ~ .carousel .slide-1 .popup,
-[id='slide-2']:checked ~ .carousel .slide-2 .popup,
-[id='slide-3']:checked ~ .carousel .slide-3 .popup,
-[id='slide-4']:checked ~ .carousel .slide-4 .popup,
-[id='slide-5']:checked ~ .carousel .slide-5 .popup
-{
-    display: block;
 }
 
 [id='slide-1']:checked ~ .carousel .slide-1:hover .hover,
@@ -290,27 +292,28 @@ footer
     display: none;
 }
 
-[id='slide-1']:checked ~ .carousel
+[id='slide-1']:checked ~ .carousel .slides
+
 {
     transform: translate3d(35%, 0, 0);
 }
 
-[id='slide-2']:checked ~ .carousel
+[id='slide-2']:checked ~ .carousel .slides
 {
     transform: translate3d(5%, 0, 0);
 }
 
-[id='slide-3']:checked ~ .carousel
+[id='slide-3']:checked ~ .carousel .slides
 {
     transform: translate3d(-25%, 0, 0);
 }
 
-[id='slide-4']:checked ~ .carousel
+[id='slide-4']:checked ~ .carousel .slides
 {
     transform: translate3d(-55%, 0, 0);
 }
 
-[id='slide-5']:checked ~ .carousel
+[id='slide-5']:checked ~ .carousel .slides
 {
     transform: translate3d(-85%, 0, 0);
 }
