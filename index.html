@@ -1,9 +1,130 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
     <title>Задача «Мурмаркет»</title>
 </head>
+
 <body>
+<header>
+    <div id="header">
+        <h1 class="header-text">Мурмаркет</h1>
+    </div>
+</header>
+<div class="main">
+    <input type="radio" id="radio1" class="radio1" name="cat" value="1">
+    <input type="radio" id="radio2" class="radio2" name="cat" value="2">
+    <input type="radio" id="radio3" class="radio3" name="cat" value="3" checked>
+    <input type="radio" id="radio4" class="radio4" name="cat" value="4">
+    <input type="radio" id="radio5" class="radio5" name="cat" value="5">
+
+    <input type="radio" id="popup-bt1" class="popup-bt popup-bt1" name="popup">
+    <input type="radio" id="popup-bt2" class="popup-bt popup-bt2" name="popup">
+    <input type="radio" id="popup-bt3" class="popup-bt popup-bt3" name="popup">
+    <input type="radio" id="popup-bt4" class="popup-bt popup-bt4" name="popup">
+    <input type="radio" id="popup-bt5" class="popup-bt popup-bt5" name="popup">
+    <input type="radio" id="popup-bt-close" class="popup-bt-close" name="popup" checked>
+
+    <article class="carousel">
+        <article class="carousel-images">
+            <article class="cat-block cat-block1">
+                <label for="radio1">
+                    <img class="cat-img" src="cat1.jpg" alt="cat" title="cat">
+                </label>
+                <label for="popup-bt1" class="cat-name-block cat-name-block1">Зора-Бора</label>
+            </article>
+            <article class="cat-block cat-block2">
+                <label for="radio2">
+                    <img class="cat-img" src="cat2.jpg" alt="cat" title="cat">
+                </label>
+                <label for="popup-bt2" class="cat-name-block cat-name-block2">Жора-Бора</label>
+            </article>
+            <article class="cat-block cat-block3">
+                <label for="radio3">
+                    <img class="cat-img" src="cat3.jpg" alt="cat" title="cat">
+                </label>
+                <label for="popup-bt3" class="cat-name-block cat-name-block3">Гора-Бора</label>
+            </article>
+            <article class="cat-block cat-block4">
+                <label for="radio4">
+                    <img class="cat-img" src="cat4.jpg" alt="cat" title="cat">
+                </label>
+                <label for="popup-bt4" class="cat-name-block cat-name-block4">Вора-Бора</label>
+            </article>
+            <article class="cat-block cat-block5">
+                <label for="radio5">
+                    <img class="cat-img" src="cat5.jpg" alt="cat" title="cat">
+                </label>
+                <label for="popup-bt5" class="cat-name-block cat-name-block5">Инакентий</label>
+            </article>
+        </article>
+        <nav class="carousel-navigation">
+            <label for="radio1"></label>
+            <label for="radio2"></label>
+            <label for="radio3"></label>
+            <label for="radio4"></label>
+            <label for="radio5"></label>
+        </nav>
+    </article>
+    <section class="popup popup1">
+        <section class="popup-cat-block">
+            <img class="cat-img" src="cat1.jpg" alt="cat" title="cat">
+            <section class="popup-cat">
+                <h2>Зора-Бора</h2>
+                <p>Тут идёт описание кота</p>
+            </section>
+        </section>
+    </section>
+    <section class="popup popup2">
+        <section class="popup-cat-block">
+            <img class="cat-img" src="cat2.jpg" alt="cat" title="cat">
+            <section class="popup-cat">
+                <h2>Жора-Бора</h2>
+                <p>Тут идёт описание кота</p>
+            </section>
+        </section>
+    </section>
+    <section class="popup popup3">
+        <section class="popup-cat-block">
+            <img class="cat-img" src="cat3.jpg" alt="cat" title="cat">
+            <section class="popup-cat">
+                <h2>Гора-Бора</h2>
+                <p>Тут идёт описание кота</p>
+            </section>
+        </section>
+    </section>
+    <section class="popup popup4">
+        <section class="popup-cat-block">
+            <img class="cat-img" src="cat4.jpg" alt="cat" title="cat">
+            <section class="popup-cat">
+                <h2>Вора-Бора</h2>
+                <p>Тут идёт описание кота</p>
+            </section>
+        </section>
+    </section>
+    <section class="popup popup5">
+        <section class="popup-cat-block">
+            <img class="cat-img" src="cat5.jpg" alt="cat" title="cat">
+            <section class="popup-cat">
+                <h2>Инакентий</h2>
+                <p>Тут идёт описание кота</p>
+            </section>
+        </section>
+    </section>
+    <label for="popup-bt-close" class="bt-close">X</label>
+</div>
+<footer>
+    <div class="mails">
+        <p class="footer-text">Напишите</p>
+        <p class="mail"><a href="#">cats@babuli.ru</a></p>
+        <p class="mail"><a href="#">vnuchek@babuli.ru</a></p>
+    </div>
+    <div class="rights">
+        <p class="all-rights"> &copy; 2018 ООО <a href="#">«Бабулины котятки»</a></p>
+    </div>
+</footer>
 </body>
+
 </html>
