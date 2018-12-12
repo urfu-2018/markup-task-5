@@ -275,3 +275,41 @@ input[name='cats-lightbox']:checked + .cat-element label[for='lightbox-none']
 {
     display: none;
 }
+
+.dot-labels
+{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+}
+
+.dot-labels .dot-label-container
+{
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.dot-labels .dot-label-container label
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: #000;
+}
+
+input[id='slide-1']:checked ~ .dot-labels label[for='slide-1'],
+input[id='slide-2']:checked ~ .dot-labels label[for='slide-2'],
+input[id='slide-3']:checked ~ .dot-labels label[for='slide-3'],
+input[id='slide-4']:checked ~ .dot-labels label[for='slide-4']
+{
+    background-color: #f00;
+}
