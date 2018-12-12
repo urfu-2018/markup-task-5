@@ -108,6 +108,7 @@ body,
 
 .carousel-inner,
 .cat-element,
+.cat-info,
 .label-container label:not([for='lightbox-none']):hover ~ .hover-name
 {
     position: relative;
@@ -115,8 +116,10 @@ body,
     vertical-align: middle;
 }
 
-.cat-element-inner
+.cat-element-inner,
+.cat-info-inner
 {
+    position: relative;
     width: auto;
     height: auto;
     display: inline-block;
@@ -202,6 +205,10 @@ input[id='slide-4']:checked ~ .carousel .cat-4 .label-container
 {
     display: none;
     background-color: white;
+}
+
+.cat-info-inner
+{
     width: 500px;
 }
 
@@ -213,8 +220,14 @@ input[id='slide-4']:checked ~ .carousel .cat-4 label[for='slide-4']
     display: none;
 }
 
-input[name='cats-lightbox']:checked + .cat-element
+input[name='cats-lightbox']:checked + .cat-element label[for^='lightbox']
 {
+    display: none;
+}
+
+input[name='cats-lightbox']:checked + .cat-element .cat-info
+{
+    display: block;
     background: rgba(0,0,0,.5);
     position: fixed;
     top: 0;
@@ -224,12 +237,7 @@ input[name='cats-lightbox']:checked + .cat-element
     z-index: 2000;
 }
 
-input[name='cats-lightbox']:checked + .cat-element label[for^='lightbox']
-{
-    display: none;
-}
-
-input[name='cats-lightbox']:checked + .cat-element::after
+input[name='cats-lightbox']:checked + .cat-element .cat-info::after
 {
     height: 100%;
     display: inline-block;
@@ -237,31 +245,20 @@ input[name='cats-lightbox']:checked + .cat-element::after
     content: '';
 }
 
-input[name='cats-lightbox']:checked + .cat-element .cat-element-inner
+input[name='cats-lightbox']:checked + .cat-element .cat-info .cat-info-inner
 {
     padding: 20px;
     background-color: white;
     vertical-align: middle;
 }
 
-input[name='cats-lightbox']:checked + .cat-element .cat-info
-{
-    display: block;
-}
-
-input[name='cats-lightbox']:checked + .cat-element .cat-info
-{
-    display: block;
-}
-
 label[for='lightbox-none']
 {
-    display: none;
     position: absolute;
     width: 20px;
     height: 20px;
-    top: -20px;
-    right: -20px;
+    top: 0;
+    right: 0;
     background-image: url('./images/cross.png');
 }
 
