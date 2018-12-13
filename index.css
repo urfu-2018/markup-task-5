@@ -1,0 +1,203 @@
+@font-face
+{
+    font-family: 'PT SansNarrow';
+    src: url('fonts/PTN57F.ttf');
+}
+
+@font-face
+{
+    font-family: Arial;
+    src: local(arial);
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    background-color: antiquewhite;
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.cite-name
+{
+    font-size: 32px;
+    font-family: 'PT SansNarrow', sans-serif;
+    text-align: center;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+}
+
+.cite-name:first-letter
+{
+    color: red;
+}
+
+.slide1:checked ~ .carousel,
+.slide2:checked ~ .carousel,
+.slide3:checked ~ .carousel,
+.slide4:checked ~ .carousel,
+.slide5:checked ~ .carousel
+{
+    transition-timing-function: linear;
+    transition-duration: 500ms;
+    z-index: 0;
+}
+
+.cat-name1
+{
+    margin-left: 11vw;
+}
+
+.cat-name2
+{
+    margin-left: 65vw;
+}
+
+.cat-name3
+{
+    margin-left: 65vw;
+}
+
+.cat-name4
+{
+    margin-left: 65vw;
+}
+
+.cat-name5
+{
+    margin-left: 65vw;
+}
+
+.cat-name
+{
+    position: absolute;
+    margin-top: 28vh;
+    color: red;
+    width: 20vh;
+    font-size: 10vh;
+    opacity: 0;
+    z-index: -1;
+}
+
+.slide1:checked ~ .carousel .label1:hover ~ .cat-name1,
+.slide2:checked ~ .carousel .label2:hover ~ .cat-name2,
+.slide3:checked ~ .carousel .label3:hover ~ .cat-name3,
+.slide4:checked ~ .carousel .label4:hover ~ .cat-name4,
+.slide5:checked ~ .carousel .label5:hover ~ .cat-name5,
+.slide1:checked ~ .carousel .cat-name1:hover,
+.slide2:checked ~ .carousel .cat-name2:hover,
+.slide3:checked ~ .carousel .cat-name3:hover,
+.slide4:checked ~ .carousel .cat-name4:hover,
+.slide5:checked ~ .carousel .cat-name5:hover
+{
+    z-index: 2;
+    opacity: 1;
+}
+
+.slide1:checked ~ .carousel
+{
+    transform: translate(27vw);
+}
+
+.slide2:checked ~ .carousel
+{
+    transform: translate(-18vw);
+}
+
+.slide3:checked ~ .carousel
+{
+    transform: translate(-63vw);
+}
+
+.slide4:checked ~ .carousel
+{
+    transform: translate(-108vw);
+}
+
+.slide5:checked ~ .carousel
+{
+    transform: translate(-155vw);
+}
+
+.slide1:checked ~ .carousel .image1,
+.slide2:checked ~ .carousel .image2,
+.slide3:checked ~ .carousel .image3,
+.slide4:checked ~ .carousel .image4,
+.slide5:checked ~ .carousel .image5
+{
+    transform: scale(1.25);
+    transition-duration: 500ms;
+    transition-timing-function: linear;
+    z-index: 100;
+    opacity: 1;
+}
+
+.carousel
+{
+    position: relative;
+    margin-top: 15vh;
+    width: 250vw;
+    height: 75vh;
+    margin-left: 0;
+    transform: translate(0);
+}
+
+.photo
+{
+    background-size: auto;
+    float: left;
+    width: 45vw;
+    height: 30vw;
+    margin: 5px;
+    margin-top: 3vh;
+    transform: translate(0);
+    transition-duration: 500ms;
+    border-radius: 5px;
+    image-rendering: inherit;
+    opacity: .7;
+    z-index: 0;
+}
+
+.foot
+{
+    display: block;
+    position: absolute;
+    border-top: 1px solid #343434;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.social
+{
+    float: left;
+    margin-left: 10px;
+}
+
+.rights
+{
+    float: right;
+    margin-right: 10px;
+}
+
+.link
+{
+    color: #4c4cd8;
+    text-decoration: none;
+}
+
+.link:before
+{
+    color: black;
+    content: '✉ ';
+}
