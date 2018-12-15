@@ -18,6 +18,8 @@
     height: 80px;
     background: #3386cb;
     box-shadow: 0 3px 15px rgba(0,0,0,.25);
+    font-size: 32px;
+    font-family: 'PT Sans Narrow';
 }
 
 .site-footer
