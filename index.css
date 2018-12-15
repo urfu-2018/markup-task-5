@@ -54,31 +54,6 @@ body
     z-index: 0;
 }
 
-.cat-name1
-{
-    margin-left: 14vw;
-}
-
-.cat-name2
-{
-    margin-left: 67vw;
-}
-
-.cat-name3
-{
-    margin-left: 122vw;
-}
-
-.cat-name4
-{
-    margin-left: 175vw;
-}
-
-.cat-name5
-{
-    margin-left: 222vw;
-}
-
 .label-for-model1,
 .label-for-model2,
 .label-for-model3,
@@ -93,48 +68,42 @@ body
 {
     position: absolute;
     color: red;
-    width: 20vh;
     font-size: 10vh;
+    width: 100%;
+    height: 64%;
+    top: 36%;
+    left: 0;
     opacity: 0;
     z-index: -1;
     text-align: center;
-}
 
-.cat-name:hover
-{
-    filter: contrast(20%);
 }
 
 .window
 {
-    display: initial;
-    width: 44vw;
-    height: 29vw;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
 }
 
-.slide1:checked ~ .carousel .label1:hover .image1,
-.slide2:checked ~ .carousel .label2:hover .image2,
-.slide3:checked ~ .carousel .label3:hover .image3,
-.slide4:checked ~ .carousel .label4:hover .image4,
-.slide5:checked ~ .carousel .label5:hover .image5
+.slide1:checked ~ .carousel .window:hover .cat-name1,
+.slide2:checked ~ .carousel .window:hover .cat-name2,
+.slide3:checked ~ .carousel .window:hover .cat-name3,
+.slide4:checked ~ .carousel .window:hover .cat-name4,
+.slide5:checked ~ .carousel .window:hover .cat-name5
 {
-    filter: brightness(.5);
-}
-
-.slide1:checked ~ .carousel .label1:hover ~ .label-for-model1 .cat-name1,
-.slide2:checked ~ .carousel .label2:hover ~ .label-for-model2 .cat-name2,
-.slide3:checked ~ .carousel .label3:hover ~ .label-for-model3 .cat-name3,
-.slide4:checked ~ .carousel .label4:hover ~ .label-for-model4 .cat-name4,
-.slide5:checked ~ .carousel .label5:hover ~ .label-for-model5 .cat-name5,
-.slide1:checked ~ .carousel .cat-name1:hover,
-.slide2:checked ~ .carousel .cat-name2:hover,
-.slide3:checked ~ .carousel .cat-name3:hover,
-.slide4:checked ~ .carousel .cat-name4:hover,
-.slide5:checked ~ .carousel .cat-name5:hover
-{
-    z-index: 2;
     opacity: 1;
+    z-index: 5;
     transition-duration: 1s;
+}
+
+.slide1:checked ~ .carousel .window:hover .image1,
+.slide2:checked ~ .carousel .window:hover .image2,
+.slide3:checked ~ .carousel .window:hover .image3,
+.slide4:checked ~ .carousel .window:hover .image4,
+.slide5:checked ~ .carousel .window:hover .image5
+{
+    filter: brightness(.2);
 }
 
 .slide1:checked ~ .carousel
@@ -144,12 +113,12 @@ body
 
 .slide2:checked ~ .carousel
 {
-    transform: translate(-27vw);
+    transform: translate(-25vw);
 }
 
 .slide3:checked ~ .carousel
 {
-    transform: translate(-78vw);
+    transform: translate(-77vw);
 }
 
 .slide4:checked ~ .carousel
