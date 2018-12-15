@@ -73,6 +73,7 @@ body
 input[class='cat-1']:checked ~ .carousel > .carousel-item
 {
     left: calc(50% - 150px);
+    transition: all 1s ease;
 }
 
 input[class='cat-1']:checked ~ .carousel > .item-1 > .img-label > .cat-image,
@@ -92,6 +93,7 @@ input[class='cat-1']:checked ~ .carousel > .item-1:hover > .name
 input[class='cat-2']:checked ~ .carousel > .carousel-item
 {
     left: calc(50% - 150px - 300px);
+    transition: all 1s ease;
 }
 
 input[class='cat-2']:checked ~ .carousel > .item-2:hover > .name
@@ -111,6 +113,7 @@ input[class='cat-2']:checked ~ .carousel > .item-2
 input[class='cat-3']:checked ~ .carousel > .carousel-item
 {
     left: calc(50% - 150px - 600px);
+    transition: all 1s ease;
 }
 
 input[class='cat-3']:checked ~ .carousel > .item-3:hover > .name
@@ -130,6 +133,7 @@ input[class='cat-3']:checked ~ .carousel > .item-3
 input[class='cat-4']:checked ~ .carousel > .carousel-item
 {
     left: calc(50% - 150px - 900px);
+    transition: all 1s ease;
 }
 
 input[class='cat-4']:checked ~ .carousel > .item-4:hover > .name
@@ -141,6 +145,7 @@ input[class='cat-4']:checked ~ .carousel > .item-4:hover > .name
 input[class='cat-5']:checked ~ .carousel > .carousel-item
 {
     left: calc(50% - 150px - 1200px);
+    transition: all 1s ease;
 }
 
 input[class='cat-5']:checked ~ .carousel > .item-5:hover > .name
@@ -152,6 +157,7 @@ input[class='cat-5']:checked ~ .carousel > .item-5:hover > .name
 input[class='cat-6']:checked ~ .carousel > .carousel-item
 {
     left: calc(50% - 150px - 1500px);
+    transition: all 1s ease;
 }
 
 input[class='cat-6']:checked ~ .carousel > .item-6:hover > .name
@@ -241,7 +247,7 @@ input[class='cat-6']:checked ~ .carousel > .item-6:hover
     display: block;
 }
 
-footer
+.footer
 {
     position: fixed;
     left: 0;
@@ -253,6 +259,8 @@ footer
     border-top: gray solid 1px;
     font-size: 14px;
     z-index: 10;
+    color: #4c4cd8;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo
