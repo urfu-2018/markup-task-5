@@ -17,6 +17,7 @@ main
     height: calc(100vh - 98px);
     text-align: center;
     overflow-y: scroll;
+    position: relative;
 }
 
 .page-fixed-header
@@ -429,8 +430,8 @@ input[id='sld10']:checked ~ .labels label[for='sld10'] + .title-black-back:hover
     transition-property: all;
     transition-duration: .8s;
     background: rgba(0, 0, 0, .8);
-    left: calc(50% - 500px);
-    top: calc(50% - 200px);
+    left: 22%;
+    top: 22%;
     position: absolute;
     width: 1000px;
     height: 400px;
@@ -516,7 +517,7 @@ input[id='sld10']:checked ~ .labels label[for='sld10'] + .title-black-back:hover
 .black-absolute-background
 {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
