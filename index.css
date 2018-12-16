@@ -103,7 +103,7 @@ footer img
 
 .carousel
 {
-    width: 5000px;
+    width: 6000px;
     height: 400px;
     position: absolute;
     left: 0;
@@ -118,8 +118,7 @@ footer img
 
 .carousel-item
 {
-    width: 400px;
-    height: 350px;
+    height: 100%;
     padding: 0 10px;
     display: inline-block;
     position: relative;
