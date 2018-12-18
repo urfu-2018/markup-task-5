@@ -4,15 +4,9 @@
     src: url('fonts/PTN57F.ttf');
 }
 
-@font-face
-{
-    font-family: Arial;
-    src: local(arial);
-}
-
 html
 {
-    height: 100%;
+    height: 90%;
 }
 
 body
@@ -21,10 +15,11 @@ body
     margin: 0;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     position: relative;
 }
 
-.cite-name
+.site-name
 {
     font-size: 32px;
     font-family: 'PT SansNarrow', sans-serif;
@@ -38,7 +33,7 @@ body
     background-color: white;
 }
 
-.cite-name:first-letter
+.site-name:first-letter
 {
     color: red;
 }
@@ -193,22 +188,29 @@ body
     z-index: -3;
     position: absolute;
     background-color: rgba(0, 0, 0, .9);
-    width: 100vw;
+    width: 100%;
     bottom: 0;
     right: 0;
     left: 0;
 }
 
+.cat__photo
+{
+    width: 40%;
+    margin-left: 50px;
+}
+
 .picture
 {
     float: left;
-    margin-left: 5%;
-    width: auto;
-    height: 35vh;
+    margin-left: 10%;
+    width: 85%;
+    height: 85%;
 }
 
 .text
 {
+    width: 37%;
     float: right;
     margin-right: 5%;
     color: #fff;
@@ -233,7 +235,7 @@ body
 .model:checked ~ .label-for-close .close-icon
 {
     display: block;
-    z-index: 9999;
+    z-index: 2000;
 }
 
 .close-icon
@@ -256,6 +258,8 @@ body
 {
     display: block;
     position: absolute;
+    top: 91vh;
+    height: 5vh;
     border-top: 1px solid #343434;
     font-size: 14px;
     font-family: Arial, sans-serif;
@@ -274,13 +278,14 @@ body
     margin-right: 10px;
 }
 
+.mail,
 .link
 {
     color: #4c4cd8;
     text-decoration: none;
 }
 
-.link:before
+.mail:before
 {
     color: black;
     content: '✉ ';
