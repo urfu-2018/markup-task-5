@@ -209,7 +209,8 @@ footer a
     height: 40px;
 }
 
-.dots {
+.dots
+{
     top: -5px;
     width: 15px;
     height: 15px;
@@ -217,16 +218,16 @@ footer a
     position: relative;
     border-radius: 100%;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, .4);
     transition: .4s;
     cursor: pointer;
 }
 
-input[value='slide_1']:checked ~ .nav_slider #dot_1,
-input[value='slide_2']:checked ~ .nav_slider #dot_2,
-input[value='slide_3']:checked ~ .nav_slider #dot_3,
-input[value='slide_4']:checked ~ .nav_slider #dot_4,
-input[value='slide_5']:checked ~ .nav_slider #dot_5
+input[value='slide_1']:checked ~ .nav_slider .dot_1,
+input[value='slide_2']:checked ~ .nav_slider .dot_2,
+input[value='slide_3']:checked ~ .nav_slider .dot_3,
+input[value='slide_4']:checked ~ .nav_slider .dot_4,
+input[value='slide_5']:checked ~ .nav_slider .dot_5
 {
     background-color: rgba(255, 0, 0, .7);
 }
