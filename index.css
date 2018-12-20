@@ -2,14 +2,12 @@
 {
     font-family: 'PT Sans Narrow';
     src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(fonts/ptsansnarrow.woff2) format('woff2'), url(fonts/ptsansnarrow.woff) format('woff'), url(fonts/ptsansnarrow.ttf) format('truetype');
-    font-style: normal;
 }
 
 @font-face
 {
     font-family: 'Embrionic 85 Swash';
     src: local('Embrionic85SwashCyr'), url(fonts/Embrionic85SwashCyr.otf) format('opentype');
-    font-style: bold;
 }
 
 html,
@@ -366,7 +364,7 @@ body
     display: block;
     padding: 70px 0 0;
 }
- 
+
 .desc-container::before
 {
     content: '';
