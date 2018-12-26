@@ -127,6 +127,7 @@ label > img
     display: inline-block;
     width: 90%;
     height: 80%;
+    object-fit: cover;
     opacity: .7;
     transition-property: all;
     transition-duration: .8s;
