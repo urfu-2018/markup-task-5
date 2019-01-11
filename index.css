@@ -1,4 +1,4 @@
-@font-face 
+@font-face
 {
     font-family: 'PT SansNarrow';
     src: url('PTN57F.ttf') format('truetype');
@@ -10,6 +10,8 @@ body
 {
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 header
@@ -17,18 +19,25 @@ header
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
     width: 100%;
-    height: 8.5vh;
-    padding-top: 1.5vh;
+    height: 100px;
+    line-height: 100px;
     text-align: center;
+    background-color: #fff;
+    z-index: 5;
     font-size: 32px;
     font-family: PT SansNarrow;
+    border-bottom: 1px solid #dadada;
 }
 
 header::first-letter
 {
     color: #f00;
+}
+
+input
+{
+    display: none;
 }
 
 a
@@ -40,16 +49,11 @@ a
     text-decoration: none;
 }
 
-input
-{
-    display: none;
-}
-
 input + img
 {
     position: fixed;
-    bottom: 20vh;
-    left: 41vw;
+    bottom: 200px;
+    left: calc(50% - 90px);
     width: 14px;
     opacity: .4;
 }
@@ -59,192 +63,221 @@ input:checked + img
     opacity: .7;
 }
 
-.container
-{
-    position: absolute;
-    height: 80vh;
-    margin: 0;
-    padding: 0 50vw;
-    top: 10vh;
-    overflow: hidden;
-    border: 1px solid #dadada;
-    border-left: none;
-    border-right: none;
-    white-space: nowrap;
-    color: #555;
-    font-size: 1.3em;
-}
-
 .cat2Input + img
 {
-    left: 43vw;
+    left: calc(50% - 70px);
 }
 
 .cat3Input + img
 {
-    left: 45vw;
+    left: calc(50% - 50px);
 }
 
 .cat4Input + img
 {
-    left: 47vw;
+    left: calc(50% - 30px);
 }
 
 .cat5Input + img
 {
-    left: 49vw;
+    left: calc(50% - 10px);
 }
 
 .cat6Input + img
 {
-    left: 51vw;
+    left: calc(50% + 10px);
 }
 
 .cat7Input + img
 {
-    left: 53vw;
+    left: calc(50% + 30px);
 }
 
 .cat8Input + img
 {
-    left: 55vw;
+    left: calc(50% + 50px);
 }
 
 .cat9Input + img
 {
-    left: 57vw;
+    left: calc(50% + 70px);
 }
 
 .cat10Input + img
 {
-    left: 59vw;
+    left: calc(50% + 90px);
+}
+
+.container
+{
+    position: absolute;
+    font-size: 1.3em;
+    width: 6000px;
+    height: 440px;
+    top: calc(50% - 220px);
+    transition: all .2s ease-out;
+}
+
+.container article > img
+{
+    margin: 35px;
+    height: 80%;
+    opacity: .7;
+    z-index: 0;
 }
 
 .container article
 {
+    height: 440px;
     display: inline-block;
-    box-sizing: border-box;
-    margin: 12vh 0;
-    height: 50vh;
-    overflow: hidden;
+    position: relative;
+    border: none;
 }
 
-.container article img
+.black_layer,
+.cat_name,
+article > label
 {
-    margin: 5vh;
-    display: block;
-    height: 40vh;
-    opacity: .7;
-}
-
-.container .info
-{
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 50vh;
-    margin-top: -53vh;
-    text-align: center;
-    padding-top: 22vh;
+    height: 100%;
+}
+
+.cat_name
+{
     color: #fff;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    transition: all .8s ease-out;
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 400;
+    line-height: 440px;
+}
+
+article > label
+{
+    z-index: 2;
+}
+
+.black_layer
+{
+    background-color: #000;
+    opacity: 0;
+    transition: all .5s ease-out;
 }
 
 .cat1Input:checked ~ .container
 {
-    margin-left: -19vw;
+    left: calc(50% - 345px);
 }
 
 .cat2Input:checked ~ .container
 {
-    margin-left: -56vw;
+    left: calc(50% - 935px);
 }
 
 .cat3Input:checked ~ .container
 {
-    margin-left: -85vw;
+    left: calc(50% - 1435px);
 }
 
 .cat4Input:checked ~ .container
 {
-    margin-left: -115vw;
+    left: calc(50% - 1930px);
 }
 
 .cat5Input:checked ~ .container
 {
-    margin-left: -149vw;
+    left: calc(50% - 2510px);
 }
 
 .cat6Input:checked ~ .container
 {
-    margin-left: -187vw;
+    left: calc(50% - 3135px);
 }
 
 .cat7Input:checked ~ .container
 {
-    margin-left: -224vw;
+    left: calc(50% - 3760px);
 }
 
 .cat8Input:checked ~ .container
 {
-    margin-left: -258vw;
+    left: calc(50% - 4340px);
 }
 
 .cat9Input:checked ~ .container
 {
-    margin-left: -293vw;
+    left: calc(50% - 4910px);
 }
 
 .cat10Input:checked ~ .container
 {
-    margin-left: -331vw;
+    left: calc(50% - 5570px);
 }
 
-.cat1Input:checked ~ .container > article > label > img[alt='cat1'],
-.cat2Input:checked ~ .container > article > label > img[alt='cat2'],
-.cat3Input:checked ~ .container > article > label > img[alt='cat3'],
-.cat4Input:checked ~ .container > article > label > img[alt='cat4'],
-.cat5Input:checked ~ .container > article > label > img[alt='cat5'],
-.cat6Input:checked ~ .container > article > label > img[alt='cat6'],
-.cat7Input:checked ~ .container > article > label > img[alt='cat7'],
-.cat8Input:checked ~ .container > article > label > img[alt='cat8'],
-.cat9Input:checked ~ .container > article > label > img[alt='cat9'],
-.cat10Input:checked ~ .container > article > label > img[alt='cat10']
+.cat1Input:checked ~ .container > article.cat1,
+.cat2Input:checked ~ .container > article.cat2,
+.cat3Input:checked ~ .container > article.cat3,
+.cat4Input:checked ~ .container > article.cat4,
+.cat5Input:checked ~ .container > article.cat5,
+.cat6Input:checked ~ .container > article.cat6,
+.cat7Input:checked ~ .container > article.cat7,
+.cat8Input:checked ~ .container > article.cat8,
+.cat9Input:checked ~ .container > article.cat9,
+.cat10Input:checked ~ .container > article.cat10
 {
-    height: 50vh;
-    margin: 0;
-    opacity: 1;
+    height: 440px;
     box-shadow: 2px 2px 10px #333;
 }
 
-.cat1Input:checked ~ .container > .cat1:hover .info,
-.cat2Input:checked ~ .container > .cat2:hover .info,
-.cat3Input:checked ~ .container > .cat3:hover .info,
-.cat4Input:checked ~ .container > .cat4:hover .info,
-.cat5Input:checked ~ .container > .cat5:hover .info,
-.cat6Input:checked ~ .container > .cat6:hover .info,
-.cat7Input:checked ~ .container > .cat7:hover .info,
-.cat8Input:checked ~ .container > .cat8:hover .info,
-.cat9Input:checked ~ .container > .cat9:hover .info,
-.cat10Input:checked ~ .container > .cat10:hover .info
+.cat1Input:checked ~ .container > article.cat1 > img,
+.cat2Input:checked ~ .container > article.cat2 > img,
+.cat3Input:checked ~ .container > article.cat3 > img,
+.cat4Input:checked ~ .container > article.cat4 > img,
+.cat5Input:checked ~ .container > article.cat5 > img,
+.cat6Input:checked ~ .container > article.cat6 > img,
+.cat7Input:checked ~ .container > article.cat7 > img,
+.cat8Input:checked ~ .container > article.cat8 > img,
+.cat9Input:checked ~ .container > article.cat9 > img,
+.cat10Input:checked ~ .container > article.cat10 > img
 {
-    display: block;
-    background-color: #000;
-    opacity: .6;
+    height: 100%;
+    margin: 0;
+    opacity: 1;
 }
 
-.cat1Input:checked ~ .cat1ModalPage:checked ~ .container > .cat1:hover .info,
-.cat2Input:checked ~ .cat2ModalPage:checked ~ .container > .cat2:hover .info,
-.cat3Input:checked ~ .cat3ModalPage:checked ~ .container > .cat3:hover .info,
-.cat4Input:checked ~ .cat4ModalPage:checked ~ .container > .cat4:hover .info,
-.cat5Input:checked ~ .cat5ModalPage:checked ~ .container > .cat5:hover .info,
-.cat6Input:checked ~ .cat6ModalPage:checked ~ .container > .cat6:hover .info,
-.cat7Input:checked ~ .cat7ModalPage:checked ~ .container > .cat7:hover .info,
-.cat8Input:checked ~ .cat8ModalPage:checked ~ .container > .cat8:hover .info,
-.cat9Input:checked ~ .cat9ModalPage:checked ~ .container > .cat9:hover .info,
-.cat10Input:checked ~ .cat10ModalPage:checked ~ .container > .cat10:hover .info
+.cat1Input:checked ~ .container > .cat1:hover .cat_name,
+.cat2Input:checked ~ .container > .cat2:hover .cat_name,
+.cat3Input:checked ~ .container > .cat3:hover .cat_name,
+.cat4Input:checked ~ .container > .cat4:hover .cat_name,
+.cat5Input:checked ~ .container > .cat5:hover .cat_name,
+.cat6Input:checked ~ .container > .cat6:hover .cat_name,
+.cat7Input:checked ~ .container > .cat7:hover .cat_name,
+.cat8Input:checked ~ .container > .cat8:hover .cat_name,
+.cat9Input:checked ~ .container > .cat9:hover .cat_name,
+.cat10Input:checked ~ .container > .cat10:hover .cat_name
 {
-    display: none;
+    z-index: 3;
+    opacity: 1;
+}
+
+.cat1Input:checked ~ .container > .cat1:hover .black_layer,
+.cat2Input:checked ~ .container > .cat2:hover .black_layer,
+.cat3Input:checked ~ .container > .cat3:hover .black_layer,
+.cat4Input:checked ~ .container > .cat4:hover .black_layer,
+.cat5Input:checked ~ .container > .cat5:hover .black_layer,
+.cat6Input:checked ~ .container > .cat6:hover .black_layer,
+.cat7Input:checked ~ .container > .cat7:hover .black_layer,
+.cat8Input:checked ~ .container > .cat8:hover .black_layer,
+.cat9Input:checked ~ .container > .cat9:hover .black_layer,
+.cat10Input:checked ~ .container > .cat10:hover .black_layer
+{
+    z-index: 2;
+    opacity: .6;
 }
 
 .modalPage article
@@ -271,12 +304,12 @@ input:checked + img
     display: block;
     background-color: #000;
     opacity: .85;
-    width: 100vw;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    height: 80vh;
-    margin: 0;
     left: 0;
-    top: 10vh;
+    top: 0;
+    z-index: 4;
 }
 
 .modalPage
@@ -300,7 +333,7 @@ input:checked + img
     right: 23vw;
 }
 
-.modalPage > article > .info
+.modalPage > article > .full_info
 {
     display: inline-block;
     position: absolute;
@@ -310,12 +343,12 @@ input:checked + img
     color: #fff;
 }
 
-.modalPage .info > .name
+.full_info > .name
 {
     font-size: 200%;
 }
 
-.modalPage .info > .longInfo
+.full_info > .longInfo
 {
     white-space: normal;
 }
@@ -332,10 +365,10 @@ input:checked + img
 .cat10ModalPage:checked ~ .modalPage > article:nth-child(10)
 {
     display: block;
-    z-index: 1000;
+    z-index: 4;
 }
 
-.modalPage .close
+.close
 {
     display: none;
     position: relative;
@@ -351,7 +384,7 @@ input:checked + img
     opacity: .6;
 }
 
-.modalPage .close:hover
+.close:hover
 {
     opacity: 1;
 }
@@ -375,20 +408,42 @@ footer
     bottom: 0;
     position: fixed;
     width: 100%;
-    height: 10vh;
-    z-index: 2;
+    height: 100px;
+    z-index: 5;
     font-size: 14px;
+    border-top: 1px solid #dadada;
+    background-color: #fff;
 }
 
 footer > .contacts
 {
-    float: left;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.contacts p
+{
+    margin: 0 0 5px;
 }
 
 footer > :last-child
 {
     position: absolute;
-    right: 2vw;
+    right: 20px;
     bottom: 0;
     text-align: end;
+}
+
+@media screen and (max-height: 720px)
+{
+    input + img
+    {
+        bottom: 110px;
+    }
+
+    .container
+    {
+        top: calc(50% - 225px);
+    }
 }
