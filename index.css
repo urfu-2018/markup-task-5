@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body
+{
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.header
+{
+    font-family: 'PT Sans', 'Arial Narrow', sans-serif;
+    text-align: center;
+    border-bottom: solid 1px gray;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+}
+
+.header h1
+{
+    margin: 0;
+}
+
+.header h1:first-letter
+{
+    color: red;
+}
+
+.contacts p
+{
+    margin: 0;
+}
+
+.copy
+{
+    display: inline-block;
+}
+
+.footer a
+{
+    text-decoration: none;
+}
+
+.footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid gray;
+}
+.contacts ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts li:before
+{
+    content: '\2709'; /*'✉'*/
+    margin-right: .3em;
+}
+
+.contacts
+{
+    margin: 10px;
+}
+
+.copy
+{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+.content
+{
+    left: calc(50% - 700px);
+    margin-top: 100px;
+    width: 1400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item
+{
+    display: inline-block;
+    margin: 30px;
+}
+
+.carousel
+{
+    white-space: nowrap;
+}
+
+.carousel-item img
+{
+    width: 500px;
+    max-height: 300px;
+    cursor: pointer;
+}
+
+.carousel-item
+{
+    opacity: 0.7;
+    position: relative;
+}
+
+.catname
+{
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    text-align: center;
+    vertical-align: center;
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    top: 0;
+    opacity: .3;
+    display: none;
+}
+
+.selector-1:checked ~ .carousel
+{
+    margin-left: 400px;
+}
+
+.selector-1:checked ~ .carousel .item1
+{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.selector-2:checked ~ .carousel
+{
+    margin-left: -100px;
+}
+
+.selector-2:checked ~ .carousel .item2
+{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.selector-3:checked ~ .carousel
+{
+    margin-left: -700px;
+}
+
+.selector-3:checked ~ .carousel .item3
+{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.selector-4:checked ~ .carousel
+{
+    margin-left: -1200px;
+}
+
+.selector-4:checked ~ .carousel .item4
+{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.selector-1:checked ~ .carousel .item1:hover > .catname,
+.selector-2:checked ~ .carousel .item2:hover > .catname,
+.selector-3:checked ~ .carousel .item3:hover > .catname,
+.selector-4:checked ~ .carousel .item4:hover > .catname
+{
+    display: block;
+    cursor: pointer;
+}
